@@ -1,0 +1,66 @@
+def period_statistics(q,path,start_equity,end_equity,trade_rows,holding_rows,is_cash):
+    """Descriptive metrics on an inherited continuous-account slice, no new trades."""
+    sd=float(np.std(q,ddof=0));mean=float(np.mean(q))
+    sharpe=(0. if is_cash and bool(np.all(q==0)) else
+            (math.sqrt(365)*mean/sd if sd>0 else None))
+    peak=float(path[0]);mdd=0.
+    for value in path:
+        peak=max(peak,float(value));mdd=max(mdd,1-float(value)/peak)
+    return {"start_equity_USD":float(start_equity),"end_equity_USD":float(end_equity),
+       "net_USD":float(end_equity-start_equity),"total_return":float(end_equity/start_equity-1),
+       "CAGR":float((end_equity/start_equity)**(365/len(q))-1),
+       "mean_daily_return":mean,"annualized_mean_return":365*mean,
+       "annualized_volatility":sd*math.sqrt(365),"Sharpe":sharpe,"maximum_drawdown":mdd,
+       "turnover":sum(r["reference_trade_USD"]/r["pretrade_equity"] for r in trade_rows),
+       "total_cost_USD":sum(r["cost_USD"] for r in trade_rows),
+       "average_exposure":float(np.mean([r["actualweight"] for r in holding_rows])),
+       "intervals":len(q),"log_growth":float(np.sum(np.log1p(q))),
+       "net_USD_contribution":sum(float(v)*r["pretrade_equity"] for r,v in zip(holding_rows,q))}
+
+def metrics(rows,q,path,valid,control):
+    is_cash=control=="cash"
+    end=rows[-1]["posttrade_equity"]
+    total=period_statistics(q,path,rows[0]["pretrade_equity"],end,rows,rows[:-1],is_cash)
+    years={}
+    groups={}
+    for i,row in enumerate(rows[:-1]):
+        groups.setdefault(row["execution_date"][:4],[]).append(i)
+    for year,index in groups.items():
+        first,last=index[0],index[-1]
+        assert index==list(range(first,last+1))
+        terminal_included=last==len(q)-1
+        # Year end is the next valuation point of the final holding interval.
+        # Only the actual global terminal transaction may change units/cash there.
+        start_row=rows[first]
+        end_row=rows[-1] if terminal_included else rows[last]
+        end_units=end_row["posttrade_units"];end_cash=end_row["posttrade_cash"]
+        end_equity=rows[last]["next_equity"]
+        holding_rows=[rows[i] for i in index]
+        trade_rows=holding_rows+([rows[-1]] if terminal_included else [])
+        year_path=[start_row["pretrade_equity"]]
+        for i in index:
+            year_path.extend([rows[i]["pretrade_equity"],rows[i]["posttrade_equity"]])
+            if i==len(q)-1:
+                year_path.extend([rows[-1]["pretrade_equity"],rows[-1]["posttrade_equity"]])
+            else:year_path.append(rows[i]["next_equity"])
+        year_q=q[first:last+1]
+        stats=period_statistics(year_q,year_path,start_row["pretrade_equity"],end_equity,
+                                trade_rows,holding_rows,is_cash)
+        assert abs(float(np.prod(1+year_q))*start_row["pretrade_equity"]-end_equity)<=max(1e-8,1e-10*end_equity)
+        stats.update({"first_holding_interval_date":rows[first]["execution_date"],
+          "last_holding_interval_date":rows[last]["execution_date"],
+          "end_valuation_date":rows[last+1]["execution_date"],
+          "start_BTC":start_row["pretrade_units"],"start_cash_USD":start_row["pretrade_cash"],
+          "end_BTC":end_units,"end_cash_USD":end_cash,
+          "inherits_continuous_account":first>0,"actual_terminal_liquidation_included":terminal_included,
+          "no_year_boundary_transaction_added":True,
+          "year_label_is_holding_interval_execution_year":True})
+        years[year]=stats
+    total.update({"control":control,"terminal_equity_USD":end,
+       "terminal_cash_USD":rows[-1]["posttrade_cash"],
+       "residual_BTC":rows[-1]["posttrade_units"],"valid_liquidation":bool(valid),
+       "zero_volume_reference_count":sum(r["zero_volume_no_fill"] for r in rows),
+       "year_metrics_not_independent_tests":years})
+    return total
+
+

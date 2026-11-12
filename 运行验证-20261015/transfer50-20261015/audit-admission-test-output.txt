@@ -1,0 +1,12 @@
+{"status": "AWAIT_COMPLETED_RUN", "model_runs": 0, "audit_written": false, "scope": "no claim that a process is live"}
+{"status": "AWAIT_COMPLETED_RUN", "model_runs": 0, "audit_written": false, "scope": "no claim that a process is live"}
+{"status": "INCOMPLETE_RUN_NOT_AUDITED", "model_runs": 0, "audit_written": false, "scope": "no claim that a process is live"}
+{"status": "INCOMPLETE_RUN_NOT_AUDITED", "model_runs": 0, "audit_written": false, "scope": "no claim that a process is live"}
+test_live_or_unstarted_run_is_not_audited (test_audit_saved_transfer50.AdmissionTests.test_live_or_unstarted_run_is_not_audited) ... ok
+test_normal_exit_with_partial_panel_cannot_be_audited (test_audit_saved_transfer50.AdmissionTests.test_normal_exit_with_partial_panel_cannot_be_audited) ... ok
+test_terminal_failure_is_incomplete_not_waiting_or_passed (test_audit_saved_transfer50.AdmissionTests.test_terminal_failure_is_incomplete_not_waiting_or_passed) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

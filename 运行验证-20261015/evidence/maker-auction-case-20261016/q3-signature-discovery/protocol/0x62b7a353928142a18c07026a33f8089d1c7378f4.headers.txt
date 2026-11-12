@@ -1,0 +1,14 @@
+HTTP/2 200 
+date: Fri, 16 Oct 2026 07:01:04 GMT
+content-type: application/json; charset=utf-8
+content-length: 29508
+cf-ray: a4b530aa3ee2d510-NRT
+cf-cache-status: EXPIRED
+accept-ranges: bytes
+access-control-allow-origin: *
+last-modified: Fri, 16 Oct 2026 07:01:04 GMT
+server: cloudflare
+vary: accept-encoding
+speculation-rules: "/cdn-cgi/speculation"
+alt-svc: h3=":443"; ma=86400
+

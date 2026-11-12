@@ -1,0 +1,377 @@
+Financial Analysts Journal (https://www.aqr.com/-/media/AQR/Documents/Insights/Journal-Article/Covered-Calls-Uncovered.pdf)
+citeturn696search2 [wordlim: 200] Published: 10.9 years ago; Crawled: 10.9 years ago; # Covered Calls Uncovered ... Although deceptively simple—long equity and short a call option—covered calls are not well understood.Israelov and Nielsen (2014) identified and dispelled eight commonly circulated myths about covered calls.
+Financial Analysts Journal  
+Volume 71 • Number 6  
+©2015 CFA Institute
+
+# Covered Calls Uncovered
+
+## Roni Israelov and Lars N. Nielsen
+
+Typical covered call strategies collect the equity and volatility risk premiums but also embed exposure to a naive equity reversal strategy that is uncompensated. This article presents a novel risk and performance attribution methodology that deconstructs the strategy into these three exposures. Historically, the equity exposure contributed most of the risk and return. The short volatility exposure realized a Sharpe ratio of nearly 1.0 but contributed only 10% of the risk. The equity reversal exposure contributed approximately 25% of the risk but provided little return in exchange. The authors propose a risk-managed covered call strategy that eliminates the uncompensated equity reversal exposure. This modified covered call strategy has a superior Sharpe ratio, reduced volatility, and reduced downside equity beta.
+
+Equity index covered calls are the most easily accessible source of the volatility risk premium for most investors.¹ The volatility risk premium, which is absent from most investors’ portfolios, has had more than double the risk-adjusted returns (Sharpe ratio) of the equity risk premium, which is the dominant source of return for most investors. By providing the equity and volatility risk premiums, equity index covered calls’ returns have been historically attractive, nearly matching the returns of their underlying indexes with significantly lower volatility.²
+
+Options are a form of financial insurance, and the volatility risk premium is compensation paid by option buyers to the option sellers who underwrite this insurance. Bakshi and Kapadia (2003) analyzed delta-hedged option returns to show that equity index options include a volatility risk premium. Bollen and Whaley (2004) and Gârleanu, Pedersen, and Poteshman (2009) showed how option demand by natural buyers can lead to a risk premium. Litterman (2011) suggested that long-term investors, such as pensions and endowments, should be natural providers of financial insurance and sellers of options.
+
+Yet, many investors remain skeptical of covered call strategies. Although deceptively simple—long equity and short a call option—covered calls are not well understood. Israelov and Nielsen (2014) identified and dispelled eight commonly circulated myths about covered calls. These myths sound plausible; otherwise, they would not have such longevity. But they can be a problem if they affect portfolio construction decisions. The securities overwritten and the strikes and maturities of the call options that are sold should be explicitly selected to achieve the portfolio’s allocation to the equity and volatility risk premiums without taking unnecessary risk. Price targets, downside protection, and income generation are diversions.
+
+One source of confusion on covered calls may be due to the opacity of the strategy’s risk exposures. Our article’s first contribution is a novel performance attribution methodology for portfolios holding options, such as the covered call strategy. We demonstrate how to decompose the portfolio return into three distinct risk exposures: passive equity, equity market timing, and short volatility.
+
+Our performance attribution methodology provides investment managers with a tool to effectively and transparently communicate their strategy’s performance to their investors and allows investors to properly place the covered call’s risk exposures and returns in the context of their overall portfolios. Further, it provides a framework by which portfolio managers can evaluate the impact of strike, maturity, underlying security selection, risk management, and
+
+Roni Israelov is vice president and Lars N. Nielsen is principal at AQR Capital Management, Greenwich, Connecticut.
+
+Editor’s note: Roni Israelov and Lars N. Nielsen manage option portfolios and covered calls at AQR Capital Management and may have a commercial interest in the topics discussed in this article.
+
+Editor’s note: This article was reviewed and accepted by Executive Editor Robert Litterman.
+
+Authors’ note: The views and opinions expressed herein are those of the authors and do not necessarily reflect the views of AQR Capital Management, LLC (“AQR”), its affiliates, or its employees, nor do they constitute an offer, a solicitation of an offer, or any advice or recommendation to purchase any securities or other financial instruments by AQR.
+
+44    www.cfapubs.org    © 2015 CFA Institute. All rights reserved.--------------------------------------------------------------------------------
+127102_wrmw.indd (https://www.aqr.com/-/media/AQR/Documents/Journal-Articles/JoAI-Embracing-Downside-Risk.pdf)
+citeturn696search3 [wordlim: 200] Published: 9.8 years ago; Israelov, R., and L.N.Nielsen.“Covered Calls Uncovered.”
+Israelov, R., and L.N. Nielsen. “Covered Calls Uncovered.” 
+Financial Analysts Journal, Vol. 71, No. 6 (2015), pp. 44­57.
+Kahneman, D., and A. Tversky. “Prospect Theory: An 
+Analysis of Decision under Risk.” Econometrica, Vol. 47, No. 2 
+(1979), pp. 263­291.
+Kapadia, N., and E. Szado. “Fifteen Years of the Russell 2000 
+Buy­Write.” The Journal of Alternative Investments, Vol. 21, 
+No. 4 (2012), pp. 59­80.
+Litterman, R. “Who Should Hedge Tail Risk?” Financial 
+Analysts Journal, Vol. 67, No. 3 (2011), pp. 6­11.
+Taleb, N.N. “‘Do Financial Markets Reward Buying or 
+Selling Insurance and Lottery Tickets?’: A Comment.” 
+Financial Analysts Journal, Vol. 69, No. 2 (2013).
+Disclaimer
+The views and opinions expressed herein are those of the authors and do 
+not necessarily ref lect the views of AQR Capital Management, LLC, its 
+affiliates, or its employees. This document does not represent valuation 
+judgments, investment advice, or research with respect to any financial 
+instrument, issuer, security, or sector that may be described or referenced 
+herein and does not represent a formal or official view of AQR.
+To order reprints of this article, please contact Dewey Palmieri 
+at [REDACTED_EMAIL] or 212-224-3675.
+The Journal of alTernaTive invesTmenTs   
+Winter 2017--------------------------------------------------------------------------------
+Covered Calls Uncovered (https://www.aqr.com/Insights/Research/Journal-Article/Covered-Calls-Uncovered)
+citeturn696search0 [wordlim: 200] Published: 10.9 years ago; Crawled: 3 days ago; ## Covered Calls UncoveredNovember 30, 2015 - Roni Israelov ... They added that while the motivation for covered calls is often confusing and muddled by a number of myths, the motivation for the risk-managed covered call is clear: earn the equity and volatility risk premium by constructing a portfolio with long equity and short volatility exposure.
+
+Equities
+
+## Covered Calls Uncovered
+
+November 30, 2015 - Roni Israelov
+
+Topics - Equities Market Risk and Efficiency Volatility
+
+Covered Calls Uncovered
+
+Many investors seek to protect their portfolios by purchasing equity index options. As a result, options tend to include a risk premium as a form of compensation to option sellers. Covered calls, which are short options, collect this volatility risk premium in addition to the equity risk premium earned from their long equity exposure. Because of option convexity, covered calls also embed active equity exposure that behaves like a reversal strategy.
+
+The authors contend that covered calls are rarely considered in terms of their risk exposures. In this paper, they introduce a novel performance attribution methodology that decomposes the strategy’s return into its passive and active equity and short volatility exposures. Not only does the performance attribution of their samples allow covered call investors to better understand the strategy’s characteristics, but it also allows portfolio managers to assess the risk and return impact of portfolio construction decisions, such as the call option’s strike and maturity, so that they may improve their strategy.
+
+As an example, the paper proposes a risk-managed covered call to hedge away the uncompensated active equity exposure, which the authors say is a significant contributor to the covered call’s risk. They contend that their proposed strategy has similar expected returns to the original covered call, but with lower risk, lower downside beta, and a higher Sharpe ratio. They added that while the motivation for covered calls is often confusing and muddled by a number of myths, the motivation for the risk-managed covered call is clear: earn the equity and volatility risk premium by constructing a portfolio with long equity and short volatility exposure.
+
+This document is not intended to, and does not relate specifically to any investment strategy or product that AQR offers. It is being provided merely to provide a framework to assist in the implementation of an investor’s own analysis and an investor’s own view on the topic discussed herein.--------------------------------------------------------------------------------
+jor_israelov (https://images.aqr.com/-/media/AQR/Documents/Journal-Articles/Covering-the-world-global-evidence-on-covered-calls.pdf)
+citeturn696search4 [wordlim: 200] Published: 7.8 years ago; PutWrite versus BuyWrite: yes, put–call parity holds here too. ... Israelov, R., and Nielsen, L. ... Covered calls uncovered.
+Covering the world: global evidence on covered calls 89
+
+its affiliates or its employees. This document does not represent valuation judgments, investment advice or research with respect to any financial instrument, issuer, security or sector that may be described or referenced herein and does not represent a formal or official view of AQR. This information is not intended to, and does not relate specifically to, any investment strategy or product that AQR offers. It is being provided merely to provide a framework to assist in the implementation of an investor’s own analysis and an investor’s own view on the topic discussed herein.
+
+ACKNOWLEDGEMENTS
+
+We thank Antti Ilmanen, Ronen Israel, Michael Katz, Lars Nielsen, Scott Richardson, Nathan Sosner and Dan Villalon for helpful comments and suggestions.
+
+REFERENCES
+
+Asness, C., Israelov, R., and Liew, J. (2011). International diversification works (eventually). *Financial Analysts Journal* 67(3), 24–38 (https://doi.org/10.2469/faj.v67.n3.1).
+
+Christoffersen, P., Errunza, V., Jacobs, K., and Jin, X. (2010). Is the potential for international diversification disappearing? Preprint, Social Science Research Network (https://doi.org/10.2139/ssrn.2066076).
+
+Fallon, W., Park, J., and Yu, D. (2015). Asset allocation implications of the global volatility premium. *Financial Analysts Journal* 71(5), 38–56 (https://doi.org/10.2469/faj.v71.n5.4).
+
+Hartmann, P., Straetmans, S., and de Vries, C. (2004). Asset market linkages in crisis periods. *Review of Economics and Statistics* 86(1), 313–326 (https://doi.org/10.1162/003465304323023831).
+
+Israelov, R. (2016). PutWrite versus BuyWrite: yes, put–call parity holds here too. Preprint, Social Science Research Network (https://doi.org/10.2139/ssrn.2894610).
+
+Israelov, R., and Nielsen, L. N. (2015). Covered calls uncovered. *Financial Analysts Journal* 71(6), 44–57 (https://doi.org/10.2469/faj.v71.n6.1).
+
+Londono, J. M. (2011). The variance risk premium around the world. Working Paper, Board of Governors of the Federal Reserve (https://doi.org/10.2139/ssrn.2009065).
+
+www.risk.net/journals                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Journal of Risk--------------------------------------------------------------------------------
+VOLUME 41 NUMBER 4 (https://www.aqr.com/-/media/AQR/Documents/Journal-Articles/JPM-Still-Not-Cheap.pdf)
+citeturn696search5 [wordlim: 200] Published: 11.2 years ago; Israelov, R., and L.Nielsen.“Covered Call Strategies: One ... “Covered Calls Uncovered.”
+9Interestingly, in each of these three instances, the S&P 
+500 Index had moved significantly after the option was pur-
+chased, but before the event. As a result, the put options’ con-
+vexity on the S&P 500 crash dates was quite low. Even though 
+the index was down nearly 10% in each case, the delta-adjusted 
+put options returned less than 1% during each event.
+REFERENCES
+Bakshi, G., and N. Kapadia. “Delta-Hedged Gains and 
+the Negative Market Volatility Risk Premium.” Review of 
+ Financial Studies, Vol. 16, No. 2  (2003), pp. 527-566.
+Bollen, N.P.B., and R.E. Whaley. “Does Net Buying  Pressure 
+Affect the Shape of Implied Volatility Functions?” Journal of 
+Finance, Vol. 59, No. 2 (2004), pp. 711-753.
+Gârleanu, N., L.H. Pedersen, and A.M. Poteshman. “Demand-
+Based Option Pricing.” Review of Financial Studies, Vol. 22, 
+No. 10 (2009), pp. 4259-4299.
+Hill, J.M., V. Balasubramanian, K. Gregory, and I.  Tierens. 
+“Finding Alpha via Covered Index Writing.” Financial  Analysts 
+Journal, Vol. 62, No. 5 (2006), pp. 29-46.
+Israelov, R., and L. Nielsen. “Covered Call Strategies: One 
+Fact and Eight Myths.” Financial Analysts Journal, Vol. 70, No. 
+6 (2014), pp. 23-31.
+——. “Covered Calls Uncovered.” AQR working paper, 
+(2015).
+To order reprints of this article, please contact Dewey Palmieri 
+at [REDACTED_EMAIL] or 212-224-3675.
+Disclaimer
+The information set forth herein has been obtained or derived from sources 
+we believe to be reliable. However, we do not make any representation or 
+warranty, express or implied, as to the information’s accuracy or complete-
+ness, nor do we recommend that the information in this article serve as the 
+basis of any investment decision. This document has been provided to you 
+solely for information purposes. The views and opinions expressed herein 
+are ours; do not necessarily reflect the views of AQR Capital Management, 
+its affiliates, or its employees; do not constitute an offer or solicitation of an 
+offer, or any advice or recommendation, to purchase any securities or other 
+financial instruments; and may not be construed as such.
+adjusting for its equity exposure, is positively related to the 
+equity’s realized volatility.
+3The average volatility risk premium is computed as the 
+square root of the average implied variance (VIX squared) 
+minus the square root of the average coinciding realized vari-
+ance. If computed as the average VIX minus average realized 
+volatility, the 4.4% estimate has a positive bias.
+4Bakshi and Kapadia [2003] show that delta-hedged 
+option returns exhibit a volatility risk premium. Bollen and 
+Whaley [2004] find that the shape of the implied volatility 
+surface is influenced by net option buying pressure. Simi-
+larly, Garleanu et al. [2005] present theoretical and empir-
+ical evidence in favor of option demand pressure explaining 
+the volatility risk premium. Hill et al. [2006] and Israelov 
+and Nielsen [2014] show that the short volatility exposure 
+embedded in covered call strategies enhance their risk-ad-
+justed returns.
+5This article investigates the relationship between the 
+volatility risk premium and market risk by sorting on the 
+VIX Index. However, the VIX Index is not a pure mea-
+sure of risk because it includes a volatility risk premium. For 
+robustness, we have also performed the same analysis after 
+sorting on historical realized volatility (42-day) instead. Due 
+to the strong relationship between the VIX Index and real-
+ized volatility, the results of the two sorts are similar and any 
+conclusions drawn from the analysis presented in the article 
+are robust to bucketing by realized volatility rather than by 
+the VIX Index.
+6NASDAQ enters our sample in February 2001. 
+DAX, Euro Stoxx, FTSE, and the Swiss Market Index join 
+in January 2002. The Russell 2000 is available beginning 
+January 2004. KOSPI joins in May of 2004 and Nikkei joins 
+in June 2004.
+7The volatility index used to bucket for the S&P 500 
+is the VIX Index (CBOE Volatility Index). For DAX: V1X 
+Index (Deutsche Borse VDAX-NEW Index). For Euro Stoxx: 
+V2X Index (Euro Stoxx 50 Volatility Index). For FTSE: 
+VFTSE Index (FTSE 100 Volatility Index). For Hang Seng: 
+VHSI Index (HIS Volatility Index). For KOSPI: VKOSPI 
+Index (KOSPI 200 Volatility Index). For NASDAQ: VXN 
+Index (CBOE NASDAQ-100 Volatility Index). For Nikkei: 
+VNKY Index (Nikkei Volatility Index). For Russell 2000: 
+RVX Index (CBOE Russell 2000 Volatility Index). And for 
+Swiss Market Index: V3X (Deutsche Borse VSMI Volatility 
+Index). We bucket into quintiles rather than deciles because 
+of the reduced sample size.
+8This delta adjustment is important because the option 
+premium is paid for the option’s convexity and not for its 
+delta. Portfolio managers may reduce their equity exposure 
+directly by selling SPX futures; there is no need for options 
+simply to reduce equity exposure.
+   Still Not Cheap: Portfolio Protection in calm markets 
+Summer 2015--------------------------------------------------------------------------------
+127102_wrmw.indd (https://www.aqr.com/-/media/AQR/Documents/Journal-Articles/JoAI-Embracing-Downside-Risk.pdf?sc_lang=en)
+citeturn696search6 [wordlim: 200] Published: 9.8 years ago; Crawled: 9.8 years ago; Nielsen.“Covered Calls Uncovered.”
+IsraeIov, R., and L.N. Nielsen. “Covered Calls Uncovered.” *Financial Analysts Journal*, Vol. 71, No. 6 (2015), pp. 44-57.
+
+Kahneman, D., and A. Tversky. “Prospect Theory: An Analysis of Decision under Risk.” *Econometrica*, Vol. 47, No. 2 (1979), pp. 263-291.
+
+Kapadia, N., and E. Szado. “Fifteen Years of the Russell 2000 Buy-Write.” *The Journal of Alternative Investments*, Vol. 21, No. 4 (2012), pp. 59-80.
+
+Litterman, R. “Who Should Hedge Tail Risk?” *Financial Analysts Journal*, Vol. 67, No. 3 (2011), pp. 6-11.
+
+Taleb, N.N. “‘Do Financial Markets Reward Buying or Selling Insurance and Lottery Tickets?’: A Comment.” *Financial Analysts Journal*, Vol. 69, No. 2 (2013).
+
+**Disclaimer**  
+The views and opinions expressed herein are those of the authors and do not necessarily reflect the views of AQR Capital Management, LLC, its affiliates, or its employees. This document does not represent valuation judgments, investment advice, or research with respect to any financial instrument, issuer, security, or sector that may be described or referenced herein and does not represent a formal or official view of AQR.
+
+*To order reprints of this article, please contact Dewey Palmieri at [REDACTED_EMAIL] or 212-224-3675.*
+
+Winter 2017                                                                                 The Journal of Alternative Investments--------------------------------------------------------------------------------
+The Voices of Influence  |  iijournals.com (https://www.aqr.com/-/media/AQR/Documents/Journal-Articles/Risk-and-Return.pdf)
+citeturn696search7 [wordlim: 200] Published: 7 months ago; Israelov, R., and L.N.Nielsen.“Covered Calls Uncovered.” ... priate when the call and put option expire on the same date.
+——. “Who Should Use Equity Collars?” 2012b, https://
+www.cboe.com/strategies/pdf/equitycollarstrategy.pdf.
+Constantinides, G., and L. Lian. “The Supply and Demand 
+of S&P 500 Put Options.” Working paper, NBER, 2015.
+Gârleanu, N., L.H. Pedersen, and A.M. Poteshman. 
+“Demand-Based Option Pricing.” Review of Financial Studies, 
+Vol. 22, No. 10 (2009), pp. 4259-4299.
+Hill, J.M., V. Balasubramanian, K. Gregory, and I. Tierens. 
+“Finding Alpha via Covered Index Writing.” Financial 
+Analysts Journal, Vol. 62, No. 5 (2006), pp. 29-46. 
+Israelov, R., and L.N. Nielsen. “Covered Calls Uncovered.” 
+Financial Analysts Journal, Vol. 71, No. 6 (2015a), pp. 44-57.
+——. “Still Not Cheap: Portfolio Protection in Calm 
+Markets.” The Journal of Portfolio Management, Vol. 41, No. 4 
+(2015b), pp. 108-120. 
+Szado, E., and T. Schneeweis. “Loosening Your Collar—
+Alternative Implementations of QQQ Collars.” The Journal 
+of Trading, Vol. 5, No. 2 (2010), pp. 35-56.
+4The payoff diagram shown in Exhibit 1 is only appro-
+priate when the call and put option expire on the same date. 
+A collar strategy that buys a three-month put option at a 
+specific strike and then sequentially sells three monthly call 
+options at different strikes cannot be represented in a payoff 
+diagram because of path dependence. 
+5It should be noted, however, that the put and 
+call option implied volatilities did not necessarily move 
+in sync, both because the options had different strikes 
+and because they often had different expirations. 
+Therefore, the interpretation of the net vega exposure is 
+somewhat complicated.
+6For this calculation, we considered a collar to be equiv-
+alent to a protective put on a given day if the call option has 
+a delta exposure less than 0.02, a gamma exposure less than 
+0.2%, and a vega exposure less than 0.01%.
+7The strategy’s annual simple excess return is 2.9%. 
+Volatility drag reduces its compounded return to 2.3%.
+8For this scenario, we assumed that all options’ implied 
+volatilities spike to 150%, regardless of maturity. In an actual 
+crash, however, the implied volatilities of longer-dated 
+options would probably not increase as much as shorter-dated 
+options’ implied volatilities. Our simulation is therefore likely 
+being generous to the collar’s return in such an event, since 
+applying a time-to-maturity adjustment to the collar’s put 
+option implied volatility shock size would decrease its simu-
+lated return.
+REFERENCES
+Disclaimer
+The views and opinions expressed herein are those of the authors and do 
+not necessarily reflect the views of AQR Capital Management, LLC, its 
+affiliates, or its employees. This document does not represent valuation 
+judgments, investment advice, or research with respect to any financial 
+instrument, issuer, security, or sector that may be described or referenced 
+herein and does not represent a formal or official view of AQR.
+Bakshi, G., and N. Kapadia. “Delta-Hedged Gains and 
+the Negative Market Volatility Risk Premium.” Review of 
+Financial Studies, Vol. 16, No. 2 (2003), pp. 527-566.
+To order reprints of this article, please contact Dewey Palmieri 
+at [REDACTED_EMAIL] or 212-224-3675.
+Bollen, N.P.B., and R.E. Whaley. “Does Net Buying Pressure 
+Affect the Shape of Implied Volatility Functions?” Journal of 
+Finance, Vol. 59, No. 2 (2004), pp. 711-753.
+Chicago Board Options Exchange. “Equity Options 
+Strategies – Equity Collar.” 2012a, https://www.cboe.com/
+strategies/equityoptions/equitycollars/part1.aspx.
+   risk and reTurn of equiTy index Collar sTraTegies 
+summer 2016--------------------------------------------------------------------------------
+Search (https://www.aqr.com/search?Topics=Volatility)
+citeturn696search1 [wordlim: 200] Crawled: yesterday; December 31, 2018 - Roni Israelov ... ## Covered Calls Uncovered ... ## Covered Call Strategies: One Fact and Eight Myths
+
+Topic
+
+Type
+
+[Input: Filter & Search]
+
+Alternative Investing Asset Allocation Behavioral Finance Equities ESG Investing Machine Learning Macroeconomics Market Risk and Efficiency Portfolio Construction Portfolio Risk and Performance Tax Aware
+
+Alternative Thinking Cliff's Perspectives Data Set Journal Article White Paper Working Paper
+
+Showing 1 - 10 of 12 results
+
+Sort By
+
+  * Relevance
+  * Newest
+
+Perspectives
+
+## In Praise of High-Volatility Alternatives
+
+September 4, 2024 - Cliff Asness
+
+This note argues that good higher-volatility alternative investments, that are indeed often very hard to stick with, can be important tools in constructing the best overall portfolio. I think if (a big if) investors can stick with them, they are often a more effective tool than their lower-volatility cousins. Basically, I think they are underutilized
+
+Journal Article
+
+## Betting Against Correlation: Testing Theories of the Low-Risk Effect
+
+March 31, 2020 - Cliff Asness Andrea Frazzini Niels Joachim Gormsen cite3†Lasse H. Pedersen We test whether the low-risk effect is driven by (a) leverage constraints and thus risk should be measured using beta vs. (b) behavioral effects and thus risk should be measured by idiosyncratic risk.
+
+Journal Article
+
+## Pathetic Protection: The Elusive Benefits of Protective Puts
+
+December 31, 2018 - Roni Israelov
+
+Conventional wisdom is that put options are effective drawdown protection tools.
+
+Working Paper
+
+## Forecasting the Distribution of Option Returns
+
+December 12, 2018 - Roni Israelov Bryan T. Kelly
+
+We propose a method for constructing conditional option return distributions.
+
+Working Paper
+
+## Being Right is Not Enough: Buying Options to Bet on Higher Realized Volatility
+
+September 27, 2018 - Roni Israelov Harsha Tummala
+
+Should investors who buy options expect to profit when realized volatility increases? If so, under what conditions? To answer these questions, we analyzed the relationship between long volatility performance (buying options) and contemporaneous changes in volatility.
+
+White Paper
+
+## Understanding the Volatility Risk Premium
+
+May 11, 2018 - Ing-Chea Ang Roni Israelov Rodney N. Sullivan Harsha Tummala
+
+The volatility risk premium (VRP) represents the compensation that investors earn for providing protection against market losses. We explain the reasons why it may exist and explore its historical performance with a simple option-selling strategy.
+
+Perspectives
+
+## Wild but Not Crazy
+
+February 15, 2018 - Cliff Asness
+
+Just how volatile was the recent market ride? Cliff Asness puts the volatility into perspective in terms of both its absolute and surprise levels.
+
+Journal Article
+
+## The Low-Volatility Anomaly: Market Evidence on Systemic Risk vs. Mispricing
+
+January 1, 2016 - Xi Li Rodney N. Sullivan Luis Garcia-Feijóo
+
+Researchers have demonstrated a long-term connection between future stock returns and various measures of prior stock price variability.
+
+Journal Article
+
+## Covered Calls Uncovered
+
+November 30, 2015 - Roni Israelov
+
+Journal Article
+
+## Covered Call Strategies: One Fact and Eight Myths
+
+October 31, 2014 - Roni Israelov
+
+Call overwriting is a method of simultaneously expressing a view on a security and its volatility, and the CBOE S&P 500 BuyWrite Index (BXM) is one of many ways to get exposure to the equity and volatility risk premia.

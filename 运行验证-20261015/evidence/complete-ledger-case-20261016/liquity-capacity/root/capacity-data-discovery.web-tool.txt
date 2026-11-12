@@ -1,0 +1,465 @@
+Liquity V2 TVL, Fees & Revenue (https://defillama.com/protocol/liquity-v2)
+citeturn494search0 [wordlim: 200] Crawled: last month; Among CDP protocols tracked by DefiLlama, Liquity V2 ranks #6 by TVL. ... DefiLlama tracks 3 Liquity V2 yield pools with an average APY of 3.2%. ... Gas Compensation  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+
+Image: Logo of Liquity V2Liquity V2[Button: Information][Button: TVL][Button: Yields][Button: Fees and Revenue][Button: Forks]
+
+# Image: Logo of Liquity V2Liquity V2(LQTY)Add to watchlist
+
+Total Value Locked$95.89m
+
+## TVL by Chain
+
+Ethereum$95.89m
+
+## Key Metrics
+
+Image
+
+Fees 30d$173,726
+
+Fees 30d by chain
+
+Ethereum$173,726
+
+Fees 7d$22,542
+
+Ethereum$22,542
+
+Fees 24h$1,774
+
+Ethereum$1,774
+
+Cumulative Fees$2.9m
+
+Ethereum$2.9m
+
+Revenue 30d$37,878
+
+Revenue 30d by chain
+
+Ethereum$37,878
+
+Revenue 7d$3,889
+
+Ethereum$3,889
+
+Revenue 24h$443
+
+Ethereum$443
+
+Cumulative Revenue$632,491
+
+Image: Logo of Liquity V2Liquity V2(LQTY)Add to watchlist
+
+Total Value Locked$95.89m
+
+## TVL by Chain
+
+Ethereum$95.89m
+
+## Key Metrics
+
+Image
+
+Fees 30d$173,726
+
+Fees 30d by chain
+
+Ethereum$173,726
+
+Fees 7d$22,542
+
+Ethereum$22,542
+
+Fees 24h$1,774
+
+Ethereum$1,774
+
+Cumulative Fees$2.9m
+
+Ethereum$2.9m
+
+Revenue 30d$37,878
+
+Revenue 30d by chain
+
+Ethereum$37,878
+
+Revenue 7d$3,889
+
+Ethereum$3,889
+
+Revenue 24h$443
+
+Ethereum$443
+
+Cumulative Revenue$632,491
+
+Ethereum$632,491
+
+[Button: Report incorrect data].png
+
+## Protocol Information
+
+Liquity V2 is a decentralized and immutable borrowing protocol that allows you to set your own interest rate and draw loans against ETH, wstETH and rETH.
+
+WebsiteTwitter
+
+Category:CDP
+
+Audits:Yes
+
+## Methodology
+
+TVL: Total value of all coins held in the smart contracts of the protocolView code on GitHubFees: Total interest, redemption fees paid by borrowers and liquidation gas compensate.View code on GitHubRevenue: 25% of borrow interests are collected as protocol liquidity incentives.View code on GitHub
+
+## Yields
+
+Pools Tracked 3
+
+Average Supply APY 3.18%
+
+## Frequently Asked Questions
+
+What is Liquity V2's TVL?
+
+Liquity V2 currently has $95.89m in total value locked. TVL has increased 33.5% over the past 30 days.
+
+What chains does Liquity V2 operate on?
+
+Liquity V2 operates on Ethereum. Ethereum holds the largest share at 100%.
+
+How much has Liquity V2 generated in fees and revenue?
+
+Over the past 30 days, Liquity V2 generated $173,726 in fees. Of that, $37,878 was protocol revenue. Based on the trailing year, the annualized rate is $1.93m in fees and $432,202 in revenue.
+
+How does Liquity V2's TVL compare to similar protocols?
+
+Among CDP protocols tracked by DefiLlama, Liquity V2 ranks #6 by TVL. The category holds $7.776b across 203 protocols, and Liquity V2 accounts for 1.2% of that total. Other leading protocols include Sky Lending, USDD, Liquity V1, crvUSD, Frankencoin, Reservoir Protocol, Inverse Finance FiRM, BIMA CDP, Abracadabra Spell, and Inverse Finance Frontier.
+
+How many yield pools does Liquity V2 have?
+
+DefiLlama tracks 3 Liquity V2 yield pools with an average APY of 3.2%.
+
+## Income Statement for Liquity V2
+
+[Input]Yearly[Input]Quarterly[Input]Monthly[Input]Cumulative
+
+.csv
+
+Image: defillama
+
+ | Q3 2026*  | Q2 2026  | Q1 2026  | Q4 2025  | Q3 2025  | Q2 2025  | Q1 2025
+--- | --- | --- | --- | --- | --- | --- | ---
+Gross Protocol Revenue  | $416.79K  | $387.32K  | $413.69K  | $597.9K  | $636.08K  | $230.33K  | $219.1K
+Borrow Interest  | $384.58K  | $327.05K  | $368.69K  | $535.89K  | $548.1K  | $179.56K  | $186.08K
+Redemption Fees  | $32.22K  | $59.14K  | $36.82K  | $48.38K  | $87.96K  | $50.5K  | $26.38K
+Gas Compensation  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+Cost of Revenue  | $320.65K  | $305.56K  | $321.52K  | $463.93K  | $499.05K  | $185.44K  | $172.57K
+Borrow Interest To Stability Pools  | $288.44K  | $245.29K  | $276.51K  | $401.92K  | $411.08K  | $134.67K  | $139.56K
+Redemtion Fee To Borrowers  | $32.22K  | $59.14K  | $36.82K  | $48.38K  | $87.96K  | $50.5K  | $26.38K
+Gas Compensation  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+Gross Profit  | $96.14K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+Protocol Incentivized Liquidity  | $96.14K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+Earnings  | $96.14K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K--------------------------------------------------------------------------------
+Liquity V2 TVL, Fees & Revenue (https://investors.defillama.com/protocol/liquity-v2)
+citeturn494search1 [wordlim: 200] Crawled: today; Among CDP protocols tracked by DefiLlama, Liquity V2 ranks #5 by TVL. ... DefiLlama tracks 3 Liquity V2 yield pools with an average APY of 5.2%. ... Gas Compensation  | $37  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+
+Image: Logo of Liquity V2Liquity V2[Button: Information][Button: TVL][Button: Yields][Button: Fees and Revenue][Button: Forks]
+
+Image: Logo of Liquity V2
+
+# Liquity V2(LQTY)
+
+Add to watchlist
+
+Total Value Locked$96.46m
+
+## TVL by Chain
+
+Ethereum$96.46m
+
+## Key Metrics
+
+Image
+
+Fees 30d$192,527
+
+Fees 30d by chain
+
+Ethereum$192,527
+
+Fees 7d$44,816
+
+Ethereum$44,816
+
+Fees 24h$6,340
+
+Ethereum$6,340
+
+Cumulative Fees$3.1m
+
+Ethereum$3.1m
+
+Revenue 30d$31,000
+
+Revenue 30d by chain
+
+Ethereum$31,000
+
+Revenue 7d$6,656
+
+Ethereum$6,656
+
+Revenue 24h$964
+
+Ethereum$964
+
+Cumulative Revenue$665,094
+
+Ethereum$665,094
+
+[Button: Report incorrect data].png
+
+Loading chart...
+
+## Protocol Information
+
+Liquity V2 is a decentralized and immutable borrowing protocol that allows you to set your own interest rate and draw loans against ETH, wstETH and rETH.
+
+WebsiteX/Twitter
+
+Category:CDP
+
+Audits:Yes
+
+## Methodology
+
+TVL: Total value of all coins held in the smart contracts of the protocolView code on GitHubFees: Total interest, redemption fees paid by borrowers and liquidation gas compensate.View code on GitHubRevenue: 25% of borrow interests are collected as protocol liquidity incentives.View code on GitHub
+
+How many yield pools does Liquity V2 have?
+
+DefiLlama tracks 3 Liquity V2 yield pools with an average APY of 5.2%.
+
+## Income statement for Liquity V2
+
+[Input]Yearly[Input]Quarterly[Input]Monthly[Input]Cumulative
+
+.csv
+
+Image
+
+ | Q4 2026*  | Q3 2026  | Q2 2026  | Q1 2026  | Q4 2025  | Q3 2025  | Q2 2025  | Q1 2025
+--- | --- | --- | --- | --- | --- | --- | --- | ---
+Gross Protocol Revenue  | $90.14K  | $530.28K  | $387.32K  | $413.69K  | $597.9K  | $636.08K  | $230.33K  | $219.1K
+Borrow Interest  | $57.28K  | $457.71K  | $327.05K  | $368.69K  | $535.89K  | $548.1K  | $179.56K  | $186.08K
+Redemption Fees  | $32.83K  | $72.57K  | $59.14K  | $36.82K  | $48.38K  | $87.96K  | $50.5K  | $26.38K
+Gas Compensation  | $37  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+Cost of Revenue  | $75.83K  | $415.85K  | $305.56K  | $321.52K  | $463.93K  | $499.05K  | $185.44K  | $172.57K
+Borrow Interest To Stability Pools  | $42.96K  | $343.29K  | $245.29K  | $276.51K  | $401.92K  | $411.08K  | $134.67K  | $139.56K
+Redemtion Fee To Borrowers  | $32.83K  | $72.57K  | $59.14K  | $36.82K  | $48.38K  | $87.96K  | $50.5K  | $26.38K
+Gas Compensation  | $37  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+Gross Profit  | $14.32K  | $114.43K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+Protocol Incentivized Liquidity  | $14.32K  | $114.43K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+Earnings  | $14.32K  | $114.43K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+
+### Income flow visualization
+
+[Input]Yearly[Input]Quarterly[Input]Monthly[Input]Cumulative
+
+Q3 2026--------------------------------------------------------------------------------
+Liquity TVL, Fees & Revenue (https://enterprise.defillama.com/protocol/liquity)
+citeturn494search2 [wordlim: 200] Crawled: today; Liquity V1 - Total one-time borrow fees, redemption fees paid by borrowers, liquidation gas compensations and liquidation profits.View code on GitHub Liquity V2 - Total interest, redemption fees paid by borrowers and liquidation gas compensate.View code on GitHub ... Among CDP protocols tracked by DefiLlama, Liquity ranks #3 by TVL. ... Gas Compensation  | $37  | $0  | $1.13K  | $8.84K  | $14.65K  | $775  | $266  | $7.31K  | $210  | $1.1K  | $21.92K  | $1.43K  | $12.57K  | $243  | $6.62K  | $2.2K  | $19.44K  | $4.44K  | $719.48K  | $183.45K  | $14.1K  | $92.3K  | $28.88K ... Redemtion Fee To Borrowers  | $33.74K  | $72.57K  | $59.14K  | $36.82K  | $48.38K  | $87.96K  | $50.5K  | $26.38K  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0
+## Protocol Information
+
+Liquity is a decentralized and immutable borrowing protocol that allows you to draw capital efficient loans against ETH and LSTs.
+
+WebsiteGitHubX/Twitter
+
+Category:CDP
+
+Products:
+
+  * Image
+
+Liquity V1CDP
+
+  * Image
+
+Liquity V2CDP
+
+## Yields
+
+Pools Tracked 3
+
+Average Supply APY 4.69%
+
+View all Yields
+
+## User Activity
+
+Active Addresses (24h)4
+
+New Addresses (24h)0
+
+Transactions (24h)25
+
+Gas Used (24h)0.01 ETH
+
+Gas Cost (24h)$33.15
+
+## Methodology
+
+TVL: Total value of all coins held in the smart contracts of the protocol
+
+### Fees:
+
+Liquity V1 - Total one-time borrow fees, redemption fees paid by borrowers, liquidation gas compensations and liquidation profits.View code on GitHubLiquity V2 - Total interest, redemption fees paid by borrowers and liquidation gas compensate.View code on GitHub
+
+### Revenue:
+
+Liquity V1 - Share of borrow and redemption fees distributed to the protocol and/or token holders.View code on GitHubLiquity V2 - 25% of borrow interests are collected as protocol liquidity incentives.View code on GitHub
+
+### Holders Revenue:
+
+Liquity V1 - Share of borrow and redemption fees distributed to stability pool depositors and protocol token stakers.View code on GitHub
+
+Incentives: Tokens allocated to users through liquidity mining or incentive schemes, typically as part of governance or reward mechanisms.
+
+Earnings: Revenue of the protocol minus the incentives distributed to users
+
+## Frequently asked questions
+
+What is Liquity's TVL?
+
+Liquity currently has $270.87m in total value locked. TVL has increased 0.5% over the past 30 days.
+
+What chains does Liquity operate on?
+
+Liquity operates on Ethereum. Ethereum holds the largest share at 100%.
+
+How much has Liquity generated in fees and revenue?
+Gas Compensation  | $37  | $0  | $1.13K  | $8.84K  | $14.65K  | $775  | $266  | $7.31K  | $210  | $1.1K  | $21.92K  | $1.43K  | $12.57K  | $243  | $6.62K  | $2.2K  | $19.44K  | $4.44K  | $719.48K  | $183.45K  | $14.1K  | $92.3K  | $28.88K
+Liquidation Profit  | $73.86  | $10.58  | $52  | $1.72K  | $577.07K  | $34.56K  | $227.78K  | $321.92K  | $175.14K  | $44.01K  | $887.74K  | $593.24K  | $510.38K  | $106.33K  | $58.88K  | $230.26K  | $1.48M  | $6.56M  | $28.5M  | $2.46M  | $661.6K  | $1.61M  | $3.33M
+Redemption Fees  | $33.74K  | $89.98K  | $65.61K  | $68.95K  | $75.01K  | $97.97K  | $90.37K  | $186.79K  | $138.05K  | $80.51K  | $81.32K  | $324.95K  | $809.88K  | $533.98K  | $1.4K  | $164.89K  | $38.73K  | $931  | $238.41K  | $304.68K  | $3.53M  | $8.01K  | $317.15K
+Borrow Interest  | $57.07K  | $457.71K  | $327.05K  | $368.69K  | $535.89K  | $548.1K  | $179.56K  | $186.08K  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0
+--------------------------------------------------------------------------------
+Liquity TVL, Fees & Revenue (https://investors.defillama.com/protocol/liquity)
+citeturn494search3 [wordlim: 200] Crawled: today; Liquity V1 - Total one-time borrow fees, redemption fees paid by borrowers, liquidation gas compensations and liquidation profits.View code on GitHub Liquity V2 - Total interest, redemption fees paid by borrowers and liquidation gas compensate.View code on GitHub ... DefiLlama tracks 3 Liquity yield pools with an average APY of 5.2%. ... Gas Compensation  | $37  | $0  | $1.13K  | $8.84K  | $14.65K  | $775  | $266  | $7.31K  | $210  | $1.1K  | $21.92K  | $1.43K  | $12.57K  | $243  | $6.62K  | $2.2K  | $19.44K  | $4.44K  | $719.48K  | $183.45K  | $14.1K  | $92.3K  | $28.88K
+## Protocol Information
+
+Liquity is a decentralized and immutable borrowing protocol that allows you to draw capital efficient loans against ETH and LSTs.
+
+WebsiteGitHubX/Twitter
+
+Category:CDP
+
+Products:
+
+  * Image
+
+Liquity V1CDP
+
+  * Image
+
+Liquity V2CDP
+
+## Yields
+
+Pools Tracked 3
+
+Average Supply APY 5.23%
+
+View all Yields
+
+## User Activity
+
+Active Addresses (24h)1
+
+New Addresses (24h)0
+
+Transactions (24h)4
+
+Gas Used (24h)0 ETH
+
+Gas Cost (24h)$7.99
+
+## Methodology
+
+TVL: Total value of all coins held in the smart contracts of the protocol
+
+### Fees:
+
+Liquity V1 - Total one-time borrow fees, redemption fees paid by borrowers, liquidation gas compensations and liquidation profits.View code on GitHubLiquity V2 - Total interest, redemption fees paid by borrowers and liquidation gas compensate.View code on GitHub
+
+### Revenue:
+
+Liquity V1 - Share of borrow and redemption fees distributed to the protocol and/or token holders.View code on GitHubLiquity V2 - 25% of borrow interests are collected as protocol liquidity incentives.View code on GitHub
+
+### Holders Revenue:
+
+Liquity V1 - Share of borrow and redemption fees distributed to stability pool depositors and protocol token stakers.View code on GitHub
+
+Incentives: Tokens allocated to users through liquidity mining or incentive schemes, typically as part of governance or reward mechanisms.
+
+Earnings: Revenue of the protocol minus the incentives distributed to users
+
+## Frequently asked questions
+
+What is Liquity's TVL?
+
+Liquity currently has $274.39m in total value locked. TVL has decreased 1.7% over the past 30 days.
+
+What chains does Liquity operate on?
+
+Liquity operates on Ethereum. Ethereum holds the largest share at 100%.
+
+How much has Liquity generated in fees and revenue?
+Cost of Revenue  | $77.15K  | $415.86K  | $305.61K  | $323.88K  | $1.04M  | $534.38K  | $413.22K  | $495.17K  | $175.35K  | $45.11K  | $909.66K  | $594.67K  | $522.95K  | $106.58K  | $65.49K  | $232.46K  | $1.5M  | $6.56M  | $29.21M  | $2.65M  | $675.7K  | $1.7M  | $3.36M
+Gas Compensation  | $37  | $0  | $1.13K  | $8.84K  | $14.65K  | $775  | $266  | $7.31K  | $210  | $1.1K  | $21.92K  | $1.43K  | $12.57K  | $243  | $6.62K  | $2.2K  | $19.44K  | $4.44K  | $719.48K  | $183.45K  | $14.1K  | $92.3K  | $28.88K
+Liquidation Profit  | $58.86  | $10.58  | $52  | $1.72K  | $577.07K  | $34.56K  | $227.78K  | $321.92K  | $175.14K  | $44.01K  | $887.74K  | $593.24K  | $510.38K  | $106.33K  | $58.88K  | $230.26K  | $1.48M  | $6.56M  | $28.5M  | $2.46M  | $661.6K  | $1.61M  | $3.33M
+Borrow Interest To Stability Pools  | $43.09K  | $343.29K  | $245.29K  | $276.51K  | $401.92K  | $411.08K  | $134.67K  | $139.56K  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0
+--------------------------------------------------------------------------------
+Liquity V2 TVL, Fees & Revenue (https://defillama.com/protocol/liquity-v2?denomination=ETH)
+citeturn494search4 [wordlim: 200] Crawled: today; Among CDP protocols tracked by DefiLlama, Liquity V2 ranks #5 by TVL. ... DefiLlama tracks 3 Liquity V2 yield pools with an average APY of 5.2%. ... Gas Compensation  | $36  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+
+[Input]Yearly[Input]Quarterly[Input]Monthly[Input]Cumulative
+
+.csv
+
+Image
+
+ | Q4 2026*  | Q3 2026  | Q2 2026  | Q1 2026  | Q4 2025  | Q3 2025  | Q2 2025  | Q1 2025
+--- | --- | --- | --- | --- | --- | --- | --- | ---
+Gross Protocol Revenue  | $91.19K  | $530.28K  | $387.32K  | $413.69K  | $597.9K  | $636.08K  | $230.33K  | $219.1K
+Borrow Interest  | $57.29K  | $457.71K  | $327.05K  | $368.69K  | $535.89K  | $548.1K  | $179.56K  | $186.08K
+Redemption Fees  | $33.87K  | $72.57K  | $59.14K  | $36.82K  | $48.38K  | $87.96K  | $50.5K  | $26.38K
+Gas Compensation  | $36  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+Cost of Revenue  | $76.87K  | $415.85K  | $305.56K  | $321.52K  | $463.93K  | $499.05K  | $185.44K  | $172.57K
+Borrow Interest To Stability Pools  | $42.97K  | $343.29K  | $245.29K  | $276.51K  | $401.92K  | $411.08K  | $134.67K  | $139.56K
+Redemtion Fee To Borrowers  | $33.87K  | $72.57K  | $59.14K  | $36.82K  | $48.38K  | $87.96K  | $50.5K  | $26.38K
+Gas Compensation  | $36  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+Gross Profit  | $14.32K  | $114.43K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+Protocol Incentivized Liquidity  | $14.32K  | $114.43K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+Earnings  | $14.32K  | $114.43K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K--------------------------------------------------------------------------------
+Liquity TVL, Fees & Revenue (https://defillama.com/protocol/liquity?events=false&fees=true&tvl=false)
+citeturn494search5 [wordlim: 200] Crawled: last month; Gross Protocol Revenue  | $444.79K  | $398.97K  | $446K  | $1.23M  | $693.17K  | $511.73K  | $788.82K  | $433.79K  | $205.05K  | $1.12M  | $1.31M  | $1.78M  | $1.02M  | $469.02K  | $1.46M  | $1.91M  | $7.13M  | $30.17M  | $4.59M  | $11.57M  | $3.92M  | $16.15M ... Gas Compensation  | $0  | $1.13K  | $8.84K  | $14.65K  | $775  | $266  | $7.31K  | $210  | $1.1K  | $21.92K  | $1.43K  | $12.57K  | $243  | $6.62K  | $2.2K  | $19.44K  | $4.44K  | $719.48K  | $183.45K  | $14.1K  | $92.3K  | $28.88K
+--------------------------------------------------------------------------------
+Liquity TVL, Fees & Revenue (https://defillama.com/protocol/liquity?fees=true&staking=false&treasury=true&tvl=false)
+citeturn494search6 [wordlim: 200] Crawled: today; Gas Compensation  | $36  | $0  | $1.13K  | $8.84K  | $14.65K  | $775  | $266  | $7.31K  | $210  | $1.1K  | $21.92K  | $1.43K  | $12.57K  | $243  | $6.62K  | $2.2K  | $19.44K  | $4.44K  | $719.48K  | $183.45K  | $14.1K  | $92.3K  | $28.88K
+--------------------------------------------------------------------------------
+Protocol Fees Rankings - Fees Generated - DefiLlama (https://defillama.com/fees)
+citeturn494search7 [wordlim: 200] Crawled: today; Image: Logo of Papertrade Papertrade 1 chain  | Derivatives  | 2% fee on realized PnL at close, 2% fee on margin lost in liquidations, and LP profits above the $5M cap swept to PAPER stakers. ... Image: Logo of Liquity Liquity 1 chain  | CDP  | V1: Total one-time borrow fees, redemption fees paid by borrowers, liquidation gas compensations and liquidation profits. ... Image: Logo of Stabble Stabble 1 chain  | Dexs  | stabble Stableswap: Total swap fees paid by traders — the liquidity providers' share plus the protocol's cut. stabble CLMM: Swap fees paid by users  | $6.46  | $88.05  | $135.40
+--------------------------------------------------------------------------------
+Liquity V2 Protocol Forks & Derivatives - DefiLlama (https://defillama.com/protocol/forks/liquity-v2)
+citeturn494search8 [wordlim: 200] Crawled: last month; Image: Logo of Liquity V2 Liquity V2[Button: Information][Button: TVL][Button: Yields][Button: Fees and Revenue][Button: Forks] ... Image: Logo of Ebisu V2 Ebisu V2 Deprecated protocol 2 chains  | CDP  | $25,063.59  | +0.01%  | +0.12%  | -44.43%  |  |  | $0  | $0
+--------------------------------------------------------------------------------
+Liquity TVL, Fees & Revenue (https://defillama.com/protocol/liquity?events=false&fdv=true&tvl=false)
+citeturn494search9 [wordlim: 200] Crawled: today; Gas Compensation  | $36  | $0  | $1.13K  | $8.84K  | $14.65K  | $775  | $266  | $7.31K  | $210  | $1.1K  | $21.92K  | $1.43K  | $12.57K  | $243  | $6.62K  | $2.2K  | $19.44K  | $4.44K  | $719.48K  | $183.45K  | $14.1K  | $92.3K  | $28.88K
+--------------------------------------------------------------------------------
+Liquity TVL, Fees & Revenue (https://defillama.com/protocol/liquity?earnings=true&events=false&tvl=false)
+citeturn494search10 [wordlim: 200] Crawled: last month; Liquity V1 - Total one-time borrow fees, redemption fees paid by borrowers, liquidation gas compensations and liquidation profits.View code on GitHub Liquity V2 - Total interest, redemption fees paid by borrowers and liquidation gas compensate.View code on GitHub ... Image: defillama
+--------------------------------------------------------------------------------
+Liquity TVL, Fees & Revenue (https://defillama.com/protocol/liquity?denomination=ETH&fees=true&staking=false&tvl=false)
+citeturn494search11 [wordlim: 200] Crawled: last month; Liquity V1 - Total one-time borrow fees, redemption fees paid by borrowers, liquidation gas compensations and liquidation profits.View code on GitHub Liquity V2 - Total interest, redemption fees paid by borrowers and liquidation gas compensate.View code on GitHub ... Liquity V1 - Share of borrow and redemption fees distributed to the protocol and/or token holders.View code on GitHub Liquity V2 - 25% of borrow interests are collected as protocol liquidity incentives.View code on GitHub
+

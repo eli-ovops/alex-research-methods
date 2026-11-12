@@ -1,0 +1,451 @@
+GitHub - csquan/freqTrade · GitHub (https://github.com/csquan/freqTrade)
+citeturn1050search0 [wordlim: 200] Crawled: yesterday;   * Star1 (1)You must be signed in to star a repository ... JOSS-paper-submission ... .github  | .github  |    | ... requirements-freqai-rl.txt  | requirements-freqai-rl.txt  |    | ... Freqtrade is a free and open source crypto trading bot written in Python.
+
+  1. csquan
+  2. freqTrade
+
+freqTrade
+
+Public
+
+  * Sponsor
+  * NotificationsYou must be signed in to change notification settings
+  * Fork0 (0)
+  * Star1 (1)You must be signed in to star a repository
+
+## About
+
+No description, website, or topics provided.
+
+Readme
+
+GPL-3.0 license
+
+JOSS-paper-submission
+
+BranchesTags
+
+## Latest commit
+
+ 
+
+## History
+
+18,308 Commits
+
+## Folders and files
+
+Name  | Name  | Last commit message  | Last commit date
+--- | --- | --- | ---
+.devcontainer  | .devcontainer  |    |  
+.github  | .github  |    |  
+build_helpers  | build_helpers  |    |  
+config_examples  | config_examples  |    |  
+docker  | docker  |    |  
+docs  | docs  |    |  
+freqtrade  | freqtrade  |    |  
+scripts  | scripts  |    |  
+tests  | tests  |    |  
+user_data  | user_data  |    |  
+.coveragerc  | .coveragerc  |    |  
+.dockerignore  | .dockerignore  |    |  
+.gitattributes  | .gitattributes  |    |  
+.gitignore  | .gitignore  |    |  
+.pre-commit-config.yaml  | .pre-commit-config.yaml  |    |  
+.pylintrc  | .pylintrc  |    |  
+.readthedocs.yml  | .readthedocs.yml  |    |  
+CONTRIBUTING.md  | CONTRIBUTING.md  |    |  
+Dockerfile  | Dockerfile  |    |  
+LICENSE  | LICENSE  |    |  
+MANIFEST.in  | MANIFEST.in  |    |  
+README.md  | README.md  |    |  
+docker-compose.yml  | docker-compose.yml  |    |  
+environment.yml  | environment.yml  |    |  
+freqtrade.service  | freqtrade.service  |    |  
+freqtrade.service.watchdog  | freqtrade.service.watchdog  |    |  
+mkdocs.yml  | mkdocs.yml  |    |  
+pyproject.toml  | pyproject.toml  |    |  
+requirements-dev.txt  | requirements-dev.txt  |    |  
+requirements-freqai-rl.txt  | requirements-freqai-rl.txt  |    |  
+requirements-freqai.txt  | requirements-freqai.txt  |    |  
+requirements-hyperopt.txt  | requirements-hyperopt.txt  |    |  
+requirements-plot.txt  | requirements-plot.txt  |    |  
+requirements.txt  | requirements.txt  |    |  
+setup.cfg  | setup.cfg  |    |  
+setup.py  | setup.py  |    |  
+setup.sh  | setup.sh  |    |  
+[Button: View all files]
+
+# 
+
+Freqtrade is a free and open source crypto trading bot written in Python. It is designed to support all major exchanges and be controlled via Telegram or webUI. It contains backtesting, plotting and money management tools as well as strategy optimization by machine learning.
+
+## Disclaimer
+
+This software is for educational purposes only. Do not risk money which you are afraid to lose. USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
+
+Always start by running a trading bot in Dry-run and do not engage money before you understand how it works and what profit/loss you should expect.
+
+We strongly recommend you to have coding and Python knowledge. Do not hesitate to read the source code and understand the mechanism of this bot.
+
+## Supported Exchange marketplaces
+
+Please read the exchange specific notes to learn about eventual, special configurations needed for each exchange.
+
+  * [Input] Binance
+  * [Input] Bittrex
+  * [Input] FTX
+  * [Input] Gate.io
+  * [Input] Huobi
+  * [Input] Kraken
+  * [Input] OKX (Former OKEX)
+  * [Input] potentially many others. (We cannot guarantee they will work)
+
+### Supported Futures Exchanges (experimental)
+
+  * [Input] Binance
+  * [Input] Gate.io
+  * [Input] OKX.
+
+Please make sure to read the exchange specific notes, as well as the trading with leverage documentation before diving in.
+
+### Community tested
+
+Exchanges confirmed working by the community:
+
+  * [Input] Bitvavo
+  * [Input] Kucoin
+
+## Documentation
+
+We invite you to read the bot documentation to ensure you understand how the bot is working.
+
+Please find the complete documentation on the freqtrade website.
+
+## Features
+
+  * [Input] Based on Python 3.8+: For botting on any operating system - Windows, macOS and Linux.
+## Quick start
+
+Please refer to the Docker Quickstart documentation on how to get started quickly.
+
+For further (native) installation methods, please refer to the Installation documentation page.
+
+## Basic Usage
+
+### Bot commands
+    
+    `usage: freqtrade [-h] [-V]
+                     {trade,create-userdir,new-config,new-strategy,download-data,convert-data,convert-trade-data,list-data,backtesting,edge,hyperopt,hyperopt-list,hyperopt-show,list-exchanges,list-hyperopts,list-markets,list-pairs,list-strategies,list-timeframes,show-trades,test-pairlist,install-ui,plot-dataframe,plot-profit,webserver}
+                     ...
+    
+    Free, open source crypto trading bot
+    
+    positional arguments:
+      {trade,create-userdir,new-config,new-strategy,download-data,convert-data,convert-trade-data,list-data,backtesting,edge,hyperopt,hyperopt-list,hyperopt-show,list-exchanges,list-hyperopts,list-markets,list-pairs,list-strategies,list-timeframes,show-trades,test-pairlist,install-ui,plot-dataframe,plot-profit,webserver}
+--------------------------------------------------------------------------------
+freqtrade/docs/freqai.md at develop · freqtrade/freqtrade · GitHub (https://github.com/freqtrade/freqtrade/blob/develop/docs/freqai.md)
+citeturn1050search1 [wordlim: 200] Crawled: last week; As such - you can replace the image line in your docker compose file with `image: freqtradeorg/freqtrade:stable_freqai`. ...         doi = {10.21105/joss.04864}, ... You can find support for FreqAI in a variety of places, including the Freqtrade discord, the dedicated FreqAI discord, and in github issues. ... Beta testing and bug reporting: Stefan Gehring @bloodhunter4rc, @longyu, Andrew Lawless @paranoidandy, Pascal Schmidt @smidelis, Ryan McMullan @smarmau, Juha Nykänen @suikula, Johan van der Vlugt @jooopiert, Richárd Józsa @richardjosza
+
+# FreqAI
+
+## Introduction
+
+FreqAI is a software designed to automate a variety of tasks associated with training a predictive machine learning model to generate market forecasts given a set of input signals. In general, FreqAI aims to be a sandbox for easily deploying robust machine learning libraries on real-time data (details).
+
+!!! Note FreqAI is, and always will be, a not-for-profit, open source project. FreqAI does not have a crypto token, FreqAI does not sell signals, and FreqAI does not have a domain besides the present freqtrade documentation.
+
+Features include:
+
+  * Self-adaptive retraining - Retrain models during live deployments to self-adapt to the market in a supervised manner
+  * Rapid feature engineering - Create large rich feature sets (10k+ features) based on simple user-created strategies
+  * High performance - Threading allows for adaptive model retraining on a separate thread (or on GPU if available) from model inferencing (prediction) and bot trade operations.   * Dimensionality reduction - Reduce the size of the training data via Principal Component Analysis
+  * Deploying bot fleets - Set one bot to train models while a fleet of consumers use signals.
+
+## Quick start
+
+The easiest way to quickly test FreqAI is to run it in dry mode with the following command:
+    
+    freqtrade trade --config config_examples/config_freqai.example.json --strategy FreqaiExampleStrategy --freqaimodel LightGBMRegressor --strategy-path freqtrade/templates
+
+You will see the boot-up process of automatic data downloading, followed by simultaneous training and trading.
+
+!!! danger "Not for production" The example strategy provided with the Freqtrade source code is designed for showcasing/testing a wide variety of FreqAI features. It is also designed to run on small computers so that it can be used as a benchmark between developers and users. It is not designed to be run in production.
+
+An example strategy, prediction model, and config to use as a starting points can be found in `freqtrade/templates/FreqaiExampleStrategy.py`, `freqtrade/freqai/prediction_models/LightGBMRegressor.py`, and `config_examples/config_freqai.example.json`, respectively.
+
+
+## Install prerequisites
+
+The normal Freqtrade install process will ask if you wish to install FreqAI dependencies. You should reply "yes" to this question if you wish to use FreqAI. If you did not reply yes, you can manually install these dependencies after the install with:
+    
+    pip install -r requirements-freqai.txt
+
+!!! Note Catboost will not be installed on low-powered arm devices (raspberry), since it does not provide wheels for this platform.
+
+### Usage with docker
+
+If you are using docker, a dedicated tag with FreqAI dependencies is available as `:freqai`. As such - you can replace the image line in your docker compose file with `image: freqtradeorg/freqtrade:stable_freqai`. This image contains the regular FreqAI dependencies. Similar to native installs, Catboost will not be available on ARM based devices. If you would like to use PyTorch or Reinforcement learning, you should use the torch or RL tags, `image: freqtradeorg/freqtrade:stable_freqaitorch`, `image: freqtradeorg/freqtrade:stable_freqairl`.
+However, leveraging these machine learning libraries on historical and live chaotic data sources can be logistically difficult and expensive. Additionally, robust data collection, storage, and handling presents a disparate challenge. `FreqAI` aims to provide a generalized and extensible open-sourced framework geared toward live deployments of adaptive modeling for market forecasting. The `FreqAI` framework is effectively a sandbox for the rich world of open source machine learning libraries. Inside the `FreqAI` sandbox, users find they can combine a wide variety of third-party libraries to test creative hypotheses on a free live 24/7 chaotic data source - cryptocurrency exchange data.
+
+### Citing FreqAI
+
+FreqAI is published in the Journal of Open Source Software. If you find FreqAI useful in your research, please use the following citation:
+    
+    @article{Caulk2022, 
+        doi = {10.21105/joss.04864},
+        url = {https://doi.org/10.21105/joss.04864},
+        year = {2022}, publisher = {The Open Journal},
+        volume = {7}, number = {80}, pages = {4864},
+        author = {Robert A. Caulk and Elin Törnquist and Matthias Voppichler and Andrew R. Lawless and Ryan McMullan and Wagner Costa Santos and Timothy C. Pogue and Johan van der Vlugt and Stefan P. Gehring and Pascal Schmidt},
+        title = {FreqAI: generalizing adaptive modeling for chaotic time-series market forecasts},
+        journal = {Journal of Open Source Software} } 
+
+## Common pitfalls
+
+FreqAI cannot be combined with dynamic `VolumePairlists` (or any pairlist filter that adds and removes pairs dynamically). This is for performance reasons - FreqAI relies on making quick predictions/retrains. To do this effectively, it needs to download all the training data at the beginning of a dry/live instance. FreqAI stores and appends new candles automatically for future retrains. This means that if new pairs arrive later in the dry run due to a volume pairlist, it will not have the data ready. However, FreqAI does work with the `ShufflePairlist` or a `VolumePairlist` which keeps the total pairlist constant (but reorders the pairs according to volume).
+
+## Additional learning materials
+
+Here we compile some external materials that provide deeper looks into various components of FreqAI:
+
+  * Real-time head-to-head: Adaptive modeling of financial market data using XGBoost and CatBoost
+  * FreqAI - from price to prediction
+
+## Support
+
+You can find support for FreqAI in a variety of places, including the Freqtrade discord, the dedicated FreqAI discord, and in github issues.
+
+FreqAI is developed by a group of individuals who all contribute specific skillsets to the project.
+
+Conception and software development: Robert Caulk @robcaulk
+
+Theoretical brainstorming and data analysis: Elin Törnquist @th0rntwig
+
+Code review and software architecture brainstorming: @xmatthias
+
+Software development: Wagner Costa @wagnercosta Emre Suzen @aemr3 Timothy Pogue @wizrds
+
+Beta testing and bug reporting: Stefan Gehring @bloodhunter4rc, @longyu, Andrew Lawless @paranoidandy, Pascal Schmidt @smidelis, Ryan McMullan @smarmau, Juha Nykänen @suikula, Johan van der Vlugt @jooopiert, Richárd Józsa @richardjosza--------------------------------------------------------------------------------
+GitHub - AICryptopia/FreqTrade: Free, open source crypto trading bot · GitHub (https://github.com/AICryptopia/freqtrade)
+citeturn1050search2 [wordlim: 200] Crawled: today;   * Star0 (0)You must be signed in to star a repository ... requirements-freqai-rl.txt  | requirements-freqai-rl.txt  |    | ... setup.sh  | setup.sh  |    | ... Freqtrade is a free and open source crypto trading bot written in Python. ... --Maintain github's community policy-- ... Have you a great idea to improve the bot you want to share?
+
+  1. AICryptopia
+  2. FreqTrade
+
+## Repository navigation
+
+  *   * Code
+  * Pull requests
+  * Actions
+  * Projects
+  * Security and quality
+  * Insights
+
+More items
+
+Image: AICryptopia
+
+FreqTrade
+
+Public
+
+forked from freqtrade/freqtrade
+
+  * NotificationsYou must be signed in to change notification settings
+  * Fork0 (0)
+  * Star0 (0)You must be signed in to star a repository
+
+## About
+
+Free, open source crypto trading bot
+
+www.freqtrade.io
+
+develop
+
+BranchesTags
+
+## Latest commit
+
+ 
+
+## History
+
+26,840 Commits
+
+## Folders and files
+
+Name  | Name  | Last commit message  | Last commit date
+--- | --- | --- | ---
+.devcontainer  | .devcontainer  |    |  
+.github  | .github  |    |  
+.vscode  | .vscode  |    |  
+build_helpers  | build_helpers  |    |  
+# 
+
+Freqtrade is a free and open source crypto trading bot written in Python. It is designed to support all major exchanges and be controlled via Telegram or webUI. It contains backtesting, plotting and money management tools as well as strategy optimization by machine learning.
+
+## Disclaimer
+
+This software is for educational purposes only. Do not risk money which you are afraid to lose. USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
+
+Always start by running a trading bot in Dry-run and do not engage money before you understand how it works and what profit/loss you should expect.
+
+We strongly recommend you to have coding and Python knowledge. Do not hesitate to read the source code and understand the mechanism of this bot.
+
+## Supported Exchange marketplaces
+
+Please read the exchange specific notes to learn about eventual, special configurations needed for each exchange.
+
+  * [Input] Binance
+  * [Input] Bitmart
+--------------------------------------------------------------------------------
+GitHub - traderpilot/freqtrade: Free, open source crypto trading bot · GitHub (https://github.com/traderpilot/freqtrade)
+citeturn1050search3 [wordlim: 200] Crawled: yesterday;   * Star0 (0)You must be signed in to star a repository ... .github  | .github  |    | ... requirements-freqai-rl.txt  | requirements-freqai-rl.txt  |    | ... setup.sh  | setup.sh  |    | ... Freqtrade is a free and open source crypto trading bot written in Python.
+
+  1. traderpilot
+  2. freqtrade
+
+## Repository navigation
+
+  *   * Code
+  * Pull requests
+  * Actions
+  * Projects
+  * Security and quality
+  * Insights
+
+More items
+
+Image: traderpilot
+
+freqtrade
+
+Public
+
+  * NotificationsYou must be signed in to change notification settings
+  * Fork0 (0)
+  * Star0 (0)You must be signed in to star a repository
+
+## About
+
+Free, open source crypto trading bot
+
+www.freqtrade.io
+
+develop
+
+BranchesTags
+
+[Input: Go to file]
+
+Go to file
+
+Code
+
+Open more actions menu
+
+## Latest commit
+
+ 
+
+## History
+
+31,701 Commits
+
+## Folders and files
+
+Name  | Name  | Last commit message  | Last commit date
+--- | --- | --- | ---
+.devcontainer  | .devcontainer  |    |  
+.github  | .github  |    |  
+.vscode  | .vscode  |    |  
+# 
+
+Freqtrade is a free and open source crypto trading bot written in Python. It is designed to support all major exchanges and be controlled via Telegram or webUI. It contains backtesting, plotting and money management tools as well as strategy optimization by machine learning.
+
+## Disclaimer
+
+This software is for educational purposes only. Do not risk money which you are afraid to lose. USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
+
+Always start by running a trading bot in Dry-Run and do not engage money before you understand how it works and what profit/loss you should expect.
+
+We strongly recommend you to have coding and Python knowledge. Do not hesitate to read the source code and understand the mechanism of this bot.
+
+## Supported Exchange marketplaces
+
+Please read the exchange-specific notes to learn about special configurations that maybe needed for each exchange.
+
+### Supported Spot Exchanges
+
+  * [Input] Binance
+--------------------------------------------------------------------------------
+Introduction - Freqtrade (https://www.freqtrade.io/en/2023.3/freqai/)
+citeturn1050search4 [wordlim: 200] Crawled: last week; FreqAI does not have a crypto token, FreqAI does not sell signals, and FreqAI does not have a domain besides the present freqtrade documentation. ...         doi = {10.21105/joss.04864},
+--------------------------------------------------------------------------------
+GitHub - freqtrade/freqtrade: Free, open source crypto trading bot · GitHub (https://github.com/freqtrade/freqtrade?74e29fd5_page=12)
+citeturn1050search5 [wordlim: 200] Crawled: last month; .github  | .github  |    | ... requirements-freqai-rl.txt  | requirements-freqai-rl.txt  |    | ... ## Repository files navigation ... algorithmic-trading bitcoin cryptocurrencies cryptocurrency freqtrade python telegram-bot trade trading-bot
+--------------------------------------------------------------------------------
+GitHub - freqtrade/freqtrade: Free, open source crypto trading bot · GitHub (https://github.com/freqtrade/freqtrade?0fad35da_page=11&74e29fd5_page=35)
+citeturn1050search6 [wordlim: 200] Crawled: last month; ## Repository files navigation ... Freqtrade is a free and open source crypto trading bot written in Python. ...                      {trade,create-userdir,new-config,show-config,new-strategy,download-data,convert-data,convert-trade-data,trades-to-ohlcv,list-data,backtesting,backtesting-show,backtesting-analysis,edge,hyperopt,hyperopt-list,hyperopt-show,list-exchanges,list-markets,list-pairs,list-strategies,list-hyperoptloss,list-freqaimodels,list-timeframes,show-trades,test-pairlist,convert-db,install-ui,plot-dataframe,plot-profit,webserver,strategy-updater,lookahead-analysis,recursive-analysis}
+--------------------------------------------------------------------------------
+GitHub - freqtrade/freqtrade: Free, open source crypto trading bot · GitHub (https://t.co/bhjeFQQS6a)
+citeturn1050search7 [wordlim: 200] Crawled: 6 days ago;   * Star55.3k (55.3k)You must be signed in to star a repository ... algorithmic-trading bitcoin cryptocurrencies cryptocurrency freqtrade python telegram-bot trade trading-bot ... .github  | .github  | chore: renovate -> run pyarrow in a separate group  | Oct 10, 2026 ... requirements-freqai-rl.txt  | requirements-freqai-rl.txt  | chore(deps): update freqai dependencies  | Oct 12, 2026
+--------------------------------------------------------------------------------
+GitHub - freqtrade/freqtrade: Free, open source crypto trading bot · GitHub (https://github.com/freqtrade/freqtrade?0fad35da_page=7&74e29fd5_page=4)
+citeturn1050search8 [wordlim: 200] Crawled: 4 days ago;   * Star55.4k (55.4k)You must be signed in to star a repository ... algorithmic-trading bitcoin cryptocurrencies cryptocurrency freqtrade python telegram-bot trade trading-bot ... .github  | .github  |    | ... requirements-freqai-rl.txt  | requirements-freqai-rl.txt  |    |
+--------------------------------------------------------------------------------
+freqtrade - Read the Docs Community (https://app.readthedocs.org/projects/freqtrade/versions/)
+citeturn1050search9 [wordlim: 200] Crawled: last month; Repository`https://github.com/freqtrade/freqtrade` ... All versions stable latest JOSS_v3 JOSS_v2 JOSS_v1 2026.8 2026.7 2026.6 2026.5.1 2026.5 2026.4 2026.3 2026.2 2026.1 2025.9.1 2025.9 2025.8 2025.7 2025.6 2025.5 2025.4 2025.3 2025.2 2025.12 2025.11.2 2025.11.1 2025.11 2025.10 2025.1 2024.9 2024.8 2024.7.1 2024.7 2024.6 2024.5 2024.4 2024.3 2024.2 2024.12.1 2024.12 2024.11 2024.10 2024.1 2023.9 2023.8 2023.7 2023.6 2023.5.1 2023.5 2023.4 2023.3 2023.2 2023.12 2023.11 2023.10 2023.1 2022.9.1 2022.9 2022.8 2022.7 2022.6 2022.5.1 2022.5 2022.4.2 2022.4.1 2022.4 2022.3 2022.2.2 2022.2.1 2022.2 2022.12 2022.11 2022.10 2022.1 2021.9 2021.8 2021.7 2021.6 2021.5 2021.4 2021.3 2021.2 2021.12 2021.11 2021.10 2021.1 2020.9.1 2020.8 2020.7 2020.6 2020.5 2020.4 2020.3 2020.2 2020.12 2020.11 2020.10 2020.02 2020.01 2019.9 2019.8 2019.7 2019.6 2019.11 2019.10 0.18.5 0.18.1 0.18.0 0.17.2 0.17.1
+--------------------------------------------------------------------------------
+GitHub - freqtrade/freqtrade: Free, open source crypto trading bot · GitHub (https://github.com/freqtrade/freqtrade?0fad35da_page=7&74e29fd5_page=35)
+citeturn1050search10 [wordlim: 200] Crawled: last month; Freqtrade is a free and open source crypto trading bot written in Python.
+--------------------------------------------------------------------------------
+GitHub - freqtrade/freqtrade: Free, open source crypto trading bot · GitHub (https://git.mitgai.net/freqtrade/freqtrade)
+citeturn1050search11 [wordlim: 200] Crawled: today;   * Star55.6k (55.6k)You must be signed in to star a repository ... algorithmic-trading bitcoin cryptocurrencies cryptocurrency freqtrade python telegram-bot trade trading-bot ... .github  | .github  |    | ... requirements-freqai-rl.txt  | requirements-freqai-rl.txt  |    |
+--------------------------------------------------------------------------------
+FreqAI: generalizing adaptive modeling for chaotic time-series market forecasts (https://joss.theoj.org/papers/10.21105/joss.04864.pdf)
+citeturn1050search12 [wordlim: 200] Published: 3.8 years ago; `freqtrade trade --config config_freqai.example.json --strategy FreqaiExampleStrategy --freqaimodel CatboostRegressor` ... https://doi.org/10.21105/joss.04864.
+--------------------------------------------------------------------------------
+FreqAI: generalizing adaptive modeling for chaotic time-series market forecasts (https://www.theoj.org/joss-papers/joss.04864/10.21105.joss.04864.pdf)
+citeturn1050search13 [wordlim: 200] Published: 3.8 years ago; JOSS ... But more importantly, users in the FreqAI discord share anecdotal and quantitative observations which compare performance between various third-party libraries and methods. ... git clone [REDACTED_EMAIL]:freqtrade/freqtrade.git
+--------------------------------------------------------------------------------
+AI 자동매매가 궁금해서 찾아보다가 Freqtrade까지 왔습니다 (https://www.reddit.com/r/StableAIKorea/comments/1q3oa4a/ai_%EC%9E%90%EB%8F%99%EB%A7%A4%EB%A7%A4%EA%B0%80_%EA%B6%81%EA%B8%88%ED%95%B4%EC%84%9C_%EC%B0%BE%EC%95%84%EB%B3%B4%EB%8B%A4%EA%B0%80_freqtrade%EA%B9%8C%EC%A7%80_%EC%99%94%EC%8A%B5%EB%8B%88%EB%8B%A4/)
+citeturn1050reddit14 [wordlim: 200] Published: 9 months ago; AI 자동매매 이야기가 너무 많아서 구조가 궁금해졌습니다. ... https://github.com/freqtrade/freqtrade
+--------------------------------------------------------------------------------
+Any examples on github? Don't have to be good/profitable. (https://www.reddit.com/r/algotrading/comments/1m8eqmf/any_examples_on_github_dont_have_to_be/)
+citeturn1050reddit15 [wordlim: 200] Published: 1.2 years ago; Look at freqtrade it's a pretty good system in python for building, testing and running strategies. ... For example - have a look here for a few: https://github.com/freqtrade/freqtrade-strategies/tree/main/user\_data/strategies none of them will actually make you profit, but demonstrate a bunch of ideas.
+--------------------------------------------------------------------------------
+I built a small open-source toolkit for Freqtrade: clean HTML backtest reports + strategy comparison, pairlist & config checks (https://www.reddit.com/r/CryptoTradingBot/comments/1u83uvc/i_built_a_small_opensource_toolkit_for_freqtrade/)
+citeturn1050reddit16 [wordlim: 200] Published: 4 months ago; Freqtrade's backtest output is just text tables, so I built a little toolkit to make working with results easier. ... https://github.com/danxathome/freqtrade-report
+--------------------------------------------------------------------------------
+Freqtrade MCP (https://www.reddit.com/r/algotrading/comments/1rkocp5/freqtrade_mcp/)
+citeturn1050reddit17 [wordlim: 200] Published: 7 months ago; it works with claude code, codex cli, and any mcp compatible client. i use it daily for my own strategy development and it's been a huge help. ... https://github.com/yalcin/freqtrade-mcp ...   Because of mcp security problems. please read the security.md in the repository.
+--------------------------------------------------------------------------------
+Open-sourced integration examples + Freqtrade strategy template for my crypto signal API (https://www.reddit.com/r/SideProject/comments/1te2jui/opensourced_integration_examples_freqtrade/)
+citeturn1050reddit18 [wordlim: 200] Published: 5 months ago; Today I open-sourced the integration examples and a Freqtrade strategy template:Repo: https://github.com/mihalismacura7-blip/leadedge-examples ... **What's open source (MIT):** ... \- Drop-in Freqtrade strategy template
+--------------------------------------------------------------------------------
+I re-tested 571 public freqtrade strategies. 55 pass every statistical test. None beats buy-and-hold. (https://www.reddit.com/r/u_Godelaib/comments/1vua0r7/i_retested_571_public_freqtrade_strategies_55/)
+citeturn1050reddit19 [wordlim: 200] Published: last month; Also in there: 17 strategies with look-ahead bias confirmed by freqtrade's own analyser (one reports +18,701,080% out of sample), and a tool that answers a question no backtest report does — how many live trades would you need to prove this strategy works? ... https://github.com/Apex-prim/strategy-audit
+--------------------------------------------------------------------------------
+Weekly Discussion Thread - March 31, 2026 (https://www.reddit.com/r/algotrading/comments/1s8j4yb/weekly_discussion_thread_march_31_2026/)
+citeturn1050reddit20 [wordlim: 200] Published: 6 months ago; Curious how everyone's systems handled the regime shifts we saw mid-February. ... On the tools front — put together a comparison of the main Python paper trading frameworks (TradeSight, backtrader, zipline, jesse, freqtrade) that got long enough I turned it into a Gist: https://gist.github.com/rmbell09-lang/01281551ac4672bd5d1a42bb58575144
+--------------------------------------------------------------------------------
+Looking for feedback from experienced strategy developers and algo traders for an algorithmic trading protocol built for decentralised markets (DeFi) (https://www.reddit.com/r/algotrading/comments/15y27nc)
+citeturn1050reddit21 [wordlim: 200] Published: 3.2 years ago; Crawled: 2.9 years ago; We are fully open sourced and can view our GitHub here. ... Would also recommend you look over Freqtrade.It's a wonderful tool for CEX trading and maybe you can find some interesting code there.
+--------------------------------------------------------------------------------
+FreqTrade bot deployments: Stay organized with Muximux, secure with Traefik + SSL certs | Bonus! Order books explained (https://www.reddit.com/r/algotradingcrypto/comments/nqmbcx)
+citeturn1050reddit22 [wordlim: 200] Published: 5.4 years ago; Crawled: 2.6 years ago; Who's behind FreqTrade? ... Check out their github page, very detailed documentation and active developers ... Also, when you mention FreqUI specifically, please note that FreqUI is now built-in to the newest FreqTrade containers, so you no longer have to deploy that separately.
+--------------------------------------------------------------------------------
+I created a Python trading framework for trading stocks & crypto (https://www.reddit.com/r/algotrading/comments/qfksk2)
+citeturn1050reddit23 [wordlim: 200] Published: 5.0 years ago; Crawled: 1.4 years ago; https://github.com/Blankly-Finance/Blankly ... There are some great trading packages out there like Freqtrade and amazing integrations such as CCXT - why did we go out and create our own?
+--------------------------------------------------------------------------------
+Built a freqtrade-based momentum-trend bot and documented its REAL edge (including the ugly parts) (https://www.reddit.com/r/ai_trading/comments/1w5hz60/built_a_freqtradebased_momentumtrend_bot_and/)
+citeturn1050reddit24 [wordlim: 200] Published: last month; Ran freqtrade lookahead-analysis → has\_bias = No. ... The repo was on my MakimaAI/TrendFlow account, which GitHub has flagged and restricted — it returns 404 to anonymous visitors even though it's set to public, and I'm still appealing that.
+--------------------------------------------------------------------------------
+New - Best Freqtrade Strategies (https://www.reddit.com/r/algotrading/comments/1im5huf/new_best_freqtrade_strategies/)
+citeturn1050reddit25 [wordlim: 200] Published: 1.7 years ago; Yang masih peanasaran strategi FreqAI agar ketika mendeteksi market sideways bisa ganti strategi automatis. atau mungkin running 2 bot ya ? ... It's low liquidity making too much losses. ...   It needs fine tunning, that is why Freqtrade has Backtesting (dry run on data), Optimization - you define range of parameters for every indicator and it tests for every range to give you the best value and once you are finished with Backtesting and optimization, you let it run at least for a month on Dry Run to make sure with real market data and no real money your strategy achieve satisfactory levels based on your expectations and understandings of profit. ... i have made a little dashboard tool to monitor multiple strategies, also good if you want to expose your strategy in read only mode : https://github.com/pulpoff/freqmon comments are welcome
+--------------------------------------------------------------------------------
+Journal of Open Source Software (JOSS): design and first-year review (https://arxiv.org/abs/1707.02264)
+citeturn1050academia26 [wordlim: 200] Published: 9.3 years ago; Authors: Arfon M Smith, Kyle E Niemeyer, Daniel S Katz, Lorena A Barba, George Githinji, Melissa Gymrek, Kathryn D Huff, Christopher R Madan, Abigail Cabunoc Mayes, Kevin M Moerman, Pjotr Prins, Karthik Ram, Ariel Rokem, Tracy K Teal, Roman Valls Guimera, Jacob T Vanderplas ... While designed to work within the current merit system of science, JOSS addresses the dearth of rewards for key contributions to science made in the form of software. ... Submission and review proceed in the open, on GitHub.

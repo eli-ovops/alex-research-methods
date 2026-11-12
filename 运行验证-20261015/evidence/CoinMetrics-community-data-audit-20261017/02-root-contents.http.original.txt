@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 4870
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Sat, 17 Oct 2026 07:40:26 GMT
+Etag: "f951e8393ca3dac94fcfe1c300a2625e0a446275"
+Last-Modified: Fri, 09 Oct 2026 12:30:42 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 14CE:B0807:F259E9:182BABB:6AD3266A
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4945
+X-Ratelimit-Reset: 1792223363
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 55
+X-Xss-Protection: 0
+
+[{"name":".gitignore","path":".gitignore","sha":"7a1537ba0648037662c0907a28ae2c8f5d7bca56","size":19,"url":"https://api.github.com/repos/coinmetrics/data/contents/.gitignore?ref=master","html_url":"https://github.com/coinmetrics/data/blob/master/.gitignore","git_url":"https://api.github.com/repos/coinmetrics/data/git/blobs/7a1537ba0648037662c0907a28ae2c8f5d7bca56","download_url":"https://raw.githubusercontent.com/coinmetrics/data/master/.gitignore","type":"file","_links":{"self":"https://api.github.com/repos/coinmetrics/data/contents/.gitignore?ref=master","git":"https://api.github.com/repos/coinmetrics/data/git/blobs/7a1537ba0648037662c0907a28ae2c8f5d7bca56","html":"https://github.com/coinmetrics/data/blob/master/.gitignore"}},{"name":".gitlab-ci.yml","path":".gitlab-ci.yml","sha":"98a09d3e0d9103fabe229c6f5e340c2fb9aa2437","size":836,"url":"https://api.github.com/repos/coinmetrics/data/contents/.gitlab-ci.yml?ref=master","html_url":"https://github.com/coinmetrics/data/blob/master/.gitlab-ci.yml","git_url":"https://api.github.com/repos/coinmetrics/data/git/blobs/98a09d3e0d9103fabe229c6f5e340c2fb9aa2437","download_url":"https://raw.githubusercontent.com/coinmetrics/data/master/.gitlab-ci.yml","type":"file","_links":{"self":"https://api.github.com/repos/coinmetrics/data/contents/.gitlab-ci.yml?ref=master","git":"https://api.github.com/repos/coinmetrics/data/git/blobs/98a09d3e0d9103fabe229c6f5e340c2fb9aa2437","html":"https://github.com/coinmetrics/data/blob/master/.gitlab-ci.yml"}},{"name":".idea","path":".idea","sha":"1c1511051130bf5740f98fbe7dc901832e7ddfa3","size":0,"url":"https://api.github.com/repos/coinmetrics/data/contents/.idea?ref=master","html_url":"https://github.com/coinmetrics/data/tree/master/.idea","git_url":"https://api.github.com/repos/coinmetrics/data/git/trees/1c1511051130bf5740f98fbe7dc901832e7ddfa3","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/coinmetrics/data/contents/.idea?ref=master","git":"https://api.github.com/repos/coinmetrics/data/git/trees/1c1511051130bf5740f98fbe7dc901832e7ddfa3","html":"https://github.com/coinmetrics/data/tree/master/.idea"}},{"name":"LICENSE","path":"LICENSE","sha":"f8f2af023ec95cb746dd08ec624c4c147b375af9","size":289,"url":"https://api.github.com/repos/coinmetrics/data/contents/LICENSE?ref=master","html_url":"https://github.com/coinmetrics/data/blob/master/LICENSE","git_url":"https://api.github.com/repos/coinmetrics/data/git/blobs/f8f2af023ec95cb746dd08ec624c4c147b375af9","download_url":"https://raw.githubusercontent.com/coinmetrics/data/master/LICENSE","type":"file","_links":{"self":"https://api.github.com/repos/coinmetrics/data/contents/LICENSE?ref=master","git":"https://api.github.com/repos/coinmetrics/data/git/blobs/f8f2af023ec95cb746dd08ec624c4c147b375af9","html":"https://github.com/coinmetrics/data/blob/master/LICENSE"}},{"name":"README.md","path":"README.md","sha":"ded671f76a6bad15488fa17f1f4383fe99940604","size":1496,"url":"https://api.github.com/repos/coinmetrics/data/contents/README.md?ref=master","html_url":"https://github.com/coinmetrics/data/blob/master/README.md","git_url":"https://api.github.com/repos/coinmetrics/data/git/blobs/ded671f76a6bad15488fa17f1f4383fe99940604","download_url":"https://raw.githubusercontent.com/coinmetrics/data/master/README.md","type":"file","_links":{"self":"https://api.github.com/repos/coinmetrics/data/contents/README.md?ref=master","git":"https://api.github.com/repos/coinmetrics/data/git/blobs/ded671f76a6bad15488fa17f1f4383fe99940604","html":"https://github.com/coinmetrics/data/blob/master/README.md"}},{"name":"csv","path":"csv","sha":"9fb93c39821cbd2650f8f4c42ff48a0d6c374f95","size":0,"url":"https://api.github.com/repos/coinmetrics/data/contents/csv?ref=master","html_url":"https://github.com/coinmetrics/data/tree/master/csv","git_url":"https://api.github.com/repos/coinmetrics/data/git/trees/9fb93c39821cbd2650f8f4c42ff48a0d6c374f95","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/coinmetrics/data/contents/csv?ref=master","git":"https://api.github.com/repos/coinmetrics/data/git/trees/9fb93c39821cbd2650f8f4c42ff48a0d6c374f95","html":"https://github.com/coinmetrics/data/tree/master/csv"}},{"name":"scripts","path":"scripts","sha":"6d6e3639744a003fd5333572722fe5ea4dfc8392","size":0,"url":"https://api.github.com/repos/coinmetrics/data/contents/scripts?ref=master","html_url":"https://github.com/coinmetrics/data/tree/master/scripts","git_url":"https://api.github.com/repos/coinmetrics/data/git/trees/6d6e3639744a003fd5333572722fe5ea4dfc8392","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/coinmetrics/data/contents/scripts?ref=master","git":"https://api.github.com/repos/coinmetrics/data/git/trees/6d6e3639744a003fd5333572722fe5ea4dfc8392","html":"https://github.com/coinmetrics/data/tree/master/scripts"}}]

@@ -1,0 +1,197 @@
+Logs | Etherscan-compatible APIs | Routescan (https://routescan.io/docs/api/etherscan/logs)
+citeturn507view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://routescan.io/docs/api/etherscan/logs","lineno":null}); Total lines: 229
+L0: cite0†Docs L1: 
+L2: Switch to light mode
+L3: 
+L4: Getting Started
+L5: 
+L6:   * cite0†Introduction L7:   * cite1†Get started L8:   * cite2†Supported chains L9:   * cite3†Migrate from Etherscan L10:   * cite4†Use with LLMs L11: 
+L12: Plans & limits
+L13: 
+L14:   * cite5†API keys & pricing L15:   * cite6†Rate limits L16: 
+L17: Build with AI
+L18: 
+L19:   * cite7†MCP server L20: 
+L21: Etherscan-compatible APIs
+L22: 
+L23:   * cite8†Overview L24:   * cite9†Accounts L25:   * cite10†Blocks L26:   * cite11†Contracts L27:   * cite12†Geth-Parity Proxy L28:   * cite13†Gas Tracker L29:   * cite14†Logs L30:   * cite15†Nametags L31:   * cite16†Stats L32:   * cite17†Tokens L33:   * cite18†Transactions L34: High-speed REST APIs
+L35: 
+L36:   * cite19†Overview L37:   * cite20†API conventions L38:   * cite21†Addresses L39:   * cite22†Transactions L40:   * cite23†Tokens L41:   * cite24†Contracts L42:   * cite25†Blocks L43:   * cite26†Stats & aggregations L44:   * cite27†Cross-chain L45:   * cite28†X-Chain L46:   * cite29†P-Chain L47:   * cite30†Network L48: 
+L49: Resources
+L50: 
+L51:   * cite31†Verify Contract L52:   * cite32†Verification Guides†info.routescan.io L53: 
+L54: cite33†Sign in L55: # Logs
+L56: 
+L57: Copy page as Markdown Open with AI tools
+L58: 
+L59: Etherscan-compatible endpoints for the Logs module.
+L60: ## cite34†Get Event Logs by Address# L61: 
+L62: Returns the event logs from an address, with optional filtering by block range.
+L63: 
+L64: GET
+L65: 
+L66: [Button: mainnet][Button: testnet]
+L67: 
+L68: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L69: address optional[Input: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48]the string representing the address to check for logs fromBlock optional[Input: 18000000]the integer block number to start searching for logs eg. 37000000 toBlock optional[Input: 18000050]the integer block number to stop searching for logs eg. 37200000 page optional[Input: 1]the integer page number, if pagination is enabled offset optional[Input: 1000]the number of transactions displayed per page
+L70: 
+L71: API key (optional)
+L72: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L73: 
+L74: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&address=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&fromBlock=18000000&toBlock=18000050&page=1&offset=1000&apikey=YourApiKeyToken`
+L75: 
+L76: [Button: Send request]
+L77: 
+L78: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L79: 1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&address=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&fromBlock=18000000&toBlock=18000050&page=1&offset=1000' \
+L80: 
+L81: 2 -H 'apikey: YourApiKeyToken'
+L82: 
+L83: 1{
+L84: 
+L85: 2 status: string;
+L86: 
+L87: 3 message: string;
+L88: 
+L89: 4 result: {
+L90: 
+L91: 5 address: string;
+L92: 
+L93: 6 topics: string[];
+L94: 
+L95: 7 data: string;
+L96: 
+L97: 8 blockNumber: string;
+L98: 
+L99: 9 blockHash: string;
+L100: 
+L101: 10 timeStamp: string;
+L102: 
+L103: 11 gasPrice: string;
+L104: 
+L105: 12 gasUsed: string;
+L106: 
+L107: 13 logIndex: string;
+L108: 14 transactionHash: string;
+L109: 
+L110: 15 transactionIndex: string;
+L111: 
+L112: 16 }[];
+L113: 
+L114: 17}
+L115: ## cite36†Get Event Logs by Topics# L116: 
+L117: Returns the events log in a block range, filtered by topics.
+L118: 
+L119: GET
+L120: 
+L121: [Button: mainnet][Button: testnet]
+L122: 
+L123: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L124: fromBlock optional[Input: 18000000]the integer block number to start searching for logs eg. 37000000 toBlock optional[Input: 18000050]the integer block number to stop searching for logs eg.
+L125: 37200000 topic0 optional[Input: 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef]the topic numbers to search for limited to topic0, topic1, topic2, topic3 topic0_1_opr optional[Input: and]the topic operator when multiple topic combinations are used limited to and or or topic1 optional[Input: 0x0000000000000000000000000000000000000000000000000000000000000000]the topic numbers to search for limited to topic0, topic1, topic2, topic3 page optional[Input: 1]the integer page number, if pagination is enabled offset optional[Input: 1000]the number of transactions displayed per page
+L126: API key (optional)
+L127: 
+L128: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L129: 
+L130: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&fromBlock=18000000&toBlock=18000050&topic0=0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&topic0_1_opr=and&topic1=0x0000000000000000000000000000000000000000000000000000000000000000&page=1&offset=1000&apikey=YourApiKeyToken`
+L131: 
+L132: [Button: Send request]
+L133: 
+L134: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L135: 1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&fromBlock=18000000&toBlock=18000050&topic0=0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&topic0_1_opr=and&topic1=0x0000000000000000000000000000000000000000000000000000000000000000&page=1&offset=1000' \
+L136: 
+L137: 2 -H 'apikey: YourApiKeyToken'
+L138: 
+L139: 1{
+L140: 
+L141: 2 status: string;
+L142: 
+L143: 3 message: string;
+L144: 
+L145: 4 result: {
+L146: 
+L147: 5 address: string;
+L148: 
+L149: 6 topics: string[];
+L150: 
+L151: 7 data: string;
+L152: 
+L153: 8 blockNumber: string;
+L154: 9 blockHash: string;
+L155: 
+L156: 10 timeStamp: string;
+L157: 
+L158: 11 gasPrice: string;
+L159: 
+L160: 12 gasUsed: string;
+L161: 
+L162: 13 logIndex: string;
+L163: 
+L164: 14 transactionHash: string;
+L165: 
+L166: 15 transactionIndex: string;
+L167: 
+L168: 16 }[];
+L169: 
+L170: 17}
+L171: ## cite37†Get Event Logs by Address filtered by Topics# L172: 
+L173: Returns the event logs from an address, filtered by topics and block range.
+L174: 
+L175: GET
+L176: 
+L177: [Button: mainnet][Button: testnet]
+L178: 
+L179: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L180: fromBlock optional[Input: 18000000]the integer block number to start searching for logs eg. 37000000 toBlock optional[Input: 18001000]the integer block number to stop searching for logs eg.
+L181: 37200000 address optional[Input: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48]the string representing the address to check for logs topic0 optional[Input: 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef]the topic numbers to search for limited to topic0, topic1, topic2, topic3 page optional[Input: 1]the integer page number, if pagination is enabled offset optional[Input: 1000]the number of transactions displayed per page
+L182: API key (optional)
+L183: 
+L184: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L185: 
+L186: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&fromBlock=18000000&toBlock=18001000&address=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&topic0=0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&page=1&offset=1000&apikey=YourApiKeyToken`
+L187: 
+L188: [Button: Send request]
+L189: 
+L190: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L191: 1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&fromBlock=18000000&toBlock=18001000&address=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&topic0=0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&page=1&offset=1000' \
+L192: 
+L193: 2 -H 'apikey: YourApiKeyToken'
+L194: 
+L195: 1{
+L196: 
+L197: 2 status: string;
+L198: 
+L199: 3 message: string;
+L200: 
+L201: 4 result: {
+L202: 
+L203: 5 address: string;
+L204: 
+L205: 6 topics: string[];
+L206: 
+L207: 7 data: string;
+L208: 
+L209: 8 blockNumber: string;
+L210: 
+L211: 9 blockHash: string;
+L212: 
+L213: 10 timeStamp: string;
+L214: 11 gasPrice: string;
+L215: 
+L216: 12 gasUsed: string;
+L217: 
+L218: 13 logIndex: string;
+L219: 
+L220: 14 transactionHash: string;
+L221: 
+L222: 15 transactionIndex: string;
+L223: 
+L224: 16 }[];
+L225: 
+L226: 17}
+L227: 
+L228: cite13†PreviousGas Tracker cite15†Next Nametags cite38†Questions? Contact us --------------------------------------------------------------------------------
+Internal Error ()
+citeturn507view1 [wordlim: 200] Source: click({"ref_id":"turn506view0","id":38}); Total lines: 1
+L0: Failed to fetch https://docs.routescan.io/indexing-status: (404) Not Found
+

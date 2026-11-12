@@ -1,0 +1,24 @@
+How does Alchemy bill me for my usage? | Alchemy Knowledge Base
+</>
+</> All Collections› </collections/6735491124-billing> Billing
+How does Alchemy bill me for my usage?
+Last updated 1 month ago
+Alchemy uses incremental billing to make payments simple and predictable. You're billed automatically as your usage accumulates to certain predefined thresholds and at the end of the month you will be billed the remainder.
+You'll be charged when your usage reaches these intervals:
+$50 → $100 → $200 → $500 → $1,000 → $1,500 → $2,000 → $3,000
+As you make successful payments, your billing threshold will increase automatically to the next level. This means your account will be charged less frequently, but for higher amounts each time.
+New users start at the lowest threshold ($50) and gradually move up the ladder as they establish a payment history with Alchemy.
+As an example, my first month I use a total of $200 in Alchemy products. Since I am a new user, I will get a bill for $50 then $100. At the end of the month I will get a final bill for the $50 remainder of my $200 usage.
+Next month, I will start at the $100 increment since I have built a history of successful payments. If the next month I use a total of $1000. I will be billed $100 then $200 then $500 and finally $200 at the end of the month.
+The third month I will start at the $500 increment.
+This system helps ensure smooth billing, reduces payment interruptions, and builds trust over time.
+Your current threshold isn't shown in the billing dashboard. If you want to confirm where your account stands on the ladder, reach out to  <mailto:[REDACTED_EMAIL]> [REDACTED_EMAIL].
+Related Articles
+</articles/2039719489-can-i-upgrade-my-subscription-plan> Can I upgrade my subscription plan?
+</articles/9536820611-why-did-i-get-my-account-suspended> Why did I get my account suspended?
+</articles/1517639103-what-is-this-5-charge-from-upgrading-to-pay-as-you-go-payg> What is this $5 charge from upgrading to Pay As You Go (PAYG)?
+</articles/6014629910-how-to-set-a-per-app-spending-limit> How to set a per-app spending limit
+</articles/3500028564-how-can-i-view-my-usage-history> How can I view my usage history?
+</>
+<https://usepylon.com>
+Powered by Pylon

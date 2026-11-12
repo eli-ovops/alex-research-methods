@@ -1,0 +1,1 @@
+PASS exact predeclared negative-control classification and source path; synthetic only; no network/system-route read

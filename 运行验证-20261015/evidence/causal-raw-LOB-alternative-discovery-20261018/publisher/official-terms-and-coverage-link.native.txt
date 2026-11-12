@@ -1,0 +1,21 @@
+Terms of Service (https://crypto-lake.com/terms-of-service/)
+citeturn934view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: click({"ref_id":"turn933view0","id":4}); Total lines: 17
+L0: # Terms of Service
+L1:   * We provide our software and data as is, without any legal guarantee. Especially regarding data quality, correctness or completeness.
+L2:   * We reserve the right not to provide service to anyone for any reason.
+L3:   * We do not offer refunds in general and advise users to try out our sample environment before subscribing. We can refund users in special cases though.
+L4:   * We grant the customers a non-exclusive non-transferable license to use our market data limited by restrictions in those terms.
+L5:   * You may not redistribute the data obtained from us to any third party or customer without our prior consent. This includes any derived data that could lead to reproducing major part of the original data. You should secure your copies of data reasonably to prevent any third parties to get access to them.
+L6:   * You may not “scrape” our data or attempt to download major part of it. In such cases, we reserve the right to block your access or even terminate your subscription without a refund.
+L7:   * You have to be Hummingbot user and member of its discord community for using its discount code.
+L8:   * We reserve the right to change the pricing of our services and subscriptions at any time.
+L9:   * We may collect user data, use cookies and track usage of our services and web.
+L10:   * None of the information provided by us is investment advice.
+L11:   * By using our service you accept our cite0†privacy policy .
+L12:   * We use Stripe.com as a payment provider and by using it you agree to their cite1†service agreements and privacy policy†stripe.com too.
+L13:   * These terms of service may change in the future. In such a case, we will let you know via email beforehand.
+L14: Last updated 14 November 2022.
+L15: 
+L16: cite2†Terms of Service , cite0†Privacy policy , cite3†Contact --------------------------------------------------------------------------------
+ (https://raw.githubusercontent.com/crypto-lake/analysis-sharing/main/available-sample-data.png)
+citeturn934view1 

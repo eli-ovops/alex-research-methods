@@ -1,0 +1,269 @@
+Browser tab: 2, Title: "Optiver - Trading at the Close | Kaggle", URL: "https://www.kaggle.com/competitions/optiver-trading-at-the-close/data".
+0 AXWebArea Optiver - Trading at the Close | Kaggle, URL: kaggle.com/competitions/optiver-trading-at-the-close/data
+	1 container root
+		2 container Main Kaggle page navigation
+			3 button Navigation menu
+			4 link Description: Skip to content, Value: kaggle.com/competitions/optiver-trading-at-the-close/data#site-content
+			5 link Description: Return to Kaggle home page, Value: kaggle.com/
+			6 pop up button Create on Kaggle
+				7 text Create
+			8 container
+				9 container
+					10 content list
+						11 container Home List Item
+							12 link Description: Home, Value: kaggle.com/
+						13 container Competitions List Item
+							14 link Description: Competitions, Value: kaggle.com/competitions
+						15 container Benchmarks List Item
+							16 link Description: Benchmarks, Value: kaggle.com/benchmarks
+						17 container Game Arena List Item
+							18 link Description: Game Arena, Value: kaggle.com/game-arena
+					19 content list
+						20 container Data Hub List Item
+							21 container
+								22 link (collapsed) Description: Data Hub, Value: kaggle.com/competitions/optiver-trading-at-the-close/data#, Secondary Actions: Expand
+								23 button Expand
+					24 content list
+						25 container More on Kaggle List Item
+							26 container
+								27 link (collapsed) Description: More on Kaggle, Value: kaggle.com/competitions/optiver-trading-at-the-close/data#, Secondary Actions: Expand
+								28 button Expand
+		29 container Main menu, search and your account
+			30 container
+				31 text field (settable) :r8:
+				32 link Description: Login, Value: kaggle.com/account/login?phase=startSignInTab&returnUrl=%2Fcompetitions%2Foptiver-trading-at-the-close%2Fdata
+				33 link Description: Sign Up, Value: kaggle.com/account/login?phase=startRegisterTab&returnUrl=%2Fcompetitions%2Foptiver-trading-at-the-close%2Fdata
+		34 container site-content
+			35 container
+				36 text Kaggle uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+				37 link Description: Learn more, Value: kaggle.com/cookies
+				38 text OK, Got it.
+			39 link Description: Optiver's profile, Value: kaggle.com/organizations/optiver
+			40 text Optiver ·  Featured Code Competition  · 
+			41 container Description: 3 years ago, Help: Sat Mar 23 2024 01:20:00 GMT+0800 (中国标准时间)
+				42 text 3 years ago
+			43 button (disabled) Late Submission
+			44 button Description: Competition options menu collapsed, Help: Competition Options
+			45 heading Optiver - Trading at the Close, Value: 1
+				46 text Optiver - Trading at the Close
+			47 text Predict US stocks closing movements
+			48 tab group
+				49 tab (selectable, settable, boolean) Description: Overview, 1 of 7, Value: 0
+				50 tab (selected, settable, boolean) Description: Data, 2 of 7, Value: 1
+				51 tab (selectable, settable, boolean) Description: Code, 3 of 7, Value: 0
+				52 tab (selectable, settable, boolean) Description: Models, 4 of 7, Value: 0
+				53 tab (selectable, settable, boolean) Description: Discussion, 5 of 7, Value: 0
+				54 tab (selectable, settable, boolean) Description: Leaderboard, 6 of 7, Value: 0
+				55 tab (selectable, settable, boolean) Description: Rules, 7 of 7, Value: 0
+			56 heading Dataset Description, Value: 2
+				57 text Dataset Description
+			64 container
+				65 text This dataset contains historic data for the daily ten minute closing auction on the NASDAQ stock exchange. Your challenge is to predict the future price movements of stocks relative to the price future price movement of a synthetic index composed of NASDAQ-listed stocks. This is a forecasting competition using the time series API. The private leaderboard will be determined using real market data gathered after the submission period closes.
+				66 heading Files, Value: 2
+					67 text Files
+				68 text [train/test].csv
+				69 text  The auction data. The test data will be delivered by the API.
+				70 content list
+					71 container
+						72 AXListMarker • 
+						73 text stock_id  - A unique identifier for the stock. Not all stock IDs exist in every time bucket.
+					74 container
+						75 AXListMarker • 
+						76 text date_id  - A unique identifier for the date. Date IDs are sequential & consistent across all stocks.
+					77 container
+						78 AXListMarker • 
+						79 text imbalance_size  - The amount unmatched at the current reference price (in USD).
+					80 container
+						81 AXListMarker • 
+						82 text imbalance_buy_sell_flag  - An indicator reflecting the direction of auction imbalance.
+						83 content list
+							84 container
+								85 AXListMarker ◦ 
+								86 text buy-side imbalance; 1
+							87 container
+								88 AXListMarker ◦ 
+								89 text sell-side imbalance; -1
+							90 container
+								91 AXListMarker ◦ 
+								92 text no imbalance; 0
+					93 container
+						94 AXListMarker • 
+						95 text reference_price  - The price at which paired shares are maximized, the imbalance is minimized and the distance from the bid-ask midpoint is minimized, in that order. Can also be thought of as being equal to the near price bounded between the best bid and ask price.
+					96 container
+						97 AXListMarker • 
+						98 text matched_size  - The amount that can be matched at the current reference price (in USD).
+					99 container
+						100 AXListMarker • 
+						101 text far_price  - The crossing price that will maximize the number of shares matched based on auction interest only. This calculation excludes continuous market orders.
+					102 container
+						103 AXListMarker • 
+						104 text near_price  - The crossing price that will maximize the number of shares matched based auction and continuous market orders.
+					105 container
+						106 AXListMarker • 
+						107 text [bid/ask]_price  - Price of the most competitive buy/sell level in the non-auction book.
+					108 container
+						109 AXListMarker • 
+						110 text [bid/ask]_size  - The dollar notional amount on the most competitive buy/sell level in the non-auction book.
+					111 container
+						112 AXListMarker • 
+						113 text wap  - The weighted average price in the non-auction book.
+						114 container
+							115 text 𝐵
+							116 text 𝑖
+							117 text 𝑑
+							118 text 𝑃
+							119 text 𝑟
+							120 text 𝑖
+							121 text 𝑐
+							122 text 𝑒
+							123 text ∗
+							124 text 𝐴
+							125 text 𝑠
+							126 text 𝑘
+							127 text 𝑆
+							128 text 𝑖
+							129 text 𝑧
+							130 text 𝑒
+							131 text +
+							132 text 𝐴
+							133 text 𝑠
+							134 text 𝑘
+							135 text 𝑃
+							136 text 𝑟
+							137 text 𝑖
+							138 text 𝑐
+							139 text 𝑒
+							140 text ∗
+							141 text 𝐵
+							142 text 𝑖
+							143 text 𝑑
+							144 text 𝑆
+							145 text 𝑖
+							146 text 𝑧
+							147 text 𝑒
+							148 text 𝐵
+							149 text 𝑖
+							150 text 𝑑
+							151 text 𝑆
+							152 text 𝑖
+							153 text 𝑧
+							154 text 𝑒
+							155 text +
+							156 text 𝐴
+							157 text 𝑠
+							158 text 𝑘
+							159 text 𝑆
+							160 text 𝑖
+							161 text 𝑧
+							162 text 𝑒
+					163 container
+						164 AXListMarker • 
+						165 text seconds_in_bucket  - The number of seconds elapsed since the beginning of the day's closing auction, always starting from 0.
+					166 container
+						167 AXListMarker • 
+						168 text target  - The 60 second future move in the wap of the stock, less the 60 second future move of the synthetic index. Only provided for the train set.
+						169 content list
+							170 container
+								171 AXListMarker ◦ 
+								172 text The synthetic index is a custom weighted index of Nasdaq-listed stocks constructed by Optiver for this competition.
+							173 container
+								174 AXListMarker ◦ 
+								175 text The unit of the target is basis points, which is a common unit of measurement in financial markets. A 1 basis point price move is equivalent to a 0.01% price move.
+							176 container
+								177 AXListMarker ◦ 
+								178 text Where t is the time at the current observation, we can define the target:
+								179 container
+									180 text 𝑇 𝑎 𝑟 𝑔 𝑒 𝑡 = (
+									181 container
+										182 text 𝑆 𝑡 𝑜 𝑐 𝑘 𝑊 𝐴
+										183 text 𝑃
+										184 container
+											185 text 𝑡 + 60
+									186 container
+										187 text 𝑆 𝑡 𝑜 𝑐 𝑘 𝑊 𝐴
+										188 text 𝑃
+										189 text 𝑡
+									190 text −
+									191 container
+										192 text 𝐼 𝑛 𝑑 𝑒 𝑥 𝑊 𝐴
+										193 text 𝑃
+										194 container
+											195 text 𝑡 + 60
+									196 container
+										197 text 𝐼 𝑛 𝑑 𝑒 𝑥 𝑊 𝐴
+										198 text 𝑃
+										199 text 𝑡
+									200 text ) ∗ 10000
+				201 text All size related columns are in USD terms.
+				202 text All price related columns are converted to a price move relative to the stock wap (weighted average price) at the beginning of the auction period.
+				203 text sample_submission
+				204 text  A valid sample submission, delivered by the API. 
+				205 link Description: See this notebook (opens in a new tab), Value: kaggle.com/code/sohier/optiver-2023-basic-submission-demo
+				206 text  for a very simple example of how to use the sample submission.
+				207 text revealed_targets
+				208 text  When the first 
+				209 text time_id
+				210 text  for each date (i.e. when 
+				211 text seconds_in_bucket
+				212 text  equals zero) the API will serve a dataframe providing the true 
+				213 text target
+				214 text  values for the entire previous date. All other rows contain null values for the columns of interest.
+				215 text public_timeseries_testing_util.py
+				216 text  An optional file intended to make it easier to run custom offline API tests. See the script's docstring for details. You will need to edit this file before using it.
+				217 text example_test_files/
+				218 text  Data intended to illustrate how the API functions. Includes the same files and columns delivered by the API. The first three date ids are repeats of the last three date ids in the train set, to enable an illustration of how the API functions.
+				219 text optiver2023/
+				220 text  Files that enable the API. Expect the API to deliver all rows in under five minutes and to reserve less than 0.5 GB of memory. The first three date ids delivered by the API are repeats of the last three date ids in the train set, to better illustrate how the API functions. You must make predictions for those dates in order to advance the API but those predictions are not scored.
+			221 heading Files, Value: 2
+				222 text Files
+			223 container
+				224 text 7  files
+			225 heading Size, Value: 2
+				226 text Size
+			227 text 646.9 MB
+			228 heading Type, Value: 2
+				229 text Type
+			230 text csv, py, so
+			231 heading License, Value: 2
+				232 text License
+			233 link Subject to Competition Rules
+				234 text Subject to Competition Rules
+			235 container
+				236 heading public_timeseries_testing_util.py(3.68 kB), Value: 3
+					237 text public_timeseries_testing_util.py ( 3.68 kB )
+				238 button Download
+				239 button Maximize view
+				240 button Hide tree
+				241 text Competition Rules To see this data you need to agree to the
+				242 link Description: competition rules, Value: kaggle.com/competitions/optiver-trading-at-the-close/rules
+				243 text . Please sign in or register to accept the rules.
+				244 button Sign In
+				245 heading Data Explorer, Value: 2
+					246 text Data Explorer
+				247 text 646.9 MB
+				248 content list
+					249 text example_test_files
+					250 text optiver2023
+					251 text public_timeseries_testing_util.py
+					252 text train.csv
+				253 heading Summary, Value: 2
+					254 text Summary
+				255 button (collapsed) Description: Expand 7 files, Secondary Actions: Expand
+					256 container Collapse 7 files
+						257 text arrow_right
+					258 text folder
+					259 text 7 files
+				260 button (collapsed) Description: Expand 44 columns, Secondary Actions: Expand
+					261 container Collapse 44 columns
+						262 text arrow_right
+					263 text calendar_view_week
+					264 text 44 columns
+				265 button Download all files
+			58 heading Metadata, Value: 2
+				59 text Metadata
+			60 heading License, Value: 3
+				61 text License
+			62 link Subject to Competition Rules
+				63 text Subject to Competition Rules
+
+The focused UI element is 0 AXWebArea Optiver - Trading at the Close | Kaggle, URL: kaggle.com/competitions/optiver-trading-at-the-close/data

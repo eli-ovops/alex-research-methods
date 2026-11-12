@@ -1,0 +1,9 @@
+# Isolated throughput integration candidate — NOT ACTIVATED
+
+Core is copied byte-for-byte from the accepted Task1 candidate. Collector retains the historical authorization checks and validates a separate Root technical overlay, exact run/release/code/binding identity, original T0/T1, startup interval, local10s/3000 metadata and nondecreasing32734CU/62methods/CPU>=6789 before TLS/input. Historical resource limits remain immutable; only explicit bounded startup fields are overlaid. Old CPU/cumulative values inside historical auth validation deliberately remain historical, never runtime starting usage.
+
+DRAFT binding, overlay and release schema cannot run. Future exact Root ledger/quota/overlay/preinput/formal releases do not exist in this package. Missing/DRAFT/old code or run rejects. Production deployment would require explicit application/review/Root acceptance, published script and binding hashes, fresh no-key receipt and only user-personal manual launch/one hidden TTY input; Root does not drive Terminal. Launcher is non-executable text only. No source application or run directories/locks were made.
+
+Checks extract only pure logic/Budget AST, use virtual time and an unrelated temporary once fixture. Full live state/runtime/timing/economic guards are AST/static identity checks, not real PASS. The seven previous Budget delivery cases are not rerun. The one added outgoing charge wait starts at9.999 and waits .01 to10.009; the captured delivered arrival remains0.0 and cumulative spending persists. First check command failed due to test source-scope selection, fixed only that test assertion; both original command results retained.
+
+Remaining: independent package review, any reviewer corrections, new real Root sources and bounded startup scope, fresh resource/route preparation and actual full preflight. No observation authority, no provider exact tokenbucket/accountbalance assertion, no profitability or capacity proof.

@@ -1,0 +1,275 @@
+# Hypedexer Docs
+
+- [Hypedexer](https://docs.hypedexer.com/index.md): Hypedexer is an ultra-fast data engine for building apps, dashboards, and trading algorithms on Hyperliquid. Production-ready REST & WebSocket APIs with global low-latency access.
+- [Quickstart](https://docs.hypedexer.com/quickstart.md): From zero to a first successful request in three steps: get a key, call the REST API, page through results.
+- [Environments & Regions](https://docs.hypedexer.com/guides/environments-and-regions-eu-jp.md): A single endpoint with automatic geo-routing for the best latency.
+- [Authentication & API keys](https://docs.hypedexer.com/guides/authentication-and-api-keys.md): One key for REST, WebSocket and MCP. How to send it, and what the API answers when it is missing or wrong.
+- [Base Urls & Versioning](https://docs.hypedexer.com/guides/base-urls-and-versioning.md)
+- [Introduction](https://docs.hypedexer.com/api/introduction.md): Overview of the Hypedexer API plans and usage.
+- [Generate API key](https://docs.hypedexer.com/api/generate-api-key.md): Create, renew and revoke API keys from the console.
+- [Notation](https://docs.hypedexer.com/api/notation.md): Symbols and conventions used in the Hypedexer API
+- [Features](https://docs.hypedexer.com/api/features.md)
+- [Rate Limits & Pricing](https://docs.hypedexer.com/guides/rate-limits-and-quotas.md)
+- [Pagination Filters & Sorting](https://docs.hypedexer.com/guides/pagination-filters-and-sorting.md)
+- [Errors](https://docs.hypedexer.com/guides/errors.md)
+- [Performance & Best Practices](https://docs.hypedexer.com/guides/performance-best-practices.md): Practical tips to minimize latency, cost, and errors for REST and WebSocket usage.
+- [For Builders](https://docs.hypedexer.com/guides/for-builders.md): Free infrastructure, custom endpoints, and dedicated support for teams building on Hyperliquid.
+- [Social Trading](https://docs.hypedexer.com/guides/social-trading.md): Per-trader equity curve, PnL calendar, performance stats, account leverage and top trades: everything needed to build a copy-trading or leaderboard product.
+- [Historical Trade Archive](https://docs.hypedexer.com/guides/historical-trade-archive.md): How far back Hypedexer goes, what each period contains, and how to export it.
+- [Changelog](https://docs.hypedexer.com/guides/changelog.md): Recent updates and improvements to the Hypedexer API
+- [FAQ](https://docs.hypedexer.com/guides/faq.md): Short answers to the questions we are asked most often, with links to the page that goes deeper.
+- [Indexed & Historical Data](https://docs.hypedexer.com/indexed-data/index.md): Historical and indexed Hyperliquid trading data: fills, liquidations, funding, vaults, TWAPs, spot, and more.
+- [List fills (All = Spot + Perp)](https://docs.hypedexer.com/api-reference/fills/list-fills-all-=-spot-+-perp.md): Returns fills across Spot and Perp. Each fill includes `priorityGas` (priority fee paid, null if none) and `block_number` (Hyperliquid block number, null for older fills).
+- [Count fills](https://docs.hypedexer.com/api-reference/fills/count-fills.md)
+- [Recent fills](https://docs.hypedexer.com/api-reference/fills/recent-fills.md): Recent fills (live table, 24h TTL): same filters as `/fills`, faster responses for the recent time window. Each fill includes `priorityGas` (priority fee paid, null if none) and `block_number` (Hyperliquid block number, null for older fills).
+- [List Spot fills only](https://docs.hypedexer.com/api-reference/fills/list-spot-fills-only.md): Returns Spot fills only. Each fill includes `priorityGas` (priority fee paid, null if none) and `block_number` (Hyperliquid block number, null for older fills).
+- [User Spot fills only](https://docs.hypedexer.com/api-reference/fills/user-spot-fills-only.md): Returns Spot fills for a specific user. Each fill includes `priorityGas` (priority fee paid, null if none) and `block_number` (Hyperliquid block number, null for older fills).
+- [User fills (All = Spot + Perp)](https://docs.hypedexer.com/api-reference/fills/user-fills-all-=-spot-+-perp.md): Returns user fills. Each fill includes `priorityGas` (priority fee paid, null if none) and `block_number` (Hyperliquid block number, null for older fills). By default, only recent data (from March 2025 onward) is available. Historical data prior to March 2025 is exclusively available on Scale & Ente…
+- [Aggregated user fills](https://docs.hypedexer.com/api-reference/fills/aggregated-user-fills.md): Time-bucketed trade history for a wallet: one row per bucket, market and side. A TWAP of hundreds of sub-fills collapses into one point, which keeps long histories chartable.
+- [Fills statistics](https://docs.hypedexer.com/api-reference/analytics/fills-statistics.md): Aggregated stats derived from indexed fills.
+- [Liquidation statistics](https://docs.hypedexer.com/api-reference/analytics/liquidation-statistics.md): Liquidation statistics for the last `days` days window.
+- [Daily priority fees chart](https://docs.hypedexer.com/api-reference/analytics/daily-priority-fees-chart.md): Fills and gas burned per day.
+- [Gossip priority leaderboard](https://docs.hypedexer.com/api-reference/analytics/gossip-priority-leaderboard.md): Leaders of the gossip priority auctions, ranked by HYPE gas burned.
+- [Priority fees statistics](https://docs.hypedexer.com/api-reference/analytics/priority-fees-statistics.md): Aggregated priority fee statistics across perp and spot fills.
+- [List completed trades](https://docs.hypedexer.com/api-reference/completed-trades/list-completed-trades.md): Returns completed trades. Defaults to a 24h window if no time filters are provided.
+- [Completed trades summary](https://docs.hypedexer.com/api-reference/completed-trades/completed-trades-summary.md)
+- [Fills for a completed trade](https://docs.hypedexer.com/api-reference/completed-trades/fills-for-a-completed-trade.md)
+- [Active users](https://docs.hypedexer.com/api-reference/users/active-users.md)
+- [Leaderboard](https://docs.hypedexer.com/api-reference/users/leaderboard.md): Two modes.
+- [User coins](https://docs.hypedexer.com/api-reference/users/user-coins.md)
+- [User overview](https://docs.hypedexer.com/api-reference/users/user-overview.md): Aggregated user overview. Response includes `total_priority_gas`: the sum of all priority fees paid by this user (only fills where priorityGas > 0).
+- [Batch performance](https://docs.hypedexer.com/api-reference/social-trading/batch-performance.md): Performance stats for **many wallets in one call**: the same fields as `GET /users/{user}/performance` (win rate, PnL, trade count, volume, average holding time, long/short ratio, fees, funding), one entry per submitted address in submission order, computed in a single query. Wallets with no trade i…
+- [Account state and leverage](https://docs.hypedexer.com/api-reference/social-trading/account-state-and-leverage.md): Latest known account state: equity, cash, open notional, unrealized PnL, **account leverage** (open notional ÷ account value) and every open position with its own leverage, entry price, mark price and accrued funding. `as_of` is the snapshot time: snapshots are hourly, so this is not real time.
+- [Equity history](https://docs.hypedexer.com/api-reference/social-trading/equity-history.md): Account value over time, from hourly on-chain account snapshots. Each point carries cash, open notional, unrealized PnL, account leverage and position count; `summary` adds the change over the window and its max drawdown.
+- [User performance](https://docs.hypedexer.com/api-reference/social-trading/user-performance.md): Round-trip trade statistics over a rolling window: win rate, PnL, trade count, volume, average holding time and long/short ratio.
+- [PnL calendar](https://docs.hypedexer.com/api-reference/social-trading/pnl-calendar.md): One row per trading day: realized PnL from fills, fees, funding, `net_pnl = realized − fees + funding`, a running total, and the day's closing equity when snapshots cover it. `totals` sums the window and counts profitable / losing days.
+- [Top trades](https://docs.hypedexer.com/api-reference/social-trading/top-trades.md): Best round-trip trades with ticker, direction, leverage, PnL, notional, entry/exit price and close date. Open positions can be ranked alongside closed ones (by unrealized PnL): they come back with `status: "open"`, no `closed_at`, and an `as_of` snapshot time.
+- [Funding rate history](https://docs.hypedexer.com/api-reference/funding/funding-rate-history.md): Hourly funding snapshots for a coin. Returns fundingRate, premium and time.
+- [Predicted funding rates](https://docs.hypedexer.com/api-reference/funding/predicted-funding-rates.md): Latest funding snapshot per coin (predicted next funding).
+- [User funding payments](https://docs.hypedexer.com/api-reference/funding/user-funding-payments.md): Hourly funding payments of a wallet, rebuilt from Hyperliquid's official node event archive. Same data as `userFunding` over `POST /info` (Live Data REST API).
+- [List liquidations](https://docs.hypedexer.com/api-reference/liquidations/list-liquidations.md): Liquidation events with optional filters on coin, user, notional amount and time range.
+- [Recent liquidations](https://docs.hypedexer.com/api-reference/liquidations/recent-liquidations.md): Recent liquidation events (defaults to 2h window). Same filters as `/liquidations/`.
+- [Active traders (24h)](https://docs.hypedexer.com/api-reference/overview/active-traders-24h.md): Distinct addresses that traded in the last 24 hours, and the change against the 24 hours before.
+- [Volume per coin for one address](https://docs.hypedexer.com/api-reference/overview/volume-per-coin-for-one-address.md): Volume and fill count per coin for one address, sorted by volume.
+- [Daily PnL by coin (10d)](https://docs.hypedexer.com/api-reference/overview/daily-pnl-by-coin-10d.md): Realized PnL per day and per coin over the last 10 days.
+- [Daily volume (10d)](https://docs.hypedexer.com/api-reference/overview/daily-volume-10d.md): Traded notional per day over the last 10 days.
+- [Top traders (24h)](https://docs.hypedexer.com/api-reference/overview/top-traders-24h.md): Top traders in the last 24 hours ranked by PnL, volume or trades.
+- [Fees (24h)](https://docs.hypedexer.com/api-reference/overview/fees-24h.md): Fees over the last 24 hours, split between spot and perp.
+- [Fills (24h)](https://docs.hypedexer.com/api-reference/overview/fills-24h.md): Fills over the last 24 hours, and the change against the 24 hours before.
+- [Trading volume (24h)](https://docs.hypedexer.com/api-reference/overview/trading-volume-24h.md): Traded notional in USD over the last 24 hours, and the change against the 24 hours before.
+- [Past spot deploy auctions](https://docs.hypedexer.com/api-reference/spot/past-spot-deploy-auctions.md): Spot deploy auctions over a lookback window (`lookback_hours`, default 48).
+- [Live spot deploy auctions](https://docs.hypedexer.com/api-reference/spot/live-spot-deploy-auctions.md): Spot deploy auctions currently running. Returns an empty array when no auction is live.
+- [List spot pairs](https://docs.hypedexer.com/api-reference/spot/list-spot-pairs.md)
+- [List spot tokens](https://docs.hypedexer.com/api-reference/spot/list-spot-tokens.md): Returns spot token metadata.
+- [List TWAP orders](https://docs.hypedexer.com/api-reference/twaps/list-twap-orders.md): TWAP orders with their current state. Filter by user, coin, status or time window.
+- [TWAP statistics](https://docs.hypedexer.com/api-reference/twaps/twap-statistics.md): Global TWAP statistics over a time window, broken down by status.
+- [TWAP orders of one address](https://docs.hypedexer.com/api-reference/twaps/twap-orders-of-one-address.md): Every TWAP for one address, with its current state and execution stats.
+- [One TWAP order in detail](https://docs.hypedexer.com/api-reference/twaps/one-twap-order-in-detail.md): Full detail for one TWAP: metadata, event history and fill summary.
+- [Fills of a TWAP order](https://docs.hypedexer.com/api-reference/twaps/fills-of-a-twap-order.md): Individual fills of a TWAP order, historical and live merged.
+- [Daily vault equity snapshots (TVL, PnL)](https://docs.hypedexer.com/api-reference/vaults/daily-vault-equity-snapshots-tvl-pnl.md): Daily vault equity: TVL, account value, notional exposure and PnL.
+- [Raw vault equity snapshots (~hourly)](https://docs.hypedexer.com/api-reference/vaults/raw-vault-equity-snapshots-~hourly.md): Raw vault equity snapshots, about one per hour.
+- [Vault positions for a specific user](https://docs.hypedexer.com/api-reference/vaults/vault-positions-for-a-specific-user.md): One address's equity fraction and net deposit across vaults, over time.
+- [Vault metadata and portfolio history](https://docs.hypedexer.com/api-reference/vaults/vault-metadata-and-portfolio-history.md): Vault metadata (leader, commission, followers) and snapshot history.
+- [Vault deposit/withdrawal events](https://docs.hypedexer.com/api-reference/vaults/vault-depositwithdrawal-events.md): Individual vault deposit and withdrawal events, with exact USDC amounts. `vaultAddress` is required; without it the API answers `422`.
+- [Latest snapshot for all known vaults](https://docs.hypedexer.com/api-reference/vaults/latest-snapshot-for-all-known-vaults.md): One row per vault, most recent snapshot, sorted by follower count.
+- [List covered markets](https://docs.hypedexer.com/api-reference/market-history/list-covered-markets.md): Markets covered by the market history archive (April 2024 to February 2026), with first and last trade, trade count and traded notional. Filter with `kind` (perp, spot, hip3). Spot pairs use the Hyperliquid `@index` name, HIP-3 markets the `dex:COIN` name.
+- [Best bid/offer history](https://docs.hypedexer.com/api-reference/market-history/best-bidoffer-history.md): Best bid and offer aggregated from every top-of-book update: mid OHLC, min/avg/max spread in bps and average sizes at the touch, per bucket. Intervals: `1m` (max 7 days), `1h` (max 180 days), `1d` (max 730 days). Available for April 2024 to February 2026 (archive of every top-of-book update); not ye…
+- [Spread statistics](https://docs.hypedexer.com/api-reference/market-history/spread-statistics.md): Spread distribution over a window (median, p10, p90, mean), data coverage and the hour of day (UTC) with the tightest spread. Available for April 2024 to February 2026 (archive of every top-of-book update); not yet extended past February 2026.
+- [Order book depth history](https://docs.hypedexer.com/api-reference/market-history/order-book-depth-history.md): Order book depth per bucket, from the order book reconstructed minute by minute. Coverage: April 2024 to February 2026 from our market data archive (`data_source: archive`, top ~20 levels per side), and continuously since 23 September 2026 from the full order book replayed from our own Hyperliquid n…
+- [Slippage history](https://docs.hypedexer.com/api-reference/market-history/slippage-history.md): Estimated cost of a market order versus mid, in bps (average of the buy and sell sides), for 10k, 100k and 1M USD, walked through the reconstructed book. Coverage: April 2024 to February 2026 from our market data archive (`data_source: archive`, top ~20 levels per side), and continuously since 23 Se…
+- [Order book at a point in time](https://docs.hypedexer.com/api-reference/market-history/order-book-at-a-point-in-time.md): The order book as of the end of a given minute (`source=minute`, up to 20 levels per side) or the nearest full snapshot at or before that time (`source=snapshot`, up to 50 levels per side, about every 10 minutes on archive data and every 12 minutes on node data). `data_source` tells which dataset an…
+- [Liquidity report](https://docs.hypedexer.com/api-reference/market-history/liquidity-report.md): Liquidity summary per day or week (window max 365 days): spread, median USD resting in the top 20 stored levels and their median reach in bps, median depth within 10 and 50 bps (only when the recorded book reaches that far for at least half of the period), average slippage for 100k and 1M USD over m…
+- [WebSocket overview](https://docs.hypedexer.com/websocket/overview.md): One endpoint, two families of streams: how to connect, authenticate, keep the connection alive and choose the right subscription.
+- [Completed Trades](https://docs.hypedexer.com/websocket/ws-completed-trades.md): Subscribe to completed trades streams over the /ws multiplex WebSocket.
+- [Fills Spot](https://docs.hypedexer.com/websocket/ws-fills-spot.md): Subscribe to spot fills stream over the /ws multiplex WebSocket.
+- [Recent Activity](https://docs.hypedexer.com/websocket/ws-recent-activity.md): Subscribe to merged completed trades + fills streams over the /ws multiplex WebSocket.
+- [Liquidations](https://docs.hypedexer.com/websocket/ws-liquidations.md): Stream liquidation events, grouped per liquidated user and block, with optional filters on the address and the notional.
+- [WebSocket endpoint (subscribe / unsubscribe)](https://docs.hypedexer.com/api-reference/ws-overview/websocket-endpoint-subscribe-unsubscribe.md): Open a WebSocket and manage subscriptions on it. One socket carries many subscriptions.
+- [Live data](https://docs.hypedexer.com/live-data/index.md): Real-time Hyperliquid data: REST & WebSocket
+- [Service info](https://docs.hypedexer.com/api-reference/health/service-info.md): Returns basic service information and endpoint pointers.
+- [Get asset context for a coin](https://docs.hypedexer.com/api-reference/asset-context/get-asset-context-for-a-coin.md): Returns the asset context for a specific coin: funding rate, open interest, oracle/mark/mid prices, premium, volumes, and impact prices.
+- [Get fills for a specific user](https://docs.hypedexer.com/api-reference/fills/get-fills-for-a-specific-user.md): Returns fills for one or more Ethereum addresses. Reads from the `node_fills` fullnode volume files.
+- [Get all fills globally](https://docs.hypedexer.com/api-reference/fills/get-all-fills-globally.md): Returns all fills across all users from the `node_fills` fullnode volumes. Optionally filter by coin and time range.
+- [User fills by time](https://docs.hypedexer.com/api-reference/fills/user-fills-by-time.md): Alias of `userFills` (HL-official type name). Recent fills for one or more addresses from a live in-memory window (about the 100 most recent fills per address). Filter with `startTime`/`endTime` (ms).
+- [Indexed fills (compact shape)](https://docs.hypedexer.com/api-reference/fills/indexed-fills-compact-shape.md): Stored fills of the index with filters, in the compact shape (numbers as numbers, `time` in ISO 8601). Same data as `GET /fills/` on the Indexed Data REST API. `market` selects `perp` (default when `user` is set, indexed since 2024-11-18), `spot` or `hip3`. `timeRange` (`1h`, `24h`, `7d`, `30d`) ove…
+- [Get trades](https://docs.hypedexer.com/api-reference/trades/get-trades.md): Returns trade data from the `node_trades` fullnode volumes. Optionally filter by coin and time range.
+- [Recent trades](https://docs.hypedexer.com/api-reference/trades/recent-trades.md): Alias of `trades`. Recent taker-side trades (one per tid) from the live allFills snapshot (~200 fills sliding window). Optional `coin`, `startTime`, `endTime`, `limit`.
+- [Get L2 order book snapshot](https://docs.hypedexer.com/api-reference/order-book/get-l2-order-book-snapshot.md): Returns an L2 order book snapshot for a coin.
+- [L2 book snapshot (alias)](https://docs.hypedexer.com/api-reference/order-book/l2-book-snapshot-alias.md): Alias of `l2Book`. Live L2 order-book snapshot for a coin (top 20 levels per side), rebuilt in real time from the fullnode raw book stream.
+- [L4 book snapshot](https://docs.hypedexer.com/api-reference/order-book/l4-book-snapshot.md): Live L4 (order-level) book snapshot for a coin: every resting order with its oid, price, size and owner: rebuilt from the fullnode raw book stream. Refreshed every ~30s.
+- [Current depth](https://docs.hypedexer.com/api-reference/order-book/current-depth.md): Cumulative order-book depth by bps band around the live mid price, computed from the live L2 book. Returns `coin`, `time`, `midPx` and a `depth` map per band.
+- [Market liquidity](https://docs.hypedexer.com/api-reference/order-book/market-liquidity.md): Live liquidity metrics for one coin or a list (max 20): spread, depth and simulated slippage, computed from the live L2 book.
+- [L2 book diff snapshot](https://docs.hypedexer.com/api-reference/order-book/l2-book-diff-snapshot.md): Recent raw book-diff events for a coin, read from the fullnode `node_raw_book_diffs_by_block` hourly files (bounded tail read, ≤3 most recent hours). `limit` max 5000.
+- [List available data dates](https://docs.hypedexer.com/api-reference/metadata/list-available-data-dates.md): Returns the list of available date directories in the fullnode volume data. Useful for determining the data range available for queries.
+- [Get clearinghouse state](https://docs.hypedexer.com/api-reference/clearinghouse/get-clearinghouse-state.md): Returns the clearinghouse state for one or more users. Each user is fetched individually from the upstream Hyperliquid node.
+- [Perpetual metadata](https://docs.hypedexer.com/api-reference/proxied-perpetuals/perpetual-metadata.md): Returns perpetual asset metadata: universe of listed perps with size decimals, max leverage, margin mode, and margin tier tables.
+- [Perp deploy auction status](https://docs.hypedexer.com/api-reference/proxied-perpetuals/perp-deploy-auction-status.md): Returns the current perpetual listing auction status: start time, duration, and gas prices (start, current, end).
+- [Perps at open interest cap](https://docs.hypedexer.com/api-reference/proxied-perpetuals/perps-at-open-interest-cap.md): Returns the list of perpetual assets that are currently at their open interest cap (new positions may be restricted).
+- [Margin table](https://docs.hypedexer.com/api-reference/proxied-perpetuals/margin-table.md): Returns the margin tier table configuration used for risk calculations.
+- [List perpetual DEXes](https://docs.hypedexer.com/api-reference/proxied-perpetuals/list-perpetual-dexes.md): Returns the list of all perpetual DEXes including deployer, oracle updater, fee recipient, and per-asset OI cap / funding multiplier configurations.
+- [Perp dex status](https://docs.hypedexer.com/api-reference/proxied-perpetuals/perp-dex-status.md): Status of a HIP-3 perp dex.
+- [Perp dex limits](https://docs.hypedexer.com/api-reference/proxied-perpetuals/perp-dex-limits.md): Limits of a HIP-3 perp dex.
+- [All perp metas](https://docs.hypedexer.com/api-reference/proxied-perpetuals/all-perp-metas.md): Perp metadata for every dex (first-party and HIP-3).
+- [Spot metadata](https://docs.hypedexer.com/api-reference/proxied-spot/spot-metadata.md): Returns spot trading metadata: token definitions (name, decimals, token ID) and trading pair universe.
+- [Spot clearinghouse state](https://docs.hypedexer.com/api-reference/proxied-spot/spot-clearinghouse-state.md): Returns the spot balances for a user: token holdings with total, held, and entry notional amounts.
+- [Spot deploy state](https://docs.hypedexer.com/api-reference/proxied-spot/spot-deploy-state.md): Returns the current spot token deployment state and auction information.
+- [Spot pair deploy auction status](https://docs.hypedexer.com/api-reference/proxied-spot/spot-pair-deploy-auction-status.md): Current spot pair deploy auction status.
+- [Open orders](https://docs.hypedexer.com/api-reference/proxied-trading/open-orders.md): Returns the list of open orders for a user. Basic order fields: coin, price, side, size, timestamp.
+- [Open orders (extended)](https://docs.hypedexer.com/api-reference/proxied-trading/open-orders-extended.md): Like `openOrders` but with additional fields: order type, original size, reduce-only flag, trigger conditions, and TP/SL info.
+- [Active asset data for a user](https://docs.hypedexer.com/api-reference/proxied-trading/active-asset-data-for-a-user.md): Returns the user's active position data for a specific coin: current leverage, max trade sizes, available-to-trade amounts, and mark price.
+- [Max market order notionals](https://docs.hypedexer.com/api-reference/proxied-trading/max-market-order-notionals.md): Returns the maximum notional values allowed for market orders on each asset.
+- [Order status](https://docs.hypedexer.com/api-reference/proxied-trading/order-status.md): Order status by `oid` (u64) or client order id (`cloid`, 0x-prefixed): HL-official API compatible. The lookup covers live orders first, then the indexed archive for historical orders.
+- [Exchange status](https://docs.hypedexer.com/api-reference/proxied-exchange/exchange-status.md): Returns the current exchange status and operational state.
+- [Liquidatable positions](https://docs.hypedexer.com/api-reference/proxied-exchange/liquidatable-positions.md): Returns positions that are currently eligible for liquidation.
+- [Web data (frontend)](https://docs.hypedexer.com/api-reference/proxied-exchange/web-data-frontend.md): Returns aggregated data used by the Hyperliquid web frontend. Includes market summaries, user state, and UI-specific data.
+- [All borrow/lend reserve states](https://docs.hypedexer.com/api-reference/proxied-exchange/all-borrowlend-reserve-states.md): State of every borrow/lend reserve.
+- [Vault summaries](https://docs.hypedexer.com/api-reference/proxied-vaults/vault-summaries.md): Returns summary information for all vaults.
+- [User vault equities](https://docs.hypedexer.com/api-reference/proxied-vaults/user-vault-equities.md): Returns the user's equity in each vault they have deposited into.
+- [Leading vaults](https://docs.hypedexer.com/api-reference/proxied-vaults/leading-vaults.md): Returns the top-performing vaults ranked by performance metrics.
+- [Extra agents (API wallets)](https://docs.hypedexer.com/api-reference/proxied-account/extra-agents-api-wallets.md): Returns the list of extra agents (API wallets) authorized by a user for programmatic trading.
+- [Sub-accounts](https://docs.hypedexer.com/api-reference/proxied-account/sub-accounts.md): Returns the user's sub-accounts with their name, address, clearinghouse state, and spot state.
+- [User fee schedule](https://docs.hypedexer.com/api-reference/proxied-account/user-fee-schedule.md): Returns the user's fee schedule, current rates, daily volume breakdown, trial status, and staking discount information.
+- [User rate limit](https://docs.hypedexer.com/api-reference/proxied-account/user-rate-limit.md): Returns the user's current rate limit status: cumulative volume, requests used, requests cap, and surplus.
+- [Max builder fee](https://docs.hypedexer.com/api-reference/proxied-account/max-builder-fee.md): Returns the maximum fee a user has approved for a specific builder address. The value is in tenths of a basis point.
+- [Multi-sig signers](https://docs.hypedexer.com/api-reference/proxied-account/multi-sig-signers.md): Returns the multi-sig signer configuration for a user address, if any.
+- [User role](https://docs.hypedexer.com/api-reference/proxied-account/user-role.md): Returns the user's role: `"user"` for a normal user, `"agent"` for an API wallet (with the parent user in `data.user`).
+- [User abstraction](https://docs.hypedexer.com/api-reference/proxied-account/user-abstraction.md): Account abstraction state for a user.
+- [User dex abstraction](https://docs.hypedexer.com/api-reference/proxied-account/user-dex-abstraction.md): Per-dex account abstraction state for a user.
+- [Approved builders](https://docs.hypedexer.com/api-reference/proxied-account/approved-builders.md): Builders approved by a user (builder-fee approvals).
+- [Borrow/lend user state](https://docs.hypedexer.com/api-reference/proxied-account/borrowlend-user-state.md): Borrow/lend positions for a user.
+- [User delegations](https://docs.hypedexer.com/api-reference/proxied-staking/user-delegations.md): Returns the user's active staking delegations: validator address, delegated amount, and lock-up expiry timestamp.
+- [Delegator summary](https://docs.hypedexer.com/api-reference/proxied-staking/delegator-summary.md): Returns a summary of the user's staking activity: total delegated, undelegated, pending withdrawals.
+- [Validator L1 votes](https://docs.hypedexer.com/api-reference/proxied-staking/validator-l1-votes.md): Returns the L1 validator voting information.
+- [Get mid prices for all coins](https://docs.hypedexer.com/api-reference/mid-prices/get-mid-prices-for-all-coins.md): Returns a map of coin symbol to mid price for all available coins.
+- [User funding payments](https://docs.hypedexer.com/api-reference/account-history/user-funding-payments.md): Hourly funding payments of a wallet, rebuilt from Hyperliquid's official node event archive. `accountFunding` is an alias and returns the same response. Also served as `GET /funding/userFunding` (Indexed Data REST API).
+- [User non-funding ledger updates](https://docs.hypedexer.com/api-reference/account-history/user-non-funding-ledger-updates.md): Native Hyperliquid ledger of a wallet: every balance-changing event except funding payments (see `userFunding`) and fills. Rebuilt from the node event archive, in Hyperliquid's shape.
+- [Historical orders](https://docs.hypedexer.com/api-reference/account-history/historical-orders.md): The wallet's orders with their latest status, in Hyperliquid's shape. Trigger orders (stop, take-profit) also come with their `open` and `triggered` states, as in Hyperliquid's response.
+- [User TWAP slice fills](https://docs.hypedexer.com/api-reference/account-history/user-twap-slice-fills.md): Fills executed by the wallet's TWAP orders, each with its parent `twapId`, in Hyperliquid's shape `[{fill, twapId}]`. Every TWAP fill carries its parent as soon as it is indexed (seconds), from 2025-09-01. Newest first, then by `tid`; `startTime` / `endTime` are inclusive bounds on the fill time (de…
+- [Borrow/lend reserve history](https://docs.hypedexer.com/api-reference/borrowlend/borrowlend-reserve-history.md): History of Hyperliquid's borrow/lend reserves, sampled every minute from our own node since **2026-09-23**. For the current state, use `allBorrowLendReserveStates` and `borrowLendUserState`.
+- [Data coverage per dataset](https://docs.hypedexer.com/api-reference/coverage/data-coverage-per-dataset.md): For each dataset, `from` (start of complete coverage, UTC) and `latest` (the most recent event timestamp present in the region answering your request), plus `delaySeconds` (now minus `latest`). Use it to tell an empty answer from a window that is not covered: a window is covered when `from` ≤ window…
+- [Live data WebSocket](https://docs.hypedexer.com/live-data/websocket.md): Hypedexer WebSocket: connection and protocol
+- [allMids](https://docs.hypedexer.com/live-data/ws-all-mids.md): Mid prices for all coins: polled and pushed on change
+- [trades](https://docs.hypedexer.com/live-data/ws-trades.md): Trade events stream from volume file ingestion
+- [candle](https://docs.hypedexer.com/live-data/ws-candle.md): Live OHLCV candles for one coin: built from live trades
+- [allCandles](https://docs.hypedexer.com/live-data/ws-all-candles.md): Live OHLCV candles for every coin of an interval
+- [bbo](https://docs.hypedexer.com/live-data/ws-bbo.md): Best Bid/Offer: top-of-book updates for one coin, emitted only when the top level changes
+- [l2Book](https://docs.hypedexer.com/live-data/ws-l2-book.md): L2 order book: snapshot then book deltas for one coin
+- [l4Book](https://docs.hypedexer.com/live-data/ws-l4-book.md): L4 raw order book: snapshot then updates for one coin
+- [l4BookUpdates](https://docs.hypedexer.com/live-data/ws-l4-book-updates.md): L4 book update events only (no full snapshot on this channel)
+- [activeAssetCtx](https://docs.hypedexer.com/live-data/ws-active-asset-ctx.md): Asset context (mark, oracle, funding, OI) for one coin
+- [allActiveAssetCtx](https://docs.hypedexer.com/live-data/ws-all-active-asset-ctx.md): Asset context updates for every coin
+- [fundingRates](https://docs.hypedexer.com/live-data/ws-funding-rates.md): Funding rate updates
+- [setOracleUpdates](https://docs.hypedexer.com/live-data/ws-set-oracle-updates.md): Oracle price set events (HIP-3 dexs included)
+- [userFills](https://docs.hypedexer.com/live-data/ws-user-fills.md): Per-user fills: snapshot then live updates over the same WebSocket
+- [allFills](https://docs.hypedexer.com/live-data/ws-all-fills.md): Global fills stream: all trades as they are ingested
+- [orderUpdates](https://docs.hypedexer.com/live-data/ws-order-updates.md): Order updates for a user: snapshot on subscribe, then live pushes
+- [allTwapStatusUpdates](https://docs.hypedexer.com/live-data/ws-all-twap-status-updates.md): TWAP order status events, all users: snapshot on subscribe
+- [userEvents](https://docs.hypedexer.com/live-data/ws-user-events.md): User events (liquidations, …) for an address: HL shape
+- [userFundings](https://docs.hypedexer.com/live-data/ws-user-fundings.md): Per-user funding payments: snapshot, then one frame per hourly settlement
+- [userNonFundingLedgerUpdates](https://docs.hypedexer.com/live-data/ws-user-non-funding-ledger-updates.md): Per-user native ledger: deposits, withdrawals, transfers, vaults, staking, borrow/lend
+- [webData2](https://docs.hypedexer.com/live-data/ws-web-data2.md): Aggregate account snapshot for a user: HL webData2 shape
+- [allDexsClearinghouseState](https://docs.hypedexer.com/live-data/ws-all-dexs-clearinghouse-state.md): Account state for every user trading through a builder code: one snapshot, then versioned updates
+- [liquidations](https://docs.hypedexer.com/live-data/ws-liquidations.md): Liquidation events aggregated per liquidated user and block
+- [WebSocket endpoint](https://docs.hypedexer.com/api-reference/websocket/websocket-endpoint.md): Upgrade to WebSocket. After connection, send subscribe/unsubscribe JSON messages to start/stop receiving real-time data.
+- [HIP-3](https://docs.hypedexer.com/hip-3/index.md): HIP-3 DEX data and analytics
+- [HIP-3 overview](https://docs.hypedexer.com/api-reference/hip-3/hip-3-overview.md): Aggregated HIP-3 statistics.
+- [Top movers](https://docs.hypedexer.com/api-reference/hip-3/top-movers.md): Top HIP-3 assets by price movement.
+- [HIP-3 leaderboard](https://docs.hypedexer.com/api-reference/hip-3/hip-3-leaderboard.md)
+- [Trader stats](https://docs.hypedexer.com/api-reference/hip-3/trader-stats.md): Aggregated trader statistics on HIP-3 markets.
+- [List DEXs](https://docs.hypedexer.com/api-reference/hip-3/list-dexs.md): Returns all registered HIP-3 DEXs.
+- [Get DEX by ID](https://docs.hypedexer.com/api-reference/hip-3/get-dex-by-id.md)
+- [List assets](https://docs.hypedexer.com/api-reference/hip-3/list-assets.md): Returns HIP-3 asset configurations. Optionally filter by DEX or search term.
+- [Get asset by ticker](https://docs.hypedexer.com/api-reference/hip-3/get-asset-by-ticker.md)
+- [List auctions](https://docs.hypedexer.com/api-reference/hip-3/list-auctions.md)
+- [Current auction](https://docs.hypedexer.com/api-reference/hip-3/current-auction.md): Returns the currently active auction, or null if none.
+- [Auction history](https://docs.hypedexer.com/api-reference/hip-3/auction-history.md)
+- [Live snapshots](https://docs.hypedexer.com/api-reference/hip-3/live-snapshots.md): Latest price/volume snapshots for HIP-3 assets.
+- [OHLCV bars](https://docs.hypedexer.com/api-reference/hip-3/ohlcv-bars.md): OHLCV candlestick data for a HIP-3 asset.
+- [Oracle stats (1m granularity)](https://docs.hypedexer.com/api-reference/hip-3/oracle-stats-1m-granularity.md): 1-minute oracle price statistics for a DEX.
+- [HIP-3 fills](https://docs.hypedexer.com/api-reference/hip-3/hip-3-fills.md): Fills on HIP-3 markets.
+- [User HIP-3 overview](https://docs.hypedexer.com/api-reference/hip-3/user-hip-3-overview.md)
+- [User HIP-3 fills](https://docs.hypedexer.com/api-reference/hip-3/user-hip-3-fills.md)
+- [User HIP-3 coin stats](https://docs.hypedexer.com/api-reference/hip-3/user-hip-3-coin-stats.md)
+- [Gossip priority auction status](https://docs.hypedexer.com/api-reference/priority-fees/gossip-priority-auction-status.md): Live state of the 5 gossip priority Dutch auction slots (synchronized on a 3-minute cycle). See [Hyperliquid docs](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/priority-fees) for details.
+- [Gossip priority auction history](https://docs.hypedexer.com/api-reference/priority-fees/gossip-priority-auction-history.md): History of completed gossip priority auctions with pagination.
+- [EVM](https://docs.hypedexer.com/evm/index.md): EVM blockchain data
+- [Global EVM indexing stats](https://docs.hypedexer.com/api-reference/evm/global-evm-indexing-stats.md): Total blocks, transactions, logs indexed and block range.
+- [Daily block/tx stats](https://docs.hypedexer.com/api-reference/evm/daily-blocktx-stats.md): Daily block and transaction counts over a configurable lookback window.
+- [List EVM blocks](https://docs.hypedexer.com/api-reference/evm/list-evm-blocks.md): Returns EVM blocks with optional filters on block range and time range.
+- [Get block by number](https://docs.hypedexer.com/api-reference/evm/get-block-by-number.md): Returns a single EVM block by its block number.
+- [List EVM transactions](https://docs.hypedexer.com/api-reference/evm/list-evm-transactions.md): Returns EVM transactions with optional filters.
+- [Transactions in a specific block](https://docs.hypedexer.com/api-reference/evm/transactions-in-a-specific-block.md): Returns all transactions in a given block.
+- [List EVM event logs](https://docs.hypedexer.com/api-reference/evm/list-evm-event-logs.md): Returns EVM event logs with optional filters on block, contract address, and event signature.
+- [List ledger transfers (L1 actions)](https://docs.hypedexer.com/api-reference/evm/list-ledger-transfers-l1-actions.md): L1 ledger transfers including withdraw3, usdSend, spotSend, sendAsset, agentSendAsset, usdClassTransfer, subAccountTransfer, vaultTransfer.
+- [Non-funding ledger events for a user](https://docs.hypedexer.com/api-reference/evm/non-funding-ledger-events-for-a-user.md): Unified non-funding ledger history for a user. Combines ledger_transfers (usdSend, spotSend, sendAsset, agentSendAsset, withdraw3, usdClassTransfer, subAccountTransfer, vaultTransfer) and evm_bridge_events (deposit_vote, withdrawal_finalized).
+- [Aggregated ledger summary per action type for a user](https://docs.hypedexer.com/api-reference/evm/aggregated-ledger-summary-per-action-type-for-a-user.md): Count and total amount per action type across all ledger transfers involving this user.
+- [List bridge events (deposits/withdrawals)](https://docs.hypedexer.com/api-reference/evm/list-bridge-events-depositswithdrawals.md): Bridge deposit votes, withdrawal finalizations, and signature events.
+- [List HIP-3 backstop principal transfers](https://docs.hypedexer.com/api-reference/hip-3-backstop/list-hip-3-backstop-principal-transfers.md): Deposits and withdrawals of principal on the HIP-3 backstop (`hip3LiquidatorTransfer` L1 action). The backstop address for a dex is `0x4000…00 + dex_index`.
+- [Per-dex backstop principal summary](https://docs.hypedexer.com/api-reference/hip-3-backstop/per-dex-backstop-principal-summary.md): Aggregated principal flow on the HIP-3 backstop, grouped by dex. Returns `total_deposited_usdc`, `total_withdrawn_usdc`, `net_principal_usdc`, and `unique_signers`.
+- [Health overview of all observed HIP-3 backstops](https://docs.hypedexer.com/api-reference/hip-3-backstop/health-overview-of-all-observed-hip-3-backstops.md): Combined principal flow and observed on-chain activity for every HIP-3 backstop address (`0x4000…00 + dex_index`). One row per dex with at least one observed fill at its backstop address. Sorted by `fill_count` descending.
+- [Backstop health for a single dex](https://docs.hypedexer.com/api-reference/hip-3-backstop/backstop-health-for-a-single-dex.md): Combined principal flow and observed on-chain activity for a single HIP-3 dex backstop. Returns 404 if no backstop activity has ever been observed for this dex (its address has never appeared in `hip3_fills`).
+- [Raw fills absorbed by the backstop of a dex](https://docs.hypedexer.com/api-reference/hip-3-backstop/raw-fills-absorbed-by-the-backstop-of-a-dex.md): Paginated stream of fills executed against the backstop address of a HIP-3 dex. These are positions absorbed by the backstop strategy following liquidations not covered by the order book.
+- [Elysium Testnet](https://docs.hypedexer.com/elysium/index.md): Indexed data for Elysium, Kinetiq's high-throughput L2 on Hyperliquid
+- [Elysium testnet chain stats](https://docs.hypedexer.com/api-reference/elysium-testnet/elysium-testnet-chain-stats.md): Totals indexed so far. `user_transactions` excludes ArbOS system txs, bridge-delivered txs and known spam (empty transfers to 0x…dead, `pulse()` heartbeats); `last_batched_block` is the last block posted on HyperEVM.
+- [Daily Elysium testnet activity](https://docs.hypedexer.com/api-reference/elysium-testnet/daily-elysium-testnet-activity.md): Daily Elysium testnet activity
+- [List Elysium blocks](https://docs.hypedexer.com/api-reference/elysium-testnet/list-elysium-blocks.md): List Elysium blocks
+- [Get block by number](https://docs.hypedexer.com/api-reference/elysium-testnet/get-block-by-number.md): Block header plus `batch_number`: the HyperEVM batch containing it (null until posted).
+- [Transactions in a specific block](https://docs.hypedexer.com/api-reference/elysium-testnet/transactions-in-a-specific-block.md): Transactions in a specific block
+- [List Elysium transactions](https://docs.hypedexer.com/api-reference/elysium-testnet/list-elysium-transactions.md): List Elysium transactions
+- [Get transaction by hash](https://docs.hypedexer.com/api-reference/elysium-testnet/get-transaction-by-hash.md): Transaction with its receipt fields, event logs, decoded token transfers and HyperEVM batch.
+- [List Elysium event logs](https://docs.hypedexer.com/api-reference/elysium-testnet/list-elysium-event-logs.md): List Elysium event logs
+- [List batches posted on HyperEVM](https://docs.hypedexer.com/api-reference/elysium-testnet/list-batches-posted-on-hyperevm.md): Sequencer batches posted to the SequencerInbox on HyperEVM testnet, with the Elysium block range they contain and `posting_delay_s` (HyperEVM posting time minus the time of the batch's last block).
+- [Get batch by number](https://docs.hypedexer.com/api-reference/elysium-testnet/get-batch-by-number.md): Get batch by number
+- [List bridge transfers](https://docs.hypedexer.com/api-reference/elysium-testnet/list-bridge-transfers.md): Deposits and withdrawals tracked end to end on both chains.
+- [Track a bridge transfer by tx hash](https://docs.hypedexer.com/api-reference/elysium-testnet/track-a-bridge-transfer-by-tx-hash.md): Track a bridge transfer by tx hash
+- [Retryable tickets (deposits)](https://docs.hypedexer.com/api-reference/elysium-testnet/retryable-tickets-deposits.md): Deposits delivered through retryable tickets. A failed auto-redeem can be redeemed manually until the ticket expires (7 days): nothing is lost, only delayed.
+- [Bridged token registry](https://docs.hypedexer.com/api-reference/elysium-testnet/bridged-token-registry.md): Tokens that crossed the bridge, with their address on both chains and transfer counts.
+- [Bridge reserves (proof of backing)](https://docs.hypedexer.com/api-reference/elysium-testnet/bridge-reserves-proof-of-backing.md): Latest snapshot (every 15 min) of the bridge invariants:
+- [List Elysium tokens](https://docs.hypedexer.com/api-reference/elysium-testnet/list-elysium-tokens.md): List Elysium tokens
+- [Get token by address](https://docs.hypedexer.com/api-reference/elysium-testnet/get-token-by-address.md): Metadata, bridge origin, supply (ERC-20: minted − burned), holder and transfer counts.
+- [Token holders](https://docs.hypedexer.com/api-reference/elysium-testnet/token-holders.md): Current holders sorted by balance (ERC-721/1155: number of tokens held).
+- [Token transfers](https://docs.hypedexer.com/api-reference/elysium-testnet/token-transfers.md): Token transfers
+- [Balances of an address](https://docs.hypedexer.com/api-reference/elysium-testnet/balances-of-an-address.md): Native HYPE (from the archive node) and token balances rebuilt from Transfer events.
+- [Activity of an address](https://docs.hypedexer.com/api-reference/elysium-testnet/activity-of-an-address.md): Transactions, token transfers and bridge transfers involving the address, newest first.
+- [Bridge history of an address](https://docs.hypedexer.com/api-reference/elysium-testnet/bridge-history-of-an-address.md): Complements `/evm/user/{address}/ledger-events` (HyperCore ↔ HyperEVM) with HyperEVM ↔ Elysium.
+- [Builders](https://docs.hypedexer.com/builders/index.md): Builder fee analytics and rankings
+- [Top builders](https://docs.hypedexer.com/api-reference/builders/top-builders.md): Ranked list of builders by volume, fees, fills or users for a given timeframe.
+- [List all builders](https://docs.hypedexer.com/api-reference/builders/list-all-builders.md): Returns all known builders with address, name and referrer info.
+- [Builder global stats](https://docs.hypedexer.com/api-reference/builders/builder-global-stats.md): Aggregated builder metrics (current, previous period, and variations).
+- [Builder stats across all timeframes](https://docs.hypedexer.com/api-reference/builders/builder-stats-across-all-timeframes.md): Returns builder stats for 1h, 24h, 7d and 30d in a single call.
+- [Builder detail stats](https://docs.hypedexer.com/api-reference/builders/builder-detail-stats.md): Per-coin breakdown and period-over-period variations for a specific builder.
+- [Builder top users](https://docs.hypedexer.com/api-reference/builders/builder-top-users.md): Top users ranked by builder fees for a specific builder.
+- [External activity of your users](https://docs.hypedexer.com/api-reference/builders/external-activity-of-your-users.md): Find out which of **your** users have traded outside your app. Send your builder address and a list of wallet addresses (up to 500); for each wallet you get the fills attributed to **other builder codes** (competing apps) and, optionally, the fills carrying **no builder code** at all: official Hyper…
+- [HIP-4 Prediction Markets](https://docs.hypedexer.com/hip-4/overview.md): Indexed data for Hyperliquid HIP-4 prediction markets
+- [Time-bucketed analytics](https://docs.hypedexer.com/api-reference/analytics/time-bucketed-analytics.md): Returns volume, fills, fees and unique traders aggregated into time intervals (`1h`, `4h`, `1d`). Backed by a pre-aggregated materialized view for constant-time performance regardless of fill volume.
+- [Per-provider trading stats](https://docs.hypedexer.com/api-reference/providers/per-provider-trading-stats.md): Returns per-provider trading statistics, aggregated from fills. One row per provider, sorted by `volume_usdc` descending.
+- [List permissionless deployers](https://docs.hypedexer.com/api-reference/deployers/list-permissionless-deployers.md): Returns the permissionless deployer registry: one row per deployer/venue, refreshed from chain metadata every ~10 seconds.
+- [List prediction outcomes](https://docs.hypedexer.com/api-reference/outcomes/list-prediction-outcomes.md): Returns prediction outcome definitions with volume stats. Each outcome (e.g. "Canned Tuna") has Yes/No sides and may belong to a question. Use `question_id` to get all outcomes for a question.
+- [List prediction questions](https://docs.hypedexer.com/api-reference/questions/list-prediction-questions.md): Returns prediction questions. Each question groups multiple outcomes (e.g. Akami, Otoro, Canned Tuna) with a fallback outcome.
+- [List prediction market fills](https://docs.hypedexer.com/api-reference/fills/list-prediction-market-fills.md): Returns executed fills on prediction markets (`#` coins) and outcome spot tokens (`@` coins). Joined with market metadata.
+- [Aggregated fees per user / coin / day](https://docs.hypedexer.com/api-reference/fees/aggregated-fees-per-user-coin-day.md): Returns fee aggregations grouped by user, coin, feeToken, and date. Only includes fills where `fee > 0`.
+- [List market settlements](https://docs.hypedexer.com/api-reference/settlements/list-market-settlements.md): Returns settlement (resolution) events for prediction markets. `settle_fraction` indicates the outcome result (0 = No, 1 = Yes).
+- [List outcome token metadata](https://docs.hypedexer.com/api-reference/outcome-tokens/list-outcome-token-metadata.md): Returns spot token metadata for outcome assets. Maps outcome IDs to their tradeable spot tokens (e.g. outcome 11 → CHUTORO on spot pair @11).
+- [List fee scale governance events](https://docs.hypedexer.com/api-reference/fee-scales/list-fee-scale-governance-events.md): Returns `SetOutcomeFeeScale` governance events. These control the global fee scale for prediction markets. Currently empty on mainnet (fee scale has not been activated).
+- [List user outcome actions](https://docs.hypedexer.com/api-reference/user-actions/list-user-outcome-actions.md): Returns on-chain user actions: `SplitOutcome`, `MergeOutcome`, `NegateOutcome`, `MergeQuestion`, `RegisterQuestion`, `ChangeOutcomeDescription`, `ChangeQuestionDescription`.
+- [AI Agents (MCP)](https://docs.hypedexer.com/mcp/overview.md): Query Hyperliquid data from Claude, Cursor, or any MCP client: 78 read-only tools on a hosted Model Context Protocol server.
+- [Authentication](https://docs.hypedexer.com/mcp/authentication.md): Authenticate to the Hypedexer MCP server with your existing API key.
+- [Client configuration](https://docs.hypedexer.com/mcp/clients.md): Connect Claude Desktop, Cursor, or any MCP client to the Hypedexer MCP server.
+- [Tool catalog](https://docs.hypedexer.com/mcp/tools.md): The 78 read-only MCP tools exposed by Hypedexer, grouped by domain.
+- [Errors](https://docs.hypedexer.com/mcp/errors.md): Failure modes of the Hypedexer MCP server and how to recover from them.
+- [Node Peering](https://docs.hypedexer.com/peering/overview.md): Peer your own Hyperliquid node with Hypedexer's nodes: pricing per whitelisted IP, with discounted rates on paid plans.
+
+## OpenAPI Specs
+
+- [openapi-hip4](/api-reference/openapi-hip4.json)
+- [openapi](/api-reference/openapi.json)
+- [ws-openapi.final2](/api-reference/ws-openapi.final2.json)
+- [openapi-rest](/builders/openapi-rest.json)
+- [openapi-rest](/elysium/openapi-rest.json)
+- [openapi-rest](/evm/openapi-rest.json)
+- [openapi-rest](/hip-3/openapi-rest.json)
+- [openapi-rest](/live-data/openapi-rest.json)
+- [openapi-websocket](/live-data/openapi-websocket.json)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

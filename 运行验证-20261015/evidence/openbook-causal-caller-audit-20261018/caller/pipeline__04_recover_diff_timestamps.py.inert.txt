@@ -1,0 +1,128 @@
+#!/usr/bin/env python
+"""Stage 4: recover a block timestamp for every book diff (the raw diff stream has none).
+
+Input   <work>/derived/diffs, statuses (the same hour and its two neighbours) and trades_raw (the same and adjacent days)
+Output  <work>/derived/diffs_ts/<coin>/<date>_<HH>.parquet: the diff columns plus
+        ts (recovered block time), src (1 open anchor, 3 cancel anchor, 2 trade within the anchor bounds,
+        6 previous-anchor fallback, 0 none) and ephemeral (a lone new+remove pair at one block time)
+
+The method is documented in hlmicro.timestamps.  Existing outputs are skipped.
+
+Usage:  python pipeline/04_recover_diff_timestamps.py [--workers 4] [--coins ...] [--dates ...] [--hours ...]
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+import time
+from multiprocessing import Pool
+from pathlib import Path
+
+import polars as pl
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from hlmicro.config import ASSETS, DATES, DER  # noqa: E402
+from hlmicro.orderstatus import CANCEL_STATUSES, STATUS_OPEN  # noqa: E402
+from hlmicro.timestamps import recover_timestamps  # noqa: E402
+
+DIFF, STAT, TRR, OUT = DER / "diffs", DER / "statuses", DER / "trades_raw", DER / "diffs_ts"
+CANCEL_LIST = sorted(CANCEL_STATUSES)
+
+
+def neighbours(date: str, h: int) -> list[tuple[str, int]]:
+    """(date, hour) of the previous, current and next hour, staying inside the month."""
+    di = DATES.index(date)
+    out = []
+    for dh in (-1, 0, 1):
+        hh, dd = h + dh, di
+        if hh < 0:
+            hh, dd = 23, di - 1
+        if hh > 23:
+            hh, dd = 0, di + 1
+        if 0 <= dd < len(DATES):
+            out.append((DATES[dd], hh))
+    return out
+
+
+def load_status_window(coin: str, date: str, h: int):
+    frames = []
+    for dd, hh in neighbours(date, h):
+        p = STAT / coin / f"{dd}_{hh:02d}.parquet"
+        if p.exists():
+            frames.append(pl.scan_parquet(p).select(["ts", "status", "oid"]))
+    return pl.concat(frames) if frames else None
+
+
+def load_trades_window(coin: str, date: str, h: int):
+    """Every (oid, ts) pair of the coin's trades on the days touched by the hour window, sorted by oid then ts."""
+    frames, seen = [], set()
+    for dd, _ in neighbours(date, h):
+        if dd in seen:
+            continue
+        seen.add(dd)
+        p = TRR / f"{dd}.parquet"
+        if p.exists():
+            frames.append(pl.scan_parquet(p).filter(pl.col("coin") == coin).select(["ts", "s0_oid", "s1_oid"]))
+    if not frames:
+        return None
+    lf = pl.concat(frames)
+    t = pl.concat([lf.select(pl.col("s0_oid").alias("oid"), "ts"), lf.select(pl.col("s1_oid").alias("oid"), "ts")])
+    return t.unique().sort(["oid", "ts"]).collect()
+
+
+def process(args):
+    coin, date, h = args
+    out = OUT / coin / f"{date}_{h:02d}.parquet"
+    if out.exists():
+        return coin, date, h, "skip"
+    src = DIFF / coin / f"{date}_{h:02d}.parquet"
+    if not src.exists():
+        return coin, date, h, "missing-diff"
+    t0 = time.time()
+    d = pl.read_parquet(src)
+    st = load_status_window(coin, date, h)
+    tr = load_trades_window(coin, date, h)
+    if st is None or tr is None:
+        return coin, date, h, "missing-status-or-trades"
+    opens = (
+        st.filter(pl.col("status") == STATUS_OPEN).group_by("oid").agg(pl.col("ts").min().alias("ts_open")).collect()
+    )
+    canc = (
+        st.filter(pl.col("status").is_in(CANCEL_LIST))
+        .group_by("oid")
+        .agg(pl.col("ts").min().alias("ts_canc"))
+        .collect()
+    )
+    d, s = recover_timestamps(d, opens, canc, tr)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    tmp = out.with_suffix(".parquet.partial")
+    d.write_parquet(tmp, compression="zstd", compression_level=3)
+    tmp.replace(out)
+    msg = (
+        f"ok n={s['rows']:,} behind_anchors={s['behind_anchors']} replayed_rows={s['replayed_rows']} "
+        f"src0={s['share_src_none']:.5f} src2={s['share_src_trade']:.4f} src6={s['share_src_prev_anchor']:.4f} "
+        f"replayed={s['share_replayed']:.5f} eph={s['share_ephemeral']:.3f} {time.time() - t0:.1f}s"
+    )
+    return coin, date, h, msg
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--coins", nargs="*", default=ASSETS)
+    ap.add_argument("--dates", nargs="*", default=DATES)
+    ap.add_argument("--hours", nargs="*", type=int, default=list(range(24)))
+    args = ap.parse_args()
+    jobs = [(c, d, h) for c in args.coins for d in args.dates for h in args.hours]
+    t0 = time.time()
+    with Pool(args.workers) as pool:
+        for i, (c, d, h, msg) in enumerate(pool.imap(process, jobs)):
+            if msg != "skip":
+                print(f"[{i + 1}/{len(jobs)}] {c} {d} h{h:02d}: {msg} ({time.time() - t0:.0f}s)", flush=True)
+    print(f"DONE {time.time() - t0:.0f}s")
+
+
+if __name__ == "__main__":
+    main()

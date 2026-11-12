@@ -1,0 +1,41 @@
+this manner, provided that this is consistent with its trading with all other liquidity providers. For 
+more information, please contact your XTX representative. 
+No Partial Fills 
+Unless otherwise requested or in respect of execution of Execution Algo orders (as described in 
+the paragraph headed “XTX Execution Algo” below), any trade request accepted by XTX shall be 
+executed in its entirety. There will be no partial fills of trade requests. 
+No Application of Mark-Up 
+XTX does not apply mark-up to any of its prices. The prices that XTX provides to you will only 
+include a bid-offer spread which may vary from counterparty to counterparty for the same or similar 
+transactions. The spread may also vary for different trade requests that you send for the same type 
+of transaction. The factors that XTX take into account to determine the amount of spread to be 
+applied includes, but is not limited to, market conditions, the trading venue which we deal with you 
+on and the size, type and direction of the transaction. However, XTX does not include any cost of 
+staff or capital charges as part of any spread. For further information on the factors taken into 
+account to determine the amount of spread, please contact your XTX representative. 
+XTX Execution Algo 
+XTX Execution Algo 
+XTX offers an algorithmic execution service which allows you to place orders with XTX for 
+execution at XTX’s prevailing mid-price (the “Execution Algo”). XTX executes Execution Algo 
+transactions with you as principal and not as your agent. Acceptance of your order by XTX does 
+not create a contract or commit XTX to execute all, or part of, your order in any particular manner 
+and, where XTX accepts an order with specific price parameters, it is indicating that it will attempt 
+to execute the order within such parameters.  Within the parameters specified for your order and 
+XTX’s internal risk, operational and credit controls, the Execution Algo will determine when and 
+how to execute your orders including, but not limited to, whether to execute orders by partial fills at 
+different prices. XTX does not guarantee execution of the full amount of your order or execution at 
+any particular price. 
+  
+Orders will be executed at XTX’s prevailing mid-price plus an execution fee (so that you receive an 
+“all-in” price). The execution fee applicable to Execution Algo transactions will be notified to you 
+separately by your XTX representative. The level of execution fees may vary from counterparty to 
+counterparty for the same or similar transactions. The prevailing XTX mid-price at which your 
+transaction is executed may differ from the price at which XTX executed a fill in the market or the 
+prevailing market price. The level of XTX’s prevailing mid-price may be impacted by other 
+counterparty Execution Algo orders, XTX’s liquidity provision to counterparties and/or XTX’s market 
+making or hedging activities. 
+  
+For more information on how your orders will be handled, including (but not limited to) prioritisation 
+of counterparty orders and how conflicts are managed between XTX’s proprietary trading and 
+execution of Execution Algo orders, please refer to the Execution Algo FAQ, which will be provided 
+to you by your XTX representative. 

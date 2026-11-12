@@ -1,0 +1,275 @@
+The seven case studies executed end to end against the reset registries (#831)
+
+* A locked sequence run compares its reconstruction against a published contract
+
+fx_pairs' holdout refused with "locked sequence fitted state does not reproduce
+published predictions" while every value matched to the bit. The comparison in
+`validate_locked_run` puts a prediction set that has been published against one
+reconstructed from the checkpoint files, and the two carry the decision time in
+different dtypes: publishing relabels a naive column as UTC through
+`registry.store._timestamps_as_utc` and the parquet round-trip carries
+microseconds, so the published side is Datetime(us, "UTC") while the
+reconstruction is still Datetime(ns, None). `DataFrame.equals` compares dtypes,
+so it reported a difference between two frames holding the same instants, the
+same 9,960 rows and the same values.
+
+Measured on fx_pairs training c3e8f312c25f (tcn, epoch 35): reconstructing twice
+gives byte-identical frames, and both differ from the published set only in the
+timestamp dtype.
+
+It bites where a case study's sequence predictions arrive naive - fx_pairs, whose
+dates come from a numpy datetime64 axis through `flush_fold_predictions`. The
+other six carry them aware already, which is why the same validator passed on
+every holdout before this one.
+
+`align_keys_to_published` casts the key columns to the published dtypes before
+the comparison, which relabels rather than converting and so cannot move a
+decision time. It is the same move the surrounding code already makes for the
+entity column, whose reader-facing name is renamed to `symbol` before comparing.
+Value columns are deliberately left alone: they are compared with `np.allclose`,
+which spans f32 and f64 on its own, and casting them would hide a real numeric
+difference behind a widening.
+
+* The outputs digest counted a cell the committed notebook never has
+
+Every parameterized production run reported OUTPUTS CHANGED on a notebook nothing
+had edited. `nb-run.sh` stamps the executed notebook and then drops papermill's
+`injected-parameters` cell, and both halves of that order are fixed: the stamper
+cross-checks its parameter declaration against the cell, so it must run first, and
+the cell must go before `jupytext --sync` propagates the argument values into the
+paired `.py` - which for fx_pairs/06_linear once hardcoded a population hash into
+source and sent a reader on a fresh registry into population.py:86.
+
+So `outputs_digest` was computed over one more code cell than the file that gets
+committed, and the recomputation at check time could never agree with it. Measured
+on etfs/18_holdout_predictions, whose only override was the production-safe
+REPLACE_HOLDOUT: inserting a single empty-output code cell reproduces the stored
+digest exactly.
+
+The cell is excluded from the digest, which now describes the notebook in the only
+form anything reads it in. The notebook's own `parameters` cell stays covered: it
+is source a reader edits, and dropping it would let a stamped notebook change what
+it declares unnoticed.
+
+* The seven case studies executed end to end against the reset registries
+
+etfs, us_firm_characteristics, fx_pairs, cme_futures, crypto_perps_funding,
+sp500_equity_option_analytics and sp500_options now each carry every stage from
+06 through the holdout, with backtest rows for every label their setup.yaml
+declares - primary and variants - and exactly one holdout generation.
+
+Two corrections are carried here rather than left to be found later.
+
+etfs adopts REPLACE_HOLDOUT, ported from us_firm_characteristics comment and all,
+and re-spends its holdout on the corrected selection. Its holdout notebook used to
+refuse a changed carrier outright and argue in prose that a replacement switch
+would be dishonest; that reading is superseded, because what the rule forbids is
+SELECTING on the holdout and a wrong result is deleted and re-run rather than left
+standing because it was observed. etfs is the case it exists for. 11_latent_factors
+snapshotted etfs-sdf-validation-v1 while 11d_stochastic_discount_factor was still
+running under a queue that had been drained, so the population's ten expected
+members held no prediction sets, and every stage after it selected without the SDF
+family - including the holdout, spent on nlinear at 05:05 UTC. With all ten members
+published the selection resolves to ols, and 018b37c30d7f (nlinear, training
+c8821162f162) is replaced by 0afd2e256128 (ols). The registry holds one holdout
+generation, which is the property the guard exists to keep.
+
+fx_pairs' holdout is regenerated on a validator that compares like with like. Its
+locked-sequence check refused with "fitted state does not reproduce published
+predictions" while every value matched; the cause and the fix are 8e1c95b7.
+
+* The locked-sequence alignment test runs where torch exists
+
+tests/test_locked_sequence_key_alignment.py imports align_keys_to_published
+from case_studies/utils/deep_learning.py, which imports torch at module
+scope, so it errored at collection in test-unit and took the whole job
+with it. Quarantine it from test-unit and run it in the
+modelling-environment job alongside every other torch-importing test.
+
+Co-Authored-By: Claude Opus 5 (1M context) <[REDACTED_EMAIL]>
+Claude-Session: https://claude.ai/code/session_01NWYEqS84nG4MxnyLiryoMD
+
+* Drop the two smoke blocks that named a closed issue
+
+#1045 was closed by adjudication on 2026-09-07: the production run of
+fx_pairs/11_causal_dml exited 0, and the smoke chain's inability to reach the
+path is a property of a preview workspace rather than of the notebook. A
+`blocked_by` naming a closed issue is a block nobody can lift, so the two
+entries lose it.
+
+What replaces it is not settled. fx_pairs/19_strategy_analysis still dies in
+resolve_solvent_carrier before it reads any candidate set, and whether that is
+#1067 or fx's stage-06 registry holding no in-force rankable candidate is open.
+Removing a stale reference is not the same as declaring the entries clean.
+
+* Drop the quarantine entry for a test file this branch deleted
+
+test-unit and test-unit-image both failed on it. The quarantine list asserts
+every entry names a file that exists, precisely so an entry cannot silently stop
+excluding anything, and test-unit-image passes the list to pytest as --ignore,
+which errors out on a path that is not there: "no tests ran in 0.01s".
+
+tests/test_locked_sequence_key_alignment.py was removed when this branch resolved
+its conflict in case_studies/utils/deep_learning.py against main. Its only subject
+was align_keys_to_published, whose sole caller was the reproduction check main had
+already deleted, so the function went with it and the test had nothing left to test.
+The quarantine entry existed because that test imported the module at a time when
+the module imported torch at scope.
+
+Co-Authored-By: Claude Opus 5 (1M context) <[REDACTED_EMAIL]>
+Claude-Session: https://claude.ai/code/session_01NWYEqS84nG4MxnyLiryoMD
+
+* Stop the image job running a test file this branch deleted
+
+Second half of fceba9ad. Removing the quarantine entry was necessary and not
+sufficient: test-unit-image names its files explicitly in the workflow, and
+test_quarantine_list asserts the two lists agree, so dropping one side made
+test-unit fail on the disagreement instead of on the missing path.
+
+The assertion is the right one and caught this correctly: a file the image job
+runs and the quarantine's modelling-environment section does not exclude is a
+file test-unit also collects, which goes red on the torch import.
+
+tests/test_locked_sequence_key_alignment.py went with align_keys_to_published
+when this branch resolved its deep_learning.py conflict against main.
+
+Co-Authored-By: Claude Opus 5 (1M context) <[REDACTED_EMAIL]>
+Claude-Session: https://claude.ai/code/session_01NWYEqS84nG4MxnyLiryoMD
+
+* Take main's smoke.yaml so two fx entries carry their blocked markers
+
+test-unit-image failed on test_a_declared_notebook_records_what_it_measured:
+case_studies/fx_pairs/11_causal_dml and 19_strategy_analysis are declared here with
+neither measured_s nor blocked_by, so they read as configurations claiming to be
+checks without ever having run.
+
+They are not new. main added blocked_by: 1045 to both, with the reasoning, after this
+branch forked, and added the us_equities_panel/04_model_based_features entry alongside.
+The branch simply never picked those 23 lines up. Taking main's file whole loses nothing:
+the diff in the other direction is empty.
+
+Worth revisiting once this branch lands. 19_strategy_analysis is blocked on fx's stage-06+
+registry having no in-force rankable candidate, and the block's own reasoning says the fx
+regeneration resolves it - which is what this branch is. A block that has become untrue is
+the same kind of stale claim as an unmeasured declaration.
+
+Co-Authored-By: Claude Opus 5 (1M context) <[REDACTED_EMAIL]>
+Claude-Session: https://claude.ai/code/session_01NWYEqS84nG4MxnyLiryoMD
+
+* Widen the crypto CI fixture to ten perpetuals so a declared concentration can be realized
+
+`cs-crypto_perps_funding` failed at `13_backtest` with
+
+    no concentration declared for crypto_perps_funding/fwd_ret_8h can be realized:
+    backtest.sweep.top_k_grid declares [3, 5, 10], and the predictions this sweep
+    ranks carry 5 symbols against a price panel of 19
+
+and no value in `tests/overrides.yaml` could reach it: the whole crypto fixture was the
+five perpetuals `CRYPTO_SYMBOLS` names. `get_entry_schemes_for` drops a top-k whose two
+disjoint long-short legs do not fit (`2k > tradeable`) and one that holds the whole
+cross-section (`k >= tradeable`), so every declared k fell to one of the two.
+
+Ten, not six. Six is the smallest width that stops the refusal, by seating k=3 alone, and
+it would have left CI exercising one of the three schemes a reader runs. At ten, k=3 and
+k=5 both seat and `quantile_grid [5]` clears its `n_assets >= 2 * n_quantiles` floor
+exactly, so the fixture covers the concentrated end, the diversified end and the quantile
+axis. Declaring a smaller k for crypto in `config/setup.yaml` was the other option in
+ml4t/agent-workspace#1077 and is the wrong one: it changes the production sweep to suit a
+fixture, which makes the guard pass without making the thing it guards true.
+
+The ten are the longest-lived of production's nineteen - the newest of them starts
+2020-08-13 - so the panel stays close to rectangular over the fixture window.
+
+`intermediates/crypto_perps_funding` is regenerated against them in
+ml4t/third-edition-test-data; the coupling is the one `create_test_data.py`'s crypto
+header records. Every artifact there now carries ten symbols: financial.parquet,
+model_based.parquet, all four label parquets and all eight fold metas.
+
+MAX_SYMBOLS is raised to 10 on 01, 04 and 05 and in 11_causal_dml's PREVIEW_REDUCTIONS.
+A cap below the fixture's width reproduces the same refusal at whatever width it names,
+so these track the fixture rather than sitting under it.
+
+Refs ml4t/agent-workspace#1077. nasdaq100_microstructure has the identical defect and is
+not fixed here: ml4t/agent-workspace#1019 measures its feature panel at 98.8 MB against
+GitHub's 100 MB per-file limit, so widening that panel has to answer the size question
+first.
+
+Co-Authored-By: Claude Opus 5 (1M context) <[REDACTED_EMAIL]>
+Claude-Session: https://claude.ai/code/session_01NWYEqS84nG4MxnyLiryoMD
+
+* Say why the crypto causal reduction stays at 5 while the fixture is 10
+
+Correcting my own commit b08ed7a7, whose message claimed 11_causal_dml's
+PREVIEW_REDUCTIONS.max_symbols was raised to 10 with the loader caps on 01, 04 and 05.
+The merge of origin/main took main's hunk for that block, and on looking at it the
+merge is right and the claim was wrong.
+
+The caps on 01, 04 and 05 have to track the fixture's width because they feed a ranked
+selection, and a cap under that width re-creates the refusal ml4t/agent-workspace#1077
+fixed. 11_causal_dml is a pooled DML fit with nothing downstream that ranks it into a
+concentration, so halving the panel there is a cost reduction that changes no
+feasibility question. Raising it would have doubled the stage's cost for nothing.
+
+Comment only; no value changes.
+
+Co-Authored-By: Claude Opus 5 (1M context) <[REDACTED_EMAIL]>
+Claude-Session: https://claude.ai/code/session_01NWYEqS84nG4MxnyLiryoMD
+
+* Displace the reduction fallback that kept crypto's cross-section at five names
+
+Widening the crypto fixture to ten perpetuals fixed the price panel and not the
+cross-section, so cs-crypto_perps_funding stayed red at 13_backtest with the same
+refusal: "the predictions this sweep ranks carry 5 symbols against a price panel
+of 19".
+
+The panel 13_backtest loads is uncapped, so it went to ten. The predictions it
+ranks come from 06_linear and 07_gbm, and those declared no reduction at all -
+which does not mean they run unreduced. _collect_preview_reductions in
+tests/pm_helpers.py injects `max_symbols: 5` when a notebook's mapping is empty,
+because a preview run that reduces nothing is a canonical run wearing the wrong
+tier. Both stages therefore kept fitting five names, and `top_k_grid [3, 5, 10]`
+still had no member whose two disjoint legs fit: a long-short k drops when 2k
+exceeds the tradeable count, which takes out k=3 at five names.
+
+Declaring `PREVIEW_REDUCTIONS.max_symbols: 10` on 06_linear and 07_gbm displaces
+the fallback at the fixture's full width. At ten names k=3 and k=5 both survive
+(2k <= 10) and k=10 drops as it should, so the sweep has a realizable member.
+08/09/10 get the same value: LABELS is not a reduction, so they were falling back
+too. They skip in CI for want of a GPU, so the width only shows on a machine that
+has one, which is where they would otherwise register a population narrower than
+the fixture and than their own siblings. The sequence resolver takes max_symbols
+directly and rejects only unknown keys, so it needs no companion fields.
+
+The fixture's own registry is unaffected: generate_intermediates.py runs at
+canonical tier with max_symbols 0, and its seeded artifacts are ten symbols wide.
+
+Caught by the pre-push RoboRev gate, which read the widened fixture against the
+model stages and found the coupling. The local run that preceded it proved less
+than claimed - it stops at cell 14 on a cadence check over deep_learning
+prediction sets that exist only because this workstation has a GPU, and the
+concentration check it was taken as clearing is at cell 18.
+
+Co-Authored-By: Claude Opus 5 (1M context) <[REDACTED_EMAIL]>
+Claude-Session: https://claude.ai/code/session_01NWYEqS84nG4MxnyLiryoMD
+
+* Execute the two notebooks #1076 left claiming nothing
+
+Both sat at `ready`: their source was final and their renders had been cleared,
+because 5ee4756f replaced an ordered list slice with select_folds(splits,
+range(MAX_FOLDS)) and that changed the .py bytes under the provenance stamp. The
+two expressions are equivalent for anything generate_cv_splits emits and
+MAX_FOLDS is 0 canonically, so neither run re-derives a value - this is a
+re-render, and no registered row moves.
+
+sp500_options/90_ic_diagnostic: 27s, 6 output cells.
+cme_futures/04_model_based_features: 15m21s, largest single process 1.5 GB.
+
+Both exited 0 and notebook_provenance.py check reports 0 stale, 0 contradicted,
+0 outputs-changed.
+
+Co-Authored-By: Claude Opus 5 (1M context) <[REDACTED_EMAIL]>
+Claude-Session: https://claude.ai/code/session_01NWYEqS84nG4MxnyLiryoMD
+
+---------
+
+Co-authored-by: Claude Opus 5 (1M context) <[REDACTED_EMAIL]>

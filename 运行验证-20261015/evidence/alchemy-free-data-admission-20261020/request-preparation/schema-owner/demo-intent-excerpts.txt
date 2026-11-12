@@ -1,0 +1,73 @@
+SOURCE ARTIFACT: /Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/alchemy-free-data-admission-20261020/methods-owner/02-three-pages.tool-return.json
+ARTIFACT SHA256: 6806b9dbff32bb70230f54f1741951fee032cf28404a846f3eb9b6a8257cc608
+HTTP/source raw HTML not exposed by native web tool. These are original source line labels, not JSON physical lines. No commands executed.
+
+OFFICIAL WS INTENT
+L102: ## How can I set up a WebSocket connection?
+L103: 
+L104: It’s quite simple to set up a new WebSocket connection to Ethereum - try the command below in your terminal.
+L105: 
+L106: [Button: shell]
+L107: 
+L108:     `wscat -c wss://eth-mainnet.g.alchemy.com/v2/demo`
+L109: 
+L110: If you’d like an endpoint with higher rate limits, sign up for a free Alchemy account, grab a new API key to replace the command above, and get access to over 300 million compute units for free per month.
+
+
+OFFICIAL HTTP PREFERENCE NOT DEMO CROSS-TRANSPORT PROOF
+L187: ## When to use HTTPS over WebSockets
+L188: 
+L189: In general, the best practice that we recommend is that developers don’t send standard Ethereum JSON-RPC requests over WebSockets, and instead use HTTP(S) requests. Sending JSON-RPC requests over WebSockets may become unsupported in the future.
+
+
+OFFICIAL ETH_CALL PAGE, DOCS-DEMO DEFAULT AND SAMPLE
+L72: # eth_call
+L73: 
+L74: POST
+L75: 
+L76: https://eth-mainnet.g.alchemy.com/v2[Select]/{apiKey}
+L77: 
+L78: cite74†CUs26 L79: 
+L80: Executes a new message call immediately without creating a transaction on the blockchain.
+L81: 
+L82: ## Path Parameters
+L83: 
+L84: ### apiKey
+L85: 
+L86: string required defaults to `docs-demo`
+L87: 
+L88: For higher throughput, cite75†create your own API key†dashboard.alchemy.com L89: 
+L90: ## Request
+L91: 
+L92: ### Transaction
+L93: 
+L94: object required
+L95: 
+L96: The transaction call object containing the details of the message call.
+L97: 
+L98: Show 15 properties
+L99: ### Block
+L100: 
+L101: string or enum optional
+L102: 
+L103: The block number, tag, or hash at which to execute the call. Defaults to `'latest'` if not provided.
+L104: 
+L105: Identifies a block by explicit number, a predefined tag (e.g., latest/safe/finalized), or a 32-byte block hash.
+L106: 
+L107: Show 3 variants
+L108: 
+L109: ## Responses
+L110: ### 200
+L111: 
+L112: The return value of the executed contract function, encoded as a hexadecimal string.
+L113: 
+L114: POST`/v2/{apiKey}`
+L115: 
+L116: cURL[Select]
+L117: 
+L118:     `curl --request POST \  --url https://eth-mainnet.g.alchemy.com/v2/docs-demo \  --header 'Content-Type: application/json' \  --data '{  "jsonrpc": "2.0",  "id": 1,  "method": "eth_call",  "params": [    {      "to": "0x69498dd54bd25aa0c886cf1f8b8ae0856d55ff13",      "value": "0x1"    },    "latest"  ]}'`
+L119: 
+L120: Try it
+L121: 200 Success
+L122: 
+L123:     `{  "jsonrpc": "2.0",  "id": 1,  "result": "0x"}`

@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+
+<html id="html" lang="en" data-bs-theme="light">
+    <head>
+        <link rel="stylesheet" href="/assets/vendor/font-awesome/css/all.min.css?v=[REDACTED_HOST]">
+        <link rel="stylesheet" href="/assets/css/theme.min.css?v=[REDACTED_HOST]">
+    <title></title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+       /* .cust-lbl {
+            font-size: .60938rem !important;
+        }
+
+        .tooltip-inner {
+            max-width: 290px;            
+        }*/
+
+       [data-nohighlight] * { 
+          background-color: transparent !important; 
+          border-color: transparent !important; 
+        }
+        /* State Diffs */
+        .table .table th,
+        .table .table td
+        {
+          border-bottom-width: var(--bs-border-width) !important;
+        }
+    </style>
+</head>
+<body id="body" class="scrollbar-custom">
+
+    <script>window.parent.isFrameLoading = true;</script>
+    
+
+        <div class="px-4">
+            <div class='d-flex align-items-center gap-1.5 mb-1.5'><i class='far fa-hard-drive text-muted'></i>State Differences<span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium py-1.5 px-2 Me-1' data-bs-toggle='tooltip'>Advanced</span></div>
+            <p class='mb-3'>A set of information that represents the current <strong class='text-dark'>state</strong> is updated when a transaction takes place on the network. Below is a summary of those changes:</p>
+        </div>
+        <div class="table-responsive mb-3">
+            <table class="table align-middle mb-0" id="tblAccStateDiff">
+                <thead>
+                    <tr>
+                        <th scope="col" width="60"></th>
+                        <th scope="col" data-highlight>Address</th>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">Before</th>
+                        <th scope="col">After</th>
+                        <th scope="col">State Difference</th>
+                        <th scope="col" style="display: none;">Code</th>
+                        <th scope="col" style="display: none;">Nonce</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><div data-bs-toggle='tooltip' data-bs-placement='top' aria-label='Click To see more' data-bs-original-title='Click To see more'><button type='button' class='btn btn-sm btn-secondary px-2 py-1 js-toggle-diff collapsed' data-bs-toggle='collapse' data-bs-target='#addrTable1' aria-expanded='false'><i class='fa fa-chevron-down'></i></button></div></td><td><span data-bs-toggle='tooltip' title='0x030ba81f1c18d280636f32af80b9aad02cf0854e' class='me-1'><a href='/address/0x030ba81f1c18d280636f32af80b9aad02cf0854e' target='_parent' class='hash-tag text-truncate d-inline-block' data-truncate='address' data-full-address='0x030ba81f1c18d280636f32af80b9aad02cf0854e'><span data-highlight-target="0x030bA81f1c18d280636F32af80b9AAd02Cf0854e">0x030bA81f...02Cf0854e</span></a></span></td><td><div class="d-flex align-items-center"><img src='/token/images/Aave_aWETH_32.png' width='20' class='me-2'><a href="/token/0x030ba81f1c18d280636f32af80b9aad02cf0854e" data-bs-toggle='tooltip' title="View Token Tracker Page" target='_parent' class='text-primary mb-0'>aWETH</a></td><td></td><td></td><td></td><td style='display:none;'></td></tr><td></td><td colspan=5><!-- Collapsed: class='collapse' | Expanded: class='show' --><div id='addrTable1' class='collapse' style=''><div class='d-flex flex-column gap-4'><div class='d-flex align-items-center gap-1'><span class='fw-medium'>Storage</span><span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium rounded-pill'>4</span></div><!-- Storage Address Table 1 --><div class='card shadow-none'><div class='card-body'><div class='relative'><div class='fw-medium mb-1'>Storage Address: 0x0000000000000000000000000000000000000000000000000000000000000036</div><div class='tab-content'><div class='tab-pane fade active show' id='diff-dec1-pane' role='tabpanel' aria-labelledby='diff-dec1' tabindex='1'><div><span>Variable Slot: 54</span></div></div></div><div class='position-absolute top-0 end-0 mt-2 me-2'><ul class='nav nav-pills nav-sm-segment text-nowrap snap-x-mandatory overflow-x-auto flex-nowrap flex-grow-1 flex-sm-grow-0 border-2 rounded gap-1 p-0.5 mb-4' id='assetsTab' role='tablist'><li class='nav-item snap-align-start' role='presentation'><button class='nav-link rounded-sm py-0.5 diff-dec active' id='diff-dec1' 
+                data-diff-target='diffData1' data-bs-toggle='tab' type='button' role='tab' data-bs-target='#diff-dec1-pane' 
+                aria-controls='diff-dec1-pane' aria-selected='true'>Dec</button></li><li class='nav-item snap-align-start' role='presentation'><button class='nav-link rounded-sm py-0.5 diff-hex' id='diff-hex1' 
+                data-diff-target='diffData1' data-bs-toggle='tab' type='button'  role='tab' aria-selected='False' tabindex='-1'>Hex</button></li></ul></div></div></div><div class='table-responsive'><table class='table align-middle mb-0'><thead><th scope='col' style='min-width: 65px; max-width: 65px;'>Offset</th><th scope='col' style='min-width: 150px; max-width: 150px;'>Variable</th><th scope='col' style='min-width: 250px; max-width: 250px;'>Data Type</th><th scope='col' width='400'>Before</th><th scope='col' width='400'>After</th></thead><tbody id='diffData1' class='diff-data'><tr><td>N/A</td><td data-nohighlight>N/A</td><td>N/A</td><td class='text-break'>0x0000000000000000000000000000000000000000000001691417ed9bc739d9a9</td><td class='text-break'>0x0000000000000000000000000000000000000000000001691418495f376c5af1</td></tr><tr><td style='padding-left: 1.6em;'>0</td><td data-nohighlight>_totalSupply</td><td><span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium py-1.5 px-2'>uint256</span></td><td class='text-break'>6660722497667689208233</td><td class='text-break'>6660722598562648316657</td></tr></tbody></table></div></div><!-- End Storage Address Table 1 --><!-- Storage Address Table 2 --><div class='card shadow-none'><div class='card-body'><div class='relative'><div class='fw-medium mb-1'>Storage Address: 0x14a553e31736f19e3e380cf55bfb2f82dfd6d880cd07235affb68d8d3e0cac4d</div><div class='tab-content'><div class='tab-pane fade active show' id='diff-dec2-pane' role='tabpanel' aria-labelledby='diff-dec1' tabindex='2'><div><span>Variable Slot: 52</span><span class='border-dark border-start dark:border-white dark:opacity-75 me-2 ms-1.5'></span>Input: 0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c <span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium py-1.5 px-2'>address</span></div></div></div><div class='position-absolute top-0 end-0 mt-2 me-2'><ul class='nav nav-pills nav-sm-segment text-nowrap snap-x-mandatory overflow-x-auto flex-nowrap flex-grow-1 flex-sm-grow-0 border-2 rounded gap-1 p-0.5 mb-4' id='assetsTab' role='tablist'><li class='nav-item snap-align-start' role='presentation'><button class='nav-link rounded-sm py-0.5 diff-dec active' id='diff-dec2' 
+                data-diff-target='diffData2' data-bs-toggle='tab' type='button' role='tab' data-bs-target='#diff-dec2-pane' 
+                aria-controls='diff-dec2-pane' aria-selected='true'>Dec</button></li><li class='nav-item snap-align-start' role='presentation'><button class='nav-link rounded-sm py-0.5 diff-hex' id='diff-hex2' 
+                data-diff-target='diffData2' data-bs-toggle='tab' type='button'  role='tab' aria-selected='False' tabindex='-1'>Hex</button></li></ul></div></div></div><div class='table-responsive'><table class='table align-middle mb-0'><thead><th scope='col' style='min-width: 65px; max-width: 65px;'>Offset</th><th scope='col' style='min-width: 150px; max-width: 150px;'>Variable</th><th scope='col' style='min-width: 250px; max-width: 250px;'>Data Type</th><th scope='col' width='400'>Before</th><th scope='col' width='400'>After</th></thead><tbody id='diffData2' class='diff-data'><tr><td>N/A</td><td data-nohighlight>N/A</td><td>N/A</td><td class='text-break'>0x000000000000000000000000000000000000000000000000723a7e2eb76d0dc7</td><td class='text-break'>0x000000000000000000000000000000000000000000000000723ad9f28f18da8f</td></tr><tr><td style='padding-left: 1.6em;'>0</td><td data-nohighlight>_balances</td><td>mapping (address => uint256)</td><td class='text-break'>8.231030008083975623</td><td class='text-break'>8.231130904779086479</td></tr></tbody></table></div></div><!-- End Storage Address Table 2 --><!-- Storage Address Table 3 --><div class='card shadow-none'><div class='card-body'><div class='relative'><div class='fw-medium mb-1'>Storage Address: 0x2304499cf47a3eb3bcc99b6d20375161aa18e5752af532e0e4e85cfd506c9186</div><div class='tab-content'><div class='tab-pane fade active show' id='diff-dec3-pane' role='tabpanel' aria-labelledby='diff-dec1' tabindex='3'><div><span>Variable Slot: 52</span><span class='border-dark border-start dark:border-white dark:opacity-75 me-2 ms-1.5'></span>Input: 0x63f944280f054c3fe27b30bf70ad3977dbd35e60 <span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium py-1.5 px-2'>address</span></div></div></div><div class='position-absolute top-0 end-0 mt-2 me-2'><ul class='nav nav-pills nav-sm-segment text-nowrap snap-x-mandatory overflow-x-auto flex-nowrap flex-grow-1 flex-sm-grow-0 border-2 rounded gap-1 p-0.5 mb-4' id='assetsTab' role='tablist'><li class='nav-item snap-align-start' role='presentation'><button class='nav-link rounded-sm py-0.5 diff-dec active' id='diff-dec3' 
+                data-diff-target='diffData3' data-bs-toggle='tab' type='button' role='tab' data-bs-target='#diff-dec3-pane' 
+                aria-controls='diff-dec3-pane' aria-selected='true'>Dec</button></li><li class='nav-item snap-align-start' role='presentation'><button class='nav-link rounded-sm py-0.5 diff-hex' id='diff-hex3' 
+                data-diff-target='diffData3' data-bs-toggle='tab' type='button'  role='tab' aria-selected='False' tabindex='-1'>Hex</button></li></ul></div></div></div><div class='table-responsive'><table class='table align-middle mb-0'><thead><th scope='col' style='min-width: 65px; max-width: 65px;'>Offset</th><th scope='col' style='min-width: 150px; max-width: 150px;'>Variable</th><th scope='col' style='min-width: 250px; max-width: 250px;'>Data Type</th><th scope='col' width='400'>Before</th><th scope='col' width='400'>After</th></thead><tbody id='diffData3' class='diff-data'><tr><td>N/A</td><td data-nohighlight>N/A</td><td>N/A</td><td class='text-break'>0x0000000000000000000000000000000000000000000000000000000067794b83</td><td class='text-break'>0x0000000000000000000000000000000000000000000000000000000000000003</td></tr><tr><td style='padding-left: 1.6em;'>0</td><td data-nohighlight>_balances</td><td>mapping (address => uint256)</td><td class='text-break'>0.000000001736002435</td><td class='text-break'>0.000000000000000003</td></tr></tbody></table></div></div><!-- End Storage Address Table 3 --><!-- Storage Address Table 4 --><div class='card shadow-none'><div class='card-body'><div class='relative'><div class='fw-medium mb-1'>Storage Address: 0xb0fe6b404c65da052e04cedbcac05e111e4516a6c0c313847183a3e34d705f24</div></div></div><div class='table-responsive'><table class='table align-middle mb-0'><thead><th scope='col' style='min-width: 65px; max-width: 65px;'>Offset</th><th scope='col' style='min-width: 150px; max-width: 150px;'>Variable</th><th scope='col' style='min-width: 250px; max-width: 250px;'>Data Type</th><th scope='col' width='400'>Before</th><th scope='col' width='400'>After</th></thead><tbody><tr><td>N/A</td><td data-nohighlight>N/A</td><td>N/A</td><td class='text-break'>0xffffffffffffffffffffffffffffffffffffffffffffffffed363b6a4df155f3</td><td class='text-break'>0xffffffffffffffffffffffffffffffffffffffffffffffffed363b69e2579487</td></tr></tbody></table></div></div><!-- End Storage Address Table 4 --></div></div></td><tr><td id='0x396343362be2a4da1ce0c1c210945346fb82aa49' class='text-center'></td><td><div class='d-flex align-items-center gap-1'><span data-bs-toggle='tooltip' title='0x396343362be2a4da1ce0c1c210945346fb82aa49' class='me-1'><a href='/address/0x396343362be2a4da1ce0c1c210945346fb82aa49' target='_parent' class='hash-tag text-truncate d-inline-block' data-truncate='address' data-full-address='0x396343362be2a4da1ce0c1c210945346fb82aa49'><span data-highlight-target="0x396343362be2A4dA1cE0C1C210945346fb82Aa49">0x39634336...6fb82Aa49</span></a></span><span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium py-1.5 px-2'>Producer</span></div></td><td><span class='hash-tag text-truncate tooltip-address' data-bs-toggle='tooltip' title='quasarbuilder&#10;(0x396343362be2a4da1ce0c1c210945346fb82aa49)'>quasarbuilder</span></td><td>21.051606185077011039 Eth</td><td>21.051619658059982905 Eth</td><td><i class='fa fa-caret-up text-muted'></i> 0.000013472982971866</td><td style='display:none;'></td></tr><tr><td id='0x63f944280f054c3fe27b30bf70ad3977dbd35e60' class='text-center'></td><td><span data-bs-toggle='tooltip' title='0x63f944280f054c3fe27b30bf70ad3977dbd35e60' class='me-1'><a href='/address/0x63f944280f054c3fe27b30bf70ad3977dbd35e60' target='_parent' class='hash-tag text-truncate d-inline-block' data-truncate='address' data-full-address='0x63f944280f054c3fe27b30bf70ad3977dbd35e60'><span data-highlight-target="0x63F944280f054c3fE27B30Bf70AD3977Dbd35E60">0x63F94428...7Dbd35E60</span></a></span></td><td></td><td><div class='mb-1'>1.363523465519945158 Eth</div><div class='mb-0'><span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium py-1.5 px-2'>Nonce: 6</span></div></td><td><div class='mb-1'>1.363477988171669028 Eth</div><div class='mb-0'><span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium py-1.5 px-2'>Nonce: 7</span></div></td><td><i class='fa fa-caret-down text-muted'></i> 0.00004547734827613</td><td style='display:none;'></td></tr><tr><td><div data-bs-toggle='tooltip' data-bs-placement='top' aria-label='Click To see more' data-bs-original-title='Click To see more'><button type='button' class='btn btn-sm btn-secondary px-2 py-1 js-toggle-diff collapsed' data-bs-toggle='collapse' data-bs-target='#addrTable5' aria-expanded='false'><i class='fa fa-chevron-down'></i></button></div></td><td><span data-bs-toggle='tooltip' title='0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9' class='me-1'><a href='/address/0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9' target='_parent' class='hash-tag text-truncate d-inline-block' data-truncate='address' data-full-address='0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9'><span data-highlight-target="0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9">0x7d2768dE...A69DDc7A9</span></a></span></td><td><span class='hash-tag text-truncate tooltip-address' data-bs-toggle='tooltip' title='Aave: Lending Pool V2&#10;(0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9)'>Aave: Lending Pool V2</span></td><td></td><td></td><td></td><td style='display:none;'></td></tr><td></td><td colspan=5><!-- Collapsed: class='collapse' | Expanded: class='show' --><div id='addrTable5' class='collapse' style=''><div class='d-flex flex-column gap-4'><div class='d-flex align-items-center gap-1'><span class='fw-medium'>Storage</span><span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium rounded-pill'>3</span></div><!-- Storage Address Table 5 --><div class='card shadow-none'><div class='card-body'><div class='relative'><div class='fw-medium mb-1'>Storage Address: 0x4cb5a02f592bd29403ce60c982c7f5174b16842da4fff5cfd025d6836dc48d4c</div></div></div><div class='table-responsive'><table class='table align-middle mb-0'><thead><th scope='col' style='min-width: 65px; max-width: 65px;'>Offset</th><th scope='col' style='min-width: 150px; max-width: 150px;'>Variable</th><th scope='col' style='min-width: 250px; max-width: 250px;'>Data Type</th><th scope='col' width='400'>Before</th><th scope='col' width='400'>After</th></thead><tbody><tr><td>N/A</td><td data-nohighlight>N/A</td><td>N/A</td><td class='text-break'>0x0000000003c605505e3242aee6b4494900000000035c2bb1d64db458e952ebdf</td><td class='text-break'>0x0000000003c60558056d738931b1836d00000000035c2bb1fcccf49604c08ee7</td></tr></tbody></table></div></div><!-- End Storage Address Table 5 --><!-- Storage Address Table 6 --><div class='card shadow-none'><div class='card-body'><div class='relative'><div class='fw-medium mb-1'>Storage Address: 0x4cb5a02f592bd29403ce60c982c7f5174b16842da4fff5cfd025d6836dc48d4d</div></div></div><div class='table-responsive'><table class='table align-middle mb-0'><thead><th scope='col' style='min-width: 65px; max-width: 65px;'>Offset</th><th scope='col' style='min-width: 150px; max-width: 150px;'>Variable</th><th scope='col' style='min-width: 250px; max-width: 250px;'>Data Type</th><th scope='col' width='400'>Before</th><th scope='col' width='400'>After</th></thead><tbody><tr><td>N/A</td><td data-nohighlight>N/A</td><td>N/A</td><td class='text-break'>0x000000000041b269875cb785222528b00000000000017321e504be50d7350cee</td><td class='text-break'>0x000000000041b269b17620e826bd22840000000000017321e8748c1c642bc89a</td></tr></tbody></table></div></div><!-- End Storage Address Table 6 --><!-- Storage Address Table 7 --><div class='card shadow-none'><div class='card-body'><div class='relative'><div class='fw-medium mb-1'>Storage Address: 0x4cb5a02f592bd29403ce60c982c7f5174b16842da4fff5cfd025d6836dc48d4e</div></div></div><div class='table-responsive'><table class='table align-middle mb-0'><thead><th scope='col' style='min-width: 65px; max-width: 65px;'>Offset</th><th scope='col' style='min-width: 150px; max-width: 150px;'>Variable</th><th scope='col' style='min-width: 250px; max-width: 250px;'>Data Type</th><th scope='col' width='400'>Before</th><th scope='col' width='400'>After</th></thead><tbody><tr><td>N/A</td><td data-nohighlight>N/A</td><td>N/A</td><td class='text-break'>0x0000000000000000000000006a0f771700000000002c4925bc9c91889e1dba26</td><td class='text-break'>0x0000000000000000000000006a0f774700000000002c4925de4a7f716e974ecf</td></tr></tbody></table></div></div><!-- End Storage Address Table 7 --></div></div></td><tr><td><div data-bs-toggle='tooltip' data-bs-placement='top' aria-label='Click To see more' data-bs-original-title='Click To see more'><button type='button' class='btn btn-sm btn-secondary px-2 py-1 js-toggle-diff collapsed' data-bs-toggle='collapse' data-bs-target='#addrTable8' aria-expanded='false'><i class='fa fa-chevron-down'></i></button></div></td><td><span data-bs-toggle='tooltip' title='0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' class='me-1'><a href='/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' target='_parent' class='hash-tag text-truncate d-inline-block' data-truncate='address' data-full-address='0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'><span data-highlight-target="0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2">0xC02aaA39...83C756Cc2</span></a></span></td><td><div class="d-flex align-items-center"><img src='/token/images/weth_28.png?v=2' width='20' class='me-2'><a href="/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" data-bs-toggle='tooltip' title="View Token Tracker Page" target='_parent' class='text-primary mb-0'>WETH</a></td><td>2,293,844.536275880323368309 Eth</td><td>2,293,844.536275878518129673 Eth</td><td><i class='fa fa-caret-down text-muted'></i> 0.000000001805238636</td><td style='display:none;'></td></tr><td></td><td colspan=5><!-- Collapsed: class='collapse' | Expanded: class='show' --><div id='addrTable8' class='collapse' style=''><div class='d-flex flex-column gap-4'><div class='d-flex align-items-center gap-1'><span class='fw-medium'>Storage</span><span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium rounded-pill'>1</span></div><!-- Storage Address Table 8 --><div class='card shadow-none'><div class='card-body'><div class='relative'><div class='fw-medium mb-1'>Storage Address: 0xef982481b635103b0e52b38555f17a90bf88de82ca144dd4f6da1015e08a5142</div><div class='tab-content'><div class='tab-pane fade active show' id='diff-dec8-pane' role='tabpanel' aria-labelledby='diff-dec1' tabindex='8'><div><span>Variable Slot: 3</span><span class='border-dark border-start dark:border-white dark:opacity-75 me-2 ms-1.5'></span>Input: 0x030ba81f1c18d280636f32af80b9aad02cf0854e <span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium py-1.5 px-2'>address</span></div></div></div><div class='position-absolute top-0 end-0 mt-2 me-2'><ul class='nav nav-pills nav-sm-segment text-nowrap snap-x-mandatory overflow-x-auto flex-nowrap flex-grow-1 flex-sm-grow-0 border-2 rounded gap-1 p-0.5 mb-4' id='assetsTab' role='tablist'><li class='nav-item snap-align-start' role='presentation'><button class='nav-link rounded-sm py-0.5 diff-dec active' id='diff-dec8' 
+                data-diff-target='diffData8' data-bs-toggle='tab' type='button' role='tab' data-bs-target='#diff-dec8-pane' 
+                aria-controls='diff-dec8-pane' aria-selected='true'>Dec</button></li><li class='nav-item snap-align-start' role='presentation'><button class='nav-link rounded-sm py-0.5 diff-hex' id='diff-hex8' 
+                data-diff-target='diffData8' data-bs-toggle='tab' type='button'  role='tab' aria-selected='False' tabindex='-1'>Hex</button></li></ul></div></div></div><div class='table-responsive'><table class='table align-middle mb-0'><thead><th scope='col' style='min-width: 65px; max-width: 65px;'>Offset</th><th scope='col' style='min-width: 150px; max-width: 150px;'>Variable</th><th scope='col' style='min-width: 250px; max-width: 250px;'>Data Type</th><th scope='col' width='400'>Before</th><th scope='col' width='400'>After</th></thead><tbody id='diffData8' class='diff-data'><tr><td>N/A</td><td data-nohighlight>N/A</td><td>N/A</td><td class='text-break'>0x000000000000000000000000000000000000000000000140e8b207ae2b20e48f</td><td class='text-break'>0x000000000000000000000000000000000000000000000140e8b207adbf872323</td></tr><tr><td style='padding-left: 1.6em;'>0</td><td data-nohighlight>tokenbalances</td><td>mapping (address => uint256)</td><td class='text-break'>5919.725576394339574927</td><td class='text-break'>5919.725576392534336291</td></tr></tbody></table></div></div><!-- End Storage Address Table 8 --></div></div></td><tr><td><div data-bs-toggle='tooltip' data-bs-placement='top' aria-label='Click To see more' data-bs-original-title='Click To see more'><button type='button' class='btn btn-sm btn-secondary px-2 py-1 js-toggle-diff collapsed' data-bs-toggle='collapse' data-bs-target='#addrTable9' aria-expanded='false'><i class='fa fa-chevron-down'></i></button></div></td><td><span data-bs-toggle='tooltip' title='0xd784927ff2f95ba542bfc824c8a8a98f3495f6b5' class='me-1'><a href='/address/0xd784927ff2f95ba542bfc824c8a8a98f3495f6b5' target='_parent' class='hash-tag text-truncate d-inline-block' data-truncate='address' data-full-address='0xd784927ff2f95ba542bfc824c8a8a98f3495f6b5'><span data-highlight-target="0xd784927Ff2f95ba542BfC824c8a8a98F3495f6b5">0xd784927F...F3495f6b5</span></a></span></td><td><span class='hash-tag text-truncate tooltip-address' data-bs-toggle='tooltip' title='Aave: Default Incentives Controller V2&#10;(0xd784927ff2f95ba542bfc824c8a8a98f3495f6b5)'>Aave: Default Incentives Controller V2</span></td><td></td><td></td><td></td><td style='display:none;'></td></tr><td></td><td colspan=5><!-- Collapsed: class='collapse' | Expanded: class='show' --><div id='addrTable9' class='collapse' style=''><div class='d-flex flex-column gap-4'><div class='d-flex align-items-center gap-1'><span class='fw-medium'>Storage</span><span class='badge bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-dark fw-medium rounded-pill'>1</span></div><!-- Storage Address Table 9 --><div class='card shadow-none'><div class='card-body'><div class='relative'><div class='fw-medium mb-1'>Storage Address: 0x291444ea7c00a38f3d9c0601b1589a1b31da8aea876afde06f92a7055bf08527</div></div></div><div class='table-responsive'><table class='table align-middle mb-0'><thead><th scope='col' style='min-width: 65px; max-width: 65px;'>Offset</th><th scope='col' style='min-width: 150px; max-width: 150px;'>Variable</th><th scope='col' style='min-width: 250px; max-width: 250px;'>Data Type</th><th scope='col' width='400'>Before</th><th scope='col' width='400'>After</th></thead><tbody><tr><td>N/A</td><td data-nohighlight>N/A</td><td>N/A</td><td class='text-break'>0x00006a0f7717000000000000b060992a482980000000000000035090a49016e5</td><td class='text-break'>0x00006a0f7747000000000000b060992a482980000000000000035090a49016e5</td></tr></tbody></table></div></div><!-- End Storage Address Table 9 --></div></div></td>
+                </tbody>
+            </table>
+        </div>
+    
+
+        <script src="/assets/vendor/jquery/dist/jquery.min.js?v=[REDACTED_HOST]"></script>     
+        <script src="/assets/vendor/popper.js/dist/umd/popper.min.js?v=[REDACTED_HOST]"></script>
+        <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js?v=[REDACTED_HOST]"></script>
+        <script src="/assets/js/app.min.js?v=[REDACTED_HOST]"></script>
+
+        <!-- JS Front -->
+       
+        <script src="/assets/js/custom/nativesearch.js?v=[REDACTED_HOST]"></script>
+        <script src="/assets/js/custom/bignumber.min.js?v=[REDACTED_HOST]"></script>
+        <script type="text/javascript" src="/assets/js/custom/text-highlighter.js?v=[REDACTED_HOST]"></script>
+    <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4b4111eba5ffb36',t:'MTc5MjEyMjI4NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    
+    <script>
+        // INITIALIZATION OF HIGHLIGHT
+        TextHighlight.init();
+        applyNativeBrowserSearch("[data-truncate='address']");
+
+        var tempstr;
+
+        /* ---------------------------------------------
+         * Collapse toggle for "dropdown" buttons
+         * - Expects a button with .js-toggle-diff and data-bs-target="#diffDetailsN"
+         * - Keeps the related <tr> hidden/shown in sync with collapse state
+         * - Updates chevron icon and tooltip text accordingly
+         * --------------------------------------------- */
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.js-toggle-diff').forEach((toggleBtn) => {
+                // --- helpers ---
+                function setTooltip(el, text) {
+                    if (!el) return;
+                    const existing = bootstrap.Tooltip.getInstance(el);
+                    if (existing) existing.dispose();
+                    el.setAttribute('title', text);
+                    new bootstrap.Tooltip(el, { placement: 'top', trigger: 'hover focus', container: 'body' });
+                }
+
+                const chevronIcon = toggleBtn.querySelector('i');
+                const tooltipHost = toggleBtn; // keep tooltip on the button itself
+
+                // Resolve collapse target and the <tr> that contains it (diffDetailsN -> td -> tr)
+                const collapseSelector = toggleBtn.getAttribute('data-bs-target');
+                const collapseEl = document.querySelector(collapseSelector);
+                if (!collapseEl) return;
+
+                const detailRow = collapseEl.closest('tr');
+
+                // --- initial state: align row + tooltip with current collapse state ---
+                const expanded = collapseEl.classList.contains('show');
+                if (detailRow) detailRow.classList.toggle('d-none', !expanded);
+                setTooltip(tooltipHost, expanded ? 'Click to see less' : 'Click to see more');
+
+                // --- keep UI in sync with REAL collapse state ---
+                collapseEl.addEventListener('shown.bs.collapse', () => {
+                    if (detailRow) detailRow.classList.remove('d-none');
+                    if (chevronIcon) {
+                        chevronIcon.classList.add('fa-chevron-up');
+                        chevronIcon.classList.remove('fa-chevron-down');
+                    }
+                    setTooltip(tooltipHost, 'Click to see less');
+                });
+
+                collapseEl.addEventListener('hidden.bs.collapse', () => {
+                    if (detailRow) detailRow.classList.add('d-none');
+                    if (chevronIcon) {
+                        chevronIcon.classList.add('fa-chevron-down');
+                        chevronIcon.classList.remove('fa-chevron-up');
+                    }
+                    setTooltip(tooltipHost, 'Click to see more');
+                });
+
+                // Optional: optimistic icon/tooltip flip on click (collapse events will finalize state)
+                toggleBtn.addEventListener('click', () => {
+                    if (chevronIcon) {
+                        chevronIcon.classList.toggle('fa-chevron-down');
+                        chevronIcon.classList.toggle('fa-chevron-up');
+                        const wantLess = chevronIcon.classList.contains('fa-chevron-up');
+                        setTooltip(tooltipHost, wantLess ? 'Click to see less' : 'Click to see more');
+                    }
+                });
+            });
+        });
+
+
+        /* ---------------------------------------------
+         * Hex / Dec toggles for Storage Tables
+         * - Buttons: .diff-hex / .diff-dec (IDs may be diff-hexN / diff-decN)
+         * - Table body: <tbody id="diffDataN" class="diff-data">
+         * - Mapping priority:
+         *   1) data-diff-target on the button
+         *   2) numeric suffix mapping (diff-hex7 -> #diffData7)
+         *   3) nearest wrapper fallback (.storage-block/.card/.table-responsive)
+         * --------------------------------------------- */
+        $(function () {
+            // ---- helpers ----
+            function getTbodyFor(btn) {
+                // 1) explicit data-diff-target
+                let $tbody = $($(btn).data('diff-target'));
+                if ($tbody && $tbody.length) return $tbody;
+
+                // 2) infer from numeric suffix
+                const m = (btn.id || '').match(/diff-(?:hex|dec)(\d+)$/);
+                if (m) {
+                    $tbody = $('#diffData' + m[1]);
+                    if ($tbody.length) return $tbody;
+                }
+
+                // 3) nearest wrapper fallback
+                return $(btn)
+                    .closest('.storage-block, .card, .table-responsive')
+                    .find('tbody.diff-data, tbody[id^="diffData"]')
+                    .first();
+            }
+
+            // Show only first row (Hex view)
+            function applyHex($tbody) {
+                if (!$tbody || !$tbody.length) return;
+                const $rows = $tbody.children('tr');
+                $rows.addClass('d-none');        // hide all
+                $rows.eq(0).removeClass('d-none'); // show first only
+            }
+
+            // Show all except first row (Dec view)
+            function applyDec($tbody) {
+                if (!$tbody || !$tbody.length) return;
+                const $rows = $tbody.children('tr');
+                $rows.removeClass('d-none');     // show all
+                $rows.eq(0).addClass('d-none');  // hide first only
+            }
+
+            // ---- initial state ----
+            // Default all tables to Dec (server can omit this if it already renders Dec)
+            $('.diff-data').each(function () { applyDec($(this)); });
+
+            // If any Hex pill is active on load, apply Hex to its target
+            $('.diff-hex.active, .diff-hex[aria-selected="true"]').each(function () {
+                applyHex(getTbodyFor(this));
+            });
+
+            // ---- dynamic switching (Bootstrap tab or direct click) ----
+            $(document).on('shown.bs.tab click', '.diff-hex', function () {
+                applyHex(getTbodyFor(this));
+            });
+
+            $(document).on('shown.bs.tab click', '.diff-dec', function () {
+                applyDec(getTbodyFor(this));
+            });
+        });
+
+        function convertValues(newType, elemid, strId, buttonId) {
+            if (newType == 'Text') {
+                document.getElementById(strId + elemid).innerHTML = $.sanitize(hex2asc(document.getElementById(strId + 'ori_' + elemid).innerHTML));
+            } else if (newType == 'Num') {
+                document.getElementById(strId + elemid).innerHTML = hex2decFixed(document.getElementById(strId + 'ori_' + elemid).innerHTML);
+            } else if (newType == 'Addr') {
+                document.getElementById(strId + elemid).innerHTML = hex2addr(document.getElementById(strId + 'ori_' + elemid).innerHTML);
+            } else if (newType == 'Hex') {
+                document.getElementById(strId + elemid).innerHTML = $.sanitize(document.getElementById(strId + 'ori_' + elemid).innerHTML);
+            }
+            document.getElementById(buttonId + elemid).innerHTML = newType;
+        }
+
+        function hex2decFixed(pStr) {
+            tempstr = new BigNumber(pStr, 16)
+            return tempstr.toFixed();
+        }
+
+        function hex2asc(pStr) {
+            tempstr = '';
+            for (b = 0; b < pStr.length; b = b + 2) {
+                tempstr = tempstr + String.fromCharCode(parseInt(pStr.substr(b, 2), 16));
+            }
+            return tempstr;
+        }
+        function hex2dec(pStr) {
+            tempstr = new BigNumber(pStr, 16)
+            return tempstr.toString();
+        }
+        function hex2addr(pStr) {
+            tempstr = pStr.substr(pStr.length - 40)
+            return "<a href='/address/0x" + tempstr + "' target='_parent'>" + "0x" + tempstr + "</a>";
+        }
+
+        (function ($) {
+            $.sanitize = function (val) {
+                var temp = document.createElement('div');
+                temp.textContent = val;
+                return temp.innerHTML;
+
+                //var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '').
+                //    replace(/<[\/\!]*?[^<>]*?>/gi, '').
+                //    replace(/<style[^>]*?>.*?<\/style>/gi, '').
+                //    replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '');
+                //return output;
+            };
+        })(jQuery);
+
+    </script>
+
+<script>
+    $(window).on('load', function () {
+        $('#overlay1').fadeOut();
+        if (window.parent.document.getElementById('loadingStateChangeFrame')) {
+            window.parent.document.getElementById('loadingStateChangeFrame').style.display = 'none';
+            
+        }
+        
+    });
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    var themeMode = localStorage.getItem('theme');
+    if (themeMode === null) {
+        themeMode = 'light'
+    }
+
+    (function () {
+        if (getCookie('displaymode') === 'light' || themeMode === 'light') {
+            document.documentElement.setAttribute('data-bs-theme', 'light');
+        } else if (getCookie('displaymode') === 'dim' || themeMode === 'dim') {
+            document.documentElement.setAttribute('data-bs-theme', 'dim');
+        } else if (getCookie('displaymode') === 'dark' || themeMode === 'dark') {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+        } else if (getCookie('displaymode') === 'auto' || themeMode === 'auto') {
+            document.documentElement.setAttribute('data-bs-theme', getCookie('etherscan_theme'));
+        }
+    })();
+</script>
+
+</html>

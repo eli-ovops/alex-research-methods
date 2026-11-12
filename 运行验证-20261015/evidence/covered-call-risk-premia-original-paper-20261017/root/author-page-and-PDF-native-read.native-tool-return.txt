@@ -1,0 +1,397 @@
+Covered Calls Uncovered (https://www.aqr.com/Insights/Research/Journal-Article/Covered-Calls-Uncovered)
+citeturn697view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.aqr.com/Insights/Research/Journal-Article/Covered-Calls-Uncovered","lineno":null}); Total lines: 112
+L0: There have been recent incidents of individuals and groups falsely claiming to be associated with AQR on social media platforms.
+L1: These imposters have engaged in a variety of unauthorized conduct, including soliciting customers to carry out trading activities with them, impersonating AQR using the genuine names of AQR senior executives or employees to offer investment opportunities, claiming to offer investment training courses that are supposedly provided by AQR or claiming that AQR is backing certain initial coin offerings or is otherwise engaged in crypto related trading activity.
+L2: There have also been fake websites and mobile applications that claim to be AQR (or associated with AQR) when in fact they are not. These are scams and not authorized by AQR in any way.
+L3: Please be aware that AQR does not engage in any investment activities, provide training or financial services, or conduct other regulated activities through social media platforms or messaging apps. Similarly, AQR, its executives and employees do  not contact prospects, clients or members of the public via social media platforms or messaging apps such as WhatsApp, Discord and Telegram to offer investment opportunities.
+L4: AQR does not offer direct investments in cryptocurrencies or other digital assets, it does not provide a trading platform to members of the public, it does not have a mobile app, and it does not offer investment training courses to the public.
+L5: AQR and its partners, employees, directors, officers, advisors, successors, and agents are not responsible for any conduct by unauthorized parties and channels, nor are they responsible for the services or information provided by such unauthorized parties and channels. If you have any questions or wish to ascertain whether you are communicating with an authorized representative of AQR, please contact us at cite0†https://www.aqr.com/Contact-Us .
+L6: If you believe that you or someone you know has been a victim of fraud, please report the matter to your local law enforcement or other relevant authorities. For India residents, you may lodge a report at the national cybercrime reporting portal (https://cybercrime.gov.in).
+L7: MyAQR
+L8: 
+L9: [Input: Search any topic]
+L10: 
+L11:   *   * Education
+L12:     * cite1†Research L13:     * cite2†Cliff's Perspectives L14:     * cite3†Alternative Thinking L15:     * cite4†Tax Matters L16:     * cite5†Data Sets L17:     * cite6†Quick Takes L18:     * cite7†Learning Center L19:     * cite8†Subscribe L20:   * What We Do
+L21:     * cite9†Our Approach L22:     * cite10†Alternatives L23:     * cite11†Equities L24:     * cite12†Tax-Aware L25: 
+L26: cite13†US Mutual Funds†funds.aqr.com L27: 
+L28: cite14†Australia Funds†australia.aqr.com L29: 
+L30: cite15†Flex†flex.aqr.com L31: 
+L32: cite16†UCITS Funds†ucits.aqr.com L33: cite13†US Mutual Funds†funds.aqr.com L34: 
+L35: cite14†Australia Funds†australia.aqr.com L36: 
+L37: cite15†Flex†flex.aqr.com L38: 
+L39: cite16†UCITS Funds†ucits.aqr.com L40: 
+L41:   * Our Firm
+L42:     * cite17†About Us L43:     * cite18†Leadership L44:     * cite19†Careers L45:     * cite0†Contact Us L46:   * [Input: Search any topic]
+L47: 
+L48:   * MyAQR
+L49:     * cite20†Log In cite21†Register L50: 
+L51:     *     * cite0†Contact Us L52: 
+L53: Equities
+L54: ## Covered Calls Uncovered
+L55: 
+L56: November 30, 2015 - Roni Israelov
+L57: 
+L58: Topics - cite22†Equities cite23†Market Risk and Efficiency cite24†Volatility L59: 
+L60: ${ numberSection } ${ text }
+L61: 
+L62: Covered Calls Uncovered
+L63: Many investors seek to protect their portfolios by purchasing equity index options. As a result, options tend to include a risk premium as a form of compensation to option sellers. Covered calls, which are short options, collect this volatility risk premium in addition to the equity risk premium earned from their long equity exposure. Because of option convexity, covered calls also embed active equity exposure that behaves like a reversal strategy.
+L64: The authors contend that covered calls are rarely considered in terms of their risk exposures. In this paper, they introduce a novel performance attribution methodology that decomposes the strategy’s return into its passive and active equity and short volatility exposures.
+L65: Not only does the performance attribution of their samples allow covered call investors to better understand the strategy’s characteristics, but it also allows portfolio managers to assess the risk and return impact of portfolio construction decisions, such as the call option’s strike and maturity, so that they may improve their strategy.
+L66: As an example, the paper proposes a risk-managed covered call to hedge away the uncompensated active equity exposure, which the authors say is a significant contributor to the covered call’s risk. They contend that their proposed strategy has similar expected returns to the original covered call, but with lower risk, lower downside beta, and a higher Sharpe ratio.
+L67: They added that while the motivation for covered calls is often confusing and muddled by a number of myths, the motivation for the risk-managed covered call is clear: earn the equity and volatility risk premium by constructing a portfolio with long equity and short volatility exposure.
+L68: This document is not intended to, and does not relate specifically to any investment strategy or product that AQR offers. It is being provided merely to provide a framework to assist in the implementation of an investor’s own analysis and an investor’s own view on the topic discussed herein.
+L69: This document has been provided to you solely for information purposes and does not constitute an offer or solicitation of an offer or any advice or recommendation to purchase any securities or other financial instruments and may not be construed as such.
+L70: The factual information set forth herein has been obtained or derived from sources believed by the author and AQR Capital Management, LLC (“AQR”) to be reliable but it is not necessarily all-inclusive and is not guaranteed as to its accuracy and is not to be regarded as a representation or warranty, express or implied, as to the information’s accuracy or completeness, nor should the attached information serve as the basis of any investment decision.
+L71: This document is not to be reproduced or redistributed to any other person. The information set forth herein has been provided to you as secondary information and should not be the primary source for any investment or allocation decision. Past performance is not a guarantee of future performance. Diversification does not eliminate the risk of experiencing investment losses.
+L72: This material is not research and should not be treated as research. This paper does not represent valuation judgments with respect to any financial instrument, issuer, security or sector that may be described or referenced herein and does not represent a formal or official view of AQR. The views expressed reflect the current views as of the date hereof and neither the author nor AQR undertakes to advise you of any changes in the views expressed herein.
+L73: The information contained herein is only as current as of the date indicated, and may be superseded by subsequent market events or for other reasons. Charts and graphs provided herein are for illustrative purposes only. The information in this presentation has been developed internally and/or obtained from sources believed to be reliable; however, neither AQR nor the author guarantees the accuracy, adequacy or completeness of such information.
+L74: Nothing contained herein constitutes investment, legal, tax or other advice nor is it to be relied on in making an investment or other decision. There can be no assurance that an investment strategy will be successful. Historic market trends are not reliable indicators of actual future market behavior or future performance of any particular investment which may differ materially, and should not be relied upon as such. Diversification does not eliminate the risk of experiencing investment losses.
+L75: The information in this paper may contain projections or other forward-looking statements regarding future events, targets, forecasts or expectations regarding the strategies described herein, and is only current as of the date indicated. There is no assurance that such events or targets will be achieved, and may be significantly different from that shown here.
+L76: The information in this document, including statements concerning financial market trends, is based on current market conditions, which will fluctuate and may be superseded by subsequent market events or for other reasons.
+L77: 
+L78: 
+L79:   * ##### Education
+L80: 
+L81:     * cite1†Research L82:     * cite2†Cliff's Perspectives L83:     * cite3†Alternative Thinking L84:     * cite4†Tax Matters L85:     * cite5†Data Sets L86:     * cite6†Quick Takes L87:     * cite7†Learning Center L88:     * cite8†Subscribe L89:   * ##### What We Do
+L90: 
+L91:     * cite9†Our Approach L92:     * cite10†Alternatives L93:     * cite11†Equities L94:     * cite12†Tax-Aware L95:   * ##### Our Firm
+L96: 
+L97:     * cite17†About Us L98:     * cite18†Leadership L99:     * cite19†Careers L100:     * cite25†News L101:     * cite0†Contact Us L102: cite26†Privacy Policy cite27†Social Media Disclaimers cite28†Terms of Use cite29†Disability Accommodation for Applicants cite30†AQR Form CRS cite31†AQR Flex Form CRS cite32†Equal Opportunity Employer ©2026 AQR Capital Management, LLC. All rights reserved.
+L103: ### You are now leaving AQR.com
+L104: AQR Capital Management, LLC, (“AQR”) provides links to third-party websites only as a convenience, and the inclusion of such links does not imply any endorsement, approval, investigation, verification or monitoring by us of any content or information contained within or accessible from the linked sites. If you choose to visit the linked sites, you do so at your own risk, and you will be subject to such sites' terms of use and privacy policies, over which AQR.com has no control.
+L105: In no event will AQR be responsible for any information or content within the linked sites or your use of the linked sites.
+L106: Cancel Proceed
+L107: ### You are now leaving AQR.com
+L108: 
+L109: You are about to leave AQR.com and are being re-directed to the {siteName}. Please note that {siteName} site may be subject to rules and regulations that may differ significantly from those to which the AQR website is subject and may not be appropriate for use by residents in all jurisdictions. Your access to and use of the {siteName} site will be subject to the applicable Terms of Use posted on the site.
+L110: 
+L111: Cancel Proceed
+--------------------------------------------------------------------------------
+ (https://www.aqr.com/-/media/AQR/Documents/Insights/Journal-Article/Covered-Calls-Uncovered.pdf)
+citeturn697view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 14; Source: open({"ref_id":"https://www.aqr.com/-/media/AQR/Documents/Insights/Journal-Article/Covered-Calls-Uncovered.pdf","lineno":null}); Total lines: 1048
+L0@P0: 44 www.cfapubs.org © 2015 CFA Institute. All rights reserved.
+L1@P0: Financial Analysts Journal
+L2@P0: Volume 71 · Number 6
+L3@P0: ©2015 CFA Institute
+L4@P0: Covered Calls Uncovered
+L5@P0: Roni Israelov and Lars N. Nielsen
+L6@P0: Typical covered call strategies collect the equity and volatility risk premiums but also embed exposure to a naive
+L7@P0: equity reversal strategy that is uncompensated. This article presents a novel risk and performance attribution methodology that deconstructs the strategy into these three exposures. Historically, the equity exposure
+L8@P0: contributed most of the risk and return. The short volatility exposure realized a Sharpe ratio of nearly 1.0 but
+L9@P0: contributed only 10% of the risk. The equity reversal exposure contributed approximately 25% of the risk but
+L10@P0: provided little return in exchange. The authors propose a risk-managed covered call strategy that eliminates
+L11@P0: the uncompensated equity reversal exposure. This modified covered call strategy has a superior Sharpe ratio,
+L12@P0: reduced volatility, and reduced downside equity beta.
+L13@P0: Equity index covered calls are the most easily
+L14@P0: accessible source of the volatility risk premium for most investors.1 The volatility risk
+L15@P0: premium, which is absent from most investors’ portfolios, has had more than double the risk-adjusted
+L16@P0: returns (Sharpe ratio) of the equity risk premium,
+L17@P0: which is the dominant source of return for most
+L18@P0: investors. By providing the equity and volatility
+L19@P0: risk premiums, equity index covered calls’ returns
+L20@P0: have been historically attractive, nearly matching the
+L21@P0: returns of their underlying indexes with significantly
+L22@P0: lower volatility.2
+L23@P0: Options are a form of financial insurance, and
+L24@P0: the volatility risk premium is compensation paid by
+L25@P0: option buyers to the option sellers who underwrite
+L26@P0: this insurance. Bakshi and Kapadia (2003) analyzed
+L27@P0: delta-hedged option returns to show that equity
+L28@P0: index options include a volatility risk premium.
+L29@P0: Bollen and Whaley (2004) and Gârleanu, Pedersen,
+L30@P0: and Poteshman (2009) showed how option demand
+L31@P0: by natural buyers can lead to a risk premium.
+L32@P0: Litterman (2011) suggested that long-term investors, such as pensions and endowments, should be
+L33@P0: natural providers of financial insurance and sellers
+L34@P0: of options.
+L35@P0: Yet, many investors remain skeptical of covered
+L36@P0: call strategies. Although deceptively simple—long
+L37@P0: equity and short a call option—covered calls are not
+L38@P0: well understood. Israelov and Nielsen (2014) identified and dispelled eight commonly circulated myths
+L39@P0: about covered calls. These myths sound plausible;
+L40@P0: otherwise, they would not have such longevity. But
+L41@P0: they can be a problem if they affect portfolio construction decisions. The securities overwritten and
+L42@P0: the strikes and maturities of the call options that
+L43@P0: are sold should be explicitly selected to achieve the
+L44@P0: portfolio’s allocation to the equity and volatility risk
+L45@P0: premiums without taking unnecessary risk. Price
+L46@P0: targets, downside protection, and income generation
+L47@P0: are diversions.
+L48@P0: One source of confusion on covered calls may be
+L49@P0: due to the opacity of the strategy’s risk exposures.
+L50@P0: Our article’s first contribution is a novel performance
+L51@P0: attribution methodology for portfolios holding
+L52@P0: options, such as the covered call strategy. We demonstrate how to decompose the portfolio return into
+L53@P0: three distinct risk exposures: passive equity, equity
+L54@P0: market timing, and short volatility.
+L55@P0: Our performance attribution methodology provides investment managers with a tool to effectively
+L56@P0: and transparently communicate their strategy’s
+L57@P0: performance to their investors and allows investors
+L58@P0: to properly place the covered call’s risk exposures
+L59@P0: and returns in the context of their overall portfolios.
+L60@P0: Further, it provides a framework by which portfolio
+L61@P0: managers can evaluate the impact of strike, maturity,
+L62@P0: underlying security selection, risk management, and
+L63@P0: Roni Israelov is vice president and Lars N. Nielsen is
+L64@P0: principal at AQR Capital Management, Greenwich,
+L65@P0: Connecticut.
+L66@P0: Editor’s note: Roni Israelov and Lars N. Nielson manage option portfolios and covered calls at AQR Capital
+L67@P0: Management and may have a commercial interest in
+L68@P0: the topics discussed in this article.
+L69@P0: Editor’s note: This article was reviewed and accepted
+L70@P0: by Executive Editor Robert Litterman.
+L71@P0: Authors’ note: The views and opinions expressed herein
+L72@P0: are those of the authors and do not necessarily reflect
+L73@P0: the views of AQR Capital Management, LLC (“AQR”),
+L74@P0: its affiliates, or its employees, nor do they constitute an
+L75@P0: offer, a solicitation of an offer, or any advice or recommendation to purchase any securities or other financial
+L76@P0-1: instruments by AQR.Covered Calls Uncovered
+L77@P1: November/December 2015 www.cfapubs.org 45
+L78@P1: leverage on their strategy’s risk and returns. Proper
+L79@P1: performance attribution facilitates improved portfolio construction.
+L80@P1: For example, selling at-the-money options is
+L81@P1: expected to provide the highest exposure to short
+L82@P1: volatility. Covered call strategies that sell low-strike
+L83@P1: options have less equity exposure than those that
+L84@P1: sell high-strike options. The risk-adjusted performance of short volatility may be higher for low-strike
+L85@P1: options because of the implied volatility smile that
+L86@P1: is in part due to demand for portfolio protection.
+L87@P1: By attributing the covered call’s performance to its
+L88@P1: underlying exposures, a portfolio may be explicitly
+L89@P1: constructed to achieve specific objectives.
+L90@P1: Although we use our performance attribution to better understand covered call strategies,
+L91@P1: it may be more broadly applied to any portfolio
+L92@P1: that includes options. The returns of these portfolios
+L93@P1: may be attributed to their passive and time-varying
+L94@P1: equity exposures and to their volatility exposure.
+L95@P1: For example, protected strategies that are long an
+L96@P1: index and long a protective put option typically
+L97@P1: have significantly lower returns than their underlying index. Our performance attribution would
+L98@P1: indicate the long volatility’s contribution to the
+L99@P1: strategy’s performance degradation and how much
+L100@P1: less equity risk premium has been earned owing
+L101@P1: to the put option’s average negative equity exposure. In a similar manner, Israelov and Klein (2015)
+L102@P1: applied our performance attribution to explain the
+L103@P1: risk and return characteristics of a more complex
+L104@P1: option portfolio—an equity index collar strategy
+L105@P1: that is long an index, short a call option, and long
+L106@P1: a protective put.
+L107@P1: ■ Discussion of findings. We demonstrate our
+L108@P1: proposed performance attribution by analyzing
+L109@P1: and comparing two covered call strategies. The
+L110@P1: first strategy mimics the CBOE S&P 500 BuyWrite
+L111@P1: Index (BXM), selling one-month at-the-money
+L112@P1: call options on option expiration dates. The second strategy mimics the CBOE S&P 500 2% OTM
+L113@P1: BuyWrite Index (BXY), selling one-month 2% outof-the-money call options on option expiration
+L114@P1: dates. Our performance attribution shows that
+L115@P1: passive equity is the dominant exposure for both
+L116@P1: covered call strategies. Short volatility contributes
+L117@P1: less than 10% of the risk but, with a Sharpe ratio
+L118@P1: near 1.0, adds approximately 2% annualized return
+L119@P1: to the covered call strategies.
+L120@P1: Option-savvy market participants, such as
+L121@P1: market makers, are well aware that options include
+L122@P1: market timing, an active equity exposure. In fact,
+L123@P1: they often use a delta-hedging program specifically
+L124@P1: designed to reduce the risk arising from this dynamic
+L125@P1: exposure. The covered call benchmark (CBOE S&P
+L126@P1: 500 BuyWrite Index) and most covered call funds,
+L127@P1: however, do not hedge the time-varying equity exposure arising from option convexity. Further, the risk
+L128@P1: and return contribution of an unhedged short option
+L129@P1: position’s dynamic equity exposure is by and large
+L130@P1: not reported by those who manage to those who
+L131@P1: invest in covered call strategies and is unaddressed
+L132@P1: in the covered call literature.
+L133@P1: We use our performance attribution to document that market timing is responsible for about
+L134@P1: one-quarter of the at-the-money covered call’s risk.
+L135@P1: The timing bet is smallest immediately after option
+L136@P1: expiration and largest just prior to option expiration.
+L137@P1: In fact, on the day before the call option expires, the
+L138@P1: equity timing position provides on average nearly
+L139@P1: the same risk as the passive equity exposure. We
+L140@P1: further show that covered call investors have not
+L141@P1: been compensated for bearing this risk. Because the
+L142@P1: embedded market timing is hedgeable by trading
+L143@P1: the underlying equity, covered call investors do
+L144@P1: not need to take that bet to earn the volatility risk
+L145@P1: premium. In other words, by shorting an option,
+L146@P1: covered calls include a market-timing exposure
+L147@P1: that bets on equity reversals whose risk is material, uncompensated, and unnecessary for earning
+L148@P1: the volatility risk premium.
+L149@P1: Having identified the covered call’s active
+L150@P1: equity exposure as an uncompensated contributor
+L151@P1: to risk, our final contribution is the analysis of a riskmanaged covered call strategy that hedges away
+L152@P1: the identified dynamic equity exposure. On each
+L153@P1: day, the covered call’s active equity exposure may
+L154@P1: be measured by computing the delta of the strategy’s
+L155@P1: call option. The strategy trades an offsetting amount
+L156@P1: of the S&P 500 Index so that the covered call’s equity
+L157@P1: exposure remains constant. This risk management
+L158@P1: exercise mimics the delta-hedging approach taken
+L159@P1: by volatility desks. In so doing, the risk-managed
+L160@P1: covered call achieves higher risk-adjusted returns
+L161@P1: than does the traditional covered call because it
+L162@P1: continues to collect the same amount of equity and
+L163@P1: volatility risk premiums but is no longer exposed to
+L164@P1: equity market-timing risk. The risk-managed strategy improved the covered call Sharpe ratio from 0.37
+L165@P1: to 0.52 by reducing its annualized volatility from
+L166@P1: 11.4% to 9.2%.
+L167@P1: The risk-managed covered call has an additional benefit beyond improving risk-adjusted
+L168@P1: returns. The strategy’s goal, design, and execution are clear, and they transparently map to its
+L169@P1: performance. The strategy seeks to collect equity
+L170@P1: and volatility risk premiums and does so by being
+L171@P1: long equity and short volatility. We may explicitly
+L172@P1: construct a portfolio by choosing how much risk
+L173@P1: to allocate to the two desired exposures and subsequently measure their resulting contributions to
+L174@P1-2: the strategy’s performance.Financial Analysts Journal
+L175@P2: 46 www.cfapubs.org © 2015 CFA Institute. All rights reserved.
+L176@P2: Covered Call Performance
+L177@P2: Attribution
+L178@P2: A covered call is a combination of a long position
+L179@P2: in a security and a short position in a call option
+L180@P2: on that security. The combined position caps the
+L181@P2: investor’s upside on the underlying security at
+L182@P2: the option’s strike price in exchange for the option
+L183@P2: premium.
+L184@P2: Figure 1 graphically constructs an at-themoney covered call payoff diagram when the call
+L185@P2: option premium is $25 and the current asset price
+L186@P2: is $100. We may take the long equity exposure and
+L187@P2: split it in half. Panel A depicts a portfolio that owns
+L188@P2: $50 of equity and $50 of cash. Panel B depicts a
+L189@P2: portfolio that is short an at-the-money call option,
+L190@P2: owns $50 of equity, and is short $50 cash to finance
+L191@P2: the equity position.
+L192@P2: Figure 1 introduces the foundation for our
+L193@P2: performance attribution. By splitting the positions
+L194@P2: in such a manner, we can see two distinct components. The first component provides the long-term
+L195@P2: strategic long equity allocation. In our example, we
+L196@P2: Figure 1. Covered Call Payoff Diagram
+L197@P2: 0
+L198@P2: 0
+L199@P2: Payoff ($)
+L200@P2: A. Long Half Equity and Long Half Cash
+L201@P2: 200
+L202@P2: 175
+L203@P2: 150
+L204@P2: 125
+L205@P2: 100
+L206@P2: 25
+L207@P2: 75
+L208@P2: 50
+L209@P2: 0
+L210@P2: 0 25 50 75 100 125 150 175 200
+L211@P2: Asset Price ($)
+L212@P2: Payoff ($)
+L213@P2: B. Short Call Option, Long Half Equity, and Short Half Cash
+L214@P2: 50
+L215@P2: 25
+L216@P2: –25
+L217@P2: –50
+L218@P2: –125
+L219@P2: –75
+L220@P2: –100
+L221@P2: –150
+L222@P2: 0 25 50 75 100 125 150 175 200
+L223@P2: Asset Price ($)
+L224@P2: Payoff ($)
+L225@P2: C. Covered Call
+L226@P2: 150
+L227@P2: 125
+L228@P2: 100
+L229@P2: 75
+L230@P2: 50
+L231@P2: –25
+L232@P2: 25
+L233@P2: –50
+L234@P2: 0 25 50 75 100 125 150 175 200
+L235@P2-3: Asset Price ($)Covered Calls Uncovered
+L236@P3: November/December 2015 www.cfapubs.org 47
+L237@P3: have a 50% passive equity allocation. The second
+L238@P3: component provides the long-term strategic short
+L239@P3: volatility allocation. The second component, however, provides the covered call with a third exposure:
+L240@P3: time-varying equity exposure that is zero on average.
+L241@P3: Although Panel B shows the payoff at expiration, the
+L242@P3: exposure’s profile has a similar shape on all the days
+L243@P3: leading up to the option’s expiration. It has a positive slope when the call option is out of the money, a
+L244@P3: negative slope when the call option is in the money,
+L245@P3: and approximately no exposure to the stock when
+L246@P3: the call option is at the money.
+L247@P3: We may rearrange the covered call definition to
+L248@P3: define the three economically distinct components:
+L249@P3: Covered callEquity Call
+L250@P3: Initial call deltaEquity Pass
+L251@P3: =−
+L252@P3: =− () 1i →veequity
+L253@P3: Call Call deltaEquity Shortvolatility
+L254@P3: Initia
+L255@P3: −− () × →
+L256@P3: + () l call deltaC− all deltaEquity → Dynamicequity.
+L257@P3: The passive equity exposure provides the strategy with an equity risk premium and represents a
+L258@P3: long-term strategic allocation to equity markets. The
+L259@P3: dynamic equity exposure is effectively a markettiming strategy. It is close to zero on average and
+L260@P3: may be viewed as a tactical equity allocation around
+L261@P3: the long-term strategic passive exposure. Unless it
+L262@P3: correlates with (i.e., forecasts) future equity returns,
+L263@P3: it should not contribute to the strategy’s average
+L264@P3: returns. Under efficient markets, the expected return
+L265@P3: of this market-timing component is zero.
+L266@P3: Short volatility provides the strategy with a volatility risk premium. Arguably, it too may be split into
+L267@P3: passive (strategic) and active (tactical) components.
+L268@P3: Its exposure to realized volatility (gamma) fluctuates over time. Gamma is higher when the option is
+L269@P3: close to the money and close to its expiration. Short
+L270@P3: volatility’s exposure to changes in implied volatility
+L271@P3: (vega) also fluctuates over time. Vega is higher when
+L272@P3: the option is close to the money and distant from its
+L273@P3: expiration. In fact, short volatility can be split across
+L274@P3: other related dimensions as well. The option’s maturity represents a calendar bet, and the option’s strike
+L275@P3: price represents a skew bet. Decomposing across all
+L276@P3: these dimensions may be tractable if there is a welldefined passive short volatility asset. Unfortunately,
+L277@P3: there is not, and we do not attempt to define one
+L278@P3: in this article. For this reason, and to maintain parsimony in our performance attribution, we do not
+L279@P3: further decompose short volatility across any of the
+L280@P3: previously identified dimensions.
+L281@P3: An alternative performance attribution could
+L282@P3: regress covered call returns on the S&P 500 Index
+L283@P3: return and an S&P 500 variance swap return. The
+L284@P3: regression framework is commonly used to estimate
+L285@P3: return exposures to known factors. Rolling estimation of factor coefficients provides information on
+L286@P3: exposure dynamics. We believe our attribution methodology is more appropriate for a covered call for
+L287@P3: the following reasons. First, we know the covered
+L288@P3: call’s constituent assets, so we may use a model to
+L289@P3: estimate equity exposure at a point in time rather
+L290@P3: than statistically estimate an average exposure over
+L291@P3: a rolling period. Option convexity can lead to rapid
+L292@P3: changes in equity exposure, and the regression will
+L293@P3: not be able to fully capture these changes and thus
+L294@P3: will underestimate the equity exposure dynamics. Second, there is no well-defined pure passive
+L295@P3: short volatility return series. A variance swap is one
+L296@P3: method to obtain short volatility exposure. Delta
+L297@P3: hedging a short option is another method. Shorting
+L298@P3: CBOE Volatility Index futures is a third, and so on.
+L299@P3: The delta-hedged option has exposure to a variance
+L300@P3: swap but with basis risk. That basis risk would be an
+L301@P3: additional term that complicates the decomposition.
+L302@P3: Our performance attribution mechanically decomposes the covered call’s return using a model into
+L303@P3: passive equity, the delta-hedged option variant of
+L304@P3: short volatility, and equity market timing.
+L305@P3: To demonstrate our attribution methodology
+L306@P3: in practice, we decompose a simple overwriting
+L307@P3: strategy, which mimics the industry standard covered call benchmark—the CBOE S&P 500 BuyWrite
+L308@P3: Index—into these three components. This strategy
+L309@P3: owns the S&P 500 Index and sells an at-the-money
+L310@P3: call monthly index option on option expiration dates.
+L311@P3: Specifically, its excess return is computed as
+L312@P3: r spxdiv call
+L313@P3: spxcall r totalt
+L314@P3: tt t
+L315@P3: tt ,, cash t = . +−
+L316@P3: − −−
+L317@P3: −− 11
+L318@P3: 1
+L319@P3: Mimicking the BXM, our overwriting strategy
+L320@P3: effectively induces a mild time-varying leverage
+L321@P3: effect, caused by the denominator being spxt–1 –
+L322@P3: callt–1 instead of spxt–1. On the close of any given day,
+L323@P3: the strategy’s leverage can, therefore, be modeled as

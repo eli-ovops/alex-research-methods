@@ -1,0 +1,1122 @@
+Most relevant | Content (https://dune.com/discover/content/relevant?q=liquity&resource-type=queries)
+citeturn499search0 [wordlim: 200] Crawled: 10 months ago;  | Liquity Daily Liquidations@yuliyan 12 days ago  | 0 | TMP - Liquity v2 - Liquidity Pools@liquity 4 months ago  | 0
+
+ | remove liquity on caviar@thj 3 years ago  | 6
+ | Liquity TCR vs. ETH price@deleted 2 years ago
+
+  * #liquity
+  * #lusd
+ | 1
+ | Liquity Daily Liquidations@yuliyan 12 days ago  | 0
+ | TMP - Liquity v2 - Liquidity Pools@liquity 4 months ago  | 0
+ | Liquity v2 - Quarterly Protocol Revenue@liquity 4 months ago  | 0
+ | Total Liquity V2 + Friendly Forks TVL@liquity 4 months ago  | 0
+ | Liquity v2 - Friendly Forks@liquity 4 months ago  | 0
+ | Liquity v2 - Friendly Forks List@liquity 1 day ago  | 0
+ | Liquity v2 TVL@liquity 4 months ago  | 0
+ | Liquity Governance BOLD Balance Over Time@liquity 5 months ago  | 0
+ | Liquity Depositors - User Daily Balances@liquity 6 months ago  | 0
+ | Liquity Depositors - Balance at Events@liquity 2 months ago  | 0
+ | Liquity - Derivatives - Ordered Events@liquity 3 months ago  | 0
+ | Liquity - SP Depositors - Ordered Events@liquity 6 months ago  | 0
+ | Liquity v2 - Liquidity Pools@liquity 7 days ago  | 0
+ | Liquity Leaderboard Exclusion List@liquity 4 months ago  | 0
+ | Liquity V1 - Where is my LUSD?@zeebuofficial 6 months ago
+
+  * #liquity
+  * #lusd
+ | 0
+ | Liquity YT-sBOLD, sBOLD & Staked yBOLD holders@liquity 6 months ago  | 0
+ | Liquity Depositors@liquity 4 months ago  | 0
+ | Liquity Depositors (old)@liquity 6 months ago  | 0--------------------------------------------------------------------------------
+DeFi Explore Aave | Aave V3 Position Tracker (https://defiexplore.com/aavev3/positions/core/0x372cae7fa19b81a9786a9081704ea1e2dad576b7)
+citeturn499search1 [wordlim: 200] Crawled: 2 weeks ago; Aave V4 Spark Maker (Sky)Liquity V2 Liquity V1 ... Thanks to separate liquidation thresholds in , liquidations happen beyond the max borrow threshold. ... Export CSV
+
+DeFi ExploreAave v3
+
+Aave V4SparkMaker (Sky)Liquity V2Liquity V1
+
+Core
+
+Prime
+
+Arbitrum
+
+OP
+
+Base
+
+Linea
+
+Plasma
+
+[Button: Market info][Button: Positions][Button: Feed]
+
+CorePositions/
+
+0x372c...76b7
+
+Overview
+
+Ratio:
+
+Collateral
+
+Safety
+
+Safety ratio
+
+The current overall health of your position, inversely proportional to your borrow power used. Thanks to separate liquidation thresholds in , liquidations happen beyond the max borrow threshold.
+
+Minimum ratio:100.00%
+
+Liquidation ratio:0%
+
+Health
+
+Supplying
+
+Borrowing
+
+Balance:
+
+Net APY:
+
+[Button: Details]Automation Rewards
+
+E-Mode:Regular
+
+Liquidation price:
+
+Borrow power used:
+
+Left to borrow:
+
+Is this your position?
+
+Learn moreManage via DeFi Saver
+
+Position History
+
+Export CSV
+
+Loading...--------------------------------------------------------------------------------
+Most relevant | Dune (https://dune.com/discover/content/relevant?q=blockchain%3A%27BOB%27&resource-type=queries)
+citeturn499search2 [wordlim: 200] Crawled: 6 months ago;  | V2 User Leaderboard@liquity 3 months ago ...  | Liquidations@euler_labs_team 2 months ago  | 2
+
+  * Discover
+
+  *   * Docs
+  * Pricing
+  *   *   *   *   * # Discover
+
+
+[Input: Search...]
+
+ | Blockchain metrics@dune 3 days ago  | 60
+ | blockchain freshness@dune 3 days ago  | 8
+ | EVM chains on Dune@dune 1 year ago  | 7
+ | DTF Market Caps (Aggregate on Base)@reserve-protocol 6 months ago  | 3
+ | Narrative Volumes@jkruy26 3 years ago  | 3
+ | debank@olena1 5 months ago  | 3
+ | V2 User Leaderboard@liquity 3 months ago
+
+  * #bold
+  * #liquity
+  * #stablecoin
+ | 2
+ | euler research@vaitar 1 year ago  | 2
+ | Liquidations@euler_labs_team 2 months ago  | 2
+ | SolvBTC TVL@picnicmou 1 year ago  | 2
+ | CCIP Stats Combined Incremental - All Chains@imwill 1 month ago
+
+  * #ccip_db
+ | 1
+ | onramp_registry_all@imwill 1 month ago
+
+  * #ccip_db
+ | 1
+ | Query 6: LIFI Time to Second Transaction (Activation Speed)@itsadeelama 1 month ago  | 1
+ | Comparison of Different Chains@emanraz 2 months ago  | 1
+ | V2 User Leaderboard - Address@sepe58 2 months ago
+
+  * #bold
+  * #liquity
+  * #stablecoin
+ | 1
+ | Blockchain metrics@michaelenriquez7474444_____ 25 days ago  | 1
+ | LP wallet entries and exits on Uniswap v3@nhkthelhr 3 months ago  | 1
+ | for check@nhkthelhr 3 months ago  | 1
+ | Net liquidity change through mints and burns in Uniswap v3 in the last 10 days@nhkthelhr 3 months ago  | 1
+ | Counters for Dashboard #1@nhkthelhr 3 months ago  | 1--------------------------------------------------------------------------------
+DeFi Explore Aave | Aave V3 Position Tracker (https://defiexplore.com/aavev3/positions/lido/0xbcaf70ef342378755e82c9f374225604f04a36e3)
+citeturn499search3 [wordlim: 200] Crawled: last month; Aave V4 Spark Maker (Sky)Liquity V2 Liquity V1 ... Thanks to separate liquidation thresholds in , liquidations happen beyond the max borrow threshold. ... Export CSV
+
+DeFi ExploreAave v3
+
+Aave V4SparkMaker (Sky)Liquity V2Liquity V1
+
+* * *
+
+[Button: Market info][Button: Positions][Button: Feed]
+
+PrimePositions/
+
+0xbcaf...36e3
+
+Overview
+
+Ratio:
+
+Collateral
+
+Safety
+
+Safety ratio
+
+The current overall health of your position, inversely proportional to your borrow power used. Thanks to separate liquidation thresholds in , liquidations happen beyond the max borrow threshold.
+
+Minimum ratio:100.00%
+
+Liquidation ratio:0%
+
+Health
+
+Supplying
+
+Borrowing
+
+Balance:
+
+Net APY:
+
+[Button: Details]Automation Rewards
+
+E-Mode:Regular
+
+Liquidation price:
+
+Borrow power used:
+
+Left to borrow:
+
+Is this your position?
+
+Position History
+
+Export CSV
+
+Loading...
+
+Supported by--------------------------------------------------------------------------------
+DeFi Explore Aave | Aave V3 Position Tracker (https://defiexplore.com/aavev3/positions/arbi/0xf61ae36433263c61138d334197769e155307f987)
+citeturn499search4 [wordlim: 200] Crawled: 5 days ago; Aave V4 Spark Maker (Sky)Liquity V2 Liquity V1 ... Thanks to separate liquidation thresholds in , liquidations happen beyond the max borrow threshold. ... Export CSV
+
+DeFi ExploreAave v3
+
+Aave V4SparkMaker (Sky)Liquity V2Liquity V1
+
+[Button: Market info][Button: Positions][Button: Feed]
+
+ArbitrumPositions/
+
+0xf61a...f987
+
+Overview
+
+Ratio:
+
+Collateral
+
+Safety
+
+Safety ratio
+
+The current overall health of your position, inversely proportional to your borrow power used. Thanks to separate liquidation thresholds in , liquidations happen beyond the max borrow threshold.
+
+Minimum ratio:100.00%
+
+Liquidation ratio:0%
+
+Health
+
+Supplying
+
+Borrowing
+
+Balance:
+
+Net APY:
+
+[Button: Details]Automation Rewards
+
+E-Mode:Regular
+
+Liquidation price:
+
+Borrow power used:
+
+Left to borrow:
+
+Is this your position?
+
+Learn moreManage via DeFi Saver
+
+Position History
+
+Export CSV
+
+Loading...--------------------------------------------------------------------------------
+Forks | Liquity V2 (https://www.liquity.org/forks)
+citeturn499search5 [wordlim: 200] Crawled: last week; Explore all forks and opportunities on Dune
+
+# Forks
+
+Explore the Liquity V2 friendly fork ecosystem
+
+Friendly Fork Ecosystem
+
+Friendly Forks take the Liquity code base and deploy their own native stablecoin for their ecosystem. More than 15 teams have signed licenses and will be rewarding BOLD users
+
+Felix
+
+Hyperliquid
+
+Live
+
+Image
+
+Quill
+
+Scroll
+
+Live
+
+Image
+
+Orki
+
+Swellchain
+
+Live
+
+Image
+
+AsymmetryFi
+
+Ethereum
+
+Live
+
+Image
+
+Nerite
+
+Arbitrum
+
+Live
+
+Image
+
+Ebisu
+
+Ethereum, Plasma
+
+Live
+
+Image
+
+DeFi Dollar
+
+Ethereum
+
+Live
+
+Image
+
+Aesyx
+
+Avalanche
+
+Live
+
+Image
+
+Soneta
+
+Sonic Chain
+
+Live
+
+Image
+
+Mustang
+
+Saga EVM
+
+Live
+
+Image
+
+Ēnosys
+
+Flare Network
+
+Live
+
+Image
+
+Beraborrow
+
+Berachain
+
+Q4
+
+Image
+
+Alpen
+
+ZK + Bitcoin
+
+Q4
+
+Image
+
+Linea
+
+Hyperliquid
+
+Planned
+
+Image
+
+Unichain
+
+Hyperliquid
+
+Planned
+
+Image
+
+Polygon
+
+Hyperliquid
+
+Planned
+
+Image
+
+Sei
+
+Hyperliquid
+
+Planned
+
+Image
+
+Gnosis
+
+Hyperliquid
+
+Planned
+
+Image
+
+MegaETH
+
+Hyperliquid
+
+Planned
+
+Image
+
+Ethena
+
+Hyperliquid
+
+Planned
+
+Image
+
+Katana
+
+Hyperliquid
+
+Planned
+
+Image
+
+Saga
+
+Leaderboard
+
+Liquity V2 is under a business license. 20+ teams have forked it and will reward BOLD users with airdrops. Check your position below.
+
+Each fork will allocate about 4% of its token supply to BOLD users, airdropping between $20M and $70M in total, depending on FDV.
+
+1017 participants now, below is the top 10
+
+Check your position
+
+Use BOLD across DeFi and earn fork rewards
+
+BOLD Venues
+
+All forks will reward BOLD users with ~2.75% of their token supply
+
+Venue
+
+Asset
+
+Native APR
+
+TVL
+
+Liquity v2
+
+SP rETH
+
+11.7%
+
+$3.9M
+
+Liquity v2
+
+SP wstETH
+
+11.0%
+
+$9.1M
+
+K3 Capital
+
+sBOLD
+
+9.2%
+
+$3.8M
+
+Pendle
+
+LP sBOLD 2027-02-04
+
+8.8%
+
+$260K
+
+Uniswap v4
+
+BOLD/USDC
+
+7.9%
+
+$3.2M
+
+Curve
+
+BOLD/LUSD
+
+6.1%
+
+$630K
+
+IPOR
+
+Liquity ETH Carry
+
+6.1%
+
+$16M
+
+Liquity v2
+
+SP WETH
+
+4.9%
+
+$7.2M
+
+Tangent
+
+StakeDao Vault - BOLD/USDC
+
+4.4%
+
+$528K
+
+Asymmetry
+
+ysyBOLD
+
+3.8%
+
+$203K
+
+Yearn
+
+yBOLD
+
+3.8%
+
+$6.9M
+
+Curve
+
+BOLD/USDC
+
+3.7%
+
+$11M
+
+Balancer v3
+
+BOLD/USDC
+
+1.4%
+
+$6.1K
+
+Euler
+
+BOLD Vault
+
+1.0%
+
+$144K
+
+Upshift
+
+LiquityV2 Airdrop Farming Vault
+
+-0.6%
+
+$544K
+
+Lagoon
+
+BOLD friendly forks Earn
+
+-
+
+$56
+
+Fork Venues
+
+Each fork will provide ~1.25% of their token supply to their BOLD/Fork_Stable pools
+
+Fork
+
+Asset
+
+Protocol
+
+Chain
+
+TVL
+
+-
+
+-
+
+-
+
+-
+
+-
+
+Resources
+
+Learn more about Forkonomics
+
+Explore all forks and opportunities on Dune
+
+Overview of all live and upcoming forks on Forqty
+
+Read more about the program in our Docs
+
+Track points across all launched forks here--------------------------------------------------------------------------------
+Pandabull | LQTY/Liquity Crypto Futures Explorer (https://pandabull.io/explorer/LQTY)
+citeturn499search6 [wordlim: 200] Crawled: last month; Liquity is a decentralised, non-custodial borrowing protocol on Ethereum that lets users lock ETH as collateral to mint the USD-pegged stablecoin LUSD (V1) and, in Liquity V2, mint BOLD against ETH and supported liquid staking tokens.First launched on Ethereum mainnet in April 2021, Liquity is designed to be governance-free and immutable, with risk management enforced by smart contracts and liquidations routed through Stability Pools. ... Download historical free price data for this coin in CSV or JSON format.
+Futures
+
+Market Breadth
+
+Coin Overview
+
+Search coin [Select]
+
+LQTY is the common ticker name for futures on Liquity. Liquity is a decentralised, non-custodial borrowing protocol on Ethereum that lets users lock ETH as collateral to mint the USD-pegged stablecoin LUSD (V1) and, in Liquity V2, mint BOLD against ETH and supported liquid staking tokens. First launched on Ethereum mainnet in April 2021, Liquity is designed to be governance-free and immutable, with risk management enforced by smart contracts and liquidations routed through Stability Pools. LQTY is the protocol’s secondary token used to align incentives: it is earned by Stability Pool depositors and certain liquidity/front-end participants, and can be staked to earn protocol revenue and, in V2, to build voting power used to direct protocol-incentivised liquidity.
+
+LQTY has a fixed maximum supply of 100,000,000 tokens. Its economic role is primarily incentive alignment and staking: LQTY is distributed to ecosystem participants (such as Stability Pool depositors, liquidity providers, and front-end operators) and can be staked to earn a share of protocol revenues. In Liquity V2, staked LQTY accrues time-based voting power that can be used to direct protocol-incentivised liquidity, and it may also capture additional third-party incentives linked to where votes are allocated. LQTY is not intended as a payment token; it mainly represents a claim on and influence over protocol incentive flows.
+
+Website
+
+White Paper
+
+X
+
+Reddit
+
+Youtube
+
+Telegram
+
+GitHub
+
+Medium
+
+LinkedIn
+
+Download historical free price data for this coin in CSV or JSON format. Perfect for analysis, backtesting, and research.
+
+Filename:
+
+[Input: Enter filename] [Select]
+
+Download Data
+
+Image: LQTY logo
+
+Filename:
+
+[Input: Enter filename] .png
+
+Download Logo
+
+Coin Price Plot
+
+[Button: Long ] [Button: Short ]
+
+Futures Markets
+
+Exchange  | Symbol  | Price  | Funding Rate  | Open Interest (USD)  | 
+--- | --- | --- | --- | --- | ---
+Image: Okx Okx  | LQTY-USDT-SWAP  | $0.22  | 0.0100%  | $219K  | Offer 🎁
+Image: Binance Binance  | LQTYUSDT  | $0.22  | 0.0100%  | $979K  | Offer 🎁
+Image: Bybit Bybit  | LQTYUSDT  | $0.22  | 0.0100%  | $314K  | Offer 🎁
+Image: Kucoin Kucoin  | LQTYUSDTM  | $0.22  | 0.0100%  | $153K  | Offer 🎁
+Image: Gateio Gateio  | LQTY_USDT  | $0.21  | 0.0100%  | $63K  | Offer 🎁
+
+OI Distribution--------------------------------------------------------------------------------
+Liquity Q4 Report 2022 (https://www.liquity.org/blog/liquity-q4-report-2022)
+citeturn499search7 [wordlim: 200] Published: 3.7 years ago; Crawled: 3 weeks ago; Dune links:
+
+Image: Liquity Q4 Report 2022
+
+Provided by Frogs Anon
+
+·
+
+January 18, 2023
+
+Liquity Q4 Report 2022
+
+Another quarter down & another year of building in the Liquity ecosystem. From the heights attained by Chicken Bonds, to the protocol’s Trove numbers growing, here are some key highlights:
+
+### Key Insights:‍
+
+  * Liquity’s Trove numbers went up 40% from Q3 → Q4 marking a significant jump in activity 
+  * ETH TVL experienced solid growth as well, adding 22,928 ETH for a 7.1% increase from Q3 → Q4 course of Q4 
+  * Q4 marked the launch of Chicken Bonds, which have seen rapid adoption to the tune of 70.7 million LUSD in TVL acquired, and have delivered 960K LUSD in protocol owned liquidity
+  * As a result of protocol owned liquidity and liquidity strategies across mainnet and layer 2, LUSD price converged down to the 1.02 mark 
+  * Liquity saw several new integrations in Q4, including LayerZero’s Stargate bridge, Gearbox V2 ,Balancer, and Euler. Additionally, DeFi Saver launched an automated rebonding strategy for Chicken Bonds.
+### Conclusion
+
+Q4 was defined by the self-imposed destruction of CeFi, but true crypto natives recognize the immense opportunity for DeFi that lies in the aftermath. While Liquity’s utility as a provider of truly decentralized borrowing and stablecoins was never in question, the exit of centralized pseudo-competitors has opened the door for wider adoption of the protocol. Q4 metrics across the board trended in a positive direction, as usage increased, liquidity got deeper, and the LUSD peg tightened. The team has delivered what is shaping up to be a breakthrough system for POL acquisition with Chicken Bonds, and it will be exciting to see how adoption by other protocols and DAOs takes place in 2023. Layer 2 usage of LUSD has been quite strong on Optimism over the past few quarters, and moves are being made to replicate that success on Arbitrum. Further integrations across DeFi will only accelerate this process.  
+
+To learn more check out the Docs and Blog, and join Liquity on Discord, Twitter, YouTube, and Telegram to get involved with the community.
+
+Dune links:
+
+LUSD - https://dune.com/ed/Liquity 
+
+Liquity - https://dune.com/dani/Liquity 
+
+Chicken Bonds - https://dune.com/chickenbonds/lusd --------------------------------------------------------------------------------
+Liquity Newsletter — November 2021 (https://www.liquity.org/blog/liquity-newsletter-november-2021)
+citeturn499search8 [wordlim: 200] Published: 4.9 years ago; Crawled: 3 weeks ago; https://dune.xyz/dani/Liquity
+
+Image: Liquity Newsletter — November 2021
+
+Liquity V1
+
+Liquity V2
+
+Kolten Bergeron
+
+·
+
+December 1, 2021
+
+Liquity Newsletter — November 2021
+
+Hey everyone! Welcome to our monthly newsletter where we share updates regarding Liquity and our ecosystem on a regular cadence.
+
+# Protocol Overview
+
+Image
+
+https://dune.xyz/dani/Liquity
+
+  * In last month’s newsletter, we covered how the OlympusDAO collaboration made LUSD’s utilization more diverse than ever. We recently had two more major projects enter the mix: Fei Protocol and Synthetix. At time of writing, they have accumulated a combined ~125m LUSD! While Fei has hit their target of 100m LUSD, Synthetix can take on ~25m more LUSD before they reach their cap. More details below on how Synthetix is using LUSD.
+
+Image
+
+https://dune.xyz/dani/Liquity
+
+  * Throughout November, > 250m LUSD was minted — making November one of Liquity’s most explosive growth periods. LUSD’s total supply is now at an all-time-high of ~930m since the 5/19 Flash Crash, with 1b in sight as we head towards the end of the year.
+
+Image
+
+https://dune.xyz/dani/Liquity
+
+  * Due to the recent increase in LUSD demand and borrowing activity, Liquity generated ~$2.5m in revenue for LQTY stakers this past month and we’ve hit $25m in total revenue since launch! 
+
+Image
+
+https://dune.xyz/dani/Liquity
+
+  * Speaking of revenue for Liquity users: Dani, our Dune wizard and developer, added historical APR data for the Stability Pool and LQTY staking to the main dashboard here. 
+
+# Integration Updates
+
+  * Visor Finance launched a Hypervisor for the LQTY-ETH pair on Uniswap V3. This gives LPs access to a hands-off, optimized LP position. Announcement here. 
+  * Coinbase Custody now supports deposits and withdrawals for LQTY. Learn more here. 
+--------------------------------------------------------------------------------
+Most popular | Dune (https://dune.com/discover/content/popular?q=tags%3ALiquity)
+citeturn499search9 [wordlim: 200] Crawled: 6 months ago;  | Liquity V2@liquity 2 months ago ...  | Redemptions & Liquidations@jordaniza 3 years ago
+
+ | Liquity V1@liquity 11 months ago
+
+  * #liquity
+  * #lusd
+  * #stablecoin
+ | 1,043
+ | 🐔 LUSD Chicken Bonds@chickenbonds 2 years ago
+
+  * #ChickenBonds
+  * #Liquity
+  * #LUSD
+ | 115
+ | Liquity V2@liquity 2 months ago
+
+  * #bold
+  * #liquity
+  * #stablecoin
+ | 108
+ | LQTY-LUSD Staking APRs@zanzai 4 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 90
+ | Liquity Redemptions Collateral Level Tracker@Move37 2 years ago
+
+  * #liquity
+  * #redemptions
+  * #LUSD
+ | 46
+ | LUSD supply@kyoronut 3 years ago
+
+  * #LUSD
+  * #Liquity
+  * #Stablecoin
+ | 36
+ | DeFi Market Cap + TVL@pinkyzane 4 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 15
+ | 💵 Ethereum LST-backed Stablecoins 💵@hashed_official 2 years ago
+
+  * #LSDFi
+  * #Liquity
+  * #Frax
+ | 5
+ | 🔴 🐜 DeFi Collective Pools - Optimism - Velodrome@spicypiz 2 years ago
+
+  * #lusd
+  * #liquity
+  * #liquidity
+ | 5
+ | Defisaver Revenue@Lucianken 2 years ago
+
+  * #defisaver
+  * #defi
+  * #aave
+ | 5
+ | Liquity@yogabear 4 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 4
+ | LUSD WATCH@boudach 3 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 2
+ | as-liqdity@asterngo 3 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 2
+ | Redemptions & Liquidations@jordaniza 3 years ago
+
+  * #liquity
+  * #defi
+ | 1
+ | my dashbard@edwin_dev 3 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 1
+ | Draft2@chris_jung 3 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 1
+ | Forking Liquidity@denkarpuk 3 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 1
+ | xueya@faustinopryor726 3 years ago
+
+  * #ChickenBonds
+  * #Liquity
+  * #LUSD
+ | 1
+ | liq@sailinggaming 3 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 1
+ | liquity@vennyyy 3 years ago
+
+  * #Liquity
+  * #LUSD
+  * #LQTY
+ | 1--------------------------------------------------------------------------------
+Stout TVL, Fees & Revenue (https://investors.defillama.com/protocol/stout)
+citeturn499search10 [wordlim: 200] Crawled: last week; .csv.png ... Stout is a Sonic-native CDP protocol offering low, quasi-fixed interest loans and creator of veSTTX, the most capital-efficient collateral (98% LTV) and immune to liquidations due to price swings. ... Other leading protocols include BIMA CDP, Overnight Finance, Parallel Protocol V3, Brunch, Avalon USDa, Sky Lending, USDD, Liquity V1, crvUSD, and Liquity V2.
+
+[Button: Information][Button: TVL][Button: Active Loans][Button: Treasury][Button: Fees and Revenue]
+
+ImageAsk about Stout
+
+[Button: Stout TVL fell 18% weekly but rose 5% monthly: what explains the reversal?][Button: Allocate $1,000 between Stout, Liquity v1, and crvUSD for 30 days—which gets most?][Button: Chart Stout versus Liquity v1 TVL over 90 days and pinpoint the divergence][Button: Stout treasury holds $15 against $14 TVL: what explains the mismatch?][Button: Enter Stout now or wait 14 days while comparing its TVL trend with USDD?]
+
+# Image: Logo of StoutStout(STTX)Add to watchlist
+
+Total Value Locked$14.23
+
+## TVL by Chain
+
+Sonic$14.23
+
+## Key Metrics
+
+Image
+
+Fees 30d$0
+
+Fees 30d by chain
+
+Sonic$0
+
+Fees 7d$0
+
+Sonic$0
+
+Fees 24h$0
+
+Sonic$0
+
+Cumulative Fees$533,141
+
+Sonic$533,141
+
+Revenue 30d$0
+
+Revenue 30d by chain
+
+Sonic$0
+
+Revenue 7d$0
+
+Sonic$0
+
+Revenue 24h$0
+
+Sonic$0
+
+Cumulative Revenue$533,141
+
+Sonic$533,141
+
+Staked$0
+
+Active Loans$0
+
+Treasury$14.87
+
+Majors$0
+
+Stablecoins$14.87
+
+Own Tokens$0
+
+Others$0
+
+[Button: Report incorrect data].png
+
+Add Metrics[Input]TVL[Input]Fees
+
+[Input]USD[Input]S
+
+[Input]D[Input]W[Input]M[Input]Q[Input]Y[Input]C
+
+Embed Chart
+
+.csv.png
+
+Couldn't load Fees. The chart shows the other metrics.
+
+## Protocol Information
+
+Stout is a Sonic-native CDP protocol offering low, quasi-fixed interest loans and creator of veSTTX, the most capital-efficient collateral (98% LTV) and immune to liquidations due to price swings.
+
+X/Twitter
+
+Category:CDP
+
+## Methodology
+
+TVL: TVL includes various tokens in StoutVault, stablecoins in PSMs, and DUSX in Floor. Staking tracks STTX in VoteEscrowedSTTX and DUSX in StakedDUSX. Borrowed shows DUSX loans from Lenders.View code on GitHubFees: 10% fee on tokens used to mint STTX.View code on GitHubRevenue: 10% of tokens used to mint STTX gets sent to the treasury.View code on GitHubTreasury: Value of tokens owned by the protocol
+
+## Income Statement for Stout
+
+[Input]Yearly[Input]Quarterly[Input]Monthly[Input]Cumulative
+
+.csv
+
+Image: defillama
+
+ | Q4 2026*  | Q3 2026  | Q2 2026  | Q1 2026  | Q4 2025  | Q3 2025  | Q2 2025  | Q1 2025
+--- | --- | --- | --- | --- | --- | --- | --- | ---
+Gross Protocol Revenue  | $0  | $0  | $0  | $86  | $17.45K  | $26.44K  | $79.52K  | $409.65K
+Cost of Revenue  | $0  | $0  | $0  | $0  | $0  | $0  | $0  | $0
+Gross Profit  | $0  | $0  | $0  | $86  | $17.45K  | $26.44K  | $79.52K  | $409.65K
+Earnings  | $0  | $0  | $0  | $86  | $17.45K  | $26.44K  | $79.52K  | $409.65K
+
+No data available for the selected period
+
+## Frequently Asked Questions
+
+What is Stout's TVL?
+
+Stout currently has $14.23 in total value locked. TVL has increased 29.4% over the past 30 days.
+
+What chains does Stout operate on?
+
+Stout operates on Sonic. Sonic holds the largest share at 100%.
+
+How much has Stout generated in fees and revenue?
+
+Over the past 30 days, Stout generated $0 in fees. Of that, $0 was protocol revenue. Based on the trailing year, the annualized rate is $17,530 in fees and $17,530 in revenue.
+
+How does Stout's TVL compare to similar protocols?
+
+Among CDP protocols tracked by DefiLlama, Stout ranks #173 by TVL. The category holds $8.089b across 199 protocols, and Stout accounts for <0.1% of that total. Other leading protocols include BIMA CDP, Overnight Finance, Parallel Protocol V3, Brunch, Avalon USDa, Sky Lending, USDD, Liquity V1, crvUSD, and Liquity V2.
+
+How much has been borrowed through Stout?
+
+Stout currently has $0 in active loans.
+
+Does Stout have a treasury?
+
+Stout has a tracked treasury currently valued at $14.87. Its holdings include $14.87 in stablecoins.--------------------------------------------------------------------------------
+Enosys Airdrop for Liquity V2 Users (https://www.liquity.org/blog/enosys-airdrop-for-liquity-v2-users)
+citeturn499search11 [wordlim: 200] Published: 9 months ago; Crawled: 3 days ago;   * Distributed weekly for the next 40 weeks using an “ongoing” Dune leaderboard based on fresh activity across eligible Liquity Mainnet venues (Stability Pools, liquidity pools, and other tracked venues).
+
+Image: Enosys Airdrop for Liquity V2 Users
+
+Liquity V1
+
+Liquity V2
+
+Sam Lekhak
+
+·
+
+January 19, 2026
+
+Enosys Airdrop for Liquity V2 Users
+
+## Enosys APS Rewards for Liquity V2 Mainnet Users: What You Need to Know
+
+Enosys, the Liquity V2 friendly fork on Flare Network, is allocating 2.75% of their governance and revenue token, APS supply to Liquity V2 Mainnet users. This results in 412.5 APS in total, roughly ~$850,000 of rewards at current prices.
+Users will be able to claim starting Jan 21, 2026.
+Apsis (APS) is the Enosys ecosystem’s primary governance and rewards token across their CDP and DEX, and is valued at $32m FDV.
+Rewards are split into two equal buckets - retro and ongoing, and are based on the Liquity Leaderboard: https://dune.com/liquity/v2-leaderboard
+The goal is to reward existing Mainnet depositors, while also incentivizing continued participation across eligible Liquity Mainnet venues. This is not a one-time airdrop. It is a 40-week program with weekly emissions running through the end of Oct 2026.
+
+Based on the current ~$35m eligible TVL, this airdrop alone adds roughly ~3% APR equivalent on top of existing yields.
+A reminder - at least 10 more friendly fork airdrops are expected over 2026
+
+#### Retro bucket (1.375%, ~$425,000)
+
+The retro bucket rewards users already on the current Liquity V2 leaderboard (up to 21 Jan 26).
+
+  * One-time retro claim: 52.5 APS (~$105k) using the current leaderboard snapshot
+    * Leaderboard: https://dune.com/liquity/v2-leaderboard
+  * The remaining portion of the 1.375% retro is then dripped weekly from 1/28 to the same retro cohort (up to Jan 21, 2026).
+
+#### Ongoing bucket (1.375%, ~$425,000)
+
+The ongoing bucket rewards fresh activity going forward. This will be based on a Enosys leaderboard that takes into account Mainnet Liquity activity from Jan 21.
+
+  * Distribution starts 1/28
+  * Distributed weekly for the next 40 weeks using an “ongoing” Dune leaderboard based on fresh activity across eligible Liquity Mainnet venues (Stability Pools, liquidity pools, and other tracked venues).
+  * Same leaderboard will be used: https://dune.com/liquity/v2-leaderboard
+
+#### Weekly drip (40 weeks total)
+
+Each week, 9 APS is emitted in total:
+
+  * 3.85 APS/week to retroactive users (Liquity V2 leaderboard)
+  * 5.15 APS/week to the users who are actively providing liquidity starting Jan 21, 2026.
+  * Total = 9 APS/week (~$18k/week, ~0.06%) each week for 40 weeks.
+
+#### How to claim
+
+Rewards are claimable only on the Enosys frontend on Flare Network:
+https://loans.enosys.global/incentives
+
+#### Bridging
+
+If you need to bridge to Flare, you can use Stargate at:
+https://stargate.finance/
+
+Image
+
+#### What can you do with APS?‍
+
+APS can be utilized in governance staking (https://gov.enosys.global/) to earn a share of all protocol fees aggregated and distributed by the APY Cloud.
+APS can also be utilized as liquidity in multiple of their DEX V3 LPs (https://v3.dex.enosys.global/liquidity) to continue earning competitive incentives and fees.
+
+#### What can you do at Enosys?
+
+You can use Enosys to borrow against FXRP or WFLR,  mint the Enosys CDP stablecoin, and provide liquidity for it on their Enosys v3 DEX to earn extra rewards.
+A reminder - at least 10 more friendly fork airdrops are expected over 2026. Keep providing liquidity across eligible Liquity Mainnet venues to stay on the leaderboards and keep earning weekly rewards.
+
+‍
+If you have specific questions on the airdrop, please refer to Enosys's Discord for more information.

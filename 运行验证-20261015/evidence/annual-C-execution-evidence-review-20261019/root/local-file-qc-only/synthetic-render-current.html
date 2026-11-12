@@ -1,0 +1,63 @@
+<!doctype html><html lang='zh-CN'><meta charset='utf-8'><title>本机报价文件核查</title><style>body{max-width:900px;margin:40px auto;padding:0 24px;font:17px/1.7 system-ui;color:#182c35;background:#f7f8f4}h1{font-size:30px}table{border-collapse:collapse;width:100%;background:white}td{padding:8px 14px;border-bottom:1px solid #ddd}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;padding:20px}strong{color:#7c3922}</style><h1>2022元旦报价文件：本机数据核查</h1><p><strong>仅供本机个人研究。含数据及衍生结果，请勿上传外部AI服务。</strong></p><p>容器与所列结构检查未触发问题；连续性、单位、输入可用性及成交仍待核。</p><table><tr><td>文件与本机下载收据一致</td><td>True</td></tr><tr><td>gzip读至文件尾并校验CRC</td><td>True</td></tr><tr><td>标准字段齐全</td><td>True</td></tr><tr><td>完整检查结束</td><td>True</td></tr><tr><td>数据行数</td><td>1</td></tr><tr><td>列数/字段形状异常行</td><td>0</td></tr><tr><td>交易所或币对标识不匹配行</td><td>0</td></tr><tr><td>时间戳格式异常行</td><td>0</td></tr><tr><td>本地到达时间不在目标日的行</td><td>0</td></tr><tr><td>本地到达时钟回退次数</td><td>0</td></tr><tr><td>交易所时钟回退次数</td><td>0</td></tr><tr><td>相邻本地时间戳相同次数</td><td>0</td></tr><tr><td>相邻字段完全相同次数</td><td>0</td></tr><tr><td>交易所时间晚于本地时间的行</td><td>0</td></tr><tr><td>买价高于卖价的行</td><td>0</td></tr><tr><td>本地时钟落入固定窗口的行</td><td>1</td></tr><tr><td>交易所时钟落入固定窗口的行</td><td>1</td></tr><tr><td>第一条本地到达时间（UTC）</td><td>2022-01-01T00:10:00.000001+00:00</td></tr><tr><td>最后一条本地到达时间（UTC）</td><td>2022-01-01T00:10:00.000001+00:00</td></tr><tr><td>各数值字段缺值次数</td><td>{&#x27;ask_price&#x27;: 0, &#x27;ask_amount&#x27;: 0, &#x27;bid_price&#x27;: 0, &#x27;bid_amount&#x27;: 0}</td></tr><tr><td>各数值字段非法值次数</td><td>{&#x27;ask_price&#x27;: 0, &#x27;ask_amount&#x27;: 0, &#x27;bid_price&#x27;: 0, &#x27;bid_amount&#x27;: 0}</td></tr></table><p>检查窗口：UTC [00:08,00:15)，两个时钟分别统计；本地日界约束仅用于local_timestamp。锚点00:10及00:12仅供时钟覆盖定位，不是已证输入可用或下单时点。</p><p>报价是事件流，更新间隔不等于断线；CSV不含断线事件。相同时间戳、相邻重复或交易所时钟回退需按来源解释。只查相邻完全重复，未查全部非相邻重复。空侧另计，未修复或丢弃原文件。</p><p>没有比较卖单数量与可用挂单量，没有计算价差成本、费用、冲击、收益或资金容量。本时段来自已研究历史，不是新独立样本。技术检查通过不代表未来净盈利。</p><h2>完整本机检查原件</h2><pre>{
+  &quot;start_UTC&quot;: &quot;2026-10-19T08:48:42.844194+00:00&quot;,
+  &quot;inspection_completed&quot;: true,
+  &quot;gzip_full_read_CRC&quot;: true,
+  &quot;source_sha256&quot;: &quot;6c0cf17f90a8f4c8adf4dec116827fcb39cda7952988f550342e3071e8775e8d&quot;,
+  &quot;matches_local_transfer_receipt&quot;: true,
+  &quot;columns&quot;: [
+    &quot;exchange&quot;,
+    &quot;symbol&quot;,
+    &quot;timestamp&quot;,
+    &quot;local_timestamp&quot;,
+    &quot;ask_amount&quot;,
+    &quot;ask_price&quot;,
+    &quot;bid_price&quot;,
+    &quot;bid_amount&quot;
+  ],
+  &quot;required_columns_present&quot;: true,
+  &quot;expanded_bytes&quot;: 146,
+  &quot;counts&quot;: {
+    &quot;rows&quot;: 1,
+    &quot;bad_shape&quot;: 0,
+    &quot;wrong_identity&quot;: 0,
+    &quot;invalid_timestamp&quot;: 0,
+    &quot;local_outside_day&quot;: 0,
+    &quot;local_clock_backsteps&quot;: 0,
+    &quot;exchange_clock_backsteps&quot;: 0,
+    &quot;equal_local_timestamp&quot;: 0,
+    &quot;adjacent_identical_rows&quot;: 0,
+    &quot;exchange_later_than_local&quot;: 0,
+    &quot;crossed_quote_rows&quot;: 0,
+    &quot;window_rows_by_local&quot;: 1,
+    &quot;window_rows_by_exchange&quot;: 1
+  },
+  &quot;missing_numeric&quot;: {
+    &quot;ask_price&quot;: 0,
+    &quot;ask_amount&quot;: 0,
+    &quot;bid_price&quot;: 0,
+    &quot;bid_amount&quot;: 0
+  },
+  &quot;invalid_numeric&quot;: {
+    &quot;ask_price&quot;: 0,
+    &quot;ask_amount&quot;: 0,
+    &quot;bid_price&quot;: 0,
+    &quot;bid_amount&quot;: 0
+  },
+  &quot;first_local_UTC&quot;: &quot;2022-01-01T00:10:00.000001+00:00&quot;,
+  &quot;last_local_UTC&quot;: &quot;2022-01-01T00:10:00.000001+00:00&quot;,
+  &quot;maximum_adjacent_local_gap_us&quot;: 0,
+  &quot;anchors&quot;: {
+    &quot;1640995800000000&quot;: {
+      &quot;anchor_UTC&quot;: &quot;2022-01-01T00:10:00+00:00&quot;,
+      &quot;latest_at_or_before_local_us&quot;: null,
+      &quot;earliest_after_local_us&quot;: 1640995800000001
+    },
+    &quot;1640995920000000&quot;: {
+      &quot;anchor_UTC&quot;: &quot;2022-01-01T00:12:00+00:00&quot;,
+      &quot;latest_at_or_before_local_us&quot;: 1640995800000001,
+      &quot;earliest_after_local_us&quot;: null
+    }
+  },
+  &quot;structural_findings_require_review&quot;: false,
+  &quot;end_UTC&quot;: &quot;2026-10-19T08:48:42.844824+00:00&quot;
+}</pre></html>

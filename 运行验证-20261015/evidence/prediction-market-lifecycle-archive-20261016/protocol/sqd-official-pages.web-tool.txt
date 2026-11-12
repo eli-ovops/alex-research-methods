@@ -1,0 +1,440 @@
+Introduction - SQD Documentation (https://docs.sqd.dev/en/api/evm/introduction)
+citeturn595view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://docs.sqd.dev/en/api/evm/introduction","lineno":null}); Total lines: 217
+L0: > ## Documentation Index
+L1: >
+L2: > Fetch the complete documentation index at: cite0†/llms.txt L3: >
+L4: > Use this file to discover all available pages before exploring further.
+L5: 
+L6: cite1†Skip to main content L7: 
+L8: cite2†SQD Documentation home page L9: 
+L10: Search...
+L11: 
+L12: Navigation
+L13: 
+L14: Portal API reference
+L15: 
+L16: Introduction
+L17: 
+L18: cite2†Getting Started L19: 
+L20: Build
+L21: 
+L22: cite3†Deploy cite4†Participate L23: 
+L24: Networks & Schemas
+L25: 
+L26: cite5†Learn cite6†AI L27: 
+L28:   * cite7†Announcements L29:   * cite8†Changelog L30: 
+L31: ### Overview
+L32: 
+L33:   * cite9†EVM Networks L34: ### Portal API reference
+L35: 
+L36:   * cite10†Introduction L37:   * cite11†GET Metadata L38:   * cite12†POST Stream L39:   * cite13†POST Finalized stream L40:   * cite14†GET Head L41:   * cite15†GET Finalized head L42:   * cite16†GET Timestamp block L43: 
+L44: ### Working with Portal API
+L45: 
+L46:   * cite17†Overview L47:   * cite18†Quickstart L48:   * cite19†Stream semantics L49:   * Examples
+L50: 
+L51: ### Local Setup
+L52: 
+L53: BETA
+L54: 
+L55:   * cite20†Local EVM Devnet Setup L56:   * cite21†Configuration L57:   * cite22†Usage L58: ### Supported Networks
+L59:   * cite23†Abstract L60:   * cite24†Abstract Testnet L61:   * cite25†ADI Chain L62:   * cite26†ADI Testnet L63:   * cite27†Agung Testnet L64:   * cite28†Alpen Testnet L65:   * cite29†Arbitrum Nova L66:   * cite30†Arbitrum One L67:   * cite31†Arbitrum Sepolia L68:   * cite32†Arc L69:   * cite33†Astar L70:   * cite34†Astar zkEVM L71:   * cite35†Astar zKyoto L72:   * cite36†Avalanche L73:   * cite37†Avalanche Testnet L74:   * cite38†B3 L75:   * cite39†B3 Sepolia L76:   * cite40†Base L77:   * cite41†Base Sepolia L78:   * cite42†Beam L79:   * cite43†Berachain L80:   * cite44†Bittensor L81:   * cite45†Bittensor Testnet L82:   * cite46†Blast L83:   * cite47†BNB Smart Chain L84:   * cite48†BNB Smart Chain Testnet L85:   * cite49†BOB L86:   * cite50†BOB Sepolia L87:   * cite51†Celo L88:   * cite52†Core Blockchain L89:   * cite53†Cronos L90:   * cite54†Ethereum L91:   * cite55†Ethereum Hoodi L92:   * cite56†Ethereum Sepolia L93:   * cite57†Etherlink L94:   * cite58†Etherlink Shadownet L95:   * cite59†Flare L96:   * cite60†Gnosis L97:   * cite61†Gravity Alpha L98:   * cite62†HashKey Chain L99:   * cite63†Hedera L100:   * cite64†Hemi L101:   * cite65†Hemi Testnet L102:   * cite66†HyperEVM L103:   * cite67†HyperEVM Testnet L104:   * cite68†Ink L105:   * cite69†Ink Sepolia L106:   * cite70†Katana L107:   * cite71†Linea L108:   * cite72†LUKSO L109:   * cite73†Manta Pacific L110:   * cite74†Manta Pacific Sepolia L111:   * cite75†Mantle L112:   * cite76†Mantle Sepolia L113:   * cite77†MegaETH L114:   * cite78†MegaETH Testnet L115:   * cite79†Metis Andromeda L116:   * cite80†Mode L117:   * cite81†Monad L118:   * cite82†Monad Testnet L119:   * cite83†opBNB L120:   * cite84†opBNB Testnet L121:   * cite85†Optimism L122:   * cite86†Optimism Sepolia L123:   * cite87†Peaq L124:   * cite88†Plasma L125:   * cite89†Plasma Testnet L126:   * cite90†Plume L127:   * cite91†Polygon L128:   * cite92†Polygon Amoy Testnet L129:   * cite93†Prom L130:   * cite94†Robinhood Chain L131:   * cite95†Robinhood Testnet L132:   * cite96†Scroll L133:   * cite97†Scroll Sepolia L134:   * cite98†Sei L135:   * cite99†Soneium L136:   * cite100†Soneium Minato Testnet L137:   * cite101†Sonic L138:   * cite102†Sonic Testnet L139:   * cite103†Stable L140:   * cite104†Stable Testnet L141:   * cite105†TAC L142:   * cite106†Tempo L143:   * cite107†Unichain L144:   * cite108†Unichain Sepolia L145:   * cite109†Worldchain L146:   * cite110†X Layer L147:   * cite111†zkLink Nova L148:   * cite112†zkSync L149:   * cite113†zkSync Sepolia L150:   * cite114†Zora L151:   * cite115†Zora Sepolia L152: # Introduction
+L153: 
+L154: Stream EVM blockchain data with SQD Portal and handle pagination, finality, and reorgs.
+L155: 
+L156: Copy page Copy page
+L157:   1. cite12†POST your data request to `/stream` or cite13†`/finalized-stream` and you shall receive a cite116†JSON lines†jsonlines.org stream:
+L158: 
+L159:     `curl https://portal.sqd.dev/datasets/ethereum-mainnet/stream \
+L160:       -X POST \
+L161:       -d '{
+L162:         "type": "evm",
+L163:         "fromBlock": 16000000,
+L164:         "toBlock": 16000001,
+L165:         "fields": {
+L166:           "block": {"number": true},
+L167:           "log": {"data": true}
+L168:         },
+L169:         "logs": [
+L170:           {"address": [
+L171:             "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
+L172:           ]}
+L173:         ]
+L174:       }'
+L175:     `
+L176: outputs
+L177: 
+L178:     `{"header":{"number":16000000}}
+L179:     {"header":{"number":16000001},"logs":[{"data":"0x000000000000000000000000000000000000000000000000000000000000071e"}]}
+L180:     `
+L181:   2. By default the Portal will only include blocks with data matching the request filters. However, the stream will always include the first and the last blocks of the block range it covered, even if they have no matching data.
+L182:   3. The portal may end stream before it reaches `toBlock`. You can omit `toBlock` for open-ended streaming.
+L183:   4. To get the rest of the data, the client must adjust the `fromBlock` field to the number of the last received block plus one. When streaming unfinalized data from `/stream`, they must also include `parentBlockHash` into the request.
+L184: ##
+L185: 
+L186: cite117†​ L187: 
+L188: Handling forks on `/stream`
+L189:   5. Chain forks / reorgs sometimes make some of the data from `/stream` obsolete. The portal will detect that using the `parentBlockHash` field of the request and respond with an HTTP 409 containing a sample of new consensus blocks. When that happens, the client must roll back any changes to its own state made due to orphan blocks’ data, then send another `POST /stream` that starts from an earlier block to attempt to fetch the updated chain.
+L190:   6. Post-rollback request must contain `parentBlockHash`. If the Portal detects that the block is still not in the updated chain, it’ll return a 409 again. Be prepared to process several of these in a row.
+L191:   7. To make state management easier for the client, Portal may return `X-Sqd-Finalized-Head-Number` and `X-Sqd-Finalized-Head-Hash` headers with each response from `/stream`. The block from these headers and blocks below it won’t ever reorganize.
+L192:   8. That doesn’t mean that `X-Sqd-Finalized-Head-Number` is a non-decreasing value: Portals can be behind load balancers and the value may decrease when the load balancer switches to a lagging instance. The client should trust the guarantees provided by either instance and treat the highest block returned with these headers as a high water mark for finalized blocks.
+L193: Was this page helpful?
+L194: 
+L195: Yes No
+L196: 
+L197: cite9†EVM Networks Previous cite11†Dataset Metadata Next L198: 
+L199: [Input: Ask a question...]
+L200: 
+L201: cite2†SQD Documentation home page L202: 
+L203: cite118†github†github.com cite119†x†twitter.com cite120†telegram†t.me cite121†linkedin†www.linkedin.com cite122†youtube†www.youtube.com L204: 
+L205: Quickstarts
+L206: 
+L207: cite123†Pipes SDK cite124†Squid SDK cite18†Portal API L208: 
+L209: AI Development
+L210: 
+L211: cite0†llms.txt cite125†llms-full.txt cite126†skill.md cite127†Agent Skills†github.com cite128†MCP Server cite6†Plugins L212: 
+L213: Company
+L214: cite129†Blog†blog.sqd.dev cite7†Announcements cite8†Changelog cite130†Whitepaper cite131†Website†subsquid.io L215: 
+L216: cite132†Powered byThis documentation is built and hosted on Mintlify, a developer documentation platform†www.mintlify.com --------------------------------------------------------------------------------
+Portal pricing - SQD Documentation (https://docs.sqd.dev/en/portal/pricing)
+citeturn595view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://docs.sqd.dev/en/portal/pricing","lineno":null}); Total lines: 164
+L0: > ## Documentation Index
+L1: >
+L2: > Fetch the complete documentation index at: cite0†/llms.txt L3: >
+L4: > Use this file to discover all available pages before exploring further.
+L5: 
+L6: cite1†Skip to main content L7: 
+L8: cite2†SQD Documentation home page L9: 
+L10: Search...
+L11: 
+L12: Navigation
+L13: 
+L14: Portal
+L15: 
+L16: Portal pricing
+L17: 
+L18: cite2†Getting Started L19: 
+L20: Build
+L21: 
+L22: cite3†Deploy cite4†Participate L23: 
+L24: Networks & Schemas
+L25: 
+L26: cite5†Learn cite6†AI L27: # Portal pricing
+L28: 
+L29: Portal API plans and prices: two free plans, Starter, Growth, Enterprise, and add-ons.
+L30: 
+L31: Copy page Copy page
+L32: 
+L33: Paid Portal plans have one flat monthly price. There are no compute units, credits, per-request fees, egress fees, or overage charges. Your plan sets three limits: how fast you can backfill history, how much data you can stream in a month, and how many chains you can use. Portal is billed separately from cite7†SQD Cloud indexer hosting.
+L34: Portal billing is not live yet. The plans below are published ahead of launch. Until billing starts, the public Portal keeps its current limits and paid plans are available through early access. Every account gets 14 days’ notice before billing starts. cite8†Book an early-access call†calendly.com .
+L35: ##
+L36: 
+L37: cite9†​ L38: 
+L39: Plans
+L40:  | Public  | Testing  | Starter  | Growth  | Enterprise
+L41: --- | --- | --- | --- | --- | ---
+L42: Price  | $0  | $0  | $99/mo  | $499/mo  | Custom, annual contract
+L43: Max backfill throughput  | ~0.1 MB/s  | ~0.5 MB/s  | ~5 MB/s  | ~20 MB/s  | Uncapped
+L44: Monthly data  | ~50 MB  | ~1 GB  | 25 GB  | 400 GB  | Uncapped
+L45: Included chains  | All, rate-limited  | 1  | 1  | 3  | 10
+L46: Maximum chains  | All, rate-limited  | 1  | 1  | 5  | No maximum
+L47: Traces and state diffs  | Included  | Not included  | Add-on  | Add-on  | Included
+L48: Commercial use  | No  | No  | Yes  | Yes  | Yes
+L49: Support  | Community  | Community  | Email  | Priority  | Dedicated manager
+L50: SLA  | None  | None  | None  | None  | Uptime and support response
+L51:   * Public is the shared public Portal at `https://portal.sqd.dev`. Use it to explore data, prototype, or give an AI agent onchain data. It works with curl or the SDKs on every chain, rate-limited.
+L52:   * Testing adds an API key, more backfill throughput, and about 1 GB of monthly data on one chain of your choice, for evaluating Portal before you buy.
+L53:   * Starter covers one chain with 25 GB of monthly data at up to 5 MB/s, and email support. It fits a single-chain app or indexer with modest data needs.
+L54:   * Growth covers up to five chains with 400 GB of monthly data at up to 20 MB/s, and priority support. It comes with a 30-day free trial at the normal Growth limits, with three chains of your choice.
+L55:   * Enterprise adds uncapped data and throughput, dedicated infrastructure, and signed uptime and support response SLAs, at a custom price. It is required above five chains.
+L56: Commercial use requires a paid plan; Public and Testing are for development and evaluation. Support on Starter and Growth is best-effort, with no SLA. If your workload needs an uptime SLA or a guaranteed support response time, choose Enterprise. You can upgrade or downgrade as your backfill, data, and chain needs change. Enterprise trials are arranged with the sales team.
+L57: ###
+L58: 
+L59: cite10†​ L60: 
+L61: Included with every plan
+L62: 
+L63:   * The same API, paths, and payloads, with the cite11†SDKs and the cite12†MCP server L64:   * Decoded data for EVM, Solana, Bitcoin, Tron, Hyperliquid, and Substrate networks
+L65:   * Real-time data on every chain that has it, streamed to the live head in one stream with no separate archive tier
+L66:   * History back to genesis on most chains
+L67:   * Unlimited team members
+L68: ##
+L69: 
+L70: cite13†​ L71: 
+L72: How usage is measured
+L73:   * Max backfill throughput is the top speed at which Portal streams historical data to you. A cite14†speed boost raises it without changing plans.
+L74:   * Monthly data is measured uncompressed, as the data lands in your process.
+L75:   * A chain is one ecosystem, not one network or dataset. Ethereum is one chain and covers Ethereum mainnet, Sepolia, and Hoodi. BNB Chain is one chain and covers BNB Smart Chain and opBNB with their testnets. A chain’s dataset versions and data types are part of the chain.
+L76: cite15†All networks shows which networks are real-time and which cite16†tier each chain is in.
+L77: ###
+L78: 
+L79: cite17†​ L80: 
+L81: If you run out of monthly data
+L82: 
+L83: Nothing shuts off and nothing is charged. Backfill throughput is rate-limited for the rest of the month and resets with the next one. Real-time access continues on chains that have it. To stay at full speed, add a cite14†data extension .
+L84: ##
+L85: 
+L86: cite14†​ L87: 
+L88: Add-ons
+L89: 
+L90: A data extension adds full-speed data for the current month. A speed boost raises your max backfill throughput. Add-ons are opt-in: nothing is added to your plan or charged automatically.
+L91: Add-on  | Price  | Available on
+L92: --- | --- | ---
+L93: 250 GB data extension  | $99 for one month  | Starter, Growth
+L94: 600 GB data extension  | $199 for one month  | Growth
+L95: +50% speed boost  | $49 for each month it is active  | Starter, Growth
+L96: +100% speed boost  | $99 for each month it is active  | Starter, Growth
+L97: Traces and state diffs  | $49 per month for each chain  | Starter, Growth
+L98: Additional chain  | From $50 per month for each chain, by cite16†tier | Growth, up to five chains
+L99: Custom network integration  | Custom  | All paid plans
+L100: Traces and state diffs are included with Public and Enterprise. On Starter and Growth they are an add-on for each chain. To integrate a new chain or custom VM, cite18†contact SQD†sqd.dev .
+L101: ##
+L102: 
+L103: cite16†​ L104: 
+L105: Chain tiers
+L106: 
+L107: Every chain is in one of three tiers: Core, Partner, or Frontier. The tier sets the price of adding a chain on Growth beyond the three it includes. Starter includes one chain and cannot add more. Enterprise includes ten chains and has no maximum; additional chains are priced in the contract.
+L108: Tier  | Chains  | Price on Growth
+L109: --- | --- | ---
+L110: Core  | The chains most teams build on: Ethereum, Bitcoin, Solana, Base, Arbitrum, Optimism, Polygon, BNB Chain, and Avalanche  | $150 per month for each additional chain
+L111: Partner  | Networks whose teams fund the integration: ADI Chain, Agung, Alpen, Enjin, Etherlink, Hedera, Hemi, peaq, Prom, Vara Network, and zkVerify  | $50 per month for each additional chain
+L112: Frontier  | Every other supported chain: newer networks and custom VMs, each with its own integration  | From $300 per month for each additional chain
+L113: Growth can add up to two chains, for five in total. A tier applies to the whole chain, so a chain’s testnets, dataset versions, and data types share it. To see every network in a tier, filter the networks list: cite19†Core , cite20†Partner , or cite21†Frontier . Each network page also shows its tier.
+L114: ##
+L115: 
+L116: cite22†​ L117: 
+L118: Enterprise
+L119: 
+L120: Custom pricing on an annual contract, for teams that need more than five chains, sustained usage above 1 TB a month, broad Frontier coverage, trace-heavy or specialized replica datasets, large historical backfills, dedicated capacity, signed SLAs, or custom support. If your usage stays above 1 TB a month on a self-serve plan, the SQD team reviews the workload with you rather than changing your plan automatically. Enterprise includes:
+L121:   * Ten chains, with no maximum
+L122:   * Uncapped backfill throughput and monthly data
+L123:   * Traces and state diffs, and custom data formats
+L124:   * Dedicated or static IP, a white-label endpoint, and multi-region deployment
+L125:   * A custom uptime SLA
+L126:   * A dedicated account manager, a support response SLA, and a dedicated Slack channel
+L127:   * cite23†SQD 360†sqd.dev custom data solutions
+L128: ## Talk to sales
+L129: 
+L130: Discuss Enterprise requirements or early access to a paid plan
+L131: ##
+L132: 
+L133: cite24†​ L134: 
+L135: Using your plan
+L136: 
+L137: Public is the shared public Portal. Testing and the paid plans send an API key as `Authorization: Bearer <key>` or in the `x-api-key` header, with the same paths and payloads as the public Portal. See cite25†Presenting an API key for the error a missing or rejected key returns. To run Portal on your own infrastructure instead, see cite26†Private Portal setup .
+L138: 
+L139: Prices on this page follow cite27†sqd.dev/pricing†sqd.dev . If the two differ, sqd.dev/pricing is current.
+L140: Was this page helpful?
+L141: 
+L142: Yes No
+L143: 
+L144: cite28†Running your own Portal Previous cite26†Private Portal setup Next L145: 
+L146: [Input: Ask a question...]
+L147: 
+L148: cite2†SQD Documentation home page L149: 
+L150: cite29†github†github.com cite30†x†twitter.com cite31†telegram†t.me cite32†linkedin†www.linkedin.com cite33†youtube†www.youtube.com L151: 
+L152: Quickstarts
+L153: 
+L154: cite34†Pipes SDK cite35†Squid SDK cite36†Portal API L155: 
+L156: AI Development
+L157: 
+L158: cite0†llms.txt cite37†llms-full.txt cite38†skill.md cite39†Agent Skills†github.com cite40†MCP Server cite6†Plugins L159: 
+L160: Company
+L161: cite41†Blog†blog.sqd.dev cite42†Announcements cite43†Changelog cite44†Whitepaper cite45†Website†subsquid.io L162: 
+L163: cite46†Powered byThis documentation is built and hosted on Mintlify, a developer documentation platform†www.mintlify.com --------------------------------------------------------------------------------
+Polygon indexing infrastructure: data API, SDK & Portal | SQD (https://sqd.dev/chains/polygon/)
+citeturn595view2 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://sqd.dev/chains/polygon/","lineno":null}); Total lines: 300
+L0: SQD Logo Vector downloads
+L1: 
+L2: cite0†Download SVG Transparent cite1†Download SVG White bg cite2†Download SVG Black bg L3: 
+L4: Symbol only
+L5: 
+L6: cite3†Download SVG White bg cite4†Download SVG Black bg L7: 
+L8: cite5†Brand Guidelines L9: 
+L10: Products
+L11: 
+L12: Data Access
+L13: 
+L14: cite6†Portal API New Dedicated API for real-time & historical blockchain data cite7†SQD Network Decentralized data lake with 2000+ worker nodes cite8†Supported Chains Browse 120+ indexed networks L15: 
+L16: Development
+L17: cite9†SDK Squid SDK & Pipes SDK, two TypeScript frameworks for indexing cite10†SQD Cloud Managed hosting & deployment for your indexers cite11†SQD 360 Custom enterprise data solutions & dedicated engineering L18: 
+L19: cite6†New. Portal API, Get validated data from 120+ networks with a single API. Now generally available. L20: 
+L21: Solutions
+L22: 
+L23: By Use Case
+L24: cite12†DeFi & Trading Swaps, liquidations, MEV, and TVL across every chain cite13†Analytics Decoded onchain data piped into your warehouse cite14†AI Agents Pre-decoded onchain data for autonomous agents cite15†Wallets & Payments Address-keyed transaction history across every chain cite16†Compliance Full traces and state diffs for transaction monitoring L25: 
+L26: cite17†All Solutions Browse every use case and industry L27: 
+L28: By Industry
+L29: cite18†Stablecoins Cross-chain flow tracking, peg monitoring, supply analytics cite19†RWA Audit-ready data for tokenized assets L30: 
+L31: cite20†All Customers See how teams like GMX and Curvance use SQD L32: 
+L33: Latest Case Studies
+L34: 
+L35: cite21†Olas Full backfill in one week, measured, against a two-to-three-month estimate cite22†Turtle Five providers consolidated to one validated source L36: 
+L37: Developers
+L38: cite23†Documentation Guides, references, and tutorials†docs.sqd.dev cite24†Subsquid Core protocol and infrastructure†github.com cite25†Subsquid Labs SDKs, examples, and community tools†github.com cite26†Dev Chat Join the developer community on Telegram†t.me L39: 
+L40: Resources
+L41: 
+L42: Learn
+L43: cite27†Guides Indexing, RPC, and blockchain data explained cite28†Compare SQD vs The Graph, Alchemy, and other providers cite29†Blog News, tutorials, and deep dives cite30†Videos Talks, interviews, and podcast episodes cite31†Changelog Product updates and release notes†docs.sqd.dev L44: 
+L45: Company
+L46: 
+L47: cite32†About Our mission, team, and story cite33†Ecosystem Projects and partners building on SQD cite5†Brand Assets Logos, colors, and guidelines L48: 
+L49: cite20†Customers cite34†Pricing L50: 
+L51: Products
+L52: Data Access cite6†Portal API cite7†SQD Network cite8†Supported Chains L53: 
+L54: Development cite9†SDK cite10†SQD Cloud cite11†SQD 360 L55: 
+L56: Solutions
+L57: 
+L58: By Use Case cite12†DeFi & Trading cite13†Analytics cite14†AI Agents cite15†Wallets & Payments cite16†Compliance cite17†All Solutions L59: 
+L60: By Industry cite18†Stablecoins cite19†RWA cite20†All Customers L61: 
+L62: Developers
+L63: 
+L64: Get Started cite23†Documentation†docs.sqd.dev cite24†Subsquid†github.com cite25†Subsquid Labs†github.com cite26†Dev Chat†t.me L65: 
+L66: Resources
+L67: Learn cite27†Guides cite28†Compare cite29†Blog cite30†Videos cite31†Changelog†docs.sqd.dev L68: 
+L69: Company cite32†About cite33†Ecosystem cite5†Brand Assets L70: 
+L71: cite20†Customers cite34†Pricing L72: 
+L73: cite35†Talk to us L74: 
+L75: cite8†All chains L76: 
+L77: cite36†Image: Polygon†cdn.subsquid.io L78: # Polygon
+L79: 
+L80: EVM Layer 2 / Chain ID 137
+L81: 
+L82: Polygon is a suite of Ethereum scaling solutions including PoS sidechain and zkEVM, enabling fast and inexpensive transactions.
+L83: 
+L84: cite37†Website†polygon.technology cite38†Explorer†polygonscan.com L85: 
+L86: Quick Facts
+L87: 
+L88: Networks 2
+L89: 
+L90: Runtime EVM
+L91: 
+L92: Chain ID 137
+L93: 
+L94: Real-time Yes
+L95: 
+L96: Data tables 4
+L97: 
+L98: Category Layer 2
+L99: 
+L100: Networks
+L101:     2
+L102: 
+L103: Data tables
+L104:     4
+L105: 
+L106: Chain ID
+L107:     137
+L108: 
+L109: Runtime
+L110:     EVM
+L111: 
+L112: Coverage
+L113:     Real-time + archive
+L114: 
+L115: Start block
+L116:     0 (genesis)
+L117: 
+L118: License
+L119:     Open-source SDK
+L120: ## Networks
+L121: 
+L122: polygon-mainnet chain ID 137
+L123: 
+L124: Real-time EVM mainnet 4 tables
+L125: 
+L126: polygon-amoy-testnet chain ID 80002
+L127: 
+L128: Real-time EVM testnet 3 tables
+L129: ## Polygon on SQD
+L130: 
+L131: Validated at ingestion
+L132: 
+L133: Polygon data is validated by SQD Network workers before it reaches the Portal. Validation is performed across the network rather than by a single ingestion node, so a faulty upstream source can't poison the dataset.
+L134: 
+L135: Decoded, schema-typed
+L136: 
+L137: 4 Polygon tables (blocks, transactions, logs & traces), decoded and schema-typed, ready to query. Your indexer queries the data directly without writing RLP parsers.
+L138: 
+L139: Archive plus real-time
+L140: Single Portal endpoint serves Polygon from genesis through the current head, with sub-second hot-path latency. No separate streaming pipeline to wire up.
+L141: 
+L142: Open-source SDK
+L143: 
+L144: Both the Squid SDK and the Pipes SDK are open-source. Connectors for Postgres, ClickHouse, MongoDB, SQLite and Parquet, plus a custom-target hook. Run your Polygon indexer on your own infrastructure or on cite10†SQD Cloud .
+L145: ## Build with Polygon data
+L146: 
+L147: Common production patterns teams build with SQD on Polygon.
+L148: cite12†DeFi & Trading Index swaps, liquidations, and positions on Polygon in real time. cite13†Analytics Build dashboards and metrics from full Polygon historical state. cite14†AI Agents Give agents structured, decoded Polygon data with the MCP server. cite15†Wallets & Payments Power balance, transfer, and history views for Polygon wallets. cite16†Compliance & KYT Validated Polygon data for transaction monitoring and audits. cite18†Stablecoins Track every mint, burn, and transfer of Polygon stablecoins. cite19†Real-World Assets Auditable Polygon data for tokenized RWA issuance and transfers. L149: ## Teams using SQD on Polygon
+L150: 
+L151: Production case studies from a team indexing Polygon with SQD.
+L152: 
+L153: cite39†Privacy Infrastructure RAILGUN Expanded privacy pools from single-chain to multi-chain with reduced balance scanning times L154: ## Available Data
+L155: 
+L156: blocks
+L157: 
+L158: Block headers with timestamps, gas usage, miner info, and consensus data.
+L159: 
+L160: transactions
+L161: 
+L162: All onchain transactions with sender, receiver, value, gas, and input data.
+L163: 
+L164: logs
+L165: 
+L166: Event logs emitted by smart contracts, the primary source for tracking DeFi, NFT, and token activity.
+L167: 
+L168: traces
+L169: 
+L170: Internal transactions and call traces showing the full execution path of each transaction.
+L171: ## Stream Polygon data in two lines
+L172: 
+L173: Example below uses the public Polygon endpoint, free for development. For full SDK reference, see cite23†the documentation†docs.sqd.dev .
+L174: 
+L175: [Button: cURL][Button: Body][Button: Response]
+L176: 
+L177: [Button: Run]
+L178: 
+L179: 1 curl --compressed -X POST \
+L180: 
+L181: 2 'https://portal.sqd.dev/datasets/polygon-mainnet/stream' \
+L182: 
+L183: 3 -H 'Content-Type: application/json' \
+L184: 
+L185: 4 -d '{
+L186: 
+L187: 5 "type": "evm",
+L188: 
+L189: 6 "fromBlock": 0,
+L190: 
+L191: 7 "toBlock": 100,
+L192: 
+L193: 8 "fields": {
+L194: 
+L195: 9 "block": {"number":true,"timestamp":true},
+L196: 10 "transaction": {
+L197: 
+L198: 11 "hash": true,
+L199: 
+L200: 12 "from": true,
+L201: 
+L202: 13 "to": true,
+L203: 
+L204: 14 "value": true
+L205: 
+L206: 15 }
+L207: 
+L208: 16 },
+L209: 
+L210: 17 "transactions": [{}]
+L211: 
+L212: 18 }'
+L213: 
+L214: polygon-mainnet/stream
+L215: 
+L216: EVM · blocks 0–100
+L217: ## Frequently asked questions
+L218: 
+L219: How does SQD compare to running a Polygon RPC node?
+L220: 
+--------------------------------------------------------------------------------
+Crypto Tax & Accounting Data: Full Transaction History | SQD (https://sqd.dev/solutions/accounting/)
+citeturn595view3 [wordlim: 200] Crawled: 3 days ago; Content type: text/html; Source: open({"ref_id":"https://sqd.dev/solutions/accounting/","lineno":null}); Total lines: 353
+

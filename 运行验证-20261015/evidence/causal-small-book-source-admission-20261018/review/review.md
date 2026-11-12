@@ -1,0 +1,13 @@
+# 独立盘口小样本：限定独立审阅
+
+PASS_LIMITED_SMALL_BOOK_SOURCE_AND_EXISTING_METADATA_REVIEW，无必须修正项。actual runtime/model/effort/speed UNKNOWN。
+
+SonarX CC0及双侧top20、每20区块独立快照有保存发布者资料支持。Requester-pays与ownAWS说明不能换成必然非零账单，也不能称已符合无账户零付费小文件要求；本轮未取得对象bytes/存在性回执。公告初始HIP3与当前文档standardperp范围分开。3原生返回不冒rawHTTP，精确UTC仍UNKNOWN。
+
+Blockclock不是arrival，但这不是所有事件研究的veto。周期快照只支持按观察时钟定义问题，不还原期间每次价格变化。
+
+既有BTC_1sec的13精确引用hash全部一致：昨日固定AX显示1.76GB/156列，派生字段仅155项；实际CSV表头、精确bytes/hash仍未取得。HTML直接绑定version1与CC0；整数据集ZIP大小不能替代一秒文件大小。工具原件仅读hash/位置，不执行；旧一分钟失败既不否定也不验证一秒数据。没有实时刷新、市场CSV/ZIP/parquet或全量日志读取。
+
+5公开动作是Owner回执范围，本审阅无联网。下一动作收敛到既有官方metadata/有界preview入口，不注册AWS或跑模型，恰当。预测、盈利、容量和财富目标均未通过。完整输入指纹见review.json；只写review，不改其他原件。
+
+最终README补充的一分钟旧公开API回执已定向读取并绑定hash：只支持定位历史访问格式，不证明当前一秒取得/preview/bytes；未重取文件或独立刷新官方文档，边界正确。

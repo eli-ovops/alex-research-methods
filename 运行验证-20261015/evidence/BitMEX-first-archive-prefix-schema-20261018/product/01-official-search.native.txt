@@ -1,0 +1,520 @@
+Perpetual Contracts Guide - BitMEX (https://www.bitmex.com/app/perpetualContractsGuide)
+citeturn942search0 [wordlim: 200] Crawled: last month;   * There is no expiry or settlement (subject to the Early Settlement). ... HYPEUSDT  | HYPEUSDT details  | 12/24/2024  | . ... An inverse contract is worth a fixed amount of the quote currency.In the case of the XBTUSD perpetual, each contract is worth $1 of Bitcoin at any price. ... Note: Under each Contract Specification page, the source borrow market is stated for each Interest Index.
+    * The Funding mechanism is used to tether contracts to their underlying spot price.
+    * This is in contrast to a Futures Contract which may trade at significantly different prices due to basis.
+  * Each perpetual contract has its own details which can be found in its Contract Specifications. These details include:
+    * Reference Index
+    * Funding Rate
+    * Maximum Leverage
+
+##### Leverage
+
+Perpetual contracts do not require traders to post 100% of collateral as margin, because of this you can trade with leverage of up to 100x on some of BitMEX’s contracts. Margin on BitMEX is denominated in Bitcoin and other cryptocurrencies, allowing traders to speculate on the future value of its products using only Bitcoin or other cryptocurrencies.
+
+##### Payout
+
+BitMEX offers perpetual contracts that have inverse, linear and quanto payouts. This document explains the key differences between these payouts, and some implications for traders.
+
+The product suits traders who prefer to hold positions for a long time and do not want their positions to fluctuate in value due to large swings in basis.
+
+##### List Of Contracts
+
+###### Inverse Contracts
+
+Contract  | Contract Specs  | Listed  | Index  | Payout Type  | Max Leverage  | Multiplier
+--- | --- | --- | --- | --- | --- | ---
+ |  |  |  |  |  | 
+XBTUSD  | XBTUSD details  | 5/13/2016  | .BXBT  | Inverse Perpetual  | 100x  | 1 USD
+
+###### Linear Contracts
+
+Contract  | Contract Specs  | Listed  | Index  | Payout Type  | Max Leverage  | Multiplier
+--- | --- | --- | --- | --- | --- | ---
+ |  |  |  |  |  | 
+BNBUSDT  | BNBUSDT details  | 12/15/2021  | .BBNBT  | Linear Perpetual  | 50x  | 0.0001 USDT
+ETHUSDT  | ETHUSDT details  | 11/10/2021  | .BETHT  | Linear Perpetual  | 100x  | 0.00001 USDT
+HYPEUSDT  | HYPEUSDT details  | 12/24/2024  | .BHYPET  | Linear Perpetual  | 50x  | 0.01 USDT
+NEARUSDT  | NEARUSDT details  | 11/7/2023  | .BNEART  | Linear Perpetual  | 33.33x  | 0.001 USDT
+SOLUSDT  | SOLUSDT details  | 11/10/2021  | .BSOLT  | Linear Perpetual  | 100x  | 0.0001 USDT
+SUIUSDT  | SUIUSDT details  | 5/3/2023  | .BSUIT  | Linear Perpetual  | 100x  | 0.001 USDT
+XAUTUSDT  | XAUTUSDT details  | 1/27/2026  | .BXAUTT  | Linear Perpetual  | 33.33x  | 0.00001 USDT
+XBTUSDT  | XBTUSDT details  | 11/10/2021  | .BXBTT  | Linear Perpetual  | 100x  | 0.000001 USDT
+XRPUSDT  | XRPUSDT details  | 11/10/2021  | .BXRPT  | Linear Perpetual  | 100x  | 0.01 USDT
+
+###### Quanto Contracts
+
+Contract  | Contract Specs  | Listed  | Index  | Payout Type  | Max Leverage  | Multiplier
+--- | --- | --- | --- | --- | --- | ---
+ |  |  |  |  |  | 
+BNBUSD  | BNBUSD details  | 9/29/2021  | .BBNB  | Quanto Perpetual  | 50x  | 0.000001 XBT
+ETHUSD  | ETHUSD details  | 8/1/2018  | .BETH  | Quanto Perpetual  | 100x  | 0.000001 XBT
+LINKUSD  | LINKUSD details  | 10/20/2021  | .BLINK  | Quanto Perpetual  | 50x  | 0.00001 XBT
+SOLUSD  | SOLUSD details  | 10/20/2021  | .BSOL  | Quanto Perpetual  | 100x  | 0.000001 XBT
+XRPUSD  | XRPUSD details  | 2/4/2020  | .BXRP  | Quanto Perpetual  | 100x  | 0.0002 XBT
+
+You can view the full list of perpetual contracts currently available for trading on BitMEX Contract List.
+
+### Contract Summary
+
+Payout Type  | Inverse  | Linear  | Quanto
+--- | --- | --- | ---
+Example Symbol  | XBTUSD  | XBTUSDT  | ETHUSD
+Underlying  | 1/XBTUSD or USDXBT  | XBTUSDT  | ETHUSD
+Multiplier  | $1  | 0.000001 USDT  | 0.000001 XBT
+Quote Currency  | USD  | USDT  | USD
+Margin & PNL Currency  | XBT  | USDT  | XBT
+XBT Value of 1 Contract  | 1/Price * $1  | Multiplier * Price  | -
+USDT Value of 1 Contract  | -  | Multiplier * Price  | -
+USD Value of 1 Contract  | $1  | .BUSDT * USDT Value  | .BXBT * XBT Value
+XBT PNL of 1 Contract  | (1/EntryPrice - 1/ExitPrice) * $1  | -  | (ExitPrice - EntryPrice) * Multiplier
+USDT PNL of 1 Contract  | -  | (ExitPrice - EntryPrice) * Multiplier  | -
+
+### What is a Quanto Contract?
+
+A quanto is a type of derivative in which the underlying is denominated in one currency, but the instrument itself is settled in another currency at some fixed rate. Our Quanto Perpetuals operate this way.
+
+These contracts are designed to be easy to trade and understand, but keep in mind as you trade them that your underlying margin and PNL are in Bitcoin. You are still exposed to Bitcoin/USD price risk when trading Quanto Perpetuals, even though the underlying and quote currencies are not Bitcoin.
+
+### What is an Inverse Contract?
+
+An inverse contract is worth a fixed amount of the quote currency. In the case of the XBTUSD perpetual, each contract is worth $1 of Bitcoin at any price. XBTUSD is an inverse contract because it is quoted as XBT/USD but the underlying is USD/XBT or 1 / (XBT/USD). It is quoted as an inverse to facilitate hedging US Dollar amounts while the spot market convention is to quote the number of US Dollars per Bitcoin.
+#### Funding
+
+Funding occurs every 8 hours at 04:00 UTC, 12:00 UTC and 20:00 UTC. You will only pay or receive funding if you hold a position at one of these times. If you close your position prior to the funding exchange then you will not pay or receive funding.
+
+The funding you pay or receive is calculated as:
+    
+    `Funding = Mark Value * Funding Rate
+    `
+
+Your Mark Value is irrespective of leverage. For example, if you hold 100 XBTUSD contracts, funding is charged/received on the notional value of those contracts, and is not based on how much margin you have assigned to the position.
+
+When the `Funding Rate` is positive, longs pay shorts. When it is negative, shorts pay longs. See examples.
+
+#### Funding Rate Calculations
+
+The Funding Rate is comprised of two main parts: the Interest Rate and the Premium / Discount. This rate aims to keep the traded price of the perpetual contract in line with the underlying reference price. In this way, the contract mimics how margin-trading markets work as buyers and sellers of the contract exchange interest payments periodically.
+
+##### Interest Rate Component
+
+Every contract traded on BitMEX consists of two instruments: a Base currency and a Quote currency. For example, on XBTUSD, the Base currency is XBT while the quote currency is USD. The Interest Rate is a function of interest rates between these two currencies:
+    
+    `Interest Rate (I) = (Funding Quote Rate - Funding Base Rate) / Funding Interval
+    where
+      Funding Quote Rate = The Interest Rate for borrowing the Quote currency
+      Funding Base Rate = The Interest Rate for borrowing the Base currency
+      Funding Interval = 3 (Since funding occurs every 8 hours)
+    
+    `
+
+Note: Under each Contract Specification page, the source borrow market is stated for each Interest Index.
+
+##### Premium / Discount Component
+
+The perpetual contract may trade at a significant premium or discount to the Mark Price. In those situations, a Premium Index will be used to raise or lower the next Funding Rate to levels consistent with where the contract is trading. Each contract’s Premium Index is available on the specific instrument’s Contract Specifications page and is calculated as follows:
+
+`Premium Index (P) = (Max(0, Impact Bid Price - Mark Price) - Max(0, Mark Price - Impact Ask Price)) / Spot Price + Fair Basis used in Mark Price`
+
+To learn more about the Impact Bid Price and Impact Ask Price, please read Fair Price Marking.
+
+--------------------------------------------------------------------------------
+Now Live: Changes to Minimum Price Increments for XBTUSD and ETHUSD - BitMEX Blog (https://www.bitmex.com/blog/site-announcement/now-live-changes-to-minimum-price-increments-for-xbtusd-and-ethusd)
+citeturn942search1 [wordlim: 200] Published: 2.2 years ago; Crawled: 3 months ago; The Minimum Price Increments for the Bitcoin (XBTUSD) and Ethereum (ETHUSD) perpetual swaps were reduced as per below on 31 July 2024 at 04:00:00 UTC. ... TheMinimum Price Increment(Tick Size) is the smallest increment by which the price of a contract can move.A smaller Minimum Price Increment can theoretically lead to reduced bid-offer spreads, useful for price takers when crossing the spread to trade.In the meantime, if you have any questions please contact Support.
+
+Blog/Resources/Now... ETHUSD
+
+# Now Live: Changes to Minimum Price Increments for XBTUSD and ETHUSD
+
+30 July 2024
+
+The Minimum Price Increments for the Bitcoin (XBTUSD) and Ethereum (ETHUSD) perpetual swaps were reduced as per below on 31 July 2024 at 04:00:00 UTC.
+
+Perpetual swap  | Current Minimum Price Increment (USD)  | Minimum Price Increment (USD) starting31 July 2024 04:00:00 UTC
+XBTUSD  | 0.5  | 0.1
+ETHUSD  | 0.05  | 0.01
+
+TheMinimum Price Increment(Tick Size) is the smallest increment by which the price of a contract can move.A smaller Minimum Price Increment can theoretically lead to reduced bid-offer spreads, useful for price takers when crossing the spread to trade.In the meantime, if you have any questions please contact Support.
+
+## WRITTEN BY
+
+BitMEX
+
+## TAGS
+
+perpetual market technical-analysis futures trading--------------------------------------------------------------------------------
+Dust on Crust - BitMEX Blog (https://www.bitmex.com/blog/dust-on-crust)
+citeturn942search2 [wordlim: 200] Published: 3.6 years ago; Crawled: 3 weeks ago; 1 NUSD = $1 of Bitcoin + Short 1 Bitcoin / USD Inverse Perpetual SwapA Bitcoin inverse perpetual swap (e.g., Ticker: XBTUSD on BitMEX) which is worth $1 of Bitcoin paid out in Bitcoin has the following payoff function:
+
+1 NUSD = $1 of Bitcoin + Short 1 Bitcoin / USD Inverse Perpetual Swap
+
+A Bitcoin inverse perpetual swap (e.g., Ticker: XBTUSD on BitMEX) which is worth $1 of Bitcoin paid out in Bitcoin has the following payoff function:
+
+$1 / Bitcoin Price in USD
+
+If Bitcoin is worth $1, then the Bitcoin value of the perpetual swap is 1 BTC, $1 / $1.
+
+If Bitcoin is worth $0.5, then the Bitcoin value of the perpetual swap is 2 BTC, $1 / $0.5.
+
+If Bitcoin is worth $2, then the Bitcoin value of the perpetual swap is 0.5 BTC, $1 / $2.
+
+This function has some interesting properties.
+
+As the value of Bitcoin in USD falls and approaches $0, the value of the swap in Bitcoin terms approaches infinity. This is a risk factor to the product, as there will only ever be 21 million Bitcoin. The Bitcoin value increases in an exponential fashion as the USD price declines. This means if the price of Bitcoin falls quickly, and the liquidity on the exchange where these derivatives are traded is thin, there is an increased chance of a socialised loss situation. I will address why this is important later.
+
+As the value of Bitcoin in USD increases and approaches infinity, the value of the swap in Bitcoin terms approaches 0. This is extremely helpful, because it means if you have a fully funded position whereby at entry you deposit the exact amount of Bitcoin that the swap represents, there is no chance you can ever go bankrupt or get liquidated.
+
+--------------------------------------------------------------------------------
+Quanto Futures: Complete Guide to Crypto Derivatives (https://www.bitmex.com/en-gb/blog/bitmex-futures-contracts)
+citeturn942search3 [wordlim: 200] Published: 2.4 years ago; Crawled: 5 months ago; So, the payout of these quanto contracts is in a different currency than that of the asset's pricing currency, adding a layer of speculation and hedging potential. ... Image: 0_gzgInbCjqUoV8ih4.webp ... Here is the XBTUSD perpetual contract specification. ... The settlement of these contracts is in Bitcoin (XBT), not the USDT or the underlying asset (ETH, LINK, SOL, APT, SUI). ... Yes, the XBTUSD perpetual swap has always been an “inverse futures contract,” and many have traded that in the past to long Bitcoin.
+### What does BitMEX XBTUSD Inverse Futures Return Profile Look Like?
+
+As mentioned earlier, an “ inverse “ contract is a different kind of contract. Though it still deals with BTC/USD, its workings are flipped. Instead of your contact’s value being fixed in Bitcoin, it’s fixed in dollars. If the price of Bitcoin goes up, the same contract will represent less Bitcoin because each Bitcoin is worth more dollars. Conversely, if the Bitcoin price falls, that same contract will represent more Bitcoin because each Bitcoin is worth fewer dollars.
+
+Now, you may wonder what that return profile looks like. Here is the XBTUSD perpetual contract specification. We see that the USD contract value is 1 USD.
+
+Image: 1_E3vN6T9taMNLM6AdsOOYng.webp
+
+Compared to other cryptocurrency inverse contracts, such ETH inverse can have varying values in USD.
+
+> To provide ample illustration and ensure a thorough understanding, let's consider a hypothetical scenario where the value of one contract is equivalent to $100.
+You can make larger profits if the market swings in your favor beyond what you accounted for by the first-order price movement, which is the delta.
+
+However, if you don’t understand convexity and how it affects the derivatives you’re trading, you won’t be able to account for how rapidly your position’s value can change, and you risk repeatedly being financially destroyed.
+
+When not understood or mismanaged, your losses will compound non-linearly.
+
+So, the BitMEX XBTUSD perpetual swap has always been an “inverse futures contract,” and many have traded that in the past. Did you know that? It's a shocker for some.
+
+The same goes for Deribit. Those were always “inverse futures contracts” and many contracts on OkEx.
+
+> What did we learn about inverse futures contracts again?
+
+  * Inverse futures are contracts that increase in their Bitcoin-denominated value when the dollar price of Bitcoin falls, and the Bitcoin-denominated value falls when the price rises.
+
+  * This is why we say the Bitcoin value is ‘exponential’ or follows a ‘1 over x’ pattern, as shown by the asymptotic curve in the graph.
+--------------------------------------------------------------------------------
+Now Live: XBTX24 Futures Contract - BitMEX Blog (https://www.bitmex.com/blog/site-announcement/now-live-xbtx24)
+citeturn942search4 [wordlim: 200] Published: 2.1 years ago; Crawled: 3 months ago; Our new monthly Bitcoin futures contract - XBTX24 - is now live.It began trading at 04:00 UTC on 24 Sep 2024 and is available to trade here.For the listing and settlement dates of the current futures contracts on BitMEX, you can refer to the table below. ... XBTV24  | Bitcoin / USD  | 27 August 2024  | 25 October 2024
+
+Blog/Resources/Now... Contract
+
+# Now Live: XBTX24 Futures Contract
+
+23 September 2024
+
+Our new monthly Bitcoin futures contract - XBTX24 - is now live.It began trading at 04:00 UTC on 24 Sep 2024 and is available to trade here.For the listing and settlement dates of the current futures contracts on BitMEX, you can refer to the table below.
+
+Code  | Pair  | Listing Date  | Settlement Date
+XBTU24  | Bitcoin / USD  | 12 December 2023  | 27 September 2024
+XBTV24  | Bitcoin / USD  | 27 August 2024  | 25 October 2024
+XBTZ24  | Bitcoin / USD  | 12 March 2024  | 27 December 2024
+XBTH25  | Bitcoin / USD  | 11 June 2024  | 28 March 2025
+XBTM25  | Bitcoin / USD  | 10 September 2024  | 27 June 2025
+XBTX24  | Bitcoin / USD  | 24 September 2024  | 29 November 2024
+
+If you have any questions, please contact our Support team.
+
+## WRITTEN BY
+
+BitMEX
+
+## TAGS
+
+futures bitcoin trading bitmex technical-analysis--------------------------------------------------------------------------------
+Perpetual FX Contracts | Trade Forex 24/7 on BitMEX (https://www.bitmex.com/blog/perpetual-fx-contract)
+citeturn942search5 [wordlim: 200] Published: 4.2 years ago; Crawled: last month; A new breed of crypto derivative - the perpetualFX contract - is now live and ready for trading. ... Users who trade our foreign exchange swap contracts can post margin in Bitcoin (XBT) or Tether (USDT ERC-20) - and profit in XBT or USDT terms - as the exchange rate of a specific foreign currency pair changes. ...     * Inverse contracts:When trading inverse contracts, users deposit a specific cryptocurrency to begin with and these contracts settle in the underlying cryptocurrency (as opposed to the quote currency). ...   * XBT Contract Value: USDBRL Price * Bitcoin Multiplier (10,000 Sat / 1 BRL)
+### USDBRL Quanto Contract Specs
+
+  * Symbol: USDBRL
+
+  * Margin currency: XBT
+
+  * Bitcoin Multiplier: 0.0001 XBT (10,000 Satoshis)
+
+  * XBT Contract Value: USDBRL Price * Bitcoin Multiplier (10,000 Sat / 1 BRL)
+
+  * Underlying: .BUSDBRL
+
+  * Max Leverage: 50x
+
+  * Maker Fee: -0.01%
+
+  * Taker Fee: 0.075%
+
+  * Base Initial Margin: 2.00%
+
+  * Base Maintenance Margin: 1.00%
+
+The listing’s full contract specs can be found here.
+
+### USDMXN Quanto Contract Specs
+
+  * Symbol: USDMXN
+
+  * Margin currency: XBT
+
+  * Bitcoin Multiplier: 0.0001 XBT (10,000 Satoshis)
+
+  * XBT Contract Value: USDMXN Price * Bitcoin Multiplier (10,000 Sat / 1 MXN)
+
+  * Underlying: .BUSDMXN
+
+  * Max Leverage: 50x
+
+  * Maker Fee: -0.01%
+
+  * Taker Fee: 0.075%
+
+  * Base Initial Margin: 2.00%
+
+  * Base Maintenance Margin: 1.00%
+
+The listing’s full contract specs can be found here.
+
+### USDSEK Quanto Contract Specs
+
+  * Symbol: USDSEK
+
+  * Margin currency: XBT
+
+  * Bitcoin Multiplier: 0.0001 XBT (10,000 Satoshis)
+
+  * XBT Contract Value: USDSEK Price * Bitcoin Multiplier (10,000 Sat / 1 SEK)
+
+  * Underlying: .BUSDSEK
+
+  * Max Leverage: 50x
+
+  * Maker Fee: -0.01%
+
+  * Taker Fee: 0.075%
+
+  * Base Initial Margin: 2.00%
+
+  * Base Maintenance Margin: 1.00%
+
+The listing’s full contract specs can be found here.
+
+### NZDUSD Quanto Contract Specs
+
+  * Symbol: NZDUSD
+
+  * Margin currency: XBT
+
+  * Bitcoin Multiplier: 0.0001 XBT (10,000 Satoshis)
+
+  * XBT Contract Value: NZDUSD Price * Bitcoin Multiplier (10,000 Sat / 1 NZD)
+
+  * Underlying: .BNZDUSD
+
+  * Max Leverage: 50x
+
+  * Maker Fee: -0.01%
+
+  * Taker Fee: 0.075%
+
+  * Base Initial Margin: 2.00%
+
+  * Base Maintenance Margin: 1.00%
+
+The listing’s full contract specs can be found here.
+
+--------------------------------------------------------------------------------
+XBTN24 Futures Listing - BitMEX Blog (https://www.bitmex.com/blog/site-announcement/xbtn24-futures-listing)
+citeturn942search6 [wordlim: 200] Published: 2.4 years ago; Crawled: 4 months ago; On 28 May 2024 at 04:00 UTC, a new XBT futures contract, underlined and margined in Bitcoin, will be listed on BitMEX.
+
+Blog/Resources/XBTN24 Futures Listing
+
+# XBTN24 Futures Listing
+
+23 May 2024
+
+On 28 May 2024 at 04:00 UTC, a new XBT futures contract, underlined and margined in Bitcoin, will be listed on BitMEX. The listing will expire on 26 Jul 2024.This contract is now live on Testnet, along with its contract specifications. It is also already visible on the platform as ‘Unlisted’.Contract highlights:
+
+  * Expiring: 26 Jul 2024
+
+  * Bitcoin-margined
+
+  * Cash settled
+
+  * Up to 100x leverage
+
+  * 75 XBT risk limit
+
+In the meantime, if you have any questions please contact Support.
+
+## WRITTEN BY
+
+BitMEX
+
+## TAGS
+
+futures bitcoin bitmex technical-analysis margin--------------------------------------------------------------------------------
+Now Live: XBTV24 Futures Contract - BitMEX Blog (https://www.bitmex.com/blog/site-announcement/now-live-xbtv24)
+citeturn942search7 [wordlim: 200] Published: 2.1 years ago; Crawled: 2 months ago; Our new monthly Bitcoin futures contract - XBTV24 - is now live.It began trading at 04:00 UTC on 27 Aug 2024 and is available to trade here.For the listing and settlement dates of the current futures contracts on BitMEX, you can refer to the table below. ... XBTV24  | Bitcoin / USD  | 27 August 2024  | 25 October 2024
+
+Blog/Resources/Now Live: XBTV24 Futures Contract
+
+# Now Live: XBTV24 Futures Contract
+
+26 August 2024
+
+Our new monthly Bitcoin futures contract - XBTV24 - is now live.It began trading at 04:00 UTC on 27 Aug 2024 and is available to trade here.For the listing and settlement dates of the current futures contracts on BitMEX, you can refer to the table below.
+
+Code  | Pair  | Listing Date  | Settlement Date
+XBTU24  | Bitcoin / USD  | 12 December 2023  | 27 September 2024
+XBTV24  | Bitcoin / USD  | 27 August 2024  | 25 October 2024
+XBTZ24  | Bitcoin / USD  | 12 March 2024  | 27 December 2024
+XBTH25  | Bitcoin / USD  | 11 June 2024  | 28 March 2025
+
+If you have any questions, please contact our Support team.
+
+BitMEX 2,660 articles TeamBitMEX is a leading crypto derivatives exchange. Since 2014, BitMEX has been at the forefront of crypto innovation—most notably as the original pioneers of the Perpetual Swap.
+
+## SHARE POST
+
+Image: Discord
+
+## WRITTEN BY
+
+BitMEX
+
+## TAGS
+
+futures bitcoin trading bitmex technical-analysis--------------------------------------------------------------------------------
+The Technical Details of Our Lot Size Change on XBTUSD Swap and XBT Futures - BitMEX Blog (https://testnet.bitmex.com/blog/the-technical-details-of-our-lot-size-change-on-xbtusd-swap-and-xbt-futures)
+citeturn942search8 [wordlim: 200] Published: 5.4 years ago; Crawled: last month; Today, we announced that we are changing the Lot Size, or minimum trading unit, on our popular XBTUSD Swap and XBT futures (XBTM21 and XBTU21) from 1 contract to 100 contracts, effective 04:30 UTC on 8 June 2021. ... By introducing a Lot Size of 100 contracts, we can now round the Bitcoin price to 8 decimal places and still result in a different Settlement Price for our smallest price increment. ... When XBT is ~US$57k, the tick size is 0.0009% (0.5 / 57,000) but due to the inverse nature of the contract, the effective tick size is a 0.057% change in XBT.
+
+Our products are settled in Bitcoin at the time of each trade, meaning once a trade is executed, we either debit or credit your account with a Bitcoin value.Each Bitcoin is subdivided into Satoshis. As there are 100,000,000 Satoshis in a Bitcoin, each Bitcoin can have up to 8-decimal places of precision (i.e. 1 Satoshi is 0.00000001 Bitcoin).
+
+However, as our contracts have a $0.50 tick-size, that means that at prices over about $10,000 per Bitcoin, the value in XBT can sometimes need more than 8 decimal places to be represented properly. As you can’t have half a Satoshi, the value credited or debited to your account for each Lot needs to be rounded to the nearest Satoshi: 8 decimal places.
+
+Here’s a real example: at a price of 50,000 and a Lot Size of 1, a trade would result in an XBT price of 0.00002 (i.e. 1/50000) - no rounding necessary as that’s 2,000 Satoshis. A second execution at a price of 50,000.5 would result in an XBT price of 0.0000199998 (i.e. 1/50000.5), which is 1,999.98 Satoshis. As there’s no such thing as 0.98 Satoshis, that value is rounded to 0.00002 - the same value. If a trader bought at the first price and sold 50 cents higher, they would make no money in Bitcoin terms.
+
+--------------------------------------------------------------------------------
+Now Live: XBTK24 Futures Contract - BitMEX Blog (https://www.bitmex.com/en-gb/blog/site-announcement/now-live-xbtk24-futures-contract)
+citeturn942search9 [wordlim: 200] Published: 2.6 years ago; Crawled: 2 months ago; Our new monthly Bitcoin futures contract - XBTK24 - is now live.It began trading at 04:00 UTC on 26 March 2024 and is available to trade here.For the listing and settlement dates of the current futures contracts on BitMEX, you can refer to the table below. ... XBTM24  | Bitcoin / USD  | 12 September 2023  | 28 June 2024
+
+Blog/Resources/Now Live: XBTK24 Futures Contract
+
+# Now Live: XBTK24 Futures Contract
+
+25 March 2024
+
+Our new monthly Bitcoin futures contract - XBTK24 - is now live.It began trading at 04:00 UTC on 26 March 2024 and is available to trade here.For the listing and settlement dates of the current futures contracts on BitMEX, you can refer to the table below.
+
+Code  | Pair  | Listing Date  | Settlement Date
+XBTH24  | Bitcoin / USD  | 13 June 2023  | 29 March 2024
+XBTM24  | Bitcoin / USD  | 12 September 2023  | 28 June 2024
+XBTU24  | Bitcoin / USD  | 12 December 2023  | 27 September 2024
+XBTJ24  | Bitcoin / USD  | 20 February 2024  | 26 April 2024
+XBTK24  | Bitcoin / USD  | 26 March 2024  | 31 May 2024
+
+If you have any questions, please contact our Support team.
+
+BitMEX 2,667 articles TeamBitMEX is a leading crypto derivatives exchange. Since 2014, BitMEX has been at the forefront of crypto innovation—most notably as the original pioneers of the Perpetual Swap.
+
+## SHARE POST
+
+Image: Discord
+
+## WRITTEN BY
+
+BitMEX
+
+## TAGS
+
+futures bitcoin trading bitmex technical-analysis--------------------------------------------------------------------------------
+Now Live: Bitcoin- and Tether – Margined OP Listings - BitMEX Blog (https://www.bitmex.com/blog/op-contracts)
+citeturn942search10 [wordlim: 200] Published: 2.8 years ago; Crawled: last month; 14 January 2024 ...   * XBT Contract Value: OPUSD Price * Bitcoin Multiplier (10,000 Sats/ 1 USD) ... You can trade the OPUSD perpetual contract here, or check out the full contract specs here. ...   * Margin Currency: USDT
+This allows traders to long or short the OP/USD exchange rate without ever touching OP or USD.
+
+Traders can post margin in XBT, and earn or lose in XBT as the OP/USD rate changes.
+
+This quanto risk premium may be one of the factors that results in the OPUSD swap trading at a premium/discount to the OPUSD spot price.
+
+For an explanation of the same concept, check out this blog post referencing ETHUSD.
+
+Key contract details for our OP listing:
+
+  * Symbol: OPUSD
+
+  * Margin Currency: XBT
+
+  * Bitcoin Multiplier: 0.0001 XBT (10,000 Satoshis)
+
+  * XBT Contract Value: OPUSD Price * Bitcoin Multiplier (10,000 Sats/ 1 USD)
+
+  * Underlying:.BOP
+
+  * Max Leverage: 20x
+
+  * Risk limit: 50 XBT
+
+  * Maker Fee: 0.02%
+
+  * Taker Fee: 0.075%
+
+  * Base Initial Margin: 5.00%
+
+  * Base Maintenance Margin: 2.50%
+
+You can trade the OPUSD perpetual contract here, or check out the full contract specs here.
+
+## OPUSDT Linear Contract Specs
+
+OPUSDT is a linear perpetual swap, margined in USDT. --------------------------------------------------------------------------------
+Now Live: XBTJ25 Futures Contract - BitMEX Blog (https://www.bitmex.com/blog/site-announcement/now-live-xbtj25)
+citeturn942search11 [wordlim: 200] Published: 1.7 years ago; Crawled: 5 months ago; Our new monthly Bitcoin futures contract - XBTJ25 - is now live.It began trading at 04:00 UTC on25 Feb 2025and is available to trade here.For the listing and settlement dates of the current futures contracts on BitMEX, you can refer to the table below. ... XBTG25  | Bitcoin / USD  | 24 December 2024  | 28 February 2025 ... Since 2014, BitMEX has been at the forefront of crypto innovation—most notably as the original pioneers of the Perpetual Swap.
+
+Blog/Resources/Now Live: XBTJ25 Futures Contract
+
+# Now Live: XBTJ25 Futures Contract
+
+21 February 2025
+
+Our new monthly Bitcoin futures contract - XBTJ25 - is now live.It began trading at 04:00 UTC on25 Feb 2025and is available to trade here.For the listing and settlement dates of the current futures contracts on BitMEX, you can refer to the table below.
+
+Code  | Pair  | Listing Date  | Settlement Date
+XBTG25  | Bitcoin / USD  | 24 December 2024  | 28 February 2025
+XBTH25  | Bitcoin / USD  | 11 June 2024  | 28 March 2025
+XBTJ25  | Bitcoin / USD  | 25 February 2025  | 25 April 2025
+XBTM25  | Bitcoin / USD  | 6 September 2024  | 27 June 2025
+XBTU25  | Bitcoin / USD  | 18 November 2024  | 26 September 2025
+
+If you have any questions, please contact our Support team.
+
+BitMEX 2,402 articles TeamBitMEX is a leading crypto derivatives exchange. Since 2014, BitMEX has been at the forefront of crypto innovation—most notably as the original pioneers of the Perpetual Swap.
+
+## SHARE POST
+
+Image: Discord
+
+## WRITTEN BY
+
+BitMEX
+
+## TAGS
+
+futures bitcoin trading bitmex technical-analysis--------------------------------------------------------------------------------
+Terms of Service (June 2025).docx (https://static.bitmex.com/documents/Terms_of_Service__June_2025.pdf)
+citeturn942search12 [wordlim: 200] The Trading Platform and all calculations are currently denominated in bitcoin or USD Tether (with transfer and credit on the Bitcoin blockchain and Ethereum blockchain, respectively).
+--------------------------------------------------------------------------------
+2025 
+Crypto 
+Outlook
+Top 5 Key Narratives to 
+Wat (https://blog.bitmex.com/wp-content/uploads/2025/01/BitMEX_2025-Crypto-Outlook-Report_compressed.pdf)
+citeturn942search13 [wordlim: 200] Published: last year; Bitcoin as ... contract) when critical regulatory decisions are ... Trade XBTUSD
+--------------------------------------------------------------------------------
+Equity Perpetual Products - Additional Terms of Service (https://static.bitmex.com/documents/equity-perpetual-products-additional-terms-of-service.pdf)
+citeturn942search14 [wordlim: 200] Published: 5 months ago; 4.1  Equity Perpetual Products are Contracts (as defined in the Exchange Rules) linked to a publicly listed single
+--------------------------------------------------------------------------------
+CCCAGG  
+Exchange Review 
+ 
+CryptoCompare 
+ 
+Octob (https://blog.bitmex.com/wp-content/uploads/2018/11/cryptocompare_exchange_review_october_2018.pdf)
+citeturn942search15 [wordlim: 200] Published: 2.2 years ago; This section aims to provide a macro view of the cryptocurrency exchange market as a whole. ... 1818/0919/0920/0921/0922/0923/0924/0925/0926/0927/0928/0929/0930/0901/1002/1003/1004/1005/1006/1007/1008/1009/1010/1011/1012/10 ... Futures exchanges such as BitMex (XBT to USD perpetual futures) and BitflyerFX (BTC to JPY futures) ... CME and CBOE trading bitcoin futures, only constitute a very small proportion of the total market at
+

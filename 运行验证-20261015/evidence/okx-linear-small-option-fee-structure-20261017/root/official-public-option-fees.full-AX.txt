@@ -1,0 +1,508 @@
+Browser tab: 1, Title: "欧易交易手续费 | 手续费率 | 数字货币交易所手续费 | 手续费等级 | 欧易", URL: "https://www.okx.com/zh-hans/fees".
+0 AXWebArea 欧易交易手续费 | 手续费率 | 数字货币交易所手续费 | 手续费等级 | 欧易, URL: okx.com/zh-hans/fees
+	1 container body
+		2 container
+			3 button 跳转至主要内容
+			4 link Description: 欧易标志，访问首页, Value: okx.com/zh-hans
+			5 container Description: 主导航菜单, ID: navContainer
+				6 container
+					7 button (collapsed)  买币, ID: title-nav-buy, Secondary Actions: Expand
+						8 text 
+						9 text 买币
+					10 text 灵活选择，0 交易费
+					11 text 流程简单，快速成交
+					12 text 查看实时兑换汇率和币种最新价值
+					13 link Description: 市场, Value: okx.com/zh-hans/markets/prices
+					14 button (collapsed)  交易, ID: title-nav-trade, Secondary Actions: Expand
+						15 text 
+						16 text 交易
+					17 text 币币兑换，0 费率，无滑点
+					18 text 轻松买卖数字货币
+					19 text 交易永续和交割合约，灵活使用杠杆
+					20 text 使用加密货币交易股票、ETF 和大宗商品
+					21 text 使用交易所余额，轻松交易链上代币
+					22 text 判断币种价格走势，交易期权
+					23 text 参与新币、现货、合约等交易活动，赚取奖励
+					24 text 用 AI Agent 和 Skill，让您的交易自动运转
+					25 text 自动化交易策略或跟随顶级交易员
+					26 text 为合约价差提供深度流动性
+					27 text 支持自定义多腿策略和大宗交易
+					28 button (collapsed)  金融, ID: title-nav-earn, Secondary Actions: Expand
+						29 text 
+						30 text 金融
+					31 text 持币生币， 赚取收益
+					32 text 质押数字资产，满足您的投资和消费需求
+					33 text 抢先发现全球优质新项目
+					34 button (collapsed)  机构客户, ID: title-nav-institutions, Secondary Actions: Expand
+						35 text 
+						36 text 机构客户
+					37 text 为机构客户提供最强劲、最完整的数字货币交易解决方案
+					38 text 受监管机构的一站式数字资产服务平台
+					39 text 支持场外交易，为专业交易员和机构用户提供流动性
+					40 text 超低延迟的 API 无缝连接您的数据和操作
+					41 text 享受世界一流的市场深度，获得高额的佣金回赠
+					42 text 统一管理子账户，让交易变得更轻松、更安全、更实惠
+					43 text K线图、交易汇总、订单表数据等信息尽在掌握
+					44 text 洞悉最前沿的机构交易研究、新闻及更多
+					45 button (collapsed)  新手学院, Secondary Actions: Expand
+						46 text 
+						47 text 新手学院
+					48 text 入门知识，搭建数字资产基础认知
+					49 text 跟随引导，轻松学习购买数字资产
+					50 text 一站式解决交易常见问题
+					51 text 实时追踪币种最新价格，和市场最新动向
+					52 text 紧跟最新币种资讯，了解趋势动态
+					53 text 欧易官方发布内容，洞察平台趋势
+					54 text 学习 AI 交易 Agent 基础，获取认证证书
+					55 button (collapsed)  星球, ID: title-nav-orbit, Secondary Actions: Expand
+						56 text 
+						57 text 星球
+					58 text 热门话题畅所欲言，观点碰撞发现交易灵感
+					59 text 开启达人直播，近距离与粉丝互动
+					60 button (collapsed)  更多, Secondary Actions: Expand
+						61 text 
+						62 text 更多
+					63 pop up button (collapsed) Description: 搜索币对, Secondary Actions: Expand
+						64 text 
+					65 link Description: 登录, Value: okx.com/zh-hans/account/login
+					66 link Description: 注册, Value: okx.com/zh-hans/account/register?action=header_register_btn
+					67 button 下载 App。菜单包括二维码和其他下载选项。
+					68 button (collapsed) Description: 通知和公告, Secondary Actions: Expand
+					69 button 获取帮助或关注我们的社交媒体
+						70 text 
+					71 pop up button (collapsed) Description: 更改语言或货币, Secondary Actions: Expand
+						72 text 
+		73 container root
+			74 tab group
+				75 container
+					76 tab (selected, settable, boolean) 交易手续费, Value: 1
+交易手续费
+					77 tab (selectable, settable, boolean) 流动性计划, Value: 0
+流动性计划
+					78 tab (selectable, settable, boolean) 借币利率和限额, Value: 0
+借币利率和限额
+					79 tab (selectable, settable, boolean) 提币, Value: 0
+提币
+			80 text 根据过去 30 天的资产量或交易量的不同，用户区分为普通用户和 VIP 会员用户。用户的等级决定了其下一个交易日的交易手续费。
+			81 text 不同的交易类型存在多种用于计算手续费等级的标准，若您在某个交易类型中达到了不同的手续费等级标准，您将始终享受您已达到的最高等级的手续费优惠。例如，您过去 30 天内的现货交易量为 5,000,000 USD，达到了 VIP 2 手续费等级标准，同时您过去 30 天内的合约交易量为 10,000,000 USD，达到了 VIP 3 手续费等级标准，那么您的全部交易类型均可享 VIP 3 的手续费优惠。
+			82 tab group
+				83 container
+					84 tab (selectable, settable, boolean) 现货, Value: 0
+					85 tab (selectable, settable, boolean) 合约, Value: 0
+					86 tab (selected, settable, boolean) 期权, Value: 1
+					87 tab (selectable, settable, boolean) 价差策略, Value: 0
+					88 tab (selectable, settable, boolean) 事件, Value: 0
+			622 container 期权
+			446 table
+				447 row
+					448 cell
+						449 text 阶段
+					450 cell
+						451 text 用户等级
+					452 cell
+						453 text 资产量 (USD)
+					454 cell
+						455 text 或
+					456 cell
+						457 text 近 30 天交易量 (USD)
+					458 cell
+						459 text 挂单成交手续费
+					460 cell
+						461 text 吃单成交手续费
+					462 cell
+						463 text 24 小时提币额度 (USD)
+				464 row
+					465 cell
+						466 text --
+					467 cell
+						468 text 普通用户
+					469 cell
+						470 text < 100,000
+					471 cell
+						472 text /
+					473 cell
+						474 text < 3,000,000
+					475 cell
+						476 text 0.0300%
+					477 cell
+						478 text 0.0300%
+					479 cell
+						480 text 10,000,000
+				481 row
+					482 cell
+						483 text 黄金
+					484 cell
+						485 text VIP 1
+					486 cell
+						487 text ≥ 100,000
+					488 cell
+						489 text /
+					490 cell
+						491 text ≥ 3,000,000
+					492 cell
+						493 text 0.0280%
+					494 cell
+						495 text 0.0300%
+					496 cell
+						497 text 20,000,000
+				498 row
+					499 cell
+						500 text VIP 2
+					501 cell
+						502 text ≥ 200,000
+					503 cell
+						504 text /
+					505 cell
+						506 text ≥ 5,000,000
+					507 cell
+						508 text 0.0250%
+					509 cell
+						510 text 0.0300%
+					511 cell
+						512 text 24,000,000
+				513 row
+					514 cell
+						515 text VIP 3
+					516 cell
+						517 text ≥ 2,000,000
+					518 cell
+						519 text /
+					520 cell
+						521 text ≥ 10,000,000
+					522 cell
+						523 text 0.0200%
+					524 cell
+						525 text 0.0300%
+					526 cell
+						527 text 32,000,000
+				528 row
+					529 cell
+						530 text 铂金
+					531 cell
+						532 text VIP 4
+					533 cell
+						534 text ≥ 5,000,000
+					535 cell
+						536 text /
+					537 cell
+						538 text ≥ 25,000,000
+					539 cell
+						540 text 0.0200%
+					541 cell
+						542 text 0.0250%
+					543 cell
+						544 text 40,000,000
+				545 row
+					546 cell
+						547 text VIP 5
+					548 cell
+						549 text ≥ 20,000,000
+					550 cell
+						551 text /
+					552 cell
+						553 text ≥ 50,000,000
+					554 cell
+						555 text 0.0150%
+					556 cell
+						557 text 0.0200%
+					558 cell
+						559 text 48,000,000
+				560 row
+					561 cell
+						562 text VIP 6
+					563 cell
+						564 text ≥ 50,000,000
+					565 cell
+						566 text /
+					567 cell
+						568 text ≥ 100,000,000
+					569 cell
+						570 text 0.0100%
+					571 cell
+						572 text 0.0200%
+					573 cell
+						574 text 60,000,000
+				575 row
+					576 cell
+						577 text 黑金
+					578 cell
+						579 text VIP 7
+					580 cell
+						581 text ≥ 100,000,000
+					582 cell
+						583 text /
+					584 cell
+						585 text ≥ 1,500,000,000
+					586 cell
+						587 text -0.0050%
+					588 cell
+						589 text 0.0150%
+					590 cell
+						591 text 72,000,000
+				592 row
+					593 cell
+						594 text VIP 8
+					595 cell
+						596 text ≥ 250,000,000
+					597 cell
+						598 text /
+					599 cell
+						600 text ≥ 2,000,000,000
+					601 cell
+						602 text -0.0100%
+					603 cell
+						604 text 0.0150%
+					605 cell
+						606 text 80,000,000
+				607 row
+					608 cell
+						609 text VIP 9
+					610 cell
+						611 text ≥ 500,000,000
+					612 cell
+						613 text /
+					614 cell
+						615 text ≥ 20,000,000,000
+					616 cell
+						617 text -0.0100%
+					618 cell
+						619 text 0.0130%
+					620 cell
+						621 text 80,000,000
+			277 text 以上近 30 天交易量为用户最近 30 天在对应业务线的总交易量
+			623 definition list
+				624 container 交易手续费规则
+					625 text 交易手续费规则
+				626 table
+					627 row
+						628 cell
+							629 text 类型
+						630 cell
+							631 text 详情
+					632 container
+						633 row
+							634 cell
+								635 text 交易手续费
+							636 cell
+								637 text 币本位合约
+								638 text 费率为正：Min (手续费率 × 合约乘数 × 合约面值 × 成交张数，7% × 成交价格 × 合约乘数 × 合约面值 × 成交张数)
+								639 text 费率为负：Max (手续费率 × 合约乘数 × 合约面值 × 成交张数，-7% × 成交价格 × 合约乘数 × 合约面值 × 成交张数)
+								640 text U本位合约
+								641 text 费率为正：Min (手续费率 × 合约乘数 × 合约面值 × 成交张数 × indexPrice，7% × 成交价格 × 合约乘数 × 合约面值 × 成交张数)
+								642 text 费率为负：Max (手续费率 × 合约乘数 × 合约面值 × 成交张数 × indexPrice，-7% × 成交价格 × 合约乘数 × 合约面值 × 成交张数)
+						643 row
+							644 cell
+								645 text 行权手续费
+							646 cell
+								647 text Min (0.02% × 合约乘数 × 合约面值 × 成交张数，吃单手续费率 × 合约乘数 × 合约面值 × 成交张数，7% × 结算价格 × 合约乘数 × 合约面值 × 成交张数)
+								648 text • 当日期权没有行权费，当日期权指到日期不在周五的期权。
+								649 text • 仅适用于已行权的期权，不适用于未行权的期权。
+						650 row
+							651 cell
+								652 text 强平手续费
+							653 cell
+								654 text Min (用户的吃单手续费等级 × 合约乘数 × 成交张数，7% × 标记价格 × 合约乘数 × 合约面值 × 成交张数)
+						655 row
+							656 cell
+								657 text 强平清算费
+							658 cell
+								659 text 卖出方向期权：BTC 收取 2.5%，ETH 收取 4%
+								660 text 买入方向期权 (组合保证金模式)：BTC 收取 0.1%，ETH 收取 0.15%
+						661 row
+							662 cell
+								663 text 期权组合
+							664 cell
+								665 text 在询价单 (RFQ) 交易期权组合可享受  低至 5 折  手续费！
+								666 text 对于交易中的任一标的，仅针对其名义值较高的交易方向收取手续费。
+								667 text 多腿组合交易中，只有产生手续费的腿的交易量会计入相应交易类型的 30 天交易量。
+			668 definition list
+				669 container 手续费计算示例
+					670 text 手续费计算示例
+				671 text 假设 BTCUSD 币本位期权的合约乘数为 0.01，面值为 1 BTC，成交价格为 0.05 BTC。您的挂单费率为 0.02%，吃单费率为 0.03%，买入 100 张看涨期权 (名义值为 1 BTC)。
+				672 content list
+					673 container
+						674 AXListMarker • 
+						675 text 成交后，如果您为吃单方，则交易手续费为 0.03% × 0.01 × 1 × 100 = 0.0003 BTC 和 7% × 0.05 × 0.01 × 1 × 100 = 0.0035 BTC 中的最小值，即 0.0003 BTC。
+				676 content list
+					677 container
+						678 AXListMarker • 
+						679 text 成交后，如果您为挂单方，则交易手续费为 0.02% × 0.01 × 1 × 100 = 0.0002 BTC 和 7% × 0.05 × 0.01 × 1 × 100 = 0.0035 BTC 中的最小值，即 0.0002 BTC。
+			680 definition list
+				681 container 期权组合示例
+					682 text 期权组合示例
+				683 table
+					684 row
+						685 cell
+							686 text 组合交易
+						687 cell
+							688 text 手续费
+					689 container
+						690 row
+							691 cell
+								692 text 买入 1 个 BTC 看涨期权，买入 1 个 BTC 看跌期权
+							693 cell
+								694 text 两边腿都会收取手续费。都是卖出腿时，也都会收取手续费。
+						695 row
+							696 cell
+								697 text 买入 3 个 BTC 看涨期权，卖出 2 个 BTC 看跌期权
+							698 cell
+								699 text 仅对买入 3 BTC 的看涨期权收取费用
+						700 row
+							701 cell
+								702 text 买入 3 个 BTC 看涨期权，卖出 2 个 ETH 看跌期权
+							703 cell
+								704 text 对两条腿的期权交易和交易的名义总额收取费用。
+						705 row
+							706 cell
+								707 text 买入 3 个 BTC 看涨期权，卖出 2 个 BTC 看跌期权，买入 2 个 ETH 买涨期权，卖出 2 个 ETH 看跌期权
+							708 cell
+								709 text 手续费计算方法适用于 BTC 策略和 ETH 策略。在此示例中，对买入 3 个 BTC 和买入 2 个 ETH 收取手续费。
+						710 row
+							711 cell
+								712 text 买入 3 个 BTC 看涨期权，卖出 2 个 BTC 看跌期权，买入 BTC 永续对冲
+							713 cell
+								714 text 仅对期权交易收取手续费。如案例所示，仅对买入 3 个 BTC 和买入 BTC 永续对冲的腿收取手续费。
+			278 definition list
+				279 container 主账户与子账户
+					280 text 主账户与子账户
+				281 text 若您拥有子账户，您的手续费等级将根据主账户和全部子账户在过去 30 天内的总交易量和每日资产余额之和计算得出，且每个账户均可享相同的手续费等级优惠。新创建子账户的手续费优惠将于当日 00:00 (UTC+8) 生效。
+			289 definition list
+				290 container 资产量 (USD)
+					291 text 资产量 (USD)
+				292 text 平台会在每天 00:00 (UTC+8) 快照您在交易、资产和金融账户的资产量，不计入通过杠杆交易或借贷业务借入的资产。资产量乘以前一天的 USDT 收盘价，再乘以购买当日的 USDT/USD 每日收盘价，计算出最终的 USD 价值。平台将取值日常快照和过去 30 天平均值中更高的值，作为您的资产量。
+				293 text 示例：您持有 0.5 ETH。前一天 ETH/USDT 的收盘价为 4,000 USDT，购买当日 USDT/USD 的收盘价为 1.0001 USD。则资产量 (USD) = 0.5 × 4,000 × 1.0001 = 2,000.2 USD。
+			715 definition list
+				716 container 30 天交易量
+					717 text 30 天交易量
+				718 container
+					719 text 30 天交易量由期权交易量和结构化产品交易量两部分构成：
+					720 text 1. 期权交易量：期权交易最近 30 天的交易量，采用有效名义价值计算。对于每笔成交，有效名义价值 = Min (名义价值， |手续费| / |手续费率|)， 其中为实际收取的手续费，手续费率为用户对应的 maker 或 taker 费率。如果手续费未触发 cap，交易量不变；只有当手续费触发了 cap 时，交易量才会相应调低。币本位期权的手续费以标的资产计价 (如 BTC)，需乘以成交时指数价格转换为 USD；USDT 本位期权的手续费已以 USDT 计价，无需额外转换。交易量以 BTC 美元价格折算成 BTC，再按照每日 BTC/USD 的中间价折算成 USD [BTC/USD 中间价 = (开盘价 + 收盘价) / 2]，并在每日 0:00 (UTC+8) 进行结算，计算出最近 30 天所有期权交易币种的累计交易量。
+					721 text 2. 结构化产品交易量：结构化产品包括双币赢和固定票息产品，交易量都以美元价格统计。用户申购结构化产品后，我们将以交易发生的小时收盘价，将申购币种折算成 USDT，再按照该小时 USDT/USD 收盘价折算成 USD，按照此方式计算出最近 30 天所有结构化产品交易币种的累计交易量。
+			722 definition list
+				723 container 挂单与吃单
+					724 text 挂单与吃单
+				725 container
+					726 text 挂单是指用户设置价格后下单，但订单不会立即与深度列表里的其他订单相匹配，而是进入深度列表中等待对方主动来达成交易。
+					727 text 例如，当前卖一价是 1,000 USDT，用户以 999 USDT 的价格下了一个买单，随后订单会进入深度列表中的买单列表等待别人出 999 USDT 的卖价与该买单达成交易，订单成交后需支付挂单手续费，同时吃单用户需支付吃单手续费。
+			326 definition list
+				327 container 24 小时提币限额 (USD)
+					328 text 24 小时提币限额 (USD)
+				329 text 平台基于您的手续费等级，于每日 00:00 (UTC+8) 计算 24 小时提币限额，您持有的全部资产将折算为美元价值，提币限额不能超过当前等级的每日限额。
+				330 text 示例：您的 24 小时提币限额为 300 USD，若您提币了 250 USDT、价值 25 USD 的 OMG 和价值 15 USD 的 XRP，已使用了 290 USD 的额度，剩余 10 USD 的额度。如果您想继续提币价值 20 USD 的 XRP，此时超出了剩余的提币额度，该申请将被系统拒绝，直到第二天恢复提币额度。遇到这种情况时，您可以联系客服申请临时增加额度。
+			331 definition list
+				332 container 每日手续费等级更新时间
+					333 text 每日手续费等级更新时间
+				334 text 手续费等级将于每日 4:00 ~ 6:00 (UTC+8) 更新。
+			335 definition list
+				336 container 手续费分组
+					337 text 手续费分组
+				338 text 欧易按照不同手续费将币对进行分组。分组和费率将每 3 个月进行评估与更新，相关情况将至少提前 2 周在公告页进行通知。您也可参照本页内容，了解最新的手续费详情。
+			339 definition list
+				340 container 免责声明
+					341 text 免责声明
+				342 container
+					343 text 欧易手续费率可能会根据您所在的地区产生变化，您可点击
+					344 link Description: 此处, Value: okx.com/zh-hans/balance/fee
+					345 text 查看您适用的手续费率。
+		346 container footerContainer
+			347 text ©2017 - 2026 OKX.COM
+			348 button (collapsed) Description: 选择的语言和货币：简体中文/USD, ID: language, Secondary Actions: Expand
+				349 text 
+				350 text 简体中文/USD
+				351 text 
+			352 container 欧易目录
+				353 text 关于欧易
+				354 container 关于欧易
+					355 link Description: 关于我们, Value: okx.com/zh-hans/about
+					356 link Description: 候选人隐私声明, Value: okx.com/zh-hans/help/okx-candidate-privacy-notice
+					357 link Description: 就业机会, Value: okx.com/zh-hans/join-us
+					358 link Description: 联系我们, Value: okx.com/zh-hans/contact-us
+					359 link Description: 服务条款, Value: okx.com/zh-hans/help/terms-of-service
+					360 link Description: 隐私政策, Value: okx.com/zh-hans/help/privacy-policy-statement
+					361 link Description: 免责声明, Value: okx.com/zh-hans/help/risk-compliance-disclosure
+					362 link Description: 廉正举报, Value: okx.com/zh-hans/help/whistleblower-notice
+					363 link Description: 执法请求, Value: okx.com/zh-hans/help/okx-law-enforcement-request-guide
+					364 link Description: 欧易 App, Value: okx.com/zh-hans/download
+				365 text 产品
+				366 container 产品
+					367 link Description: 快捷买币, Value: okx.com/zh-hans/buy-crypto
+					368 link Description: C2C 交易, Value: okx.com/zh-hans/p2p-markets
+					369 link Description: 闪兑, Value: okx.com/zh-hans/trade-convert
+					370 link Description: 交易, Value: okx.com/zh-hans/trade-spot/btc-usdt
+					371 link Description: 赚币, Value: okx.com/zh-hans/earn
+					372 link Description: 策略交易, Value: okx.com/zh-hans/trading-bot
+					373 link Description: 浏览所有数字货币, Value: okx.com/zh-hans/price
+					374 link Description: 新手学院, Value: okx.com/zh-hans/learn
+					375 link Description: TradingView, Value: okx.com/zh-hans/landingpage/tradingview
+					376 link Description: X-RWA, Value: okx.com/zh-hans/x-rwa
+					377 link Description: 结果市场, Value: okx.com/zh-hans/predict
+					378 link Description: 美股行情, Value: okx.com/zh-hans/stock
+				379 text 服务
+				380 container 服务
+					381 link Description: 节点计划, Value: okx.com/zh-hans/affiliates
+					382 link Description: API, Value: okx.com/zh-hans/okx-api
+					383 link Description: 历史行情数据, Value: okx.com/zh-hans/historical-data
+					384 link Description: CEX 费率标准, Value: okx.com/zh-hans/fees
+					385 link Description: 上币申请, Value: okx.com/zh-hans/token-listing-apply
+					386 link Description: C2C 认证商家申请, Value: okx.com/zh-hans/p2p/advertiser
+				387 text 用户支持
+				388 container 用户支持
+					389 link Description: 帮助中心, Value: okx.com/zh-hans/help
+					390 link Description: 官方渠道验证, Value: okx.com/zh-hans/support-center/channel-verification
+					391 link Description: 公告, Value: okx.com/zh-hans/help/category/announcements
+					392 link Description: 加入社群, Value: okx.com/zh-hans/community
+				393 text 买币
+				394 container 买币
+					395 link Description: 购买泰达币 (USDT), Value: okx.com/zh-hans/buy-usdt
+					396 link Description: 购买 USDC, Value: okx.com/zh-hans/buy-usdc
+					397 link Description: 购买比特币 (Bitcoin), Value: okx.com/zh-hans/buy-btc
+					398 link Description: 购买以太币 (Ethereum), Value: okx.com/zh-hans/buy-eth
+					399 link Description: 购买 ADA, Value: okx.com/zh-hans/buy-ada
+					400 link Description: 购买 Solana, Value: okx.com/zh-hans/buy-sol
+					401 link Description: 购买 Litecoin, Value: okx.com/zh-hans/buy-ltc
+					402 link Description: 购买 XRP, Value: okx.com/zh-hans/buy-xrp
+				403 text 数字货币计算器
+				404 container 数字货币计算器
+					405 link Description: BTC 兑换 USD, Value: okx.com/zh-hans/convert/btc-to-usd
+					406 link Description: ETH 兑换 USD, Value: okx.com/zh-hans/convert/eth-to-usd
+					407 link Description: USDT 兑换 USD, Value: okx.com/zh-hans/convert/usdt-to-usd
+					408 link Description: SOL 兑换 USD, Value: okx.com/zh-hans/convert/sol-to-usd
+					409 link Description: XRP 兑换 USD, Value: okx.com/zh-hans/convert/xrp-to-usd
+				410 text 交易
+				411 container 交易
+					412 link Description: BTC USDC, Value: okx.com/zh-hans/trade-spot/btc-usdc
+					413 link Description: ETH USDC, Value: okx.com/zh-hans/trade-spot/eth-usdc
+					414 link Description: BTC USDT, Value: okx.com/zh-hans/trade-spot/btc-usdt
+					415 link Description: ETH USDT, Value: okx.com/zh-hans/trade-spot/eth-usdt
+					416 link Description: SOL USDT, Value: okx.com/zh-hans/trade-spot/sol-usdt
+					417 link Description: XRP USDT, Value: okx.com/zh-hans/trade-spot/xrp-usdt
+					418 link Description: 比特币 (BTC) 价格, Value: okx.com/zh-hans/price/bitcoin-btc
+					419 link Description: 以太坊 (ETH) 价格, Value: okx.com/zh-hans/price/ethereum-eth
+					420 link Description: Solana 价格, Value: okx.com/zh-hans/price/solana-sol
+					421 link Description: XRP 价格, Value: okx.com/zh-hans/price/xrp-xrp
+					422 link Description: 比特币价格预测, Value: okx.com/zh-hans/price-prediction/bitcoin-btc
+					423 link Description: 以太坊价格预测, Value: okx.com/zh-hans/price-prediction/ethereum-eth
+					424 link Description: 瑞波币价格预测, Value: okx.com/zh-hans/price-prediction/xrp-xrp
+					425 link Description: 如何购买数字货币, Value: okx.com/zh-hans/how-to-buy
+					426 link Description: 如何购买比特币, Value: okx.com/zh-hans/how-to-buy/bitcoin-btc
+					427 link Description: 如何购买以太坊, Value: okx.com/zh-hans/how-to-buy/ethereum-eth
+					428 link Description: 如何购买 Solana, Value: okx.com/zh-hans/how-to-buy/solana-sol
+			429 text 欧易，随时随地交易
+			430 link Description: 注册, Value: okx.com/zh-hans/account/register
+			431 image 扫码下载欧易 App
+			432 text 扫码下载欧易 App
+			433 text 欧易社群
+			434 container 欧易社群, ID: footerMedia
+				435 link Description: X, Value: x.com/okxchinese
+				436 link Description: Telegram, Value: okx.com/zh-hans/community
+				437 link Description: Discord, Value: discord.com/invite/hkCGKbbbqf
+				438 link Description: Line, Value: line.me/ti/g2/QpY15CLN949eVBws4x-CdfJiY8lxg5s6RPPtJg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default
+				439 link Description: YouTube, Value: youtube.com/channel/UCQbfI-k3EiJaJ8cbi6-snMg
+				440 link Description: Facebook, Value: facebook.com/okxofficial/
+				441 link Description: Instagram, Value: instagram.com/okx_chinese
+				442 link Description: TradingView, Value: cn.tradingview.com/broker/OKX/
+				443 link Description: 欧易社群页面和社交媒体, Value: okx.com/zh-hans/community
+		444 container ok-cs-button
+			445 text 在线沟通
+
+The focused UI element is 86 tab (selected, settable, boolean) 期权, Value: 1

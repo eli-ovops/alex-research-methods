@@ -1,0 +1,88 @@
+XTX 与 AI 量化研究  ·  独立审查 V1                                                                                                   2026-10-19
+
+
+ E20 Liquity 七次尝试
+
+ 六次失败 Gas 纳入、回溯选样、竞争者收入被竞价侵蚀。证据性质：包内证据。
+ R/真实赚钱案例-Liquity七次尝试与个人复制缺口-20261016.md ｜ 9-20；38-90
+
+ E21 rETH 与 gDAI 现金事实边界
+
+ rETH ETH 净增；gDAI 局部手续费不是完整净利。证据性质：包内证据。
+
+ R/rETH真实闭环-ETH净增与事前策略边界-20261017.md ｜ 3-5；40-67
+ EVID/gdai-fixed-case-cost-attribution-20261018/README.md ｜ 全文
+
+ EVID/gdai-first-fee-cashflow-binding-20261018/README.md ｜ 全文
+
+ E22 FinMem 包内审查
+
+ 测试选风险设定及收益公式不等同全费自融资账。证据性质：包内证据。
+ EVID/finmem-record-admission-20261019/root/结论.md ｜ 19-25
+
+ E23 StockBench 包内审查
+
+ 成本/流动性省略、同开盘观察执行及输出原件缺失。证据性质：包内证据。
+
+ EVID/stockbench-record-admission-20261019/root/结论.md ｜ 7-19
+
+ E24 原研究已经纠正的门槛
+ 不能将曾经纠正的全实体账/私人 bot 要求冒充现行错误。证据性质：包内证据。
+
+ R/Ribbon20ETH原始要求复审-已证明的赚钱事实与独立复刻缺口-20261017.md ｜ 37-58
+ R/真实赚钱案例-Liquity七次尝试与个人复制缺口-20261016.md ｜ 9-20
+
+ E25 收录省略与再分发边界
+ 完整原行情、模型权重和部分原始产物未随包。证据性质：包内证据。
+
+ 03_索引/收录省略与再分发边界.md ｜ 全文
+
+ E26 FinAgent / Numerai 包内证据
+
+ 可达未来字段不等于实际提示消费；公开查询不闭合结算。证据性质：包内证据。
+ EVID/finagent-artifact-admission-20261019/root/结论.md ｜ 24-35
+
+ EVID/numerai-public-record-chain-20261018/README.md ｜ 全文
+
+ E27 1 秒/60 秒成本筛查实现
+
+ 报价买 ask/卖 bid 及双边费用；先知筛查不是策略收益。证据性质：包内证据。
+ EVID/BTC1sec-once-cost-diagnostic-20261018/execution/diagnostic.py ｜ 报价方向、费用与可评分样本路径
+
+ EVID/crypto-lake-60s-once-cost-diagnostic-20261018/execution/once_cost.py ｜ 报价方向、费用与可评分样本路径
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+静态审查 · 历史证据与现实复制分别判定                                                                                                                15

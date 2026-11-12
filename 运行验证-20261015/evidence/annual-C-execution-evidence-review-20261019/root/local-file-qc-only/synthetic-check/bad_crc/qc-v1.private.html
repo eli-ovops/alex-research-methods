@@ -1,0 +1,6 @@
+<!doctype html><html lang='zh-CN'><meta charset='utf-8'><title>本机报价文件核查</title><style>body{max-width:900px;margin:40px auto;padding:0 24px;font:17px/1.7 system-ui;color:#182c35;background:#f7f8f4}h1{font-size:30px}table{border-collapse:collapse;width:100%;background:white}td{padding:8px 14px;border-bottom:1px solid #ddd}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;padding:20px}strong{color:#7c3922}</style><h1>2022元旦报价文件：本机数据核查</h1><p><strong>仅供本机个人研究。含数据及衍生结果，请勿上传外部AI服务。</strong></p><p>本次检查未完整完成；保持未判定，不修复或重跑。</p><table><tr><td>文件与本机下载收据一致</td><td>未完成</td></tr><tr><td>gzip读至文件尾并校验CRC</td><td>False</td></tr><tr><td>标准字段齐全</td><td>未完成</td></tr><tr><td>完整检查结束</td><td>False</td></tr></table><p>检查窗口：UTC [00:08,00:15)，两个时钟分别统计；本地日界约束仅用于local_timestamp。锚点00:10及00:12仅供时钟覆盖定位，不是已证输入可用或下单时点。</p><p>报价是事件流，更新间隔不等于断线；CSV不含断线事件。相同时间戳、相邻重复或交易所时钟回退需按来源解释。只查相邻完全重复，未查全部非相邻重复。空侧另计，未修复或丢弃原文件。</p><p>没有比较卖单数量与可用挂单量，没有计算价差成本、费用、冲击、收益或资金容量。本时段来自已研究历史，不是新独立样本。技术检查通过不代表未来净盈利。</p><h2>完整本机检查原件</h2><pre>{
+  &quot;inspection_completed&quot;: false,
+  &quot;error_class&quot;: &quot;BadGzipFile&quot;,
+  &quot;error_detail&quot;: &quot;CRC check failed 0x2bfa9e59 != 0x2bfa9e58&quot;,
+  &quot;end_UTC&quot;: &quot;2026-10-19T08:48:04.120343+00:00&quot;
+}</pre></html>

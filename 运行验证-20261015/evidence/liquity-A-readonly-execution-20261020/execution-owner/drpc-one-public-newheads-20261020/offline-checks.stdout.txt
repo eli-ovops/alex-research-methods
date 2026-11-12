@@ -1,0 +1,11 @@
+PASS complete_text
+PASS bounded_fragment_reassembly
+PASS ping_masked_pong
+PASS server_mask_rejected
+PASS nonminimal_length_rejected
+PASS orphan_continuation_rejected
+PASS fragmented_ping_rejected
+PASS control_count_cap
+PASS cumulative_receive_cap
+PASS duplicate_json_key_rejected
+SYNTHETIC_ONLY 10 PASS; no system route read or network

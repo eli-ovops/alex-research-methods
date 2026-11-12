@@ -1,0 +1,12 @@
+Draft only — not sent or posted.
+
+Subject: Reuse permission and provenance of two collect-binancefutures sample files
+
+Hello, thank you for publishing collect-binancefutures. I am checking the existing files sample_data/btcusdt_20220811.dat (Git blob 38a1e26f10dde12618a2258bf04560476f867ab7) and sample_data/btcusdt_20220811.pkl (Git blob 14030d53c138fa77e07fbdd5e38e9072f4343043), in tree 27abefde5d6a42db125c59bd47332db58677ba4b.
+
+1. Is there an existing data-use license or permission covering personal, local, non-production, dedicated statistical price-prediction research using these two samples, including research aimed at evaluating potential profitability? May aggregate evaluation results from that research be shared with an external AI assistant for review? I am not proposing redistribution of the raw samples or live trading.
+
+2. Which collector/converter version and settings generated these exact files? In particular, were the .pkl data produced with -f or -c, was an initial snapshot used, and how do their local/exchange timestamps and any clock correction relate to the original recorded feed?
+
+A link to an existing license/provenance statement would be enough. No private strategy or account information is requested.
+

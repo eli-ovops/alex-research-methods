@@ -1,0 +1,807 @@
+Polygon indexing infrastructure: data API, SDK & Portal | SQD (https://sqd.dev/chains/polygon/)
+citeturn594search0 [wordlim: 200] Crawled: last month; Internal transactions and call traces showing the full execution path of each transaction. ... The public Portal endpoint at portal.sqd.dev/datasets/polygon-mainnet is free for development. ... See the SDK docs for the connector reference. ... Access Polygon data through the SQD Portal, free tier available.
+
+Image: Polygon
+
+# Polygon
+
+EVM Layer 2 / Chain ID 137
+
+Polygon is a suite of Ethereum scaling solutions including PoS sidechain and zkEVM, enabling fast and inexpensive transactions.
+
+Website Explorer
+
+Quick Facts
+
+Networks 4
+
+Runtime EVM
+
+Chain ID 137
+
+Real-time Yes
+
+Data tables 4
+
+Category Layer 2
+
+Networks
+    4
+
+Data tables
+    4
+
+Chain ID
+    137
+
+Runtime
+    EVM
+
+Coverage
+    Real-time + archive
+
+Start block
+    0 (genesis)
+
+License
+
+## Networks
+
+polygon-mainnet chain ID 137
+
+Real-time EVM mainnet 4 tables
+
+polygon-zkevm-mainnet chain ID 1101
+
+EVM mainnet 3 tables
+
+polygon-amoy-testnet chain ID 80002
+
+Real-time EVM testnet 3 tables
+
+polygon-zkevm-cardona-testnet chain ID 2442
+
+EVM testnet 3 tables
+
+## Polygon on SQD
+
+Validated at ingestion
+
+Polygon data is validated by SQD Network workers before it reaches the Portal. Validation is performed across the network rather than by a single ingestion node, so a faulty upstream source can't poison the dataset.
+
+Decoded, schema-typed
+
+4 Polygon tables (blocks, transactions, logs & traces), decoded and schema-typed, ready to query. Your indexer queries the data directly without writing RLP parsers.
+
+Archive plus real-time
+
+Single Portal endpoint serves Polygon from genesis through the current head, with sub-second hot-path latency. No separate streaming pipeline to wire up.
+
+Open-source SDK
+
+Both the Squid SDK and the Pipes SDK are open-source. Connectors for Postgres, ClickHouse, MongoDB, SQLite and Parquet, plus a custom-target hook. Run your Polygon indexer on your own infrastructure or on SQD Cloud.
+
+## Build with Polygon data
+
+Common production patterns teams build with SQD on Polygon.
+
+DeFi & Trading Index swaps, liquidations, and positions on Polygon in real time. Analytics Build dashboards and metrics from full Polygon historical state. AI Agents Give agents structured, decoded Polygon data with the MCP server. Wallets & Payments Power balance, transfer, and history views for Polygon wallets. Compliance & KYT Validated Polygon data for transaction monitoring and audits. Stablecoins Track every mint, burn, and transfer of Polygon stablecoins. Real-World Assets Auditable Polygon data for tokenized RWA issuance and transfers.
+
+## Teams using SQD on Polygon
+
+Production case studies from a team indexing Polygon with SQD.
+
+Privacy Infrastructure RAILGUN Expanded privacy pools from single-chain to multi-chain with reduced balance scanning times
+
+## Available Data
+
+blocks
+
+Block headers with timestamps, gas usage, miner info, and consensus data.
+
+transactions
+
+All onchain transactions with sender, receiver, value, gas, and input data.
+
+logs
+
+Event logs emitted by smart contracts, the primary source for tracking DeFi, NFT, and token activity.
+
+traces
+
+Internal transactions and call traces showing the full execution path of each transaction.
+
+
+[Button: cURL][Button: Body][Button: Response]
+
+[Button: Run]
+
+1 curl --compressed -X POST \
+
+2 'https://portal.sqd.dev/datasets/polygon-mainnet/stream' \
+
+3 -H 'Content-Type: application/json' \
+
+4 -d '{
+
+5 "type": "evm",
+
+6 "fromBlock": 0,
+
+7 "toBlock": 100,
+
+8 "fields": {
+
+9 "block": {"number":true,"timestamp":true},
+
+10 "transaction": {
+
+11 "hash": true,
+
+12 "from": true,
+
+13 "to": true,
+
+14 "value": true
+
+15 }
+
+16 },
+
+17 "transactions": [{}]
+
+18 }'
+
+polygon-mainnet/stream
+
+## Frequently asked questions
+
+How does SQD compare to running a Polygon RPC node?
+
+A Polygon RPC node serves raw bytes for recent state and rate-limits per request. SQD's Portal pre-indexes the full Polygon archive into decoded, schema-typed tables (blocks, transactions, logs & traces) and serves them as a single streaming endpoint. You skip the multi-day node sync, archive storage, monitoring, and scale-out work, and pay only for the data you stream.
+
+What does SQD cost for Polygon data?
+
+The public Portal endpoint at portal.sqd.dev/datasets/polygon-mainnet is free for development. Production workloads run on the SQD Portal with tiered pricing based on the network and request volume. See the pricing page for current tiers, or contact us for an enterprise quote.
+--------------------------------------------------------------------------------
+Solana Portal API Reference - SQD Documentation (https://docs.sqd.dev/en/portal/solana/api)
+citeturn594search1 [wordlim: 200] Crawled: 5 months ago; Quick reference for the SQD Portal Solana HTTP API — endpoints, request schemas, and code samples for querying blocks, transactions, and instructions. ... > Fetch the complete documentation index at: https://docs.sqd.dev/llms.txt ...     `curl --compressed -X POST 'https://portal.sqd.dev/datasets/solana-mainnet/stream' \ ... Select transaction data fields: ...         kind: true,            // Log kind (log, data, other)
+
+On this page
+
+  * Base URL
+  * Core Endpoints
+  * Installation
+  * Quick Start Examples
+  * Available Fields
+  * Block Fields
+  * Transaction Fields
+  * Instruction Fields
+  * Log Fields
+  * Token Balance Fields
+  * Balance Fields
+  * Reward Fields
+  * Filtering Options
+  * Instruction Filters
+  * Transaction Filters
+  * Log Filters
+  * Token Balance Filters
+  * Network Selection
+  * Query Patterns
+  * Pattern 1: Range Query
+  * Pattern 2: Batch Processing
+  * Pattern 3: Multi-Program Query
+  * Performance Optimization
+  * 1. Request Only Needed Fields
+  * 2. Use Specific Filters
+  * 3. Optimal Batch Sizes
+  * 4. Parallel Queries
+  * Stream continuation
+  * Handling reorgs near the chain head
+  * Error Handling
+  * Common Use Cases
+  * Use Case 1: Instruction Monitoring
+  * Use Case 2: Transaction Tracking
+  * Use Case 3: Analytics Pipeline
+  * Request Structure Reference
+  * Response Format
+  * Common Patterns
+  * Complete API Specification
+  * Next Steps
+
+# Solana Portal API Reference
+
+Quick reference for the SQD Portal Solana HTTP API — endpoints, request schemas, and code samples for querying blocks, transactions, and instructions.
+
+Copy page
+
+> ## Documentation Index
+> 
+> Fetch the complete documentation index at: https://docs.sqd.dev/llms.txt
+> 
+> Use this file to discover all available pages before exploring further.
+
+This page provides a quick reference for the Portal API. For the complete OpenAPI specification with all fields and options:
+
+## Complete Solana API Specification
+
+View the full OpenAPI documentation with all available fields, filters, and detailed schemas →
+
+## 
+
+​
+
+Base URL
+
+All Portal requests are made to:
+    
+    `https://portal.sqd.dev/datasets/{network}
+    `
+
+Replace `{network}` with your target blockchain (e.g., `solana-mainnet`).
+
+## 
+
+​
+
+Core Endpoints
+
+## POST /stream
+
+Stream blockchain data with filters. Includes unfinalized blocks.
+
+## POST /finalized-stream
+
+Stream only finalized blocks. Use for production pipelines requiring certainty.
+
+## GET /metadata
+
+Get dataset information: slot range, finality rules, and network details.
+
+## 
+
+​
+
+Installation
+    
+    `npm install @subsquid/portal-client
+    `
+
+## 
+
+​
+
+Quick Start Examples
+
+curl
+
+TypeScript
+
+Python
+    
+    `curl --compressed -X POST 'https://portal.sqd.dev/datasets/solana-mainnet/stream' \
+      -H 'Content-Type: application/json' \
+      -d '{
+        "type": "solana",
+        "fromBlock": 259984950,
+        "toBlock": 259985000,
+        "fields": {
+          "block": { "number": true, "timestamp": true },
+          "instruction": { "programId": true, "accounts": true, "data": true }
+        }
+      }'
+    `
+
+## 
+
+​
+
+Available Fields
+
+### 
+
+​
+
+Block Fields
+
+Select which block header fields to retrieve:
+    
+    `fields: {
+      instruction: {
+        programId: true,       // Program address
+        accounts: true,        // Account addresses
+        data: true,            // Instruction data (base58)
+        transactionIndex: true, // Transaction index (use to match with transactions)
+        instructionAddress: true,  // Instruction address in call tree
+        isCommitted: true,     // Whether instruction succeeded
+      }
+    }
+    `
+
+### 
+
+​
+
+Log Fields
+
+Select log message fields:
+    
+    `fields: {
+      log: {
+        programId: true,       // Program address
+        message: true,         // Log message
+        kind: true,            // Log kind (log, data, other)
+        transactionIndex: true, // Transaction index (use to match with transactions)
+        instructionAddress: true,  // Instruction address
+      }
+    }
+    `
+
+### 
+
+​
+
+Token Balance Fields
+
+Select token balance fields:
+    
+    `fields: {
+      tokenBalance: {
+        account: true,         // Token account address
+        preMint: true,         // Mint before transaction
+        postMint: true,        // Mint after transaction
+        preAmount: true,       // Balance before transaction
+        postAmount: true,      // Balance after transaction
+        preOwner: true,        // Owner before transaction
+        postOwner: true,       // Owner after transaction
+      }
+    }
+    `
+
+### 
+
+​
+
+Balance Fields
+
+Select SOL balance fields:
+    
+    `fields: {
+      balance: {
+        account: true,         // Account address
+        pre: true,             // Balance before transaction
+        post: true,            // Balance after transaction
+      }
+    }
+    `
+
+### 
+
+​
+
+Reward Fields
+
+Select reward fields:
+    
+    `fields: {
+      reward: {
+        pubkey: true,          // Reward recipient
+        lamports: true,        // Reward amount
+        rewardType: true,      // Reward type
+        postBalance: true,     // Balance after reward
+      }
+    }
+    `
+
+      let currentFrom = from;
+      while (to === undefined || currentFrom <= to) {
+        const res = await fetch(
+          "https://portal.sqd.dev/datasets/solana-mainnet/stream",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ...body, fromBlock: currentFrom, toBlock: to }),
+          }
+        );
+    
+        if (res.status === 204) break; // range is above the dataset head
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
+    
+        const lines = (await res.text()).trim().split("\n").filter(Boolean);
+        if (lines.length === 0) break;
+    
+        let lastBlock = currentFrom - 1;
+        for (const line of lines) {
+          const block = JSON.parse(line);
+          // ... process block ...
+          lastBlock = block.header.number;
+        }
+        currentFrom = lastBlock + 1;
+      }
+    }
+    `
+
+Key points:
+
+  * Read the last block’s `header.number`, issue the next request with `fromBlock = lastNumber + 1`.
+  * Keep `toBlock`, `fields`, and filters identical across retries.
+  * A `204 No Content` response means the range is above the dataset head. For historical queries, you’re done; for open-ended queries, wait and retry.
+
+## 
+
+​
+
+Response Format
+
+Portal returns newline-delimited JSON (NDJSON), with one block per line:
+    
+    `{"header": {"number": 259984950, ...}, "instructions": [...], "transactions": [...]}
+    {"header": {"number": 259984951, ...}, "instructions": [...], "transactions": [...]}
+    {"header": {"number": 259984952, ...}, "instructions": [...], "transactions": [...]}
+    `
+
+This format enables constant-memory streaming of arbitrary ranges.
+
+## 
+
+​
+
+Common Patterns
+
+Batch Processing
+
+Process large slot ranges by splitting into manageable chunks:
+    
+    `const BATCH_SIZE = 10000;
+    for (let from = startSlot; from < endSlot; from += BATCH_SIZE) {
+      const to = Math.min(from + BATCH_SIZE, endSlot);
+      const blocks = await fetch(/* ... */);
+    }
+    `
+
+Real-time Streaming
+
+Stream new blocks as they arrive using /finalized-stream:
+    
+    `const response = await fetch(
+      'https://portal.sqd.dev/datasets/solana-mainnet/finalized-stream',
+      { method: 'POST', body: JSON.stringify({
+        type: 'solana',
+        fromBlock: latestProcessedSlot + 1,
+        fields: { /* ... */ }
+      })}
+    );
+    `
+
+Error Handling
+
+Handle rate limits and network errors gracefully:
+    
+    `try {
+      const response = await fetch(/* ... */);
+      if (!response.ok) {
+        if (response.status === 429) {
+          // Rate limited - wait and retry
+          await sleep(10000);
+        }
+      }
+    } catch (error) {
+      // Network error - implement retry logic
+    }
+    `
+
+## 
+
+​
+
+Complete API Specification
+
+For the complete OpenAPI specification with all available fields, options, and detailed schemas:
+
+## Full Solana API Specification
+
+View complete OpenAPI documentation with all endpoints, fields, and options →
+
+## 
+
+​
+
+Next Steps
+
+## View Examples
+
+Explore practical Portal examples for common use cases
+
+## Supported Networks
+
+See complete list of supported Solana networks
+
+## Quickstart Guide
+
+Make your first Portal request in 5 minutes
+--------------------------------------------------------------------------------
+Starknet API - SQD Documentation (https://docs.sqd.dev/en/api/reference/starknet-api)
+citeturn594search2 [wordlim: 200] Crawled: 5 months ago;   * Transaction fields ... Access the data of Starknet ... > Fetch the complete documentation index at: https://docs.sqd.dev/llms.txt ... The Starknet API of SQD Network is currently in beta.
+
+On this page
+
+  * Router API
+  * Worker API
+  * Data requests
+  * Transactions
+  * Events
+  * Data fields selector
+  * Block fields
+  * Transaction fields
+  * Event fields
+
+# Starknet API
+
+Access the data of Starknet
+
+Copy page
+
+> ## Documentation Index
+> 
+> Fetch the complete documentation index at: https://docs.sqd.dev/llms.txt
+> 
+> Use this file to discover all available pages before exploring further.
+
+The Starknet API of SQD Network is currently in beta. Breaking changes may be introduced in the future releases.
+
+SQD Network API distributes the requests over a (potentially decentralized) network of workers. The main gateway URL points at a router that provides URLs of workers that do the heavy lifting. Each worker has its own range of blocks on each dataset it serves. Suppose you want to retrieve an output of some query on a block range starting at `firstBlock` (can be the genesis block) and ending at the highest available block. --------------------------------------------------------------------------------
+Blockchain Explorer Backend & Data Infrastructure API | SQD (https://sqd.dev/solutions/infrastructure/)
+citeturn594search3 [wordlim: 200] Crawled: last month; SQD serves logs, transactions, traces, and decoded transfers through one query shape across 130+ networks, and the same endpoint streams genesis backfill and live blocks. ... 1 curl -s -X POST https://portal.sqd.dev/datasets/ethereum-mainnet/stream \ ... The public endpoint is free for development. ... 15 "gasUsed": true ... The Portal serves blocks, transactions, logs, traces, and state diffs on EVM chains, instructions and balance changes on Solana, and transaction inputs and outputs on Bitcoin, from genesis to the chain head over one streaming API.
+Omit `toBlock` and the identical request follows the chain head instead, so the loop that backfills is the process you leave running in production. There is no separate historical API to reconcile against a live feed.
+
+One gotcha: the stream skips empty blocks by default. That is the right behavior for a filtered feed and the wrong default for an explorer backend, which needs a row for every block: block pages, gap checks, per-block metrics. Add `"includeAllBlocks": true` to the body above and the same window returns 46,148 lines, one per block from 0 to 46,147, whether or not anything matched.
+
+Playground
+
+## Try the Portal API
+
+Live queries against real blockchain data. Pick a network, choose a query, hit run.
+
+The public endpoint is free for development. See plans for dedicated portals and higher limits.
+
+NetworkImageEthereumImageBaseImageSolanaImageBitcoinImageHyperliquidImageTronImagePolkadot+200 more
+
+Query[Button: Aerodrome Trades][Button: Uniswap router txs][Button: All Transactions]
+
+[Button: cURL][Button: Body][Button: Response]
+
+[Button: Run]
+
+1 curl --compressed -X POST \
+
+2 'https://portal.sqd.dev/datasets/base-mainnet/stream' \
+
+3 -H 'Content-Type: application/json' \
+
+4 -d '{
+
+5 "type": "evm",
+
+6 "fromBlock": 23000000,
+
+7 "toBlock": 23000010,
+
+8 "fields": {
+
+9 "block": {"number":true,"timestamp":true},
+
+10 "transaction": {
+
+11 "hash": true,
+
+12 "from": true,
+
+13 "to": true,
+
+14 "value": true,
+
+15 "gasUsed": true
+
+16 }
+
+17 },
+
+18 "transactions": [{}]
+
+19 }'
+
+ImageBase base-mainnet/stream
+
+Raw L2 transaction throughput
+
+These are example queries, explore the full Playground →
+
+In production
+
+--------------------------------------------------------------------------------
+Solana Devnet - SQD Documentation (https://docs.sqd.dev/en/data/solana/solana-devnet)
+citeturn594search4 [wordlim: 200] Crawled: 5 months ago; Index Solana Devnet data with SQD ... > Fetch the complete documentation index at: https://docs.sqd.dev/llms.txt ... `post`  | bigint  | Balance after transaction ... `message`  | string  | Log message
+
+# Solana Devnet
+
+Index Solana Devnet data with SQD
+
+Copy page
+
+> ## Documentation Index
+> 
+> Fetch the complete documentation index at: https://docs.sqd.dev/llms.txt
+> 
+> Use this file to discover all available pages before exploring further.
+
+Property  | Value
+--- | ---
+Network ID  | `solana-devnet`
+Real-time  | Yes
+
+## 
+
+​
+
+Endpoint
+    
+    `https://portal.sqd.dev/datasets/solana-devnet
+    `
+
+## 
+
+​
+
+Quick start
+    
+    `curl --compressed -X POST \
+      'https://portal.sqd.dev/datasets/solana-devnet/stream' \
+      -H 'Content-Type: application/json' \
+      -d '{
+        "type": "solana",
+        "fromBlock": 0,
+        "toBlock": 100,
+        "fields": {
+          "block": { "number": true, "timestamp": true },
+          "instruction": { "programId": true, "data": true }
+        },
+        "instructions": [{}]
+      }'
+    `
+
+Schema
+
+Transactions
+
+Field  | Type  | Description
+--- | --- | ---
+`index`  | integer  | Transaction index in block
+`signature`  | string  | Transaction signature
+--------------------------------------------------------------------------------
+Developer resources. SQD (https://sqd.dev/developers/)
+citeturn594search5 [wordlim: 200] Crawled: today; The SQD Portal is a plain HTTP API serving onchain data from 120+ networks, with no node, archive, or indexer of your own. ... 1 curl -s -X POST https://portal.sqd.dev/datasets/ethereum-mainnet/stream \ ... It is also the document to diff in a pipeline when you want to detect a change to the API. ...   * OpenAPI specification (documentation copy)https://docs.sqd.dev/openapi.json The same API, published from the documentation site ...   * API keys and access options https://docs.sqd.dev/en/portal/pricing Public, authenticated and dedicated portals, and how keys are issued
+
+Developers
+
+# SQD developer resources
+
+Everything needed to build against SQD, each at a URL that does not move. The SQD Portal API and its OpenAPI specification, how authentication and rate limits work, what the API guarantees and how it announces a change, the SQD MCP servers, the Squid CLI, and the files an agent reads before any of it.
+
+If you are an agent, start with llms.txt and openapi.json. Every page on sqd.dev is also served as Markdown to a request that asks for it.
+
+SQD Portal APIOpenAPI specificationAuthenticationRate limits and retriesVersioning and deprecation policyMCP serversSquid CLISDKsFiles for agentsSupport
+
+## SQD Portal API
+
+The SQD Portal is a plain HTTP API serving onchain data from 120+ networks, with no node, archive, or indexer of your own. Responses to the stream endpoints are JSON Lines, so a client reads them incrementally instead of buffering a whole range. Start at `GET /datasets`: the dataset name every other call takes comes from that list.
+
+First request · no key required
+
+1 curl -s -X POST https://portal.sqd.dev/datasets/ethereum-mainnet/stream \
+
+2 -H 'content-type: application/json' \
+
+3 -d '{"type":"evm","fromBlock":18000000,"toBlock":18000000,
+
+4 "fields":{"block":{"number":true,"timestamp":true}}}'
+
+Resource URL What it is
+
+  * SQD Portal base URL https://portal.sqd.dev Host every Portal API call goes to
+  * SQD Portal API reference https://docs.sqd.dev/en/api/evm/introduction Endpoint reference and request playground
+  * SQD Portal quickstart https://docs.sqd.dev/en/portal/evm/quickstart First query, start to finish
+  * Dataset list https://portal.sqd.dev/datasets Every network this Portal serves, with aliases
+
+## OpenAPI specification
+
+The whole documented Portal surface is described in OpenAPI 3.1 at sqd.dev/openapi.json. Every operation carries a stable `operationId`, typed parameters, and a response schema, which is what a function-calling adapter or a client generator needs. It is also the document to diff in a pipeline when you want to detect a change to the API.
+
+Resource URL What it is
+
+  * OpenAPI specification https://sqd.dev/openapi.json OpenAPI 3.1, an operationId and a response schema per operation
+  * OpenAPI specification (documentation copy)https://docs.sqd.dev/openapi.json The same API, published from the documentation site
+
+--------------------------------------------------------------------------------
+Crypto Tax & Accounting Data: Full Transaction History | SQD (https://sqd.dev/solutions/accounting/)
+citeturn594search6 [wordlim: 200] Crawled: last month; 1 curl -s -X POST https://portal.sqd.dev/datasets/ethereum-mainnet/stream \ ... 4 "type": "evm", ... Three things to know before booking it: the amount nests under `action.value` as hex wei (`0x1550f7dca70000` is 6,000,000,000,000,000 wei, 0.006 ETH); a trace has no transaction hash of its own, so `"transaction": true` in the filter is what puts `0xea9b...` in the response; and `error: null` is what says the value actually moved. ... Transactions, decoded ERC-20, ERC-721, and ERC-1155 transfers, and internal value moves from traces, all filtered by address in one query shape. ... Every transaction carries gasUsed, effectiveGasPrice, and status, so the exact fee is one multiplication.
+## Amounts, UTC timestamps, and fees on the row; the math stays yours
+
+A cost-basis engine needs three inputs per movement: how much, when, and what it cost to execute. The same transaction that funded the payout above carries all three, in one row:
+
+Field Returned Decoded
+
+  * timestamp 1782462095 2026-06-26 08:21:35 UTC
+  * value 0x13fbe85edc90000 0.09 ETH
+  * gasUsed 0x490bc 299,196 gas
+  * effectiveGasPrice 0x13a15da4 0.329342372 gwei
+  * status 1 executed, not reverted
+
+The same row, decoded field by field
+
+The block timestamp is unix seconds, which is UTC by construction: 1782462095 decodes to 2026-06-26 08:21:35 UTC, the key a fiat price lookup joins on. The fee is one multiplication, `gasUsed` times `effectiveGasPrice`: 299,196 × 329,342,372 wei = 98,537,920,332,912 wei, about 0.0000985 ETH. Nothing else needs a node call.
+
+the funding transaction, receipt fields included
+
+1{
+
+2 "header": { "number": 25400576, "timestamp": 1782462095 },
+
+3 "transactions": [{
+
+4 "hash": "0xea9b5936e3314af278a4f7c25f097d7a1272a609fe545151a6bf7296e2778b17",
+## Built for Accounting & Tax at scale
+
+### The complete movement record
+
+Transactions, decoded ERC-20, ERC-721, and ERC-1155 transfers, and internal value moves from traces, all filtered by address in one query shape. A history assembled from all three is what balances fold from; any subset silently under-reports.
+
+### Internal transfers included
+
+A contract paying out ETH does it in an internal call: the value appears in traces, not in the transaction list, and when the recipient is a plain wallet no event log exists at all. Filter traces by callTo and callFrom to capture it, and check the error field: a reverted call carries a value that never moved.
+
+### Cost-basis inputs on every row
+
+Every block carries a unix timestamp in UTC, the key a fiat price lookup joins on. Every transaction carries gasUsed, effectiveGasPrice, and status, so the exact fee is one multiplication. Fiat prices and tax-lot logic are not served; those join downstream in your accounting engine.
+
+### Re-runnable extractions
+
+A query pinned to a finalized block range returns the same rows on every run, so an extraction is a command an auditor can re-execute, not a snapshot they have to trust. --------------------------------------------------------------------------------
+Data requests - SQD Documentation (https://docs.sqd.dev/sdk/reference/processors/substrate-batch/data-requests/)
+citeturn594search7 [wordlim: 200] Crawled: 5 months ago; > Fetch the complete documentation index at: https://docs.sqd.dev/llms.txt ... Selection of the exact data to be retrieved for each log and its optional parent transaction is done with the `setFields()` method documented on the Fields selection page. ... Use `events = true` to retrieve `Ethereum.Executed` events that can be used to figure out the EVM transaction status (see `getTransactionResult()`).
+--------------------------------------------------------------------------------
+Solana Field Selection - SQD Documentation (https://docs.sqd.dev/solana-indexing/sdk/solana-batch/field-selection/)
+citeturn594search8 [wordlim: 200] Crawled: 5 months ago; Fine-tune Solana data requests with setFields() in Squid SDK — choose only the block, transaction, instruction, balance, reward, and log fields needed. ... > Fetch the complete documentation index at: https://docs.sqd.dev/llms.txt ... After populating the convenience reference fields with `augmentBlock()` from `@subsquid/solana-objects`, `signatures` and `err` fields would be available both within the transaction items of the `transactions` iterable of block data and within the transaction items that provide parent transaction information for the instructions matching the `addInstruction()` data request:
+--------------------------------------------------------------------------------
+Onchain Analytics Data: Cross-Chain Data for Your Warehouse | SQD (https://sqd.dev/solutions/analytics/)
+citeturn594search9 [wordlim: 200] Crawled: 2 weeks ago; 1 POST https://portal.sqd.dev/datasets/ethereum-mainnet/stream ... Sits on top of the same API in TypeScript: decodes logs into typed events and streams them into a target store, with progress tracking and reorg rollback handled for you. ... Every block, transaction, and event log from block 0 to head, on every chain, through the same query as live data.
+--------------------------------------------------------------------------------
+Avail - SQD Documentation (https://docs.sqd.dev/en/data/substrate/avail)
+citeturn594search10 [wordlim: 200] Crawled: 5 months ago; Index Avail data with SQD ... > Fetch the complete documentation index at: https://docs.sqd.dev/llms.txt ... The Avail Mainnet dataset starts at block 1.
+--------------------------------------------------------------------------------
+Supported Chains & Networks. SQD (https://sqd.dev/chains/)
+citeturn594search11 [wordlim: 200] Crawled: today; Abstract 3 ADI Chain-Agung Testnet 3 Alpen 5 Arbitrum 4 Arc-Asset Hub-Astar 3 Avalanche 5 B3 5 Base 5 Beam 5 Berachain 5 Bitcoin 4 Bittensor-Blast 5 BNB Chain 5 BOB 5 Celo 3 Chainflip-Core 4 Cronos-Enjin-Ethereum 5 Etherlink 3 Flare 3 Gnosis 5 Gravity Alpha 5 HashKey Chain 5 Hedera 3 Hemi 3 Hydration-Hyperliquid 2 Ink 5 Katana 5 Kusama-Linea 4 LUKSO 3 Manta Pacific 3 Mantle 3 MegaETH 3 Metis 4 Mode 3 Monad 3 OP 5 peaq 3 Plasma 5 Plume 5 Polkadot-Polygon 4 Prom 5 Robinhood Chain-Scroll 4 Sei-Solana 6 Soneium 4 Sonic 4 SOON 6 Stable-TAC 3 Tempo-Tron 4 Unichain 5 Vara Network-World Chain-X Layer 3 zkLink Nova 4 zkSync Era 4 zkVerify-Zora 5 ... Each VM family has dedicated data tables (blocks, transactions, logs, traces, state diffs for EVM; instructions and token balances for Solana; calls and events for Substrate; TVM event logs and internal transactions for Tron) accessible through the Portal API. ... Does SQD support testnets? ... Testnet endpoints share the same Portal API as mainnet, so a single indexer can target either by changing the network ID.
+--------------------------------------------------------------------------------
+Polygon zkEVM study (https://www.0xadriatorralba.me/assets/pdf/AdriaTorralba-Agell_PublicDatasetzkEVM.pdf)
+citeturn594search12 [wordlim: 200] Published: 7 months ago; ** This part of the solution is formed by a docker compose file that spawns a cdk-erigon node that synchronizes the Polygon zkEVM network. ... - receipts table fields: transactionindex (bigint), blockhash (varchar[66]), blocknumber (bigint), fromaddress (varchar[42]), toaddress (varchar[42]), cumulativegasused (bigint), effectivegasprice (bigint), gasused (bigint), contractaddress (varchar[42]), logs (jsonb), logsbloom (varchar[514]), type (smallint), root (varchar[66]), status (smallint), transactionhash (varchar[66]). ... - batches table fields: coinbase (varchar[42]), stateroot (varchar[66]), globalexitroot (varchar[66]), mainnetexitroot (varchar[66]), rollupexitroot (varchar[66]), localexitroot (varchar[66]), accinputhash (varchar[66]), timestamp (timestamp), sendsequencetxhash (varchar[66]), verifybatchtxhash (varchar[66]), closed (boolean), blocks (jsonb), transactions (jsonb), batch2data (jsonb), number (bigint).
+--------------------------------------------------------------------------------
+Appendix 12 – Get all listings WASM request (https://digikogu.taltech.ee/et/Download/f583ab63-cf13-4dc2-ab0f-d194d9bb5fbc)
+citeturn594search13 [wordlim: 200] Published: 4.4 years ago; The request is a POST to `https://devnet-gateway.elrond.com/vm-values/query`. ... - `data.data.gasRemaining`: `18446744073706267446` ... - `data.data.outputAccounts`: one account keyed by `000000000000000005004de523d63b3a9126215efc6be3a7a7fd7a63d3b27e40`, containing:
+--------------------------------------------------------------------------------
+Polygon API Access (https://polygon-api-access.readthedocs.io/_/downloads/en/latest/pdf/)
+citeturn594search14 [wordlim: 200] Published: 3.9 years ago; Polygon API Access
+--------------------------------------------------------------------------------
+Solidity Documentation (https://app.readthedocs.org/projects/demo-enjoyqq-seo-kontes-hasil-uji-coba/downloads/pdf/latest/)
+citeturn594search15 [wordlim: 200] Published: 8.2 years ago; The Ethereum Virtual Machine or EVM is the runtime environment for smart contracts in Ethereum. ... The payload of such a contract creation transaction is taken to be EVM ... The gas price is a value set by the creator of the transaction, who has to pay gas_price * gas up front from the
+--------------------------------------------------------------------------------
+Item #3: Smart contract invoke API support for Polygon (https://quant.network/assets/uploads/2023/04/Quant_ReleaseNotes_OVL_V2.2.3.pdf)
+citeturn594search16 [wordlim: 200] Published: 4.6 years ago; Overledger now supports smart contract invoke transactions on Polygon Mumbai Testnet and Polygon Mainnet. ... Preparation : POST https://api.sandbox.overledger.io/v2/preparation/transaction
+--------------------------------------------------------------------------------
+Whitepaper | SQD (https://resources.cryptocompare.com/asset-management/18381/1737368869536.pdf)
+citeturn594search17 [wordlim: 200] Published: 1.7 years ago; Crawled: 1.7 years ago; Hand-drawn Web3 stack diagram with labeled bubbles and boxes: Chainlink; Oracles (“Put off-chain data on-chain”); Storage (“Store large volumes of unstructured data”); Data lake (“Analytics and batch queries”); Execution (“Global consensus over the state”); API queries (“Query application data (OLTP)”); Ethereum, Solana, L2s; Arweave, Filecoin; The Graph, Pokt, Kwil, Smol? ... In the first stage, the SQD Network only supports simple queries that can be resolved by querying the local data of a suitable node. ... During the validation window, anyone can submit a Merkle proof for some transaction t matching the filter X yet not in T. ... The token smart contract is to be deployed on the Ethereum mainnet and bridged to Arbitrum One. ... SQD’s utility as a tool for adjusting rate limits is unique in increasing trustless performance, by locking SQD tokens, without having to pay a centralized provider for quicker or more efficient data access.
+--------------------------------------------------------------------------------
+Query data from node (https://www.reddit.com/r/0xPolygon/comments/z23les)
+citeturn594reddit18 [wordlim: 200] Published: 3.9 years ago; Crawled: 3.9 years ago; I have managed to set up a full testnet node and I was wondering if there is a way to interact with the raw transaction data that it has and query it somehow. ... Thank you for your submission to r/0xPolygon
+--------------------------------------------------------------------------------
+Migrating contract to Polygon, API for events are not working (https://www.reddit.com/r/0xPolygon/comments/ss81q8)
+citeturn594reddit19 [wordlim: 200] Published: 4.7 years ago; Crawled: 4.6 years ago; I am testing a contract on the mumbai polygon testnet and a call that previously worked on ethereum testnet is returning empty: ...         console.log(logs) ... Do you have any idea if this API is blocked by any of the testnet nodes?
+

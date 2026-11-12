@@ -1,0 +1,994 @@
+API keys & pricing | Routescan (https://testnet.routescan.io/docs/plans-and-limits/api-keys-and-pricing)
+citeturn505search0 [wordlim: 200] Crawled: last month; - Free (Keyless) — no account or API key needed. ... Requests work even without a key.
+
+# API keys & pricing
+
+Copy page as Markdown Open with AI tools
+
+Every Routescan API request counts against two caps set by your plan: a rate limit (requests per second) and a daily call limit. There are two free tiers:
+- Free (Keyless) — no account or API key needed. Start calling immediately at 2 req/s and 10,000 calls/day.
+- Free (Registered) — sign up for a free API key to raise the caps to 5 req/s and 100,000 calls/day, 10× the daily volume at no cost.
+
+## Free (Keyless)#
+
+You can call the APIs straight away with no key. The free tier is capped per second and per day, see Rate limits for the current caps.
+
+## Using an API key#
+
+Once you have a key, pass it in the request header:
+
+bash Copy code
+
+1 curl -H "apikey: YourApiKeyToken" \
+
+2 "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=account&action=balance&address=0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae"
+
+  * Send the key in the `apikey` HTTP header, never embed it in client-side code you ship to users.
+  * The same key works across every chain and both the High-speed and Etherscan-compatible APIs.
+
+## Getting a key#
+
+  1. Pick a plan below that matches your throughput needs.
+  2. Complete checkout to generate your API key.
+  3. Send the key in the `apikey` header on every request.
+
+## API plans#
+
+One API key works across every chain Routescan indexes and both the High-speed and Etherscan-compatible APIs. A paid plan adds:
+
+  * Access to every chain Routescan indexes.^{*}
+  * The `all` chain id to query across all supported chains in one request.
+  * Higher rate limits, larger daily call volumes and priority support.
+  * Seamless multichain integration from a single key.
+
+[Button: Monthly]Quarterly 15% off Yearly 20% off
+
+Free (Keyless)
+
+$0 /mo
+
+  * 2 calls/second
+  * up to 10,000 calls/day
+  * Access to ALL endpoints
+  * No account or API Key needed
+[Button: Get Started Now]
+
+Free (Registered)
+
+$0 /mo
+
+  * 5 calls/second
+  * up to 100,000 calls/day
+  * Access to ALL endpoints
+  * General support
+  * API Key required
+[Button: Start for Free]
+
+Standard
+
+$160 /mo
+
+$2400 billed $1920/yr
+
+  * 10 calls/second
+  * up to 200.000 calls/day
+  * Priority support
+  * Access to ALL endpoints
+[Button: Get Started Now]
+
+Advanced
+
+$240 /mo
+
+$3600 billed $2880/yr
+
+  * 20 calls/second
+  * up to 500.000 calls/day
+  * Priority support
+  * Access to ALL endpoints
+[Button: Get Started Now]
+
+Professional
+
+$320 /mo
+
+$4800 billed $3840/yr
+
+  * 30 calls/second
+  * up to 1.000.000 calls/day
+  * Priority support
+  * Access to ALL endpoints
+[Button: Get Started Now]
+
+Pro Plus
+
+$440 /mo
+
+$6600 billed $5280/yr
+
+  * 30 calls/second
+  * up to 1.500.000 calls/day
+  * Priority support
+  * Access to ALL endpoints
+[Button: Get Started Now]
+
+Attribution required on Free plans
+
+A backlink or a “Powered by Routescan.io APIs” mention is required, except for personal or private usage.
+
+Requests work even without a key. A placeholder is only needed for integrations that require a key field, you can use any value, for example `&apikey=placeholder` or `apiKey: { routescan: "placeholder" }`.
+
+Manage keys and subscriptions in your Profile Settings, or in the billing portal (log in with your email and a one-time passcode). Need custom limits? Email [REDACTED_EMAIL].
+
+* Some chains may not be fully indexed and could return incomplete data. See the indexing status.--------------------------------------------------------------------------------
+Documentation | Routescan (https://testnet.routescan.io/documentation)
+citeturn505search1 [wordlim: 200] Crawled: 3 months ago; Our free tier allows you to access blockchain data without needing an API key at all.
+Additionally, you can fetch balances, token holdings, and more with ease.
+
+## Etherscan compatibility
+
+At Routescan, we understand the importance of seamless transitions and the value of pre-existing code. Therefore, to assist developers and facilitate smoother migrations of dApps, we've structured our data from all EVM chains indexed by Routescan to align with *Etherscan's API format.
+
+This compatibility ensures that developers can effortlessly recycle older codebases and integrate them into new or expanding projects, eliminating the need to start from scratch and thereby optimizing development time and resources.
+
+## API Plans
+
+### Free Tier
+
+Our free tier allows you to access blockchain data without needing an API key at all. This tier supports up to 2 requests per second (rps) and a daily limit of 10,000 calls, making it perfect for developers or users starting out or working on projects with moderate API usage.
+You can also get higher limits by registering on routescan.io and get a Free API key with up to \*5 calls/second (rps) and a daily limit of 100,000 call.*
+
+> Note: Normally, requests will go through even without any placeholders. Placeholders are only necessary for certain integrations where including a key parameter in the query, config files, or similar is required. You can use any API key value in query parameters: `&apikey=placeholder`. Or in configs: `apiKey: { routescan: "placeholder" }`.
+
+Please be aware that not all chains are fully indexed, which could result in incomplete data. For the most current information on indexing, see our chain list: https://docs.routescan.io/indexing-status.
+
+### Paid Plans
+
+For higher usage volumes and priority support, we offer paid plans that require an API key.
+With one API key, you can:
+
+  * Access all chains we index*
+  * Use the `/all` parameter to retrieve data across all supported chains
+  * Benefit from increased rate limits, higher daily call volumes, and priority support
+  * Simplify your development process with seamless multichain integration
+
+Monthly Quarterly (15% off)Yearly (20% off)
+--------------------------------------------------------------------------------
+Rate limits | Routescan (https://testnet.routescan.io/docs/plans-and-limits/rate-limits)
+citeturn505search2 [wordlim: 200] Crawled: last week; - Free (Keyless) — no account or API key needed. ... The APIs are provided as a community service and without warranty.
+
+# Rate limits
+
+Copy page as Markdown Open with AI tools
+
+Every Routescan API request counts against two caps set by your plan: a rate limit (requests per second) and a daily call limit. There are two free tiers:
+- Free (Keyless) — no account or API key needed. Start calling immediately at 2 req/s and 10,000 calls/day.
+- Free (Registered) — sign up for a free API key to raise the caps to 5 req/s and 100,000 calls/day, 10× the daily volume at no cost.
+
+Paid plans raise the caps further - see API keys & pricing page.
+
+## Limits by plan#
+
+Plan  | Requests / second  | Calls / day  | API key
+--- | --- | --- | ---
+Free (Keyless)  | 2  | 10,000  | Not required
+Free (Registered)  | 5  | 100,000  | Required
+Standard  | 10  | 200,000  | Required
+Advanced  | 20  | 500,000  | Required
+Professional  | 30  | 1,000,000  | Required
+Pro Plus  | 30  | 1,500,000  | Required
+
+## Exceeding the limit#
+
+When you exceed your plan's rate limit the API responds with an error status. Back off and retry, or upgrade your plan for more headroom.
+
+## Fair use#
+
+The APIs are provided as a community service and without warranty. Please request only what you need so the service stays fast for everyone.--------------------------------------------------------------------------------
+MCP server | Routescan (https://testnet.routescan.io/docs/build-with-ai)
+citeturn505search3 [wordlim: 200] Crawled: 5 days ago; Look up cross-chain transfers across LayerZero, CCTP, ICTT, Hyperlane, Teleporter and more without leaving the chat. ... No Routescan account or API key required.
+
+Agents that read balances, token holdings, and recent activity across multiple chains to build and rebalance portfolios.
+    
+    Read the balances, token holdings an…
+
+Transaction forensics & incident response
+
+Decode any tx by hash (status, gas, internal ops, event logs) and pivot into the contracts involved.
+    
+    Decode transaction 0xe4bee4633e263be…
+
+Chain health dashboards
+
+Real-time TPS, active addresses, gas price, block time, validator count and more for any supported chain.
+    
+    Give me a real-time health check of …
+
+How to connect
+
+No Routescan account or API key required. Add the server URL and connect anonymously. Signing in with OAuth (or adding your static key) raises your rate limits.
+
+[Button: General][Button: Claude][Button: Codex]
+
+We host a Streamable HTTP MCP server at:
+    
+    https://mcp.routescan.io/mcp
+
+Authentication is handled via OAuth 2.1. Add the URL to your MCP client and it will open a browser to sign in at auth.routescan.io on first connect. No API key to manage. Clients that don't support OAuth can authenticate with a static key instead (below).Prefer a static API key? For CI, automated agents, or clients without OAuth
+
+Send your Routescan API key as a header on every request:
+    
+    apiKey: rs_<YOUR_API_KEY>
+
+No API key? Get one here.--------------------------------------------------------------------------------
+Geth-Parity Proxy | Etherscan-compatible APIs | Routescan (https://routescan.io/docs/api/etherscan/geth-parity-proxy)
+citeturn505search4 [wordlim: 200] Crawled: today; API key (optional)
+
+# Geth-Parity Proxy
+
+Copy page as Markdown Open with AI tools
+
+Etherscan-compatible endpoints for the Geth-Parity Proxy module.
+
+## eth_blockNumber#
+
+Returns the number of most recent block
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_blockNumber&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_blockNumber' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: string;
+
+5}
+
+## eth_getBlockByNumber#
+
+Returns information about a block by block number.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+tag optional[Input: 0x10d4f]the block number, in hex eg. 0xC36B3C boolean optional[Input: true]the boolean value to show full transaction objects. when true, returns full transaction objects and their information, when false only returns a list of transactions.
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getBlockByNumber&tag=0x10d4f&boolean=true&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getBlockByNumber&tag=0x10d4f&boolean=true' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: {
+
+5 hash: string;
+
+6 parentHash: string;
+
+7 sha3Uncles: string;
+
+8 miner: string;
+
+9 stateRoot: string;
+
+10 transactionsRoot: string;
+
+11 receiptsRoot: string;
+
+12 logsBloom: string;
+
+13 difficulty: string;
+
+14 number: string;
+
+15 gasLimit: string;
+
+16 gasUsed: string;
+
+17 timestamp: string;
+
+18 extraData: string;
+
+19 mixHash: string;
+
+20 nonce: string;
+
+21 size: string;
+
+22 uncles: Record<string, unknown>[];
+
+23 transactions: {
+
+24 type: string;
+
+25 nonce: string;
+
+26 gasPrice: string;
+
+27 gas: string;
+
+28 to: string;
+
+29 value: string;
+
+30 input: string;
+
+31 r: string;
+
+32 s: string;
+
+33 v: string;
+
+34 hash: string;
+
+35 blockHash: string;
+
+36 blockNumber: string;
+
+37 transactionIndex: string;
+
+38 from: string;
+
+39 blockTimestamp: string;
+
+40 }[];
+
+41 };
+
+42}
+
+## eth_getUncleByBlockNumberAndIndex#
+
+Returns information about a uncle by block number.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+tag optional[Input: 0xC63276]the block number, in hex eg. 0xC36B3C index optional[Input: 0x0]the position of the uncle's index in the block, in hex eg. 0x5
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getUncleByBlockNumberAndIndex&tag=0xC63276&index=0x0&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getUncleByBlockNumberAndIndex&tag=0xC63276&index=0x0' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: {
+
+5 hash: string;
+
+6 parentHash: string;
+
+7 sha3Uncles: string;
+
+8 miner: string;
+
+9 stateRoot: string;
+
+10 transactionsRoot: string;
+
+11 receiptsRoot: string;
+
+12 logsBloom: string;
+
+13 difficulty: string;
+
+14 number: string;
+
+15 gasLimit: string;
+
+16 gasUsed: string;
+
+17 timestamp: string;
+
+18 extraData: string;
+
+19 mixHash: string;
+
+20 nonce: string;
+
+21 baseFeePerGas: string;
+
+22 size: string;
+
+23 uncles: Record<string, unknown>[];
+
+24 };
+
+25}
+
+## eth_getBlockTransactionCountByNumber#
+
+Returns the number of transactions in a block.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+tag optional[Input: 0x10FB78]the block number, in hex eg. 0x10FB78
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getBlockTransactionCountByNumber&tag=0x10FB78&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getBlockTransactionCountByNumber&tag=0x10FB78' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: string;
+
+5}
+
+## eth_getTransactionByHash#
+
+Returns the information about a transaction requested by transaction hash.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+txhash optional[Input: 0xbc78ab8a9e9a0bca7d0321a27b2c03addeae08ba81ea98b03cd3dd237eabed44]the string representing the hash of the transaction
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getTransactionByHash&txhash=0xbc78ab8a9e9a0bca7d0321a27b2c03addeae08ba81ea98b03cd3dd237eabed44&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getTransactionByHash&txhash=0xbc78ab8a9e9a0bca7d0321a27b2c03addeae08ba81ea98b03cd3dd237eabed44' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: {
+
+5 type: string;
+
+6 chainId: string;
+
+7 nonce: string;
+
+8 gas: string;
+
+9 maxFeePerGas: string;
+
+10 maxPriorityFeePerGas: string;
+
+11 to: string;
+
+12 value: string;
+
+13 accessList: Record<string, unknown>[];
+
+14 input: string;
+
+15 r: string;
+
+16 s: string;
+
+17 yParity: string;
+
+18 v: string;
+
+19 hash: string;
+
+20 blockHash: string;
+
+21 blockNumber: string;
+
+22 transactionIndex: string;
+
+23 from: string;
+
+24 gasPrice: string;
+
+25 blockTimestamp: string;
+
+26 };
+
+27}
+
+## eth_getTransactionByBlockNumberAndIndex#
+
+Returns information about a transaction by block number and transaction index position.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+tag optional[Input: 0xC6331D]the block number, in hex eg. 0xC36B3C index optional[Input: 0x11A]the position of the uncle's index in the block, in hex eg. 0x5
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getTransactionByBlockNumberAndIndex&tag=0xC6331D&index=0x11A&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getTransactionByBlockNumberAndIndex&tag=0xC6331D&index=0x11A' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: {
+
+5 type: string;
+
+6 chainId: string;
+
+7 nonce: string;
+
+8 gas: string;
+
+9 maxFeePerGas: string;
+
+10 maxPriorityFeePerGas: string;
+
+11 to: string;
+
+12 value: string;
+
+13 accessList: Record<string, unknown>[];
+
+14 input: string;
+
+15 r: string;
+
+16 s: string;
+
+17 yParity: string;
+
+18 v: string;
+
+19 hash: string;
+
+20 blockHash: string;
+
+21 blockNumber: string;
+
+22 transactionIndex: string;
+
+23 from: string;
+
+24 gasPrice: string;
+
+25 blockTimestamp: string;
+
+26 };
+
+27}
+
+## eth_getTransactionCount#
+
+Returns the number of transactions performed by an address.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+address optional[Input: 0x4bd5900Cb274ef15b153066D736bf3e83A9ba44e]the string representing the address to get transaction count tag optional[Input: latest]the string pre-defined block parameter, either earliest, pending or latest
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getTransactionCount&address=0x4bd5900Cb274ef15b153066D736bf3e83A9ba44e&tag=latest&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getTransactionCount&address=0x4bd5900Cb274ef15b153066D736bf3e83A9ba44e&tag=latest' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: string;
+
+5}
+
+## eth_getTransactionReceipt#
+
+Returns the receipt of a transaction by transaction hash.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+txhash optional[Input: 0xadb8aec59e80db99811ac4a0235efa3e45da32928bcff557998552250fa672eb]the string representing the hash of the transaction
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getTransactionReceipt&txhash=0xadb8aec59e80db99811ac4a0235efa3e45da32928bcff557998552250fa672eb&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getTransactionReceipt&txhash=0xadb8aec59e80db99811ac4a0235efa3e45da32928bcff557998552250fa672eb' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: string;
+
+5}
+
+## eth_getStorageAt#
+
+Returns the value from a storage position at a given address.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+address optional[Input: 0x6e03d9cce9d60f3e9f2597e13cd4c54c55330cfd]the string representing the address to get code position optional[Input: 0x0]the hex code of the position in storage, eg 0x0 tag optional[Input: latest]the string pre-defined block parameter, either earliest, pending or latest
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getStorageAt&address=0x6e03d9cce9d60f3e9f2597e13cd4c54c55330cfd&position=0x0&tag=latest&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_getStorageAt&address=0x6e03d9cce9d60f3e9f2597e13cd4c54c55330cfd&position=0x0&tag=latest' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: string;
+
+5}
+
+## eth_gasPrice#
+
+Returns the current price per gas in wei.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_gasPrice&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_gasPrice' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: string;
+
+5}
+
+## eth_estimateGas#
+
+Makes a call or transaction, which won't be added to the blockchain and returns the used gas.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+data optional[Input: 0x4e71d92d]the hash of the method signature and encoded parameters to optional[Input: 0xf0160428a8552ac9bb7e050d90eeade4ddd52843]the string representing the address to interact with value optional[Input: 0xff22]the value sent in this transaction, in hex eg. 0xff22 gasPrice optional[Input: 0x51da038cc]the gas price paid for each unit of gas, in wei post EIP-1559, the gasPrice has to be higher than the block's baseFeePerGas gas optional[Input: 0x5f5e0ff]the amount of gas provided for the transaction, in hex eg. 0x5f5e0ff
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_estimateGas&data=0x4e71d92d&to=0xf0160428a8552ac9bb7e050d90eeade4ddd52843&value=0xff22&gasPrice=0x51da038cc&gas=0x5f5e0ff&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=proxy&action=eth_estimateGas&data=0x4e71d92d&to=0xf0160428a8552ac9bb7e050d90eeade4ddd52843&value=0xff22&gasPrice=0x51da038cc&gas=0x5f5e0ff' \
+
+2 -H 'apikey: YourApiKeyToken'--------------------------------------------------------------------------------
+Integrating Google Sheets | Routescan Information Center (https://info.routescan.io/en/articles/12448035-integrating-google-sheets)
+citeturn505search5 [wordlim: 200] Published: last year; Crawled: last week; This is a perfect solution for creating custom dashboards for token balances, transaction histories, and more, without needing a dedicated developer. ... A Routescan API key is not required if you are within the free tier.
+
+# Integrating Google Sheets
+
+September 29, 2025
+
+Routescan provides a suite of APIs that let you query real-time onchain data and integrate it directly into your tools, dashboards, or workflows. This guide will walk you through the process of connecting the Routescan API calls to a Google Sheet, enabling you to pull and analyze blockchain data directly in a familiar spreadsheet environment. This is a perfect solution for creating custom dashboards for token balances, transaction histories, and more, without needing a dedicated developer.
+
+You will need a Google Account for this tutorial. A Routescan API key is not required if you are within the free tier.
+Setting up Your Google Sheet
+
+First, you need to prepare your Google Sheet to handle API calls. We will be using a custom script that can parse JSON data returned by the Routescan API.
+
+  1. Open a new Google Sheet.
+
+  2. From the menu bar, go to Extensions > Apps Script. A new browser tab will open with the script editor.
+
+## Adding the ImportJSON Script
+
+--------------------------------------------------------------------------------
+Deploying and Verifying Contracts - Hardhat V2 | Routescan Information Center (https://info.routescan.io/en/articles/11991333-deploying-and-verifying-contracts-hardhat-v2)
+citeturn505search6 [wordlim: 200] Published: 6 months ago; Crawled: 2 weeks ago; The default terminal settings on macOS/Linux are typically sufficient for running `npm` scripts without any changes. ...           routescan: "ANY_STRING_WORKS", // API key is not required by Routescan
+
+  2. Set the RPC URL (if not in config). You will also need to set the RPC URL variable.
+
+     * For macOS/Linux
+        
+        export SEPOLIA_RPC_URL="RPC_URL"
+
+     * For Windows (PowerShell)
+        
+        $env:SEPOLIA_RPC_URL="RPC_URL"
+
+### 3. Configure `hardhat.config.js` (or `.ts`)
+
+This file tells Hardhat everything it needs to know. Replace its entire content with the appropriate version below.
+
+JavaScript (`hardhat.config.js`)
+    
+    require("@nomicfoundation/hardhat-toolbox");
+    // IMPORTANT: If you are NOT using a .env file, you should remove the following line
+    require("dotenv").config();
+    /** @type import('hardhat/config').HardhatUserConfig */
+    module.exports = {
+      solidity: "0.8.30",
+      networks: {
+        routescan: {
+          url: process.env.SEPOLIA_RPC_URL || "",
+          accounts: [process.env.PRIVATE_KEY],
+        },
+      },
+      etherscan: {
+        apiKey: {
+          routescan: "ANY_STRING_WORKS", // API key is not required by Routescan
+        },
+        customChains: [
+          {
+            network: "routescan",
+            // Use the end goal Chain ID. In this case we are using Sepolia Chain ID.
+            chainId: 11155111,
+            urls: {
+              // This is the specific API endpoint for Routescan's Sepolia verifier. Make sure you change the request with either Testnet or Mainnet value and use the correct end goal Chain ID.
+              apiURL: "https://api.routescan.io/v2/network/testnet/evm/11155111/etherscan",
+              browserURL: "https://11155111.testnet.routescan.io/",
+            },
+          },
+        ],
+      },
+    };
+
+TypeScript (`hardhat.config.ts`)
+    
+    import { HardhatUserConfig } from "hardhat/config";
+    import "@nomicfoundation/hardhat-toolbox";
+    // IMPORTANT: If you are NOT using a .env file, you should remove the following line
+    import "dotenv/config";
+    const config: HardhatUserConfig = {
+      solidity: "0.8.30",
+      networks: {
+        routescan: {
+          url: process.env.SEPOLIA_RPC_URL || "",
+          accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        },
+      },
+      etherscan: {
+        apiKey: {
+          routescan: "ANY_STRING_WORKS", // API key is not required by Routescan
+        },
+        customChains: [
+          {
+            network: "routescan",
+            chainId: 11155111,
+            urls: {
+              apiURL: "https://api.routescan.io/v2/network/testnet/evm/11155111/etherscan",
+              browserURL: "https://11155111.testnet.routescan.io/",
+            },
+          },
+        ],
+      },
+    };
+    export default config;
+
+--------------------------------------------------------------------------------
+Geth-Parity Proxy | Etherscan-compatible APIs | Routescan (https://testnet.routescan.io/docs/api/etherscan/geth-parity-proxy)
+citeturn505search7 [wordlim: 200] Crawled: last month; Executes a new message call immediately without creating a transaction on the block chain. ... API key (optional)
+## eth_call#
+
+Executes a new message call immediately without creating a transaction on the block chain.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageSepolia
+
+to optional[Input: 0xAEEF46DB4855E25702F8237E8f403FddcaF931C0]the string representing the address to interact with data optional[Input: 0x70a08231000000000000000000000000e16359506c028e51f16be38986ec5746251e9724]the hash of the method signature and encoded parameters tag optional[Input: latest]the string pre-defined block parameter, either earliest, pending or latest
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/testnet/evm/11155111/etherscan/api?module=proxy&action=eth_call&to=0xAEEF46DB4855E25702F8237E8f403FddcaF931C0&data=0x70a08231000000000000000000000000e16359506c028e51f16be38986ec5746251e9724&tag=latest&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/testnet/evm/11155111/etherscan/api?module=proxy&action=eth_call&to=0xAEEF46DB4855E25702F8237E8f403FddcaF931C0&data=0x70a08231000000000000000000000000e16359506c028e51f16be38986ec5746251e9724&tag=latest' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: string;
+
+5}
+
+## eth_getCode#
+
+Returns code at a given address.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageSepolia
+
+address optional[Input: 0xf75e354c5edc8efed9b59ee9f67a80845ade7d0c]the string representing the address to get code tag optional[Input: latest]the string pre-defined block parameter, either earliest, pending or latest
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/testnet/evm/11155111/etherscan/api?module=proxy&action=eth_getCode&address=0xf75e354c5edc8efed9b59ee9f67a80845ade7d0c&tag=latest&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/testnet/evm/11155111/etherscan/api?module=proxy&action=eth_getCode&address=0xf75e354c5edc8efed9b59ee9f67a80845ade7d0c&tag=latest' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 jsonrpc: string;
+
+3 id: number;
+
+4 result: string;
+
+5}
+
+

@@ -1,0 +1,274 @@
+The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure by Omer Ozlen, Ozkan Batumoglu :: SSRN (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5966834)
+citeturn1083search0 [wordlim: 200] Published: 9 months ago; Crawled: 4 weeks ago; Ozlen, Omer and Batumoglu, Ozkan, The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure (December 25, 2025).
+
+# The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure
+
+13 Pages Posted: 20 Jan 2026
+
+See all articles by Omer Ozlen
+
+## Omer Ozlen
+
+affiliation not provided to SSRN
+
+## Ozkan Batumoglu
+
+Independent
+
+Date Written: December 25, 2025
+
+### Abstract
+
+Insider trading strategies are widely believed to generate abnormal returns, yet practitioner backtests often report performance far exceeding what is documented in the academic literature. Using insider transaction data from U.S. Securities and Exchange Commission (SEC) Form 4 filings for Russell 2000 constituents, we show that this discrepancy is driven by the timing of trade entry. We distinguish between the insider's transaction date, when information remains private, and the filing date, when it becomes publicly available. Strategies that enter on the transaction date generate extremely high Sharpe ratios, but these returns are not economically meaningful. Once entry is delayed until the filing date-the earliest point at which a public investor can legally trade-measured performance collapses, with 70-80 percent of total alpha dissipating between the transaction date and the following trading day, well before any public disclosure. By the time a Form 4 filing is released, the remaining signal is largely confirmatory rather than informative, indicating that backtests relying on transaction dates measure the value of private information rather than a tradable investment strategy.
+
+Keywords: Insider Trading, SEC Form 4, Market Efficiency, Information Diffusion, Trading Strategy Backtests, Look-Ahead Bias, Disclosure Timing, Russell 2000
+
+License Information
+
+The copyright holder has granted SSRN a license. All rights reserved. No reuse allowed without permission.
+
+Declaration of Interest
+
+The authors declare no conflicts of interest.
+
+Ethics Approval
+
+Not applicable. This study uses publicly available financial market data and does not involve human participants.
+
+Funder Statement
+
+This research received no external funding.
+
+JEL Classification: G14, G11, D82, G12, G18
+
+Suggested Citation
+
+Ozlen, Omer and Batumoglu, Ozkan, The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure (December 25, 2025). Available at SSRN: https://ssrn.com/abstract=5966834 or http://dx.doi.org/10.2139/ssrn.5966834
+
+### Omer Ozlen (Contact Author)
+
+#### affiliation not provided to SSRN
+
+### Ozkan Batumoglu
+
+#### Independent ( email )
+
+### 0 References
+
+### 0 Citations
+
+## Paper statistics
+
+Downloads
+
+292
+
+Abstract Views
+
+1,551--------------------------------------------------------------------------------
+The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure | Özkan Batumoğlu (https://www.linkedin.com/posts/batumoglu_the-death-of-insider-trading-alpha-most-activity-7419627209553858560-s_dO)
+citeturn1083search1 [wordlim: 200] Crawled: 3 months ago; # Özkan Batumoğlu’s Post ... In this study, we analyze and backtest insider trading returns in Russell 2000 stocks. ... Many thanks to Ömer Faruk Özlen for being an excellent team member and for his valuable contributions.
+
+# Özkan Batumoğlu’s Post
+
+Özkan Batumoğlu
+
+5mo
+
+We have published a new white paper on SSRN. In this study, we analyze and backtest insider trading returns in Russell 2000 stocks. Our findings highlight diminishing returns in insider trading strategies as information becomes public. Key insight: The Sharpe ratio declines from 9.03 (private information phase) to 1.37 once all information is publicly available. Many thanks to Ömer Faruk Özlen for being an excellent team member and for his valuable contributions. You can access the paper here: https://lnkd.in/dDA3kdrF #QuantFinance #InsiderTrading #MarketEfficiency #SSRN #FinanceResearch #Backtesting
+
+The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure papers.ssrn.com
+
+`` ``
+
+Dilara Yıldırım 4mo
+
+Congratulations on an excellent study. The way you disentangle private information from tradable signals is particularly insightful. Really enjoyed reading it!
+
+Like 1 Reaction
+
+Ersan Akgul 5mo
+
+Looks interesting! I will read it, thanks!
+
+Image
+
+2,716 followers
+
+  * 23 Posts
+
+View Profile Follow
+--------------------------------------------------------------------------------
+The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure | SSRN Electronic Journal | DeepDyve (https://www.deepdyve.com/lp/unpaywall/the-death-of-insider-trading-alpha-most-returns-occur-before-public-0SPLE4O9HU)
+citeturn1083search2 [wordlim: 200] Published: 9 months ago; Crawled: 3 months ago; # The Death of Insider Trading Alpha: Most Returns Occur Before Public DisclosureOzlen, Omer; Batumoglu, Ozkan
+# The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure
+
+Ozlen, Omer; Batumoglu, Ozkan
+
+SSRN Electronic Journal·Jan 1, 2026
+
+## The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure
+
+Ozlen, Omer;Batumoglu, Ozkan
+
+SSRN Electronic Journal, 1 – Jan 1, 2026
+--------------------------------------------------------------------------------
+Most of the insider trading alpha is gone by the time you see the filing: poof! (https://tommijohnsen.substack.com/p/most-of-the-insider-trading-alpha)
+citeturn1083search3 [wordlim: 200] Published: 4 months ago; Crawled: 3 weeks ago; This matches a January 2026 SSRN paper by Ozlen and Batumoglu that decomposed the insider trading alpha into the portion that lives between the transaction date and public filing, versus the portion that’s accessible after the filing is public.
+By the time the daily pipeline surfaced the cluster, the market had already moved. Individual cases: ONON had +2.63% prior-day excess and gave back 0.80% the next day. SPGI had +3.91% prior-day excess and gave back 0.56%. GEHC was the exception with positive excess across all three windows.
+
+This matches a January 2026 SSRN paper by Ozlen and Batumoglu that decomposed the insider trading alpha into the portion that lives between the transaction date and public filing, versus the portion that’s accessible after the filing is public. They found that 70 to 80 percent of the apparent return lives in the unobservable window. The implication for production strategies is unambiguous: most of the alpha is captured by people closer to the transaction than a daily-cadence pipeline can be. Run a strategy on filing-date Form 4 data, act at the next open, and you’re working against a strong headwind that the historical academic backtests don’t account for.
+
+There is one important asymmetry in the data, though. Large single-director purchases — six of them in the window, averaging $1M+ in net value, no 10b5-1 plan — showed a completely different timing pattern. The Cohen-Malloy-Pomorski routine-trade filter isn’t applied here because I don’t yet have three-year insider histories in the local store. None of the numbers above will hold up to inferential statistics applied to a single week.
+
+What the data does suggest, qualitatively, is that the literature’s predictions show up in the right places. Filtered cluster signals carry pre-disclosure drift consistent with Ozlen and Batumoglu. Large director purchases reach the market with a lag. Pure insider sales contain little obvious information. Programmatic compensation events need their own filter that the academic literature hasn’t articulated. And insider activity sometimes diverges from news sentiment in ways that are themselves interesting — eight of the ten high-Form-4 tickers in the window also appeared in the news-sentiment sections of the same dashboard, sometimes agreeing with the insider signal, sometimes contradicting it.
+
+A few directions worth investigating as more data accumulates. With twenty to fifty cluster observations, the per-buy and same-day-same-price thresholds become tunable against an actual false-positive rate. With a few hundred, the +1.61% pre-disclosure drift becomes a distributional estimate with sector and cap-size conditioning rather than a four-observation mean. The timing asymmetry between clusters and large director purchases is a five-versus-six observation sketch right now; a few months of data can tell you cleanly whether it survives. And the cross-signal question — what happens when insider activity and news sentiment disagree — has two anecdotes here pointing in opposite directions (WGS supports the informed-insider read, SHAK supports the news-is-right read) and would, with a year of those divergent cases, become statistical rather than rhetorical.--------------------------------------------------------------------------------
+Research (https://marketwizards.net/main/index.php/research)
+citeturn1083search4 [wordlim: 200] Crawled: 2 weeks ago; Challenge: Özlen & Batumoğlu (2025 independent research) ... Explore the full library of academic and practitioner research on insider trading, with plain-English summaries, key findings, limitations, and links to the original studies.
+
+Challenge: Özlen & Batumoğlu (2025 independent research)
+
+View papers →
+
+3
+
+### Purchase magnitude and economic commitment matter
+
+Purchase size is more meaningful when considered relative to ownership, wealth exposure, and the insider's resulting economic risk.
+
+Key point: Relative economic commitment may contain more information than raw purchase dollars alone.
+
+Why it matters: A purchase that materially increases personal exposure may carry different information from a similar-sized routine purchase.
+
+Nuance: Wealth-exposure evidence is promising but remains working-paper evidence rather than an established universal rule.
+
+Primary: Veenman (2012)
+
+Exploratory: Beneish & Markarian (2023 working paper)
+
+View papers →
+
+4
+
+### Information environment matters
+
+Insider purchases appear more informative in some competitive and information environments than in others.
+
+View papers →
+
+7
+
+### Statistical alpha is not the same as tradable alpha
+
+A statistically significant return pattern does not automatically become a scalable investment opportunity.
+
+Key point: Filing-time entry, liquidity, available volume, capacity, spreads, slippage, and costs can materially change economic results.
+
+Why it matters: Outside-investor research must evaluate what could realistically be traded after public disclosure.
+
+Nuance: Insider dollar-profit evidence illustrates economic scale, but does not itself test the tradability available to an outside investor.
+
+Primary: Oenschläger & Möllenhoff (2025)
+
+Supporting context: Cziraki & Gider (2021) · Challenge: Özlen & Batumoğlu (2025 independent research)
+
+View papers →
+
+Explore More
+
+## Browse all insider trading papers
+
+Explore the full library of academic and practitioner research on insider trading, with plain-English summaries, key findings, limitations, and links to the original studies.
+
+  * Satellite / event-specific: Duong, Pi & Sapp — Betting on My Enemy: Insider Trading Ahead of Hedge Fund 13D Filings
+  * Background / role evidence: Hvide & Nielsen — Flying Below the Radar: Insider Trading by Executives Below the Top
+
+View all insider trading papers  →
+
+### Information
+
+MarketWizards is an investment analytics and intelligence platform focused on financial research, market data, AI analysis, and better investment decision-making.--------------------------------------------------------------------------------
+Do Form 4 Insider Trades Predict Stocks? What Studies Show (https://www.itechguides.com/do-sec-form-4-insider-transactions-predict-future-stock-performance/)
+citeturn1083search5 [wordlim: 200] Published: 2 weeks ago; Crawled: 2 weeks ago; A recent 2026 working-paper search-result summary by Omer Ozlen and Ozkan Batumoglu, titled The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure, reports that 70–80% of measured alpha dissipated between the transaction and the following trading day when strategy entry was delayed to public disclosure.
+| The evidence is mixed, and voluntary reporting of plan status and other data limitations make plan classification imperfect. The review does not establish that every plan-linked trade is informative or uninformative.
+
+These findings can coexist. Aggregate net buying might relate to future overall returns even if the market barely moves when a particular insider trades. Insiders may also appear better at anticipating returns among smaller companies without every reported transaction offering a usable signal.
+
+## Why a filing is not automatically a trading signal
+
+### The public entry point can be later than the trade
+
+A recent 2026 working-paper search-result summary by Omer Ozlen and Ozkan Batumoglu, titled The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure, reports that 70–80% of measured alpha dissipated between the transaction and the following trading day when strategy entry was delayed to public disclosure. The paper’s methods and sample could not be verified from the available document, so that figure is preliminary—not an established consensus or a universal estimate. --------------------------------------------------------------------------------
+When the insiders and the news disagree: a first look at the cross-signal (https://tommijohnsen.substack.com/p/when-the-insiders-and-the-news-disagree)
+citeturn1083search6 [wordlim: 200] Published: 4 months ago; Crawled: 2 weeks ago; This is consistent with the established academic finding (Ozlen and Batumoglu, 2026, SSRN) that 70-80% of insider-trading alpha lives between the transaction date and public disclosure.
+The window is small, and the conclusions are descriptive rather than statistical. But the qualitative pattern across the four cells of the natural contingency table is consistent enough to be worth describing.
+
+## Background: what this builds on
+
+There is a sixty-year academic literature on insider trading filings as predictors of forward stock returns. The headline findings are consistent: insider purchases carry information, insider sales mostly do not, and coordinated buying by multiple insiders is stronger than individual transactions. The signal has been compressing over the decades as markets got faster and the data became more accessible, but it has not disappeared.
+
+A 2026 working paper by Ozlen and Batumoglu decomposed the timing of the alpha and found that 70-80% of it lives in the unobservable window between the transaction date and the day the filing becomes public. By the time a daily pipeline can act on the signal, most of the move is already in the price. A previous post in this series documented this pattern at small scale on five days of production data: clusters of officer buying surfaced in the dashboard, but the corresponding stock moves had typically already happened by the time the dashboard caught them.
+
+The convergent cells show their excess return before the joint signal surfaces, not after. Convergent bullish had a +2.43% prior-day excess and then drift toward zero (−0.63% next-day). Convergent bearish had −1.57% prior-day and −1.79% same-day, then essentially zero next-day. By the time the daily dashboard surfaced the convergent signal, most of the move was already in the price. This is consistent with the established academic finding (Ozlen and Batumoglu, 2026, SSRN) that 70-80% of insider-trading alpha lives between the transaction date and public disclosure. By the time a daily pipeline can act on the signal, the alpha has mostly evaporated. The new contribution here is that the pattern holds for the joint convergent signal too, not just the insider signal alone. Verdict: both the informed-insider and redundant-signals hypotheses are consistent with this pattern. It does not discriminate between them, but it says plainly that by the time a daily pipeline can act on a convergent signal, most of the move is already gone.
+--------------------------------------------------------------------------------
+Recent Academic Research - Alpha in Academia (https://www.alphainacademia.com/p/recent-academic-research-eff)
+citeturn1083search7 [wordlim: 200] Published: 8 months ago; Crawled: 3 months ago; > Ozlen, Omer and Batumoglu, Ozkan, The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure (December 25, 2025).
+
+They find that 70–80% of the abnormal return occurs between the transaction and the filing (a window where the information is legally private). Strategies that wait to trade until the public filing date generate negligible alpha, with Sharpe ratios collapsing from over 9.0 to 1.5.
+
+The market efficiently incorporates the private information via order flow before the regulatory disclosure ever hits the tape.
+
+> Ozlen, Omer and Batumoglu, Ozkan, The Death of Insider Trading Alpha: Most Returns Occur Before Public Disclosure (December 25, 2025). Available at SSRN: https://ssrn.com/abstract=5966834 or http://dx.doi.org/10.2139/ssrn.5966834
+
+
+## Volatility & Currency Correlations
+
+Major currency pairs synchronize during volatility, while precious metals decouple.
+
+This study analyzes ten years of weekly data (2015–2024) to quantify how volatility regimes alter asset correlations. The key finding is that correlation is dynamic, not static: during high-volatility regimes, major USD currency pairs (like EUR/USD and GBP/USD) exhibit significantly stronger positive correlations, moving in lockstep due to the dollar’s role as a global reserve asset.
+--------------------------------------------------------------------------------
+Do Form 4 Insider Trades Predict Stocks? What the Evidence Says (https://techyorker.com/do-sec-form-4-insider-transactions-predict-future-stock-performance/)
+citeturn1083search8 [wordlim: 200] Published: 2 weeks ago; Crawled: last week; A 2026 working-paper search-result summary by Omer Ozlen and Ozkan Batumoglu reports that moving entry to the public filing date sharply reduces measured insider-trading alpha, with 70–80% of the measured alpha dissipating between the transaction and the following trading day.
+The SEC also notes data limitations and voluntary reporting of plan status.  | Plan labels do not provide a complete or perfectly classified account of why a trade occurred, and the review does not establish a universal return pattern for plan trades.
+
+These findings are not direct contradictions. Aggregate market-level prediction is different from sorting individual stocks by insider activity, and both differ from measuring a filing-date trading strategy after costs. A historical statistical association can be real without being a dependable forecast for a particular filing.
+
+## Why the public filing date matters
+
+To test whether a Form 4 signal is usable by a public investor, start the return measurement when the filing becomes public—not when the insider made the trade. Otherwise, the test may credit the strategy with returns earned before a follower could know about the transaction.
+
+A 2026 working-paper search-result summary by Omer Ozlen and Ozkan Batumoglu reports that moving entry to the public filing date sharply reduces measured insider-trading alpha, with 70–80% of the measured alpha dissipating between the transaction and the following trading day. --------------------------------------------------------------------------------
+Do Form 4 Insider Trades Predict Stock Returns? (https://geekchamp.com/do-sec-form-4-insider-transactions-predict-future-stock-performance/)
+citeturn1083search9 [wordlim: 200] Published: 2 weeks ago; Crawled: last week; A 2026 working-paper search-result summary by Omer Ozlen and Ozkan Batumoglu reports that measured strategy performance fell sharply when entry was delayed until public disclosure, with 70–80% of measured alpha dissipating between the transaction and the following trading day. ... financial markets Insider trading investing SEC Form 4 stock performance
+A cross-sectional finding—some categories of companies doing better or worse than others—also does not show that a public investor can buy or sell at a useful price after disclosure.
+
+## Why transaction date and filing date produce different answers
+
+Insiders may trade before filing, so a backtest that begins on the transaction date risks look-ahead bias: it credits a strategy with returns earned before the signal was public. The relevant start for a public-filing strategy is the first realistic opportunity to act after the filing becomes available, not the earlier trade date.
+
+A 2026 working-paper search-result summary by Omer Ozlen and Ozkan Batumoglu reports that measured strategy performance fell sharply when entry was delayed until public disclosure, with 70–80% of measured alpha dissipating between the transaction and the following trading day. That is a preliminary working-paper result; its methods and sample could not be verified from the available document. It is a reason to scrutinize timing in performance claims, not a universal estimate of what Form 4 followers lose.
+--------------------------------------------------------------------------------
+Insider Buys Deep Below the 52-Week High Outperform. But Not How You’d Think. (https://amberallocates.substack.com/p/insider-buys-deep-below-the-52-week)
+citeturn1083search10 [wordlim: 200] Published: 2 months ago; Crawled: last month; Johnsen (2026), citing Ozlen & Batumoglu, found 70-80% of insider alpha lives in the window between transaction date and public filing. ... It’s that the combination of high insider conviction + a stock trading 40%+ below its peak creates a right-skewed distribution where the winners are large.
+## The Caveats
+
+1. The 2021 exception. The signal inverts in broad-recovery years. When everything bounces, insider selection doesn’t add edge.
+
+2. The pre-filing alpha decay. Johnsen (2026), citing Ozlen & Batumoglu, found 70-80% of insider alpha lives in the window between transaction date and public filing. Our +4.83% is the post-filing residual — the 20-30% a daily pipeline can still capture. The total insider information edge is larger than what we measure.
+
+3. It’s a threshold, not a gradient. The cross-validation (available on request) shows the premium concentrates below the 40% threshold — the 0-40% range is relatively flat, then the signal steepens. This is a binary filter (“is the stock 40%+ below its 52-week high?”), not a continuous weighting signal. The R² is under 0.02 — don’t use it as a position-size multiplier.
+
+4. Matched-control timing. Adithyan (2026) ran a matched-control study on 137 CEO purchases at 20%+ drawdowns. --------------------------------------------------------------------------------
+내부자와 뉴스가 엇갈릴 때, 누구 말이 맞을까 — 교차 신호의 첫 탐색 - systrader79의 트레이딩 이야기 (https://wikidocs.net/blog/%40systrader79/18756/)
+citeturn1083search11 [wordlim: 200] Published: 4 months ago; Crawled: 4 months ago; Ozlen과 Batumoglu의 2026년 연구는 내부자 거래에서 나오는 초과수익(알파)이 정확히 언제 발생하는지를 분해했는데, 그 결과가 의미심장합니다.
+## 이 분석이 딛고 선 토대
+
+내부자 거래 신고가 미래 주가를 예측한다는 연구는 무려 60년에 이르는 학술적 역사를 갖고 있습니다. 핵심 결론은 한결같습니다. 내부자의 매수는 정보를 담고 있지만 매도는 대체로 그렇지 않으며, 여러 내부자가 함께 사들이는 군집 매수가 한 사람의 거래보다 강력하다는 것입니다. 시장이 빨라지고 데이터 접근성이 좋아지면서 이 신호는 수십 년에 걸쳐 점점 압축(약화)되어 왔지만, 그렇다고 사라진 것은 아닙니다.
+
+여기서 한 가지 중요한 배경을 짚어야 합니다. Ozlen과 Batumoglu의 2026년 연구는 내부자 거래에서 나오는 초과수익(알파)이 정확히 언제 발생하는지를 분해했는데, 그 결과가 의미심장합니다. 알파의 70~80%가 거래일과 공시가 공개되는 날 사이의 보이지 않는 창문에서 발생한다는 것입니다. 쉽게 말해, 일간 데이터 파이프라인이 신호를 보고 행동할 수 있을 무렵에는 이미 주가 움직임의 대부분이 끝나 있다는 뜻입니다. --------------------------------------------------------------------------------
+919
+Millî Eğitim Bakanlığı Tebliğler Dergisi  
+May (https://www.memurpostasi.com/indir/309934629)
+citeturn1083search12 [wordlim: 200] Published: 6 months ago;  Kademe 12511 12615 | ZAFER BEDİR NAZİF ORBAY | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Araştırma Geliştirme Eğitim ve Uygulama Merkezi Lisesi 12511 12616 | ZAFER BEDİR SERDAR ÖZKAN | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi İcadiye İlkokulu 12511 12617 | ZAFER BEDİR CÜNEYT BANAN | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Hakkı Demir Anadolu İmam Hatip Lisesi 12511 12618 | ZAFER BEDİR TAHİR KEMAL BULUT | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür Yardımcısı | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Üsküdar Ticaret Mesleki ve Teknik Anadolu Lisesi 12511 12619 | ZAFER BEDİR FATMA DEVRİM DENİZCİ ÇAVUŞ | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Mehmetçik Ortaokulu 12511 12620 | ZAFER BEDİR HAMZA ÇELİKEL | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Ahmet Yüksel Özemre Bilim ve Sanat Merkezi 12511 12621 | ZAFER BEDİR MUHAMMET FATİH AYDEMİR | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Avni Başman İlkokulu 12511 12622 | ZAFER BEDİR OSMAN BOZALİ | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Paşakapısı Mesleki Eğitim Merkezi 12511 12623 | ZAFER BEDİR AYŞEGÜL YILMAZ DERELİ | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür Yardımcısı | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Üsküdar İmam Hatip Ortaokulu 12511 12624 | ZAFER BEDİR HANIMZER ASLAN | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Ahmet Yüksel Özemre Bilim ve Sanat Merkezi 12511 12625 | ZAFER BEDİR GÜLTEKİN TOPUZ | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Kısıklı Şehit Hüseyin Dalgılıç Ortaokulu 12511 12626 | ZAFER BEDİR FATİH KUZGUN | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür Yardımcısı | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Acıbadem Türk Telekom Şehit Mete Sertbaş Ortaokulu 12511 12627 | ZAFER BEDİR MERAL AĞ | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Üsküdar Mihrimah Sultan Kız Anadolu İmam Hatip Lisesi 12511 12628 | ZAFER BEDİR FIRAT SEYİTOĞLU | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür Yardımcısı | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Üsküdar Halk Eğitimi Merkezi 12511 12629 | ZAFER BEDİR MUSTAFA KÜÇÜK | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Üsküdar Mihrimah Sultan Kız Anadolu İmam Hatip Lisesi 12511 12630 | ZAFER BEDİR CANSU ATICI | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Selimiye Mesleki ve Teknik Anadolu Lisesi 12511 12631 | ZAFER BEDİR ABBAS BARDAK | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Acıbadem Türk Telekom Şehit Mete Sertbaş Ortaokulu 12511 12632 | ZAFER BEDİR MİNE KILIÇ | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Kandilli Kız Lisesi 12511 12633 | ZAFER BEDİR NİHAT ÇETİNTÜRK | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Şemsipaşa İlkokulu 12511 12634 | ZAFER BEDİR FUAT SES | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Haydarpaşa Lisesi 12511 12635 | ZAFER BEDİR ZEHRA YARDIMCI | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Şehit Gökhan Esen Ortaokulu 12511 12636 | ZAFER BEDİR LEYLA KAMİLOĞLU | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Burhaniye İlkokulu 12511 12637 | ZAFER BEDİR TARIK BEKİROĞLU | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür Yardımcısı | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Abidin Gün İlkokulu 12511 12638 | ZAFER BEDİR CEVAT ULU | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Çamlıca Şehit Onur Ensar Ayanoğlu İlkokulu 12511 12639 | ZAFER BEDİR SEMRA YALÇIN | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Şehit Gökhan Esen Ortaokulu 12511 12640 | ZAFER BEDİR SEMİH DURMUŞ | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Yaman Dede İmam Hatip Ortaokulu 12511 12641 | ZAFER BEDİR MURAT ÖZGEN | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Sokullu Mehmet Paşa İlkokulu 12511 12642 | ZAFER BEDİR İBRAHİM BATUMOĞLU | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Ata Ortaokulu 12511 12643 | ZAFER BEDİR ABDULLAH ÇAKIR | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Beylerbeyi İlkokulu 12511 12644 | ZAFER BEDİR HİDAYET ÇİFTCİ | Öğretmen/Müdür Yardımcısı Öğretmen | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Haydarpaşa Mesleki ve Teknik Anadolu Lisesi 12511 12645 | ZAFER BEDİR MUZAFFER BİLGE | Öğretmen/Müdür Yardımcısı Şube Müdürü | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi İlçe Milli Eğitim Müdürlüğü 12511 12646 | ZAFER BEDİR ALİ YILDIZ | Öğretmen/Müdür Yardımcısı Öğretmen/Müdür | İSTANBUL İSTANBUL | TUZLA ÜSKÜDAR | Tuzla Süleyman Demirel Ticaret Mesleki ve Teknik Anadolu Lisesi Sultantepe Prof.
+

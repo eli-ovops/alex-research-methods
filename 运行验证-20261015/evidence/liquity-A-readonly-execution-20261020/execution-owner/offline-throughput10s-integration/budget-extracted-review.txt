@@ -1,0 +1,54 @@
+class Budget:
+
+    def __init__(self, cu_limit=25000000, method_limit=400000, peak=100, cpu=7200, ram=1024 ** 3, state=None):
+        self.cu_limit = min(cu_limit, 25000000)
+        self.method_limit = min(method_limit, 400000)
+        self.peak = min(peak, 300)
+        self.cpu_limit = min(cpu, 18000)
+        self.ram_limit = min(ram, 1024 ** 3)
+        self.cu = (state or {}).get('cu', 0)
+        self.methods = (state or {}).get('methods', 0)
+        self.cpu_prior = (state or {}).get('cpu', 0)
+        self.started_cpu = time.process_time()
+        self.window = collections.deque()
+
+    def resource_check(self):
+        cpu = self.cpu_prior + time.process_time() - self.started_cpu
+        if cpu >= self.cpu_limit:
+            raise Stop('CPU_BUDGET')
+        rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * (1 if sys.platform == 'darwin' else 1024)
+        if rss >= self.ram_limit:
+            raise Stop('RAM_BUDGET')
+
+    def charge(self, cost, count=1):
+        if type(cost) != int or cost < 0 or type(count) != int or (count < 0):
+            raise Stop('BILLING_UNKNOWN')
+        self.resource_check()
+        if self.cu + cost > self.cu_limit or self.methods + count > self.method_limit:
+            raise Stop('CU_OR_METHOD_BUDGET')
+        if cost > self.peak * 10:
+            raise Stop('PEAK_SINGLE_REQUEST')
+        while True:
+            now = time.monotonic()
+            while self.window and now - self.window[0][0] >= 10.0:
+                self.window.popleft()
+            if sum((x[1] for x in self.window)) + cost <= self.peak * 10:
+                break
+            time.sleep(max(0.01, 10.0 - (now - self.window[0][0])))
+        self.window.append((time.monotonic(), cost))
+        self.cu += cost
+        self.methods += count
+
+    def delivered(self, cost, arrival):
+        self.resource_check()
+        self.cu += cost
+        while self.window and arrival - self.window[0][0] >= 10.0:
+            self.window.popleft()
+        self.window.append((arrival, cost))
+        if self.cu > self.cu_limit:
+            raise Stop('ACTUAL_DELIVERY_CU_CAP_EXCEEDED_STOP')
+        if sum((x[1] for x in self.window)) > self.peak * 10:
+            raise Stop('ACTUAL_DELIVERY_PEAK_EXCEEDED_STOP')
+
+    def state(self):
+        return {'cu': self.cu, 'methods': self.methods, 'cpu': self.cpu_prior + time.process_time() - self.started_cpu}

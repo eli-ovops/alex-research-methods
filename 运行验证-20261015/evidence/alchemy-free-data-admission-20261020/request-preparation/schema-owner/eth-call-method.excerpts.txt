@@ -1,0 +1,107 @@
+eth_call - Ethereum API | Alchemy Docs (https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-call)
+citeturn1231view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-call","lineno":null}); Total lines: 130
+L0: > For the complete documentation index, see cite0†llms.txt .
+L1: 
+L2: cite1†Skip to content L3: 
+L4: Search or Ask AI
+L5: 
+L6:   * cite2†Chains L7:   * cite3†Data L8:   * cite4†Wallets L9:   * cite5†Build with AI L10:   * cite6†Tools & Resources L11: cite7†Changelog L12: 
+L13:   * cite2†Chains L14:   * cite3†Data L15:   * cite4†Wallets L16:   * cite5†Build with AI L17:   * cite6†Tools & Resources L18:   * cite7†Changelog L19: ### Introduction
+L20: 
+L21: cite2†API Overview cite8†Supported Chains cite9†Feature Support by Chain cite10†MEV Protection cite6†Pricing L22: 
+L23: WebSockets
+L24: 
+L25: Trace API
+L26: 
+L27: Debug API
+L28: 
+L29: Yellowstone gRPC
+L30: 
+L31: Launch Your Own Chain (Rollups)
+L32: 
+L33: [Select]
+L34: ### Ethereum
+L35: 
+L36: cite11†Quickstart cite12†Ethereum API Overview L37: 
+L38: Ethereum API Endpoints
+L39: cite13†POSTerigon_forks cite14†POSTerigon_getHeaderByHash cite15†POSTerigon_getHeaderByNumber cite16†POSTerigon_getLogsByHash cite17†POSTerigon_issuance cite18†POSTeth_accounts cite19†POSTeth_blobBaseFee cite20†POSTeth_blockNumber cite21†POSTeth_call cite22†POSTeth_callBundle cite23†POSTeth_callMany cite24†POSTeth_chainId cite25†POSTeth_config cite26†POSTeth_createAccessList cite27†POSTeth_estimateGas cite28†POSTeth_feeHistory cite29†POSTeth_fillTransaction cite30†POSTeth_gasPrice cite31†POSTeth_getAccount cite32†POSTeth_getAccountInfo cite33†POSTeth_getBalance cite34†POSTeth_getBlockByHash cite35†POSTeth_getBlockByNumber cite36†POSTeth_getBlockReceipts cite37†POSTeth_getBlockTransactionCountByHash cite38†POSTeth_getBlockTransactionCountByNumber cite39†POSTeth_getCode cite40†POSTeth_getFilterChanges cite41†POSTeth_getFilterLogs cite42†POSTeth_getLogs cite43†POSTeth_getProof cite44†POSTeth_getRawTransactionByHash cite45†POSTeth_getStorageAt cite46†POSTeth_getTransactionByBlockHashAndIndex cite47†POSTeth_getTransactionByBlockNumberAndIndex cite48†POSTeth_getTransactionByHash cite49†POSTeth_getTransactionBySenderAndNonce cite50†POSTeth_getTransactionCount cite51†POSTeth_getTransactionReceipt cite52†POSTeth_getUncleByBlockHashAndIndex cite53†POSTeth_getUncleByBlockNumberAndIndex cite54†POSTeth_getUncleCountByBlockHash cite55†POSTeth_getUncleCountByBlockNumber cite56†POSTeth_maxPriorityFeePerGas cite57†POSTeth_newBlockFilter cite58†POSTeth_newFilter cite59†POSTeth_newPendingTransactionFilter cite60†POSTeth_protocolVersion cite61†POSTeth_sendRawTransaction cite62†POSTeth_simulateV1 cite63†POSTeth_submitWork cite64†POSTeth_subscribe cite65†POSTeth_syncing cite66†POSTeth_uninstallFilter cite67†POSTeth_unsubscribe cite68†POSTnet_listening cite69†POSTnet_version cite70†POSTweb3_clientVersion cite71†POSTweb3_sha3 L40: Ethereum Beacon API Endpoints
+L41: 
+L42: cite72†FAQ L43: 
+L44: cite73†Go to Dashboard†dashboard.alchemy.com L45: ### Introduction
+L46: 
+L47: cite2†API Overview cite8†Supported Chains cite9†Feature Support by Chain cite10†MEV Protection cite6†Pricing L48: 
+L49: WebSockets
+L50: 
+L51: Trace API
+L52: 
+L53: Debug API
+L54: 
+L55: Yellowstone gRPC
+L56: 
+L57: Launch Your Own Chain (Rollups)
+L58: 
+L59: [Select]
+L60: ### Ethereum
+L61: 
+L62: cite11†Quickstart cite12†Ethereum API Overview L63: 
+L64: Ethereum API Endpoints
+L65: cite13†POSTerigon_forks cite14†POSTerigon_getHeaderByHash cite15†POSTerigon_getHeaderByNumber cite16†POSTerigon_getLogsByHash cite17†POSTerigon_issuance cite18†POSTeth_accounts cite19†POSTeth_blobBaseFee cite20†POSTeth_blockNumber cite21†POSTeth_call cite22†POSTeth_callBundle cite23†POSTeth_callMany cite24†POSTeth_chainId cite25†POSTeth_config cite26†POSTeth_createAccessList cite27†POSTeth_estimateGas cite28†POSTeth_feeHistory cite29†POSTeth_fillTransaction cite30†POSTeth_gasPrice cite31†POSTeth_getAccount cite32†POSTeth_getAccountInfo cite33†POSTeth_getBalance cite34†POSTeth_getBlockByHash cite35†POSTeth_getBlockByNumber cite36†POSTeth_getBlockReceipts cite37†POSTeth_getBlockTransactionCountByHash cite38†POSTeth_getBlockTransactionCountByNumber cite39†POSTeth_getCode cite40†POSTeth_getFilterChanges cite41†POSTeth_getFilterLogs cite42†POSTeth_getLogs cite43†POSTeth_getProof cite44†POSTeth_getRawTransactionByHash cite45†POSTeth_getStorageAt cite46†POSTeth_getTransactionByBlockHashAndIndex cite47†POSTeth_getTransactionByBlockNumberAndIndex cite48†POSTeth_getTransactionByHash cite49†POSTeth_getTransactionBySenderAndNonce cite50†POSTeth_getTransactionCount cite51†POSTeth_getTransactionReceipt cite52†POSTeth_getUncleByBlockHashAndIndex cite53†POSTeth_getUncleByBlockNumberAndIndex cite54†POSTeth_getUncleCountByBlockHash cite55†POSTeth_getUncleCountByBlockNumber cite56†POSTeth_maxPriorityFeePerGas cite57†POSTeth_newBlockFilter cite58†POSTeth_newFilter cite59†POSTeth_newPendingTransactionFilter cite60†POSTeth_protocolVersion cite61†POSTeth_sendRawTransaction cite62†POSTeth_simulateV1 cite63†POSTeth_submitWork cite64†POSTeth_subscribe cite65†POSTeth_syncing cite66†POSTeth_uninstallFilter cite67†POSTeth_unsubscribe cite68†POSTnet_listening cite69†POSTnet_version cite70†POSTweb3_clientVersion cite71†POSTweb3_sha3 L66: Ethereum Beacon API Endpoints
+L67: 
+L68: cite72†FAQ L69: 
+L70:   1. cite11†Ethereum L71:   2. Ethereum API Endpoints
+L72: # eth_call
+L73: 
+L74: POST
+L75: 
+L76: https://eth-mainnet.g.alchemy.com/v2[Select]/{apiKey}
+L77: 
+L78: cite74†CUs26 L79: 
+L80: Executes a new message call immediately without creating a transaction on the blockchain.
+L81: 
+L82: ## Path Parameters
+L83: 
+L84: ### apiKey
+L85: 
+L86: string required defaults to `docs-demo`
+L87: 
+L88: For higher throughput, cite75†create your own API key†dashboard.alchemy.com L89: 
+L90: ## Request
+L91: 
+L92: ### Transaction
+L93: 
+L94: object required
+L95: 
+L96: The transaction call object containing the details of the message call.
+L97: 
+L98: Show 15 properties
+L99: ### Block
+L100: 
+L101: string or enum optional
+L102: 
+L103: The block number, tag, or hash at which to execute the call. Defaults to `'latest'` if not provided.
+L104: 
+L105: Identifies a block by explicit number, a predefined tag (e.g., latest/safe/finalized), or a 32-byte block hash.
+L106: 
+L107: Show 3 variants
+L108: 
+L109: ## Responses
+L110: ### 200
+L111: 
+L112: The return value of the executed contract function, encoded as a hexadecimal string.
+L113: 
+L114: POST`/v2/{apiKey}`
+L115: 
+L116: cURL[Select]
+L117: 
+L118:     `curl --request POST \  --url https://eth-mainnet.g.alchemy.com/v2/docs-demo \  --header 'Content-Type: application/json' \  --data '{  "jsonrpc": "2.0",  "id": 1,  "method": "eth_call",  "params": [    {      "to": "0x69498dd54bd25aa0c886cf1f8b8ae0856d55ff13",      "value": "0x1"    },    "latest"  ]}'`
+L119: 
+L120: Try it
+L121: 200 Success
+L122: 
+L123:     `{  "jsonrpc": "2.0",  "id": 1,  "result": "0x"}`
+L124: 
+L125: Was this page helpful?
+L126: 
+L127: Yes No
+L128: 
+L129: cite22†eth_callBundle Simulates a bundle of signed transactions against a specific block number, including simulating a bundle at the top of the next block. This method allows you to test transaction bundles before submitting them to the network. --------------------------------------------------------------------------------

@@ -1,0 +1,7 @@
+stooq.com (https://stooq.com/db/h/)
+citeturn1003view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://stooq.com/db/h/","lineno":null}); Total lines: 1
+L0: This site requires JavaScript to verify your browser. Please enable JavaScript and reload.
+--------------------------------------------------------------------------------
+stooq.com (https://stooq.com/)
+citeturn1003view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://stooq.com/","lineno":null}); Total lines: 1
+L0: This site requires JavaScript to verify your browser. Please enable JavaScript and reload.

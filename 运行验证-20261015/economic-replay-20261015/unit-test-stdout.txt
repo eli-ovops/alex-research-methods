@@ -1,0 +1,24 @@
+test_bootstrap_uses_188_time_window_excesses (__main__.AccountingTests.test_bootstrap_uses_188_time_window_excesses) ... ok
+test_cash_infeasible_is_atomic_and_not_resized (__main__.AccountingTests.test_cash_infeasible_is_atomic_and_not_resized) ... ok
+test_close_before_same_time_open_trade_and_no_post_exit_close (__main__.AccountingTests.test_close_before_same_time_open_trade_and_no_post_exit_close) ... ok
+test_deadline_is_terminal_without_retry (__main__.AccountingTests.test_deadline_is_terminal_without_retry) ... ok
+test_decision_required_cases_no_cherry_pick (__main__.AccountingTests.test_decision_required_cases_no_cherry_pick) ... ok
+test_epsilon_only_suppresses_fee_and_count_not_math (__main__.AccountingTests.test_epsilon_only_suppresses_fee_and_count_not_math) ... ok
+test_final_fee_in_W_and_sampled_drawdown (__main__.AccountingTests.test_final_fee_in_W_and_sampled_drawdown) ... ok
+test_flat_two_asset_ledger_commission (__main__.AccountingTests.test_flat_two_asset_ledger_commission) ... ok
+test_flat_two_asset_slippage_and_cash_identity (__main__.AccountingTests.test_flat_two_asset_slippage_and_cash_identity) ... ok
+test_half_boundary_continuity_and_log_telescope (__main__.AccountingTests.test_half_boundary_continuity_and_log_telescope) ... ok
+test_independent_decimal_reference_one_asset_main_cost (__main__.AccountingTests.test_independent_decimal_reference_one_asset_main_cost) ... ok
+test_mixed_dst_offset_targets_are_same_instants (__main__.AccountingTests.test_mixed_dst_offset_targets_are_same_instants) ... ok
+test_negative_signal_still_selects_top_and_ties_by_symbol (__main__.AccountingTests.test_negative_signal_still_selects_top_and_ties_by_symbol) ... ok
+test_net_sell_precedes_buy_even_reverse_alphabetical (__main__.AccountingTests.test_net_sell_precedes_buy_even_reverse_alphabetical) ... ok
+test_no_model_imports (__main__.AccountingTests.test_no_model_imports) ... ok
+test_one_asset_trend_continuous_hold (__main__.AccountingTests.test_one_asset_trend_continuous_hold) ... ok
+test_real_calendar_normal_and_half_day_last_bar_ends (__main__.AccountingTests.test_real_calendar_normal_and_half_day_last_bar_ends) ... ok
+test_simulation_infeasible_case_retained (__main__.AccountingTests.test_simulation_infeasible_case_retained) ... ok
+test_unchanged_position_no_roundtrip_fee (__main__.AccountingTests.test_unchanged_position_no_roundtrip_fee) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.219s
+
+OK

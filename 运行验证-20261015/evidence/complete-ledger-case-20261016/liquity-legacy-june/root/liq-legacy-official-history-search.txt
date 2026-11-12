@@ -1,0 +1,801 @@
+V2 Redeployment Updates (https://www.liquity.org/blog/liquity-v2-redeployment)
+citeturn510search0 [wordlim: 200] Published: 1.7 years ago; Crawled: 2 days ago; February 17, 2025 ... Following a five-week audit contest with 800+ researchers, multiple re-audits, and weeks of testing, Liquity V2 goes live on May 19th. ... Liquity V2 Redeployment Update 🛠
+
+Image: V2 Redeployment Updates
+
+Liquity V1
+
+Liquity V2
+
+·
+
+February 17, 2025
+
+V2 Redeployment Updates
+
+Here you can find the latest information about the Stability Pool (“Earn”) issue and the next steps for redeployment.
+
+#### ↑ The latest update is on the top ↑
+
+May 19
+
+Tweet
+
+Liquity V2 is LIVE on Ethereum Mainnet! 🎉
+
+- Borrow on your own terms with user-set interest rates
+
+- Hold or deposit $BOLD , an immutable stablecoin with real yield
+
+- Stake $LQTY to direct protocol incentivized liquidity
+
+- Earn 16+ tokens and rewards from V2 friendly forks
+
+🧵👇
+May 13
+
+Tweet
+
+Liquity relaunches on May 19.
+
+Following a five-week audit contest with 800+ researchers, multiple re-audits, and weeks of testing, Liquity V2 goes live on May 19th.
+
+Get your ETH, wstETH,and rETH ready.
+
+- Borrow on your own terms with user-set rates
+- Mint $BOLD, a truly immutable stablecoin with real yield
+- Stake $LQTY to direct protocol incentivized liquidity
+- Put your $BOLD to use, and unlock rewards with 15+ friendly forks.
+
+April 30
+
+Tweet
+
+Liquity V2 Redeployment Update 🛠
+
+This week → judges reviewing @cantinaxyz submissions & patching 🤓
+
+Next week → @chain_security & @dedaub re-audits 🛡
+
+Mid May → mainnet redeployment 🚀
+
+The BOLD wait will soon be over 🟢
+March 13
+
+Tweet
+
+Liquity V2 Redeployment Update and Audit Contest
+
+We now have an updated timeline for the redeployment of Liquity V2!
+
+Next Week: Publication of the updated and patched V2 codebase
+
+March - April: Hosting of a multi-week audit competition
+
+Q2: Redeployment of Liquity V2 on Mainnet
+
+Since Liquity V2 will be deployed as an immutable protocol, it is of the utmost importance to ensure proper and safe functioning under all circumstances.
+
+The issue found in V2 revealed how deeply hidden edge cases can be, and how sophisticated the approaches to uncover them must be.
+
+We believe we can best address this by adding an extra level of scrutiny by doing an open audit competition on the deployment-ready codebase. Security must be the first priority of an immutable deployment, and thus we believe a minor postponement to be an acceptable tradeoff.
+
+The competition will be held via an audit platform, with further details to be shared shortly.
+
+Lastly, teams who are forking Liquity V2 will be free to proceed at their own cadence once the patched codebase has been made publicly available. These teams will have access to audit competition results, and any resulting patches needed to upgrade their mutable deployments.
+Please note that these teams will only consider activity from the initial Liquity V2 deployment up until February 12th, when the initial notice of a potential SP issue was given, as eligible for reward programs.
+
+#### Feb 21
+
+Tweet
+
+Liquity V2 Redeployment in Mid-March. A fix for Liquity V2 has been developed, and auditors will begin their review at the end of next week. Once the audits are complete, Liquity V2’s redeployment is planned for mid-March.  
+What does this mean for current Liquity V2 users?
+
+- The current deployment of Liquity V2 will become a legacy protocol
+- Liquity V2 Stability Pool depositors should close their positions immediately.
+- Liquity V2 Borrowers should close their loans while liquidity conditions for $BOLD remain favorable
+- BOLD holders without a loan position should sell their BOLD.
+
+#### Feb 18
+
+Tweet
+
+A fix for the issue in the Stability Pools raised regarding Liquity V2 is in development, and audits are scheduled to begin at the end of next week.Liquity V2 will be redeployed, and users will be encouraged to reopen their positions on the new contracts.What does this mean for current users?
+
+  * Liquity V2 Stability Pool depositors should close their positions. Immediate action is strongly advised, as there is an issue that could result in the loss of funds held in these contracts.
+
+  * Liquity V2 Borrowers should close their loans while liquidity conditions for BOLD remain favorable.
+
+  * BOLD holders without a loan position should sell their BOLD (more below).
+
+If BOLD is above $1, BOLD holders should consider:
+
+  * Selling their BOLD using Curve, Uniswap, Balancer or a dex aggregator
+
+  * Providing single sided liquidity on Uniswap in ranges which they find attractive
+
+  * Setting limit orders on aggregators like Cow Swap
+
+
+#### Feb 13
+
+Tweet
+
+Yesterday’s issue with the Stability Pools (“Earn”) on Liquity V2 has been confirmed.  
+
+Users are strongly advised to close their Stability Pool (“Earn”) positions in Liquity V2. To the team’s knowledge, no users have been impacted and the issue is isolated to the Stability Pool (“Earn”). 
+
+All other parts of the system are unaffected (“Borrow”, “Multiply” and “Stake”) and BOLD remains fully backed and redeemable. 
+
+The Liquity V2 protocol will be redeployed with a patch.  
+
+#### Feb 12
+
+Tweet
+
+The Liquity team was informed of a potential issue affecting Liquity V2 Stability Pools (“Earn”), and is currently investigating a potential impact. 
+
+The team is currently working on confirming this potential issue and solutions. The protocol continues to work as expected and to the team’s knowledge the potential issue has not impacted any users.
+
+Out of an abundance of caution, a Liquity V2 user should close their Stability Pool (“Earn”) positions.
+
+Based on the current understanding, the following parts of the system aren’t affected:
+
+- BOLD remains fully backed and redeemable
+
+- Borrowers can withdraw their collateral assets
+
+- Staked LQTY positions are not impacted
+
+‍
+
+Disclaimer:
+
+- It is strongly encouraged that all users interact with frontends which they have previously used.
+
+- Liquity team members will not DM you, and there is no help desk or private support channel.
+
+- Scammers may use this opportunity to try to steal your funds, please remain vigilant and only use official sources for information.
+
+- Liquity V2 is fully permissionless, and the Liquity team does not maintain any administrative roles over the Liquity protocol. It is each user’s own responsibility to take appropriate actions when interacting with the Liquity protocol.--------------------------------------------------------------------------------
+Liquity V2 is LIVE (https://www.liquity.org/blog/liquity-v2-is-live)
+citeturn510search1 [wordlim: 200] Published: 1.4 years ago; Crawled: 3 days ago; May 19, 2025Liquity V2 is LIVEFollowing a five-week audit contest with 800+ researchers, multiple re-audits, and weeks of testing, Liquity V2 is now live.
+
+Sam Lekhak
+
+·
+
+May 19, 2025
+
+Liquity V2 is LIVE
+
+Following a five-week audit contest with 800+ researchers, multiple re-audits, and weeks of testing, Liquity V2 is now live.
+
+Liquity V2 will be unique among DeFi protocols: 
+‍
+- Borrowers set their own interest rates
+- Users direct protocol revenues to stablecoin liquidity pools
+- Stablecoin holders can redeem for protocol collateral
+
+### What makes V2 unique?
+
+##### 1) Borrow on Your Own Terms   
+
+Liquity V2 is built for free-market borrowing - no governance overhead or trusted intermediaries. You control your borrowing costs, and rates are entirely market driven by its redemption mechanism.
+
+2) BOLD: A Dollar You Control
+At the heart of V2 is BOLD, a stablecoin that is only backed by ETH, wstETH, and rETH. BOLD is immutable and unstoppable, meaning no one can alter the rules or freeze your assets. It delivers a truly DeFi dollar that is risk-minimized, while offering real yield to depositors.
+
+Image
+
+3) 100% of Protocol Revenues Flow Back to Users
+
+# What can you do with Liquity V2?
+
+‍
+Borrow & Multiply
+
+Image
+
+- Use ETH, rETH, and wstETH as collateral to borrow BOLD with flexible, user-set interest rates.
+- Set Your Own Rate: Tailor your borrowing costs without reliance on DAOs or fixed models
+- High Capital Efficiency: Borrow at up to 91% of your collateral’s value
+- Redemption Control: Manage your redemption risk with adjustable interest rates
+- Increase your exposure to ETH and its staking yield 
+
+Earn with BOLD
+
+Image
+
+Deposit into one of the multiple Stability Pools to earn continuous yield from interest revenue that borrowers pay (in BOLD) as well as any liquidation gains (in (liquid staked) ETH).
+
+‍
+
+Stake your LQTY
+
+Image
+
+Stake your LQTY tokens to direct V2 revenues, as well as earn V1 fees. 25% of protocol revenue goes to support incentives for secondary BOLD liquidity.
+
+### Try it out and DYOR!‍
+
+To understand the risks of Liquity V2, make sure to review the following carefully:‍
+
+-
+Getting started with Liquity V2-
+FAQ-
+Risk Disclosure-
+Technical Resources & Audits- Protocol Disclaimer
+
+We invite you to explore Liquity V2 on Ethereum Mainnet and join us in championing the free-market, immutable ethos of DeFi we wish to uphold.
+‍
+Choose a community frontend to borrow on your own terms today.--------------------------------------------------------------------------------
+Blog | Liquity V2 (https://www.liquity.org/blog)
+citeturn510search2 [wordlim: 200] Crawled: 3 days ago; Liquity V2 Liquity V1 V2 Redeployment Updates February 17, 2025 ... Liquity V2 Liquity V1 Voting in Liquity V2 January 17, 2025
+
+# Liquity Blog
+
+Announcements, updates, and more from the Liquity team.
+
+Liquity V2Liquity V1All
+
+Liquity V2 Liquity V1 Guide: Liquity V2 February 19, 2026
+
+Liquity V2 Liquity V1 BOLD Receives A- Rating from Bluechip January 26, 2026
+
+Liquity V2 Liquity V1 Enosys Airdrop for Liquity V2 Users January 19, 2026
+
+Liquity V2 Liquity V1 Liquity V2 Safety Mode November 5, 2025
+
+Liquity V2 Liquity V1 Forkonomics Update - August 2025 August 15, 2025
+
+Liquity V2 Liquity V1 Autonomous Interest Rate Manager (ARM) for V2 June 23, 2025
+
+Liquity V2 Liquity V1 Liquity Adopts the Chainlink Standard for Cross-Chain Interoperability for BOLD May 20, 2025
+
+Liquity V2 Liquity V1 Guide to Liquity V2 May 19, 2025
+
+Liquity V2 Liquity V1 Liquity V2 is LIVE May 19, 2025
+
+Liquity V2 Liquity V1 V2 Redeployment Updates February 17, 2025
+
+Liquity V2 Liquity V1 Bribe Markets in Liquity V2: Strategic Value for LQTY Stakers February 5, 2025
+
+Liquity V2 Liquity V1 Voting in Liquity V2 January 17, 2025
+
+Liquity V2 Liquity V1 sBOLD - The yield-bearing DeFi savings account January 15, 2025
+
+Liquity V2 Liquity V1 A BOLD Stance January 9, 2025
+
+Liquity V2 Liquity V1 Auditing Liquity V2 December 20, 2024
+
+Liquity V2 Liquity V1 Forkonomics: Collaboration, not Competition December 12, 2024
+
+Liquity V2 Liquity V1 Liquity V2 Testnet is LIVE on Sepolia!November 26, 2024
+
+Liquity V2 Liquity V1 Using Liquity V2 on Testnet November 25, 2024
+
+Liquity V2 Liquity V1 Bootstrapping Liquity V2’s Expansion November 13, 2024
+
+Liquity V2 Liquity V1 Interest Rate Management in Liquity V2 October 30, 2024
+
+Liquity V2 Liquity V1$BOLD - DeFi's Treasury Asset September 24, 2024
+
+Liquity V2 Liquity V1 Directing Protocol Incentivized Liquidity with LQTY September 9, 2024
+
+Liquity V2 Liquity V1 Liquity V2: Improving DeFi with BOLD Innovation September 4, 2024
+
+Liquity V2 Liquity V1 Licensing Liquity V2: May the Fork Be with You July 3, 2024--------------------------------------------------------------------------------
+Guide to Liquity V2 (https://www.liquity.org/blog/guide-to-liquity-v2)
+citeturn510search3 [wordlim: 200] Published: 1.4 years ago; Crawled: 3 days ago;   * Leviathan News: Why Liquity V2 will be the biggest launch of DeFi (May 2024)‍  * Copper Liquity V2 Opening Bell Issue (March, 2024)‍
+
+Bojan Pecek
+
+·
+
+May 19, 2025
+
+Guide to Liquity V2
+
+Liquity V2 allows you to borrow a stablecoin against ETH and LSTs.
+It pioneers user-set rates which provides users with greater control over their costs. The new stablecoin $BOLD will provide sustainable real yield. It inherits the resilience of LUSD, while benefiting from improved peg dynamics.
+
+### Key Features and Improvements
+
+Liquity V2 is building on the success of V1. 
+Find an overview of the differences in this table.
+
+Image
+
+### Borrowing
+
+Liquity V2 improves the borrowing experience on several levels:
+
+  * User-set interest rates - a better monetary policy
+  * New collateral types
+  * Short-term loans
+  * Multiple loans per address (and transferable)
+  * 1-click multiply
+
+But it keeps all of what V1 has been valued for:
+
+  * No TradFi exposure
+  * Immutability
+  * Rigorous security
+  * Predictable fees
+‍
+
+Video: How to Borrow
+
+Article: How to set Your Interest rate
+
+Tweet: How to find and use market-wide borrow rates
+--------------------------------------------------------------------------------
+Liquity V2 : Old Collateral Registry | Address: 0xd99de73b...af780f3f7 | Etherscan (https://etherscan.io/address/0xd99de73b95236f69a559117ecd6f519af780f3f7)
+citeturn510search4 [wordlim: 200] Crawled: 3 months ago; 0xd99dE73b95236F69A559117ECD6F519Af780F3f7 ... | Redeem Collatera...  | 2026-06-22 16:50:11  | 9 days ago  | 1782147011  | 0x39240625...0125355FC  | IN  | Liquity V2 : Old Collateral Registry  | 0 ETH$0.00  | 0.00138853  | 2.2152448
+
+# Contract
+
+0xd99dE73b95236F69A559117ECD6F519Af780F3f7
+
+[Button: Buy]
+
+Sponsored
+
+eToro Crypto Trading Made Simple Buy Now! Trusted, Multi-asset Broker with Powerful Tools for Real Traders Worldwide.
+
+Liquity V2 : Old Collateral Registry Source Code Source Code
+
+Liquity Old Contract
+
+API
+
+  * Token Approvals Beta
+
+### Overview
+
+#### ETH Balance
+
+0 ETH
+
+#### Eth Value
+
+$0.00
+
+#### Token Holdings
+
+$0.00 (1 Tokens)
+
+[Input: Search for Token Name]
+
+Could not find any matches!
+
+View All Holdings
+
+#### Contract Creator
+
+Liquity V2: Deployer | 1 yr 159 days ago
+
+### Multichain Info
+
+$0 (Multichain Portfolio)
+
+
+ Latest 25 from a total of 194 transactions
+
+HIDE LOW VALUE
+
+[Input]
+
+Download Page Data
+
+  * View Completed Txns
+  * View Pending Txns
+  * View Failed Txns
+  * * * *
+
+  * View Outgoing Txns
+--- | --- | --- | --- | --- | --- | --- | --- | ---
+Source Code Verified Exact Match
+
+API
+
+* * *
+
+###### Net Worth in USD
+
+$0.00
+
+* * *
+
+###### Net Worth in ETH
+
+0
+
+### Multichain Portfolio | 33 Chains
+
+Display all chains •
+
+Last updated: 28 secs ago
+
+Show 33 more chains--------------------------------------------------------------------------------
+Redemptions and Delegation | Liquity Docs (https://docs.liquity.org/v2-faq/redemptions-and-delegation)
+citeturn510search5 [wordlim: 200] Crawled: 7 months ago; After connecting your wallet through `“Connect to Web3”`, set spender to `0xd99dE73b95236F69A559117ECD6F519Af780F3f7`and the amount to be at least as high as the amount you wish to redeem, adding 18 zeros. ... https://etherscan.io/address/0xd99de73b95236f69a559117ecd6f519af780f3f7#writeContract Simply input the BOLD amount to redeem, the redemption fee percentage you are willing to accept and the maximum number of list iterations per collateral (limits the number of troves whose debt can be repaid on each branch).
+
+# Redemptions and Delegation
+
+### 
+
+What are redemptions?
+
+Redemptions serve the crucial purpose of keeping BOLD pegged to the US Dollar, creating a price floor around $1. They do this in a decentralized way without reliance on centralized assets or 3rd parties.
+
+A redemption is essentially swapping BOLD for ETH/LST at face value, as if 1 BOLD is exactly worth $1. Redemptions can be initiated by anyone, but are only profitable when BOLD <$1.
+
+The redeemer sends BOLD to the protocol and in return gets a mix of WETH, wstETH and rETH (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see link for more info).
+
+Image
+
+Redemptions start from the borrower paying the least interest.
+
+Read more about how to protect yourself from redemptions and what happens if you are redeemed.
+
+You can also watch this 9 min video on redemptions.
+
+### 
+
+When can redemptions occur?
+### 
+
+How to redeem BOLD for collateral (mix of ETH, rETH and wstETH) using Etherscan
+
+Step 1
+
+To redeem BOLD you first have to give the CollateralRegistry contract an approval to use your BOLD using the approve() function of the BOLD token contract.
+
+For that matter, go to Etherscan using the following link https://etherscan.io/token/0xb01dd87b29d187f3e3a4bf6cdaebfb97f3d9ab98#writeContract
+
+After connecting your wallet through `“Connect to Web3”`, set spender to `0xd99dE73b95236F69A559117ECD6F519Af780F3f7`and the amount to be at least as high as the amount you wish to redeem, adding 18 zeros.
+
+Example for 1000 BOLD:
+
+Image
+
+Step 2 You can now redeem BOLD using the `CollateralRegistry` contract:
+
+https://etherscan.io/address/0xd99de73b95236f69a559117ecd6f519af780f3f7#writeContract Simply input the BOLD amount to redeem, the redemption fee percentage you are willing to accept and the maximum number of list iterations per collateral (limits the number of troves whose debt can be repaid on each branch).
+--------------------------------------------------------------------------------
+Liquity V2 : Old Collateral Registry | Address: 0xd99de73b...af780f3f7 | Etherscan (https://etherscan.io/address/0xd99de73b95236f69a559117ecd6f519af780f3f7?amt=0-1)
+citeturn510search6 [wordlim: 200] Crawled: 5 months ago; 0xd99dE73b95236F69A559117ECD6F519Af780F3f7 ... | Redeem Collatera...  | 2026-03-23 1:20:47  | 47 days ago  | 1774228847  | 0x39240625...0125355FC  | IN  | Liquity V2 : Old Collateral Registry  | 0 ETH$0.00  | 0.00128351  | 2.03770499
+
+# Contract
+
+0xd99dE73b95236F69A559117ECD6F519Af780F3f7
+
+[Button: Buy]
+
+Sponsored
+
+
+Liquity V2 : Old Collateral Registry Source Code Source Code
+
+Liquity Old Contract
+
+API
+
+  * Token Approvals Beta
+
+### Overview
+
+#### ETH Balance
+
+0 ETH
+
+#### Eth Value
+
+$0.00
+
+#### Token Holdings
+
+$0.00 (1 Tokens)
+
+#### Private Name Tags
+
+Add
+
+#### Contract Creator
+
+Liquity V2: Deployer | 1 yr 105 days ago
+
+
+Download Page Data
+
+  * View Completed Txns
+  * View Pending Txns
+  * View Failed Txns
+  * * * *
+
+  * View Outgoing Txns
+  * View Incoming Txns
+  * View Contract Creation
+
+ | Transaction Hash  | Method Search by Function Name / Method ID [Input: e.g. Transfer / 0xa9059cbb]
+
+ | 
+
+###### Set Duration
+
+Last 1H Last 24HLast 7DLast 30DLast 90DLast 180D
+
+* * *
+
+###### Custom Duration
+
+From [Input] To [Input] [Button: Apply] [Button: Clear]  | From [Input: Search by address e.g. 0x..]     Arg [2] : _troveManagers (address[]): 0x81D78814DF42DA2caB0E8870C477bC3Ed861DE66,0xb47eF60132dEaBc89580Fd40e49C062D93070046,0xde026433882a9DdED65cAc4FfF8402FAFFF40FcA
+    -----Encoded View---------------
+    11 Constructor Arguments found :
+    Arg [0] : 000000000000000000000000b01dd87b29d187f3e3a4bf6cdaebfb97f3d9ab98
+    Arg [1] : 0000000000000000000000000000000000000000000000000000000000000060
+    Arg [2] : 00000000000000000000000000000000000000000000000000000000000000e0
+    Arg [3] : 0000000000000000000000000000000000000000000000000000000000000003
+    Arg [4] : 000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+    Arg [5] : 0000000000000000000000007f39c581f595b53c5cb19bd0b3f8da6c935e2ca0
+    Arg [6] : 000000000000000000000000ae78736cd615f374d3085123a210448e74fc6393
+    Arg [7] : 0000000000000000000000000000000000000000000000000000000000000003
+    Arg [8] : 00000000000000000000000081d78814df42da2cab0e8870c477bc3ed861de66
+    Arg [9] : 000000000000000000000000b47ef60132deabc89580fd40e49c062d93070046
+    Arg [10] : 000000000000000000000000de026433882a9dded65cac4fff8402fafff40fca
+
+Loading
+
+Image 0xd99dE73b95236F69A559117ECD6F519Af780F3f7
+
+###### Net Worth in USD
+
+$0.00
+
+* * *
+
+###### Net Worth in ETH
+
+0
+
+--------------------------------------------------------------------------------
+Understanding Liquity’s Redemption Mechanism (https://www.liquity.org/blog/understanding-liquitys-redemption-mechanism)
+citeturn510search7 [wordlim: 200] Published: 5.5 years ago; Crawled: 2 weeks ago; Liquity V2 ... April 13, 2021 ... Simply put: The redemption mechanism gives LUSD holders the ability to redeem LUSD at face value for the underlying ETH collateral at any time. ... If you’re looking to explore Liquity’s redemption mechanism in more detail, I recommend reading On Price Stability of Liquity, our whitepaper, and our FAQ.
+
+Liquity V1
+
+Liquity V2
+
+Kolten Bergeron
+
+·
+
+April 13, 2021
+
+Understanding Liquity’s Redemption Mechanism
+
+After launch, one common source of confusion we’ve seen is around Liquity’s redemption mechanism. Since LUSD redemptions were deactivated for 14 days post-launch, it seems like a good time to fill everyone in as we near the end of the grace period.
+
+Before we get started, I’ll answer the most common question right away. No, redemptions are not the same as paying back your Trove’s debt. You can do that free of charge and debt repayment has been available since launch.
+
+# What are LUSD redemptions?
+
+LUSD redemptions are one of Liquity’s most unique features. Simply put: The redemption mechanism gives LUSD holders the ability to redeem LUSD at face value for the underlying ETH collateral at any time. Redemptions are always honored such that 1 LUSD equals $1 worth of ETH (minus the current redemption fee).
+
+As mentioned above, the redemption mechanism is separate from paying back your Trove’s debt. --------------------------------------------------------------------------------
+Redemptions and Delegation | Docs V2 🇰🇷 | Liquity Docs (https://docs.liquity.org/kr/faq/redemptions-and-delegation)
+citeturn510search8 [wordlim: 200] Crawled: 7 months ago;   * spender: `0xd99dE73b95236F69A559117ECD6F519Af780F3f7` ... https://etherscan.io/address/0xd99de73b95236f69a559117ecd6f519af780f3f7#writeContract
+
+지갑을 “Connect to Web3” 버튼을 통해 연결한 후,
+
+  * spender: `0xd99dE73b95236F69A559117ECD6F519Af780F3f7`
+
+  * amount: 리뎀션을 진행하려는 BOLD 수량에 18개의 0을 추가한 값(예: 1000 BOLD 리뎀션 시 해당 값)
+
+[1000 BOLD에 대한 예시]
+
+Image
+
+2단계: BOLD 리뎀션 진행
+
+이제 CollateralRegistry 계약을 통해 BOLD 리뎀션을 진행 할 수 있습니다:
+
+https://etherscan.io/address/0xd99de73b95236f69a559117ecd6f519af780f3f7#writeContract
+
+해당 계약에서 아래의 값을 입력합니다:
+
+  * BOLD 리뎀션 수량: 리뎀션을 진행하려는 BOLD 수량에 1e18을 곱한 값
+
+  * 리뎀션 수수료 비율: 당신이 수용할 수 있는 리뎀션 수수료(현재 수수료보다 높아야 함) 현재 수수료율은 여기에서 확인 가능합니다
+
+  * 담보별 최대 리스트 반복 횟수: 각 분기에서 리뎀션 가능한 trove 수를 제한하는 값 (예시로 0을 입력)
+
+예시:
+
+  * _boldAmount: 리뎀션을 진행하려는 BOLD 수량 × 1e18
+
+  * _maxIterationsPerCollateral: 0
+
+  * _maxFeePercentage: 1%를 1e16 배로 표현한 값, 즉 1000000000000000000
+
+Image
+
+
+Last updated 6 months ago--------------------------------------------------------------------------------
+Legacy V2 and Testnet | Docs V2 🇷🇺 | Liquity Docs (https://docs.liquity.org/ru/v2-documentation/technical-resources)
+citeturn510search9 [wordlim: 200] Crawled: 7 months ago; 0xd99de73b95236f69a559117ecd6f519af780f3f7
+
+# Legacy V2 and Testnet
+
+Here you can find the contract addresses for the V2 legacy deployment and the Sepolia testnet.
+
+#### 
+
+BOLD Token
+
+Contract
+
+Address
+
+boldToken Mainnet
+
+0xb01dd87B29d187F3E3a4Bf6cdAebfb97F3D9aB98
+
+boldToken Base
+
+0x087C440F251Ff6Cfe62B86DdE1bE558B95b4bb9b
+
+boldToken Arbitrum
+
+0x087C440F251Ff6Cfe62B86DdE1bE558B95b4bb9b
+
+boldToken Optimism
+
+0x087C440F251Ff6Cfe62B86DdE1bE558B95b4bb9b
+
+boldToken Scroll
+
+0x087C440F251Ff6Cfe62B86DdE1bE558B95b4bb9b
+
+boldToken Avalanche
+
+0x087C440F251Ff6Cfe62B86DdE1bE558B95b4bb9b
+
+#### 
+
+Shared contracts
+
+Contract
+
+Address
+
+collateralRegistry
+
+0xd99de73b95236f69a559117ecd6f519af780f3f7
+
+hintHelpers
+
+0xe3bb97ee79ac4bdfc0c30a95ad82c243c9913ada
+
+multiTroveGetter
+
+0xa4a99f8332527a799ac46f616942dbd0d270fc41
+
+exchangeHelpers
+
+0x28c9decfacee0e796409b4b63eb263610e5e38dc
+--------------------------------------------------------------------------------
+General | Liquity Docs (https://docs.liquity.org/v2-faq)
+citeturn510search10 [wordlim: 200] Crawled: 7 months ago; What is Liquity v2?Liquity v2 is a decentralized borrowing protocol that lets users deposit ETH or LSTs as collateral, and mint the stablecoin BOLD.
+
+# General
+
+### 
+
+What is Liquity v2?
+
+Liquity v2 is a decentralized borrowing protocol that lets users deposit ETH or LSTs as collateral, and mint the stablecoin BOLD.
+
+There are 4 main use-cases:
+
+  * Borrow BOLD
+
+  * 1-click multiply (staked) ETH
+
+  * Earn yield by depositing BOLD
+
+  * Stake LQTY to direct PIL and earn
+
+### 
+
+What are the differences to V1?
+
+While there are plenty of changes coming with V2, it will keep the things V1 is known for:
+
+  * Immutability
+
+  * Decentralization
+
+  * Rigorous security
+
+  * No TradFi exposure
+
+However, V2 is innovating on multiple fronts:
+
+  * User-set interest rates - more control over your borrowing cost
+
+  * New collateral types - ETH and LSTs
+
+  * Improved redemption mechanism
+
+  * Protocol-incentivized liquidity (PIL)
+
+  * More attractive short-term loans
+
+  * Improved capital efficiency
+
+  * Multiple Troves per address (and transferable)
+
+  * No Recovery Mode
+
+  * Looping/one-click multiply
+
+### 
+
+What happens to Liquity v1 and LUSD?
+
+Liquity V1 is here to stay: it is battle-tested, and LUSD is the stablecoin of choice for users who prefer a pure ETH backing.
+
+### 
+
+Does Liquity V2 have governance?
+
+Liquity V2 is subject to minimal governance which is solely tasked with distributing Protocol Liquidity Incentives (PIL), directing 25% of the protocol's revenue to external initiatives.
+
+Governance has no other functions or powers, as Liquity V2’s smart contracts are immutable and not upgradeable.
+
+
+Last updated 2 months ago--------------------------------------------------------------------------------
+Contract Addresses | liquity/docs-v2 | DeepWiki (https://deepwiki.com/liquity/docs-v2/3.1-contract-addresses)
+citeturn510search11 [wordlim: 200] Crawled: last month; These contracts are shared across all collateral branches in the Liquity V2 protocol on Ethereum mainnet. ... collateralRegistry  | 0xd99de73b95236f69a559117ecd6f519af780f3f7
+
+### Shared Contracts
+
+These contracts are shared across all collateral branches in the Liquity V2 protocol on Ethereum mainnet.
+
+Contract  | Address
+--- | ---
+collateralRegistry  | 0xd99de73b95236f69a559117ecd6f519af780f3f7
+hintHelpers  | 0xe3bb97ee79ac4bdfc0c30a95ad82c243c9913ada
+multiTroveGetter  | 0xa4a99f8332527a799ac46f616942dbd0d270fc41
+exchangeHelpers  | 0x28c9decfacee0e796409b4b63eb263610e5e38dc
+
+### ETH Branch Contracts
+
+These contracts handle ETH as collateral in the Liquity V2 protocol.
+
+Contract  | Address
+--- | ---
+addressesRegistry  | 0x38e1f07b954cfab7239d7acab49997fbaad96476
+activePool  | 0xacece9a6ff7fea9b9e1cdfeee61ca2b45cc4627b
+borrowerOperations  | 0x0b995602b5a797823f92027e8b40c0f2d97aff1c
+collSurplusPool  | 0x46720b3d63e38583d8f6d77d52c52df32604ef4b
+defaultPool  | 0x075e0c707097c4c071056687b0b87cd9392c7bbd
+sortedTroves  | 0x879474cfbb980fb6899aaaa9b5d5ee14ffbf85a9
+stabilityPool  | 0xf69eb8c0d95d4094c[REDACTED_PHONE]f678727393cf
+troveManager  | 0x81d78814df42da2cab0e8870c477bc3ed861de66
+troveNFT  | 0x84ed456a8074652130dfc4fe1fadb140e0f8ce2b
+metadataNFT  | 0x05e6a5aa1c0dfefe83a8df37f1a9fa0c17c5f375
+priceFeed  | 0x3279e2b49ff60dafb276fbaff847383b67a7ec2d
+gasPool  | 0xaafd627156a28153e4066cd3a062bbf9e8707c5c
+interestRouter  | 0x636deb767cd7d0f15ca4ab8ea9a9b26e98b426ac
+wethZapper  | 0xd929c1927988625f834b9a39b562018cf6daeda5
+leverageZapper  | 0x978d7188ae01881d254ad7e94874653b0c268004
+
+--------------------------------------------------------------------------------
+July 22, 2025 (https://elements.visualcapitalist.com/wp-content/uploads/2025/07/1753251901130-compressed.pdf)
+citeturn510search12 [wordlim: 200] Published: 1.2 years ago; Liquity V2 relaunched with user-defined rates and Ethereum-native yield ... May-2025
+

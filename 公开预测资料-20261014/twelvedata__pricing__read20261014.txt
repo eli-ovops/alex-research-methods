@@ -1,0 +1,661 @@
+Individual Pricing - Twelve Data
+Live
+Now Live: Cboe Europe real-time data for all major European stocks.
+Data add-ons
+XJPX
+opens in 9h 57m
+Market closed
+Opens in 9h 57m
+23:02
+00:00
+09:00
+15:30
+23:59
+Trading hours · Mon–Fri
+Main market
+09:00 – 15:30
+Asia/Tokyo · UTC+09:00
+Exchange details
+0700
+423.60
+−
+0.38%
+EUR/USD
+1.11
+−
+0.73%
+AAPL
+345.56
+1.26%
+TSLA
+364.94
+−
+2.74%
+NESN
+78.70
+1.81%
+7203
+3,008.00
+0.80%
+USD/JPY
+158.89
+0.33%
+XPT/USD
+1,003.20
+0.33%
+ETH/USD
+2,450.23
+−
+1.91%
+2330
+2,505.00
+0.60%
+005930
+232,000.00
+0.00%
+MC
+390.55
+1.69%
+AZN
+12,188.00
+2.45%
+ASML
+1,539.60
+1.99%
+0700
+423.60
+−
+0.38%
+EUR/USD
+1.11
+−
+0.73%
+AAPL
+345.56
+1.26%
+TSLA
+364.94
+−
+2.74%
+NESN
+78.70
+1.81%
+7203
+3,008.00
+0.80%
+USD/JPY
+158.89
+0.33%
+XPT/USD
+1,003.20
+0.33%
+ETH/USD
+2,450.23
+−
+1.91%
+2330
+2,505.00
+0.60%
+005930
+232,000.00
+0.00%
+MC
+390.55
+1.69%
+AZN
+12,188.00
+2.45%
+ASML
+1,539.60
+1.99%
+Products
+Market Data
+Stocks
+US & global coverage
+Crypto
+Digital currencies
+Forex
+Physical currencies
+Commodities
+Raw materials
+ETFs
+Exchange-traded funds
+Mutual funds
+Managed investments
+More data
+Fundamentals
+Spreadsheets
+Google Sheets
+Excel
+Tools
+Exchanges
+Markets
+Currency converter
+↑
+↓
+Navigate
+↵
+Open
+esc
+Close
+Developers
+Documentation
+Resources
+WebSocket
+Batch requests
+Technical indicators
+Request builder
+Guides
+Free trial
+Historical data
+Extended hours data
+FAQs
+Support
+System status
+Artificial Intelligence
+Roadmap
+↑
+↓
+Navigate
+↵
+Open
+esc
+Close
+Company
+About Twelve Data
+Expertise
+Careers
+Customers
+Trust
+Startups
+Students
+Brand assets
+News
+↑
+↓
+Navigate
+↵
+Open
+esc
+Close
+Pricing
+Book a demo
+Sign in
+Products
+Market Data
+Stocks
+US & global coverage
+Crypto
+Digital currencies
+Forex
+Physical currencies
+Commodities
+Raw materials
+ETFs
+Exchange-traded funds
+Mutual funds
+Managed investments
+More data
+Fundamentals
+Spreadsheets
+Google Sheets
+Excel
+Tools
+Exchanges
+Markets
+Currency converter
+Developers
+Documentation
+Resources
+WebSocket
+Batch requests
+Technical indicators
+Request builder
+Guides
+Free trial
+Historical data
+Extended hours data
+FAQs
+Support
+System status
+Artificial Intelligence
+Roadmap
+Company
+About Twelve Data
+Expertise
+Careers
+Customers
+Trust
+Startups
+Students
+Brand assets
+News
+Pricing
+Book a demo
+Sign in
+Cancel
+Symbols
+Exchanges
+All
+Stocks
+Forex
+Crypto
+ETFs
+Mutual funds
+Commodities
+All
+Basic
+Grow
+Pro
+Ultra
+Venture
+Enterprise
+↑
+↓
+Navigate
+↵
+Open
+esc
+Close
+Simple, transparent pricing for market data
+Personal use
+Commercial use
+Grow
+For hobby projects
+$79
+/month
+billed monthly
+Billed yearly · Save 17%
+Usage
+API credits reset each minute. Each endpoint or subscription has a specific credit weight per symbol, detailed in the documentation.
+Learn more
+377 API + 8 trial WS
+Includes
+20+ markets
+Expanded access to 27 global markets.
+Internal display data access
+View-only access for internal use within your applications and dashboards. The data may be displayed but cannot be programmatically processed, stored, transformed, or redistributed.
+Real-time US stocks
+Access live price updates for US-listed stocks with minimal latency, suitable for trading, monitoring, and analytics.
+EOD global equities and ETFs market data
+End-of-day prices for stocks and ETFs across global markets, updated after each exchange close.
+Commodities market data
+Price data for major commodity markets, including energy, metals, and agricultural instruments.
+Fundamentals data
+Company financials, ratios, and key fundamentals sourced from official filings and calculated by Twelve Data.
+No daily limits
+Unlimited daily usage within your plan’s minute scope, without daily request caps.
+View all features
+Continue with Grow
+Most popular
+Pro
+For advanced integrations
+$229
+/month
+billed monthly
+Billed yearly · Save 17%
+Usage
+API credits reset each minute. Each endpoint or subscription has a specific credit weight per symbol, detailed in the documentation.
+Learn more
+1,597 API + 1,500 WS
+Everything from Grow, plus
+70+ markets
+Expanded access to 76 global markets.
+Real-time EU market data
+Live price updates for 15+ European market instruments with low latency. Available via Data add-ons.
+Delayed AU market data
+ASX market data provided with a standard exchange-mandated delay. Available via Data add-ons.
+Fixed income market data
+Market data for bonds and other fixed income instruments, including prices and yields where available.
+Mutual funds NAV
+Net asset values for mutual funds, updated according to fund reporting schedules.
+Data add-ons
+Optional premium datasets that can be enabled on top of your base plan as needed.
+View all features
+Continue with Pro
+Ultra
+For high-volume personal use
+$999
+/month
+billed monthly
+Billed yearly · Save 17%
+Usage
+API credits reset each minute. Each endpoint or subscription has a specific credit weight per symbol, detailed in the documentation.
+Learn more
+10,946 API + 10,000 WS
+Everything from Pro, plus
+80+ markets
+Expanded access to 85 global markets.
+Internal non-display data access
+Use the data internally for programmatic processing, analysis, system integration, and internal display. The data may not be redistributed or made available to external parties.
+Mutual funds metrics data
+Detailed metrics for mutual funds, including performance, composition, and fund-level characteristics.
+Analysis data
+Pre-calculated calculations, metric trends, and analysts' forecasts.
+ETFs metrics data
+ETF-specific metrics such as holdings, weights, AUM, and related characteristics.
+99.95% SLA
+Service level agreement guaranteeing 99.95% platform uptime, excluding scheduled maintenance.
+Dedicated CSM
+A dedicated customer success manager to support onboarding, usage optimization, and ongoing account needs.
+View all features
+Continue with Ultra
+Free
+For testing and side projects
+$0
+/month
+Start with Free
+Twelve Data Core
+API requests:
+8 (800 a day)
+Websockets:
+8 trial
+Internal non-display usage
+Data may be used internally for testing, evaluation, or development purposes only. The data cannot be displayed to users, shared externally, or used in production systems.
+Real-time US equities and ETFs
+Live price updates for US-listed stocks and ETFs with low latency, suitable for trading and real-time monitoring.
+Real-time forex market data
+Streaming and real-time exchange rates for major, minor, and exotic currency pairs.
+Real-time crypto market data
+Live prices and market data for cryptocurrencies across dozens of exchanges.
+View all features
+Special terms on any plan for students or educators
+At the school, college or university
+20% off for 12 months
+Apply with student ID
+Get a discount on any plan at checkout.
+Learn more
+Are you an AI agent? See pricing in md-format
+How credits work
+API credits per minute
+Every endpoint has a data weight: the number of credits one request consumes. Your quota resets every minute. There are no hidden weights beyond what the endpoint's
+documentation
+states.
+Example
+/time_series
+for AAPL, MSFT, and TSLA: 1 credit × 3 symbols = 3 credits.
+/income_statement
+for the same three symbols: 100 credits × 3 symbols = 300 credits.
+WebSocket (WS) credits
+Every WebSocket method has a subscription weight, charged when you subscribe to a symbol's data stream.
+Example
+/quotes/price
+costs 1 WS credit per successfully subscribed symbol. Subscribing to AAPL, EUR/USD, USD/JPY, BTC/USD, and ETH/BTC consumes 5 WS credits.
+Got it
+Add-ons
+Can be added to any plan and canceled at any time.
+How does it work?
+Australian Securities Exchange (ASX)
+Internal usage
+From
+$120
+/year
+Cboe Canada
+Non-professional usage
+From
+$180
+/year
+Cboe Europe
+Non-professional usage
+From
+$300
+/year
+Cboe Europe - 15 Min Delayed
+Internal usage
+From
+$250
+/year
+CUSIPs
+Internal usage
+From
+$9,000
+/year
+ISINs
+Internal usage
+From
+$24,000
+/year
+View the full list of add-ons in your personal account
+How do add-ons work?
+Add-ons require an active subscription — they can't be purchased on their own.
+Pricing depends on your license type: personal or commercial.
+Usage is billed against your plan's API and WS credits, same as any other call.
+Turn add-ons on or off anytime, on any plan.
+Some add-ons need extra info for exchange approval before they go live.
+Got it
+Compare plans & features
+Free
+$0
+Select
+Grow
+From $29/month
+Select
+Pro
+From $99/month
+Select
+Ultra
+From $329/month
+Select
+Key features & Limits
+API credits
+8 (800 a day)
+55+
+610+
+2,584+
+WS credits
+8 trial
+8 trial
+500+
+2,500+
+Daily limits
+800 / day
+Unlimited
+Unlimited
+Unlimited
+Batch requests
+Libraries
+Markets
+3
+27
+76
+85
+SLA
+99.95%
+Technical indicators
+100+
+100+
+100+
+100+
+Spreadsheets
+Stocks
+Reference data
+Market data
+Pre/post data
+Technical indicators
+Market movers
+Logo
+Profile
+Dividends
+Splits
+Earnings
+IPO calendar
+Statistics
+Insider transactions
+Income statement
+Balance sheet
+Cash flow
+Key executives
+Institutional holders
+Direct holders
+Earnings estimate
+Revenue estimate
+EPS trend
+EPS revisions
+Growth estimates
+Recommendations
+Price target
+Analyst ratings
+Tax information
+Edgar filings archive
+Fund holders
+Sanctioned entities
+Forex
+Reference data
+Market data
+Exchange rate
+Currency conversion
+Technical indicators
+Market movers
+ETFs
+Reference data
+Market data
+Options
+Technical indicators
+Market movers
+Summary
+Performance
+Risk
+Composition
+Mutual funds
+Reference data
+Market data
+Technical indicators
+Market movers
+Summary
+Performance
+Risk
+Ratings
+Composition
+Purchase info
+Sustainability
+Cryptocurrencies
+Reference data
+Market data
+Exchange rate
+Currency conversion
+Technical indicators
+Market movers
+Commodities
+Reference data
+Market data
+Currency conversion
+Technical indicators
+Bonds
+Reference data
+Market data
+Technical indicators
+Billing
+Contract length
+Monthly / Annual
+Monthly / Annual
+Monthly / Annual
+Monthly / Annual
+Card / PayPal payments
+Wire transfer / ACH
+Support
+Email and live chat
+Slack Connect
+Your preferred communication channel
+Dedicated customer success manager
+Still deciding?
+Global market coverage
+Stocks, forex, crypto, ETFs, mutual funds, commodities, indices, and fixed income — sourced from exchanges worldwide.
+View the full list of exchanges
+Contact us
+Reach out and we'll help you find the right plan.
+Talk to sales
+FAQs
+What currency are your prices in?
+They're in US dollars.
+Do you offer discounts or free trials?
+We do offer 20% students and startups discounts. Free trial is available under the Basic plan.
+Learn more
+Besides, we never run discounts and offer free trials on upper-tier plans.
+What payment methods do you offer?
+We accept PayPal and all major credit cards (including Visa, Mastercard, Discover, American Express and UnionPay.)
+Are there any contracts, hidden charges or setup fees?
+No contracts, no hidden charges, and no setup fees. You can switch your plan or cancel your Twelve Data subscription at any time.
+How can I switch my plan?
+Upgrade or downgrade your account anytime from your Dashboard. Upgrades take effect immediately on a pro-rated basis, while downgrades and cancellations become effective at the end of your current billing period.
+How can I cancel my plan?
+Cancel your account anytime from your Dashboard. After canceling, you'll still be able to use your plan until the end of the subscription period.
+How can I switch to annual billing?
+Switch to annual billing at anytime from your Dashboard. Changes take effect immediately, and any unused amount will be added to your balance.
+What is your refund policy?
+In most cases, payments for Twelve Data subscriptions aren't refundable.
+Learn more
+Can I purchase only one dataset?
+No, we don't offer datasets separately. Twelve Data plans include access to all our datasets.
+What are the API & WebSocket credits?
+Credits are the core metric used to access data on our platform. Standard request to API consumes 1 API credit, which means that you can request approximately 610 symbols per minute on our Pro 610 plan. Assuming you want to stream the data for 300 symbols, that would cost your 300 WebSocket credits. If you need some help or advice on this, contact us anytime.
+Learn more
+Can you provide unlimited API or WS credits?
+With a custom plan, we can provide any API & WS credits limit you require. This limit has to be specified explicitly and can not be just unlimited.
+Learn more
+Subscribe
+Subtotal
+Discount
+Tax
+Total due now
+Home
+Pricing
+Copyright ©
+2026
+Twelve Data Pte. Ltd.
+All rights reserved.
+Products
+Stocks
+Forex (FX)
+Crypto
+ETFs
+Exchanges
+Search symbols
+Excel
+Google Sheets
+Pricing
+Developers
+API documentation
+WebSocket documentation
+Request builder
+System status
+Roadmap
+Company
+About
+Customers
+Education
+Expertise
+Careers
+Brand assets
+News
+Resources
+Support
+Contact
+Privacy policy
+Terms of use
+Security center
+Cookie policy
+Manage cookies
+Sitemap
+Cookies on this website
+We use cookies for essential site functions, analytics and advertising. See
+our Cookie Policy
+for details.
+Reject all
+Customize
+Accept all
+Cookie Settings
+Click the headings below to learn more about each category of cookies and adjust your preferences. See
+our Cookie Policy
+for details.
+Strictly necessary
+Always on
+These cookies are essential for the operation, security, and integrity of our website and services. They enable core functionality such as authentication, session management, and security protections.
+Functional
+These cookies enable enhanced functionality and personalization, such as remembering user preferences and consent choices.
+Analytics
+These cookies help us understand how visitors use our website, including pages viewed, traffic sources, actions taken and general location. This information is linked to a randomly generated identifier rather than to your name.
+Advertising
+These cookies are used to measure the performance of our advertising and to show you relevant advertising on other websites. Information collected through them is made available to advertising providers including Google and LinkedIn.
+Reject all
+Accept all
+Save preferences

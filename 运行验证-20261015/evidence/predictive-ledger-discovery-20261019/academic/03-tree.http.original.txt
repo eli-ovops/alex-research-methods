@@ -1,0 +1,30 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=86400, s-maxage=86400
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Mon, 19 Oct 2026 04:00:36 GMT
+Etag: W/"c5378eca2dba9ea0b1ad067d52a0b10e0b99826bef0b0166a96045ba71e1bd13"
+Last-Modified: Mon, 07 Sep 2026 16:29:36 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: 
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: E116:219FAB:2413A79:39E0159:6AD595E4
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4993
+X-Ratelimit-Reset: 1792383879
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 7
+X-Xss-Protection: 0
+
+{"sha":"b731df5969a008f7f876c9718e42f9701b95c2e4","url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/trees/b731df5969a008f7f876c9718e42f9701b95c2e4","tree":[{"path":".gitignore","mode":"100644","type":"blob","sha":"b694934fbf9b49ee808b6dfc7292c28e2c46a97e","size":5,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/b694934fbf9b49ee808b6dfc7292c28e2c46a97e"},{"path":"AI_Tear_Sheet.html","mode":"100644","type":"blob","sha":"eca94da88ca103f3d6ec66c25b2c298f6f954187","size":1756702,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/eca94da88ca103f3d6ec66c25b2c298f6f954187"},{"path":"README.md","mode":"100644","type":"blob","sha":"f5633631466a0bcbbb5f60f3cf104e2d3a2ac1c4","size":3862,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/f5633631466a0bcbbb5f60f3cf104e2d3a2ac1c4"},{"path":"__pycache__","mode":"040000","type":"tree","sha":"528c8a7ad2e2ba8ab5f14eedd8cecd9c88368f6f","url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/trees/528c8a7ad2e2ba8ab5f14eedd8cecd9c88368f6f"},{"path":"__pycache__/main.cpython-313.pyc","mode":"100644","type":"blob","sha":"7af61c7d7829c6ffc75d9aa5e3f19133320e9cf5","size":1816,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/7af61c7d7829c6ffc75d9aa5e3f19133320e9cf5"},{"path":"backtester.py","mode":"100644","type":"blob","sha":"976d0bfd785b141929e3960462c05a4e3eb49b44","size":1779,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/976d0bfd785b141929e3960462c05a4e3eb49b44"},{"path":"main.py","mode":"100644","type":"blob","sha":"c37137c1479e7a120f8d828d29614b0912c8715b","size":7028,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/c37137c1479e7a120f8d828d29614b0912c8715b"},{"path":"portfolio_optimizer.py","mode":"100644","type":"blob","sha":"01d90f631cc6f8c5bfc265e44cfe11b9c954cfac","size":2489,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/01d90f631cc6f8c5bfc265e44cfe11b9c954cfac"},{"path":"portfolio_weights.csv","mode":"100644","type":"blob","sha":"77a5b8311227a9ba190835ceb91a9ad1c8afafcf","size":6542,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/77a5b8311227a9ba190835ceb91a9ad1c8afafcf"},{"path":"predictions.csv","mode":"100644","type":"blob","sha":"3bb96b95287df563896d97f13709cb534cc7c4ed","size":9056,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/3bb96b95287df563896d97f13709cb534cc7c4ed"},{"path":"test_shapes.py","mode":"100644","type":"blob","sha":"85bb0f5013d5515b95d9e3bd165086dc0121f3ad","size":461,"url":"https://api.github.com/repos/sidr20/Regime-Switching-Trading-System/git/blobs/85bb0f5013d5515b95d9e3bd165086dc0121f3ad"}],"truncated":false}

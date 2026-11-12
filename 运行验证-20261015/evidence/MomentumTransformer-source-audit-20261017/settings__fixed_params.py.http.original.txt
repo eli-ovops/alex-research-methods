@@ -1,0 +1,29 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=86400, s-maxage=86400
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Sat, 17 Oct 2026 07:27:40 GMT
+Etag: W/"bb3cd1062729e29f185a22391055fadb7f619e81e956430999fe39896b4cf040"
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: 
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 7C1E:3BD96C:F1D170:180CFDC:6AD3236C
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4959
+X-Ratelimit-Reset: 1792223363
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 41
+X-Xss-Protection: 0
+
+{"sha":"4a196317702587c0a13e783e2e1935468649156c","node_id":"B_kwDOGltl99oAKDRhMTk2MzE3NzAyNTg3YzBhMTNlNzgzZTJlMTkzNTQ2ODY0OTE1NmM","size":451,"url":"https://api.github.com/repos/kieranjwood/trading-momentum-transformer/git/blobs/4a196317702587c0a13e783e2e1935468649156c","content":"TU9ETEVfUEFSQU1TID0gewogICAgImFyY2hpdGVjdHVyZSI6ICJURlQiLAog\nICAgInRvdGFsX3RpbWVfc3RlcHMiOiAyNTIsCiAgICAiZWFybHlfc3RvcHBp\nbmdfcGF0aWVuY2UiOiAyNSwKICAgICJtdWx0aXByb2Nlc3Npbmdfd29ya2Vy\ncyI6IDMyLAogICAgIm51bV9lcG9jaHMiOiAzMDAsCiAgICAiZWFybHlfc3Rv\ncHBpbmdfcGF0aWVuY2UiOiAyNSwKICAgICJmaWxsX2JsYW5rX2RhdGVzIjog\nRmFsc2UsCiAgICAic3BsaXRfdGlja2Vyc19pbmRpdmlkdWFsbHkiOiBUcnVl\nLAogICAgInJhbmRvbV9zZWFyY2hfaXRlcmF0aW9ucyI6IDUwICwKICAgICJl\ndmFsdWF0ZV9kaXZlcnNpZmllZF92YWxfc2hhcnBlIjogVHJ1ZSwKICAgICJ0\ncmFpbl92YWxpZF9yYXRpbyI6IDAuOTAsCiAgICAidGltZV9mZWF0dXJlcyI6\nIEZhbHNlLAogICAgImZvcmNlX291dHB1dF9zaGFycGVfbGVuZ3RoIjogMCwK\nfQ==\n","encoding":"base64"}

@@ -1,0 +1,18 @@
+/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py:339: RuntimeWarning: divide by zero encountered in matmul
+  weights = np.linalg.solve(centered_x.T @ centered_x + np.eye(90, dtype=np.float64),
+/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py:339: RuntimeWarning: overflow encountered in matmul
+  weights = np.linalg.solve(centered_x.T @ centered_x + np.eye(90, dtype=np.float64),
+/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py:339: RuntimeWarning: invalid value encountered in matmul
+  weights = np.linalg.solve(centered_x.T @ centered_x + np.eye(90, dtype=np.float64),
+/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py:340: RuntimeWarning: divide by zero encountered in matmul
+  centered_x.T @ centered_y)
+/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py:340: RuntimeWarning: overflow encountered in matmul
+  centered_x.T @ centered_y)
+/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py:340: RuntimeWarning: invalid value encountered in matmul
+  centered_x.T @ centered_y)
+/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py:342: RuntimeWarning: divide by zero encountered in matmul
+  scaled_pred = Z @ weights + intercept
+/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py:342: RuntimeWarning: overflow encountered in matmul
+  scaled_pred = Z @ weights + intercept
+/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py:342: RuntimeWarning: invalid value encountered in matmul
+  scaled_pred = Z @ weights + intercept

@@ -1,0 +1,168 @@
+ETFs: the holdout that disconfirms the selection, and the stale comment behind #988 (#694)
+
+* etfs 18_holdout_predictions: execute the holdout refit on the canonical registry
+
+The etfs registry carried zero holdout rows. The register had the notebook at
+`fixed` - written and merged, never executed - and the four backtesting rows
+below it at `blocked` on ml4t/agent-workspace#989, whose cause (the five-symbol
+CI cap) was removed by this case study's own merged PR.
+
+The refit, on the carrier the validation stages select:
+
+  carrier    fb287093aa02  risk_overlay  gbm/default_mae  fwd_ret_21d
+             validation Sharpe 1.150, max drawdown -0.225
+  checkpoint iteration=400
+  holdout    fold 8, trains 2006-01-13 -> 2023-11-29, predicts 2024-01-01 -> 2025-12-31
+  training   882301dc3655  (distinct from the validation hash fc683bb1e85e, so the
+             refit is registered rather than asserted)
+  prediction d0fe6611feae  44,962 rows, 481 sessions, 95 funds
+
+7s of fit. Costed from the validation training run's 39.7s across eight folds;
+the holdout is one interval.
+
+* etfs 19_holdout_backtest: execute the holdout backtest, which disconfirms the selection
+
+Replays the selected carrier's sizing and risk overlay over the holdout window on
+the prediction set 18_holdout_predictions registered.
+
+  holdout backtest  d2e65da031af  (stage='holdout', not risk_overlay)
+  prices            50,200 rows, 100 funds
+  predictions       44,962 rows, 481 sessions
+
+  validation Sharpe over 1,995 sessions   1.150
+    the same run re-ranked on common support  1.150
+  holdout Sharpe over 502 sessions          0.232
+  holdout CAGR 2.2%, max drawdown -20.55%, win rate 55%
+  trades  111 holdout, 436 validation
+
+The holdout is a fifth of the validation Sharpe. That is the stage doing its job -
+the configuration was chosen by looking at the validation folds, so a validation
+result cannot also be evidence the choice was sound - and it is the same shape
+crypto_perps_funding registered in #687. Not adjudicated here: whether the
+chapter's prose still reads correctly against a disconfirming holdout is scope,
+and it goes to Stefan rather than into a note.
+
+* etfs 20_strategy_analysis: execute against the holdout, where the kill condition fires
+
+Reads the validation leader and the holdout back and applies the Chapter 20 gates.
+Both are now registered, so this is the first run of the notebook with something
+on the holdout side to read.
+
+  validation Sharpe  1.150 [0.495, 1.900]   psr p=0.001
+  holdout Sharpe     0.232 over 502 sessions
+  equal-weight       0.625 validation -> 1.358 holdout
+
+  kill gates
+    [PASS] validation Sharpe CI lower bound >= 0        0.495
+    [FAIL] holdout vs equal-weight diff-Sharpe          -1.221 [-2.346, -0.275], p=0.018
+
+  holdout decay vs validation  -0.915 [-2.564, 0.778], p=0.277, straddles zero
+  selection bias               20 variants, DSR 0.063 (p=0.0004), PBO 0.471
+
+The decay itself is not distinguishable from zero; what is distinguishable is the
+comparison against the benchmark, and it goes the wrong way. The equal-weight
+universe did not merely hold up over 2024-2025, it improved - so the selected
+configuration is significantly worse than the thing it is supposed to beat, on the
+window nothing was selected on.
+
+Whether the chapter's prose still reads correctly against a fired kill condition is
+scope and goes to Stefan. Not adjudicated here, and not softened here.
+
+* etfs README: describe the results the registry holds, not a holdout that never ran
+
+Every number in Key Results was written against a prior era. etfs carried zero
+holdout rows until 2026-08-31, so the holdout paragraph described a run that did
+not exist, and the leader it named is not the one the pipeline selects.
+
+  claimed                                    registry
+  rank-1 latent_factors/sdf, Sharpe +1.36    gbm/default_mae, +1.150
+  holdout strategy Sharpe +1.00              +0.232
+  vs equal-weight -0.41, p=0.404, no reject  -1.221 [-2.346,-0.275], p=0.018
+  'Both kill gates pass'                     the holdout gate fails
+
+Rewritten from run_log/registry.db and results/strategy_assessment.json.
+
+Two things the old text obscured rather than merely got wrong. The selected
+configuration's IC is +0.024 [-0.012, +0.059], HAC t=1.31, p=0.190 - it cannot be
+distinguished from zero, while the highest-IC configuration (latent_factors/cae,
++0.081, t=3.30) is not selected. And the holdout does not fail by decaying: the
+validation-to-holdout difference straddles zero at p=0.277. It fails because the
+equal-weight benchmark went the other way, 0.625 to 1.358, so the strategy lost to
+the thing it is supposed to beat on the window nothing was selected on.
+
+The section now says the kill gate fails, in those words.
+
+* etfs 10_dl_tsmixer: drop the fixture cap that made darts diverge
+
+Closes the last cs-etfs failure. ml4t/agent-workspace#988 measured a per-fold
+prediction dispersion ratio of 286 (score std 10.588 against a target std of
+0.037) and the registration guard correctly refused it. The issue ruled out the
+window - restoring the pre-conversion LOOKBACK of 22 is four times worse at 1285 -
+and declined to touch the two remaining levers because both are shared by four
+other case studies: the tsmixer epoch count in tests/preset_patches.py and the
+darts training path.
+
+Neither needed touching. The block carried `max_symbols: 5` under the comment
+'to match 04_model_based_features'. That justification stopped holding when 04's
+own cap came out in d8dc0033: the reduction went on cutting the fit to five
+symbols while the temporal artifact it fits against covered the fixture's
+twenty-four. Removing the line restores the agreement the comment already asked
+for, and the divergence goes with it.
+
+Measured in the container, the exact CI job, stages 01-10 as a chain:
+
+  10 passed, 179 deselected in 288.70s (0:04:48)
+  etfs-10_dl_tsmixer PASSED
+
+inside the existing 180s cap, so the timeout is unchanged.
+
+09_dl_lstm, 11a_pca and 11b_ipca keep the cap and pass with it. Their blocks
+assert the same 'must match 04' rule, which is now true of none of them; the
+comment there is corrected rather than the value, because what those three need
+is a coverage floor they already clear.
+
+* etfs README: say 'baseline backtest', and stop implying the paired statistic is a subtraction
+
+Two corrections to the rewrite in ca16e5d5, both raised by the pre-push review.
+
+AGENTS.md bans 'signal stage' project-wide - stage='signal' IS the baseline
+backtest, and the stored enum is not prose. The rewrite used 'signal-stage
+Sharpe' twice and the pre-existing intro used it once; all three now say
+'baseline backtest'. The intro's claim that the LSTM holds the highest such
+Sharpe is corrected with it: the registry has gbm at +0.83 against sequence DL
+at +0.82.
+
+The holdout paragraph put +0.232 and +1.358 next to a difference of -1.221, which
+reads as a subtraction and is not one - those two subtract to -1.126. The -1.221
+is a paired statistic computed on the two series' common support with a
+21-period bootstrap block over 2,000 resamples, and the text now says so.
+
+Added while correcting it, because it changes how the holdout should be read: the
+same paired comparison on validation is +0.559 [-0.021, +1.061], p=0.044. Its
+lower bound was already below zero before the holdout was opened, so the strategy
+never cleanly beat equal weight even on the window it was selected on.
+
+* test_etf_checkpoint_contract: compare the reduction to what the notebook declares, not to a copy
+
+test-unit failed on PR #694 at
+
+  assert parameters['PREVIEW_REDUCTIONS'] == {'folds': [0, 1], 'max_symbols': 5}
+  AssertionError: assert {'folds': [0, 1]} == {'folds': [0, 1], 'max_symbols': 5}
+
+because 10_dl_tsmixer dropped its max_symbols in 5d9c9446 under #988.
+
+The assertion was a transcription of overrides.yaml, which is what this test's own
+docstring says it was rewritten to stop being: 'This asserted the pre-conversion
+names, so it was checking a transcription of overrides.yaml that the file had moved
+past.' It fell back into the shape it documents, and the two notebooks it loops over
+no longer reduce identically, so a single hardcoded mapping cannot describe both.
+
+What the docstring says the test is for is precedence - that _quick_parameters does
+not overwrite what the notebook declared - and that is checkable without copying the
+value: compare the returned reduction to the notebook's own declaration. The
+invariant worth keeping alongside it is that the declaration is non-empty, since a
+converted notebook that reduces nothing is a canonical run wearing the wrong tier
+and the request builder refuses it.
+
+The test now fails if _quick_parameters clobbers a declared reduction, or if a
+notebook declares none. It no longer fails when the fixture legitimately changes.

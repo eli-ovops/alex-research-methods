@@ -1,0 +1,24 @@
+SOURCE ARTIFACT: /Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/complete-ledger-case-20261016/liquity-opportunity-inputs/root/official-data-pricing-plans.web-tool.txt
+ARTIFACT SHA256: cf332ebe9edc7f43a04b2da0888ed78a43455d7638edeb5498d4c082aa9ac11a
+URL https://www.alchemy.com/docs/reference/compute-unit-costs
+Native returned source-line labels, not artifact physical line numbers. HTTP/raw body hash not exposed.
+L101: # Compute Unit Costs
+L102: 
+L103: Don't have an API key?
+L104: 
+L105: Unlock millions of requests and free archive data on all chains. cite20†Get started for free†dashboard.alchemy.com L106: 
+L107: ## What are Compute Units and Throughput Compute Units?
+L108: 
+L109: For more details, check out the cite21†Compute Units section and the cite22†Throughput Compute Units section.
+L110: # EVM: Standard JSON-RPC Methods
+L111: Method  | CU  | Throughput CU
+L112: --- | --- | ---
+L113: eth_chainId  | 0  | 5
+L114: eth_protocolVersion  | 0  | 5
+L140: eth_getAccount  | 20  |
+L141: eth_getBalance  | 20  |
+L142: eth_getBlobSidecars  | 20  |
+L143: eth_getBlockByHash  | 20  |
+L144: eth_getBlockByNumber  | 20  |
+L145: eth_getBlockReceipts  | 20  | 500
+L173: eth_call  | 26  |

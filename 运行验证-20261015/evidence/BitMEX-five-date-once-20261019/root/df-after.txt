@@ -1,0 +1,2 @@
+Filesystem   1024-blocks      Used  Available Capacity iused       ifree %iused  Mounted on
+/dev/disk7s1  2000478168 257207984 1742973000    13% 1769811 [REDACTED_PHONE]    0%   /Volumes/EXTERNAL

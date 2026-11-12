@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>sample.crypto.lake</Name><Prefix>book/exchange=BINANCE/symbol=BTC-USDT/dt=2022-10-02/</Prefix><KeyCount>1</KeyCount><MaxKeys>20</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>book/exchange=BINANCE/symbol=BTC-USDT/dt=2022-10-02/1.snappy.parquet</Key><LastModified>2022-10-10T10:14:16.000Z</LastModified><ETag>&quot;d3a192e409e927c29ff64dea0d4e78f9-34&quot;</ETag><Size>282137927</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>

@@ -1,0 +1,468 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { EmailCaptureInline } from "@/components/sections/EmailCaptureInline";
+
+type ExitBreakdown = {
+  exit_reason: string;
+  count: number;
+  avg_pct: number;
+  total_abs: number;
+};
+
+type Trade = {
+  pair: string;
+  open_date: string;
+  close_date: string;
+  close_profit_pct: number;
+  close_profit_abs: number;
+  exit_reason: string;
+  enter_tag: string;
+};
+
+type OpenTrade = {
+  pair: string;
+  open_date: string;
+  stake_amount: number;
+  open_rate: number;
+};
+
+type EquityPoint = { day: string; balance: number };
+
+type Stats = {
+  generated_at: string;
+  strategy: string;
+  mode: string;
+  starting_balance: number;
+  current_balance: number;
+  pnl_abs: number;
+  pnl_pct: number;
+  total_trades: number;
+  closed_trades: number;
+  open_trades_count: number;
+  wins: number;
+  losses: number;
+  win_rate_pct: number;
+  first_trade_date: string;
+  exit_breakdown: ExitBreakdown[];
+  recent_trades: Trade[];
+  open_positions: OpenTrade[];
+  equity_curve: EquityPoint[];
+};
+
+type BacktestStats = {
+  generated_at: string;
+  baseline_file: string;
+  strategy_name: string;
+  backtest_start: string;
+  backtest_end: string;
+  backtest_days: number;
+  starting_balance: number;
+  final_balance: number;
+  total_return_pct: number;
+  total_return_abs: number;
+  total_trades: number;
+  wins: number;
+  losses: number;
+  win_rate_pct: number;
+  profit_factor: number;
+  sharpe: number;
+  sortino: number;
+  calmar: number;
+  cagr_pct: number;
+  max_drawdown_pct: number;
+  max_drawdown_abs: number;
+  market_change_pct: number;
+  equity_curve: EquityPoint[];
+};
+
+function Sparkline({ data, width = 600, height = 160 }: { data: EquityPoint[]; width?: number; height?: number }) {
+  if (data.length < 2) return <div className="text-slate-500 text-sm">Not enough data yet</div>;
+  const values = data.map((d) => d.balance);
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const range = max - min || 1;
+  const stepX = width / (data.length - 1);
+  const points = data
+    .map((d, i) => `${i * stepX},${height - ((d.balance - min) / range) * height}`)
+    .join(" ");
+  const lastPct = ((values[values.length - 1] - values[0]) / values[0]) * 100;
+  const color = lastPct >= 0 ? "#10b981" : "#ef4444";
+  return (
+    <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto">
+      <defs>
+        <linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stopColor={color} stopOpacity="0.4" />
+          <stop offset="100%" stopColor={color} stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <polygon
+        fill="url(#grad)"
+        points={`0,${height} ${points} ${width},${height}`}
+      />
+      <polyline fill="none" stroke={color} strokeWidth="2" points={points} />
+    </svg>
+  );
+}
+
+function fmtDate(iso: string) {
+  try {
+    return new Date(iso).toLocaleString("en-US", {
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: "UTC",
+    });
+  } catch {
+    return iso;
+  }
+}
+
+function fmtRelative(iso: string) {
+  const diff = Date.now() - new Date(iso).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 1) return "just now";
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  return `${Math.floor(hrs / 24)}d ago`;
+}
+
+export default function LivePage() {
+  const [stats, setStats] = useState<Stats | null>(null);
+  const [backtest, setBacktest] = useState<BacktestStats | null>(null);
+  const [err, setErr] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    const load = async () => {
+      try {
+        const res = await fetch(`/api/live-stats.json?t=${Date.now()}`, { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = (await res.json()) as Stats;
+        if (!cancelled) {
+          setStats(data);
+          setErr(null);
+          setLoading(false);
+        }
+      } catch (e) {
+        if (!cancelled) {
+          setErr(e instanceof Error ? e.message : "Failed to load");
+          setLoading(false);
+        }
+      }
+    };
+    const loadBacktest = async () => {
+      try {
+        const res = await fetch(`/api/backtest-stats.json?t=${Date.now()}`, { cache: "no-store" });
+        if (!res.ok) return;
+        const data = (await res.json()) as BacktestStats;
+        if (!cancelled) setBacktest(data);
+      } catch {
+        // silent: backtest block hides itself if fetch fails
+      }
+    };
+    load();
+    loadBacktest();
+    const id = setInterval(load, 60_000);
+    return () => {
+      cancelled = true;
+      clearInterval(id);
+    };
+  }, []);
+
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center">
+        <div className="text-slate-400">Loading live stats…</div>
+      </main>
+    );
+  }
+
+  if (err || !stats) {
+    return (
+      <main className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center">
+        <div className="text-red-400">Failed to load stats: {err}</div>
+      </main>
+    );
+  }
+
+  const pnlPositive = stats.pnl_abs >= 0;
+  const pnlColor = pnlPositive ? "text-emerald-400" : "text-red-400";
+
+  return (
+    <main className="min-h-screen bg-slate-950 text-slate-100 font-sans">
+      <div className="max-w-5xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
+        <header className="mb-8">
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <a href="/" className="text-slate-400 hover:text-slate-200 text-sm">← trendrider.net</a>
+            <div className="text-xs text-slate-500 font-mono">
+              Updated {fmtRelative(stats.generated_at)} · refreshes every 60s
+            </div>
+          </div>
+          <h1 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight">
+            Live Bot Stats <span className="text-emerald-400">●</span>
+          </h1>
+          <p className="mt-2 text-slate-400 text-sm">
+            {stats.strategy} · {stats.mode} · raw data from sqlite, no marketing filter
+          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <a
+              href="https://github.com/darkvolg/trendrider-strategy"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-900 border border-slate-700 hover:border-emerald-500/50 hover:bg-slate-800 text-sm text-slate-200 transition-colors"
+            >
+              <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
+              </svg>
+              <span className="font-medium">Star on GitHub</span>
+              <span className="text-slate-500">— MIT</span>
+            </a>
+            <a
+              href="https://www.bybit.com/invite?ref=0GDX5JR&utm_source=trendrider&utm_medium=live_header"
+              target="_blank"
+              rel="noopener nofollow"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-900 border border-slate-700 hover:border-[#F7A600]/50 hover:bg-slate-800 text-sm text-slate-200 transition-colors"
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" className="text-[#F7A600]">
+                <path d="M14.4 6.2v8.48h-1.79V6.2zM4.92 17.8V9.32h3.6c1.87 0 2.9 1.05 2.9 2.4 0 .87-.41 1.49-.94 [REDACTED_HOST] 1.27.97 1.27 2.05 0 1.49-1.05 2.2-2.92 2.2zm1.79-7.04v1.86h1.65c.74 0 1.27-.34 1.27-.94s-.53-.92-1.27-.92zm0 5.6h1.79c.94 0 1.47-.34 1.47-.97s-.53-.95-1.47-.95H6.71zm9.71-7.04h1.79v6.86h3.79v1.62h-5.58z"/>
+              </svg>
+              <span className="font-medium">Run the bot yourself on Bybit</span>
+              <span className="text-slate-500">— same exchange we use</span>
+            </a>
+          </div>
+        </header>
+
+        <section className="mb-8 rounded-lg border border-sky-500/40 bg-sky-500/10 p-5">
+          <div className="flex items-start gap-3">
+            <div className="text-2xl leading-none" aria-hidden="true">↻</div>
+            <div className="flex-1">
+              <h2 className="text-sky-300 font-semibold text-base">Update: pause was premature — entries resumed</h2>
+              <p className="mt-1 text-sm text-sky-100/80">
+                Earlier today I paused the bot citing a 14-day win-rate slump to 16.7%. Then I ran
+                the apples-to-apples 480-day backtest on the exact same period: V6A returned +4.89%
+                with a 4.79% max-drawdown — statistically identical to the 836-day baseline
+                (+4.99% / 4.78%). Translation: the 14-day slump (n=36) was within the strategy's
+                historical variance, not a regime break.
+              </p>
+              <p className="mt-2 text-sm text-sky-100/80">
+                A second-candidate strategy (SuperTrend, daily timeframe, pure trend-follower) was
+                also tested on the same 480 days and lost 34% — confirming that in the current
+                bear-leaning market only the chop-feeder logic V6A uses is profitable. The honest
+                long-term plan is still a regime-gated ensemble (V6A in chop, a trend arm in
+                bulls), but pausing the working arm to wait for the unbuilt one was the wrong call.
+              </p>
+              <p className="mt-2 text-xs text-sky-100/60">
+                Build-in-public means shipping the analysis that overrides yesterday's panic too,
+                not just the panic. Bot is back to max_open_trades=8.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-4">
+            <div className="text-xs uppercase tracking-wider text-slate-500">Balance</div>
+            <div className="mt-1 text-2xl font-mono font-bold">${stats.current_balance.toFixed(2)}</div>
+            <div className="text-xs text-slate-500 mt-0.5">from ${stats.starting_balance.toFixed(0)}</div>
+          </div>
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-4">
+            <div className="text-xs uppercase tracking-wider text-slate-500">P&amp;L</div>
+            <div className={`mt-1 text-2xl font-mono font-bold ${pnlColor}`}>
+              {pnlPositive ? "+" : ""}${stats.pnl_abs.toFixed(2)}
+            </div>
+            <div className={`text-xs mt-0.5 ${pnlColor}`}>
+              {pnlPositive ? "+" : ""}{stats.pnl_pct.toFixed(2)}%
+            </div>
+          </div>
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-4">
+            <div className="text-xs uppercase tracking-wider text-slate-500">Win Rate</div>
+            <div className="mt-1 text-2xl font-mono font-bold">{stats.win_rate_pct.toFixed(1)}%</div>
+            <div className="text-xs text-slate-500 mt-0.5">{stats.wins}W / {stats.losses}L</div>
+          </div>
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-4">
+            <div className="text-xs uppercase tracking-wider text-slate-500">Trades</div>
+            <div className="mt-1 text-2xl font-mono font-bold">{stats.closed_trades}</div>
+            <div className="text-xs text-slate-500 mt-0.5">{stats.open_trades_count} open</div>
+          </div>
+        </section>
+
+        <section className="bg-slate-900 border border-slate-800 rounded-lg p-5 mb-8">
+          <h2 className="text-sm uppercase tracking-wider text-slate-500 mb-4">Equity Curve</h2>
+          <Sparkline data={stats.equity_curve} />
+        </section>
+
+        {backtest && (
+          <section className="bg-slate-900 border border-slate-800 rounded-lg p-5 mb-8">
+            <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
+              <h2 className="text-sm uppercase tracking-wider text-slate-500">
+                Historical Backtest ({backtest.backtest_days}d)
+              </h2>
+              <div className="text-xs text-slate-500 font-mono">
+                {backtest.backtest_start?.slice(0, 10)} → {backtest.backtest_end?.slice(0, 10)}
+              </div>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+              <div className="bg-slate-950 border border-slate-800 rounded-lg p-4">
+                <div className="text-xs uppercase tracking-wider text-slate-500">Total Return</div>
+                <div className={`mt-1 text-2xl font-mono font-bold ${backtest.total_return_pct >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                  {backtest.total_return_pct >= 0 ? "+" : ""}{backtest.total_return_pct.toFixed(2)}%
+                </div>
+                <div className="text-xs text-slate-500 mt-0.5">CAGR {backtest.cagr_pct.toFixed(2)}%</div>
+              </div>
+              <div className="bg-slate-950 border border-slate-800 rounded-lg p-4">
+                <div className="text-xs uppercase tracking-wider text-slate-500">Sharpe</div>
+                <div className="mt-1 text-2xl font-mono font-bold">{backtest.sharpe.toFixed(2)}</div>
+                <div className="text-xs text-slate-500 mt-0.5">Sortino {backtest.sortino.toFixed(2)}</div>
+              </div>
+              <div className="bg-slate-950 border border-slate-800 rounded-lg p-4">
+                <div className="text-xs uppercase tracking-wider text-slate-500">Max Drawdown</div>
+                <div className="mt-1 text-2xl font-mono font-bold text-amber-400">
+                  {backtest.max_drawdown_pct.toFixed(2)}%
+                </div>
+                <div className="text-xs text-slate-500 mt-0.5">${backtest.max_drawdown_abs.toFixed(2)}</div>
+              </div>
+              <div className="bg-slate-950 border border-slate-800 rounded-lg p-4">
+                <div className="text-xs uppercase tracking-wider text-slate-500">Trades</div>
+                <div className="mt-1 text-2xl font-mono font-bold">{backtest.total_trades}</div>
+                <div className="text-xs text-slate-500 mt-0.5">
+                  WR {backtest.win_rate_pct.toFixed(1)}% · PF {backtest.profit_factor.toFixed(2)}
+                </div>
+              </div>
+            </div>
+            <Sparkline data={backtest.equity_curve} />
+            <p className="mt-4 text-xs text-slate-500">
+              Backtested on Bybit USDT-perp with the open-source TrendRider strategy. Same code as live;
+              past performance is not a guarantee of future results. Market change over the period:{" "}
+              <span className={backtest.market_change_pct >= 0 ? "text-emerald-400" : "text-red-400"}>
+                {backtest.market_change_pct >= 0 ? "+" : ""}{backtest.market_change_pct.toFixed(2)}%
+              </span>.
+            </p>
+          </section>
+        )}
+
+        <section className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-5">
+            <h2 className="text-sm uppercase tracking-wider text-slate-500 mb-4">Exit Reasons</h2>
+            <table className="w-full text-sm font-mono">
+              <thead className="text-slate-500 text-xs">
+                <tr>
+                  <th className="text-left pb-2">Reason</th>
+                  <th className="text-right pb-2">N</th>
+                  <th className="text-right pb-2">Avg %</th>
+                  <th className="text-right pb-2">Total $</th>
+                </tr>
+              </thead>
+              <tbody>
+                {stats.exit_breakdown.map((e) => (
+                  <tr key={e.exit_reason} className="border-t border-slate-800">
+                    <td className="py-1.5">{e.exit_reason}</td>
+                    <td className="text-right">{e.count}</td>
+                    <td className={`text-right ${e.avg_pct >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                      {e.avg_pct >= 0 ? "+" : ""}{e.avg_pct.toFixed(2)}
+                    </td>
+                    <td className={`text-right ${e.total_abs >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                      {e.total_abs >= 0 ? "+" : ""}{e.total_abs.toFixed(2)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-5">
+            <h2 className="text-sm uppercase tracking-wider text-slate-500 mb-4">
+              Open Positions ({stats.open_positions.length})
+            </h2>
+            {stats.open_positions.length === 0 ? (
+              <div className="text-slate-500 text-sm">No open positions — bot is waiting for signal.</div>
+            ) : (
+              <table className="w-full text-sm font-mono">
+                <thead className="text-slate-500 text-xs">
+                  <tr>
+                    <th className="text-left pb-2">Pair</th>
+                    <th className="text-right pb-2">Entry</th>
+                    <th className="text-right pb-2">Stake</th>
+                    <th className="text-right pb-2">Opened</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stats.open_positions.map((p) => (
+                    <tr key={p.pair + p.open_date} className="border-t border-slate-800">
+                      <td className="py-1.5">{p.pair.replace(":USDT", "")}</td>
+                      <td className="text-right">{p.open_rate.toFixed(4)}</td>
+                      <td className="text-right">${p.stake_amount.toFixed(0)}</td>
+                      <td className="text-right text-slate-400">{fmtRelative(p.open_date)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </div>
+        </section>
+
+        <section className="bg-slate-900 border border-slate-800 rounded-lg p-5 mb-8">
+          <h2 className="text-sm uppercase tracking-wider text-slate-500 mb-4">Recent Trades (last 20)</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm font-mono">
+              <thead className="text-slate-500 text-xs">
+                <tr>
+                  <th className="text-left pb-2">Pair</th>
+                  <th className="text-left pb-2 hidden sm:table-cell">Entry Tag</th>
+                  <th className="text-left pb-2">Exit</th>
+                  <th className="text-right pb-2">%</th>
+                  <th className="text-right pb-2">$</th>
+                  <th className="text-right pb-2 hidden sm:table-cell">Closed</th>
+                </tr>
+              </thead>
+              <tbody>
+                {stats.recent_trades.map((t) => (
+                  <tr key={t.pair + t.close_date} className="border-t border-slate-800">
+                    <td className="py-1.5">{t.pair.replace(":USDT", "")}</td>
+                    <td className="hidden sm:table-cell text-slate-400">{t.enter_tag}</td>
+                    <td className="text-slate-400">{t.exit_reason}</td>
+                    <td className={`text-right ${t.close_profit_pct >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                      {t.close_profit_pct >= 0 ? "+" : ""}{t.close_profit_pct.toFixed(2)}
+                    </td>
+                    <td className={`text-right ${t.close_profit_abs >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                      {t.close_profit_abs >= 0 ? "+" : ""}{t.close_profit_abs.toFixed(2)}
+                    </td>
+                    <td className="hidden sm:table-cell text-right text-slate-500">{fmtDate(t.close_date)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div className="mb-8">
+          <EmailCaptureInline
+            heading="Get free monthly performance report"
+            subheading="Each month I write a full performance update — per-pair breakdown, new trades, equity curve, hyperopt findings. Drop your email and I'll send the next one when it's ready (end of each month). Free, no spam."
+            ctaLabel="Notify me"
+            tag="live-page"
+          />
+        </div>
+
+        <footer className="text-xs text-slate-600 border-t border-slate-800 pt-4 mt-8 space-y-1">
+          <p>
+            This page shows real-time data from a paper-trading bot running Freqtrade on Bybit futures.
+            Numbers are unfiltered — losing trades included. Data updates hourly from bot sqlite.
+            The strategy is open-source on <a href="https://github.com/darkvolg/trendrider-strategy" className="text-slate-400 hover:text-slate-200 underline" rel="noopener" target="_blank">GitHub</a>.
+          </p>
+          <p>First trade: {stats.first_trade_date ? fmtDate(stats.first_trade_date) : "n/a"}</p>
+          <p>
+            <a href="https://github.com/darkvolg/trendrider-strategy" className="text-slate-500 hover:text-slate-300" rel="noopener" target="_blank">Strategy on GitHub</a>{" "}
+            ·{" "}
+            <a href="/blog" className="text-slate-500 hover:text-slate-300">Blog</a>{" "}
+            ·{" "}
+            <a href="https://t.me/TrendRiderSignals" className="text-slate-500 hover:text-slate-300">Telegram</a>
+          </p>
+        </footer>
+      </div>
+    </main>
+  );
+}

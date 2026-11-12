@@ -1,0 +1,1426 @@
+
+        <head>
+		<title>PINNACLE DATA PRODUCTS - Backtest Trading Using Futures - Continuously Linked Commodity Contracts - CLC Database</title>
+		<script language="JavaScript">
+		<!--
+			function MM_swapImgRestore()
+			{
+				var i,x,a=document.MM_sr;
+				for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++)
+					x.src=x.oSrc;
+			}
+			function MM_preloadImages()
+			{
+				var d=document;
+				if(d.images)
+				{
+					if(!d.MM_p)
+						d.MM_p=new Array();
+					var i,j=d.MM_p.length,a=MM_preloadImages.arguments;
+					for(i=0; i<a.length; i++)
+						if (a[i].indexOf("#")!=0)
+						{
+							d.MM_p[j]=new Image;
+							d.MM_p[j++].src=a[i];
+						}
+				}
+			}
+
+			function MM_findObj(n, d)
+			{
+				var p,i,x;
+				if(!d)
+					d=document;
+				if((p=n.indexOf("?"))>0&&parent.frames.length)
+				{
+					d=parent.frames[n.substring(p+1)].document;
+					n=n.substring(0,p);
+				}
+				if(!(x=d[n])&&d.all)
+					x=d.all[n];
+				for (i=0;!x&&i<d.forms.length;i++)
+					x=d.forms[i][n];
+				for(i=0;!x&&d.layers&&i<d.layers.length;i++)
+					x=MM_findObj(n,d.layers[i].document);
+				if(!x && document.getElementById)
+					x=document.getElementById(n);
+				return x;
+			}
+
+			function MM_swapImage()
+			{
+				var i,j=0,x,a=MM_swapImage.arguments;
+				document.MM_sr=new Array;
+				for(i=0;i<(a.length-2);i+=3)
+					if ((x=MM_findObj(a[i]))!=null)
+					{
+						document.MM_sr[j++]=x;
+						if(!x.oSrc)
+							x.oSrc=x.src;
+							x.src=a[i+2];
+					}
+			}
+			//-->
+		</script>
+		<link rel="stylesheet" href="images/styles.css" type="text/css">
+	</head>
+
+	<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('images/dataProduct_r.gif','images/howtoorder_r.gif','images/down-data_r.gif')">
+		<a name="top"></a><table width="100%" border="0" cellspacing="0" cellpadding="0" height="22" >
+			<tr>
+				<td background="images/bg_vertical.jpg">
+					<table width="764" border="0" cellspacing="0" cellpadding="0" align="center" height="22">
+						<tr>
+
+          <td align="left" width="304" height="22">&nbsp;</td>
+
+          <td width="109" height="21"><IMG height=1 src="images/trans.gif" width=227></td>
+
+
+          <td width="344" height="22">
+            <div align="right"> <font face="Verdana, verdana, Arial, Helvetica, sans-serif" size="2" color="#ffffff"><A class=top_nav href="index.html">Home</A>&nbsp;&nbsp;<span class="top_nav">|</span>&nbsp;&nbsp;<A class=top_nav 
+              href="products.asp">Products</A>&nbsp;&nbsp;<span class="top_nav">|</span>&nbsp;&nbsp;<A class=top_nav href="about.asp">About
+              Us</A>&nbsp;&nbsp;<span class="top_nav">|</span>&nbsp;&nbsp;<A class=top_nav href="contact.asp">Contact Us</A> &nbsp; </b> </font> </div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+<table width="760" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td width="303" height="42"><a href="index.html"><IMG height=47 src="images/logo.gif" width=304 border="0"></a></td>
+    <td bgcolor="#cad9ef" width="419" align="right" nowrap valign="center"><img height=1 src="images/trans.gif" width=222><img height=3 src="images/trans.gif" width=1><br><img src="images/cstextoff.jpg" name="cstext" onmouseover="MM_swapImage('csbutton','','images/csbuttonon.jpg','cstext','','images/cstexton.jpg',2);" onmouseout="MM_swapImage('csbutton','','images/csbuttonoff.jpg','cstext','','images/cstextoff.jpg',2);" alt="Customer Support" border="0"></a></td>
+    <td bgcolor="#cad9ef" width="42" align="right" nowrap valign="center"><a href="support.asp"><img src="images/csbuttonoff.jpg" name="csbutton" onmouseover="MM_swapImage('csbutton','','images/csbuttonon.jpg','cstext','','images/cstexton.jpg',2);" onmouseout="MM_swapImage('csbutton','','images/csbuttonoff.jpg','cstext','','images/cstextoff.jpg',2);" alt="Customer Support" border="0"></a></td>
+  </tr></table>
+
+
+<table width="74%" border="0" cellspacing="0" cellpadding="0" align="center" height="2194">
+  <tr>
+
+    <td valign="top" width="760" height="2191">
+      <div align="center"></div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div align="center"><font face="Verdana, verdana, Arial, Helvetica, sans-serif" size="3" color="#0000CC"><b><font size="4" face="Verdana, verdana, Arial, Helvetica, sans-serif">BACKTEST FUTURES WITH OUR CLC
+              DATABASE</font><br><font size="2">Continuously Linked Commodity Contracts</font></b></font></div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <!--<tr>
+          <td colspan="3" height="10" align="center">
+          	<a class=data_nav href="#summary">Summary</a><br>
+          	<a class=data_nav href="#price">Price</a><br>
+          	<a class=data_nav href="#includes">Includes</a><br>
+          	<a class=data_nav href="#details">Details</a><br>
+          	<a class=data_nav href="extended-clc.html">Individual Commodity Contracts</a><br>
+          	<a class=data_nav href="#other">Other Products</a><br></td>
+        </tr>-->
+        <tr>
+          <td colspan="3" height="10" align="center">
+          	<a href="#summary"><img src="images/SummaryOff.jpg" name="summary" onmouseover="MM_swapImage('summary','','images/SummaryOn.jpg',1);" onmouseout="MM_swapImage('summary','','images/SummaryOff.jpg',1);" alt="Summary" border="0"></a><img 
+          	src="images/Filler.jpg" width="20" height="84" border="0"><a href="#price"><img src="images/PriceOff.jpg" name="price" onmouseover="MM_swapImage('price','','images/PriceOn.jpg',1);" onmouseout="MM_swapImage('price','','images/PriceOff.jpg',1);" alt="Price" border="0"></a><img 
+          	src="images/Filler.jpg" width="20" height="84" border="0"><a href="#includes"><img src="images/IncludesOff.jpg" name="includes" onmouseover="MM_swapImage('includes','','images/IncludesOn.jpg',1);" onmouseout="MM_swapImage('includes','','images/IncludesOff.jpg',1);" alt="Includes" border="0"></a><img 
+          	src="images/Filler.jpg" width="20" height="84" border="0"><a href="#details"><img src="images/DetailsOff.jpg" name="details" onmouseover="MM_swapImage('details','','images/DetailsOn.jpg',1);" onmouseout="MM_swapImage('details','','images/DetailsOff.jpg',1);" alt="Details" border="0"></a><img 
+          	src="images/Filler.jpg" width="20" height="84" border="0"><a href="extended-clc.html"><img src="images/ICOff.jpg" name="ic" onmouseover="MM_swapImage('ic','','images/ICOn.jpg',1);" onmouseout="MM_swapImage('ic','','images/ICOff.jpg',1);" alt="Indivicual Contracts" border="0"></a><img 
+          	src="images/Filler.jpg" width="20" height="84" border="0"><a href="#other"><img src="images/OtherProductsOff.jpg" name="other" onmouseover="MM_swapImage('other','','images/OtherProductsOn.jpg',1);" onmouseout="MM_swapImage('other','','images/OtherProductsOff.jpg',1);" alt="Other" border="0"></a><br>
+        </tr>
+
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <tr>
+          <td colspan="3"><a name="summary"></a><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td><font face="Verdana, verdana, Arial, Helvetica, sans-serif" size="2" color="#0066FF"><b><font color="#0000CC">Backtest Trading Using Futures</font></b></font></td><td align="right"><font face="Verdana, verdana, Arial, Helvetica, sans-serif" size="1"><b><font color="#0000CC"><a href="#top">top</a></font></b></font></td></tr></table></td>
+        </tr>
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <tr>
+          <td align=justify colspan="3">
+            <p align=justify> <font color="#000000" size="2" face="verdana, Arial, Helvetica, sans-serif">
+              If you are interested in a backtest futures strategy for trading
+			  then look no further than our CLC Database.  Our CLC Database 
+			  covers the 98 most popular commodities and includes
+              the most active contracts. To seriously backtest futures
+              prices, you must work with the most liquid contracts, and then link
+              them together in the most effective way possible. That's what our
+              specialty is! The roll over days we have selected optimize liquidity
+              and continuity, while avoiding First Notice or Last Trading Days.
+              <br><br>Over 7,000 individual contracts
+              were used to create this unique set of commodity history. Our free
+              support software, DataMaker, allows you to link the contracts together
+              using the highly recommended Reverse (Back) Adjusted Method, and also the Non-Adjusted
+              Method, to see actual prices and the new Ratio Adjusted Method that never
+              goes negative.  Our method of linking is regarded as the BEST! 
+			  Again, if your interest is to backtest futures then this database is for you.
+			  <br><br>The correct datasets are the crucial information point that make backtesting 
+			  futures as a sound trading strategy work.  More than ever, futures 
+			  contracts are widely spread and extremely popular among profesional futures traders. 
+			  The problem lies within the delivery schedule.  Each month of delivery is connected 
+			  with a completely different price where the price of the 
+			  underlying asset should stand at the expiration date, a preset date in the future. 
+			  The industry standard for backtesting futures strategies is the creation of one data sequence 
+			  from a stream of contracts to avoid confusion.  Our CLC Databse can meet that industry standard for you!
+			  </font>
+            <p align="center"><font color="#000000" face="verdana, Arial, Helvetica, sans-serif" size="2">But
+              don't take our word for it.... READ WHAT THE EXPERTS ON FUTURES BACKTESTING HAVE TO SAY:</font></p>
+            <p align="justify"><font color="#000000" face="verdana, Arial, Helvetica, sans-serif" size="2"><b><i>Jack
+              Schwager (Director Futures Research, Prudential) convincingly demonstrates
+              in his October 1992 &quot;Stocks &amp; Commodities&quot; article
+              that forward and reverse adjusted continuous contracts are the only
+              viable choice for back testing futures series.</i></b><br>
+              <br>
+              <i><b>
+              Gibbons Burke (Associate
+              Editor, &quot;Futures&quot; Magazine) writes in the &quot;Futures&quot;
+              July 1992 issue that reverse adjusted continuous contracts &quot;provides
+              the greatest realism&quot;. Other methods of linking contracts,
+              such as &quot;perpetual <br>
+              contracts&quot;, result in distortions.</i></b><br>
+              <br>
+              <i><b>Bruce Babcock Jr. (Commodity Traders Report Editor) writes
+              &quot;I use price adjusted continuous contracts exclusively in my
+              own trading&quot;.</b></i><br>
+              <br>
+              <b>NEW ADDITION: RATIO ADJUSTED LINKING METHOD</b>: This revolutionary
+              new method of linking commodity contracts is described in detail
+              in the June '98 issue of &quot;FUTURES&quot; magazine. (See &quot;Data:
+              Pros &amp; Cons&quot; by Thomas Strictsman). Ratio adjusted series
+              never go negative and back test far superior to other methods.</font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <tr>
+          <td colspan="3"><a name="price"></a><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#0066FF"><b><font color="#0000CC">PRICE</font></b></font></td><td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b><font color="#0000CC"><a href="#top">top</a></font></b></font></td></tr></table></td>
+        </tr>
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div align="center"><b><font size="2" face="Verdana, Arial, Helvetica, sans-serif" color="#0000CC">$99.00</font></b></div>
+          </td>
+        </tr>
+         <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3"><div align="center"><font color="#0000CC"><b><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Update Service:</font></b></font></div></td>
+        </tr>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#0000CC"><b>$20.00/month with a 3 month minimum.<br>
+              SAVE! Sign up for 1 year of updates for only $18.00/month.<br>
+              </b></font></div>
+           </td>
+        </tr> 
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div align="center"><b><a href="orderdb.asp"><img src="images/OrderNowOff.jpg" name="ordernow" onmouseover="MM_swapImage('ordernow','','images/OrderNowOn.jpg',1);" onmouseout="MM_swapImage('ordernow','','images/OrderNowOff.jpg',1);" alt="Order Now" border="0"></a>
+              </b></div>
+           </td>
+        </tr>  
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <tr>
+          <td colspan="3"><a name="includes"></a><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#0066FF"><b><font color="#0000CC">INCLUDES</font></b></font></td><td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b><font color="#0000CC"><a href="#top">top</a></font></b></font></td></tr></table></td>
+        </tr>
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div align="left"><font size="3" face="Verdana, Arial, Helvetica, sans-serif" color="#000000">The CLC
+              Database includes:</font></div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <ul>
+              <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">Historical
+                CLC Data for <b>98 Commodities</b> up to the most recent
+                closing market prices: YOU CONTROL LINKING METHOD</font></li>
+           
+              <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">Both Day
+                Session and Electronic 24Hr Session Data: THE MOST ACCURATE DATA AVAILABLE </font></li>
+  
+                
+              <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">DataMaker
+                Software Package and Software Manual. Internet Downloader included if Update Service is ordered.</font></li>
+       
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" height="10"></td>
+        </tr>
+        <tr>
+          <td colspan="3"><a name="details"></a><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#0066FF"><b><font color="#0000CC">DETAILS</font></b></font></td><td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b><font color="#0000CC"><a href="#top">top</a></font></b></font></td></tr></table></td>
+        </tr>
+        <tr>
+          <td height="10"></td>
+        </tr>
+        <tr>
+          <td align="center"><font size="2" face="Verdana, verdana, Arial, Helvetica, sans-serif" color="#000000"><b>Supplied
+            Fields:</b> Open, High, Low, Settle, Open Interest, Total Volume, Total
+            Open Interest</font></td>
+        </tr>
+        <tr>
+          <td height="10"></td>
+        </tr>
+		<tr>
+          <td height="10"></td>
+        </tr>
+        <tr>
+          <td>
+            <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="3" color="#000000"><b>STARTING
+              DATES AND ROLL OVER DAYS</b></font></div>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table width="80%" border="0" cellspacing="0" cellpadding="2" align="center">
+              <tr>
+                <td bgcolor="#999999">
+                  <div align="left"><font size="2" color="#FFFFFF"><b><font color="#0000CC" size="2"><b><font color="#FFFFFF" size="2"><b><font face="verdana, Arial, Helvetica, sans-serif"><img src="images/trans.gif" width="10" height="8"></font></b></font></b></font><font face="verdana, Arial, Helvetica, sans-serif">COMMODITY</font></b></font></div>
+                </td>
+                <td bgcolor="#999999">
+                  <div align="center"><font size="2" color="#FFFFFF"><b><font face="verdana, Arial, Helvetica, sans-serif">START
+                    DATE</font></b></font></div>
+                </td>
+                <td bgcolor="#999999">
+                  <div align="left"><font size="2" color="#FFFFFF"><b><font face="verdana, Arial, Helvetica, sans-serif">ROLL
+                    DAY</font></b></font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Australian $$, 
+                   Day Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1988</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    Day of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Australian $$,
+                    Composite Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1990</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    Day of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">British
+                    Pound, Day Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1976</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    Day of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">British
+                    Pound, Composite Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1990</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    Day of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">CAC40 Index</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1999</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Canadian
+                   $$, Day Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1978</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Canadian
+                    $$, Composite Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1990</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Canadian
+                   10yr Bond</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1994</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Cocoa</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1981</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">9th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Coffee
+                   </font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1974</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">11th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">CRB Futures</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1987</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">6th 
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Copper</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1989</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Corn
+                   </font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1970</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td height="22" bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Cotton #2</font></div>
+                </td>
+                <td height="22" bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1973</font></div>
+                </td>
+                <td height="22" bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">15th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Crude Oil</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1984</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">11th 
+                   of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Dollar
+                    Index #2</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1989</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Dow 
+                   Jones Index, Day Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1997</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Thur prior
+                    2nd Fri of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Dow 
+                   Jones Index, Composite session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1998</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Dow Jones
+                    Mini</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2002</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Dow Jones
+                    Eurostoxx50</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2002</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Dow Jones
+                    Stoxx50</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2002</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Euro, Day (DMark from 1975 to 1999)</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1975</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Euro,
+                    Composite Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1999</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Euro, Bobl</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1999</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Euro
+                    Bond (Bund)</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1989</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Eurodollars</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1983</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Euro
+                    Schatz</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1999</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Fed
+                    Funds</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1989</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Feeder
+                    Cattle</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1978</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">12th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">FTSE 100 Index</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1990</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">13th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">German
+                    Dax Index</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1997</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Gilt, 
+                    Long Bond</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1989</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Gold
+                   (Commex)</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1975</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Gold (CBOT 24hr electronic)
+                   </font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2004</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Goldman
+                    Saks</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1993</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">9th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Hang Seng</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1997</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Heating
+                    Oil</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1980</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">11th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Japenese
+                    Yen, Day Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1978</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Japanese
+                    Yen, Composite Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1990</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Live
+                    Cattle</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1971</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">27th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Live
+                    Hogs</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1970</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">27th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Lumber</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1974</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1st
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Mexican
+                    Peso Ind</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1995</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Muni
+                    Bonds</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1986</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Nasdaq
+                    100</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1996</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Nasdaq,
+                    Mini</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1999</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Natural
+                    Gas</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1991</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">18th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Nikkei
+                    Index</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1991</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">3rd
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Oats
+                           </font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1975</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Orange Juice
+                   </font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1973</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">25nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Palladium
+                    </font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1983</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Platinum
+                   </font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1973</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Pork Bellies
+                   </font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1970</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">27nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">RBOB Gasoline (with HU history)
+                    </font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1985</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">11th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Rough
+                    Rice</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1987</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Russell
+                    2000 Index</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1993</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Mini
+                    Russell Index</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2002</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">S. & P.
+                    400</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1993</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">S. & P.
+                    500, Day Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1983</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">S. & P.
+                    500, Composite Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1994</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">S. & P. 500, Mini</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1997</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">2nd
+                    Thur of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Silver
+                    (Commex)</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1973</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Soybeans
+                   </font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1969</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Soybean
+                    Meal</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1969</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Soybean
+                    Oil</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1969</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Sterling,
+                    Short</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1989</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">3rd
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Sugar,
+                    #11</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1975</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Swiss Frank,
+                    Day Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1976</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Swiss Frank,
+                    Composite Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1990</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">8th
+                    of DM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">T-Bonds,
+                    Day Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1983</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">T-Bonds,
+                    Composite Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1978</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">T-Notes,
+                    2yr, Day Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1990</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">T-Notes,
+                    2yr, Composite Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1990</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">T-Notes,
+                    5yr, Day Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1988</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">T-Notes,
+                    5yr, Composite Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1989</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">T-Notes,
+                    10yr, Day Session</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1983</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">T-Notes,
+                    10yr, Composite Session</font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1983</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">26th
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">        
+                       </font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">    </font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">
+                    </font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Wheat, Chicago
+                   </font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1969</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Wheat, 
+                    K.C.</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1977</font></div>
+                </td>
+                <td bgcolor="#EBEBEB">
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Wheat, Minn.
+                   </font></div>
+                </td>
+                <td>
+                  <div align="center"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">1981</font></div>
+                </td>
+                <td>
+                  <div align="left"><font face="verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">22nd
+                    of MPDM</font></div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" height="10">
+                  <div align="right"><font size="1"><b></b></font></div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <div align="right"><font size="1"><b><font face="verdana, Arial, Helvetica, sans-serif" color="#FF0000">DM =
+                  Delivery Month, MPDM = Month Prior to DM</font></b></font></div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="10"></td>
+        </tr>
+      <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3"><a name="other"></a><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#0066FF"><b><font color="#0000CC">OTHER PRODUCTS</font></b></font></td><td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b><font color="#0000CC"><a href="#top">top</a></font></b></font></td></tr></table></td>
+        </tr>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          	<td colspan="3">
+          		<ul>
+          			<li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="products.asp" class="data_nav">Overview of Databases</a><br><br></li>
+					
+		          	<li>Indices, Breadth, Rates 
+						<ul><li><a href="idx.html" class="data_nav">IDX Database</a><br><br></li></ul>
+					
+					<li>Commodity Futures
+						<ul><li><a href="clc.html" class="data_nav">CLC Database</a></li></ul> 
+						<ul><li><a href="extended-clc.html" class="data_nav">Individual Contracts</a><br><br></li></ul>  
+					
+					<li>Commitment of Traders
+						<ul><li><a href="cot.html" class="data_nav">COT Database</a></li></ul>
+				</ul></font>
+			</td>
+		</tr>	
+		</table>
+		</td>
+			</tr>
+		</table>
+
+<table width="764" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td bgcolor="1661CE" width="764" height="18">
+      <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+        <b><font color="#FFFFFF"><a href="policy.asp" class="top_nav">Privacy
+        Policy</a>&nbsp;&nbsp;<span class="top_nav">|</span>&nbsp;&nbsp;<a href="feedback.asp" class="top_nav">Feedback</a><span class="top_nav"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font color="#FFFFFF">&nbsp;&nbsp;<span class="top_nav">|</span>&nbsp;&nbsp;</font><a href="disclaimer.asp" class="top_nav">Disclaimer</a></b></font></b></font></span><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>
+        </b></font></b></font> </font> </b> </font> <span class="top_nav"><img src="images/trans.gif" width="4" height="1"></span><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+        </font> </b> </font> </div>
+    </td>
+  </tr>
+</table>
+		<p class="order_nav">&nbsp;</p>
+	</body>
+</html>

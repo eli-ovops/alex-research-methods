@@ -1,0 +1,6 @@
+test_new_inputs_full_static_and_retained_prior (test_remaining_preflight_recovery.Recovery) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.208s
+
+OK

@@ -1,0 +1,84 @@
+Due to Kelp Hack exposure, we recommend closing all positions on Nerite immediately. Thank you for using Nerite.
+Blog
+Docs
+Mint
+Borrow Now
+Menu
+Blog
+Docs
+Mint
+Borrow Now
+$USND: The Redeemable, Streamable, Unstoppable Stablecoin.
+The friendly-fork of Liquity V2
+. Built for Arbitrum.
+Get Updates
+0
+% APY
+Yearn yUSND yield.
+$0
+M
+TVL
+569
+Open Editions Minted
+Features
+Borrow
+Up to 91% LTV borrowing at an interest rate that you choose. Multiply exposure to ETH, ARB, and other assets by up to 11x.
+Borrow Now
+Earn
+All protocol revenue goes directly to users. Deposit in the Stability Pool to earn 75% of borrower fees in native yield, plus liquidation fees and incentives.
+Earn Now
+Vote
+Direct 25% of borrower fees towards liquidity pools, staking, and more.
+Vote Now
+Overview
+Redemptions
+1 USND is always redeemable by anyone for $1.00 worth of ETH or other collateral.
+Borrowing
+USND is minted when users borrow against their ETH, wstETH, rETH, rsETH, weETH, ARB, COMP, or tBTC.
+User Set Rates
+Users choose what interest rate to pay on their loans and can update the rate at any time.
+Yield Bearing
+USND can earn sustainable yield from the interest rate borrowers pay, liquidations, and incentives by depositing in the Stability Pools.
+Non-Fungible Vaults
+CDP troves are also standardized NFTs, so borrowers can sell a loan without closing it.
+Streaming
+USND is a natively streamable “super-token”. Holders can stream tokens to anyone linearly over any period of time.
+Governance Minimization
+The Nerite Protocol is governance minimized, so the rules stay the same and there are more security guarantees.
+Delegation Aggregation
+ARB tokens deposited as collateral in Nerite maintain their delegation and governance power in the Arbitrum DAO.
+Cute Snails
+Go slow. 🐌
+Borrow Now
+Read the Docs
+Recent News & Blogs
+NERI token is here!
+Learn about NERI, the decentralized membership token of the Go Slow Foundation.
+Nerite is live!
+USND is live. Borrow, Stream, and Earn today.
+SUP token rewards are here!
+Ecosystem rewards from Superfluid are live to claim for many Nerite users.
+Shell Rewards are live for Flowstate devs and users.
+Earn $40k USND per month and shells as rewards.
+yUSND <> Privacy Pools integration is live!
+Deposit yield bearing USND in the Privacy Pool to earn yield while contributing to the privacy set.
+Secured by the best.
+See Audits
+Go Slow – Open Edition NFT
+Support the future of the Nerite protocol by minting our Open Edition collectable. 100% of funds collected go towards security audits and monitoring tools which keep Nerite safe.
+Mint Now
+Testimonials
+DeFi loves Nerite
+Superfluid is modernizing our understanding of what payments can be in a digital-first world. Nerite is making that concept more concrete through the first ever natively streamable stablecoin.
+Zhicheng Miao - CTO, Superfluid
+Nerite brings all of the functionality of Liquity V2 to Arbitrum in the most native way possible.
+Michael Svoboda - CEO, Liquity AG
+Bold forkanomics are critical to the protocol cross chain strategy, and Nerite will be a key relay the Collective harnesses to expand BOLD's presence on Arbitrum.
+Token Brice - Connaisseur, DeFi Collective
+© 2025 Nifty Chess Inc.
+Official Links
+DAO Dashboard
+Docs
+Brand Assets
+__
+Dune Analytics

@@ -1,0 +1,11 @@
+test_budget_carries_old_usage_and_prebudget_CPU (test_remaining_preflight_recovery.Recovery) ... ok
+test_new_deadline_expires_before_prompt_or_network (test_remaining_preflight_recovery.Recovery) ... ok
+test_new_inputs_full_static_and_retained_prior (test_remaining_preflight_recovery.Recovery) ... ok
+test_phase_CPU_and_lock_paths_separate_preserve_old (test_remaining_preflight_recovery.Recovery) ... ok
+test_prior_CPU_cannot_reset_to_zero (test_remaining_preflight_recovery.Recovery) ... ok
+test_release_exact_new_run_binding_and_launcher (test_remaining_preflight_recovery.Recovery) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.057s
+
+OK

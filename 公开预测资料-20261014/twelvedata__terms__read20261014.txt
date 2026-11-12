@@ -1,0 +1,757 @@
+Terms of Use | Twelve Data
+Now Live: Cboe Europe real-time data for all major European stocks.
+Data add-ons
+XJPX
+opens in 9h 57m
+0700
+423.60
+-0.38
+%
+EUR/USD
+1.11
+-0.73
+%
+AAPL
+345.58
+1.26
+%
+TSLA
+364.94
+-2.74
+%
+NESN
+78.70
+1.81
+%
+7203
+3,008.00
+0.80
+%
+USD/JPY
+158.92
+0.35
+%
+XPT/USD
+1,003.20
+0.33
+%
+ETH/USD
+2,450.73
+-1.89
+%
+2330
+2,505.00
+0.60
+%
+005930
+232,000.00
+0.00
+%
+MC
+390.55
+1.69
+%
+AZN
+12,188.00
+2.45
+%
+ASML
+1,539.60
+1.99
+%
+Market closed
+XJPX is currently closed
+Main market opens in 9 hours 57 minutes
+23:02
+00:00
+09:00
+15:30
+23:59
+Trading Hours (Monday - Friday):
+Main market
+09:00 - 15:30
+Exchange details
+All times are displayed in the Asia/Tokyo timezone (JST, UTC+09:00).
+twelve
+data
+Products
+Market Data
+Stocks
+US & global coverage
+Forex
+Physical currency
+ETFs
+Exchange-traded fund
+Crypto
+Digital currency
+Commodities
+Raw materials
+Mutual funds
+Managed investments
+More
+                                            data
+Fundamentals
+Spreadsheets
+Google Sheets
+Excel
+Tools
+Exchanges
+Markets
+Currency converter
+Developers
+Documentation
+Start integrating Twelve Data’s products
+                                                and tools
+Resources
+WebSocket
+Batch
+                                                requests
+Technical indicators
+Request
+                                                builder
+Guides
+Free
+                                                trial
+Historical
+                                                data
+Extended
+                                                hours data
+FAQs
+Support
+System status
+Artificial Intelligence
+Roadmap
+Company
+About Twelve Data
+We provide financial data, tools, and
+                                                dedicated solutions
+Expertise
+Careers
+Customers
+Trust
+Startups
+Students
+Brand assets
+News
+Pricing
+Book a demo
+Sign in
+Book a demo
+Sign in
+Terms of Use
+Last updated: January 1, 2026
+Thank you for using Twelve Data! This Twelve Data Terms of Use (the
+"Agreement"
+) is a legally binding contract between Twelve Data Pte. Ltd. (
+"Twelve Data"
+,
+"we"
+,
+"our"
+, or
+"us"
+) (UEN No. 202006058W) and you (
+"Customer"
+,
+"you"
+, or
+"your"
+), whether as an individual or on behalf of an entity you represent.
+IMPORTANT NOTICE
+BY PURCHASING, ACCESSING, DOWNLOADING, OR USING THE TWELVE DATA PLATFORM AND ANY THIRD-PARTY DATA, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THIS AGREEMENT.
+If you are accepting this Agreement on behalf of a legal entity, you represent and warrant that you have full legal authority to bind that entity to this Agreement. If you do not have this authority, are under 18 years of age, or do not agree with this Agreement, you must not accept these terms and may not access or use the Platform.
+1. Definitions
+"Account"
+means the customer account created with Twelve Data to access the Platform and Services.
+"Administrator Account"
+means an Account with elevated privileges to manage other Authorized Users and account settings.
+"API"
+means the Twelve Data application programming interfaces and related access methods, including all REST endpoints, WebSocket connections, SDKs, client libraries, and any other tools or protocols that enable access to the Platform and Data.
+"API Rate Limits"
+means the maximum number of API requests permitted within a specified time period based on your Subscription Tier.
+"Authorized User"
+means all of Customer's employees, contractors, and computerized systems expressly authorized by Customer to use the Platform.
+"Beta Features"
+means features clearly designated as experimental, beta, pilot, limited release, or non-production.
+"Confidential Information"
+means all confidential and proprietary information disclosed by either party, including non-public terms of this Agreement or any order form/subscription, business plans, technology, technical information, and trade secrets.
+"Credentials"
+means access controls, keys, tokens, or other authentication mechanisms necessary to access the Platform.
+"Data"
+means all Market Data, including Twelve Data's proprietary data and Third-Party Data made available through the Platform.
+"Derived Data"
+means data created by Customer from the Data, provided such data cannot be reverse-engineered to arrive at the underlying Data.
+"Documentation"
+means the online user guide and technical documentation available at
+https://twelvedata.com/docs
+.
+"Effective Date"
+means the date Customer first accepts this Agreement or creates an Account, whichever is earlier.
+"Fees"
+means all charges for the Platform and Services as detailed in your subscription or order form.
+"Force Majeure Event"
+means any event beyond a party's reasonable control, including natural disasters, war, terrorism, labor disputes, or government actions.
+"Free Trial"
+means evaluative use of the Platform for testing purposes prior to purchasing a subscription.
+"Internal Use"
+means use solely for Customer's internal business purposes and not for redistribution or external commercial purposes.
+"Market Data"
+means financial market data relating to securities, foreign exchange, cryptocurrencies, and other financial instruments.
+"Non-Display Use"
+means any use of Data that does not involve displaying the Data to natural persons.
+"Platform"
+means the Twelve Data platform and all related components provided by Twelve Data, including the APIs (REST and WebSocket), websites, dashboard, SDKs, client libraries, spreadsheet add-ons, tools, and any other related services or integrations.
+"Professional Use"
+means use by entities required to pay professional subscriber rates under exchange rules.
+"Redistribution"
+means any publication, distribution, or provision of Data to third parties.
+"Restriction"
+means limited or throttled access to the Platform or API, such as reduced functionality or rate limits, imposed due to non-payment or other breaches.
+"Service Level Agreement"
+or
+"SLA"
+means the support policy and service level commitments, if purchased.
+"Subscription Tier"
+means the level of service and access rights based on the subscription purchased.
+"Third-Party Data"
+means Market Data owned by or obtained from Third-Party Providers.
+"Third-Party Provider"
+means entities that own or provide Market Data distributed through the Platform.
+"Usage Data"
+means data generated from Customer's use of the Platform and Services.
+2. Grant of license
+2.1 Platform access license
+Subject to the terms of this Agreement and payment of applicable Fees, Twelve Data grants Customer a limited, revocable, non-exclusive, non-transferable, non-sublicensable license to access and use the Platform solely for Internal Use during the subscription term, except as otherwise expressly permitted by your Subscription Tier, Data add-ons, or a separate written agreement with Twelve Data.
+2.2 Data license
+Customer is granted a limited, non-exclusive license to:
+(a) Access, receive, process, and store Data solely for Internal Use (or as otherwise permitted by your Subscription Tier or add-ons)
+(b) Display Data to Authorized Users in accordance with this Agreement or third parties as expressly permitted by your Subscription Tier, Redistribution Rights Add-On, or separate agreement
+(c) Create Derived Data that cannot be reverse-engineered to recreate the original Data
+(d) Use Data for Non-Display Use only as permitted by your subscription tier
+(e) Redistribute or provide external display of Data only if and as expressly authorized by a Redistribution Rights Add-On or separate written agreement with Twelve Data (including compliance with attribution requirements)
+2.3 Restrictions
+Customer shall not, and shall ensure its Authorized Users do not:
+(a) Access or use the Platform or Data for any unlawful purpose or in violation of this Agreement
+(b) Redistribute, resell, sublicense, or transfer any Data or access rights to third parties except as expressly permitted by your Subscription Tier, Data Add-ons, or a separate agreement with Twelve Data
+(c) Reverse engineer, decompile, disassemble, or attempt to derive source code from the Platform
+(d) Use the Platform to build competitive products or services
+(e) Remove, alter, or obscure any proprietary notices or labels
+(f) Create derivative financial products without explicit written permission
+(g) Store or cache Data beyond permitted timeframes specified in the Documentation
+(h) Use automated tools to exceed API Rate Limits or create excessive load
+(i) Circumvent any access restrictions, security measures, or technical limitations
+(j) Engage in market manipulation, fraudulent trading, or other prohibited activities
+(k) Combine Data with other sources to create competing products without permission
+(l) Use Free Tier data for commercial purposes
+(m) Share Credentials or allow unauthorized access to the Platform
+(n) Interfere with other users' access or the proper operation of the Platform
+2.4 Redistribution and External Display
+Certain Subscription Tiers or Data Add-ons may permit limited redistribution or external display of Data, subject to additional terms, attribution requirements, exchange rules, and separate agreements. Contact
+[REDACTED_EMAIL]
+for details or visit the pricing page for the full breakdown.
+3. Third-party data terms
+3.1 Third-party provider requirements
+Customer acknowledges that access to Third-Party Data may require:
+(a) Execution of additional agreements directly with Third-Party Providers
+(b) Compliance with exchange rules, regulations, and reporting requirements
+(c) Payment of exchange fees or professional subscriber rates
+(d) Adherence to specific use restrictions imposed by data sources
+3.2 Third-party data disclaimers
+Customer acknowledges and agrees that:
+(a) Third-Party Data is provided "AS IS" without warranty
+(b) Twelve Data does not control Third-Party Providers or their data quality
+(c) Third-Party Data may be delayed, interrupted, or discontinued
+(d) Use of Third-Party Data is at Customer's own risk
+(e) Third-Party Providers are third-party beneficiaries with enforcement rights
+(f) Access to certain Third-Party Data may depend on specific subscription tiers, add-ons, or separate licensing requirements from Third-Party Providers. Customer is solely responsible for ensuring their use of any accessed Data complies with all applicable licensing, fees, and regulations, including independently verifying requirements where necessary.
+(g) While Twelve Data strives to accurately configure and provide Data in accordance with subscriptions and Third-Party Provider terms, Customer assumes all risk related to the use of Data and bears full responsibility for compliance.
+3.3 Exchange-specific requirements
+For exchange data, Customer represents and warrants that:
+(a) It is qualified to receive exchange information under applicable rules
+(b) It will comply with all exchange reporting and audit requirements
+(c) It will maintain required records and cooperate with regulatory audits
+(d) It will not use exchange data for unlawful purposes
+4. Customer account and security
+4.1 Account registration
+Customer must:
+(a) Provide accurate, current, and complete registration information
+(b) Maintain and promptly update account information
+(c) Maintain confidentiality of Credentials
+(d) Notify Twelve Data immediately of any suspected unauthorized use
+(e) Accept responsibility for all activities under the Account
+4.2 Administrator accounts
+Customers may designate Administrator Accounts to:
+(a) Manage Authorized User access
+(b) Monitor usage and compliance
+(c) Configure account settings
+(d) Access usage reports and analytics
+4.3 Security requirements
+Customer shall:
+(a) Implement industry-standard security measures
+(b) Use strong passwords and multi-factor authentication when available
+(c) Regularly audit access logs and user activity
+(d) Promptly revoke access for terminated employees
+(e) Report security incidents to Twelve Data within 24 hours
+5. Fees and payment
+5.1 Subscription fees
+(a) Fees are based on the selected Subscription Tier
+(b) All Fees are due in advance unless otherwise agreed
+(c) Fees are non-refundable except as expressly provided
+(d) Twelve Data may update fees annually with 30 days' notice
+5.2 Usage-based fees
+For usage-based pricing:
+(a) Fees calculated based on API calls, data volume, or other metrics
+(b) Usage tracked and billed monthly
+(c) Overage charges apply for exceeding subscription limits
+(d) Usage reports available through the Platform
+5.3 Payment terms
+(a) Payment due within 30 days of invoice date
+(b) Late fees of 1.5% per month or maximum legal rate
+(c) Customer responsible for all collection costs and attorneys' fees
+(d) No setoff, deduction, or withholding except as required by law
+(e) In the event of non-payment or failed payment:
+1. Twelve Data will provide notice via email or dashboard
+2. If unpaid after 21 days, access to the API may be restricted (e.g., throttled or limited functionality)
+3. Customer will have an additional 7 days to pay all outstanding amounts and avoid full deactivation of the subscription
+4. Continued non-payment after the full grace period may result in immediate suspension or termination per Section 12.4
+5.4 Automated subscription payments and renewal
+(a)
+Authorization
+: By providing payment information, Customer authorizes Twelve Data to:
+- Automatically charge the payment method on file for all recurring fees
+- Process payments on the subscription renewal date
+- Charge for any overage or additional services used
+(b)
+Automatic renewal
+:
+- All subscriptions automatically renew for successive terms equal to the initial subscription period
+- Monthly subscriptions renew monthly, annual subscriptions renew annually
+- Renewal occurs unless cancelled at least 24 hours before the renewal date
+- Renewal charges processed using the payment method on file
+(c)
+Payment method updates
+:
+- Customer must maintain valid payment information
+- Customer responsible for updating expired or invalid payment methods
+- Failed payments may result in service suspension
+(d)
+Price changes at renewal
+:
+- Twelve Data may adjust prices at renewal with 30 days' advance notice
+- Continued use after notice constitutes acceptance of new pricing
+- Customer may cancel before renewal to avoid new pricing
+(e)
+Cancellation
+:
+- Customer may cancel automatic renewal through account settings
+- Cancellation must be completed before the renewal date
+- No refunds for partial subscription periods
+- Access continues until the end of the paid period
+(f)
+Failed payments
+:
+- Twelve Data will attempt to retry failed payments
+- Customer notified of payment failures
+- Continued failures result in account suspension
+- If payment fails, Twelve Data will notify Customer and provide a 21-day period before restricting API access
+- Customer has an additional 7 days after restriction to pay all outstanding amounts
+- Failure to pay within this timeframe may lead to full deactivation of the subscription and termination per Section 12
+- Reactivation requires payment of all outstanding amounts
+5.5 Taxes
+(a)
+Tax exclusion
+: Fees exclude all taxes, duties, VAT, GST, sales tax, and similar governmental assessments
+(b)
+Individual customers
+:
+- Twelve Data will automatically calculate and collect applicable taxes based on Customer's location
+- Tax rates determined by billing address and applicable jurisdiction
+- Taxes will be added to invoices and charged with subscription fees
+- Individuals cannot claim tax exemptions unless valid exemption certificates are provided
+(c)
+Business customers
+:
+- No taxes will be added if valid business tax identification number is provided
+- Customer must provide VAT number, GST registration, or applicable tax ID
+- Customer is responsible for self-assessment and remittance of applicable taxes
+- Customer must update tax information if tax status changes
+(d)
+Tax documentation
+:
+- Twelve Data will provide tax invoices as required by law
+- Customer must promptly provide valid tax exemption certificates
+- Invalid or expired tax documentation will result in tax charges
+(e)
+Withholding taxes
+:
+- Customer responsible for any withholding taxes
+- Gross-up required so Twelve Data receives full payment
+- Customer must provide withholding tax certificates
+(f)
+Tax indemnification
+: Customer indemnifies Twelve Data for any tax liabilities arising from incorrect tax information provided
+5.6 Free trial terms
+(a) Free Trial limited to evaluation purposes only
+(b) No commercial use permitted during Free Trial
+(c) Twelve Data may terminate Free Trial at any time
+(d) No service level commitments during Free Trial
+5.7 Referral program
+(a)
+Program participation
+:
+- Available to all active customers in good standing
+- Customer receives unique referral code or link
+- Referrals must be new customers who have not previously held an account
+(b)
+Referral rewards
+:
+- Referring customer receives credit when referred customer completes first paid month
+- Referred customer may receive discount on initial subscription
+- Reward amounts determined by current program terms
+- Credits applied to referring customer's account for future use
+(c)
+Eligibility requirements
+:
+- Referred customer must be genuinely new to Twelve Data
+- Self-referrals and referrals between related accounts prohibited
+- Referrals must use official referral code or link
+- Referred account must maintain active paid status for reward eligibility
+(d)
+Reward credits
+:
+- Credits are non-transferable and non-refundable
+- Credits expire after 12 months if unused
+- Credits applied automatically to future invoices
+- Cannot be combined with other promotional offers unless specified
+(e)
+Program restrictions
+:
+- Fraudulent referrals result in account termination
+- Creating multiple accounts for referral benefits is prohibited
+- Twelve Data reserves right to investigate suspicious referral activity
+(f)
+Program changes
+:
+- Twelve Data may modify or terminate the program at any time
+- Changes apply to future referrals only
+- Earned credits remain valid according to original terms
+- No retroactive changes to earned rewards
+(g)
+Anti-fraud measures
+:
+- Twelve Data monitors for referral abuse
+- Suspicious patterns may result in reward forfeiture
+- Investigation may delay reward distribution
+- Final determination of eligibility at Twelve Data's discretion
+5.8 Refunds
+Unless expressly provided for by applicable law, we have no obligation to provide refunds in any instance. You may request for a refund via email in writing to
+[REDACTED_EMAIL]
+for non-use. We reserve the right, at our sole discretion, to review and determine such requests. For more details, please refer to our official refund policy at
+https://twelvedata.com/refunds
+.
+6. Intellectual property
+6.1 Twelve Data property
+All rights in the Platform and Data remain with Twelve Data or licensors, including:
+(a) Software, APIs, and technical infrastructure
+(b) Trademarks, logos, and branding
+(c) Proprietary data and algorithms
+(d) Documentation and training materials
+6.2 Customer data
+Customer retains rights to Derived Data created in compliance with this Agreement.
+6.3 Feedback
+Any feedback provided by Customer becomes Twelve Data's property without compensation.
+7. Confidentiality
+7.1 Obligations
+Each party shall:
+(a) Protect Confidential Information using reasonable care
+(b) Not disclose Confidential Information to third parties
+(c) Use Confidential Information only for Agreement purposes
+(d) Return or destroy Confidential Information upon termination
+7.2 Exceptions
+Confidentiality obligations do not apply to information that:
+(a) Is or becomes publicly available through no breach
+(b) Was rightfully known before disclosure
+(c) Is independently developed
+(d) Must be disclosed by law with notice to disclosing party
+8. Representations and warranties
+8.1 Mutual representations
+Each party represents and warrants that it:
+(a) Has full authority to enter this Agreement
+(b) Will comply with all applicable laws and regulations
+(c) Will not violate any third-party rights
+8.2 Customer representations
+Customer specifically represents that:
+(a) It will use the Platform only for lawful purposes
+(b) It is qualified to receive exchange data if applicable
+(c) It will comply with all regulatory requirements
+(d) It will not engage in market manipulation or fraud
+(e) It will independently monitor and ensure its use of all accessed Data complies with applicable Third-Party Provider rules, licensing requirements, and regulations, regardless of the configuration or availability provided through the Platform
+8.3 DISCLAIMERS
+THE PLATFORM AND DATA ARE PROVIDED "AS IS" AND "AS AVAILABLE." TWELVE DATA DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT (INCLUDING WITH RESPECT TO THIRD-PARTY INTELLECTUAL PROPERTY RIGHTS IN ANY DATA PROVIDED), ACCURACY, COMPLETENESS, TIMELINESS, AND UNINTERRUPTED ACCESS.
+TWELVE DATA RESERVES THE RIGHT, AT ITS SOLE DISCRETION, TO MODIFY, SUSPEND, DISCONTINUE, OR REMOVE ANY DATA (INCLUDING THIRD-PARTY DATA OR PROPRIETARY DATA), FEATURES, ENDPOINTS, OR PORTIONS OF THE PLATFORM AT ANY TIME, WITH OR WITHOUT NOTICE TO CUSTOMER. TWELVE DATA SHALL HAVE NO LIABILITY WHATSOEVER FOR ANY SUCH ACTIONS, INCLUDING ANY RESULTING LOSS OF ACCESS, BUSINESS INTERRUPTION, OR OTHER DAMAGES.
+THE DATA IS PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DOES NOT CONSTITUTE INVESTMENT, FINANCIAL, TRADING, OR ANY OTHER TYPE OF ADVICE. CUSTOMER IS SOLELY RESPONSIBLE FOR ANY DECISIONS MADE BASED ON THE DATA, INCLUDING ANY INVESTMENT OR TRADING DECISIONS.
+9. Indemnification
+9.1 Customer indemnification
+Customer shall indemnify and hold Twelve Data harmless from any claims arising from:
+(a) Customer's breach of this Agreement
+(b) Violation of laws or third-party rights
+(c) Unauthorized use or redistribution of Data
+(d) Customer's negligence or willful misconduct
+(e) Customer's use of Data in a manner that does not fully comply with Third-Party Provider requirements, including any licensing or fees
+9.2 Twelve Data indemnification
+Twelve Data shall indemnify Customer from third-party claims that the Platform infringes intellectual property rights, subject to standard exceptions.
+9.3 Indemnification procedures
+The indemnified party shall:
+(a) Provide prompt written notice
+(b) Grant sole control of defense
+(c) Provide reasonable cooperation
+10. LIMITATION OF LIABILITY
+10.1 EXCLUSION OF DAMAGES
+NEITHER PARTY SHALL BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, DATA LOSS, OR BUSINESS INTERRUPTION.
+10.2 LIABILITY CAP
+TOTAL LIABILITY SHALL NOT EXCEED THE FEES PAID IN THE TWELVE MONTHS PRECEDING THE CLAIM.
+10.3 EXCEPTIONS
+Limitations do not apply to:
+(a) Customer indemnification obligations
+(b) Breach of confidentiality
+(c) Willful misconduct or gross negligence
+11. Data privacy and compliance
+11.1 Privacy policy
+Customer's information is processed according to Twelve Data's Privacy Policy at
+https://twelvedata.com/privacy
+.
+11.2 Data protection
+Both parties shall:
+(a) Comply with applicable data protection laws
+(b) Implement appropriate security measures
+(c) Notify of any data breaches promptly
+(d) Cooperate with regulatory requirements
+11.3 Audit rights
+Twelve Data may audit Customer's use upon reasonable notice to ensure compliance.
+12. Term and termination
+12.1 Term
+This Agreement continues until terminated according to these provisions.
+12.2 Termination for convenience
+Either party may terminate with 30 days' written notice.
+12.3 Termination for cause
+Either party may terminate immediately for:
+(a) Material breach not cured within 30 days of notice
+(b) Insolvency or bankruptcy
+(c) Violation of law or regulatory requirements
+12.4 Immediate suspension rights
+Twelve Data may suspend access immediately for:
+(a) Security threats or violations
+(b) Non-payment after the grace periods specified in Section 5
+(c) Excessive usage impacting other customers
+(d) Suspected fraud or illegal activity
+12.5 Effect of termination
+Upon termination:
+(a) All access rights cease immediately
+(b) Customer must delete all Data
+(c) Fees remain due and payable
+(d) Survival provisions continue
+13. Compliance and regulatory
+13.1 Regulatory compliance
+Customer shall comply with all applicable:
+(a) Securities laws and regulations
+(b) Exchange rules and requirements
+(c) Financial regulatory requirements
+(d) Export control laws
+13.2 CFTC requirements
+For customers using Data subject to regulation by the United States Commodity Futures Trading Commission ("CFTC"):
+(a) Submit to CFTC jurisdiction
+(b) Maintain required records
+(c) Cooperate with regulatory audits
+13.3 Export compliance
+Customer shall not export or transfer the Platform or Data to prohibited countries or entities.
+14. General provisions
+14.1 Governing law
+This Agreement is governed by courts of the Republic of Singapore, excluding conflict of laws principles.
+14.2 Dispute resolution
+(a) The parties shall first attempt in good faith to resolve any dispute arising out of or relating to this Agreement through amicable negotiations between senior representatives of each party. Such negotiations shall commence within 14 days of written notice of the dispute by one party to the other and continue for a period of 30 days (or such longer period as mutually agreed).
+(b) If the dispute is not resolved through such negotiations, it shall be referred to binding arbitration administered by the Singapore International Arbitration Centre ("SIAC") in Singapore in accordance with the Arbitration Rules of the Singapore International Arbitration Centre ("SIAC Rules") for the time being in force
+(c) Injunctive relief available for IP and confidentiality breaches
+14.3 Assignment
+Customer may not assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of Twelve Data. Twelve Data may freely assign or transfer this Agreement or any rights or obligations hereunder, in whole or in part, to any affiliate, successor, or third party (including in connection with a merger, acquisition, reorganization, sale of assets, or corporate restructuring), without Customer's consent and without notice. This Agreement will bind and inure to the benefit of the parties and their respective successors and permitted assigns.
+14.4 Force majeure
+Neither party is liable for delays due to Force Majeure Events.
+14.5 Entire agreement
+This Agreement supersedes all prior agreements and understandings.
+14.6 Amendments
+Twelve Data may update terms with notice. Continued use constitutes acceptance.
+14.7 Severability
+Invalid provisions shall be modified to achieve intent; remainder continues.
+14.8 Notices
+Legal notices to:
+Twelve Data Pte. Ltd.
+20A Tanjong Pagar Road
+Singapore, 088443
+Email:
+[REDACTED_EMAIL]
+Support:
+[REDACTED_EMAIL]
+14.9 No waiver
+No waiver effective unless in writing and signed.
+14.10 Relationship
+Parties are independent contractors, not partners or agents.
+14.11 Third-party beneficiaries
+Third-Party Providers are beneficiaries with enforcement rights for their data.
+14.12 Survival
+Provisions regarding IP, confidentiality, disclaimers, indemnification, and liability survive termination.
+15. Service Level Agreement (if applicable)
+15.1 Availability commitment
+For customers with SLA subscriptions:
+(a) 99.9% uptime commitment excluding scheduled maintenance
+(b) Service credits for downtime exceeding commitment
+Monthly uptime percentag
+Service credit
+<
+99.95%
+10%
+<
+99%
+25%
+15.2 Support response times
+-
+Critical Issues
+: 1 hour response
+-
+High Priority
+: 4 hours response
+-
+Normal Priority
+: 1 business day
+-
+Low Priority
+: 2 business days
+15.3 Exclusions
+SLA does not cover:
+(a) Third-Party Data availability
+(b) Force Majeure Events
+(c) Customer-caused issues
+(d) Beta Features
+16. Data retention and deletion
+16.1 Retention limits
+Customer may retain Data only:
+(a) For duration permitted by subscription
+(b) As required for regulatory compliance
+(c) Subject to any Third-Party Provider restrictions
+16.2 Data Deletion
+Upon termination or expiration:
+(a) All Data must be deleted within 30 days
+(b) Certification of deletion required if requested
+(c) Audit trail data may be retained for compliance
+17. Acceptable use policy
+17.1 Prohibited activities
+Customer shall not:
+(a) Use the Platform for illegal activities
+(b) Violate securities laws or regulations
+(c) Engage in market manipulation
+(d) Distribute malware or harmful code
+(e) Attempt to gain unauthorized access
+(f) Resell access without authorization
+(g) Create derivative works for redistribution
+(h) Use data for high-frequency trading without appropriate license
+17.2 Monitoring and enforcement
+Twelve Data may:
+(a) Monitor usage for compliance
+(b) Investigate suspected violations
+(c) Suspend access for violations
+(d) Report illegal activities to authorities
+18. Special provisions for Business customers
+18.1 Volume Discounts
+Business customers may be eligible for:
+(a) Volume-based pricing
+(b) Custom data packages
+(c) Dedicated infrastructure
+(d) Custom SLAs
+18.2 White-label options
+Subject to separate agreement:
+(a) Redistribution rights
+(b) Co-branding opportunities
+(c) API integration support
+(d) Custom attribution requirements
+19. Modifications to agreement
+19.1 Notice of changes
+Twelve Data reserves the right to modify this Agreement at any time in its sole discretion. We will post the updated Agreement on the Platform and indicate the "Last updated" date at the top.
+- For material changes that may adversely affect your rights or obligations (including pricing changes or significant restrictions on Data use), we will provide advance notice (typically 30 days) via email, in-app notification, or dashboard alert.
+- For non-material changes (e.g., clarifications, minor updates, or changes required for security, legal, or regulatory compliance), changes will be effective immediately upon posting.
+19.2 Acceptance of changes
+Your continued access to or use of the Platform after any changes constitutes your acceptance of the modified Agreement. If you do not agree with the changes, your sole remedy is to stop using the Platform and terminate your Account (with access continuing until the end of your paid period, per Section 12).
+20. Contact information
+For questions about this Agreement:
+Twelve Data Pte. Ltd.
+20A Tanjong Pagar Road
+Singapore 088443
+Website:
+https://twelvedata.com
+Email:
+[REDACTED_EMAIL]
+Support:
+[REDACTED_EMAIL]
+BY USING TWELVE DATA'S SERVICES, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THIS USER AGREEMENT.
+Home
+Terms of use
+twelve
+data
+Copyright ©
+2026
+Twelve Data Pte. Ltd.
+All rights reserved.
+Products
+Stocks
+Forex (FX)
+Crypto
+ETFs
+Mutual funds
+Exchanges
+Search symbols
+Excel
+Google Sheets
+Pricing
+Developers
+API documentation
+WebSocket documentation
+Request builder
+System status
+Roadmap
+Company
+About
+Customers
+Education
+Expertise
+Careers
+Brand assets
+News
+Resources
+Support
+Contact
+Privacy policy
+Terms of use
+Security center
+Cookie policy
+Manage cookies
+Sitemap
+Cookies on this website
+We use cookies for essential site functions, analytics and advertising. See
+our Cookie Policy
+for details.
+Reject all
+Customize
+Accept all
+Cookie Settings
+Click the headings below to learn more about each category of cookies and adjust your preferences. See
+our Cookie Policy
+for details.
+Strictly necessary
+Always on
+These cookies are essential for the operation, security, and integrity of our website and services. They enable core functionality such as authentication, session management, and security protections.
+Functional
+These cookies enable enhanced functionality and personalization, such as remembering user preferences and consent choices.
+Analytics
+These cookies help us understand how visitors use our website, including pages viewed, traffic sources, actions taken and general location. This information is linked to a randomly generated identifier rather than to your name.
+Advertising
+These cookies are used to measure the performance of our advertising and to show you relevant advertising on other websites. Information collected through them is made available to advertising providers including Google and LinkedIn.
+Reject all
+Accept all
+Save preferences

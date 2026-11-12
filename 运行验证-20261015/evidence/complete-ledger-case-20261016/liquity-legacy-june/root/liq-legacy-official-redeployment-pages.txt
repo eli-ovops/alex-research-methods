@@ -1,0 +1,363 @@
+V2 Redeployment Updates (https://www.liquity.org/blog/liquity-v2-redeployment)
+citeturn511view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.liquity.org/blog/liquity-v2-redeployment","lineno":null}); Total lines: 239
+L0: cite0†Liquity V2 is being relaunched. Read more L1: 
+L2: V2
+L3: 
+L4: V2
+L5: 
+L6: cite1†Image†cdn.prod.website-files.com L7: 
+L8: cite2†Liquity V1 & $LUSD cite3†Liquity V2 & $BOLD L9: 
+L10: cite2†Go to V1   ·   LUSD L11: 
+L12: cite4†Launch L13: 
+L14: Choose a Frontend
+L15: 
+L16: Liquity does not run its own Frontend. To use the protocol, chose one of the independent frontends below. DYOR! cite5†See full details L17: 
+L18: cite5†Learn more L19: 
+L20: Liquity V2 Frontends
+L21: 
+L22: Frontends hosted by the community.
+L23: 
+L24: cite6†Liquity.App†liquity.app L25: 
+L26: cite7†DeFi Saver†app.defisaver.com L27: 
+L28: cite8†LQTY.IO†app.lqty.io L29: cite9†Trove Zero†app.trovezero.xyz L30: 
+L31: Disclaimer
+L32: 
+L33: The list of Frontend Operators is provided for informational purposes only. Neither is the list conclusive, nor has Liquity AG conducted any due diligence on these operators. Accordingly, Liquity AG does not make any statement regarding technical functionality and/or the trustworthiness of the Frontend Operators listed below. Descriptions are provided by the Frontend Operators.
+L34: 
+L35: cite10†Image: V2 Redeployment Updates†cdn.prod.website-files.com L36: 
+L37: Liquity V1
+L38: Liquity V2
+L39: 
+L40: ·
+L41: 
+L42: February 17, 2025
+L43: 
+L44: V2 Redeployment Updates
+L45: 
+L46: Here you can find the latest information about the Stability Pool (“Earn”) issue and the next steps for redeployment.
+L47: #### ↑ The latest update is on the top ↑
+L48: 
+L49: May 19
+L50: 
+L51: cite11†Tweet†x.com L52: 
+L53: Liquity V2 is LIVE on Ethereum Mainnet! 🎉
+L54: 
+L55: - Borrow on your own terms with user-set interest rates
+L56: 
+L57: - Hold or deposit $BOLD , an immutable stablecoin with real yield
+L58: 
+L59: - Stake $LQTY to direct protocol incentivized liquidity
+L60: 
+L61: - Earn 16+ tokens and rewards from V2 friendly forks
+L62: 
+L63: 🧵👇
+L64: May 13
+L65: 
+L66: cite12†Tweet†x.com L67: 
+L68: Liquity relaunches on May 19.
+L69: Following a five-week audit contest with 800+ researchers, multiple re-audits, and weeks of testing, Liquity V2 goes live on May 19th.
+L70: 
+L71: Get your ETH, wstETH,and rETH ready.
+L72: 
+L73: - Borrow on your own terms with user-set rates
+L74: - Mint $BOLD, a truly immutable stablecoin with real yield
+L75: - Stake $LQTY to direct protocol incentivized liquidity
+L76: - Put your $BOLD to use, and unlock rewards with 15+ friendly forks.
+L77: 
+L78: April 30
+L79: 
+L80: cite13†Tweet†x.com L81: 
+L82: Liquity V2 Redeployment Update 🛠
+L83: This week → judges reviewing cite14†@cantinaxyz†x.com submissions & patching 🤓
+L84: 
+L85: Next week → cite15†@chain_security†x.com & cite16†@dedaub†x.com re-audits 🛡
+L86: 
+L87: Mid May → mainnet redeployment 🚀
+L88: 
+L89: The BOLD wait will soon be over 🟢
+L90: ####
+L91: March 13
+L92: 
+L93: cite17†Tweet†x.com L94: 
+L95: Liquity V2 Redeployment Update and Audit Contest
+L96: 
+L97: We now have an updated timeline for the redeployment of Liquity V2!
+L98: 
+L99: Next Week: Publication of the updated and patched V2 codebase
+L100: 
+L101: March - April: Hosting of a multi-week audit competition
+L102: 
+L103: Q2: Redeployment of Liquity V2 on Mainnet
+L104: 
+L105: Since Liquity V2 will be deployed as an immutable protocol, it is of the utmost importance to ensure proper and safe functioning under all circumstances.
+L106: The issue found in V2 revealed how deeply hidden edge cases can be, and how sophisticated the approaches to uncover them must be.
+L107: 
+L108: We believe we can best address this by adding an extra level of scrutiny by doing an open audit competition on the deployment-ready codebase. Security must be the first priority of an immutable deployment, and thus we believe a minor postponement to be an acceptable tradeoff.
+L109: 
+L110: The competition will be held via an audit platform, with further details to be shared shortly.
+L111: Lastly, teams who are forking Liquity V2 will be free to proceed at their own cadence once the patched codebase has been made publicly available. These teams will have access to audit competition results, and any resulting patches needed to upgrade their mutable deployments.
+L112: Please note that these teams will only consider cite18†activity†docs.liquity.org from the initial Liquity V2 deployment up until February 12th, when the initial cite19†notice†x.com of a potential SP issue was given, as eligible for reward programs.
+L113: #### ‍
+L114: #### Feb 21
+L115: 
+L116: cite20†Tweet†x.com L117: 
+L118: Liquity V2 Redeployment in Mid-March. A fix for Liquity V2 has been developed, and auditors will begin their review at the end of next week. Once the audits are complete, Liquity V2’s redeployment is planned for mid-March.
+L119: What does this mean for current Liquity V2 users?
+L120: - The current deployment of Liquity V2 will become a legacy protocol
+L121: - Liquity V2 Stability Pool depositors should close their positions immediately.
+L122: - Liquity V2 Borrowers should close their loans while liquidity conditions for cite21†$BOLD†x.com remain favorable
+L123: - BOLD holders without a loan position should sell their BOLD.
+L124: #### Feb 18
+L125: 
+L126: cite22†Tweet†x.com L127: 
+L128: A fix for the issue in the Stability Pools raised regarding Liquity V2 is in development, and audits are scheduled to begin at the end of next week.Liquity V2 will be redeployed, and users will be encouraged to reopen their positions on the new contracts.What does this mean for current users?
+L129:   * Liquity V2 Stability Pool depositors should close their positions. Immediate action is strongly advised, as there is an issue that could result in the loss of funds held in these contracts.
+L130: 
+L131:   * Liquity V2 Borrowers should close their loans while liquidity conditions for BOLD remain favorable.
+L132: 
+L133:   * BOLD holders without a loan position should sell their BOLD (more below).
+L134: 
+L135: If BOLD is above $1, BOLD holders should consider:
+L136: 
+L137:   * Selling their BOLD using Curve, Uniswap, Balancer or a dex aggregator
+L138:   * Providing single sided liquidity on Uniswap in ranges which they find attractive
+L139: 
+L140:   * Setting limit orders on aggregators like Cow Swap
+L141: 
+L142: ‍
+L143: #### Feb 13
+L144: 
+L145: cite23†Tweet†x.com L146: 
+L147: Yesterday’s issue with the Stability Pools (“Earn”) on Liquity V2 has been confirmed.
+L148: 
+L149: Users are strongly advised to close their Stability Pool (“Earn”) positions in Liquity V2. To the team’s knowledge, no users have been impacted and the issue is isolated to the Stability Pool (“Earn”).
+L150: 
+L151: All other parts of the system are unaffected (“Borrow”, “Multiply” and “Stake”) and BOLD remains fully backed and redeemable.
+L152: 
+L153: The Liquity V2 protocol will be redeployed with a patch.
+L154: #### Feb 12
+L155: 
+L156: cite19†Tweet†x.com L157: 
+L158: The Liquity team was informed of a potential issue affecting Liquity V2 Stability Pools (“Earn”), and is currently investigating a potential impact.
+L159: 
+L160: The team is currently working on confirming this potential issue and solutions. The protocol continues to work as expected and to the team’s knowledge the potential issue has not impacted any users.
+L161: 
+L162: Out of an abundance of caution, a Liquity V2 user should close their Stability Pool (“Earn”) positions.
+L163: Based on the current understanding, the following parts of the system aren’t affected:
+L164: 
+L165: - BOLD remains fully backed and redeemable
+L166: 
+L167: - Borrowers can withdraw their collateral assets
+L168: 
+L169: - Staked LQTY positions are not impacted
+L170: 
+L171: ‍
+L172: 
+L173: Disclaimer:
+L174: 
+L175: - It is strongly encouraged that all users interact with frontends which they have previously used.
+L176: 
+L177: - Liquity team members will not DM you, and there is no help desk or private support channel.
+L178: - Scammers may use this opportunity to try to steal your funds, please remain vigilant and only use official sources for information.
+L179: 
+L180: - Liquity V2 is fully permissionless, and the Liquity team does not maintain any administrative roles over the Liquity protocol. It is each user’s own responsibility to take appropriate actions when interacting with the Liquity protocol.
+L181: 
+L182: ‍
+L183: 
+L184: ‍
+L185: 
+L186: V2
+L187: 
+L188: V2
+L189: 
+L190: cite1†Image†cdn.prod.website-files.com L191: 
+L192: cite2†Liquity V1 & $LUSD cite3†Liquity V2 & $BOLD L193: 
+L194: cite2†Go to V1   ·   LUSD L195: 
+L196: Product
+L197: cite24†Borrow cite25†Multiply cite26†Earn cite27†Stake cite28†BOLD L198: 
+L199: Build
+L200: 
+L201: cite29†Docs†docs.liquity.org cite30†GitHub†github.com L202: 
+L203: Company
+L204: 
+L205: cite31†Team cite32†Blog cite33†Press kit†drive.google.com L206: 
+L207: Help
+L208: 
+L209: cite34†Support†discord.com cite35†FAQ†docs.liquity.org cite36†Whitepaper†liquity.gitbook.io L210: 
+L211: Subscribe to our newsletter for updates
+L212: 
+L213: [Input: Email][Input]
+L214: 
+L215: Thank you! Your submission has been received!
+L216: 
+L217: Oops! Something went wrong while submitting the form. Please try to use cite37†this form†eepurl.com to sign up.
+L218: cite38†Image: logo nexus mutual†cdn.prod.website-files.com L219: 
+L220: Coverage coming soon
+L221: 
+L222: Powered by Nexus Mutual
+L223: 
+L224: © Liquity AG, Dufourstrasse 43, 8008 Zurich, Switzerland
+L225: 
+L226: cite39†Protocol Disclaimer L227: 
+L228: ·
+L229: 
+L230: cite40†Website Terms L231: 
+L232: ·
+L233: 
+L234: cite41†Privacy Policy L235: 
+L236: ·
+L237: 
+L238: Contact Us ([REDACTED_EMAIL])
+--------------------------------------------------------------------------------
+Liquity V2 is LIVE (https://www.liquity.org/blog/liquity-v2-is-live)
+citeturn511view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.liquity.org/blog/liquity-v2-is-live","lineno":null}); Total lines: 181
+L0: cite0†Liquity V2 is being relaunched. Read more L1: 
+L2: V2
+L3: 
+L4: V2
+L5: 
+L6: cite1†Image†cdn.prod.website-files.com L7: 
+L8: cite2†Liquity V1 & $LUSD cite3†Liquity V2 & $BOLD L9: 
+L10: cite2†Go to V1   ·   LUSD L11: 
+L12: cite4†Launch L13: 
+L14: Choose a Frontend
+L15: 
+L16: Liquity does not run its own Frontend. To use the protocol, chose one of the independent frontends below. DYOR! cite5†See full details L17: 
+L18: cite5†Learn more L19: 
+L20: Liquity V2 Frontends
+L21: 
+L22: Frontends hosted by the community.
+L23: 
+L24: cite6†Liquity.App†liquity.app L25: 
+L26: cite7†DeFi Saver†app.defisaver.com L27: 
+L28: cite8†LQTY.IO†app.lqty.io L29: cite9†Trove Zero†app.trovezero.xyz L30: 
+L31: Disclaimer
+L32: 
+L33: The list of Frontend Operators is provided for informational purposes only. Neither is the list conclusive, nor has Liquity AG conducted any due diligence on these operators. Accordingly, Liquity AG does not make any statement regarding technical functionality and/or the trustworthiness of the Frontend Operators listed below. Descriptions are provided by the Frontend Operators.
+L34: 
+L35: cite10†Image: Liquity V2 is LIVE†cdn.prod.website-files.com L36: 
+L37: Liquity V1
+L38: 
+L39: Liquity V2
+L40: Sam Lekhak
+L41: 
+L42: ·
+L43: 
+L44: May 19, 2025
+L45: 
+L46: Liquity V2 is LIVE
+L47: 
+L48: Following a five-week audit contest with 800+ researchers, multiple re-audits, and weeks of testing, Liquity V2 is now live.
+L49: 
+L50: Liquity V2 will be unique among DeFi protocols:
+L51: 
+L52: ‍
+L53: - Borrowers set their own interest rates
+L54: - Users direct protocol revenues to stablecoin liquidity pools
+L55: - Stablecoin holders can redeem for protocol collateral
+L56: ### What makes V2 unique?
+L57: ##### 1) Borrow on Your Own Terms
+L58: 
+L59: 
+L60: 
+L61: Liquity V2 is built for free-market borrowing - no governance overhead or trusted intermediaries. You control your borrowing costs, and rates are entirely market driven by its redemption mechanism.
+L62: 
+L63: cite11†Image†cdn.prod.website-files.com L64: 
+L65: ‍
+L66: 2) BOLD: A Dollar You Control
+L67: At the heart of V2 is BOLD, a stablecoin that is only backed by ETH, wstETH, and rETH. BOLD is immutable and unstoppable, meaning no one can alter the rules or freeze your assets. It delivers a truly DeFi dollar that is risk-minimized, while offering real yield to depositors.
+L68: 
+L69: cite12†Image†cdn.prod.website-files.com L70: 3) 100% of Protocol Revenues Flow Back to Users
+L71: V2 skips the concept of a centralized treasury and sends 100% of its revenue straight to its users. This allows it to maintain a tight spread between borrowers and liquidity providers, maximizing earning opportunities within its ecosystem.
+L72: 
+L73: cite13†Image†cdn.prod.website-files.com L74: 
+L75: ‍
+L76: 4) Friendly Forks: A Growing Universe
+L77: The Liquity V2 codebase is set to be deployed by over 15 other stablecoin issuers across different EVM chains and ecosystems over the coming quarter. Each have committed to rewarding early users of BOLD on mainnet, as well as to provide incentives for BOLD liquidity providers within their own liquidity campaigns. Every fork will detail its rewards program on their official channels, and these commitments will be tracked in Liquity V2’s Gitbook.
+L78: Please note that all incentives are managed and disbursed by the respective forking teams, and not by Liquity AG.
+L79: 
+L80: cite14†Image†cdn.prod.website-files.com L81: #### ‍Key Details
+L82: 
+L83: $BOLD Stablecoin Address: 0x6440f144b7e50D6a8439336510312d2F54beB01D
+L84: 
+L85: Liquity V2 Documentation and Resources: cite15†Website†liquity.org | cite16†Documentation†docs.liquity.org | cite17†Codebase†github.com L86: ‍‍
+L87: # What can you do with Liquity V2?
+L88: 
+L89: ‍
+L90: Borrow & Multiply
+L91: 
+L92: cite18†Image†cdn.prod.website-files.com L93: 
+L94: - Use ETH, rETH, and wstETH as collateral to borrow BOLD with flexible, user-set interest rates.
+L95: - Set Your Own Rate: Tailor your borrowing costs without reliance on DAOs or fixed models
+L96: - High Capital Efficiency: Borrow at up to 91% of your collateral’s value
+L97: - Redemption Control: Manage your redemption risk with adjustable interest rates
+L98: - Increase your exposure to ETH and its staking yield
+L99: 
+L100: ‍
+L101: Earn with BOLD
+L102: 
+L103: cite19†Image†cdn.prod.website-files.com L104: 
+L105: Deposit into one of the multiple Stability Pools to earn continuous yield from interest revenue that borrowers pay (in BOLD) as well as any liquidation gains (in (liquid staked) ETH).
+L106: 
+L107: ‍
+L108: 
+L109: Stake your LQTY
+L110: 
+L111: cite20†Image†cdn.prod.website-files.com L112: 
+L113: Stake your LQTY tokens to direct V2 revenues, as well as earn V1 fees. 25% of protocol revenue goes to support incentives for secondary BOLD liquidity.
+L114: ### Try it out and DYOR!‍
+L115: 
+L116: To understand the risks of Liquity V2, make sure to review the following carefully:‍
+L117: 
+L118: -
+L119: cite21†Getting started with Liquity V2 -
+L120: cite22†FAQ†docs.liquity.org -
+L121: cite23†Risk Disclosure†docs.liquity.org -
+L122: cite24†Technical Resources & Audits†docs.liquity.org - cite25†Protocol Disclaimer L123: 
+L124: We invite you to explore Liquity V2 on Ethereum Mainnet and join us in championing the free-market, immutable ethos of DeFi we wish to uphold.
+L125: ‍
+L126: cite3†Choose a community frontend to borrow on your own terms today.
+L127: V2
+L128: 
+L129: V2
+L130: 
+L131: cite1†Image†cdn.prod.website-files.com L132: 
+L133: cite2†Liquity V1 & $LUSD cite3†Liquity V2 & $BOLD L134: 
+L135: cite2†Go to V1   ·   LUSD L136: 
+L137: Product
+L138: 
+L139: cite26†Borrow cite27†Multiply cite28†Earn cite29†Stake cite30†BOLD L140: 
+L141: Build
+L142: 
+L143: cite16†Docs†docs.liquity.org cite31†GitHub†github.com L144: 
+L145: Company
+L146: 
+L147: cite32†Team cite33†Blog cite34†Press kit†drive.google.com L148: 
+L149: Help
+L150: 
+L151: cite35†Support†discord.com cite22†FAQ†docs.liquity.org cite36†Whitepaper†liquity.gitbook.io L152: 
+L153: Subscribe to our newsletter for updates
+L154: 
+L155: [Input: Email][Input]
+L156: 
+L157: Thank you! Your submission has been received!
+L158: Oops! Something went wrong while submitting the form. Please try to use cite37†this form†eepurl.com to sign up.
+L159: 
+L160: cite38†Image: logo nexus mutual†cdn.prod.website-files.com L161: 
+L162: Coverage coming soon
+L163: 
+L164: Powered by Nexus Mutual
+L165: 
+L166: © Liquity AG, Dufourstrasse 43, 8008 Zurich, Switzerland
+L167: 
+L168: cite25†Protocol Disclaimer L169: 
+L170: ·
+L171: 
+L172: cite39†Website Terms L173: 
+L174: ·
+L175: 
+L176: cite40†Privacy Policy L177: 
+L178: ·
+L179: 
+L180: Contact Us ([REDACTED_EMAIL])
+

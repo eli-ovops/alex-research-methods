@@ -1,0 +1,574 @@
+Compute Unit Costs | Alchemy Docs (https://www.alchemy.com/docs/reference/compute-unit-costs)
+citeturn487view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.alchemy.com/docs/reference/compute-unit-costs","lineno":null}); Total lines: 1491
+L0: > For the complete documentation index, see cite0†llms.txt .
+L1: 
+L2: cite1†Skip to content L3: 
+L4: Search or Ask AI
+L5: 
+L6:   * cite2†Chains L7:   * cite3†Data L8:   * cite4†Wallets L9:   * cite5†Build with AI L10:   * cite6†Tools & Resources L11: cite7†Changelog L12: 
+L13:   * cite2†Chains L14:   * cite3†Data L15:   * cite4†Wallets L16:   * cite5†Build with AI L17:   * cite6†Tools & Resources L18:   * cite7†Changelog L19: 
+L20: ### Pricing
+L21: 
+L22: cite6†Pricing Plans cite8†Compute Units cite9†Compute Unit Costs L23: 
+L24: Pricing FAQ
+L25: 
+L26: Resources
+L27: ### Tools
+L28: 
+L29: cite10†Tools Quickstart L30: 
+L31: Admin API
+L32: 
+L33: cite11†Sandbox cite12†Testnet Faucets cite13†Alerts cite14†Request Logs cite15†Roles cite16†Single Sign-On (SSO) L34: 
+L35: Activity Log
+L36: 
+L37: ### Tutorials
+L38: 
+L39: cite17†Alchemy Quickstart Guides L40: 
+L41: Transactions
+L42: 
+L43: Streaming Data
+L44: 
+L45: API Security and Authentication
+L46: 
+L47: cite18†Developer Best Practices L48: 
+L49: Understanding the EVM
+L50: 
+L51: Snapshots Service
+L52: 
+L53: ### New to Web3
+L54: 
+L55: Alchemy University
+L56: 
+L57: Developer Basics
+L58: 
+L59: cite19†Go to Dashboard†dashboard.alchemy.com L60: ### Pricing
+L61: 
+L62: cite6†Pricing Plans cite8†Compute Units cite9†Compute Unit Costs L63: 
+L64: Pricing FAQ
+L65: 
+L66: Resources
+L67: 
+L68: ### Tools
+L69: 
+L70: cite10†Tools Quickstart L71: 
+L72: Admin API
+L73: 
+L74: cite11†Sandbox cite12†Testnet Faucets cite13†Alerts cite14†Request Logs cite15†Roles cite16†Single Sign-On (SSO) L75: 
+L76: Activity Log
+L77: 
+L78: ### Tutorials
+L79: 
+L80: cite17†Alchemy Quickstart Guides L81: 
+L82: Transactions
+L83: 
+L84: Streaming Data
+L85: 
+L86: API Security and Authentication
+L87: 
+L88: cite18†Developer Best Practices L89: 
+L90: Understanding the EVM
+L91: 
+L92: Snapshots Service
+L93: 
+L94: ### New to Web3
+L95: 
+L96: Alchemy University
+L97: 
+L98: Developer Basics
+L99: 
+L100:   1. Pricing
+L101: # Compute Unit Costs
+L102: 
+L103: Don't have an API key?
+L104: 
+L105: Unlock millions of requests and free archive data on all chains. cite20†Get started for free†dashboard.alchemy.com L106: 
+L107: ## What are Compute Units and Throughput Compute Units?
+L108: 
+L109: For more details, check out the cite21†Compute Units section and the cite22†Throughput Compute Units section.
+L110: # EVM: Standard JSON-RPC Methods
+L111: Method  | CU  | Throughput CU
+L112: --- | --- | ---
+L113: eth_chainId  | 0  | 5
+L114: eth_protocolVersion  | 0  | 5
+L115: eth_syncing  | 0  | 5
+L116: net_listening  | 0  | 5
+L117: net_peerCount  | 0  | 5
+L118: net_version  | 0  | 5
+L119: eth_accounts  | 10  |
+L120: eth_baseFee  | 10  |
+L121: eth_blobBaseFee  | 10  |
+L122: eth_blockNumber  | 10  |
+L123: eth_createAccessList  | 10  |
+L124: eth_feeHistory  | 10  |
+L125: eth_getAssetBalance  | 10  |
+L126: eth_getChainConfig  | 10  |
+L127: eth_maxPriorityFeePerGas  | 10  |
+L128: eth_subscribe  | 10  |
+L129: eth_uninstallFilter  | 10  |
+L130: eth_unsubscribe  | 10  |
+L131: erigon_forks  | 20  |
+L132: erigon_getHeaderByHash  | 20  |
+L133: erigon_getHeaderByNumber  | 20  |
+L134: erigon_getLogsByHash  | 20  |
+L135: erigon_issuance  | 20  |
+L136: eth_callMany  | 20  |
+L137: eth_estimateGas  | 20  |
+L138: eth_fillTransaction  | 20  |
+L139: eth_gasPrice  | 20  |
+L140: eth_getAccount  | 20  |
+L141: eth_getBalance  | 20  |
+L142: eth_getBlobSidecars  | 20  |
+L143: eth_getBlockByHash  | 20  |
+L144: eth_getBlockByNumber  | 20  |
+L145: eth_getBlockReceipts  | 20  | 500
+L146: eth_getBlockTransactionCountByHash  | 20  |
+L147: eth_getBlockTransactionCountByNumber  | 20  |
+L148: eth_getCode  | 20  |
+L149: eth_getFilterChanges  | 20  |
+L150: eth_getFinalizedHeader  | 20  |
+L151: eth_getProof  | 20  |
+L152: eth_getRawTransactionByHash  | 20  |
+L153: eth_getRootHash  | 20  |
+L154: eth_getStorageAt  | 20  |
+L155: eth_getTdByNumber  | 20  |
+L156: eth_getTransactionByBlockHashAndIndex  | 20  |
+L157: eth_getTransactionByBlockNumberAndIndex  | 20  |
+L158: eth_getTransactionByHash  | 20  |
+L159: eth_getTransactionCount  | 20  |
+L160: eth_getTransactionReceipt  | 20  |
+L161: eth_getTransactionReceiptsByBlock  | 20  | 1500
+L162: eth_getUncleByBlockHashAndIndex  | 20  |
+L163: eth_getUncleByBlockNumberAndIndex  | 20  |
+L164: eth_getUncleCountByBlockHash  | 20  |
+L165: eth_getUncleCountByBlockNumber  | 20  |
+L166: eth_newBlockFilter  | 20  |
+L167: eth_newFilter  | 20  |
+L168: eth_newPendingTransactionFilter  | 20  |
+L169: eth_submitWork  | 20  |
+L170: parlia_getSnapshot  | 20  |
+L171: web3_clientVersion  | 20  |
+L172: web3_sha3  | 20  |
+L173: eth_call  | 26  |
+L174: eth_callBundle  | 40  |
+L175: eth_sendRawTransaction  | 40  | 50
+L176: eth_sendRawTransactionSync  | 40  | 125
+L177: eth_simulateV1  | 40  |
+L178: realtime_sendRawTransaction  | 40  |
+L179: eth_getAccountInfo  | 60  |
+L180: eth_getFilterLogs  | 60  |
+L181: eth_getLogs  | 60  |
+L182: txpool_content  | 500  |
+L183: batch  | CU of method # times called  |
+L184:   * To view the batch request breakdown in the Alchemy Dashboard, click on "raw request"
+L185: # Solana: Standard JSON-RPC Methods
+L186: Method  | CU  | Throughput CU
+L187: --- | --- | ---
+L188: getAccountInfo  | 10  |
+L189: getBalance  | 10  |
+L190: getBlockProduction  | 10  |
+L191: getBlocks  | 10  |
+L192: getGenesisHash  | 10  |
+L193: getMinimumBalanceForRentExemption  | 10  |
+L194: getPriorityFeeEstimate  | 10  | 20
+L195: getRecentPrioritizationFees  | 10  |
+L196: getTokenAccountsByDelegate  | 10  |
+L197: getTokenAccountsByOwner  | 10  |
+L198: getTokenAccountsByOwnerV2  | 10  |
+L199: getBlockCommitment  | 20  |
+L200: getBlockHeight  | 20  |
+L201: getBlocksWithLimit  | 20  |
+L202: getBlockTime  | 20  |
+L203: getClusterNodes  | 20  |
+L204: getEpochInfo  | 20  |
+L205: getEpochSchedule  | 20  |
+L206: getFeeForMessage  | 20  |
+L207: getHealth  | 20  |
+L208: getHighestSnapshotSlot  | 20  |
+L209: getIdentity  | 20  |
+L210: getInflationGovernor  | 20  |
+L211: getInflationRate  | 20  |
+L212: getLatestBlockhash  | 20  |
+L213: getLeaderSchedule  | 20  |
+L214: getMaxRetransmitSlot  | 20  |
+L215: getMaxShredInsertSlot  | 20  |
+L216: getMultipleAccounts  | 20  |
+L217: getProgramAccounts  | 20  |
+L218: getProgramAccountsV2  | 20  |
+L219: getRecentPerformanceSamples  | 20  |
+L220: getSignatureStatuses  | 20  |
+L221: getSlot  | 20  |
+L222: getSlotLeader  | 20  |
+L223: getSlotLeaders  | 20  |
+L224: getStakeActivation  | 20  |
+L225: getStakeMinimumDelegation  | 20  |
+L226: getTokenAccountBalance  | 20  |
+L227: getTokenLargestAccounts  | 20  |
+L228: getTokenSupply  | 20  |
+L229: getTransactionCount  | 20  |
+L230: getVersion  | 20  |
+L231: getVoteAccounts  | 20  |
+L232: isBlockhashValid  | 20  |
+L233: minimumLedgerSlot  | 20  |
+L234: requestAirdrop  | 20  |
+L235: sendStakedTransaction  | 20  |
+L236: sendTransaction  | 20  |
+L237: simulateBundle  | 20  |
+L238: simulateTransaction  | 20  |
+L239: getBalanceByOwnerAtSlot  | 40  | 100
+L240: getBlock  | 40  |
+L241: getFirstAvailableBlock  | 40  |
+L242: getInflationReward  | 40  | 300
+L243: getSignaturesForAddress  | 40  |
+L244: getTokenAccountsByOwnerAtSlot  | 40  | 100
+L245: getTransaction  | 40  |
+L246: getTransactionsForAddress  | 100  |
+L247: getAsset_v2  | 160  | 200
+L248: getAssetProof_v2  | 160  | 200
+L249: getNftEditions_v2  | 160  | 200
+L250: getSignaturesForAsset_v2  | 160  | 200
+L251: getSupply  | 160  | 800
+L252: getTokenAccounts_v2  | 160  | 200
+L253: getAssetBatch_v2  | 480  | 200
+L254: getAssetProofBatch_v2  | 480  | 200
+L255: getAssetsByAuthority_v2  | 480  | 200
+L256: getAssetsByCreator_v2  | 480  | 200
+L257: getAssetsByGroup_v2  | 480  | 200
+L258: getAssetsByOwner_v2  | 480  | 200
+L259: searchAssets_v2  | 480  | 200
+L260: getLargestAccounts  | 3000  |
+L261: batch*  | CU of method # times called  |
+L262:   * To view the batch request breakdown in the Alchemy Dashboard, click on "raw request"
+L263: # Solana: DAS APIs (NFT/Token)
+L264: 
+L265: Method  | CU  | Throughput CU
+L266: --- | --- | ---
+L267: getAsset  | 80  | 200
+L268: getAssetProof  | 160  | 200
+L269: getAssetSignatures  | 160  | 200
+L270: getNftEditions  | 160  | 200
+L271: getTokenAccounts  | 160  | 200
+L272: getAssetProofs  | 480  | 200
+L273: getAssets  | 480  | 200
+L274: getAssetsByAuthority  | 480  | 200
+L275: getAssetsByCreator  | 480  | 200
+L276: getAssetsByGroup  | 480  | 200
+L277: getAssetsByOwner  | 480  | 200
+L278: searchAssets  | 480  | 200
+L279: # Solana: Photon APIs (ZK Compression)
+L280: Method  | CU  | Throughput CU
+L281: --- | --- | ---
+L282: getCompressedAccount  | 120  | 100
+L283: getCompressedAccountProof  | 120  | 100
+L284: getCompressedAccountsByOwner  | 120  | 100
+L285: getCompressedBalance  | 120  | 100
+L286: getCompressedBalanceByOwner  | 120  | 100
+L287: getCompressedMintTokenHolders  | 120  | 100
+L288: getCompressedTokenAccountBalance  | 120  | 100
+L289: getCompressedTokenAccountsByDelegate  | 120  | 100
+L290: getCompressedTokenAccountsByOwner  | 120  | 100
+L291: getCompressedTokenBalancesByOwner  | 120  | 100
+L292: getCompressedTokenBalancesByOwnerV2  | 120  | 100
+L293: getCompressionSignaturesForAccount  | 120  | 100
+L294: getCompressionSignaturesForAddress  | 120  | 100
+L295: getCompressionSignaturesForOwner  | 120  | 100
+L296: getCompressionSignaturesForTokenOwner  | 120  | 100
+L297: getIndexerHealth  | 120  | 100
+L298: getIndexerSlot  | 120  | 100
+L299: getLatestCompressionSignatures  | 120  | 100
+L300: getLatestNonVotingSignatures  | 120  | 100
+L301: getMultipleCompressedAccountProofs  | 120  | 100
+L302: getMultipleCompressedAccounts  | 120  | 100
+L303: getMultipleNewAddressProofs  | 120  | 100
+L304: getMultipleNewAddressProofsV2  | 120  | 100
+L305: getTransactionWithCompressionInfo  | 120  | 100
+L306: getValidityProof  | 1200  | 500
+L307: getValidityProofV2  | 1200  | 500
+L308: # Solana: Jito Bundles and Transactions
+L309: 
+L310: cite23†Jito bundles are groups of up to 5 signed transactions that execute sequentially and atomically in a single slot on Solana Mainnet. A tip to one of the Jito tip accounts is required for inclusion. These methods are available on paid Alchemy plans only.
+L311: 
+L312: Method  | CU
+L313: --- | ---
+L314: getBundleStatuses  | 40
+L315: getInflightBundleStatuses  | 40
+L316: getTipAccounts  | 40
+L317: sendBundle  | 40
+L318: # Solana: Yellowstone gRPC
+L319: 
+L320: cite24†Yellowstone gRPC is a high-performance streaming service for Solana that delivers real-time blockchain data via gRPC. Pricing is based on bandwidth: the amount of data delivered as part of the stream.
+L321: 
+L322: Bandwidth  | Cost
+L323: --- | ---
+L324: 1 TB  | $75
+L325: 
+L326:   * Amount will be pro-rated based on bytes streamed. cite25†Contact us for pre-committed bulk discounts.
+L327: # Solana: WebSocket Subscriptions
+L328: 
+L329: cite26†Solana WebSocket subscriptions (`accountSubscribe`, `programSubscribe`, `logsSubscribe`, etc.) are priced based on bandwidth: the amount of data delivered as part of the stream.
+L330: 
+L331: Bandwidth  | CU
+L332: --- | ---
+L333: 1 byte  | .0002
+L334: # Debug API
+L335: Method  | CU  | Throughput CU
+L336: --- | --- | ---
+L337: debug_dbAncient  | 40  | 1000
+L338: debug_dbAncients  | 40  | 1000
+L339: debug_dbGet  | 40  | 1000
+L340: debug_executionWitness  | 40  | 1000
+L341: debug_executionWitnessByHash  | 40  | 1000
+L342: debug_getBadBlocks  | 40  | 1000
+L343: debug_getRawBlock  | 40  | 1000
+L344: debug_getRawHeader  | 40  | 1000
+L345: debug_getRawReceipts  | 40  | 1000
+L346: debug_getTrieFlushInterval  | 40  | 1000
+L347: debug_storageRangeAt  | 40  | 1000
+L348: debug_traceBlockByHash  | 40  | 1000
+L349: debug_traceBlockByNumber  | 40  | 1000
+L350: debug_traceCall  | 40  | 1000
+L351: debug_traceCallMany  | 40  | 1000
+L352: debug_traceTransaction  | 40  | 1000
+L353: # Embedded Account APIs
+L354: 
+L355: Similar to the cite27†NFT API , the Embedded Account APIs implement "Throughput CU" to count separately toward your applications' throughput!
+L356: Method  | CU  | Throughput CU
+L357: --- | --- | ---
+L358: /signer/auth-get-multi-factor  | 10  | 50
+L359: /signer/auth-list-multi-factors  | 10  | 50
+L360: /signer/auth-validate-multi-factors  | 10  | 50
+L361: /signer/multi-owner-prepare-add  | 10  |
+L362: /signer/multi-owner-prepare-delete  | 10  |
+L363: /signer/multi-owner-sign-raw-payload  | 10  |
+L364: /signer/multi-owner-update-root-quorum  | 10  |
+L365: /signer/multi-sig-prepare-add  | 10  |
+L366: /signer/prepare-oauth  | 10  | 50
+L367: /signer/signer-config  | 10  |
+L368: /signer/track-key-export  | 10  | 50
+L369: /signer/auth-delete-multi-factors  | 20  | 50
+L370: /signer/auth-request-multi-factor  | 20  | 50
+L371: /signer/auth-verify-multi-factor  | 20  | 50
+L372: /signer/lookup  | 20  | 50
+L373: /signer/add-oauth-provider  | 100  | 50
+L374: /signer/auth  | 100  | 50
+L375: /signer/init-otp  | 100  | 50
+L376: /signer/list-auth-methods  | 100  | 50
+L377: /signer/otp  | 100  | 50
+L378: /signer/remove-oauth-provider  | 100  | 50
+L379: /signer/update-email-auth  | 100  | 50
+L380: /signer/update-phone-auth  | 100  | 50
+L381: /signer/verify-otp  | 100  | 50
+L382: /signer/whoami  | 100  | 20
+L383: /signer/multi-owner-add  | 250  | 50
+L384: /signer/multi-owner-delete  | 250  | 50
+L385: /signer/multi-sig-add  | 250  | 50
+L386: /signer/auth-jwt  | 400  | 300
+L387: /signer/oauth  | 400  | 300
+L388: /signer/multi-owner-create  | 1000  | 300
+L389: /signer/multi-sig-create  | 1000  | 300
+L390: /signer/signup  | 1000  | 300
+L391: /signer/sign-payload  | 6000  | 300
+L392: # Gas Manager & Bundler APIs
+L393: 
+L394: Similar to the cite27†NFT API , the Gas Manager & Bundler APIs implement "Throughput CU" to count separately toward your applications' throughput!
+L395: Method  | CU  | Throughput CU
+L396: --- | --- | ---
+L397: debug_bundler_clearMempool  | 10  |
+L398: debug_bundler_clearState  | 10  |
+L399: debug_bundler_dumpMempool  | 10  |
+L400: debug_bundler_dumpPaymasterBalances  | 10  |
+L401: debug_bundler_dumpReputation  | 10  |
+L402: debug_bundler_getStakeStatus  | 10  |
+L403: debug_bundler_sendBundleNow  | 10  |
+L404: debug_bundler_setBundlingMode  | 10  |
+L405: debug_bundler_setReputation  | 10  |
+L406: eth_supportedEntryPoints  | 10  |
+L407: rundler_getUserOperationGasPrice  | 10  |
+L408: rundler_maxPriorityFeePerGas  | 10  |
+L409: eth_getUserOperationByHash  | 20  |
+L410: eth_getUserOperationReceipt  | 20  |
+L411: rundler_getUserOperationStatus  | 50  |
+L412: pm_getPaymasterStubData  | 250  | 100
+L413: eth_estimateUserOperationGas  | 500  | 50
+L414: alchemy_requestFeePayer  | 1000  | 100
+L415: alchemy_requestPaymasterAndData  | 1000  | 100
+L416: alchemy_requestPaymasterTokenQuote  | 1000  | 100
+L417: eth_sendUserOperation  | 1000  | 100
+L418: pm_getPaymasterData  | 1000  | 100
+L419: rundler_dropLocalUserOperation  | 1000  |
+L420: alchemy_requestGasAndPaymasterAndData  | 1250  | 125
+L421: alchemy_simulateUserOperationAssetChanges  | 2500  |
+L422:   * When `eth_sendUserOperation` is called with a valid bundler sponsorship header (`x-alchemy-policy-id`), the CU cost is 3000 instead of the standard 1000.
+L423:   * When `alchemy_requestFeePayer` is called with `prefundRent = true`, the CU cost is 1250 instead of the standard 1000.
+L424: # NFT API
+L425: 
+L426: We want builders to be able to use as much of the NFT API as they need without worrying about throughput. Because of that, we have discounted how NFT API requests count towards your applications’ guaranteed throughput by 6-10x. This means you can make more concurrent NFT API requests, and use the “Throughput CU” below to calculate how much you can use!
+L427: Method  | CU  | Throughput CU
+L428: --- | --- | ---
+L429: reportSpam  | 0  | 10
+L430: refreshNftMetadata  | 40  | 10
+L431: computeRarity  | 80  | 10
+L432: getFloorPrice  | 80  | 10
+L433: getNFTMetadata  | 80  | 10
+L434: getOwnersForNFT  | 80  | 10
+L435: invalidateContract  | 80  |
+L436: isAirdropNFT  | 80  | 10
+L437: isHolderOfContract  | 80  | 10
+L438: isSpamContract  | 80  | 10
+L439: summarizeNFTAttributes  | 80  | 10
+L440: getContractMetadata  | 160  | 10
+L441: getNFTSales  | 160  | 10
+L442: getCollectionMetadata  | 240  | 10
+L443: getContractsForOwner  | 320  | 100
+L444: getCollectionsForOwner  | 360  | 100
+L445: getContractMetadataBatch  | 480  | 100
+L446: getNFTMetadataBatch  | 480  | 100
+L447: getNFTsForOwner  | 480  | 100
+L448: getOwnersForContract  | 480  | 20
+L449: getSpamContracts  | 480  | 10
+L450: searchContractMetadata  | 480  | 50
+L451: getNFTsForContract  | 600  | 100
+L452: # Portfolio API
+L453: 
+L454: Method  | CU  | Throughput CU
+L455: --- | --- | ---
+L456: utility/blocks/by-timestamp  | 10  | 1
+L457: stellar/balances  | 40  |
+L458: stellar/nfts  | 40  |
+L459: stellar/transfers  | 40  |
+L460: assets/tokens/balances/by-address  | 200  | 1
+L461: tokens/balances/by-address  | 200  | 1
+L462: assets/tokens/by-address  | 360  | 1
+L463: transfers/by-address  | 480  | 1
+L464: assets/nfts/contracts/by-address  | 600  | 1
+L465: assets/nfts/by-address  | 1000  | 1
+L466: transactions/history/by-address  | 1000  | 100
+L467: 
+L468: transfers/by-address uses dynamic pricing
+L469: Both the compute units (480 per network) and the throughput CUs (1 per network) scale with the number of networks specified in the `networks` request-body field. For example, a request specifying 3 networks costs 1,440 CUs and consumes 3 throughput CUs.
+L470: # Prices API
+L471: 
+L472: Method  | CU  | Throughput CU
+L473: --- | --- | ---
+L474: tokens/by-address  | 40  | 20
+L475: tokens/by-symbol  | 40  | 20
+L476: tokens/historical  | 40  | 20
+L477: 
+L478: # Token API
+L479: 
+L480: Method  | CU
+L481: --- | ---
+L482: alchemy_getTokenMetadata  | 10
+L483: alchemy_getTokenAllowance  | 20
+L484: alchemy_getTokenBalances  | 20
+L485: # Trace API
+L486: 
+L487: Method  | CU  | Throughput CU
+L488: --- | --- | ---
+L489: trace_block  | 20  |
+L490: trace_get  | 20  |
+L491: trace_call  | 40  |
+L492: trace_filter  | 40  |
+L493: trace_rawTransaction  | 40  |
+L494: trace_transaction  | 40  |
+L495: trace_callMany  | 80  | 3000
+L496: trace_replayBlockTransactions  | 80  | 3000
+L497: trace_replayTransaction  | 80  | 3000
+L498: # Arbitrum Trace API
+L499: 
+L500: Method  | CU  | Throughput CU
+L501: --- | --- | ---
+L502: arbtrace_block  | 20  | 1000
+L503: arbtrace_get  | 20  | 1000
+L504: arbtrace_call  | 40  | 1000
+L505: arbtrace_filter  | 40  | 1000
+L506: arbtrace_transaction  | 40  |
+L507: arbtrace_callMany  | 80  | 1000
+L508: arbtrace_replayBlockTransactions  | 80  | 3000
+L509: arbtrace_replayTransaction  | 80  | 3000
+L510: # Transact
+L511: 
+L512: Method  | CU
+L513: --- | ---
+L514: alchemy_simulateAssetChanges  | 2500
+L515: alchemy_simulateExecution  | 2500
+L516: alchemy_simulateAssetChangesBundle  | 4500
+L517: alchemy_simulateExecutionBundle  | 4500
+L518: 
+L519: # Transfers API
+L520: 
+L521: Method  | CU
+L522: --- | ---
+L523: alchemy_getAssetTransfers  | 120
+L524: 
+L525: # Utility API
+L526: 
+L527: Method  | CU
+L528: --- | ---
+L529: alchemy_getTransactionReceipts  | 250
+L530: # Wallet APIs
+L531: 
+L532: Similar to the cite27†NFT API , the Wallet APIs implement "Throughput CU" to count separately toward your applications' throughput!
+L533: Method  | CU  | Throughput CU
+L534: --- | --- | ---
+L535: wallet_getCapabilities  | 10  |
+L536: wallet_listAccounts  | 10  |
+L537: wallet_formatSign  | 15  |
+L538: wallet_prepareSign  | 15  |
+L539: wallet_getCallsStatus  | 20  |
+L540: wallet_getCrossChainStatus_v0  | 40  |
+L541: wallet_createAccount  | 50  |
+L542: wallet_createSession  | 50  |
+L543: wallet_requestAccount  | 50  |
+L544: wallet_getAssets  | 200  |
+L545: wallet_requestQuote_v0  | 800  | 50
+L546: wallet_prepareCalls  | 1750  | 50
+L547: wallet_sendPreparedCalls  | 3000  | 100
+L548: # Webhooks and Subscription APIs
+L549: 
+L550: cite28†Webhooks and cite29†WebSocket Subscriptions on Alchemy are priced based on bandwidth (the amount of data delivered) by default, except for Base Flashblocks subscriptions, which are priced per event.
+L551: 
+L552: Subscription  | Pricing
+L553: --- | ---
+L554: newFlashblockTransactions  | 40 CU / event
+L555: newFlashblocks  | 60 CU / event
+L556: All other subscriptions  | 0.04 CU / byte
+L557: On average, a typical byte-priced webhook or WebSocket subscription event is about 1000 bytes, so it would consume 40 compute units. Note that this can vary significantly based on the specific event delivered. See the cite30†Subscription API Quickstart for details.
+L558: # Polygon PoS: Specific Methods
+L559: 
+L560: Method  | CU
+L561: --- | ---
+L562: bor_getAuthor  | 10
+L563: bor_getCurrentProposer  | 10
+L564: bor_getCurrentValidators  | 10
+L565: bor_getRootHash  | 10
+L566: bor_getSignersAtHash  | 10
+L567: # Starknet: Standard JSON-RPC Methods
+L568: Method  | CU  | Throughput CU
+L569: --- | --- | ---
+L570: starknet_chainId  | 0  | 5
+L571: starknet_syncing  | 0  | 5
+L572: starknet_blockHashAndNumber  | 10  |
+L573: starknet_blockNumber  | 10  |
+L574: starknet_specVersion  | 10  |
+L575: pathfinder_getTransactionStatus  | 20  |
+L576: pathfinder_lastL1AcceptedBlockHashAndNumber  | 20  |
+L577: starknet_call  | 20  |
+L578: starknet_estimateFee  | 20  |
+L579: starknet_estimateMessageFee  | 20  |
+L580: starknet_getBlockTransactionCount  | 20  |
+L581: starknet_getBlockWithReceipts  | 20  | 500
+L582: starknet_getBlockWithTxHashes  | 20  |
+L583: starknet_getBlockWithTxs  | 20  |
+L584: starknet_getClass  | 20  |
+L585: starknet_getClassAt  | 20  |
+L586: starknet_getClassHashAt  | 20  |
+--------------------------------------------------------------------------------
+Pricing Plans | Alchemy Docs (https://www.alchemy.com/docs/reference/pricing-plans)
+citeturn487view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.alchemy.com/docs/reference/pricing-plans","lineno":null}); Total lines: 171
+--------------------------------------------------------------------------------
+Why do I see a Free tier error when calling eth_getLogs with a large block range? | Alchemy Knowledge Base (https://support.alchemy.com/articles/1883074130-why-do-i-see-a-free-tier-error-when-calling-eth-getlogs-with-a-large-block-range)
+citeturn487view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://support.alchemy.com/articles/1883074130-why-do-i-see-a-free-tier-error-when-calling-eth-getlogs-with-a-large-block-range","lineno":null}); Total lines: 22
+--------------------------------------------------------------------------------
+Subgraph Studio Pricing | The Graph (https://thegraph.com/studio-pricing/)
+citeturn487view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://thegraph.com/studio-pricing/","lineno":null}); Total lines: 362
+

@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[ARFC] Continued Deprecation Steps of Aave V2 Markets - Governance - Aave</title>
+    <meta name="description" content="Overview
+Given the current state of the Aave V2 instance, Chaos Labs conducted a detailed evaluation of the oracle configurations and risk parameters across all listed assets. The objective of this analysis is to identif…">
+    <meta name="generator" content="Discourse 2026.10.0-latest - https://github.com/discourse/discourse version 60cbc8e4e4e52253d3fa2175b7f2431a38cb9487">
+<link rel="icon" type="image/png" href="https://europe1.discourse-cdn.com/flex013/uploads/aave/optimized/2X/5/57bcf6bebe52402692a6ae0875f0fbba6d44d172_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://europe1.discourse-cdn.com/flex013/uploads/aave/optimized/2X/4/4365f9c2a264544693de07ffb99b47f3417cedd8_2_180x180.svg">
+<meta name="theme-color" media="all" content="#333333">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://governance.aave.com/t/arfc-continued-deprecation-steps-of-aave-v2-markets/24351" />
+
+<meta name="discourse-track-view-session-id" content="wdTKachx09dJexpmqCKutL2d6VsNDIo2">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://governance.aave.com/opensearch.xml" title="Aave Search">
+
+    
+    <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/color_definitions_neutral_4_3_b22c9ae534be780f4f77ae832efb737ef0cca950.css?__ws=governance.aave.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="4"/>
+
+<link href="https://dub1.discourse-cdn.com/flex013/stylesheets/common_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="common"  />
+
+
+
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/boards_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="boards"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/chat_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="chat"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/checklist_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-adplugin_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-ai_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-assign_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-assign"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-cakeday_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-chat-integration_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-chat-integration"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-data-explorer_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-data-explorer"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-details_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-events_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-events"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-github_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-github"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-lazy-videos_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-local-dates_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-math_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-math"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-narrative-bot_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-policy_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-policy"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-presence_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-reactions_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-solved_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-templates_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-topic-voting_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-workflows_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="discourse-workflows"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/footnote_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/hosted-site_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/poll_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/spoiler-alert_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/chat_mobile_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width < 40rem)" rel="stylesheet" data-target="chat_mobile"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-ai_mobile_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-ai_mobile"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-assign_mobile_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-assign_mobile"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-events_mobile_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-events_mobile"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-reactions_mobile_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-reactions_mobile"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/chat_desktop_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width >= 40rem)" rel="stylesheet" data-target="chat_desktop"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-ai_desktop_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-events_desktop_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-events_desktop"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/discourse-reactions_desktop_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/poll_desktop_6ad4e83ddf959bbd1930bc5d1f88f4629da3e9b0.css?__ws=governance.aave.com" media="(width >= 40rem)" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://dub1.discourse-cdn.com/flex013/stylesheets/common_theme_5_4af995418f947b696c94c56aa0719a34e1dcde17.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="5" data-theme-name="discotoc"/>
+<link href="https://dub1.discourse-cdn.com/flex013/stylesheets/common_theme_7_b64ac745ce8f46573f9c6ebb2b78039e83811099.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="7" data-theme-name="governance-widget"/>
+<link href="https://dub1.discourse-cdn.com/flex013/stylesheets/common_theme_6_0f7ac1e56372b4eae643e48b236a6371b5438cb5.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="6" data-theme-name="profile header"/>
+<link href="https://dub1.discourse-cdn.com/flex013/stylesheets/common_theme_3_fe3dc5a93a107bca95ba13ef8b911e75035f3a4d.css?__ws=governance.aave.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="3" data-theme-name="neutral"/>
+  
+  
+
+    <link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[ARFC] Continued Deprecation Steps of Aave V2 Markets&#39;" href="https://governance.aave.com/t/arfc-continued-deprecation-steps-of-aave-v2-markets/24351.rss" />
+    <meta property="og:site_name" content="Aave" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://europe1.discourse-cdn.com/flex013/uploads/aave/optimized/2X/b/b41c3e4fd00d88cbfb5e1fbda4501e93167f6e8d_2_1024x595.jpeg" />
+<meta property="og:image" content="https://europe1.discourse-cdn.com/flex013/uploads/aave/optimized/2X/b/b41c3e4fd00d88cbfb5e1fbda4501e93167f6e8d_2_1024x595.jpeg" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1116" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:url" content="https://governance.aave.com/t/arfc-continued-deprecation-steps-of-aave-v2-markets/24351" />
+<meta name="twitter:url" content="https://governance.aave.com/t/arfc-continued-deprecation-steps-of-aave-v2-markets/24351" />
+<meta property="og:title" content="[ARFC] Continued Deprecation Steps of Aave V2 Markets" />
+<meta name="twitter:title" content="[ARFC] Continued Deprecation Steps of Aave V2 Markets" />
+<meta property="og:description" content="Overview Given the current state of the Aave V2 instance, Chaos Labs conducted a detailed evaluation of the oracle configurations and risk parameters across all listed assets. The objective of this analysis is to identify assets whose oracle setups and risk parameters can be adjusted according to their specific market condition and risk profiles. Where appropriate, these changes aim to reduce potential risk exposure, simplify oracle dependencies, and support the orderly wind-down and deprecation..." />
+<meta name="twitter:description" content="Overview Given the current state of the Aave V2 instance, Chaos Labs conducted a detailed evaluation of the oracle configurations and risk parameters across all listed assets. The objective of this analysis is to identify assets whose oracle setups and risk parameters can be adjusted according to their specific market condition and risk profiles. Where appropriate, these changes aim to reduce potential risk exposure, simplify oracle dependencies, and support the orderly wind-down and deprecation..." />
+<meta property="og:article:section" content="Governance" />
+<meta property="og:article:section:color" content="2EBAC6" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="6 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2026-03-26T18:27:19+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <link rel="alternate" type="text/markdown" href="https://governance.aave.com/t/arfc-continued-deprecation-steps-of-aave-v2-markets/24351.md">
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">Aave</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/arfc-continued-deprecation-steps-of-aave-v2-markets/24351">[ARFC] Continued Deprecation Steps of Aave V2 Markets</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/governance/4" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #2EBAC6'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Governance</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="itemscope" itemtype="http://schema.org/DiscussionForumPosting">
+      <meta itemprop='headline' content='[ARFC] Continued Deprecation Steps of Aave V2 Markets'>
+      <link itemprop='url' href='https://governance.aave.com/t/arfc-continued-deprecation-steps-of-aave-v2-markets/24351'>
+      <meta itemprop='datePublished' content='2026-03-26T18:27:19Z'>
+      <meta itemprop='keywords' content=''>
+          <meta itemprop='articleSection' content='Governance'>
+        <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+          <meta itemprop='name' content='Aave Labs'>
+            <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop='url' content='https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/e/e11637c36f45ffa158f2146f5c19438d46e0824d.svg'>
+            </div>
+        </div>
+
+      
+
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://governance.aave.com/u/ChaosLabs'><span itemprop="name">ChaosLabs</span></a>
+                  <meta itemprop='url' content='https://governance.aave.com/u/ChaosLabs'>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://governance.aave.com/t/arfc-continued-deprecation-steps-of-aave-v2-markets/24351">
+
+                <link itemprop="image" href="https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/b/b41c3e4fd00d88cbfb5e1fbda4501e93167f6e8d.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2026-03-26T18:27:19Z' class='post-time'>
+                    March 26, 2026,  6:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2026-03-26T18:27:19Z'>
+              <span itemprop="position">1</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <h1><a name="p-62543-overview-1" class="anchor" href="#p-62543-overview-1" aria-label="Heading link"></a>Overview</h1>
+<p>Given the current state of the Aave V2 instance, Chaos Labs conducted a detailed evaluation of the oracle configurations and risk parameters across all listed assets. The objective of this analysis is to identify assets whose oracle setups and risk parameters can be adjusted according to their specific market condition and risk profiles. Where appropriate, these changes aim to reduce potential risk exposure, simplify oracle dependencies, and support the orderly wind-down and deprecation of the V2 instance.</p>
+<h1><a name="p-62543-stablecoin-2" class="anchor" href="#p-62543-stablecoin-2" aria-label="Heading link"></a>Stablecoin</h1>
+<h2><a name="p-62543-oracle-recommendation-3" class="anchor" href="#p-62543-oracle-recommendation-3" aria-label="Heading link"></a>Oracle Recommendation</h2>
+<p>For stablecoins that are used exclusively as debt assets and do not have a CAPO-imposed upper bound, we recommend hardcoding their price to $1. In addition to operational simplicity, this approach mitigates protocol risk by preventing debt inflation driven by oracle manipulations.</p>
+<p>More specifically, these stablecoins are exposed to risks of temporary overpricing due to oracle manipulation. In such scenarios, an attacker controlling a large portion of the stablecoin supply can artificially inflate its price, causing the reported value of the debt to increase rapidly, even though the underlying economic value of the asset has not materially changed. This creates a critical risk in liquidation dynamics.</p>
+<p>As debt is marked at an inflated price, positions will be pushed into liquidation. At this point, the liquidator/attacker, can repay debt using assets acquired at significantly lower market prices while seizing collateral valued based on manipulated oracle prices. This results in an economically unbalanced transfer of value from borrowers to liquidators. In addition to harming borrowers, this behavior can also introduce risk to the protocol. If the debt price is sufficiently inflated, liquidators can repay a small portion of the debt while seizing the entirety of the collateral. Once the manipulation reverts, the position may be left with no remaining collateral but still outstanding debt, which effectively becomes bad debt for the protocol.</p>
+<p>Importantly, this risk is not limited to positions where the manipulated asset represents the majority of the debt. Even when the affected asset constitutes only a small portion of a multi-asset debt position, a sharp increase in its reported price can be sufficient to push the entire position below the liquidation threshold. As a result, the full collateral of the position may become subject to liquidation, despite the manipulation originating from a relatively small component of the total debt. Given these considerations, we recommend hardcoding the prices of these stablecoins that do not have a CAPO-imposed upper bound.</p>
+<p>In addition to mitigating potential bad debt risk, this configuration does not introduce additional risk under normal market conditions. Temporary deviations, including short-term overpricing or depegging, do not pose a risk to the protocol when these assets are used solely as debt and are hardcoded. Only in scenarios where prices remain persistently deviated does the risk profile change. If the asset trades below the peg for an extended period, the impact is primarily borne by borrowers, who effectively repay more relative to market value.</p>
+<p>If, instead, the asset remains persistently overpriced, this may introduce potential risk to the protocol. In such cases, liquidators must acquire the stablecoin at elevated market prices to repay debt accounted at $1. If the deviation becomes sufficiently large, the liquidation bonus may no longer compensate for the higher acquisition cost, weakening liquidation incentives and potentially leaving positions unresolved. However, to mitigate this risk, we also recommend to increase the liquidation bonus for collateral assets associated with these hardcoded stablecoins, ensuring that liquidation incentives remain sufficient under such conditions.</p>
+<p>Based on the above, we recommend hardcoding the oracle price of FEI and RAI, and increasing the LB of their associated collateral to ensure sufficient liquidation incentives.</p>
+<h2><a name="p-62543-risk-parameter-recommendation-4" class="anchor" href="#p-62543-risk-parameter-recommendation-4" aria-label="Heading link"></a>Risk Parameter Recommendation</h2>
+<p>We propose a slight reduction in the LT of TUSD. The objective is to facilitate the gradual unwinding of TUSD borrowing positions as part of the Aave V2 deprecation process, while avoiding forced immediate liquidations for a large number of existing users. The rationale for this adjustment is consistent with the reasoning behind the risk parameter changes for volatile assets outlined below.</p>
+<h1><a name="p-62543-volatile-asset-5" class="anchor" href="#p-62543-volatile-asset-5" aria-label="Heading link"></a>Volatile Asset</h1>
+<h2><a name="p-62543-oracle-recommendation-6" class="anchor" href="#p-62543-oracle-recommendation-6" aria-label="Heading link"></a>Oracle Recommendation</h2>
+<p>We recommend fixing the price of selected volatile assets in terms of the base currency (ETH), rather than relying on market-based oracle feeds. This approach is consistent with the treatment applied to stablecoins described above, aiming to mitigate the risk of upward price manipulation and reduce protocol-level risk arising from distorted debt valuation.</p>
+<p>At the same time, we do not recommend modifying the oracle configuration for assets that retain sufficient market depth and liquidity, as the current market depth makes sustained oracle manipulation less likely and limits the associated bad debt risk.</p>
+<p>In addition, we propose setting these fixed asset/ETH prices at a level above their current market-implied value (e.g., ~30% higher than spot). This serves two purposes. First, it mitigates the risk of liquidation inaction arising from discrepancies between the fixed oracle price and the actual market price. If the asset trades materially above the fixed oracle level, liquidators may be forced to acquire the asset at significantly higher market prices than implied by the oracle, rendering liquidations economically unattractive. By introducing an upward buffer, this risk is reduced, helping ensure that liquidations remain executable in practice.</p>
+<p>Second, by increasing the effective debt value, it helps push marginal positions closer to liquidation, thereby facilitating the unwinding of smaller positions and contributing to the overall acceleration of Aave V2 deprecation.</p>
+<h2><a name="p-62543-risk-parameter-recommendation-7" class="anchor" href="#p-62543-risk-parameter-recommendation-7" aria-label="Heading link"></a>Risk Parameter Recommendation</h2>
+<p>We recommend reducing the liquidation thresholds of all assets that currently have a non-zero LT. This change is to support the gradual unwinding of remaining positions as part of the Aave V2 deprecation process, without triggering immediate liquidations for the majority of the market, allowing for the primary existing users to react to the changes.</p>
+<p>To assess this, we simulate user-level position snapshots under progressive LT reductions using the latest full position dataset. At each reduction level, we apply small absolute LT cuts of 1% to 10% simultaneously across all collateral assets that have a non-zero LT, while holding prices and debt fixed. For each reduction level, we recompute wallet-level health factors under the shocked LT parameters and identify wallets that are newly pushed into liquidation. Newly liquidatable wallets are defined as those with a pre-shock health factor at or above 1 that fall below 1 after the LT change. We then measure the resulting newly liquidatable collateral exposure as the total collateral-enabled supply held by these wallets across all shocked assets.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/b/b41c3e4fd00d88cbfb5e1fbda4501e93167f6e8d.jpeg" data-download-href="/uploads/short-url/pHksgtbHoOSkfXPIleLJuLkcstn.jpeg?dl=1" title="Screenshot 2026-03-24 at 5.52.13 PM" rel="noopener nofollow ugc"><img src="https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/b/b41c3e4fd00d88cbfb5e1fbda4501e93167f6e8d.jpeg" alt="Screenshot 2026-03-24 at 5.52.13 PM" data-base62-sha1="pHksgtbHoOSkfXPIleLJuLkcstn" width="1920" height="1116"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2026-03-24 at 5.52.13 PM</span><span class="informations">1920×1116 113 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>The above exposure metric represents the total amount of collateral that becomes associated with wallets entering liquidation risk under the given LT reduction scenario. However, this estimation is conservative, as it accounts for the full collateral balance held by newly liquidatable wallets, rather than the smaller portion that would actually be liquidated in practice.</p>
+<p>The results indicate that the system remains relatively stable under moderate LT reductions, but exhibits a nonlinear increase in risk beyond a certain point. When all collateral LTs are reduced by 4%, the resulting newly liquidatable collateral exposure is approximately $319K. However, increasing the reduction to 5% leads to a sharp increase in exposure to roughly $761K. This inflection suggests that the system begins to enter a more sensitive regime beyond the 4% reduction level.</p>
+<p>Based on these results, we recommend implementing a uniform 4% LT reduction across all collateral assets on Ethereum. This level introduces a controlled amount of liquidatable collateral, facilitating more efficient system deleveraging, while preserving the stability of the vast majority of user positions. Additionally, based on the simulation framework outlined above, we have also applied corresponding LT reductions to assets with non-zero LT on Avalanche and Polygon to accelerate the deprecation of Aave V2 on these instances.</p>
+<h2><a name="p-62543-interest-rate-model-recommendation-8" class="anchor" href="#p-62543-interest-rate-model-recommendation-8" aria-label="Heading link"></a>Interest Rate Model Recommendation</h2>
+<h3><a name="p-62543-reduce-irm-9" class="anchor" href="#p-62543-reduce-irm-9" aria-label="Heading link"></a>Reduce IRM</h3>
+<p>For assets where healthy debt is significantly smaller than stressed debt, we recommend reducing IRM to ~0% to stop further interest accrual. In such scenarios, additional interest primarily accrues on already distressed or uncollectible positions, effectively increasing the protocol’s eventual loss. Freezing debt growth is therefore a more appropriate approach during the unwind process.</p>
+<p>The chart below shows the composition of outstanding debt across selected borrowed assets on Aave V2, split between healthy debt and stressed debt. Healthy debt refers to debt backed by positions with a HF of at least 1, while stressed debt refers to debt associated with positions where HF is below 1. For each asset, the left column presents a 100% stacked view of this composition, showing the relative share of healthy versus stressed debt. The adjacent column shows the total amount borrowed for that asset in USD.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/c/c3a49307f77fd62b475596ffd9c5b7ced6a85a82.png" data-download-href="/uploads/short-url/rUJHKsHw1cocBZ7h1iltQWXpDYS.png?dl=1" title="Screenshot 2026-03-25 at 12.22.41 PM" rel="noopener nofollow ugc"><img src="https://europe1.discourse-cdn.com/flex013/uploads/aave/optimized/2X/c/c3a49307f77fd62b475596ffd9c5b7ced6a85a82_2_2000x885.png" alt="Screenshot 2026-03-25 at 12.22.41 PM" data-base62-sha1="rUJHKsHw1cocBZ7h1iltQWXpDYS" width="2000" height="885" srcset="https://europe1.discourse-cdn.com/flex013/uploads/aave/optimized/2X/c/c3a49307f77fd62b475596ffd9c5b7ced6a85a82_2_2000x885.png, https://europe1.discourse-cdn.com/flex013/uploads/aave/optimized/2X/c/c3a49307f77fd62b475596ffd9c5b7ced6a85a82_2_3000x1327.png 1.5x, https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/c/c3a49307f77fd62b475596ffd9c5b7ced6a85a82.png 2x" data-dominant-color="242C38"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2026-03-25 at 12.22.41 PM</span><span class="informations">3592×1590 454 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>As shown, for assets such as MANA, FEI, and BUSD, stressed debt already exceeds healthy debt by a significant margin. In these cases, continued interest accrual is unlikely to be recovered and instead increases the notional size of bad debt. Accordingly, we recommend reducing IRM to ~0% for assets where stressed debt exceeds healthy debt, as IRM no longer serves as an effective risk management tool and instead amplifies realized losses.</p>
+<h3><a name="p-62543-other-considerations-10" class="anchor" href="#p-62543-other-considerations-10" aria-label="Heading link"></a>Other Considerations</h3>
+<p>We suggest setting the Slope2 parameter to 100% for selected assets with non-zero IRM. These assets do not fall under the condition outlined in the previous section, and therefore their overall IRM configuration can remain unchanged. However, adjusting Slope2 allows for a more controlled response under high utilization, helping to accelerate deleveraging and liquidations without pushing borrow rates to excessively high levels. This achieves a more balanced and effective risk management outcome.</p>
+<p>We also recommend increasing the IRM of TUSD to align with the parameters proposed in our previous <a href="https://governance.aave.com/t/arfc-aave-v2-deprecation-update-disable-new-borrows-ir-curve-and-reserve-factor-adjustments/20918">recommendation</a>, while lowering its Slope2 for the reasons described above.</p>
+<p>Additionally, as the AMPL market does not contain remaining collateralized positions, and the existing suppliers have been previously compensated through Merkl distribution <a href="https://governance.aave.com/t/ampl-problem-on-aave-v2-ethereum/15886/239">here</a>, we recommend setting its Interest Rate Curve to 0.</p>
+<p>Finally, we recommend increasing the IRM of WPOL. Despite being a major asset on Polygon, its oracle exhibits relatively slow update characteristics, with an inferred deviation threshold of ~1% and a heartbeat of approximately 6 hours. As WPOL remains enabled as collateral, hardcoding its price is not feasible, leaving the system exposed to potential upward price deviations. To mitigate this risk, increasing IRM introduces additional pressure on outstanding borrow positions, encouraging faster deleveraging and reducing the duration of exposure under potentially stale or distorted pricing conditions.</p>
+<h1><a name="p-62543-specification-11" class="anchor" href="#p-62543-specification-11" aria-label="Heading link"></a>Specification</h1>
+<p><strong>Stablecoin Oracle Adjustment</strong></p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th><strong>Asset</strong></th>
+<th><strong>Instance</strong></th>
+<th><strong>Recommended Oracle Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FEI</td>
+<td>Ethereum</td>
+<td>$1</td>
+</tr>
+<tr>
+<td>RAI</td>
+<td>Ethereum</td>
+<td>$4</td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>Volatile Asset Oracle Adjustment</strong></p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th><strong>Asset</strong></th>
+<th><strong>Instance</strong></th>
+<th><strong>Recommended Asset Price in ETH (1e18)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNX</td>
+<td>Ethereum</td>
+<td>181283037000000</td>
+</tr>
+<tr>
+<td>YFI</td>
+<td>Ethereum</td>
+<td>1570701733962692240</td>
+</tr>
+<tr>
+<td>xSUSHI</td>
+<td>Ethereum</td>
+<td>188874382650430</td>
+</tr>
+<tr>
+<td>ENS</td>
+<td>Ethereum</td>
+<td>3750500000000000</td>
+</tr>
+<tr>
+<td>BAT</td>
+<td>Ethereum</td>
+<td>68399060169053</td>
+</tr>
+<tr>
+<td>MANA</td>
+<td>Ethereum</td>
+<td>53454081966022</td>
+</tr>
+<tr>
+<td>DPI</td>
+<td>Ethereum</td>
+<td>29597100000000000</td>
+</tr>
+<tr>
+<td>ZRX</td>
+<td>Ethereum</td>
+<td>63782978634450</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>Ethereum</td>
+<td>95553200014979</td>
+</tr>
+<tr>
+<td>1INCH</td>
+<td>Ethereum</td>
+<td>57057200000000</td>
+</tr>
+<tr>
+<td>KNC</td>
+<td>Ethereum</td>
+<td>86975575866599</td>
+</tr>
+<tr>
+<td>ENJ</td>
+<td>Ethereum</td>
+<td>12846949494839</td>
+</tr>
+<tr>
+<td>REN</td>
+<td>Ethereum</td>
+<td>2242430213652</td>
+</tr>
+<tr>
+<td>CVX</td>
+<td>Ethereum</td>
+<td>1062775618954092</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>Polygon</td>
+<td>95553200014979</td>
+</tr>
+<tr>
+<td>GHST</td>
+<td>Polygon</td>
+<td>39940215118135</td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>Risk Parameters Adjustment</strong></p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th><strong>Asset</strong></th>
+<th><strong>Instance</strong></th>
+<th><strong>Current LT</strong></th>
+<th><strong>Current LB</strong></th>
+<th><strong>Recommended LT</strong></th>
+<th><strong>Recommended LB</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USDC</td>
+<td>Ethereum</td>
+<td>87.50%</td>
+<td>4.5%</td>
+<td>83.5%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>WETH</td>
+<td>Ethereum</td>
+<td>86%</td>
+<td>5%</td>
+<td>82%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>DAI</td>
+<td>Ethereum</td>
+<td>77%</td>
+<td>4%</td>
+<td>73%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>MKR</td>
+<td>Ethereum</td>
+<td>10%</td>
+<td>7.5%</td>
+<td>6%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>stETH</td>
+<td>Ethereum</td>
+<td>83%</td>
+<td>7%</td>
+<td>79%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>TUSD</td>
+<td>Ethereum</td>
+<td>65%</td>
+<td>10%</td>
+<td>61%</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LINK</td>
+<td>Ethereum</td>
+<td>65%</td>
+<td>7%</td>
+<td>61%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>WBTC</td>
+<td>Ethereum</td>
+<td>82%</td>
+<td>5%</td>
+<td>78%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>AAVE</td>
+<td>Ethereum</td>
+<td>73%</td>
+<td>7.5%</td>
+<td>69%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>WBTC.e</td>
+<td>Avalanche</td>
+<td>70%</td>
+<td>5%</td>
+<td>65%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>USDC.e</td>
+<td>Avalanche</td>
+<td>78%</td>
+<td>5%</td>
+<td>-</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>WETH.e</td>
+<td>Avalanche</td>
+<td>82.5%</td>
+<td>5%</td>
+<td>77.5%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>DAI.e</td>
+<td>Avalanche</td>
+<td>77%</td>
+<td>5%</td>
+<td>-</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>WAVAX</td>
+<td>Avalanche</td>
+<td>65%</td>
+<td>10%</td>
+<td>55%</td>
+<td>-</td>
+</tr>
+<tr>
+<td>AAVE.e</td>
+<td>Avalanche</td>
+<td>65%</td>
+<td>10%</td>
+<td>50%</td>
+<td>-</td>
+</tr>
+<tr>
+<td>WETH</td>
+<td>Polygon</td>
+<td>82.5%</td>
+<td>5%</td>
+<td>80.5%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>WBTC</td>
+<td>Polygon</td>
+<td>75%</td>
+<td>5%</td>
+<td>70%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>USDC.e</td>
+<td>Polygon</td>
+<td>84.5%</td>
+<td>5%</td>
+<td>-</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>DAI</td>
+<td>Polygon</td>
+<td>77%</td>
+<td>5%</td>
+<td>-</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>AAVE</td>
+<td>Polygon</td>
+<td>65%</td>
+<td>10%</td>
+<td>50%</td>
+<td>-</td>
+</tr>
+<tr>
+<td>WPOL</td>
+<td>Polygon</td>
+<td>70%</td>
+<td>10%</td>
+<td>65%</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>IRM Adjustment</strong></p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th><strong>Asset</strong></th>
+<th><strong>Instance</strong></th>
+<th><strong>Current Uoptimal</strong></th>
+<th><strong>Current Base</strong></th>
+<th><strong>Current Slope1</strong></th>
+<th><strong>Current Slope2</strong></th>
+<th><strong>Recommended Uoptimal</strong></th>
+<th><strong>Recommended Base</strong></th>
+<th><strong>Recommended Slope1</strong></th>
+<th><strong>Recommended Slope2</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENS</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>1%</td>
+<td>1%</td>
+<td>-</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>LUSD</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>1%</td>
+<td>1%</td>
+<td>-</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>FEI</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>1%</td>
+<td>1%</td>
+<td>-</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>AMPL</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>1%</td>
+<td>1%</td>
+<td>-</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>GUSD</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>1%</td>
+<td>1%</td>
+<td>-</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>KNC</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>DPI</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>40%</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>UST</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>CRV</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>FRAX</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>UNI</td>
+<td>Ethereum</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>300%</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>TUSD</td>
+<td>Ethereum</td>
+<td>1%</td>
+<td>1%</td>
+<td>0%</td>
+<td>0%</td>
+<td>45%</td>
+<td>20%</td>
+<td>-</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>WPOL</td>
+<td>Polygon</td>
+<td>25%</td>
+<td>5%</td>
+<td>15%</td>
+<td>40%</td>
+<td>45%</td>
+<td>20%</td>
+<td>0%</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+</div><h1><a name="p-62543-disclaimer-12" class="anchor" href="#p-62543-disclaimer-12" aria-label="Heading link"></a>Disclaimer</h1>
+<p>Chaos Labs has not been compensated by any third party for publishing this recommendation.</p>
+<h1><a name="p-62543-copyright-13" class="anchor" href="#p-62543-copyright-13" aria-label="Heading link"></a>Copyright</h1>
+<p>Copyright and related rights waived via <a href="https://creativecommons.org/publicdomain" rel="noopener nofollow ugc">CC0</a></p>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="0" />
+                <span class='post-likes'></span>
+              </div>
+
+                <div class='crawler-linkback-list'>
+                    <div>
+                      <a href="https://governance.aave.com/t/arfc-oracle-deprecation-for-long-tail-assets-across-aave-v2-and-v3/25400">[ARFC] Oracle Deprecation for Long-tail Assets Across Aave V2 and V3</a>
+                    </div>
+                </div>
+
+            
+
+
+          </div>
+          <div id='post_2' itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://governance.aave.com/u/LlamaRisk'><span itemprop="name">LlamaRisk</span></a>
+                  <meta itemprop='url' content='https://governance.aave.com/u/LlamaRisk'>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/a/a47e24fc577dbedd957fa77f0a23edb7d8346b4e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2026-04-02T19:50:51Z' class='post-time'>
+                    April 2, 2026,  7:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2026-04-02T19:50:51Z'>
+              <span itemprop="position">2</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <h2><a name="p-62660-summary-1" class="anchor" href="#p-62660-summary-1" aria-label="Heading link"></a>Summary</h2>
+<p>LlamaRisk supports the proposed steps and parameter adjustments to further depreciate <a href="https://v2-market.aave.com/markets/" rel="noopener nofollow ugc">Aave V2 markets</a>. Given that V2 assets are frozen, preventing users from supplying or borrowing, and allowing only withdrawals and debt repayments, no new risk can be introduced as the market size remains the same.</p>
+<p>As a result, the primary objective remains to manage and gradually unwind existing user positions in a controlled manner. The proposed approach seeks to reduce the likelihood of avoidable liquidations, which could otherwise result in bad debt for the protocol, particularly due to the illiquidity of certain assets.</p>
+<h2><a name="p-62660-oracle-adjustment-2" class="anchor" href="#p-62660-oracle-adjustment-2" aria-label="Heading link"></a>Oracle Adjustment</h2>
+<h3><a name="p-62660-stablecoins-3" class="anchor" href="#p-62660-stablecoins-3" aria-label="Heading link"></a>Stablecoins</h3>
+<p>On V2 Ethereum, RAI cannot be used as collateral, while FEI’s collateral utility is effectively disabled due to its extremely low LT of 0.05%, making both assets functionally borrow-only. By hardcoding their oracle prices, the protocol introduces predictable behavior in response to price fluctuations, as seen in the chart below. As of March 31, 2026, the total sell-side secondary market liquidity against RAI and FEI on Ethereum is $191K and $59K, respectively.</p>
+<p>In the event of a price decline, borrowers of these assets would face minor inconvenience, as their debt valuation would remain unchanged rather than declining, potentially encouraging them to unwind their positions. Conversely, if prices increase, the fixed oracle prevents debt inflation, thereby reducing the risk of liquidations that would otherwise result from rising debt valuations. This approach helps avoid unnecessary liquidations in both scenarios.</p>
+<p>RAI is not pegged to the US dollar; instead, it aims to maintain a relatively stable value that fluctuates based on market supply and demand. Recent data shows RAI trading at approximately $3.15, below the proposed fixed oracle price of $4. As a result, transitioning to a fixed oracle would effectively overvalue RAI debt, thereby reducing users’ health factors. The total borrowed RAI amount is ~$72K, almost entirely from <a href="https://debank.com/profile/0x3a7bc1e308c816fbf27a368bbc44335da1d059c2" rel="noopener nofollow ugc">a single address</a> supplying USDC as collateral. This position currently has a health factor of 2.10, which is expected to decrease to around 1.65 following the shift to a fixed oracle price. Despite this reduction, the position remains well above liquidation thresholds and is unlikely to face liquidation risk, even in the long term, due to the fixed RAI price. However, given RAI’s non-pegged nature, we recommend monitoring its market price to ensure Aave doesn’t underprice it in the future, particularly as it traded consistently above $4 in late 2025, as illustrated below.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/a/a47e24fc577dbedd957fa77f0a23edb7d8346b4e.png" data-download-href="/uploads/short-url/ntazf6yjwh7dPFJvWg3V98lBpkG.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://europe1.discourse-cdn.com/flex013/uploads/aave/optimized/2X/a/a47e24fc577dbedd957fa77f0a23edb7d8346b4e_2_2000x1000.png" alt="image" data-base62-sha1="ntazf6yjwh7dPFJvWg3V98lBpkG" width="2000" height="1000" srcset="https://europe1.discourse-cdn.com/flex013/uploads/aave/optimized/2X/a/a47e24fc577dbedd957fa77f0a23edb7d8346b4e_2_2000x1000.png, https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/a/a47e24fc577dbedd957fa77f0a23edb7d8346b4e.png 1.5x, https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/a/a47e24fc577dbedd957fa77f0a23edb7d8346b4e.png 2x" data-dominant-color="151518"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2400×1200 299 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<em>Source: LlamaRisk, March 30, 2026</em></p>
+<h3><a name="p-62660-volatile-assets-4" class="anchor" href="#p-62660-volatile-assets-4" aria-label="Heading link"></a>Volatile Assets</h3>
+<p>For illiquid and volatile assets on Aave V2 whose collateral utility has been restricted or fully disabled, price oracles are being adjusted to fixed asset/ETH values set at a 30% premium to their current spot prices. Historical data indicate that, on a cumulative basis over 1 year, these assets have generally underperformed ETH.</p>
+<p>While CVX briefly deviated from this trend, exhibiting a cumulative return above 0.3 relative to ETH for approximately 38 days (9.57% of the observed period), this outperformance was not sustained. Across all assets analyzed, both the mean and median daily returns relative to ETH remain negative. This suggests that, based on historical behavior, these assets are more likely to trade below their fixed oracle prices over time.</p>
+<p>As a result, debt denominated in these assets will be consistently overvalued within the protocol, gradually weakening users’ health factors and potentially leading to liquidations in some cases. However, this intentional overpricing creates a protective buffer for liquidators, enabling them to acquire these illiquid assets more effectively and execute timely liquidations. This mechanism helps mitigate the risk of bad debt accumulation within the protocol.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/9/98020f13a6fc59f0e71cbf800ff759efd1379bc3.jpeg" data-download-href="/uploads/short-url/lGIZaKuoGB6BSTDRH85wuxpqwh5.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://europe1.discourse-cdn.com/flex013/uploads/aave/original/2X/9/98020f13a6fc59f0e71cbf800ff759efd1379bc3.jpeg" alt="image" data-base62-sha1="lGIZaKuoGB6BSTDRH85wuxpqwh5" width="1920" height="960"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×960 327 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<em>Source: LlamaRisk, March 30, 2026</em></p>
+<h2><a name="p-62660-risk-parameters-irm-adjustment-5" class="anchor" href="#p-62660-risk-parameters-irm-adjustment-5" aria-label="Heading link"></a>Risk Parameters &amp; IRM Adjustment</h2>
+<p>For assets with a non-zero liquidation threshold (LT &gt; 0.05%), reducing LT by 4% lowers users’ health factors, thereby moving positions closer to liquidation. This adjustment results in approximately $319K of newly liquidatable collateral, representing about 0.18% of the total Aave V2 market size, small enough to allow for orderly and smooth unwinding. However, beyond 4% LT reduction, simulations show a nonlinear jump, likely from positions clustered near the threshold. Additionally, increasing the liquidation bonus (LB) to 10% across all assets strengthens incentives for liquidators, increases the likelihood that these positions are liquidated efficiently, and reduces the risk of bad debt accumulation within the protocol.</p>
+<p>Reducing Slope2 to 100% for illiquid and stressed reserves helps mitigate bad-debt risk by slowing the growth of the debt component, thereby avoiding liquidations driven by increasing borrow rates. While this adjustment may lower supply APRs for affected assets, potentially reducing their attractiveness and introducing marginal liquidity risk in stressed assets if suppliers withdraw, the overall impact is expected to be negligible given the high Reserve Factor (99.99%). Supply APRs are already minimal (&lt;0.01%), and the total size of stressed positions remains below $1M, further limiting the significance of this effect.</p>
+<p>The proposed IRM changes to WPOL on Polygon would raise the borrow APR from 8.6% to 20%, potentially prompting users to unwind their WPOL debt positions, currently totaling $14.92K.</p>
+<h3><a name="p-62660-disclaimer-6" class="anchor" href="#p-62660-disclaimer-6" aria-label="Heading link"></a>Disclaimer</h3>
+<p>This review was independently prepared by LlamaRisk, a DeFi risk service provider funded in part by the Aave DAO. LlamaRisk is not directly affiliated with the protocol(s) reviewed in this assessment and did not receive any compensation from the protocol(s) or their affiliated entities for this work.</p>
+<p>The information provided should not be construed as legal, financial, tax, or professional advice.</p>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="1" />
+                <span class='post-likes'>1 Like</span>
+              </div>
+
+                <div class='crawler-linkback-list'>
+                    <div>
+                      <a href="https://governance.aave.com/t/llamarisk-monthly-community-update/17935/28">LlamaRisk - Monthly Community Update</a>
+                    </div>
+                </div>
+
+            
+
+
+          </div>
+          <div id='post_3' itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://governance.aave.com/u/MconnectDAO'><span itemprop="name">MconnectDAO</span></a>
+                  <meta itemprop='url' content='https://governance.aave.com/u/MconnectDAO'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2026-04-03T03:22:47Z' class='post-time'>
+                    April 3, 2026,  3:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2026-04-03T03:22:47Z'>
+              <span itemprop="position">3</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>I’ve been following the V2 deprecation steps for a while now, and this round feels more precise compared to earlier interventions  which is encouraging.</p>
+<p>The 4% LT reduction exposing roughly $319K in newly liquidatable collateral (~0.18% of total V2 market) looks like a deliberate choice to avoid cascade risk. Combined with the liquidation bonus increase to 10%, it should give liquidators enough incentive without forcing a chaotic unwind. Makes sense to me.</p>
+<p>On the RAI oracle fix  I get the reasoning behind locking it at $4, but I’ll be honest, it sat with me a bit uncomfortably at first. The primary borrower’s health factor moving from 2.10 to around 1.65 is still safe, but RAI isn’t a pegged asset and it was trading above $4 consistently in late 2025. So while the position looks fine today, I keep wondering what happens if market price drifts toward that fixed level again. LlamaRisk flagged monitoring as a recommendation  but is there any more concrete plan around that, or is it more of a best-effort watch?</p>
+<p>The WPOL rate jump from 8.6% to 20% on Polygon is a clean nudge. Only ~$14.92K in outstanding debt, so the pressure should work without much friction.</p>
+<p>Overall supportive of the direction here. Just one thing I wanted to raise  given that simulations showed a nonlinear jump in liquidations beyond the 4% threshold (which suggests positions are clustering near the boundary), is there a rough timeline or specific trigger being tracked that would prompt a follow-up parameter review? Not asking for anything rigid, just curious if there’s a framework being considered so the community can stay aligned as the wind-down continues.</p>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="0" />
+                <span class='post-likes'></span>
+              </div>
+
+
+            
+
+
+          </div>
+          <div id='post_4' itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://governance.aave.com/u/cwik'><span itemprop="name">cwik</span></a>
+                  <meta itemprop='url' content='https://governance.aave.com/u/cwik'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2026-04-19T08:49:38Z' class='post-time'>
+                    April 19, 2026,  8:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2026-04-19T08:49:38Z'>
+              <span itemprop="position">4</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Is it still possible to access assets on Aave V2?</p>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="0" />
+                <span class='post-likes'></span>
+              </div>
+
+
+            
+
+
+          </div>
+          <div id='post_5' itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://governance.aave.com/u/system'><span itemprop="name">system</span></a>
+                  <meta itemprop='url' content='https://governance.aave.com/u/system'>
+                
+                  Closed 
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2026-05-19T08:50:12Z' class='post-time'>
+                    May 19, 2026,  8:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2026-05-19T08:50:12Z'>
+              <span itemprop="position">5</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>This topic was automatically closed 30 days after the last reply. New replies are no longer allowed.</p>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="0" />
+                <span class='post-likes'></span>
+              </div>
+
+
+            
+
+
+          </div>
+
+    </div>
+
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-25400">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://governance.aave.com/t/arfc-oracle-deprecation-for-long-tail-assets-across-aave-v2-and-v3/25400' class='title raw-link raw-topic-link'>[ARFC] Oracle Deprecation for Long-tail Assets Across Aave V2 and V3</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/governance/4' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #2EBAC6'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Governance</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>4</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>609</span>
+            </td>
+            <td>
+              October 7, 2026
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-23261">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://governance.aave.com/t/arfc-deprecation-of-low-demand-volatile-assets-on-aave-v3-instances/23261' class='title raw-link raw-topic-link'>[ARFC] Deprecation of Low Demand Volatile Assets on Aave V3 Instances</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/governance/4' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #2EBAC6'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Governance</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>19</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>2012</span>
+            </td>
+            <td>
+              November 21, 2025
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-25119">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://governance.aave.com/t/arfc-upgrade-pt-risk-oracle-to-protocol-owned-infrastructure-on-cre/25119' class='title raw-link raw-topic-link'>[ARFC] Upgrade PT Risk Oracle to Protocol-Owned Infrastructure on CRE</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/governance/4' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #2EBAC6'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Governance</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>4</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>848</span>
+            </td>
+            <td>
+              October 9, 2026
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-25401">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://governance.aave.com/t/arfc-low-adoption-asset-deprecation-on-aave-v3/25401' class='title raw-link raw-topic-link'>[ARFC] Low Adoption Asset Deprecation on Aave V3</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/governance/4' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #2EBAC6'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Governance</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>9</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>2180</span>
+            </td>
+            <td>
+              September 16, 2026
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-25649">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://governance.aave.com/t/arfc-revision-of-eth-btc-collateral-efficiency-on-aave/25649' class='title raw-link raw-topic-link'>[ARFC] Revision of ETH &amp; BTC Collateral Efficiency on Aave</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/governance/general/8' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #ED207B'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>General</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>2</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>291</span>
+            </td>
+            <td>
+              September 21, 2026
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

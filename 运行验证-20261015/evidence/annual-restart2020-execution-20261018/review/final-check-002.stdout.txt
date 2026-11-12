@@ -1,0 +1,1 @@
+{"review_status": "PASS_VALID_NOT_SUPPORTED", "classification": "NOT_SUPPORTED_THIS_DIAGNOSTIC", "errors": [], "rows": 8768, "checks": 88316, "risk_ratios": {"25": 0.807536769368501, "50": 0.807526400258738}, "Sharpe_increment": 0.14671872680800346, "self_elapsed": 0.197096292, "selfRSS": 55050240, "maxcash": 7.275957614183426e-12, "maxfee": 5.115907697472721e-12}

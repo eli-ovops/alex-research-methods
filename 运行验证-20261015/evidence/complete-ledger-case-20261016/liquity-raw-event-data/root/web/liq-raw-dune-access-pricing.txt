@@ -1,0 +1,417 @@
+DUNE APPLICATION SERVICE Addendum | Dune (https://dune.com/application-terms)
+citeturn502search0 [wordlim: 200] Crawled: today; If specifically permitted under the applicable Subscription Plan, the User can download CSV reports of its query results from the Dune online interface within the agreed limitations under the relevant Subscription Plan. ... In connection with the Dune Application Services, User shall not copy, transmit, transfer, modify or create derivative works from the queries and the public Dashboard nor use them in a white label manner for free or resale.
+
+  *   *   * # Dune Application Service Addendum
+
+Last updated: May 13, 2026
+
+## General
+
+This Addendum applies in addition to the General Terms and Conditions for use of the Dune Application Service.
+
+## The Dune Application Service
+
+The Application Service allows the User to create SQL queries on blockchain data. The results are visualized as charts and the charts can be assembled into dashboards displayed within the Dune website. You may not access the Service or data in any other way than through the graphical interface via the Site. For programmatic interaction, you need to sign up for the Dune API Service.
+
+Each Subscription Plan for the Application Service provides different features and Execution limitations as provided in the Subscription Tiers and Pricing Page.
+
+## Private Dashboards
+
+Dashboards can be private under one of our paid Subscription Plans.
+
+All content created is public by default and must be set to private by the User. Users are responsible for confirming visibility settings before submitting, embedding, or sharing dashboards, queries, visualizations, or outputs. Private queries cannot be viewed by the public or other Dune Users. Visualizations of private queries can be viewed by others if added to a dashboard or embedded on another site. Only the User may add a private query/visualization to a dashboard or generate an embed link.
+
+Dune personnel may access private dashboards and private queries only as necessary to provide, secure, troubleshoot, support, or improve the Services, comply with law, or enforce the Terms, and subject to Dune’s internal access controls and confidentiality obligations.
+
+## Watermarks and link back to Dune
+
+For certain tiers of paid Subscription Plans, the “Dune” watermark will not be visible when looking at queries on Dune or when embedding charts elsewhere. Shared dashboards will however still feature “Dune” watermarks.
+
+## CSV downloads
+
+If specifically permitted under the applicable Subscription Plan, the User can download CSV reports of its query results from the Dune online interface within the agreed limitations under the relevant Subscription Plan. The User may only use this data internally within their company and in occasional reports, presentations and similar external uses. Crediting Dune and the relevant query creator as source is required. These CSV exports cannot be sold directly and/or provided on a running basis as a data product or service by the User.
+
+## No white labeling / Limitations of Commercial Use
+
+In connection with the Dune Application Services, User shall not copy, transmit, transfer, modify or create derivative works from the queries and the public Dashboard nor use them in a white label manner for free or resale.
+
+You agree not to reproduce, sublicense, transfer, duplicate, copy, sell, resell or in any other way exploit any portion of the Service, use of the Service, or access to the Service without the express written permission by Dune.--------------------------------------------------------------------------------
+A New Chapter For web3 Data - Blog | Dune (https://dune.com/blog/new-paid-experience)
+citeturn502search1 [wordlim: 200] Published: 3.5 years ago; Crawled: today; ## The Dune API, revamped subscription plans and a more powerful free experience ... Therefore we have sunsetted our $69/month plan and are instead giving the free user experience a massive boost: free users now have 10 private queries, a private dashboard and handful of CSV downloads included without having to pay a single gwei. ... You can apply credits to get more out of Dune with boosted performance, API data export and programmatic executions, all at no cost.
+
+# A New Chapter For web3 Data
+
+## The Dune API, revamped subscription plans and a more powerful free experience
+
+News•April 25, 2023•2 min read
+
+So, what's new?
+
+We're excited to share 3 of the most important updates in Dune history:
+
+  * The Dune APIThe Dune APIThe Dune API is now live for all users
+  * Revamped subscription plansRevamped subscription plansRevamped subscription plans with increased flexibility and unlimited collaboration
+  * A more powerful free experienceA more powerful free experienceA more powerful free experience
+  * Query performance
+  * Programmatic executions
+  * API data export
+
+‍ Sharing and collaboration has always been at the core of the Dune experience, so our new subscription plans are built for teams. You can now add as many team members as you want, for free.
+
+Learn more about our new plans on our pricing page.
+
+## A more powerful free experience
+
+Instead of charging individuals we are making the free experience of Dune more powerful. Therefore we have sunsetted our $69/month plan and are instead giving the free user experience a massive boost: free users now have 10 private queries, a private dashboard and handful of CSV downloads included without having to pay a single gwei.
+
+The new free experience also comes with 2500 credits and includes API access. Free users now get access to the powerful Dune API by default. You can apply credits to get more out of Dune with boosted performance, API data export and programmatic executions, all at no cost.
+
+## The data must flow
+
+At Dune our mission is to make crypto data accessible. Today we’re taking a major and much anticipated leap towards realizing that mission.
+
+We are committed to supporting the Dune community and keep packing more value and power into the Dune experience, both paid and free. We’re confident that this update will massively boost the whole community’s crypto data access and experience.
+
+If you have any feedback we’d love to hear from you at [email protected].
+
+The data must flow, lfg!
+
+Fredrik, Dune Co-Founder & CEO--------------------------------------------------------------------------------
+How you spend credits on Dune is changing - Blog | Dune (https://dune.com/blog/credits-changing)
+citeturn502search2 [wordlim: 200] Published: last year; Crawled: today; ## We're improving how Dune credit usage works to ensure our platform is fair and enables exciting new capabilities and features. ... Your credit system remains the same, but now when you run a query, credits are spent in proportion to the consumed resources.
+
+# How you spend credits on Dune is changing
+
+## We're improving how Dune credit usage works to ensure our platform is fair and enables exciting new capabilities and features.
+
+News•October 20, 2025•2 min read
+
+### What’s changing and why?
+
+Historically, our query engine charged a fixed number of credits per execution, a simple approach for analysts but ultimately unfair and limiting: simpler queries were overcharged, complex queries undercharged, and query timeouts restricted capabilities.
+
+As Dune adoption grows—spanning over 100 chains, complex tables, and new ways to consume data through APIs and dbt-style connectors ( to be announced) —both we and our customers need pricing that scales with real usage.
+
+This new engine brings that flexibility. Your credit system remains the same, but now when you run a query, credits are spent in proportion to the consumed resources. This means that small, simple queries will become cheaper and larger queries can run longer (better timeouts).
+
+Key benefits:
+
+  * Usage-based – Pay in proportion to actual consumption.
+  * Efficiency – Incentives to write cleaner, optimized queries.
+  * Scalability – Sustainable future support for larger workloads with longer timeouts and advanced integrations like dbt, Trino REST API, SQL Mesh, AI-driven workflows, and expanded connector options to come in the near future.
+  * Monthly plans: New pricing of $75/month, up from $49/month, takes effect at your first billing cycle after October 21st.
+  * Annual plans: New pricing of $65/month ($780/year), up from $45/month, takes effect at your first annual renewal after October 21st.
+  * Review your usage. Check your query volume and costs to understand where you stand before the change takes place.
+  * Optimize your queries. Efficient queries save credits and run faster. See here for tips.
+  * Pick the plan that fits. If you anticipate heavy usage or notice overages, please contact our sales team at dune.com/enterprise to discuss the best plan for your needs. Enterprise clients receive favorable per-credit pricing and customized support.
+  * Cap your query costs. Use our new feature to cap the amount of credits you’re willing to spend on a query.
+  * Set overage limits. Configure your overage spending limits to control costs. Learn how to set this up here.
+
+Questions?
+
+Explore the documentation page here for more information and FAQ.
+
+Have questions or need additional support?
+Contact us: [email protected]--------------------------------------------------------------------------------
+Terms of Service | Dune (https://dune.com/terms)
+citeturn502search3 [wordlim: 200] Published: 4 months ago; Crawled: yesterday; Without limitation, Users and Teams must not, through abuse or circumvention, attempt to obtain additional Credits, access additional free or paid usage, avoid overage charges or a required Subscription Plan upgrade, or circumvent any Credit allocation, Subscription Plan limit, Execution limit, rate limit, pricing term, or other usage restriction applicable to the Services. ... Credits allow you to flexibly decide how to use Dune's most key functionalities, so you can freely choose how to trade off query Executions with Execution performance and SQL API data export volumes.
+
+## User account, Login, Password, User Information
+
+To access our Services, you must create a User account on the Site. This process will include creation of a login and password to access the Services.
+
+When you sign up for a User account, you agree to provide accurate, current, and complete information, as may be prompted by any registration forms available through the Dune website, in connection with the Services or as otherwise requested by Dune for such information ("User Information").
+
+Use of Dune's Services through the free Subscription Plan does not require fulfilling any prerequisites.
+
+To access Dune's paid Subscription Plans, you must first create, or be invited to, a Team, which can then be upgraded through a paid Subscription Plan. Under the paid Subscription Plans, or to consume additional Credits (as defined below), additional information may be necessary, including payment information.
+
+You further represent that you are a legal owner of, and that you are authorized to provide us with, all User Information and other information necessary to facilitate your use of the Services.
+  * contain information, data, or content that is obtained through illegal or improper manner, or otherwise illegal.
+
+You may only register a username or Team handle deemed appropriate by Dune. Usernames may not, e.g., be offensive, profane, threatening, sexually explicit, misleading or deceitful. A username may also not be associated with a name or trademark actively used by someone else. You may not sell or in any other way transfer your username, Team handle, Team or User account without our prior written consent. Dune may replace, modify, or delete usernames, Team handles and respective accounts not in accordance with these Terms of Service.
+
+## No Circumvention and Abuse
+
+Users and Teams must not abuse or circumvent the Services, Subscription Plans, or any applicable features, resources, performance levels, restrictions, or limitations.
+Without limitation, Users and Teams must not, through abuse or circumvention, attempt to obtain additional Credits, access additional free or paid usage, avoid overage charges or a required Subscription Plan upgrade, or circumvent any Credit allocation, Subscription Plan limit, Execution limit, rate limit, pricing term, or other usage restriction applicable to the Services.
+Examples of abuse or circumvention include credit farming, account farming, and creating, maintaining, accessing, or using multiple User accounts, Teams, identities, or other means to circumvent or bypass applicable limits or restrictions.
+If Dune determines, in its sole discretion, that a User, Team, or group of related Users or Teams has engaged in abuse or circumvention, Dune may take appropriate measures to protect the Services and enforce these Terms of Service. Such measures may include:
+
+  * suspending, limiting, throttling, or terminating access;
+  * revoking, deducting, withholding, or refusing to honor Credits or other usage entitlements;
+  * requiring account or Team consolidation or verification;
+  * requiring upgrade to an appropriate Subscription Plan;
+  * charging applicable overages; or
+  * taking other remedial measures.
+
+
+## Termination of Subscription
+
+You may terminate the subscription for the Service at any time. You are solely responsible for properly canceling your account. Any prepaid amounts will not be refunded. At the end of the subscription period, you will be charged any extra execution amounts applicable to your Subscription Plan.
+
+You will have access to the Service for the remaining period corresponding to the prepaid amount.
+
+## Deletion of data
+
+Upon termination of a Subscription Plan, Dune will delete or anonymize the User’s data, including User Information and User Content, in accordance with Dune’s Data Management Policy, subject to legally required retention, backup retention, and the Data Hub carve-out below. The User must export any data it wishes to retain before the end of the Subscription period. For additional information, see our Privacy Policy.
+
+However, data uploaded through the Data Hub Services may be kept on Dune, at Dune's sole discretion, under the terms of the license granted by the User in the Dune Data Hub Services Addendum.
+
+## Deletion of your account
+
+You may delete your account at any time. The deletion of your User account will not release you from any obligations incurred in accordance with your Subscription Plan or by breach of these Terms of Service. Please note that references to your username might still remain visible on the Service unless you remove it from third party sources, such as your Github account linked to the Dune account.
+
+Data uploaded through the Data Hub Services may be kept on Dune, at Dune's sole discretion, under the terms of the license granted by the User in the Dune Data Hub Services Addendum even after the deletion of the account.
+
+## Prices and payment terms
+
+The subscription fee as further described in this section ("Subscription Fee") varies according to the Subscription Plan. Usage in excess of the agreed quotas for Credits (as defined below), Executions and/or Data Points under any Subscription Plan (overage) will be payable in arrears.
+
+The Subscription Fee is exclusive of all direct and indirect taxes, charges, fees, and duties, including but not limited to any VAT or withholding tax. The User will bear any tax costs, including, notably, VAT and any applicable local withholding taxes.
+
+The Subscription Fee is subject to change upon thirty (30) days' notice from us. Such notice may be provided at any time through the Dune website, the Service, or by email. Your continued use of Dune after receiving this notice will be understood as your acceptance of the new Subscription Fee.
+
+There are no refunds or credits for termination of your account before the end of any prepaid service period.
+
+Dune reserves the right to suspend the Services in the case of non-payment of the Subscription Plan's consideration.
+
+## Credits
+
+"Credits" are how we denominate paid usage at Dune. Credits allow you to flexibly decide how to use Dune's most key functionalities, so you can freely choose how to trade off query Executions with Execution performance and SQL API data export volumes. The number of Credits in each Subscription Plan is described in the applicable Subscription Plan documentation.
+
+## Payment Method
+
+If you choose a paid Subscription Plan, Dune will require you to pay with credit or debit cards. Card payments are processed via a third-party service provider, Stripe Inc. ("Stripe"). Stripe is licensed to provide these payment services and complies with the relevant laws and regulations. All payments for the Services are subject to the Stripe terms and conditions, which may be amended by Stripe from time to time.
+
+All card data is stored by Stripe. Dune does not store any card data. The User may delete a stored card in the User's profile on the Site. Dune shares with Stripe User Information other than card data, as Stripe does not store any other User information.
+
+The User authorizes Stripe to process card payments for the Services on the User's behalf. The payment amount will be equal to the total pricing of the User's order.
+
+In the case the debit or credit card is rejected, the User may update the payment information. Payment must go through for the order to be submitted and processed.
+
+## Intellectual Property Rights
+
+Dune retains all rights to all elements of the Service. This includes, but is not limited to, the rights and ownership to algorithms, source code, object code and accompanying documentation, user interface design, graphics, illustrations, data, drawings, images, concepts, techniques, and specifications, design, trademarks, know-how, trade secrets, copyrights, and all other intellectual property rights.
+
+All Users on a Team shall ensure compliance with the Terms of Service by themselves and the other Users in the Teams.
+
+Admins shall have the following powers:
+
+  * create one or more Teams, including editing its public Profile;
+  * invite other Users to collaborate on the team, exclude Users from the Team, and dissolve the Team;
+  * to define different privileges (Viewer, Editor, Admin) for each User with access to the Team; and
+  * transfer content out of the Team
+
+## Free access for Community Users
+
+Dune may offer free access to the Services for community Users and Teams (hereinafter "Community Users"). Community Users are Users or Teams that are not subscribed to a paid Subscription Plan.
+
+The Service is hosted on an infrastructure delivered by a third-party cloud service provider. As a Community User you recognize that you may only use the Service in a way that does not substantially affect the capacity of the infrastructure and/or the performance of the Service. Dune sets the limit for when use of the Service is deemed to substantially affect the capacity of the infrastructure, at its sole discretion.
+
+## Suspension and Termination of Services
+
+Dune reserves the right to at any time determine whether a use of the Service is in violation of its requirements for acceptable use and suspend, revoke, limit or terminate your and/or your Teams' access to any of the Services if Dune, at its sole discretion, suspects or concludes that the Services provided by Dune are being used in violation of these Terms of Service by you or your Team. Dune will take reasonable steps to notify you of the suspension or removal of your User account or Team account, providing you with the reason for termination as well as your options for redress. Notice is, however, dependent on you having provided Dune with the electronic means to contact you.
+
+--------------------------------------------------------------------------------
+SQL API and Developer API - Blog | Dune (https://dune.com/blog/sql-api-and-developer-api)
+citeturn502search4 [wordlim: 200] Published: 2.2 years ago; Crawled: today; Query as API Endpoint: Every query on Dune can be accessed via its query ID, allowing users to retrieve results in JSON or CSV format. ... The cost scales with the plan, offering more data points per credit as users upgrade.
+
+# SQL API and Developer API
+
+## Unlock the full power of Dune with its flexible API — automate queries, integrate blockchain data, and streamline analytics using Python or TypeScript SDKs.
+
+Guide•August 16, 2024•2 min read
+
+Image: @Alsie L.
+
+Alsie L.Marketing at Dune
+
+Main video content
+
+The video provides an overview of Dune's API functionality, highlighting that every query on Dune can be used as an API endpoint. Here are the key points:
+
+  1. Query as API Endpoint: Every query on Dune can be accessed via its query ID, allowing users to retrieve results in JSON or CSV format. However, private queries are only accessible by their creators.
+  2. Billing and Usage: API usage costs are based on query execution and data points retrieved. The cost scales with the plan, offering more data points per credit as users upgrade. Users can monitor their usage and manage API keys through Dune's settings.
+  3. API Operations: The API allows for CRUD (Create, Read, Update, Delete) operations on queries, including managing query settings and refreshing materialized views. Most users will utilize execution and results APIs to run queries and retrieve data.
+  4. SDKs and Parameters: Dune provides Python and TypeScript SDKs to simplify API interaction. Users can pass query parameters using these SDKs, making it easier to integrate with Dune's API.
+  5. Preset Endpoints: Dune offers preset API endpoints for common data retrieval tasks, such as contract deployments and market forecasts, reducing the need for custom query management.
+  6. Uploading Data: Users can upload data directly to Dune via the API, bypassing the 200MB limit of manual uploads. This feature is useful for continuously inserting data programmatically.
+  7. Developer API: Dune also provides a developer API for retrieving token balances and transactions in real-time, with minimal delay, which is separate from the main query API.
+
+The video emphasizes the flexibility and power of Dune's API, allowing users to seamlessly integrate and automate data retrieval and management within their applications.--------------------------------------------------------------------------------
+Dune API 2.0: Turning Analysts into Developers - Blog | Dune (https://dune.com/blog/dune-api-2-0-turning-analysts-into-developers)
+citeturn502search5 [wordlim: 200] Published: 2.6 years ago; Crawled: today;   * Execution and Results: execute and/or download query results ...   * Crypto Grants Analysis (dash /repo): Grant data aggregated from Arbitrum, Optimism, Gitcoin, and Polygon in a CSV folder, with queries managed in the same repo. ... Please submit your own API feature requests and be sure to add the “Dune API” tag:
+
+# Dune API 2.0:Turning Analysts into Developers
+
+## The new release of Dune API promises to revolutionize the role of analysts by empowering them with developer-like capabilities.
+
+News•March 4, 2024•1 min read
+
+Image: @Andrew Hong
+
+Andrew Hong Author
+
+Image: Dune API 2.0: Turning Analysts into Developers
+
+Editor's note: This is a recurring post, regularly updated with new information.
+
+Over the course of 2023, we shipped four core API features:
+
+  * Execution and Results: execute and/or download query results
+  * Query Management: create and manage queries
+  * Table Management: upload 200MB CSVs as tables that can be queried in Dune (public or private)
+  * Webhooks: schedule query executions and get notified when a run finishes
+  * DEX Metrics (dash /repo): Query contributions of orderflow sources from Flashbots and telegram bot market share from a crypto data expert from our community (whale_hunter).
+  * Crypto Grants Analysis (dash /repo): Grant data aggregated from Arbitrum, Optimism, Gitcoin, and Polygon in a CSV folder, with queries managed in the same repo.
+
+We want to hear your product feedback! Please submit your own API feature requests and be sure to add the “Dune API” tag:--------------------------------------------------------------------------------
+Learning DuneSQL and Our Engines - Blog | Dune (https://dune.com/blog/learning-dunesql-and-our-engines)
+citeturn502search6 [wordlim: 200] Published: 2.2 years ago; Crawled: today; ## Master Dune SQL with this guide covering query optimization, engine tiers, binary functions, and API integration—designed to level up your on-chain data analysis skills fast. ... Engine Tiers: Dune offers three shared engines (Free, Medium, Large) for running queries.The Free tier allows up to 2-minute queries without costing credits, while the Medium and Large tiers offer faster execution but with a 30-minute timeout and credit usage.
+  4. Calling APIs in SQL: Dune SQL supports HTTP GET and POST functions, allowing users to pull external data (e.g., from DeFi Llama) directly into their queries.
+  5. Optimizing Queries: The video discusses query optimization, especially when working with large datasets. Key tips include filtering by block time and block number, and understanding the use of partitions instead of indexes in Dune SQL.
+  6. Engine Tiers: Dune offers three shared engines (Free, Medium, Large) for running queries. The Free tier allows up to 2-minute queries without costing credits, while the Medium and Large tiers offer faster execution but with a 30-minute timeout and credit usage.
+  7. Credits and Plans: Users receive 2,500 free credits each month, with the option to upgrade for more. On the Free plan, only three queries can run simultaneously, whereas other plans allow unlimited concurrent queries.
+  8. Becoming a Better Analyst: For users looking to advance their skills, the video suggests exploring Dune's roadmap and related resources to deepen their understanding of crypto concepts and improve as data analysts.
+
+Overall, the video is aimed at helping users understand how to effectively use Dune SQL, optimize queries, and leverage the platform's engine tiers for their data analysis needs.--------------------------------------------------------------------------------
+DUNE SQL API SERVICE Addendum | Dune (https://dune.com/sql-api-terms)
+citeturn502search7 [wordlim: 200] Crawled: today; After the User’s subscription to a Subscription Plan, Dune will provide User with applicable API Keys for the User’s use of the Services. ... The Dune SQL API is based on credit usage.
+
+  *   *   * # Dune SQL API Service Addendum
+
+Last updated: May 13, 2026
+
+## General
+
+This Dune SQL API Service Addendum applies in addition to the General Terms and Conditions for use of the Dune SQL API.
+
+## API Keys
+
+After the User’s subscription to a Subscription Plan, Dune will provide User with applicable API Keys for the User’s use of the Services.
+
+API Keys are credentials used to identify the User and authorize their use of the API Services, and must be treated as confidential. Users must not embed API Keys in public repositories, client-side code, public dashboards, or other publicly accessible locations, and shall not sell, transfer, sublicense, or disclose the API Keys to any third party.
+
+User is solely responsible for maintaining adequate security and control of any API Keys issued to User by Dune. User is liable for any actions or omissions using API Keys. If User believes or has actual knowledge that its API Keys were compromised, User shall notify Dune immediately and Dune will suspend or revoke such API Keys.
+
+Dune may also temporarily suspend or revoke User API Keys at any time for breach of the Terms of Service, and if Dune believes, in its sole reasonable discretion, that the API Keys have been compromised or User’s use of the Services is not in compliance with the Terms of Service or otherwise represents a misuse or threat to Dune.
+
+Dune may monitor API usage for security, abuse prevention, service integrity, billing, and compliance with the Terms.
+
+## API Usage and Billing
+
+The Dune SQL API is based on credit usage. The number of credits used per request depends on the amount of data processed (measured in data points). Specifically, credits are calculated as follows:
+
+  1. Data Points Count: The number of data points in an API response is determined as the greater of either: a) the count of cells in the response, calculated as rows multiplied by columns, or b) the count of 100-byte chunks. Specifically, data points are calculated as the maximum of either (columns × rows) or the ceiling of (total_bytes/100).
+  2. Billing for Data Point Count: Billing is adjusted in cases where the average size of a single cell exceeds 100 bytes. For example, if an average single cell is 150 bytes, this exceeds the average byte limit by 1.5 times. Consequently, billing will be calculated as 1.5 times the count of cells. This adjusted number of data points will be applied towards the Credits as per the User's Subscription Plan.
+  3. Fair Use of Data Combination: Users are prohibited from manipulating queries (such as combining multiple columns in a SQL statement) solely to bypass the system’s average byte limit. Acceptable use includes combining columns for legitimate data retrieval purposes. Unacceptable use, considered as abuse, involves artificially inflating the data size to retrieve more information while avoiding higher data point billing.
+  4. Enforcement and Compliance: Dune reserves the right to suspend or block access to any User if, at Dune's sole discretion, the user is deemed to be abusing the data point limit system.
+
+An overview of self-serve Subscription Plans is available on our pricing page.
+
+## Acceptable Use of API
+
+Users may not use the Service, directly or indirectly, in any manner that could: (i) be a substitute for the Service by a third party, (ii) affect Dune's ability to realize revenue in connection with the Service, or (iii) compete with Dune's business.
+
+Dune reserves the right to determine whether a use of the Service fails to constitute acceptable use of the API.
+
+## Usage Data
+
+Dune may display API usage on public resources in the Dune Application Service for purposes of content discovery, ranking and relevance. Dune will not publicly display any kind of API usage on private resources.--------------------------------------------------------------------------------
+How to get started with querying on Dune Analytics - Blog | Dune (https://dune.com/blog/get-started-guide)
+citeturn502search8 [wordlim: 200] Published: 5.9 years ago; Crawled: yesterday; At its core, Dune analytics aggregates the raw data from the blockchain into SQL databases that can be easily queried. ... All this information is available for free. ...   * select date_trunc(‘day’, ... as “Value” from txs: Finally, we run the same query as before, but we multiply the value in ETH by the price.
+
+# How to get started with querying on Dune Analytics
+
+## This post goes over some basic examples of how to search and write basic queries as well as visualize them with graphs on Dune Analytics.
+
+Guide•November 11, 2020•4 min read
+
+This post goes over some basic examples of how to search and write basic queries as well as visualize them with graphs on Dune Analytics. No prior knowledge needed and the opportunities for exploration are limitless.
+
+This is a guest post by Alex Manuskin. It was first published on Medium and has been slightly updated before publishing here.
+
+If you prefer a video tutorial you can check out this video.
+
+Dune Analytics is a powerful tool for blockchain research. It can be used to query, extract, and visualize vast amounts of data on the Ethereum blockchain.
+
+In public blockchains such as Ethereum, all the information is inherently public. All you need is to look for it. So far, answering questions such as how many users does a project has, or what is the daily volume of a DEX, would most likely require writing a specialised script. Even if you have never used SQL before, only a few basic examples can go a long way.
+
+## How Dune Analytics works
+
+At its core, Dune analytics aggregates the raw data from the blockchain into SQL databases that can be easily queried. For example, there is a table to query all Ethereum transaction, nicely separated into columns. Columns cover the sender, the receiver, the amount, etc.
+
+Image: width=
+
+Example query of 5 Ethereum transactions (source)
+
+All this information is available for free. The free tier (requires opening an account) covers:
+
+  * Searching queries
+  * Writing new queries
+  * Creating visualizations and dashboards
+  * ethereum.transactions: All transactions on Ethereum
+  * ethereum.logs: Logs of Ethreum events emitted by contracts (such as Transfer)
+  * erc20.ERC20_evt_Transfer: All the transfer events emitted when sending tokens
+  * prices.layer1_usd : A price table for ETH and many other popular tokens, on a per-minute resolution
+  * date_trunc(‘day’, block_time): We do not need to select all the columns in the table, but only the ones we need. --------------------------------------------------------------------------------
+Dune Data Hub Service Addendum | Dune (https://dune.com/data-hub-addendum)
+citeturn502search9 [wordlim: 200] Crawled: today; The Data Hub Service allows users to upload data into Dune from different sources and formats, including, but not limited to, CSV files, the Users’ own databases, or other privately acquired / held data (the “Uploaded Data”), which may then be subsequently used in the Dune Services by the User or other Users, according to the settings defined by the User when uploading the data. ... Regarding any Public Uploaded Data, the User hereby grants to Dune and to other Users a non-exclusive, non-transferable, royalty-free, fully paid-up, irrevocable, worldwide right and licence to download, keep, store, make copies, and use such Public Uploaded Data for any purposes.
+
+  *   *   * # Dune Data Hub Service Addendum
+
+Last updated: May 13, 2026
+
+## General
+
+This Addendum applies in addition to the General Terms and Conditions for the use of Dune and applies specifically to the circumstances where Users upload their own datasets, in different formats into Dune for use in connection with the other Dune Services.
+
+## The Dune Data Hub Service
+
+The Data Hub Service allows users to upload data into Dune from different sources and formats, including, but not limited to, CSV files, the Users’ own databases, or other privately acquired / held data (the “Uploaded Data”), which may then be subsequently used in the Dune Services by the User or other Users, according to the settings defined by the User when uploading the data.
+
+The Uploaded Data may be a Public Uploaded Data, if uploaded by a User in a Team’s namespace and designated as public data (meaning that any other User in Dune can have access to the data), or a Private Uploaded Data, if uploaded to a namespace of Team and designated as private data (which means that only members of that Team will be able to interact with such Private Uploaded Data).
+--------------------------------------------------------------------------------
+Dune + Stripe & Tempo: Frictionless onchain data access for AI agents - Blog | Dune (https://dune.com/blog/dune-stripe-and-tempo-frictionless-onchain-data-access-for-ai-agents)
+citeturn502search10 [wordlim: 200] Published: 7 months ago; Crawled: today; AI agents can now query Dune's full onchain data warehouse without creating an account or managing API keys.
+
+# Dune+Stripe&Tempo:Frictionless onchain data access for AI agents
+
+## No account. No API key. Pay per query with stablecoins.
+
+News•March 18, 2026•2 min read
+
+Image: @Alsie L.
+
+Alsie L.Marketing at Dune
+
+Image: Dune + Stripe & Tempo: Frictionless onchain data access for AI agents
+
+Today, Dune is launching support for the Machine Payments Protocol (MPP) — the new internet-native payment standard co-announced today by Stripe and Tempo — bringing machine-to-machine payments to onchain data
+
+AI agents can now query Dune's full onchain data warehouse without creating an account or managing API keys. They pay per query, in stablecoins, autonomously.
+
+## The problem with agent access today
+
+AI agents are becoming serious onchain data consumers. They can write SQL, execute queries, and process onchain data without human intervention, but they can't sign up for accounts. That meant a developer had to create a Dune account, generate an API key, and hand it to the agent before any of that was possible.
+--------------------------------------------------------------------------------
+Midnight Is Now Live on Dune - Blog | Dune (https://dune.com/blog/midnight-is-now-live-on-dune)
+citeturn502search11 [wordlim: 200] Published: 2 months ago; Crawled: today; ## Midnight, the privacy-enhancing L1, and first partner chain to Cardano, is now queryable, visualizable, and exportable through Dune.
+
+# Midnight Is Now Live on Dune
+
+## Midnight, the privacy-enhancing L1, and first partner chain to Cardano, is now queryable, visualizable, and exportable through Dune.
+
+Blog•July 21, 2026•2 min read
+
+## Midnight, the privacy-enhancing L1, and first partner chain to Cardano, is now queryable, visualizable, and exportable through Dune. Network activity, NIGHT token flows, and the public state of shielded applications, verifiable in one place.
+
+## What is Midnight?
+
+Midnight is a privacy-enhancing blockchain incubated by Input Output and launched as the first partner chain to the Cardano ecosystem. It is built for applications that need confidentiality and verifiability at the same time: regulated finance, identity, and business workflows where fully public ledgers are a dealbreaker. Its model is "rational privacy": data stays private by default, with selective disclosure through zero-knowledge proofs when a rule, regulator, or counterparty requires it.
+
+Key design points:
+
+  * Programmable privacy: a hybrid ledger separates public and shielded state, so developers choose exactly what stays private, what is visible, and what can be proven without revealing the underlying data.
+

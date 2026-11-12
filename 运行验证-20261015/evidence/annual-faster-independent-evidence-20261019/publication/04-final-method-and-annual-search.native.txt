@@ -1,0 +1,201 @@
+Read clock before call: 2026-10-19 11:20:57 UTC
+Public actions in this call: 2
+Source: native web tool text, not original PDF bytes. Unrelated authentication-redirect result omitted if present. Coverage is the returned excerpts only.
+
+March 2, 2026 - 10-K/A: Annual report [Section 13 and 15(d), not S-K Item 405] | Core Scientific, Inc. (CORZ) (https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001628280-26-013232/core-20241231.htm)
+citeturn1132search0 [wordlim: 200] Published: 7 months ago; Crawled: today; The bitcoin blockchain has undergone halving four times since its inception, as follows: (1) on November 28, 2012, at block 210,000; (2) on July 9, 2016 at block 420,000; (3) on May 11, 2020 at block 630,000; and (4) on April 19, 2024 at block 840,000, when the reward was reduced to its current level of 3.125 bitcoin per block. ... Many factors influence the price of bitcoin and the other digital assets we may mine for, and potential increases or decreases in prices in advance of or following a future halving are unknown. ... The planned growth of our HPC data center hosting operations business, through increased investment in conversion of several of our bitcoin mining sites to HPC data center hosting sites over the next several years, should gradually reduce our overall exposure to volatility in the spot price of bitcoin as HPC begins to account for a comparatively larger percentage of our financial results.Other events out of our control can also impact electricity costs and availability.In certain power markets, financial hedging can be employed to protect buyers from the financial impact of significant increases in power prices.
+40
+
+* * *
+
+For bitcoin, our most significant digital asset to which our mining power is devoted, the reward was initially set at 50 bitcoin rewards per block. The bitcoin blockchain has undergone halving four times since its inception, as follows: (1) on November 28, 2012, at block 210,000; (2) on July 9, 2016 at block 420,000; (3) on May 11, 2020 at block 630,000; and (4) on April 19, 2024 at block 840,000, when the reward was reduced to its current level of 3.125 bitcoin per block. The next halving for the bitcoin blockchain is anticipated to occur in 2028 at block 1,050,000. This process will repeat until the total amount of bitcoin rewards issued reaches 21 million and the theoretical supply of new bitcoin is exhausted, which is expected to occur around the year 2140. Many factors influence the price of bitcoin and the other digital assets we may mine for, and potential increases or decreases in prices in advance of or following a future halving are unknown.
+
+Business Mix Shift to HPC
+
+The planned growth of our HPC data center hosting operations business, through increased investment in conversion of several of our bitcoin mining sites to HPC data center hosting sites over the next several years, should gradually reduce our overall exposure to volatility in the spot price of bitcoin as HPC begins to account for a comparatively larger percentage of our financial results. --------------------------------------------------------------------------------
+Wisdom of Crowds in FinTech: Evidence from Initial Coin Offerings | The Review of Corporate Finance Studies | Oxford Academic (https://academic.oup.com/rcfs/article/11/1/1/6357054)
+citeturn1132search1 [wordlim: 200] Published: 5.2 years ago; Crawled: today; CoinMarketCap delists tokens that have crashed to near-zero prices across major cryptocurrency exchanges.To estimate annualized volatility, we take the standard deviation of the log daily return and multiply it by 365 to obtain returns for the 3-, 6-, and 12-month periods after a token is listed. ... All these estimates are statistically significant at the 5% level, while few other control variables appear to meaningfully predict return volatility or token delisting. ... | Delisting in 1 year .
+### 7.3 Token volatility and delisting
+
+In addition to returns, we analyze alternative long-run performance metrics for ICOs, namely, token return volatility and delisting. CoinMarketCap delists tokens that have crashed to near-zero prices across major cryptocurrency exchanges. To estimate annualized volatility, we take the standard deviation of the log daily return and multiply it by 365 to obtain returns for the 3-, 6-, and 12-month periods after a token is listed. Listed tokens trade 365 days a year.
+
+As shown in Table 11, more favorable headline ratings are associated with lower token return volatility over the 3-, 6- and 12-month horizons, all else remaining equal. More stable token prices increase tokens’ desirability as a medium of exchange on platforms. Higher headline ratings also predict a lower probability of being delisted by CoinMarketCap over the various horizons. All these estimates are statistically significant at the 5% level, while few other control variables appear to meaningfully predict return volatility or token delisting.
+--------------------------------------------------------------------------------
+BitGo Holdings Inc. (via Public) / Amendment to Initial Registration Statement (Form S-1/A) (https://www.publicnow.com/view/2162813E30FC6A95F03C2820C19C1F50BA69ACF2)
+citeturn1132search2 [wordlim: 200] Published: 11 months ago; Crawled: 5 days ago; •Volatility. ... For example, a hypothetical 50% increase or decrease in Bitcoin's fair value would have impacted our net income for the nine months ended September 30, 2025 by approximately $135.1 million, reflecting the fair value accounting under ASU 2023-08. ... As such, the fair value of our digital intangible assets increased from $85.5 million for the year ended December 31, 2023 to $249.5 million for the year ended December 31, 2024, which was primarily driven by the increase in the trading price of Bitcoin from $44,160 on January 1, 2024 to $93,800 on December 31, 2024.
+•Volatility. Bitcoin is a volatile digital asset that undergoes sharp fluctuations in trading price. The trading price of Bitcoin has significantly declined in the past and such declines may occur again in the future. For example, a hypothetical 50% increase or decrease in Bitcoin's fair value would have impacted our net income for the nine months ended September 30, 2025 by approximately $135.1 million, reflecting the fair value accounting under ASU 2023-08.
+
+•Bitcoin does not pay interest or dividends. Bitcoin does not pay interest, dividends or other returns and we can only generate cash from our Bitcoin holdings if we sell our Bitcoin or implement strategies to create income streams or otherwise generate cash by using our Bitcoin holdings. Even if we pursue any such strategies, we may be unable to create income streams or otherwise generate cash from our Bitcoin holdings, and any such strategies may subject us to additional risks.
+
+•Our Bitcoin holdings may significantly impact our financial results. Our Bitcoin holdings have affected our financial results in the past and if we continue to increase our overall holdings of Bitcoin in the future, Bitcoin may have an even more pronounced impact on our financial results in the future. For example, in 2022, when the trading price of Bitcoin declined by approximately 65% of its previous value, the value of our Bitcoin treasury and our digital intangible asset value for the year ended December 31, 2022 decreased by approximately 65% and 98%, respectively.
+
+Bitcoin is a highly volatile asset, and fluctuations in the price of Bitcoin have in the past influenced, and are likely to continue to influence, our financial results.
+
+Bitcoin is a highly volatile asset, and fluctuations in the price of Bitcoin have in the past influenced and are likely to continue to influence our financial results. For example, for the year ended December 31, 2023, Bitcoin consisted of 95% of our total digital intangible asset value, and for the year ended December 31, 2024, Bitcoin consisted of 88% of our total digital intangible asset value. As such, the fair value of our digital intangible assets increased from $85.5 million for the year ended December 31, 2023 to $249.5 million for the year ended December 31, 2024, which was primarily driven by the increase in the trading price of Bitcoin from $44,160 on January 1, 2024 to $93,800 on December 31, 2024. For the nine months ended September 30, 2024, Bitcoin consisted of 90.2% of our total digital intangible asset value, and for the nine months ended September 30, 2025, Bitcoin consisted of 60.7% of our total intangible asset value. As such, the fair value of our digital intangible assets increased from $140.7 million for the nine months ended September 30, 2024, to $445.0 million for the nine months ended September 30, 2025, which was primarily driven by the increase in the trading price of Bitcoin from $63,330 on September 30, 2024 to $114,056 on September 30, 2025. Our financial results would be adversely affected, and our business and financial condition would be negatively impacted, if the price of Bitcoin again decreased substantially, including as a result of:
+
+--------------------------------------------------------------------------------
+PRE 14A (https://cdn.yahoofinance.com/prod/sec-filings/0001050446/000119312526161456/d944734dpre14a.htm)
+citeturn1132search3 [wordlim: 200] Published: 5 months ago; Crawled: 6 months ago; Strategy enters this Annual Meeting from a position of meaningful strategic momentum in both its bitcoin and software strategies. 2025 marked an inflection point in our evolution as the world’s first and largest Bitcoin Treasury Company. ... We launched five preferred stock instruments—STRK, STRF, STRD, STRC, and STRE—establishing the foundation for a new market in bitcoin-backed perpetual preferred securities, or “Digital Credit.” ... As of mid-April 2026, STRC had scaled to a $6.4 billion market cap, with approximately $339 million of 30-day average daily trading volume, 1.7% 30-day historical volatility, and a variable dividend framework designed to help maintain trading near its $100 stated amount. ... Together, MSTR and STRC enable different sources of capital to align around the same balance sheet, each with the risk and return profile best suited to their mandates.
+
+STRC, our flagship Digital Credit instrument, is the clearest expression of our strategy. As STRC continues to trade around par, despite a decline in bitcoin’s price from its all-time high, we now have a non-cyclical tool for raising funds to acquire more bitcoin—moving us beyond simply accumulating Digital Capital to scaling Digital Credit alongside it. As of mid-April 2026, STRC had scaled to a $6.4 billion market cap, with approximately $339 million of 30-day average daily trading volume, 1.7% 30-day historical volatility, and a variable dividend framework designed to help maintain trading near its $100 stated amount.
+
+MSTR and STRC are complementary components of our capital structure. STRC generates amplification for MSTR investors, while MSTR provides substantial asset coverage and absorbs bitcoin price volatility for STRC investors. Together, MSTR and STRC enable different sources of capital to align around the same balance sheet, each with the risk and return profile best suited to their mandates. Our business objective is to acquire bitcoin in a manner accretive to our stockholders, and we believe disciplined issuance of Digital Credit can help us do so by generating amplification, broadening our investor base, and improving capital efficiency over time. We intend to expand STRC prudently, deepen liquidity, broaden distribution, and continue to drive acquisitions of bitcoin that are accretive to our stockholders.
+
+AI Product Innovation
+
+While continuing to evolve our bitcoin strategy, we also focused heavily on our enterprise software business, accelerating the transformation of AI product innovation and advancing our transition to the cloud. Strategy Mosaic^{™}, our universal data
+
+* * *
+
+--------------------------------------------------------------------------------
+Bitcoin (BTC) Price Prediction: 1Y & 5Y AI Targets (https://ipulseai.com/crypto/bitcoin-btc)
+citeturn1132search4 [wordlim: 200] Published: 4 weeks ago; Crawled: today; The consensus target is the evidence-weighted synthesized price path shown in the chart. ... Anchor: 80,960.92 USD 1-year price return: +18.52%5-year price return: +153.15% ... Steady spot ETF accumulation counters tax-loss selling and corporate cash-management distributions, holding valuations in an orderly consolidation range above structural support. ... Marginal miner treasury sales and corporate reserve monetizations meet subdued institutional rebalancing, generating modest downward drift toward marginal production cost baselines.
+--- | --- | --- | --- | --- | --- | ---
+Q4 2026  | $82,863.50  | +2.35%  | +2.35%  | Restrictive monetary policy and elevated sovereign yields curb speculative leverage. Steady spot ETF accumulation counters tax-loss selling and corporate cash-management distributions, holding valuations in an orderly consolidation range above structural support.  | $74,484.05  | $86,628.18  | $750.26
+Q1 2027  | $81,419.31  | -1.74%  | +0.57%  | High hurdle rates and first-quarter liquidity drains pressure zero-yielding assets. Marginal miner treasury sales and corporate reserve monetizations meet subdued institutional rebalancing, generating modest downward drift toward marginal production cost baselines.  | $70,759.84  | $92,684.06  | $736.44
+Q2 2027  | $87,607.18  | +7.60%  | +8.21%  | Forced selling from corporate treasuries and high-cost mining operations visibly exhausts. With liquid exchange float contracting and central bank tightening pausing, patient spot ETF accumulation sparks a fundamental recovery.  | $75,250.91  | $102,879.31  | $743.40
+Q3 2027  | $95,954.89  | +9.53%  | +18.52%  | Cooling inflation metrics and sovereign debt refinancing strains shift expectations toward monetary easing. Broadening institutional multi-asset mandates absorb depleted OTC desk inventories, driving a decisive breakout past major overhead resistance levels.  | $79,013.45  | $112,138.45  | $755.15
+--------------------------------------------------------------------------------
+Form F-3/A - Registration statement by foreign private issuers: [Amend] (https://br.advfn.com/noticias/EDGAR2/2025/artigo/97316583)
+citeturn1132search5 [wordlim: 200] Published: 10 months ago; Crawled: 10 months ago; We have adopted risk-based policies and procedures to analyze whether the Digital Assets that we hold and sell for our own account could be deemed to be a “security” under applicable laws. ... Regardless of our conclusions, we could be subject to legal or regulatory action in the event the SEC, a foreign regulatory authority, or a court were to determine that a digital asset currently held by us is a “security” under applicable laws. ... According to CoinMarketCap, our principal market, historic prices for ENA ranged between approximately $0.2045 and $1.2519 for the twelve months ended June 30, 2025, with annual volatility of 174.04%. historic prices for BTC ranged between approximately $56,704.09 and $111,670.35 for the twelve months ended June 30, 2025, with annual volatility of 58.42%.
+
+ 
+
+Digital Assets like ENA, USDe, BTC, and ETH have historically experienced, and are expected to continue to experience, high price volatility. According to CoinMarketCap, our principal market, historic prices for ENA ranged between approximately $0.2045 and $1.2519 for the twelve months ended June 30, 2025, with annual volatility of 174.04%. historic prices for BTC ranged between approximately $56,704.09 and $111,670.35 for the twelve months ended June 30, 2025, with annual volatility of 58.42%. Such price fluctuations are likely to influence our financial results and the market price of our Class A Ordinary Shares. Our financial results and the market price of our Class A Ordinary Shares would be adversely affected, and our business and financial condition would be negatively impacted, if the price of Digital Assets we hold decrease substantially, including as a result of:
+
+ 
+
+   | ●  | decreased user and investor confidence in digital assets, including due to the various factors described herein;
+
+ 
+--------------------------------------------------------------------------------
+Form S-3/A - Registration statement under Securities Act of 1933: [Amend] (https://br.advfn.com/noticias/EDGAR2/2025/artigo/96468701)
+citeturn1132search6 [wordlim: 200] Published: 1.2 years ago; Crawled: 1.2 years ago; Accordingly, the Trust will not normally hold forked or air dropped assets, as further described below in “Risk factors – The inability to recognize the economic benefit of a “fork” or an “air drop” could adversely impact an investment in the Trust.” ... Shareholders should be aware that the public trading price per Share may be different from the NAV for a number of reasons, including price volatility, trading activity, the closing of bitcoin trading platforms due to fraud, failure, security breaches or otherwise, and the fact that supply and demand forces at work in the secondary trading market for Shares are related, but not identical, to the supply and demand forces influencing the market price of bitcoin. ... From January 1, 2024 through December 31, 2024, CFTC regulated bitcoin futures represented between $1.0 billion and $11.84 billion in notional trading volume on Chicago Mercantile Exchange on a daily basis and notional volume was never below $4.33 billion and represented over $23.63 billion in open interest for the entirety of the period.
+The Bitcoin network software source code includes protocols that govern the creation of new bitcoin and the cryptographic system that secures and verifies bitcoin transactions.
+
+Bitcoin has generally exhibited high price volatility relative to more traditional asset classes. One volatility measure, standard deviation, is based on the variability of historical price returns. A higher standard deviation indicates a wider dispersion of past price returns and thus greater historical volatility. The table below provides information regarding the price return of bitcoin and its volatility from December 31, 2021 to March 31, 2025. Standard deviation is annualized.
+
+ 
+
+ |  |  |  |  |  |  |  |  |  | 
+Asset  |     | Mean
+(Absolute)^{ (2)}  |     | Minimum  |     | Maximum  |     | Mean ^{(3)}  |     | Standard
+Deviation ^{(4)}
+Bitcoin ^{(1)}  |     | 1.99%  |     | -15.49%  |     | 15.56%  |     | 0.09%  |     | 55.24%
+
+ 
+
+(1)  | Reflects daily price returns determined under the Sponsor’s valuation policy for the period from 4:00 p.m. EST on December 31, 2021 through 4:00 p.m. EST on March 31, 2025.
+(2)  | Mean (Absolute) is the average absolute price return computed by taking the average of daily (4:00 p.m. EST to 4:00 p.m. EST) absolute price returns of an asset.
+(3)  | Mean is the average price return computed by taking the average of daily (4:00 p.m. EST to 4:00 p.m. EST) price returns of an asset.
+(4)  | Standard Deviation is the annualized price return volatility computed by taking the standard deviation of daily (4:00 p.m. EST to 4:00 p.m. EST) price returns for an asset and annualizing it using a 365-day factor.
+
+There can be no assurance as to the future performance of bitcoin; the past performance and volatility of bitcoin should not be taken as an indication of future performance or volatility.
+
+For more information on bitcoin and the Bitcoin network, see “Bitcoin, Bitcoin Markets and Regulation of Bitcoin” below.
+
+The Trust’s Investment Objective
+
+The Trust’s investment objective is to seek to track the performance of bitcoin, as measured by the Index, adjusted for the Trust’s expenses and other liabilities. 
+Although bitcoin was the first digital asset, in the ensuing years, the number of digital assets, market participants and companies in the space has increased dramatically. In addition to bitcoin, other well-known digital assets include Ethereum, XRP, bitcoin cash, and Litecoin. The category and protocols are still being defined and evolving. As of December 31, 2024, bitcoin had a total market capitalization of approximately $1.85 trillion and represented approximately 56% of the entire digital asset market.
+
+Bitcoin has generally exhibited high price volatility relative to more traditional asset classes. One volatility measure, standard deviation, is based on the variability of historical price returns. A higher standard deviation indicates a wider dispersion of past price returns and thus greater historical volatility. The table below provides information regarding the price return of bitcoin and its volatility from December 31, 2021 to March 31, 2025. Standard deviation is annualized.
+
+ 
+
+ |  |  |  |  |  |  |  |  |  | 
+Asset  |     | Mean
+(Absolute)^{ (2)}  |     | Minimum  |     | Maximum  |     | Mean ^{(3)}  |     | Standard
+Deviation ^{(4)}
+Bitcoin ^{(1)}  |     | 1.99%  |     | 15.49%  |     | 15.56%  |     | 0.09%  |     | 55.24%
+
+ 
+
+(1)  | Reflects daily price returns determined under the Sponsor’s valuation policy for the period from 4:00 p.m. EST on December 31, 2021 through 4:00 p.m. EST on March 31, 2025.
+(2)  | Mean (Absolute) is the average absolute price return computed by taking the average of daily (4:00 p.m. EST to 4:00 p.m. EST) absolute price returns of an asset.
+(3)  | Mean is the average price return computed by taking the average of daily (4:00 p.m. EST to 4:00 p.m. EST) price returns of an asset.
+(4)  | Standard Deviation is the annualized price return volatility computed by taking the standard deviation of daily (4:00 p.m. EST to 4:00 p.m. EST) price returns for an asset and annualizing it using a 365-day factor.
+
+Regulation of Bitcoin and Government Oversight
+
+As digital assets have grown in both popularity and market size, the U.S. --------------------------------------------------------------------------------
+Bitcoin (BTC) AI Forecasts: Advisor Targets & Scenarios (https://ipulseai.com/crypto/bitcoin-btc/ai-forecasts)
+citeturn1132search7 [wordlim: 200] Published: today; Crawled: today; Real yields peak; bitcoin's discount-rate headwind fades and allocator rebalancing resumes toward target weights. ... Q3 2030  | $157,957  | +95.1%  | Final washout, shallower than prior cycles because ETF and sovereign holdings raise the price-insensitive base.Drawdown from peak reaches roughly 37%, consistent with maturing-asset volatility compression. ... Institutional allocators rebalance back to target weights after underweight drift, providing steady mechanical demand against post-2028 issuance of 1.5625 BTC per block. ... Treasury Actually BUYS THE Reserve  | 20%  | +60%  | House Financial Services advanced a Strategic Bitcoin Reserve bill 28-21 on 16 September 2026, placing federally forfeited BTC in Treasury for at least twenty years [21]; as of July 2026 no open-market purchase had been made [22].Enactment with a funded acquisition mandate — most plausibly 2028-2030 under fiscal-hedging cover — would create a price-insensitive sovereign buyer and, more importantly, a permissioning signal for pension and sovereign-wealth allocators. ... Q3 2029  | $130,684  | +61.4%  | Accumulated leverage makes Bitcoin vulnerable to a routine risk-budget reset rather than a protocol crisis.
+With no protocol impairment assumed, lower entry valuations attract incremental spot allocations, allowing Bitcoin to recover without requiring an immediate Fed pivot.
+Q3 2027  | $84,063  | +3.8%  | Adviser allocations broaden beyond opportunistic rebound trades, while funding markets cease tightening further. Net spot absorption begins exceeding miner distribution more consistently, supporting appreciation, although existing holders still provide substantial supply as Bitcoin approaches its anchor.
+Q4 2027  | $90,788  | +12.1%  | Year-end portfolio decisions retain small Bitcoin allocations rather than eliminating them after the drawdown. The anticipated 2028 issuance reduction attracts preparatory positioning, but risk-budget rebalancing and treasury monetization keep the advance below earlier speculative-cycle extremes.
+Q1 2028  | $99,866  | +23.4%  | Positioning builds ahead of the expected block-1,050,000 subsidy reduction, with timing dependent on realized block production. ETF accumulation amplifies the lower-issuance narrative, but the projected gain comes from demand anticipation rather than an automatic valuation multiple. (raw.githubusercontent.com)
+Bitcoin benefits from a broader holder base and reduced issuance, but rising prices also revive incumbent selling, preventing institutional inflows from translating one-for-one into scarcity.
+Q2 2029  | $145,205  | +79.4%  | Valuation catches up with improving distribution, and risk committees resist larger weights after the rally. Bitcoin still gains on positive spot demand, but diminishing marginal buyers and portfolio rebalancing reduce the pace of appreciation materially.
+Q3 2029  | $130,684  | +61.4%  | Accumulated leverage makes Bitcoin vulnerable to a routine risk-budget reset rather than a protocol crisis. ETF redemptions and treasury profit-taking temporarily exceed new allocations, producing a correction as crowded scarcity positions meet an unexpectedly responsive float.
+Q4 2029  | $120,229  | +48.5%  | The correction feeds back into corporate funding capacity, slowing BTC purchases and encouraging cash retention. Investor attention shifts from holdings headlines to net flows, extending price weakness even though the base case assumes no systemic custody failure.
+--------------------------------------------------------------------------------
+February 27, 2025 - 10-K: Annual report [Section 13 and 15(d), not S-K Item 405] | Core Scientific, Inc. (CORZ) (https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001628280-25-008302/core-20241231.htm)
+citeturn1132search8 [wordlim: 200] Published: 1.6 years ago; Crawled: today; During the year ended December 31, 2024, the trading price of one bitcoin ranged from a low of $38,515 in January 2024 to a high of $108,253 in December 2024. ... In a proof-of-work approach such as bitcoin, specialized computers, or “miners,” power and secure blockchains by solving complex cryptographic algorithms to validate transactions on specific digital asset networks. ... anticipated to occur in 2028 at block 1,050,000.
+With miners we produce computing power, known as “hash rate,” with which we verify transactions on the Bitcoin blockchain. Bitcoin “mining” refers to the process of proposing and verifying transaction updates to the Bitcoin blockchain, which helps keep the Bitcoin network and its blockchain secure. Our bitcoin mining operation is focused on the generation of bitcoin by solving complex cryptographic algorithms to validate transactions on the Bitcoin network blockchain, which is commonly referred to as “mining.” Our digital asset self-mining activity competes with myriad mining operations throughout the world to complete new blocks on the blockchain and earn the reward in the form of bitcoin.
+
+Mathematically Controlled Supply
+
+The method for creating new bitcoin is mathematically controlled in a manner such that the supply of bitcoin grows at a limited rate, based on a pre-determined schedule. The number of bitcoin awarded for solving a new block is automatically halved every 210,000 blocks. This means every block up to and including block 210,000 produced a reward of 50 bitcoin, while blocks beginning with 210,001 produced a reward of 25 bitcoin. --------------------------------------------------------------------------------
+Blockchain and Cryptocurrency in Business: Development, Adoption, and Impact (2009-2026) (https://www.bytemind.co.nz/reports/blockchain-crypto/index.html)
+citeturn1132search9 [wordlim: 200] Published: 3 months ago; Crawled: 6 days ago; (2023, MS) provided the first systematic methodology for detecting wash trading on crypto exchanges and found that unregulated exchanges display wash trading averaging over 70 percent of reported volume, fabricating trillions of dollars annually to improve exchange rankings and temporarily distort prices.Their finding implies that widely cited trading volume statistics systematically overstate genuine market activity. ... Bitcoin's annualised volatility has averaged approximately 70 to 80 percent over its history, compared to approximately 15 to 20 percent for the S&P 500. ... Liu and Tsyvinski (2021, RFS) established that cryptocurrency returns can be predicted by factors capturing momentum and investor attention, but the magnitude of unpredictable variation remains extremely high.
+## 7. Systemic and Firm-Level Risks
+
+### 7.1 Volatility and the Challenge of Corporate Treasury Management
+
+Bitcoin's annualised volatility has averaged approximately 70 to 80 percent over its history, compared to approximately 15 to 20 percent for the S&P 500. For a corporation holding Bitcoin on its balance sheet, this creates direct exposure to earnings volatility under ASU 2023-08's fair value regime. Liu and Tsyvinski (2021, RFS) established that cryptocurrency returns can be predicted by factors capturing momentum and investor attention, but the magnitude of unpredictable variation remains extremely high. Hinzen, John, and Saleh (2022, JFE) demonstrated theoretically that Bitcoin's limited adoption arises as an equilibrium outcome driven by negative network effects: as the network expands, delay grows, settlement becomes more prolonged, and users abandon the system, creating structural limits to Bitcoin's utility that contribute to its price volatility.
+
+For corporate treasurers, the challenge is not merely the level of volatility but its timing. --------------------------------------------------------------------------------
+Exclusive Report: Crypto Market Predictions 2026 | Bitget News (https://www.bitgetapp.com/news/detail/12560605131099)
+citeturn1132search10 [wordlim: 200] Published: 9 months ago; Crawled: today; The GENIUS Act establishes federal stablecoin standards; the House-passed CLARITY Act addresses market structure and jurisdictional clarity; and regional frameworks (EU’s MiCA, UK standards, Singapore’s MAS stablecoin regime, UAE guidelines) are creating compliant, scalable environments for institutional participation.Expected interest rate cuts from the Federal Reserve, talks around fiscal stimulus, and the possibility of a more dovish Fed Chair taking over in May 2026 could all give a boost to risk assets including crypto. ... On January 1, 2026, over $2.2 billion in Bitcoin and Ethereum options expired.Bitcoin dominated with $1.87 billion in notional value trading near the $88,000 max pain level, while Ethereum accounted for $0.33 billion. ... It suggests traders are positioning for both short-term volatility and massive upside through H1 2026.​
+
+The shift from “regulation by enforcement” to explicit rule-setting represents a strong turning point. The GENIUS Act establishes federal stablecoin standards; the House-passed CLARITY Act addresses market structure and jurisdictional clarity; and regional frameworks (EU’s MiCA, UK standards, Singapore’s MAS stablecoin regime, UAE guidelines) are creating compliant, scalable environments for institutional participation.
+
+Expected interest rate cuts from the Federal Reserve, talks around fiscal stimulus, and the possibility of a more dovish Fed Chair taking over in May 2026 could all give a boost to risk assets including crypto.
+
+At the same time, regulation is becoming more structured. Governments are increasingly viewing blockchain networks through a national security lens instead of just financial innovation. Concerns about sanctions evasion, illegal activity, and state-backed actors are creating a clear split between regulated, institution-friendly crypto markets and offshore platforms operating on the edges.
+
+This is likely to favor institutional-grade platforms and compliant assets, while putting pressure on privacy-focused tokens and unregulated exchanges.
+
+## Market Derivatives and Options Trend in 2026
+
+On January 1, 2026, over $2.2 billion in Bitcoin and Ethereum options expired. Bitcoin dominated with $1.87 billion in notional value trading near the $88,000 max pain level, while Ethereum accounted for $0.33 billion.
+
+This highlighted the beginning of significant derivatives activity in 2026, with notable concentration in March and June maturity dates. It suggests traders are positioning for both short-term volatility and massive upside through H1 2026.​
+
+--------------------------------------------------------------------------------
+ (https://cdn.yahoofinance.com/prod/sec-filings/0002056263/000121390025108479/ea0264919-01.htm)
+citeturn1132search11 [wordlim: 200] Published: 11 months ago; Crawled: 11 months ago; Actions by U.S. banking regulators, such as the issuance in February 2023 by Federal banking agencies of the “Interagency Liquidity Risk Statement,” which cautioned banks on contagion risks posed by providing services to digital assets customers, and similar actions, have in the past resulted in or contributed to reductions in access to banking services for Bitcoin-related customers and service providers, or the willingness of traditional financial institution to participate in markets for digital assets. ... Malicious actors could theoretically structure an attack whereby such actors gain control of more than half of the Bitcoin network’s processing power, or “aggregate hashrate.” ... If Pubco elects to use derivative instruments to hedge the price risk of holding Bitcoin, such derivatives are highly volatile and subject to market and liquidity risks, which could negatively impact Pubco’s Bitcoin strategy. ... Pubco’s ability to profit or avoid risk through investment or trading in derivatives will depend on its ability to anticipate changes in the underlying assets, reference rates or indices.
+--------------------------------------------------------------------------------
+The Impact of Volatility Targeting (https://people.duke.edu/~charvey/Research/Published_Papers/P135_The_impact_of.pdf)
+citeturn1132view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 21; Source: open({"ref_id":"turn1130view1","lineno":290}); Total lines: 2192
+L269@P2: 0DQ$+/GDWD
+L270@P2: 0DQ$+/GDWD
+L271@P2: 0DQ$+/GDWD
+L272@P2: 0DQ$+/GDWD
+L273@P2-3: Downloaded from http://jpm.iijournals.com/ by Campbell Harvey on November 1, 201816
+L274@P3: The Impact of Volatility Targeting Fall 2018
+L275@P3: Treasury futures data from 1988, which will again allow
+L276@P3: us to evaluate volatility estimates based on intraday data.
+L277@P3: We also explore credit returns, hedged with Treasuries,
+L280@P3: that is available today. To this end, we use the Bank of
+L281@P3: America Merrill Lynch U.S. Corporate Master Total
+L282@P3: Return index, and the hedging methodology follows
+L283@P3: Cook et al. (2017).
+L284@P3: We also use daily futures and forwards data for
+L285@P3: 50 liquid assets from Cook et al. (2017). This dataset
+L286@P3: covers commodities (six agricultural, six energy, and
+L287@P3: seven metal contracts), nine currencies (all against the
+L288@P3: U.S. dollar), 10 equity indexes, nine bonds, and three
+L289@P3: interest rate contracts.
+L290@P3: Volatility Scaling
+L291@P3: We focus on excess returns because they capture
+L292@P3: the compensation for bearing risk, not the time value of
+L293@P3: money. Excess returns are a type of unfunded returns
+L294@P3: (e.g., a long equities position financed by borrowing
+L295@P3: at the risk-free T-bill rate). The unfunded nature of
+L296@P3: excess returns makes evaluating scaled position returns
+L297@P3: particularly straightforward: Volatility-scaled returns are
+L298@P3: simply inversely proportional to a conditional volatility
+L299@P3: estimate that is known a full 24 hours ahead of time,
+

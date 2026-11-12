@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/annual-fixedmix-C-execution-20261019/execution/adapter.py", line 281, in <module>
+    run(args.gate)
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/annual-fixedmix-C-execution-20261019/execution/adapter.py", line 234, in run
+    assert datetime.now(timezone.utc)<datetime.fromisoformat(g['work_deadline_UTC'])
+ValueError: Invalid isoformat string: '2026-10-19T09:45:00Z'

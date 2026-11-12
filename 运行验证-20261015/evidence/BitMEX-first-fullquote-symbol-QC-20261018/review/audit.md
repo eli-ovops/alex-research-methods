@@ -1,0 +1,13 @@
+# 完整固定quote文件：独立有限验收
+
+**PASS_LIMITED_FULL_FIXED_FILE_INVENTORY_AND_XBTUSD_BASIC_QC，无必须修正项。**小原件/source/config/scope/gate/lock/HTTP/output/completion身份一致。Reviewer不重hash、解压或scan原99MB文件，不运行helper或联网。
+
+唯一完整GET200，99509710B，ETag/长度/identityEncoding先验正确；下载流计算全SHA f9deec14f86f00e3b9a9c0fe0f777a2706d5f7d454d7291901a66819d60a619b，首MiB摘要与旧prefix一致。两个hash是Owner实际流式证据，不冒Reviewer重新全文核验。源码gzip读取直到真实decodedEOF，标准库到EOF验证trailerCRC；exit0支持实际完成，并非仅引用目录值。展开568859727B，不落CSV。
+
+全9242085记录均6字段，124非空symbol计数和全量一致，无坏宽/重复header/空identifier；一直读到EOF而非找到目标就停。实际XBTUSD535218行，四BBO数值分类各全部finitepositive、locked/crossed0、strict有效535218；价格判断与数量独立，无删行/修复或quote输出。numericfloat QC不认证任意十进制精度或合约单位。
+
+目标timestamp规范D9/nozone535218，日期前缀匹配；535217目标物理相邻对全部lexicallyforward，equal/backwards0。异常targetclock/坏宽/空identifier/重复header重置邻接，未排序/前填。词序和格式不证明UTC、真实精度、接收钟/PIT或连续性，没有推算间隔。
+
+这推进到完整固定文件里真实XBTUSD存在及基础QC；旧prefix只见100BONKUSDT仍是正确局部事实。不能因找到symbol清零2024Jan固定产品spec、archiveSize单位、用途条款partial；XBTUSD不得当spot，不套spot收益/成本。仅此日，不代2025或全历史，不证真实成交/预测/扣费净利/容量。
+
+Owner34.906517666s、采样RSS57360384B、exit0无活worker；说明与两独立review另计仍低于300s，Reviewer不冒受Owner监督器覆盖，采样非瞬时硬峰。0新增网络/市场重算/模型/交易，actual route UNKNOWN，无自己后台进程。输入指纹及资源分列见audit.json，旧FAILED及原件不改。

@@ -1,0 +1,359 @@
+Managed Futures ETF | KMLM | KraneShares Mount Lucas Strategy (https://kraneshares.com/kmlm/)
+citeturn1021view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://kraneshares.com/kmlm/","lineno":null}); Redirected to URL: https://kraneshares.com/etf/kmlm/; Total lines: 406
+L0: cite0†iframe†www.googletagmanager.com L1: 
+L2: cite1†中文 L3: 
+L4:   * cite2†Investments L5:   * cite3†About Us L6:   * cite4†Research L7:   * cite5†News L8:   * cite2†Subscribe L9:   *   *   * [Input: SEARCH]
+L10: 
+L11: [Input]
+L12: 
+L13:   * cite6†ETFs†www.kraneshares.com cite7†UCITS ETFs/ETCs cite8†Private Funds†www.kraneshares.com cite9†Model Portfolios cite10†Institutional†www.kraneshares.com L14: 
+L15: cite6†ETFs†www.kraneshares.com cite7†UCITS ETFs/ETCs cite8†Private Funds†www.kraneshares.com cite9†Model Portfolios cite10†Institutional†www.kraneshares.com L16: 
+L17:   *   *   *   * Get Our Next Update
+L18: ＊ indicates required
+L19: 
+L20: [Input: First Name ＊]
+L21: 
+L22: [Input: Last Name ＊]
+L23: 
+L24: [Input: Email ＊]
+L25: 
+L26: [Input: Phone Number ＊]
+L27: 
+L28: Choose Your Interest ＊ [Select]
+L29: 
+L30: Are you a financial professional? ＊
+L31:     * [Input]Yes
+L32:     * [Input]No
+L33: 
+L34: [Input] [Input] [Input]
+L35: 
+L36: [Input]
+L37: 
+L38: [Input] By checking this box and selecting "Subscribe" I agree to the KraneShares cite11†Privacy Policy and Notice at Collection .
+L39: 
+L40: About The KraneShares Market Update:
+L41: Our market update is a collaboration between the KraneShares internal research department and our industry-leading subadvisors and partners. Our research covers global growth themes in both public and private markets.
+L42: 
+L43: What we cover in our newsletter
+L44:     * China, Emerging Markets, & Regional ETFs
+L45:     * AI, Robotics, & Emerging Technology ETFs
+L46:     * Income & Covered Call ETFs
+L47:     * Alternatives & Risk Management ETFs
+L48: 
+L49:   * cite2†Main Contact L50: 
+L51:  +1 (855) 8KRANE8
+L52: 
+L53: cite12† [email protected] L54: 
+L55: cite2†United States L56: New York Office
+L57: 
+L58: 280 Park Avenue, 32nd Floor
+L59: New York, NY 10017
+L60: 
+L61:  +1 (212) 933-0393
+L62: 
+L63: San Francisco Office
+L64: 
+L65: 155 Sansome Street, Suite 400
+L66: San Francisco, CA 94104
+L67: 
+L68: cite2†International L69: 
+L70: London Office
+L71: 
+L72: 181 Queen Victoria Street
+L73: London EC4V 4EG
+L74: 
+L75:  +44 203 955 5230
+L76: 
+L77: Europe
+L78: 
+L79: cite13† [email protected] L80: 
+L81: Asia Pacific
+L82: 
+L83: cite14† [email protected] L84: 
+L85: KraneShares Mount Lucas Managed Futures Index Strategy ETF kmlm 0.90% US5007676522
+L86: # KMLM KraneShares Mount Lucas Managed Futures Index Strategy ETF
+L87: KMLM is a managed futures ETF that provides exposure to twenty-two liquid futures contracts traded on U.S. and foreign exchanges. Managed futures are considered alternative investments and may provide additional diversification* and decrease volatility when included within traditional equity/bond portfolios. KMLM may also serve as a potential hedge on equity, bond, and commodity risk.
+L88: The ETF is sub-advised by Mount Lucas**, who in 1988 established the first passive index to measure the returns to risk bearing in futures markets.
+L89: [Input]
+L90: 
+L91:   * NAV as of 10/16/2026 $30.94
+L92:   * 1 Day NAV Change as of 10/16/2026 0.39%
+L93:   * NAV Total Return as of 09/30/2026 YTD: 19.23%
+L94:   * Expense Ratio: 0.90%
+L95: 
+L96: cite15†Overview cite16†Performance cite17†Distributions cite18†Growth of $10,000 cite19†Holdings cite20†Fund Documents cite21†FAQ L97: ## Overview
+L98: 
+L99: ### Investment Strategy:
+L100: 
+L101: KMLM is a managed futures ETF benchmarked to the KFA MLM Index, which consists of a portfolio of twenty-two liquid futures contracts traded on U.S. and foreign exchanges. The Index includes futures contracts on 11 commodities, 6 currencies, and 5 global bond markets. These three baskets are weighted by their relative historical volatility, and within each basket, the constituent markets are equal dollar weighted.
+L102: ### Why KMLM for Managed Futures ETF exposure?
+L103:   * Access to managed futures through a liquid and low-cost ETF structure^{1}
+L104:   * Managed futures are considered alternative investments and may provide additional diversification and decrease volatility when included within traditional equity/bond portfolios*
+L105:   * A potential hedge on equity, bond, and commodity risk
+L106:   * Sub-advised by Mount Lucas**, who in 1988 established the first passive index to measure the returns to risk bearing in futures markets^{2}
+L107:   * Unlike other managed futures ETFs that incorporate equity futures, KMLM limits its exposure to commodities, currencies, and fixed income futures, keeping the strategy uncorrelated to equity risk that investor portfolios typically contain.
+L108: ### KMLM Partner:
+L109: Mount Lucas, the sub-advisor of KMLM, is a Newtown, PA based asset manager founded in 1986**. Since its founding, Mount Lucas has provided innovative alternative investment strategies to institutional and high-net-worth investors that enhance and diversify traditional investments.
+L110: Mount Lucas’ investment professionals have extensive experience in the development and use of systematic investment strategies that access alternative risk premia as well as a long history of discretionary macro trading and risk taking.
+L111: * Diversification does not ensure a profit or guarantee against a loss.
+L112: ** Mount Lucas Management LP is the managing member of Mount Lucas Index Advisers LLC (together “Mount Lucas”), the sub-adviser of KMLM.
+L113: 1. Buying and selling shares of the KFA Funds may result in brokerage commissions.
+L114: 2. Data from Mount Lucas Management.
+L115: 
+L116: Fund Details
+L117: 
+L118: Data as of 10/16/2026
+L119: Ticker  | KMLM
+L120: Primary Exchange  | NYSE
+L121: CUSIP  | 500767652
+L122: ISIN  | US5007676522
+L123: Net Assets  | $591,005,067
+L124: Shares Outstanding  | 19,100,002
+L125: Total Annual Fund Operating Expense  | 0.90%
+L126: Inception Date  | 12/1/2020
+L127: Distribution Frequency  | Quarterly
+L128: Underlying Index  | KFA MLM Index
+L129: 
+L130: Trending Funds:
+L131: 
+L132: cite22†KWEB KraneShares CSI China Internet ETF†www.kraneshares.com L133: 
+L134: cite23†AGIX KraneShares Public-Private AI & Technology ETF†www.kraneshares.com L135: cite24†KOID KraneShares Global Humanoid Robotics and Physical AI Index ETF†www.kraneshares.com L136: 
+L137: cite25†KSPY KraneShares Hedgeye Hedged Equity Index ETF†www.kraneshares.com L138: 
+L139: cite26†Explore All Products†www.kraneshares.com L140: 
+L141: cite2†Premium Discount Chart L142: ## Daily Performance
+L143: 
+L144: Data as of 10/16/2026
+L145: Daily Net Asset Value (NAV) and Market Price
+L146: NAV  | $30.94
+L147: NAV Daily Change  | 0.39%
+L148: Market Price  | $30.98
+L149: Market Price Daily Change  | 0.45%
+L150: 30 Day Median Bid/Ask Spread
+L151:  | 0.06%
+L152: 30 Day Median Bid/Ask Spread as of 10/15/2026.The ETF’s 30 Day Median Bid-Ask Spread is calculated by identifying the ETF’s national best bid and national best offer ("NBBO") as of the end of each 10 second interval during each trading day of the last 30 calendar days and dividing the difference between each such bid and offer by the midpoint of the NBBO. The median of those values is identified and that value is expressed as a percentage rounded to the nearest hundredth.
+L153: cite2†Daily Performance L154: ## Daily Premium Discount
+L155: 
+L156: Data as of 10/16/2026
+L157: 
+L158: NAV  | Market Price  | Premium/Discount
+L159: $30.94  | $30.98  | $0.04
+L160: 
+L161: ## Premium/Discount History
+L162: 
+L163: Data as of 10/16/2026
+L164: 
+L165:  | 2025 Full Year  | Q1 2026  | Q2 2026  | Q3 2026  | Q4 2026
+L166: Days traded at premium  | 95  | 147  | 82  | 54  | 6
+L167: Days traded at NAV  | 0  | 0  | 0  | 0  | 0
+L168: Days traded at discount  | 155  | 36  | 42  | 10  | 5
+L169: ## Premium/Discount Chart
+L170: 
+L171: Data as of 10/16/2026
+L172: 
+L173: [Button: 1Y 2025] [Button: Q1 2026] [Button: Q2 2026] [Button: Q3 2026] [Button: Q4 2026]
+L174: The Premium/Discount History chart demonstrates the difference between the daily market price of shares of the Fund and the Fund’s net asset value (NAV). The vertical axis of the chart shows the premium or discount of the daily market price as a percentage of the NAV. The horizontal axis shows each trading day in the time period, and each data point in the chart represents the Premium/Discount on that day.
+L175: The data presented in the chart and table above represent past performance and cannot be used to predict future results.
+L176: ## Performance History
+L177: 
+L178: Cumulative %
+L179: 
+L180: Data as of: 09/30/2026
+L181: 
+L182:  | Fund NAV  | Closing Price  | Underlying Index
+L183: 1 Month  | 4.06%  | 3.98%  | 4.21%
+L184: 3 Month  | 12.89%  | 12.97%  | 13.29%
+L185: 6 Month  | 10.32%  | 10.25%  | 11.05%
+L186: YTD  | 19.23%  | 19.81%  | 20.27%
+L187: Since Inception  | 58.62%  | 59.08%  | 75.94%
+L188: 
+L189: Avg Annualized %
+L190: 
+L191: Data as of quarter end: 09/30/2026
+L192:  | Fund NAV  | Closing Price  | Underlying Index
+L193: 1 Year  | 20.67%  | 21.24%  | 22.16%
+L194: 3 Year  | 0.41%  | 0.35%  | 1.51%
+L195: 5 Year  | 5.94%  | 6.53%  | 7.98%
+L196: Since Inception  | 8.23%  | 8.28%  | 10.17%
+L197: The performance data quoted represents past performance. Past performance does not guarantee future results. The investment return and principal value of an investment will fluctuate so that an investor's shares, when sold or redeemed, may be worth more or less than their original cost and current performance may be lower or higher than the performance quoted.
+L198: ## Distribution History
+L199: 
+L200: 2025 Distributions
+L201: 
+L202: Ex-Date  | Record Date  | Payable Date  | Amount
+L203: 03/27/2025  | 03/28/2025  | 03/31/2025  | 0.000000
+L204: 12/22/2025  | 12/22/2025  | 12/23/2025  | 1.303457
+L205: Future calendar dates are subject to change. There is no guarantee that dividends will be paid. Past distributions are not indicative of future trends. This material is provided for educational purposes only and does not constitute investment advice.
+L206: Distributions are issued to brokers on the payable date, and are subject to broker payment schedules.
+L207: 
+L208: 2024 Distributions
+L209: Ex-Date  | Record Date  | Payable Date  | Amount
+L210: 03/26/2024  | 03/27/2024  | 03/28/2024  | 0.000000
+L211: 06/27/2024  | 06/27/2024  | 06/28/2024  | 0.000000
+L212: 09/27/2024  | 09/27/2024  | 09/30/2024  | 0.000000
+L213: 12/17/2024  | 12/17/2024  | 12/18/2024  | 0.230111
+L214: 
+L215: 2023 Distributions
+L216: 
+L217: Ex-Date  | Record Date  | Payable Date  | Amount
+L218: 09/27/2023  | 09/28/2023  | 09/29/2023  | 0.000000
+L219: 12/18/2023  | 12/19/2023  | 12/20/2023  | 0.000000
+L220: 
+L221: 2022 Distributions
+L222: Ex-Date  | Record Date  | Payable Date  | Amount
+L223: 12/28/2022  | 12/29/2022  | 12/30/2022  | 4.037692
+L224: 
+L225: 2021 Distributions
+L226: 
+L227: Ex-Date  | Record Date  | Payable Date  | Amount
+L228: 12/29/2021  | 12/30/2021  | 12/31/2021  | 1.838123
+L229: 
+L230: Research & Insights
+L231: 
+L232: cite4†View All L233: 
+L234: News & Media
+L235: 
+L236: cite27†View All L237: 
+L238: [Input: ] [Input]
+L239: 
+L240: Topics:
+L241: 
+L242: Browse by Category
+L243: 
+L244: cite28†Webinars L245: 
+L246: cite29†Reports L247: 
+L248: cite30†Live Events L249: 
+L250: cite4†All Categories L251: 
+L252: cite31†ETFs 101 L253: 
+L254: cite32†5G & Semiconductors ETFs L255: 
+L256: cite33†AGIX Portfolio Manager Notes L257: cite34†Artificial Intelligence ETFs L258: 
+L259: cite35†Carbon Credit ETFs L260: 
+L261: cite36†China Internet ETFs L262: 
+L263: cite37†Electric Vehicles ETFs L264: 
+L265: cite38†Emerging Markets ETFs L266: 
+L267: cite39†Energy Transition ETFs L268: 
+L269: cite40†Fixed Income ETFs L270: 
+L271: cite41†Global Indexes L272: 
+L273: cite42†Global Thematic ETFs L274: 
+L275: cite43†Government Policy L276: 
+L277: cite44†Health Care ETFs L278: 
+L279: cite45†Humanoid Robotics & Embodied Intelligence ETFs L280: 
+L281: cite46†Macroeconomic Trends L282: 
+L283: cite47†Private Equity ETFs L284: 
+L285: cite48†US Equity ETFs L286: ## Growth of $10,000
+L287: 
+L288: Data as of 10/16/2026
+L289: 
+L290: [Button: Since Inception] [Button: 3 Month] [Button: 6 Month] [Button: YTD] [Button: 1 Year] [Button: 3 Years] [Button: 5 Years]
+L291: The Growth of $10,000 chart reflects an initial investment of $10,000 on the day prior to the selected time period and assumes reinvestment of dividends and capital gains. For the growth of $10,000 chart since inception, the initial investment of $10,000 is instead made on the inception date of the Fund. Fund expenses, including management fees and other expenses were deducted. The growth of a $10,000 investment in the fund is hypothetical and for illustration purposes only.
+L292: Fund performance data used in this chart is based on Fund NAV and represents past performance. Past performance does not guarantee future results.
+L293: ## Commodity Exposures
+L294: 
+L295: Data as of 10/16/2026
+L296: Name  | Identifier  | Position  | % NAV
+L297: WTI CRUDE FUTURE DEC26  | CLZ6  | Long  | 7.76%
+L298: SUGAR #11 (WORLD) MAR27  | SBH7  | Long  | 7.75%
+L299: NY HARB ULSD FUT DEC26  | HOZ6  | Long  | 7.25%
+L300: GASOLINE RBOB FUT DEC26  | XBZ6  | Long  | 7.15%
+L301: NATURAL GAS FUTR DEC26  | NGZ26  | Short  | 6.96%
+L302: GOLD 100 OZ FUTR DEC26  | GCZ6  | Short  | 6.93%
+L303: COPPER FUTURE DEC26  | HGZ6  | Long  | 6.87%
+L304: WHEAT FUTURE(CBT) DEC26  | W Z6  | Long  | 6.76%
+L305: SOYBEAN FUTURE MAR27  | S H7  | Long  | 6.75%
+L306: LIVE CATTLE FUTR DEC26  | LCZ6  | Short  | 4.39%
+L307: CORN FUTURE DEC26  | C Z6  | Long  | 3.43%
+L308: ## Currency Exposures
+L309: 
+L310: Data as of 10/16/2026
+L311: 
+L312: Name  | Identifier  | Position  | % NAV
+L313: CHF CURRENCY FUT DEC26  | SFZ6  | Short  | 16.69%
+L314: C$ CURRENCY FUT DEC26  | CDZ6  | Short  | 16.57%
+L315: BP CURRENCY FUT DEC26  | BPZ6  | Short  | 16.57%
+L316: JPN YEN CURR FUT DEC26  | JYZ6  | Short  | 16.40%
+L317: EURO FX CURR FUT DEC26  | ECZ6  | Short  | 16.34%
+L318: AUDUSD CRNCY FUT DEC26  | ADZ6  | Long  | 14.91%
+L319: ## Fixed Income Exposures
+L320: 
+L321: Data as of 10/16/2026
+L322: 
+L323: Name  | Identifier  | Position  | % NAV
+L324: US 10YR ULTRA FUT DEC26  | UXYZ6  | Short  | 26.30%
+L325: CAN 10YR BOND FUT DEC26  | CNZ6  | Short  | 26.29%
+L326: LONG GILT FUTURE DEC26  | G Z6  | Short  | 26.24%
+L327: EURO-BUND FUTURE DEC26  | RXZ6  | Short  | 26.04%
+L328: JPN 10Y BOND(OSE) DEC26  | JBZ6  | Short  | 25.95%
+L329: ## Collateral and Currency Management
+L330: 
+L331: Data as of 10/16/2026
+L332: Name  | Identifier  | Position  | Current Exposure($)  | % NAV
+L333: Cash  | –  | 201,281,301  | 201,281,301  | 34.06%
+L334: B 11/17/26  | –  | 90,000,000  | 89,714,278  | 15.18%
+L335: B 10/29/26  | –  | 80,000,000  | 79,915,278  | 13.52%
+L336: B 12/01/26  | –  | 80,000,000  | 79,621,122  | 13.47%
+L337: B 11/03/26  | –  | 75,000,000  | 74,878,727  | 12.67%
+L338: B 10/20/26  | –  | 70,000,000  | 69,992,621  | 11.84%
+L339: BRITISH STERLING POUND  | –  | 1,695,989  | 2,260,505  | 0.38%
+L340: CANADIAN DOLLAR  | –  | 1,329,058  | 939,894  | 0.16%
+L341: EURO  | –  | 117,428  | 131,983  | 0.02%
+L342: JAPANESE YEN  | –  | 815,976  | 5,165  | 0.00%
+L343:  | 598,740,873  | 101%
+L344: Holdings, futures, and collateral are subject to change.
+L345: ## Top 10 Holdings
+L346: 
+L347: Data as of 10/16/2026 cite49†Full Holdings .CSV L348: Rank  | Name  | % of Net Assets  | Ticker  | Identifier  | Type  | Shares Held  | Market Value($)  | Notional Value($)
+L349: 1  | Cash  | 33.62%  | –  | –  | Cash  | 201,281,301  | 201,281,301  | 0
+L350: 2  | B 11/17/26  | 14.98%  | –  | US912797VX25  | Treasury Bill  | 90,000,000  | 89,714,278  | 0
+L351: 3  | B 10/29/26  | 13.35%  | –  | US912797SK41  | Treasury Bill  | 80,000,000  | 79,915,278  | 0
+L352: 4  | B 12/01/26  | 13.30%  | –  | US912797VZ72  | Treasury Bill  | 80,000,000  | 79,621,122  | 0
+L353: 5  | B 11/03/26  | 12.51%  | –  | US912797VP90  | Treasury Bill  | 75,000,000  | 74,878,727  | 0
+L354: 6  | B 10/20/26  | 11.69%  | –  | US912797VM69  | Treasury Bill  | 70,000,000  | 69,992,621  | 0
+L355: 7  | BRITISH STERLING POUND  | 0.38%  | –  | –  | Currency  | 1,695,989  | 2,260,505  | 0
+L356: 8  | CANADIAN DOLLAR  | 0.16%  | –  | –  | Currency  | 1,329,058  | 939,894  | 0
+L357: 9  | EURO  | 0.02%  | –  | –  | Currency  | 117,428  | 131,983  | 0
+L358: 10  | JAPANESE YEN  | 0.00%  | –  | –  | Currency  | 815,976  | 5,165  | 0
+L359: 11  | WTI CRUDE FUTURE DEC26  | 0.00%  | CLZ6  | –  | Future  | 463  | 0  | 45,846,260
+L360: 12  | WHEAT FUTURE(CBT) DEC26  | 0.00%  | W Z6  | –  | Future  | 1,210  | 0  | 39,960,250
+L361: 13  | US 10YR ULTRA FUT DEC26  | 0.00%  | UXYZ6  | –  | Future  | -1,457  | 0  | -155,443,688
+L362: 14  | SUGAR #11 (WORLD) MAR27  | 0.00%  | SBH7  | –  | Future  | 1,962  | 0  | 45,816,624
+L363: 17  | NATURAL GAS FUTR DEC26  | 0.00%  | NGZ26  | –  | Future  | -1,214  | 0  | -41,106,040
+L364: 18  | LONG GILT FUTURE DEC26  | 0.00%  | G Z6  | –  | Future  | -1,373  | 0  | -155,093,166
+L365: 19  | LIVE CATTLE FUTR DEC26  | 0.00%  | LCZ6  | –  | Future  | -284  | 0  | -25,940,560
+L366: 20  | JPN YEN CURR FUT DEC26  | 0.00%  | JYZ6  | –  | Future  | -1,220  | 0  | -96,921,375
+L367: 21  | JPN 10Y BOND(OSE) DEC26  | 0.00%  | JBZ6  | –  | Future  | -193  | 0  | -153,354,347
+L368: 22  | GOLD 100 OZ FUTR DEC26  | 0.00%  | GCZ6  | –  | Future  | -98  | 0  | -40,974,780
+L369: 23  | GASOLINE RBOB FUT DEC26  | 0.00%  | XBZ6  | –  | Future  | 320  | 0  | 42,259,392
+L370: 24  | EURO-BUND FUTURE DEC26  | 0.00%  | RXZ6  | –  | Future  | -1,126  | 0  | -153,918,221
+L371: 25  | EURO FX CURR FUT DEC26  | 0.00%  | ECZ6  | –  | Future  | -686  | 0  | -96,550,213
+L372: 28  | CHF CURRENCY FUT DEC26  | 0.00%  | SFZ6  | –  | Future  | -646  | 0  | -98,624,013
+L373: 29  | CAN 10YR BOND FUT DEC26  | 0.00%  | CNZ6  | –  | Future  | -1,884  | 0  | -155,391,196
+L374: 30  | C$ CURRENCY FUT DEC26  | 0.00%  | CDZ6  | –  | Future  | -1,382  | 0  | -97,928,520
+L375: 31  | BP CURRENCY FUT DEC26  | 0.00%  | BPZ6  | –  | Future  | -1,176  | 0  | -97,916,700
+L376: 32  | AUDUSD CRNCY FUT DEC26  | 0.00%  | ADZ6  | –  | Future  | 1,271  | 0  | 88,131,140
+L377: View All Holdings
+L378: Holdings are subject to change.
+L379: ## Fund Documents
+L380: 
+L381: cite50†Statutory Prospectus†www.kraneshares.com cite51†Summary Prospectus†www.kraneshares.com cite52†SAI†www.kraneshares.com cite53†Annual TSR Report cite54†Annual Financials And Other Information†www.kraneshares.com cite55†Semi Annual TSR Report cite56†Semi Annual Financials And Other Information†www.kraneshares.com L382:   * cite2†Schedule of Investments L383: cite57†December 2024 Schedule Of Investments cite58†June 2024 Schedule Of Investments L384: ## FAQ
+L385: 
+L386: What is the ticker symbol for the KraneShares Mount Lucas Managed Futures Index Strategy ETF?
+L387: 
+L388: The KraneShares Mount Lucas Managed Futures Index Strategy ETF trades on the NYSE under the ticker symbol KMLM.
+L389: 
+L390: What are the fees for the KraneShares Mount Lucas Managed Futures Index Strategy ETF?
+L391: 
+L392: The expense ratio, or total annual fund operating expense, for the KraneShares Mount Lucas Managed Futures Index Strategy ETF is 0.90%.
+L393: Does the KraneShares Mount Lucas Managed Futures Index Strategy ETF pay distributions?
+L394: KMLM can have distributions depending on factors such as capital gains, dividends, and unrealized gains in passive foreign investment corporations (PFICs). To view KMLM's historical distributions, you can visit the cite17†Distributions section on this page. Learn more about distributions by reading cite59†our capital gains FAQ . Please consult a financial advisor or tax professional for distribution advice relevant to your particular situation.
+L395: 
+L396: You are now leaving KraneShares.com
+L397: Hyperlinks on this website are provided as a convenience and we disclaim any responsibility for information, services or products found on the websites linked hereto.
+L398: 
+L399: cite2†Click here to continue L400: 
+L401: Invest in KMLM Through Your Broker
+L402: You are now leaving KraneShares.com. Hyperlinks on these websites are provided as a convenience and we disclaim any responsibility for information, services or products found on the websites linked hereto.
+L403: For questions on how to invest in KraneShares ETFs, please refer to cite60†ETF Trading 101 .
+L404: 
+L405: cite61†Image†px.ads.linkedin.com --------------------------------------------------------------------------------
+Internal Error ()
+citeturn1021view1 [wordlim: 200] Source: open({"ref_id":"https://kraneshares.com/resources/compliance/2024_03_31_kraneshares_annual.report.pdf","lineno":null}); Total lines: 1
+L0: Failed to fetch https://kraneshares.com/resources/compliance/2024_03_31_kraneshares_annual.report.pdf: (404) Not Found

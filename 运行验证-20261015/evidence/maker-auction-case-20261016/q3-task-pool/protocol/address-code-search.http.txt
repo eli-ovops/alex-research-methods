@@ -1,0 +1,14 @@
+HTTP/2.0 200 OK
+Content-Type: application/json
+Date: Fri, 16 Oct 2026 06:40:24 GMT
+Server: github.com
+Vary: accept-encoding
+X-Github-Edge-Region: japaneast
+X-Github-Request-Id: D9C2:1703D7:2C39D4:42B452:6AD1C6D8
+X-Ratelimit-Limit: 10
+X-Ratelimit-Remaining: 8
+X-Ratelimit-Reset: 1792132872
+X-Ratelimit-Resource: code_search
+X-Ratelimit-Used: 2
+
+{"total_count":0,"incomplete_results":false,"items":[]}

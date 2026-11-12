@@ -1,0 +1,30 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 19:09:59 GMT
+Etag: W/"89ba1cc33968c8dc266a2da7bcb8d682e5c59bfab338039eddd48e6bd80554f1"
+Last-Modified: Mon, 24 Jul 2023 12:54:42 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 5DEA:12C179:A34D27:FE1088:6AD27687
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4975
+X-Ratelimit-Reset: 1792180270
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 25
+X-Xss-Protection: 0
+
+{"url":"https://api.github.com/repos/bancorprotocol/fastlane-bot/releases/113317544","assets_url":"https://api.github.com/repos/bancorprotocol/fastlane-bot/releases/113317544/assets","upload_url":"https://uploads.github.com/repos/bancorprotocol/fastlane-bot/releases/113317544/assets{?name,label}","html_url":"https://github.com/bancorprotocol/fastlane-bot/releases/tag/v1.0","id":113317544,"author":{"login":"mikewcasale","id":46603283,"node_id":"MDQ6VXNlcjQ2NjAzMjgz","avatar_url":"https://avatars.githubusercontent.com/u/46603283?v=4","gravatar_id":"","url":"https://api.github.com/users/mikewcasale","html_url":"https://github.com/mikewcasale","followers_url":"https://api.github.com/users/mikewcasale/followers","following_url":"https://api.github.com/users/mikewcasale/following{/other_user}","gists_url":"https://api.github.com/users/mikewcasale/gists{/gist_id}","starred_url":"https://api.github.com/users/mikewcasale/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mikewcasale/subscriptions","organizations_url":"https://api.github.com/users/mikewcasale/orgs","repos_url":"https://api.github.com/users/mikewcasale/repos","events_url":"https://api.github.com/users/mikewcasale/events{/privacy}","received_events_url":"https://api.github.com/users/mikewcasale/received_events","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOJNPit84GwRao","tag_name":"v1.0","target_commitish":"main","name":"Release v1.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2023-05-23T18:33:31Z","updated_at":"2023-07-24T12:54:42Z","published_at":"2023-07-24T12:54:42Z","assets":[],"tarball_url":"https://api.github.com/repos/bancorprotocol/fastlane-bot/tarball/v1.0","zipball_url":"https://api.github.com/repos/bancorprotocol/fastlane-bot/zipball/v1.0","body":"v1.0 - Initial Release Note: This is the original `fastlane_bot` codebase, solely designed to facilitate single triangle arbitrage transactions, which both initiate and conclude with BNT on the Bancor V3 exchange. Be aware that this particular version is headed towards deprecation. Future updates are planned to introduce drastic alterations, including an entirely restructured architecture."}

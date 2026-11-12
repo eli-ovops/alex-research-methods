@@ -1,0 +1,37 @@
+# Liquity V2 公开机会输入：静态字段与执行差异
+
+固定官方审计版本：abe7cbfbd465fba3812282c51773455766a70e96。只新增6个小源码GET：MultiTroveGetter、SortedTroves、LiquidateTrove示例、WETHPriceFeed、AddressesRegistry、MainnetPriceFeedBase；每份原API响应、解码文本、UTC/URL/SHA在receipts.json和source-reuse-and-integrity.json。6个Git blob均独立核相同。已有TroveManager/Constants与audit-final字节再比相同；部署源包所带接口/类型只复用，不扩称全部45源与audit commit比对完成。
+
+## 枚举不是风险排序
+
+TM提供getTroveIdsCount及getTroveFromTroveIdsArray。活仓/zombie仍在数组，关闭时swap-and-pop移除；数组顺序无风险含义，跨区块分页可因重排漏/重记录。getTroveStatus单独识别active/zombie；只扫描SortedTroves不完整：小债务仓可被标zombie并从排序表移除，但清算入口接受active或zombie。
+
+SortedTroves源码明确按借款人年利率降序，而非抵押率、清算价或风险。MTG的非负startIdx从head向next，负值从tail向prev；只能把返回值当分页读取，不可把前/后N个当最危险仓。getDebtPerInterestRateAscending仅汇总年利率/债务，本来就不输出风险。
+
+## 债务与门槛
+
+MTG._getOneTrove调用TM.getLatestTroveData而非只返回存储的debt/coll，故会包含累计利息、再分配抵押/债务；批仓再含累计管理费。它仍省略status、MCR、oracle价格与SP状态，单独不足以判断资格。具体CombinedTroveData和LatestTroveData字段见已保存类型。
+
+getCurrentICR(id,price)与清算共用_getLatestTroveData：按entireColl*price/entireDebt，debt为0则返回uint256最大值。raw Troves.debt/coll、旧索引快照或裸NFT参数不能代替这些entire值。MCR不是可无条件硬编码的全协议常数；TM内部immutable从对应AddressesRegistry.MCR读取，registry是public immutable getter。IAddressesRegistry接口声明没标view，不改变具体合约getter只读性质，不据此推断必须发送交易。
+
+实际WETH TM的既存构造参数记录指向registry0x20F7C9ad66983F6523a0881d0f82406541417526；本次未GET该registry部署源码/读取实际MCR数值，只给出可读公开路线。各分支MCR与PriceFeed不能混用；特别不能把WETH feed直接当wstETH分支feed。
+
+## 状态吻合与真实执行差异
+
+在同一block状态、同一价格参数下，getCurrentICR与执行中ICR计算共享函数，MTG债务也没有故意落后一轮利息。区别在于执行重新fetchPrice、使用执行block.timestamp、仓位当前status与批量剩余SP；读取后的其他交易、借款人还款/加抵押、竞争清算、利息时间及oracle更新会改变结果。这里是可识别的状态差异，不是“getter错了”。
+
+清算判定是active/zombie且ICR严格<MCR，不能把CCR或SCR当该入口的个仓门槛。batch入口本身没有必须未shutdown的前置条件；shutdown会影响价格源和计息终点，不应一概把shutdown当不可清算。另有OnlyOneTroveLeft保护：不能清算最后剩余仓位，甚至可能使一个试图清空分支的批量调用回滚。若整批没有实际债务减少则NothingToLiquidate。这里只列源码可见主要条件，未做全路径形式验证或成功保证。
+
+SP可用量=totalBoldDeposits-min(1e18,totalBoldDeposits)，不是余额全部可offset。每个成功会减少批内剩余可用量；债务offset与再分配比例影响抵押补偿。可变补偿基于collSPPortion/200且上限2个抵押资产单位，纯再分配不直接套整个coll/200；固定补偿0.0375WETH另算。SP不足不等于任何清算必然不能发生，也不能以一个初始SP余额让每个候选都享受全额offset。gas和竞价/失败成本为另一输入层，由根核。
+
+## 主网价格与示例陷阱
+
+WETH feed在primary状态读取Chainlink ETH/USD latestRoundData，检查调用成功、answer>0、updatedAt距block.time严格小于stalenessThreshold，8位报价缩放为18位。异常会调用BorrowerOperations.shutdownFromOracleFailure并切lastGoodPrice；fetchPrice返回(price,newFailureFlag)，不是view。TM使用这次fetchPrice结果，不会验证用户传给getCurrentICR的假想price。lastGoodPrice是上次成功记录，不自动等于下一执行报价；不能拿交易所即时价替代协议feed。读取/eth_call即使未来获授权执行，也只说明某状态下可读/可计算，不能保证到纳入区块仍成立；本次没有执行任何eth_call/EVM。
+
+官方LiquidateTrove.s.sol SPDX MIT，但它读取IPriceFeedTestnet，先getPrice，再setPrice人为改为(MCR-0.01ether)*entireDebt/entireColl，执行后恢复。含vm.startBroadcast与测试价格设置，**是受控测试演示，不是主网机会发现器，更不能当私人bot已公开**。本次只读未运行，不读任何.env或实际配置。
+
+## 可复用与未确认
+
+可复用的是公开接口、状态字段、版本核对和确定区块下的资格/补偿算术；无需先获得私人bot源码才知道这些字段。仍UNKNOWN的是本轮目标RPC可达性/费用、当前部署getter身份与参数实际数值、分页规模/刷新负担、竞价和机会失效时效、私人选择程序及个人可捕获净收入。本分支不把这些未来能力设为否认已确认历史七次正净账的门槛。
+
+许可按文件：TM/Constants/MTG/AddressesRegistry BUSL-1.1（沿既有核心研究许可边界），SortedTroves/WETH feeds/本示例与所复用若干接口为MIT；不把混合源码统称MIT或任意生产复制许可。调用公开接口、复制核心合约和复制测试脚本是不同层次。

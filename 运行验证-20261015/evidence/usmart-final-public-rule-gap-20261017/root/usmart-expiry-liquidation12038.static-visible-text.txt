@@ -1,0 +1,127 @@
+FAQ Details | Help Center | uSMART Securities
+You are browsing the Hong Kong website, Regulated by Hong Kong SFC (CE number: BJA907). Investment is risky and you must be cautious when entering the market.
+Trading
+US Stock
+HK Stock
+ETF
+US Stock Options
+US Stock Pre-Market Option Trading
+Funds
+US Fractional Shares
+Bonds
+A Stock
+Margin Account
+IPO
+Futures
+Structured Notes
+Market
+Stock Quotes
+Institutions
+Fees
+Service Fees
+Quote Services
+Promotions
+Help Center
+uSMARTPORT
+Investment Courses
+Market News
+Seminar
+Download
+Download uSMART APP
+Download Futures APP
+About
+About us
+Important Notice
+Join Us
+Hong Kong
+Hong Kong
+Singapore
+United States
+Group
+EN
+繁體中文
+简体中文
+English
+Login/Register
+English
+返回
+繁體中文
+简体中文
+English
+Hong Kong
+返回
+Hong Kong
+Singapore
+United States
+Group
+Trading
+US Stock
+HK Stock
+ETF
+US Stock Options
+US Stock Pre-Market Option Trading
+Funds
+US Fractional Shares
+Bonds
+A Stock
+Margin Account
+IPO
+Futures
+Structured Notes
+Market
+Stock Quotes
+Institutions
+Fees
+Service Fees
+Quote Services
+Promotions
+Help Center
+uSMARTPORT
+Investment Courses
+Market News
+Seminar
+Download
+Download uSMART APP
+Download Futures APP
+About
+About us
+Important Notice
+Join Us
+uSmart Securities Limited is a corporation licensed by the Hong Kong Securities and Futures Commission (CE No.: BJA907) and is authorised to carry on Type 1 (Dealing in Securities), Type 2 (Dealing in Futures Contracts), Type 4 (Advising on Securities), Type 5 (Advising on Futures Contracts), Type 6 (Advising on Corporate Finance) and Type 9 (Asset Management) regulated activities.
+Login/Register
+×
+Help Center
+Help Center
+末日期權强平規則説明
+末日期權（到期日）强平規則：
+業務類型
+末日期權強平規則說明
+買入看漲期權
+系統會持續監測客戶的賬戶持倉，不定時計算行權所需的保證金（一般在收盤前1小時），如價內和價外小於5%的如果行權保證金不足，盈立將保留隨時平倉末日期權的權利，進行賣出强平。
+買入看跌期權
+系統會持續監測客戶的賬戶持倉，如價內和價外小於5%的，盈立將保留隨時平倉末日期權的權利，進行賣出强平。
+賣出看漲期權
+未持倉Short Call：系統會持續監測客戶的賬戶持倉，如價內和價外小於5%的，盈立將保留隨時平倉末日期權的權利，進行買入强平
+Covered Call：價內支持行權, 價外作廢
+賣出看跌期權
+系統會持續監測客戶的賬戶持倉，不定時計算行權所需的保證金（一般在收盤前1小時），如價內和價外小於5%的如果被動行權對應的行權保證金不足，盈立將保留隨時平倉末日期權的權利，進行買入强平。
+Business Collaboration
+Register now
+Services
+Fees
+FAQ
+Exclusive Trading Tools
+About Us
+Overview
+Contact Us
+Media Center
+Agreement Statement
+Disclaimer
+Privacy Statement
+CS Hotline:
++852 3018 4526
+Trading days: 24 hours | Non-trading days: 9:00-18:00
+Email: [REDACTED_EMAIL]
+WhatsApp: +852 5989 2641
+uSmart Securities Limited is a corporation licensed by the Hong Kong Securities and Futures Commission (CE No.: BJA907) and is authorised to carry on Type 1 (Dealing in Securities), Type 2 (Dealing in Futures Contracts), Type 4 (Advising on Securities), Type 5 (Advising on Futures Contracts), Type 6 (Advising on Corporate Finance) and Type 9 (Asset Management) regulated activities.
+Please login first

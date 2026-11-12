@@ -1,0 +1,15 @@
+{"status": "RUNNING", "child_pid": 46182, "max_wall_seconds": 0.15}
+{"status": "PROCESS_LIVE", "child_pid": 46182, "wall_seconds": 0.0, "progress": null}
+{"status": "PROCESS_LIVE", "child_pid": 46182, "wall_seconds": 0.1, "progress": null}
+{"status": "PROCESS_LIVE", "child_pid": 46182, "wall_seconds": 0.1, "progress": null}
+{"status": "PROCESS_LIVE", "child_pid": 46182, "wall_seconds": 0.2, "progress": null}
+{"started_at_utc": "2026-10-15T06:13:27.634066+00:00", "parent_pid": 46181, "command": ["/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/.venv/bin/python", "-c", "import time; time.sleep(60)"], "max_wall_seconds": 0.15, "status": "DEADLINE_STOP", "scope": "one owned child process group only", "child_pid": 46182, "finished_at_utc": "2026-10-15T06:13:27.787536+00:00", "child_exit_code": -9, "wall_seconds": 0.15312737500062212, "received_signal": null}
+{"status": "RUNNING", "child_pid": 46183, "max_wall_seconds": 5}
+{"started_at_utc": "2026-10-15T06:13:27.788883+00:00", "parent_pid": 46181, "command": ["/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/.venv/bin/python", "-c", "print(\"software-only\")"], "max_wall_seconds": 5, "status": "CHILD_EXITED", "scope": "one owned child process group only", "child_pid": 46183, "finished_at_utc": "2026-10-15T06:13:27.809958+00:00", "child_exit_code": 0, "wall_seconds": 0.02081349998479709, "received_signal": null}
+test_deadline_terminates_owned_process (test_launch_transfer50.DeadlineTests.test_deadline_terminates_owned_process) ... ok
+test_terminal_child_and_duplicate_attempt_refused (test_launch_transfer50.DeadlineTests.test_terminal_child_and_duplicate_attempt_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.177s
+
+OK

@@ -1,0 +1,10 @@
+test_expired_deadline_before_auth_or_prompt (test_one_read_diagnostic.Driver) ... ok
+test_failure_is_one_call_no_fallback (test_one_read_diagnostic.Driver) ... ok
+test_no_collector_import_and_single_literal_RPC_site (test_one_read_diagnostic.Driver) ... ok
+test_only_fixed_method_once_budget_and_separate_lock (test_one_read_diagnostic.Driver) ... ok
+test_release_hash_and_exact_scope_before_prompt (test_one_read_diagnostic.Driver) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.013s
+
+OK

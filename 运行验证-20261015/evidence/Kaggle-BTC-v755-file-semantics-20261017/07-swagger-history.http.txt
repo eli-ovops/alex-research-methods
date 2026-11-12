@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Sat, 17 Oct 2026 08:14:16 GMT
+Etag: W/"688da711a65e1453ee09a5852f7edb271454d2bd7dad0c29545d46ad3d26a759"
+Last-Modified: Tue, 26 Mar 2024 11:52:08 GMT
+Link: <https://api.github.com/repositories/118854343/commits?path=KaggleSwagger.yaml&per_page=1&page=2>; rel="next", <https://api.github.com/repositories/118854343/commits?path=KaggleSwagger.yaml&per_page=1&page=21>; rel="last"
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: 
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: AAB2:12B46B:F8A993:18BC820:6AD32E58
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4976
+X-Ratelimit-Reset: 1792226983
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 24
+X-Xss-Protection: 0
+
+[{"sha":"8891e72a35f16fa14e0b1eb8ccbb449d54463fa3","node_id":"C_kwDOBxWSx9oAKDg4OTFlNzJhMzVmMTZmYTE0ZTBiMWViOGNjYmI0NDlkNTQ0NjNmYTM","commit":{"author":{"name":"Philippe Modard","email":"[REDACTED_EMAIL]","date":"2024-03-26T11:52:08Z"},"committer":{"name":"GitHub","email":"[REDACTED_EMAIL]","date":"2024-03-26T11:52:08Z"},"message":"Move the source of truth of kaggle-api development to this repository (#557)\n\nhttp://b/325046928","tree":{"sha":"273fcc153f416dbcac2bde8ba12382d99f16be00","url":"https://api.github.com/repos/Kaggle/kaggle-cli/git/trees/273fcc153f416dbcac2bde8ba12382d99f16be00"},"url":"https://api.github.com/repos/Kaggle/kaggle-cli/git/commits/8891e72a35f16fa14e0b1eb8ccbb449d54463fa3","comment_count":0,"verification":{"verified":true,"reason":"valid","signature":"-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJmArboCRC1aQ7uu5UhlAAAcfEQAAmgd0i1hsVcRx9M6iwY3b83\neUV5lHoIM5lnFUcrMp5owPh3nQwqu6xBdRRNUFhtFG93yDz6A0tKyC7sM2d6/1Jf\nyCLsBlnx1gtUBinrj+z44uyqZCnigrlAb+e7LkI1nI6HMgZmCUgYx2HQwxqYmjgu\n9COGmcpWOlpSqr9AHIeWekRYXS0MjeJunpAKdkQJTZyL4MQjYT0g/8JHpeTeKofx\nrYYhimBmC7GaY7mhL7HZcOxPSzV5+RBitfphy3eRvzkGMRqMkCF2TfJS/v3sLUVY\noacy194IiGAftVXgaspA998dokSpN7k1nLWFLvdkY/zSG7jx0hzc701rw+WIr+5n\nS4Jcp46dq9ondpIV2GEeqW9TAf2dW494EmfOqm6E8CQp6TvfBEUlhl8fjYKFRP+2\n/9SjE5MHE0pJ561EGc++EkFe1ZVfxkPrYjutoWwoaIS8e7I69P0Q4zucrWh3CDaA\nMCLkKm5T/or7/ToQStILHjoKouK3XncjngtnC8Z7puWiWhW/1Vk6mJC/mEk3YV4q\n5Sp0ssMjFknepm/BviWryJ4p3QlFXxjmzVGqVpeYxgGxL9b67Lh1yQvpWy3DLWY8\nDuSELb9hP2kJ1VR1zriw5EBehIhP9HiYqpTaiuP2S6t7xJmVtBx85eX6Zvyiq8SF\nT3BBAl1TW7+BncJvtHSc\n=pLYk\n-----END PGP SIGNATURE-----\n","payload":"tree 273fcc153f416dbcac2bde8ba12382d99f16be00\nparent 8c3066490a9393a7261be05c105614594974f7ae\nauthor Philippe Modard <[REDACTED_EMAIL]> 1711453928 -0400\ncommitter GitHub <[REDACTED_EMAIL]> 1711453928 +0100\n\nMove the source of truth of kaggle-api development to this repository (#557)\n\nhttp://b/325046928","verified_at":"2024-11-05T00:21:45Z"}},"url":"https://api.github.com/repos/Kaggle/kaggle-cli/commits/8891e72a35f16fa14e0b1eb8ccbb449d54463fa3","html_url":"https://github.com/Kaggle/kaggle-cli/commit/8891e72a35f16fa14e0b1eb8ccbb449d54463fa3","comments_url":"https://api.github.com/repos/Kaggle/kaggle-cli/commits/8891e72a35f16fa14e0b1eb8ccbb449d54463fa3/comments","author":{"login":"Philmod","id":818310,"node_id":"MDQ6VXNlcjgxODMxMA==","avatar_url":"https://avatars.githubusercontent.com/u/818310?v=4","gravatar_id":"","url":"https://api.github.com/users/Philmod","html_url":"https://github.com/Philmod","followers_url":"https://api.github.com/users/Philmod/followers","following_url":"https://api.github.com/users/Philmod/following{/other_user}","gists_url":"https://api.github.com/users/Philmod/gists{/gist_id}","starred_url":"https://api.github.com/users/Philmod/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Philmod/subscriptions","organizations_url":"https://api.github.com/users/Philmod/orgs","repos_url":"https://api.github.com/users/Philmod/repos","events_url":"https://api.github.com/users/Philmod/events{/privacy}","received_events_url":"https://api.github.com/users/Philmod/received_events","type":"User","user_view_type":"public","site_admin":false},"committer":{"login":"web-flow","id":19864447,"node_id":"MDQ6VXNlcjE5ODY0NDQ3","avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=4","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","user_view_type":"public","site_admin":false},"parents":[{"sha":"8c3066490a9393a7261be05c105614594974f7ae","url":"https://api.github.com/repos/Kaggle/kaggle-cli/commits/8c3066490a9393a7261be05c105614594974f7ae","html_url":"https://github.com/Kaggle/kaggle-cli/commit/8c3066490a9393a7261be05c105614594974f7ae"}]}]

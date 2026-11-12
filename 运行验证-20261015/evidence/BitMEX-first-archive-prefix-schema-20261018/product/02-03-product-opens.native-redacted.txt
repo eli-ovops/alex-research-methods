@@ -1,0 +1,9 @@
+Internal Error ()
+citeturn943view0 [wordlim: 200] Source: open({"ref_id":"https://www.bitmex.com/blog/site-announcement/now-live-changes-to-minimum-price-increments-for-xbtusd-and-ethusd","lineno":null}); Total lines: 1
+L0: Failed to fetch https://www.bitmex.com/blog/site-announcement/now-live-changes-to-minimum-price-increments-for-xbtusd-and-ethusd: (404) Not Found
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn943view1 [wordlim: 200] Source: open({"ref_id":"https://www.bitmex.com/app/perpetualContractsGuide","lineno":null}); Total lines: 2
+L0: Failed to fetch official perpetualContractsGuide: tool-reported 500; redirected to https://auth.bitmex.com/oauth2/authorize [query omitted; no auth attempted]
+L1: (non-retryable error)
+

@@ -1,0 +1,237 @@
+Free crypto high-freq market data for quants (https://crypto-lake.com/free-data/)
+citeturn933view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://crypto-lake.com/free-data/","lineno":null}); Total lines: 42
+L0: # Free data
+L1: 
+L2: * * *
+L3: 
+L4: Order-book, tick trades, candles and more
+L5: 
+L6: Try working with high-frequency market data including L2 order-book easily and for free. All you need is `pip install lakeapi` and a jupyter notebook. If you don’t have Python and Jupyter installed on your computer, check out our cite0†online notebook 🕵️†colab.research.google.com .
+L7: 
+L8: ## Example
+L9: 
+L10: cite1†Detailed example code L11: 
+L12: Chart is loading...
+L13: ## Why is order book essential?
+L14: 
+L15: Short-term and mid-term strategies are appreciated for higher returns and faster strategy validation compared to long-term trading. For those strategies, you need detailed market microstructure data including individual trades and order book.
+L16: Order book data are needed for precise backtests, execution simulation, (statistical) arbitrage strategies or market making. Knowing the best price levels or available liquidity allows you to precisely determine for which prices are you able to trade, what liquidity is available in the order book or how much slippage will occur on trade. In the end, you are able to conduct precise backtests, that will closely match real execution.
+L17: How do the order book data look like? Check out the cite2†data schemata and access .
+L18: ## Available data
+L19: 
+L20: We have four data types available with a combined coverage of around a year of data.
+L21: 
+L22: cite3†Image: Available historical data†raw.githubusercontent.com L23: 
+L24: ## Subscribe to get all data
+L25: 
+L26: Want to become more efficient at creating profitable trading strategies and alpha generation? Check our convenient pricing below ↓.
+L27: 
+L28: ### Market data
+L29: 
+L30:   * Subscribe now,
+L31: start your research in 3 minutes.
+L32: 
+L33: [Button: See pricing & subscribe]
+L34: ### Existing subscribers
+L35: 
+L36:   * Upgrade, pause or cancel
+L37: your subscription any time.
+L38: 
+L39: [Button: Manage subscription]
+L40: 
+L41: cite4†Terms of Service , cite5†Privacy policy , cite6†Contact --------------------------------------------------------------------------------
+Data (https://crypto-lake.com/data/)
+citeturn933view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://crypto-lake.com/data/","lineno":null}); Total lines: 196
+L0: # Data
+L1: 
+L2: * * *
+L3: 
+L4: Available data types
+L5: 
+L6: Lake offers the following data types:
+L7:   * trades – trades occurring on the given exchange aggregated by a single taker order and price.
+L8:   * book – market depth (order book) snapshots in high frequency, at least once per 100ms depending on the exchange support. Contains 20 price levels for each order book side.
+L9:   * candles – 1-minute OHLCV candles.
+L10:   * level_1 – a practical derivate of book containing just the first price level on each order book side. book rows containing updates on deeper price levels are skipped, which makes this data type much faster to load and work with.
+L11:   * book_delta_v2 – market depth (order book) updates in high frequency, supports unlimited (eg. 1000+) price levels on each order book side. Has even higher update frequency than book data, but is more complicated to process as you have to build order book model from the updates as shown in cite0†this interactive notebook†colab.research.google.com .
+L12:   * book_1m – 1-minute order book snapshots containing 20 price levels on each order book side.
+L13:   * deep_book_1m – 1-minute order book snapshots containing roughly one thousand price levels on each order book side.
+L14:   * funding – funding and predicted funding rate plus mark_price for futures. On Binance for example this is updated every 3 seconds.
+L15:   * open_interest – open interest for futures. On Binance for example this is updated every 20 seconds.
+L16:   * liquidations – liquidation metrics such as side, price and quantity for futures. On Binance for example this is updated at most once per second.
+L17: All data are partitioned by exchange, symbol and day and you can access any combination of those. Note that level_1 and candles data are just a derivates of book and trades data. Perpetuals/futures symbols have ‘-PERP’ suffix in their name.
+L18: 
+L19: You can find more details about exchange coverage and available history in the cite1†Coverage section.
+L20: ## Access API
+L21: 
+L22: The data are available through an easy-to-use Python API. It offers high-performance parallelized data downloads, supports caching and downloading only new and unseen data once you add more time range or more token pairs to your query. This enables for example complex distributed machine-learning workloads.
+L23:   * API source code: cite2†https://github.com/crypto-lake/lake-api†github.com L24:   * API reference documentation: cite3†https://lake-api.readthedocs.io†lake-api.readthedocs.io L25:   * API package on pypi: cite4†https://pypi.org/project/lakeapi/†pypi.org L26: For advanced users, it’s also possible to access the data directly through AWS S3. The data storage consists of a directory structure eg. `trades/exchange=BINANCE/symbol=BTC-USDT/dt=2022-01-01/random_name.parquet` and contains compressed parquet table files that are easy to load from any programming language. If you use this interface, please implement some kind of caching or don’t download the same data often to stay compliant with our Terms.
+L27: Also be warned that the column names might slightly differ from the Python API and Schemata part of this page.
+L28: Our affordable subscription plan For individuals has 300 GB soft download monthly limit. We also reserve the right to contact customers who scrape all data or misconfigure cache and cause unnecessary traffic in the scale of hundreds of gigabytes. More details can be found in the cite5†Terms of Service .
+L29: ## Schemata
+L30: 
+L31: In all our data types, the origin_time column stands for the time when the event happened on the exchange, received_time is the time when the data was received and processed by our servers close to the exchange (mostly in AWS Tokyo zone).
+L32: ### trades
+L33: 
+L34: name  | pandas type  | example value
+L35: --- | --- | ---
+L36: side  | category  | ‘buy’
+L37: quantity  | float64  | 0.00342
+L38: price  | float64  | 19549.73
+L39: trade_id  | Int64  | 1704373229
+L40: origin_time  | datetime64[ns]  | 1666051199989000192
+L41: received_time  | datetime64[ns]  | 1666051200016254720
+L42: exchange  | category  | ‘BINANCE’
+L43: symbol  | category  | ‘BTC-USDT’
+L44: Note that on SERUM exchange the trades also contain MPID identification of the buying and selling party. This variant of the trades schema is called trades_mpid.
+L45: ### book
+L46: name  | pandas type  | example value
+L47: --- | --- | ---
+L48: origin_time  | datetime64[ns]  | 1666051200014000000
+L49: received_time  | datetime64[ns]  | 1666051200016254720
+L50: sequence_number  | Int64  | 548631456
+L51: bid_0_price  | float64  | 19549.73
+L52: bid_0_size  | float64  | 0.00342
+L53: bid_1_price  | float64  | …
+L54: bid_1_size  | float64  | …
+L55: …  | …  | …
+L56: bid_19_price  | float64  | …
+L57: bid_19_size  | float64  | …
+L58: ask_0_price  | float64  | …
+L59: ask_0_size  | float64  | …
+L60: …  | …  | …
+L61: ask_19_price  | float64  | …
+L62: ask_19_size  | float64  | …
+L63: exchange  | category  | ‘BINANCE’
+L64: symbol  | category  | ‘BTC-USDT’
+L65: ### level_1
+L66: 
+L67: name  | pandas type  | example value
+L68: --- | --- | ---
+L69: origin_time  | datetime64[ns]  | 1666051200014000000
+L70: received_time  | datetime64[ns]  | 1666051200016254720
+L71: bid_0_price  | float64  | 19549.73
+L72: bid_0_size  | float64  | 0.00342
+L73: ask_0_price  | float64  | 19549.75
+L74: ask_0_size  | float64  | 0.00634
+L75: exchange  | category  | ‘BINANCE’
+L76: symbol  | category  | ‘BTC-USDT’
+L77: ### book_delta_v2
+L78: 
+L79: name  | pandas type  | example value
+L80: --- | --- | ---
+L81: origin_time  | datetime64[ns]  | 1666051200014000000
+L82: received_time  | datetime64[ns]  | 1666051200016254720
+L83: sequence_number  | Int64  | 5667521204
+L84: side_is_bid  | boolean  | False
+L85: price  | float64  | 33.97
+L86: size  | float64  | 393.38
+L87: exchange  | category  | ‘BINANCE’
+L88: symbol  | category  | ‘AVAX-USDT’
+L89: ### book_1m
+L90: name  | pandas type  | example value
+L91: --- | --- | ---
+L92: received_time  | datetime64[ns]  | 1666051200016254720
+L93: sequence_number  | Int64  | 548631456
+L94: bid_0_price  | float64  | 19549.73
+L95: bid_0_size  | float64  | 0.00342
+L96: bid_1_price  | float64  | …
+L97: bid_1_size  | float64  | …
+L98: …  | …  | …
+L99: bid_19_price  | float64  | …
+L100: bid_19_size  | float64  | …
+L101: ask_0_price  | float64  | …
+L102: ask_0_size  | float64  | …
+L103: …  | …  | …
+L104: ask_19_price  | float64  | …
+L105: ask_19_size  | float64  | …
+L106: exchange  | category  | ‘BINANCE’
+L107: symbol  | category  | ‘BTC-USDT’
+L108: ### deep_book_1m
+L109: 
+L110: name  | pandas type  | example value
+L111: --- | --- | ---
+L112: received_time  | datetime64[ns]  | 1666051200016254720
+L113: sequence_number  | Int64  | 5667521204
+L114: bid_prices  | list[float64]  | [36.6, 36.2, 36.77, …]
+L115: bid_sizes  | list[float64]  | [100.0, 502.0, …]
+L116: ask_prices  | list[float64]  | [33.97, …]
+L117: ask_sizes  | list[float64]  | [50.0, 74.0, 96.0, …]
+L118: exchange  | category  | ‘BINANCE’
+L119: symbol  | category  | ‘AVAX-USDT’
+L120: ### candles
+L121: 
+L122: name  | pandas type  | example value
+L123: --- | --- | ---
+L124: origin_time  | datetime64[ns]  | 1666051140000000000
+L125: open  | float64  | 19549.73
+L126: high  | float64  | 19549.87
+L127: low  | float64  | 19548.48
+L128: close  | float64  | 19549.86
+L129: volume  | float64  | 0.03388
+L130: trades  | Int64  | 24
+L131: received_time  | datetime64[ns]  | 1666051140004562561
+L132: start  | float64  | 1666051140000000000
+L133: stop  | float64  | 166605120000000000
+L134: exchange  | category  | ‘BINANCE’
+L135: symbol  | category  | ‘BTC-USDT’
+L136: ### funding
+L137: 
+L138: name  | pandas type  | example value
+L139: --- | --- | ---
+L140: origin_time  | datetime64[ns]  | 1682899248008000000
+L141: mark_price  | float64  | 1867.939062
+L142: index_price  | float64  | 0.0
+L143: rate  | float64  | -0.000026
+L144: next_funding_time  | datetime64[ns]  | 1682928000000000000
+L145: received_time  | datetime64[ns]  | 1682899273386438400
+L146: exchange  | category  | ‘BINANCE_FUTURES’
+L147: symbol  | category  | ‘ETH-USDT-PERP’
+L148: 
+L149: Note that index price or mark price may be zero based on exchange or data origin.
+L150: ### open_interest
+L151: 
+L152: name  | pandas type  | example value
+L153: --- | --- | ---
+L154: origin_time  | datetime64[ns]  | 1682899248008000000
+L155: open_interest  | float64  | 92098.846
+L156: received_time  | datetime64[ns]  | 1682899273386438400
+L157: exchange  | category  | ‘BINANCE_FUTURES’
+L158: symbol  | category  | ‘ETH-BUSD-PERP’
+L159: ### liquidations
+L160: 
+L161: name  | pandas type  | example value
+L162: --- | --- | ---
+L163: origin_time  | datetime64[ns]  | 1682899248008000000
+L164: side  | string  | ‘buy’
+L165: quantity  | float64  | 0.457
+L166: price  | float64  | 1942.6
+L167: id  | float64  | -1
+L168: status  | string  | filled
+L169: received_time  | datetime64[ns]  | 1682899273386438400
+L170: exchange  | category  | ‘BINANCE_FUTURES’
+L171: symbol  | category  | ‘ETH-BUSD-PERP’
+L172: Note that some exchanges only publish last liquidation in a given second, here is cite6†documentation for Binance†binance-docs.github.io .
+L173: ### Notes
+L174:   * All quantities, sizes and volumes are in the base asset (eg. BTC in case of BTC-USDT pair).
+L175:   * All times are in nanosecond unix integer timestamp format
+L176:   * All decimal numbers are as floats. This is to ensure good storage and computational performance. You may wish to round them to tick size and convert to Python Decimal or string to get the precise value eg. for a pretty human-readable representation.
+L177:   * Order book data usually don’t contain origin_time. Dataframes with them may contain an empty origin_time column with 0 or -1.
+L178:   * Data for the past day are uploaded every day between 00:00 UTC and 3:00 UTC.
+L179: ## Subscription
+L180: 
+L181: ### Market data
+L182: 
+L183:   * Subscribe now,
+L184: start your research in 3 minutes.
+L185: 
+L186: [Button: See pricing & subscribe]
+L187: 
+L188: ### Existing subscribers
+L189: 
+L190:   * Upgrade, pause or cancel
+L191: your subscription any time.
+L192: 
+L193: [Button: Manage subscription]
+L194: 
+L195: cite5†Terms of Service , cite7†Privacy policy , cite8†Contact 

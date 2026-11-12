@@ -1,0 +1,632 @@
+finmem/README.md at main · xt2201/finmem · GitHub (https://github.com/xt2201/finmem/blob/main/README.md)
+citeturn1035search0 [wordlim: 200] Crawled: today; # FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design ... This repository contains the Python implementation of the paper: FINMEM: A Performance-Enhanced Large Language Model Trading Agent with Layered Memory and Character Design [PDF]
+
+# FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+    
+    `"So we beat on, boats against the current, borne back ceaselessly into the past."
+                                            -- F. Scott Fitzgerald: The Great Gatsby
+    `
+
+This repository contains the Python implementation of the paper: FINMEM: A Performance-Enhanced Large Language Model Trading Agent with Layered Memory and Character Design [PDF]
+
+## Citation
+    
+    @misc{yu2023finmem,
+          title={FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design},
+          author={Yangyang Yu and Haohang Li and Zhi Chen and Yuechen Jiang and Yang Li and Denghui Zhang and Rong Liu and Jordan W. Suchow and Khaldoun Khashanah},
+          year={2023},
+          eprint={2311.13743},
+          archivePrefix={arXiv},
+          primaryClass={q-fin.CP}
+    }
+
+## Overview
+
+FinMem combines:
+
+  * Character/profile prompts for the agent
+  * Layered memory (short/mid/long/reflection)
+  * LLM-based reflection to generate daily trading decisions
+
+In this repository, the runtime has been extended with:
+
+  * US and VN market support
+  * VN news ingestion and optional translation-before-VADER sentiment scoring
+  * Checkpoint resume flow (`sim-checkpoint`)
+  * RL baselines (`DQN`, `A2C`, `PPO`) and comparison plotting
+
+Default embedding model in current config is:
+
+  * `sentence-transformers/all-MiniLM-L6-v2`
+
+## Repository Layout
+    
+    `finmem/
+    |- config/                # Runtime configuration templates
+    |- data/                  # Inputs, checkpoints, outputs
+    |- data-pipeline/         # Data build/eval/visualization scripts
+    |- docs/                  # Additional docs
+    |- figures/               # Generated plots
+    |- puppy/                 # Core FinMem agent/runtime code
+    |- rl/                    # RL baseline training/eval utilities
+    |- tests/                 # Regression and validation tests
+    |- run.py                 # Typer CLI entrypoint
+    |- run_paper_eval.sh      # Near-paper split helper (train+test)
+    |- run_cerebras.sh        # Simple Cerebras wrapper script
+    |- run_gemini.sh          # Simple Gemini-compatible wrapper script
+    |- run_tgi.sh             # Simple TGI-compatible wrapper script
+    |- scripts/               # Batch / isolated-paper / env-stack helpers
+    |- setup.sh               # One-command setup for sample data flow
+    |- pyproject.toml
+    |- README.md
+    `
+
+## Evaluate and Visualize
+
+Compute metrics for 5 measures (`FinMem`, `Buy & Hold`, `A2C`, `DQN`, `PPO`):
+    
+    python data-pipeline/07-metrics.py \
+      --market US \
+      --ticker TSLA \
+      --start 2022-10-06 \
+      --end 2023-04-10 \
+      --market-data-path data/03_model_input/tsla.pkl \
+      --state-dict-path data/09_results/agent_1/state_dict.pkl \
+      --actions-output-dir data/09_results \
+      --save-path data/09_results/TSLA_metrics_5measures.csv
+
+Plot cumulative return comparison with 5 curves:
+    
+    python data-pipeline/06-Visualize-results.py \
+      --market US \
+      --ticker TSLA \
+      --start 2022-10-06 \
+      --end 2023-04-10 \
+      --market-data-path data/03_model_input/tsla.pkl \
+      --state-dict-path data/09_results/agent_1/state_dict.pkl \
+      --actions-output-dir data/09_results \
+      --save-path data/09_results/TSLA_5measures.png
+
+## RL Baselines and Comparison Plot
+
+Train RL baselines and generate comparison plot:
+    
+    python run.py sim-rl \
+      --algorithm all \
+--------------------------------------------------------------------------------
+GitHub - NathanDDDD/finmem-llm-stocktrading: FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design · GitHub (https://github.com/NathanDDDD/finmem-llm-stocktrading)
+citeturn1035search1 [wordlim: 200] Crawled: 2 days ago; This repo provides the Python source code for the paper: FINMEM: A Performance-Enhanced Large Language Model Trading Agent with Layered Memory and Character Design [PDF] ... 🚀 We're thrilled to announce that our paper, "FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design", has been accepted by ICLR Workshop LLM Agents!
+
+  1. NathanDDDD
+  2. finmem-llm-stocktrading
+
+## Repository navigation
+
+  *   * Code
+  * Pull requests
+  * Actions
+  * Projects
+  * Security and quality
+  * Insights
+
+More items
+
+Image: NathanDDDD
+
+finmem-llm-stocktrading
+
+Public
+
+forked from pipiku915/FinMem-LLM-StockTrading
+
+  * NotificationsYou must be signed in to change notification settings
+  * Fork0 (0)
+  * Star0 (0)You must be signed in to star a repository
+
+## About
+
+FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+
+## Latest commit
+
+ 
+
+## History
+
+55 Commits
+
+## Folders and files
+
+Name  | Name  | Last commit message  | Last commit date
+--- | --- | --- | ---
+.devcontainer  | .devcontainer  |    |  
+config  | config  |    |  
+data-pipeline  | data-pipeline  |    |  
+data  | data  |    |  
+figures  | figures  |    |  
+puppy  | puppy  |    |  
+.env  | .env  |    |  
+.gitignore  | .gitignore  |    |  
+.gitpod.yml  | .gitpod.yml  |    |  
+FinMem.mp4  | FinMem.mp4  |    |  
+LICENSE  | LICENSE  |    |  
+README.md  | README.md  |    |  
+poetry.lock  | poetry.lock  |    |  
+pyproject.toml  | pyproject.toml  |    |  
+run.py  | run.py  |    |  
+run_gemini.sh  | run_gemini.sh  |    |  
+run_opeai.sh  | run_opeai.sh  |    |  
+run_tgi.sh  | run_tgi.sh  |    |  
+save_file.py  | save_file.py  |    |  
+
+# FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+    
+    `"So we beat on, boats against the current, borne back ceaselessly into the past."
+                                            -- F. Scott Fitzgerald: The Great Gatsby
+    `
+
+This repo provides the Python source code for the paper: FINMEM: A Performance-Enhanced Large Language Model Trading Agent with Layered Memory and Character Design [PDF]
+    
+    @misc{yu2023finmem,
+          title={FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design}, 
+          author={Yangyang Yu and Haohang Li and Zhi Chen and Yuechen Jiang and Yang Li and Denghui Zhang and Rong Liu and Jordan W. Suchow and Khaldoun Khashanah},
+          year={2023},
+          eprint={2311.13743},
+          archivePrefix={arXiv},
+          primaryClass={q-fin.CP}
+    }
+
+📢 Update (Date: 01-16-2024)
+
+🚀 We're excited to share that our work, "FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design," has been selected for an extended abstract at the AAAI Spring Symposium on Human-Like Learning!
+
+📢 Update (Date: 03-11-2024)
+
+🚀 We're thrilled to announce that our paper, "FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design", has been accepted by ICLR Workshop LLM Agents!
+
+📢 Update (Date: 06-16-2024)
+
+🎉 Thank you to all the participants and organizers of the IJCAI2024 challenge, "Financial Challenges in Large Language Models - FinLLM". Our team, FinMem, was thrilled to contribute to Task 3: Single Stock Trading.
+
+As the challenge wrapped up yesterday (06/15/2024), we reflect on the innovative approaches and insights gained throughout this journey. A total of 12 teams participated, each bringing unique perspectives and solutions to the forefront of financial AI and Large Language Models.
+
+We invite the community to continue engaging with us as we look forward to further developments and collaborations in this exciting field.
+
+Recent advancements in Large Language Models (LLMs) have exhibited notable efficacy in question-answering (QA) tasks across diverse domains. Their prowess in integrating extensive web knowledge has fueled interest in developing LLM-based autonomous agents. While LLMs are efficient in decoding human instructions and deriving solutions by holistically processing historical inputs, transitioning to purpose-driven agents requires a supplementary rational architecture to process multi-source information, establish reasoning chains, and prioritize critical tasks. Addressing this, we introduce FinMem, a novel LLM-based agent framework devised for financial decision-making, encompassing three core modules: Profiling, to outline the agent's characteristics; Memory, with layered processing, to aid the agent in assimilating realistic hierarchical financial data; and Decision-making, to convert insights gained from memories into investment decisions. Notably, FinMem's memory module aligns closely with the cognitive structure of human traders, offering robust interpretability and real-time tuning. Its adjustable cognitive span allows for the retention of critical information beyond human perceptual limits, thereby enhancing trading outcomes. This framework enables the agent to self-evolve its professional knowledge, react agilely to new investment cues, and continuously refine trading decisions in the volatile financial environment. We first compare FinMem with various algorithmic agents on a scalable real-world financial dataset, underscoring its leading trading performance in stocks and funds. We then fine-tuned the agent's perceptual spans to achieve a significant trading performance. Collectively, FinMem presents a cutting-edge LLM agent framework for automated trading, boosting cumulative investment returns.
+
+## Repository Structure
+    
+    finmem-docker
+    ├── LICENSE
+    ├── README.md
+    ├── config  -> Configurations for the program
+    ├── data  -> Data
+    ├── puppy  -> Source code
+    ├── run.py  -> Entry point of the program, see below for details
+    ├── run_examples.sh  -> Bash cmd for build the docker image and run the docker container
+
+## Usage
+
+### Setting Environment Variables & Configurations for Different Models
+
+To build the docker image, run
+    
+    docker build -t test-finmem finmem/.devcontainer/. 
+
+To start the container, run
+    
+    docker run -it --rm -v $(pwd):/finmem test-finmem bash
+
+This will enter the root folder of the project.
+
+## Program
+
+The program has two main functionalities:
+    
+     Usage: run.py sim [OPTIONS]                                                                                                                
+                                                                                                                                                
+     Start Simulation                                                                                                                           
+                                                                                                                                                
+    ╭─ Options ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+--------------------------------------------------------------------------------
+GitHub - cqu3la/FinMem-LLM-StockTrading · GitHub (https://github.com/cqu3la/FinMem-LLM-StockTrading)
+citeturn1035search2 [wordlim: 200] Crawled: 2 weeks ago; This repo provides the Python source code for the paper: FINMEM: A Performance-Enhanced Large Language Model Trading Agent with Layered Memory and Character Design [PDF] ... 🚀 We're thrilled to announce that our paper, "FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design", has been accepted by ICLR Workshop LLM Agents!
+run_opeai.sh  | run_opeai.sh  |    |  
+run_tgi.sh  | run_tgi.sh  |    |  
+save_file.py  | save_file.py  |    |  
+
+# FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+    
+    `"So we beat on, boats against the current, borne back ceaselessly into the past."
+                                            -- F. Scott Fitzgerald: The Great Gatsby
+    `
+
+This repo provides the Python source code for the paper: FINMEM: A Performance-Enhanced Large Language Model Trading Agent with Layered Memory and Character Design [PDF]
+    
+    @misc{yu2023finmem,
+          title={FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design}, 
+          author={Yangyang Yu and Haohang Li and Zhi Chen and Yuechen Jiang and Yang Li and Denghui Zhang and Rong Liu and Jordan W. Suchow and Khaldoun Khashanah},
+          year={2023},
+          eprint={2311.13743},
+          archivePrefix={arXiv},
+          primaryClass={q-fin.CP}
+    }
+
+📢 Update (Date: 01-16-2024)
+
+🚀 We're excited to share that our work, "FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design," has been selected for an extended abstract at the AAAI Spring Symposium on Human-Like Learning!
+
+📢 Update (Date: 03-11-2024)
+
+🚀 We're thrilled to announce that our paper, "FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design", has been accepted by ICLR Workshop LLM Agents!
+
+📢 Update (Date: 06-16-2024)
+
+🎉 Thank you to all the participants and organizers of the IJCAI2024 challenge, "Financial Challenges in Large Language Models - FinLLM". Our team, FinMem, was thrilled to contribute to Task 3: Single Stock Trading.
+
+As the challenge wrapped up yesterday (06/15/2024), we reflect on the innovative approaches and insights gained throughout this journey. A total of 12 teams participated, each bringing unique perspectives and solutions to the forefront of financial AI and Large Language Models.
+--------------------------------------------------------------------------------
+GitHub - TanTaf/Finmem · GitHub (https://github.com/TanTaf/Finmem)
+citeturn1035search3 [wordlim: 200] Crawled: 2 weeks ago; > Yu et al., "FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design" (arXiv:2311.13743). ...   * Profiling (`finmem/profiling.py`) — professional background (sector + historical performance) and a risk inclination (`risk_seeking`, `risk_averse`, or `self_adaptive`, which switches based on trailing cumulative return, Sec 3.1). ...   * This is a research-code reimplementation for experimentation and learning, not a production trading system.
+
+TanTaf / Finmem Public
+
+  * Notifications You must be signed in to change notification settings
+  * Fork 0
+  * Star
+
+  * Code
+  * Issues 0
+  * Pull requests 0
+  * Actions
+  * Projects
+  * Security and quality 0
+  * Insights
+
+Additional navigation options
+
+## Latest commit
+
+ 
+
+## History
+
+1 Commit
+
+## Folders and files
+
+Name  | Name  | Last commit message  | Last commit date
+--- | --- | --- | ---
+examples  | examples  |    |  
+finmem  | finmem  |    |  
+results  | results  |    |  
+README.md  | README.md  |    |  
+explanation.md  | explanation.md  |    |  
+requirements.txt  | requirements.txt  |    |  
+
+# FinMem (Python reimplementation)
+
+An independent, from-scratch implementation of the architecture described in:
+
+> Yu et al., "FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design" (arXiv:2311.13743).
+
+## Install
+    
+    cd finmem
+    python3 -m venv .venv
+    source .venv/bin/activate        # Windows: .venv\Scripts\activate
+    pip install -r requirements.txt
+
+## 1. Run the offline demo (no API key needed)
+
+This exercises the full pipeline — profiling, layered memory scoring/decay/ promotion, working-memory reflection, and the train/test backtest loop — using synthetic price+news data, a deterministic `MockLLM`, and a dependency-free hashed embedder. Good for verifying the install and for reading the code's behavior without spending any API credits.
+    
+    python -m finmem.cli demo --ticker DEMO --risk self_adaptive --plot
+
+Output: `results/DEMO_demo_daily.csv` (per-day decisions, position, returns) and printed metrics (cumulative return, Sharpe ratio, volatility, max drawdown), plus `results/DEMO_demo_cumret.png` if `--plot` is passed.
+
+## 2. Run for real
+
+You need:
+
+  1. An OpenAI API key (`export OPENAI_API_KEY=sk-...`) — used for the LLM calls (summarize/reflect/decide) and, unless you pass `--embedder hash`, for embeddings.
+                                                      {40, 60, 80} distribution at creation
+    score = clip01(recency) + clip01(relevancy) + clip01(importance / 100)
+    `
+
+`Q_shallow=14, Q_intermediate=90, Q_deep=365` days; `alpha_shallow=0.90, alpha_intermediate=0.967, alpha_deep=0.988`. Top-K events per layer (by `score`) are retrieved for each trading inquiry. Events are purged when `recency < 0.05` or raw `importance < 5`. When the LLM cites an event's ID as influential enough times (`promote_access_threshold`, default 3), the event is promoted one layer deeper, its importance gets a +5 bonus, and its recency clock resets — mirroring Sec 3.2.2's access-counter mechanism.
+
+## Module map
+    
+    `finmem/
+      config.py       FinMemConfig: every hyperparameter from Sec 3.1-3.3
+      llm.py          BaseLLM, OpenAIChatLLM, MockLLM (offline, for `demo`)
+      embeddings.py   BaseEmbedder, OpenAIEmbedder, LocalHashEmbedder (offline)
+      memory.py       MemoryEvent, LayeredLongTermMemory (Eq. 1-6, purge, promote)
+--------------------------------------------------------------------------------
+FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design | Proceedings of the AAAI Symposium Series (https://ojs.aaai.org/index.php/AAAI-SS/article/view/31290)
+citeturn1035search4 [wordlim: 200] Published: 2.4 years ago; Crawled: 4 months ago; # FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design ... Financial AI, Large Language Models, Trading Algorithms, Generative AI, Cognitive Science, Financial Technology ... FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design.
+
+# FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+
+## Authors
+
+  * Yangyang Yu Stevens Institute of Technology
+  * Haohang Li Stevens Institute of Technology
+  * Zhi Chen Stevens Institute of Technology
+  * Yuechen Jiang Stevens Institute of Technology
+  * Yang Li Stevens Institute of Technology
+  * Denghui Zhang Stevens Institute of Technology
+  * Rong Liu Stevens Institute of Technology
+  * Jordan W. Suchow Stevens Institute of Technology
+  * Khaldoun Khashanah Stevens Institute of Technology
+
+## DOI:
+
+https://doi.org/10.1609/aaaiss.v3i1.31290
+
+## Keywords:
+
+Financial AI, Large Language Models, Trading Algorithms, Generative AI, Cognitive Science, Financial Technology
+
+## Abstract
+
+Recent advancements in Large Language Models (LLMs) have exhibited notable efficacy in question-answering (QA) tasks across diverse domains. Their prowess in integrating extensive web knowledge has fueled interest in developing LLM-based autonomous agents. While LLMs are efficient in decoding human instructions and deriving solutions by holistically processing historical inputs, transitioning to purpose-driven agents requires a supplementary rational architecture to process multi-source information, establish reasoning chains, and prioritize critical tasks. Addressing this, we introduce FinMem, a novel LLM-based agent framework devised for financial decision-making. It encompasses three core modules: Profiling, to customize the agent's characteristics; Memory, with layered message processing, to aid the agent in assimilating hierarchical financial data; and Decision-making, to convert insights gained from memories into investment decisions. Notably, FinMem's memory module aligns closely with the cognitive structure of human traders, offering robust interpretability and real-time tuning. Its adjustable cognitive span allows for the retention of critical information beyond human perceptual limits, thereby enhancing trading outcomes. This framework enables the agent to self-evolve its professional knowledge, react agilely to new investment cues, and continuously refine trading decisions in the volatile financial environment. We first compare FinMem with various algorithmic agents on a scalable real-world financial dataset, underscoring its leading trading performance in stocks. We then fine-tuned the agent's perceptual span and character setting to achieve a significantly enhanced trading performance. Collectively, FinMem presents a cutting-edge LLM agent framework for automated trading, boosting cumulative investment returns.
+
+## Downloads
+
+  * PDF
+
+## Published
+
+2024-05-20
+
+## How to Cite
+
+Yu, Y., Li, H., Chen, Z., Jiang, Y., Li, Y., Zhang, D., … Khashanah, K. (2024). FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design. Proceedings of the AAAI Symposium Series, 3(1), 595–597. https://doi.org/10.1609/aaaiss.v3i1.31290
+
+## Issue
+
+Vol. 3 No. 1: Proceedings of the 2024 AAAI Spring Symposium Series
+
+## Section
+
+Symposium on Human-Like Learning--------------------------------------------------------------------------------
+GitHub - pipiku915/FinMem-LLM-StockTrading: FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design · GitHub (https://github.com/pipiku915/FinMem-LLM-StockTrading)
+citeturn1035search5 [wordlim: 200] Crawled: 2 weeks ago; pipiku915 / FinMem-LLM-StockTrading Public ... FinMem.mp4  | FinMem.mp4  |    |
+
+pipiku915 / FinMem-LLM-StockTrading Public
+
+  * Notifications You must be signed in to change notification settings
+  * Fork 195
+  * Star
+
+  * Code
+  * Issues 8
+  * Pull requests 0
+  * Actions
+  * Projects
+  * Security and quality 0
+  * Insights
+
+Additional navigation options
+
+## Latest commit
+
+ 
+
+## History
+
+55 Commits
+
+## Folders and files
+
+Name  | Name  | Last commit message  | Last commit date
+--- | --- | --- | ---
+.devcontainer  | .devcontainer  |    |  
+config  | config  |    |  
+data-pipeline  | data-pipeline  |    |  
+data  | data  |    |  
+figures  | figures  |    |  
+puppy  | puppy  |    |  
+.env  | .env  |    |  
+.gitignore  | .gitignore  |    |  
+.gitpod.yml  | .gitpod.yml  |    |  
+FinMem.mp4  | FinMem.mp4  |    |  
+LICENSE  | LICENSE  |    |  
+README.md  | README.md  |    |  
+poetry.lock  | poetry.lock  |    |  
+pyproject.toml  | pyproject.toml  |    |  
+run.py  | run.py  |    |  
+run_gemini.sh  | run_gemini.sh  |    |  
+run_opeai.sh  | run_opeai.sh  |    |  
+run_tgi.sh  | run_tgi.sh  |    |  
+save_file.py  | save_file.py  |    |  
+
+## Repository files navigation
+
+  *   * README
+  * MIT license
+
+More items
+
+--------------------------------------------------------------------------------
+FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design | Papers With Code (https://paperswithcode.com/paper/finme-a-performance-enhanced-large-language)
+citeturn1035search6 [wordlim: 200] Published: 2.9 years ago; Crawled: 1.3 years ago; # FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design ...   Submit results from this paper to get state-of-the-art GitHub badges and help the community compare results to other papers.
+# FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+
+23 Nov 2023  ·  Yangyang Yu, Haohang Li, Zhi Chen, Yuechen Jiang, Yang Li, Denghui Zhang, Rong Liu, Jordan W. Suchow, Khaldoun Khashanah · Edit social preview
+
+Recent advancements in Large Language Models (LLMs) have exhibited notable efficacy in question-answering (QA) tasks across diverse domains. Their prowess in integrating extensive web knowledge has fueled interest in developing LLM-based autonomous agents. While LLMs are efficient in decoding human instructions and deriving solutions by holistically processing historical inputs, transitioning to purpose-driven agents requires a supplementary rational architecture to process multi-source information, establish reasoning chains, and prioritize critical tasks. Addressing this, we introduce \textsc{FinMem}, a novel LLM-based agent framework devised for financial decision-making. Collectively, \textsc{FinMem} presents a cutting-edge LLM agent framework for automated trading, boosting cumulative investment returns.
+
+PDF Abstract
+
+## Code
+
+Edit
+
+* * *
+
+pipiku915/finmem-llm-stocktrading official
+
+648
+
+pipiku915/FinMem-LLM-StockTrading official
+
+648
+
+## Tasks
+
+Edit
+
+* * *
+
+Decision Making Language Modelling Large Language Model Question Answering
+
+## Datasets
+
+Edit
+
+* * *
+
+  Add Datasets introduced or used in this paper
+
+## Results from the Paper
+
+Edit
+
+* * *
+
+  Submit results from this paper to get state-of-the-art GitHub badges and help the community compare results to other papers.
+
+## Methods
+
+Edit
+
+* * *
+
+No methods listed for this paper. Add relevant methods here
+
+Contact us on: [REDACTED_EMAIL] . Papers With Code is a free resource with all data licensed under CC-BY-SA.
+--------------------------------------------------------------------------------
+GitHub - pipiku915/FinMem-LLM-StockTrading: FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design · GitHub (https://github.com/pipiku915/finmem-llm-stocktrading)
+citeturn1035search7 [wordlim: 200] Crawled: last month; pipiku915 / FinMem-LLM-StockTrading Public ... FinMem.mp4  | FinMem.mp4  |    |
+
+pipiku915 / FinMem-LLM-StockTrading Public
+
+  * Notifications You must be signed in to change notification settings
+  * Fork 196
+  * Star
+
+  * Code
+  * Issues 8
+  * Pull requests 0
+  * Actions
+  * Projects
+  * Security and quality 0
+
+## Latest commit
+
+ 
+
+## History
+
+55 Commits
+
+## Folders and files
+
+Name  | Name  | Last commit message  | Last commit date
+--- | --- | --- | ---
+.devcontainer  | .devcontainer  |    |  
+config  | config  |    |  
+data-pipeline  | data-pipeline  |    |  
+data  | data  |    |  
+figures  | figures  |    |  
+puppy  | puppy  |    |  
+.env  | .env  |    |  
+.gitignore  | .gitignore  |    |  
+.gitpod.yml  | .gitpod.yml  |    |  
+FinMem.mp4  | FinMem.mp4  |    |  
+LICENSE  | LICENSE  |    |  
+README.md  | README.md  |    |  
+poetry.lock  | poetry.lock  |    |  
+pyproject.toml  | pyproject.toml  |    |  
+run.py  | run.py  |    |  
+run_gemini.sh  | run_gemini.sh  |    |  
+run_opeai.sh  | run_opeai.sh  |    |  
+run_tgi.sh  | run_tgi.sh  |    |  
+save_file.py  | save_file.py  |    |  
+
+--------------------------------------------------------------------------------
+FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design · Athenara (https://athenara.info/papers/finmem-paper/)
+citeturn1035search8 [wordlim: 200] Published: 2.9 years ago; Crawled: 2 weeks ago; # FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design ...     $ git clone https://github.com/pipiku915/FinMem-LLM-StockTrading
+
+# FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+
+Proposes an LLM trading agent whose layered memory and configurable character profile let it adapt to new market information over multiple time horizons.
+
+RepositoryarXiv:2311.13743MarkdownEdit this entry
+
+#llm-agent #memory #cognitive-architecture #profiling
+
+added 2026-08-15 · external
+
+use this
+    
+    $ git clone https://github.com/pipiku915/FinMem-LLM-StockTrading
+    
+    @article{finmem-paper,
+      title         = {FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design},
+      author        = {Yangyang Yu and Haohang Li and Zhi Chen and Yuechen Jiang and Yang Li and Denghui Zhang and Rong Liu and Jordan W. Suchow and Khaldoun Khashanah},
+      year          = {2023},
+      eprint        = {2311.13743},
+      archiveprefix = {arXiv},
+      note          = {ICLR 2024 Workshop on LLM Agents},
+    }
+
+abstract · less
+
+Presents a three-module agent architecture combining profiling, layered memory processing that imitates human trader cognition, and decision-making. The design lets the agent self-evolve its domain knowledge, react to new investment cues, and refine trading decisions over time.
+
+Experiments on real-world financial data report performance above algorithmic baselines, with results varying by the agent’s cognitive span and personality configuration — an early demonstration that memory design, not just model choice, moves trading performance.
+
+prerequisites
+
+trading [●●···] basic   ai [●●●··] moderate   programming [●····] none   setup [●····] none
+
+details
+
+origin external
+
+markets equities
+
+connections
+
+describes FinMem
+--------------------------------------------------------------------------------
+FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design (https://ojs.aaai.org/index.php/AAAI-SS/article/download/31290/33450/35346)
+citeturn1035search12 [wordlim: 200] Published: 2.4 years ago; FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory ... ing this, we introduce FINMEM, a novel LLM-based agent ... bone algorithm for enhanced trading performance.
+--------------------------------------------------------------------------------
+FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design (https://arxiv.org/abs/2311.13743)
+citeturn1035academia13 [wordlim: 200] Published: 2.9 years ago; Title: FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design ... We first compare \textsc{FinMem} with various algorithmic agents on a scalable real-world financial dataset, underscoring its leading trading performance in stocks.
+--------------------------------------------------------------------------------
+https://github.com/pipiku915/FinMem-LLM-StockTrading | Ecosyste.ms: Awesome (https://awesome.ecosyste.ms/projects/github.com%2Fpipiku915%2FFinMem-LLM-StockTrading)
+citeturn1035search9 [wordlim: 200] Published: 2.9 years ago; Crawled: 1.5 years ago; # https://github.com/pipiku915/FinMem-LLM-StockTrading ...     [FINMEM: A Performance-Enhanced Large Language Model Trading Agent with Layered Memory and Character Design](https://arxiv.org/abs/2311.13743) [[PDF]](https://arxiv.org/pdf/2311.13743.pdf)
+--------------------------------------------------------------------------------
+Khaldoun Khashanah | Papers With Code (https://paperswithcode.com/author/khaldoun-khashanah)
+citeturn1035search10 [wordlim: 200] Crawled: 1.3 years ago; # FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+--------------------------------------------------------------------------------
+Haohang Li | Papers With Code (https://paperswithcode.com/search?order_by=stars&q=author%3AHaohang+Li)
+citeturn1035search11 [wordlim: 200] Crawled: 1.3 years ago; Github Stars ... # FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+--------------------------------------------------------------------------------
+FinMem: A Performance-Enhanced LLM Trad- (https://openreview.net/pdf?id=sstfVOwbiG)
+citeturn1035search14 [wordlim: 200] Published: 2.5 years ago; FinMem: A Performance-Enhanced LLM Trad- ... We first compare FinMem with various algorithmic agents on a scalable real-world financial dataset, underscoring its leading trading performance in stocks. ... KEYWORDS: Large Language Model, Trading Algorithms, Deep Learning, Financial AI
+--------------------------------------------------------------------------------
+Under review as a conference paper at ICLR 2026 (https://openreview.net/pdf?id=dc8ebScygC)
+citeturn1035search15 [wordlim: 200] Published: 10 months ago; Finmem: A performance-enhanced llm trading agent with layered memory and character design. ... Modeling future conversation turns to teach llms to ask clarifying questions, 2025. ... In *Findings of the Association for Computational Linguistics: EMNLP 2024*, pp. ... A.2  Complete Algorithm Specification ...................................... ... C.1.1  Problem Definition ..................................................
+--------------------------------------------------------------------------------
+Yangyang Yu, Haohang Li, Zhi Chen, Yuechen Jiang, Yang Li, Denghui Zhang, Rong Liu, Jordan W Suchow, and Khaldoun Khashanah. 2024. *Finmem: A performance-enhanced llm trading agent with layered memory and character design.* In *Proceedings of the AAAI Symposium Series*, volume 3, pages 595–597. (https://aclanthology.org/2024.finnlp-2.13.pdf)
+citeturn1035search16 [wordlim: 200] Published: 2.3 years ago; *Finmem: A performance-enhanced llm trading agent with layered memory and character design. ... *Future Work:* Our future endeavours encompass enhancing Task 3 by incorporating historical data, as such data provides crucial insights.
+--------------------------------------------------------------------------------
+Under review as a conference paper at ICLR 2026 (https://openreview.net/pdf/fb28bdf66985bc5385fb7148e76ed799dfb4d6cb.pdf)
+citeturn1035search17 [wordlim: 200] Published: last year; Finmem: A performance-enhanced llm trading agent with layered ... By treating strategies as agents, prior research provides a unifying abstraction ... FinMem, and FinGPT (Yu et al., 2024; 2025; Liu et al., 2023), as well as hybrid systems that

@@ -1,0 +1,310 @@
+eth_call
+POST
+eth_callBundle
+POST
+eth_callMany
+POST
+eth_chainId
+POST
+eth_config
+POST
+eth_createAccessList
+POST
+eth_estimateGas
+POST
+eth_feeHistory
+POST
+eth_fillTransaction
+POST
+eth_gasPrice
+POST
+eth_getAccount
+POST
+eth_getAccountInfo
+POST
+eth_getBalance
+POST
+eth_getBlockByHash
+POST
+eth_getBlockByNumber
+POST
+eth_getBlockReceipts
+POST
+eth_getBlockTransactionCountByHash
+POST
+eth_getBlockTransactionCountByNumber
+POST
+eth_getCode
+POST
+eth_getFilterChanges
+POST
+eth_getFilterLogs
+POST
+eth_getLogs
+POST
+eth_getProof
+POST
+eth_getRawTransactionByHash
+POST
+eth_getStorageAt
+POST
+eth_getTransactionByBlockHashAndIndex
+POST
+eth_getTransactionByBlockNumberAndIndex
+POST
+eth_getTransactionByHash
+POST
+eth_getTransactionBySenderAndNonce
+POST
+eth_getTransactionCount
+POST
+eth_getTransactionReceipt
+POST
+eth_getUncleByBlockHashAndIndex
+POST
+eth_getUncleByBlockNumberAndIndex
+POST
+eth_getUncleCountByBlockHash
+POST
+eth_getUncleCountByBlockNumber
+POST
+eth_maxPriorityFeePerGas
+POST
+eth_newBlockFilter
+POST
+eth_newFilter
+POST
+eth_newPendingTransactionFilter
+POST
+eth_protocolVersion
+POST
+eth_sendRawTransaction
+POST
+eth_simulateV1
+POST
+eth_submitWork
+POST
+eth_subscribe
+POST
+eth_syncing
+POST
+eth_uninstallFilter
+POST
+eth_unsubscribe
+POST
+net_listening
+POST
+net_version
+POST
+web3_clientVersion
+POST
+web3_sha3
+Ethereum Beacon API Endpoints
+FAQ
+Go to Dashboard
+Introduction
+API Overview
+Supported Chains
+Feature Support by Chain
+MEV Protection
+Pricing
+WebSockets
+Trace API
+Debug API
+Yellowstone gRPC
+Launch Your Own Chain (Rollups)
+Ethereum
+Quickstart
+Ethereum API Overview
+Ethereum API Endpoints
+POST
+erigon_forks
+POST
+erigon_getHeaderByHash
+POST
+erigon_getHeaderByNumber
+POST
+erigon_getLogsByHash
+POST
+erigon_issuance
+POST
+eth_accounts
+POST
+eth_blobBaseFee
+POST
+eth_blockNumber
+POST
+eth_call
+POST
+eth_callBundle
+POST
+eth_callMany
+POST
+eth_chainId
+POST
+eth_config
+POST
+eth_createAccessList
+POST
+eth_estimateGas
+POST
+eth_feeHistory
+POST
+eth_fillTransaction
+POST
+eth_gasPrice
+POST
+eth_getAccount
+POST
+eth_getAccountInfo
+POST
+eth_getBalance
+POST
+eth_getBlockByHash
+POST
+eth_getBlockByNumber
+POST
+eth_getBlockReceipts
+POST
+eth_getBlockTransactionCountByHash
+POST
+eth_getBlockTransactionCountByNumber
+POST
+eth_getCode
+POST
+eth_getFilterChanges
+POST
+eth_getFilterLogs
+POST
+eth_getLogs
+POST
+eth_getProof
+POST
+eth_getRawTransactionByHash
+POST
+eth_getStorageAt
+POST
+eth_getTransactionByBlockHashAndIndex
+POST
+eth_getTransactionByBlockNumberAndIndex
+POST
+eth_getTransactionByHash
+POST
+eth_getTransactionBySenderAndNonce
+POST
+eth_getTransactionCount
+POST
+eth_getTransactionReceipt
+POST
+eth_getUncleByBlockHashAndIndex
+POST
+eth_getUncleByBlockNumberAndIndex
+POST
+eth_getUncleCountByBlockHash
+POST
+eth_getUncleCountByBlockNumber
+POST
+eth_maxPriorityFeePerGas
+POST
+eth_newBlockFilter
+POST
+eth_newFilter
+POST
+eth_newPendingTransactionFilter
+POST
+eth_protocolVersion
+POST
+eth_sendRawTransaction
+POST
+eth_simulateV1
+POST
+eth_submitWork
+POST
+eth_subscribe
+POST
+eth_syncing
+POST
+eth_uninstallFilter
+POST
+eth_unsubscribe
+POST
+net_listening
+POST
+net_version
+POST
+web3_clientVersion
+POST
+web3_sha3
+Ethereum Beacon API Endpoints
+FAQ
+Ethereum
+Ethereum API Endpoints
+Copy page
+eth_call
+POST
+https://eth-mainnet.g.alchemy.com/v2
+/{apiKey}
+CUs
+26
+Executes a new message call immediately without creating a transaction on the blockchain.
+Path Parameters
+apiKey
+string
+required
+defaults to docs-demo
+For higher throughput, create your own API key
+Request
+Transaction
+object
+required
+The transaction call object containing the details of the message call.
+Show 15 properties
+Block
+string or enum
+optional
+The block number, tag, or hash at which to execute the call. Defaults to 'latest' if not provided.
+Identifies a block by explicit number, a predefined tag (e.g., latest/safe/finalized), or a 32-byte block hash.
+Show 3 variants
+Responses
+200
+The return value of the executed contract function, encoded as a hexadecimal string.
+POST/v2/{apiKey}
+cURL
+curl
+--request POST
+\
+--url https://eth-mainnet.g.alchemy.com/v2/docs-demo
+\
+--header
+'Content-Type: application/json'
+\
+--data
+'{
+"jsonrpc": "2.0",
+"id": 1,
+"method": "eth_call",
+"params": [
+{
+"to": "0x69498dd54bd25aa0c886cf1f8b8ae0856d55ff13",
+"value": "0x1"
+},
+"latest"
+]
+}'
+Try it
+200
+Success
+{
+"jsonrpc"
+:
+"2.0"
+,
+"id"
+:
+1
+,
+"result"
+:
+"0x"
+}
+

@@ -1,0 +1,273 @@
+Browser tab: 3, Title: "Stock Price - Apple", URL: "https://investor.apple.com/stock-price/default.aspx".
+0 AXWebArea Stock Price - Apple, URL: investor.apple.com/stock-price/default.aspx
+	1 container
+		2 container Skip to main content
+		3 container Description: Form, ID: fmForm1
+			4 container
+				5 container
+					6 link Description: Skip to main content, Value: investor.apple.com/stock-price/default.aspx#maincontent
+					7 container globalheader
+						8 container Description: Global, ID: globalnav
+							9 content list Menu, ID: globalnav-list
+								10 link Description: Apple, Value: apple.com/
+								11 container
+									231 content list
+										232 link Description: Store, Value: apple.com/us/shop/goto/store
+										233 button (collapsed) Description: Store menu, ID: globalnav-menubutton-link-store, Secondary Actions: Expand
+									234 content list
+										235 link Description: Mac, Value: apple.com/mac/
+										236 button (collapsed) Description: Mac menu, ID: globalnav-menubutton-link-mac, Secondary Actions: Expand
+									237 content list
+										238 link Description: iPad, Value: apple.com/ipad/
+										239 button (collapsed) Description: iPad menu, ID: globalnav-menubutton-link-ipad, Secondary Actions: Expand
+									240 content list
+										241 link Description: iPhone, Value: apple.com/iphone/
+										242 button (collapsed) Description: iPhone menu, ID: globalnav-menubutton-link-iphone, Secondary Actions: Expand
+									243 content list
+										244 link Description: Watch, Value: apple.com/watch/
+										245 button (collapsed) Description: Watch menu, ID: globalnav-menubutton-link-watch, Secondary Actions: Expand
+									246 content list
+										247 link Description: AirPods, Value: apple.com/airpods/
+										248 button (collapsed) Description: AirPods menu, ID: globalnav-menubutton-link-airpods, Secondary Actions: Expand
+									249 content list
+										250 link Description: TV and Home, Value: apple.com/tv-home/
+										251 button (collapsed) Description: TV and Home menu, ID: globalnav-menubutton-link-tv-home, Secondary Actions: Expand
+									252 content list
+										253 link Description: Entertainment, Value: apple.com/entertainment/
+										254 button (collapsed) Description: Entertainment menu, ID: globalnav-menubutton-link-entertainment, Secondary Actions: Expand
+									255 content list
+										256 link Description: Accessories, Value: apple.com/us/shop/goto/buy_accessories
+										257 button (collapsed) Description: Accessories menu, ID: globalnav-menubutton-link-accessories, Secondary Actions: Expand
+									258 content list
+										259 link Description: Support, Value: support.apple.com/
+										260 button (collapsed) Description: Support menu, ID: globalnav-menubutton-link-support, Secondary Actions: Expand
+								22 button Description: Search apple.com, ID: globalnav-menubutton-link-search
+									23 image
+								24 link Description: Shopping Bag, Value: apple.com/us/shop/goto/bag, ID: globalnav-menubutton-link-bag
+					25 container secondary navigation
+						26 content list
+							27 container
+								28 link Description: Investor Relations, Value: investor.apple.com/investor-relations/default.aspx
+								29 content list
+									30 link Description: Stock Price within the Investor Relations section, Value: investor.apple.com/stock-price/default.aspx
+									31 link Description: SEC Filings within the Investor Relations section, Value: investor.apple.com/sec-filings/default.aspx
+									32 link Description: Leadership and Governance within the Investor Relations section, Value: investor.apple.com/leadership-and-governance/default.aspx
+									33 link Description: Our Values within the Investor Relations section, Value: investor.apple.com/our_values/default.aspx
+									34 link Description: FAQ within the Investor Relations section, Value: investor.apple.com/faq/default.aspx
+									35 link Description: Contact within the Investor Relations section, Value: investor.apple.com/contact/default.aspx
+				36 container maincontent
+					37 heading Stock Price, Value: 1
+						38 text Stock Price
+					39 container
+						261 container
+							262 heading Stock Price, Value: 2
+								263 text Stock Price
+							264 text October 14, 2026 4:00 p.m. ET
+							265 text The stock information provided is for informational purposes only and is not intended for trading purposes. The stock information and charts are provided by Tickertech, a third party service, and Apple does not provide information to this service.
+							266 text Pricing delayed by 20 minutes
+							267 text $342.96
+							268 text Change
+							269 text + $1.69
+							270 text Volume
+							271 container
+								272 text 50.1 M
+						42 heading NASDAQ: AAPL, Value: 2
+							43 text NASDAQ: AAPL
+						44 heading Historical Stock Price Lookup, Value: 2
+							45 text Historical Stock Price Lookup
+						46 container Lookup Date:
+							47 text Lookup Date:
+							48 container
+								49 text Year
+								50 pop up button (collapsed, settable) Description: year, Value: 2026, Secondary Actions: Expand
+									51 menu
+										52 (selected) 2026
+										53 2025
+										54 2024
+										55 2023
+										56 2022
+										57 2021
+										58 2020
+										59 2019
+										60 2018
+										61 2017
+										62 2016
+										63 2015
+										64 2014
+										65 2013
+										66 2012
+										67 2011
+										68 2010
+										69 2009
+										70 2008
+										71 2007
+										72 2006
+							73 container
+								74 text Month
+								75 pop up button (collapsed, settable) Description: month, Value: Oct, Secondary Actions: Expand
+									76 menu
+										77 Jan
+										78 Feb
+										79 Mar
+										80 Apr
+										81 May
+										82 Jun
+										83 Jul
+										84 Aug
+										85 Sep
+										86 (selected) Oct
+										87 Nov
+										88 Dec
+							89 container
+								90 text Day
+								91 pop up button (collapsed, settable) Description: day, Value: 13, Secondary Actions: Expand
+									92 menu
+										273 1
+										274 2
+										275 3
+										276 4
+										277 5
+										278 6
+										279 7
+										280 8
+										281 9
+										282 10
+										283 11
+										284 12
+										285 (selected) 13
+										286 14
+										287 15
+										288 16
+										289 17
+										290 18
+										291 19
+										292 20
+										293 21
+										294 22
+										295 23
+										296 24
+										297 25
+										298 26
+										299 27
+										300 28
+										301 29
+										302 30
+										303 31
+							124 button (disabled) Look Up
+						304 content list
+							305 container
+								306 text Day’s Open $ 344.67
+							307 container
+								308 text Closing Price $ 341.27
+							309 container
+								310 text Volume 39.0 M
+							311 container
+								312 text Intraday High $ 348.15
+							313 container
+								314 text Intraday Low $ 340.74
+				127 container
+					128 container breadcrumb
+						129 content list
+							130 link Description: Apple, Value: apple.com/
+							131 link Description: Investor Relations, Value: investor.apple.com/investor-relations/default.aspx
+							132 link Description: Stock Price, Value: javascript:
+					133 heading Apple Footer, Value: 2
+						134 text Apple Footer
+					135 heading Shop and Learn, Value: 3
+						136 text Shop and Learn
+					137 content list
+						138 link Description: Mac, Value: apple.com/mac/
+						139 link Description: iPad, Value: apple.com/ipad/
+						140 link Description: iPhone, Value: apple.com/iphone/
+						141 link Description: Watch, Value: apple.com/watch/
+						142 link Description: TV, Value: apple.com/tv/
+						143 link Description: Music, Value: apple.com/music/
+						144 link Description: iTunes, Value: apple.com/itunes/
+						145 link Description: HomePod, Value: apple.com/homepod/
+						146 link Description: iPod touch, Value: apple.com/ipod-touch/
+						147 link Description: Apple Card, Value: apple.com/apple-card/
+						148 link Description: Accessories, Value: apple.com/us/shop/goto/buy_accessories
+						149 link Description: Gift Cards, Value: apple.com/us/shop/goto/giftcards
+					150 heading Apple Store, Value: 3
+						151 text Apple Store
+					152 content list
+						153 link Description: Find a Store, Value: apple.com/retail/
+						154 link Description: Genius Bar, Value: apple.com/retail/geniusbar/
+						155 link Description: Today at Apple, Value: apple.com/today/
+						156 link Description: Apple Camp, Value: apple.com/retail/camp/
+						157 link Description: Field Trip, Value: apple.com/retail/fieldtrip/
+						158 link Description: Apple Store App, Value: itunes.apple.com/app/apple-store/id375380948?pt=2003&ct=footer&mt=8
+						159 link Description: Refurbished and Clearance, Value: apple.com/us/shop/goto/special_deals
+						160 link Description: Financing, Value: apple.com/us/shop/goto/payment_plan
+						161 link Description: Apple Trade In, Value: apple.com/shop/trade-in
+						162 link Description: Order Status, Value: apple.com/us/shop/goto/account
+						163 link Description: Shopping Help, Value: apple.com/us/shop/goto/help
+					164 heading For Education, Value: 3
+						165 text For Education
+					166 content list
+						167 link Description: Apple and Education, Value: apple.com/education/
+						168 link Description: Shop for College, Value: apple.com/us/shop/goto/educationrouting
+					169 heading For Business, Value: 3
+						170 text For Business
+					171 content list
+						172 link Description: Apple and Business, Value: apple.com/business/
+						173 link Description: Shop for Business, Value: apple.com/retail/business/
+					174 heading For Healthcare, Value: 3
+						175 text For Healthcare
+					176 content list
+						177 link Description: Apple in Healthcare, Value: apple.com/healthcare/
+						178 link Description: Health on Apple Watch, Value: apple.com/healthcare/apple-watch/
+						179 link Description: Health Records on iPhone, Value: apple.com/healthcare/health-records/
+					180 heading Account, Value: 3
+						181 text Account
+					182 content list
+						183 link Description: Manage Your Apple ID, Value: appleid.apple.com/us/
+						184 link Description: Apple Store Account, Value: apple.com/us/shop/goto/account
+						185 link Description: iCloud.com, Value: icloud.com/
+					186 heading Apple Values, Value: 3
+						187 text Apple Values
+					188 content list
+						189 link Description: Accessibility, Value: apple.com/accessibility/
+						190 link Description: Education, Value: apple.com/education/connectED/
+						191 link Description: Environment, Value: apple.com/environment/
+						192 link Description: Inclusion and Diversity, Value: apple.com/diversity/
+						193 link Description: Privacy, Value: apple.com/privacy/
+						194 link Description: Racial Equity and Justice, Value: apple.com/racial-equity-justice-initiative/
+						195 link Description: Supply Chain, Value: apple.com/supplier-responsibility/
+					196 heading For Government, Value: 3
+						197 text For Government
+					198 content list
+						199 link Description: Shop for Government, Value: apple.com/r/store/government
+						200 link Description: Shop for Veterans and Military, Value: apple.com/us/shop/goto/eppstore/veteransandmilitary
+					201 heading About Apple, Value: 3
+						202 text About Apple
+					203 content list
+						204 link Description: Newsroom, Value: apple.com/newsroom/
+						205 link Description: Apple Leadership, Value: apple.com/leadership/
+						206 link Description: Job Opportunities, Value: apple.com/jobs/us/
+						207 link Description: Investors, Value: investor.apple.com/investor-relations/default.aspx
+						208 link Description: Events, Value: apple.com/apple-events/
+						209 link Description: Contact Apple, Value: apple.com/contact/
+					210 container
+						211 text More ways to shop: 
+						212 link Description: Visit an Apple Store, Value: apple.com/retail/
+						213 text ,  call 1-800-MY-APPLE, or 
+						214 link Description: find a reseller, Value: locate.apple.com/
+						215 text .
+				216 link Description: United States, Value: apple.com/choose-country-region/
+				217 container
+					218 text Copyright ©  2026  Apple Inc. All rights reserved
+				219 content list
+					220 link Description: Privacy Policy, Value: apple.com/privacy/privacy-policy/
+					221 container
+						222 link Description: Terms of Use, Value: apple.com/legal/internet-services/terms/site.html
+					223 container
+						224 link Description: Sales and Refunds, Value: apple.com/us/shop/goto/help/sales_refunds
+					225 container
+						226 link Description: Legal, Value: apple.com/legal/
+					227 container
+						228 link Description: Site Map, Value: investor.apple.com/site-map/default.aspx
+				229 link Description: Powered By Q4 Inc. [REDACTED_HOST] (opens in new window), Value: q4inc.com/Powered-by-Q4/
+				230 text (Opens in new window)
+
+The focused UI element is 0 AXWebArea Stock Price - Apple, URL: investor.apple.com/stock-price/default.aspx

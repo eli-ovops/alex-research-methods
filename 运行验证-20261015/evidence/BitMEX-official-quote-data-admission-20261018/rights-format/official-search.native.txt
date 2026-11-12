@@ -1,0 +1,1263 @@
+BitMEX API Explorer (https://www.bitmex.com/api/explorer/)
+citeturn938search0 [wordlim: 200] Crawled: 6 days ago; Parameter  | Value  | Description  | Parameter Type  | Data Type ... targetAccountId  | [Input: ]  | AccountId fetching the trade history, must be a paired account with main user.  | query  | double ... See the Timestamp Docs for more details.  | query  | string ...   * ## Quote : Best Bid/Offer Snapshots & Historical Bins ... bidSize (number, optional), ... quoteFillRatioMavg7 (number, optional)
+xml version="1.0"?>
+            <Error>
+              <error>
+                <message>string</message>
+                <name>string</name>
+              </error>
+            </Error>
+            `
+
+ | 
+404  | Not Found  | 
+        * Model
+        * Example Value
+Error {error (inline_model)}
+inline_model {message (string, optional),name (string, optional)}
+            
+            `{
+              "error": {
+                "message": "string",
+                "name": "string"
+              }
+            }`
+            
+            `<?xml version="1.0"?>
+            <Error>
+              <error>
+                <message>string</message>
+                <name>string</name>
+              </error>
+            </Error>
+            `
+
+ | 
+
+[Input] Hide Response
+
+#### Curl
+
+#### Request URL
+
+#### Response Body
+
+#### Response Code
+
+#### Response Headers
+
+  * ## Quote : Best Bid/Offer Snapshots & Historical Bins
+
+    * Show/Hide
+    * List Operations
+    * Expand Operations
+
+    *       * ### get /quote
+
+        * Get Quotes
+
+#### Response Class (Status 200)
+
+Request was successful
+
+        * Model
+        * Example Value
+
+Inline Model [
+
+Inline Model 1
+
+]
+Inline Model 1 {
+
+timestamp (string),
+
+symbol (string, optional),
+
+bidSize (number, optional),
+
+bidPrice (number, optional),
+
+askPrice (number, optional),
+
+askSize (number, optional),
+
+pool (string, optional)
+
+}
+            
+            `[
+              {
+                "timestamp": "2026-10-12T22:18:11.294Z",
+                "symbol": "string",
+                "bidSize": 0,
+                "bidPrice": 0,
+                "askPrice": 0,
+                "askSize": 0,
+                "pool": "string"
+              }
+            ]`
+            
+            `<?xml version="1.0"?>
+            <Inline Model>
+              <timestamp>1970-01-01T00:00:00.001Z</timestamp>
+              <symbol>string</symbol>
+              <bidSize>1.1</bidSize>
+              <bidPrice>1.1</bidPrice>
+              <askPrice>1.1</askPrice>
+              <askSize>1.1</askSize>
+              <pool>string</pool>
+            </Inline Model>
+            `
+
+Response Content Type [Select]
+
+#### Parameters
+
+Parameter  | Value  | Description  | Parameter Type  | Data Type
+--- | --- | --- | --- | ---
+symbol  | [Input: ]  | Instrument symbol. Send a bare series (e.g. XBT) to get data for the nearest expiring contract in that series. You can also send a timeframe, e.g. `XBT:quarterly`. Timeframes are `nearest`, `daily`, `weekly`, `monthly`, `quarterly`, `biquarterly`, and `perpetual`. Symbols are case-insensitive.  | query  | string
+filter  | [Input: ]  | Generic table filter. Send JSON key/value pairs, such as `{"key": "value"}`. You can key on individual fields, and do more advanced querying on timestamps. See the Timestamp Docs for more details.  | query  | string
+columns  | [Input: ]  | Array of column names to fetch. If omitted, will return all columns. Note that this method will always return item keys, even when not specified, so you may receive more columns that you expect.  | query  | string
+count  | [Input: ]  | Number of results to fetch. Must be a positive integer.  | query  | double
+start  | [Input: ]  | Starting point for results.  | query  | double
+reverse  | [Select]  | If true, will sort results newest first.  | query  | boolean
+startTime  | [Input: ]  | Starting date filter for results.  | query  | date-time
+endTime  | [Input: ]  | Ending date filter for results.  | query  | date-time
+
+                "name": "string"
+              }
+            }`
+            
+            `<?xml version="1.0"?>
+            <Error>
+              <error>
+                <message>string</message>
+                <name>string</name>
+              </error>
+            </Error>
+            `
+
+ | 
+
+[Input] Hide Response
+
+#### Curl
+
+#### Request URL
+
+#### Response Body
+
+#### Response Code
+
+#### Response Headers
+
+    *       * ### get /quote/bucketed
+
+        * Get bucketed quotes
+
+#### Implementation Notes
+
+Get previous quotes in time buckets. Timestamps returned by our bucketed endpoints are the end of the period, indicating when the bucket was written to disk. Some other common systems use the timestamp as the beginning of the period. Please be aware of this when using this endpoint.
+
+#### Response Class (Status 200)
+
+Request was successful
+
+        * Model
+        * Example Value
+
+Inline Model [
+
+Inline Model 1
+
+]
+Inline Model 1 {
+
+timestamp (string),
+
+symbol (string, optional),
+
+bidSize (number, optional),
+
+bidPrice (number, optional),
+
+askPrice (number, optional),
+
+askSize (number, optional),
+
+pool (string, optional)
+
+}
+            
+            `[
+              {
+                "timestamp": "2026-10-12T22:18:11.296Z",
+                "symbol": "string",
+                "bidSize": 0,
+                "bidPrice": 0,
+                "askPrice": 0,
+                "askSize": 0,
+                "pool": "string"
+              }
+            ]`
+            
+            `<?xml version="1.0"?>
+            <Inline Model>
+              <timestamp>1970-01-01T00:00:00.001Z</timestamp>
+              <symbol>string</symbol>
+              <bidSize>1.1</bidSize>
+              <bidPrice>1.1</bidPrice>
+              <askPrice>1.1</askPrice>
+              <askSize>1.1</askSize>
+              <pool>string</pool>
+            </Inline Model>
+            `
+
+Response Content Type [Select]
+
+#### Parameters
+
+Parameter  | Value  | Description  | Parameter Type  | Data Type
+--- | --- | --- | --- | ---
+--------------------------------------------------------------------------------
+Get Quotes | BitMEX API (https://docs.bitmex.com/api-explorer/get-quote)
+citeturn938search1 [wordlim: 200] Crawled: 3 months ago; XBT) to get data for the nearest expiring contract in that series. ... See the Timestamp Docs for more details. ... Quote bid price ... Quote bid size
+
+# Get Quotes
+    
+    GET 
+    
+    ## https://www.bitmex.com/api/v1/quote
+
+## Get Quotes​
+
+Returns best bid/offer time series for a symbol
+
+## Request​
+
+### Query Parameters
+
+symbol string
+
+Instrument symbol. Send a bare series (e.g. XBT) to get data for the nearest expiring contract in that series.
+
+You can also send a timeframe, e.g. XBT:quarterly. Timeframes are nearest, daily, weekly, monthly, quarterly, biquarterly, and perpetual.
+
+Symbols are case-insensitive.
+
+filter string
+
+Generic table filter. Send JSON key/value pairs, such as {"key": "value"}. You can key on individual fields, and do more advanced querying on timestamps. See the Timestamp Docs for more details.
+
+Default value: `{}`
+
+columns string
+
+Array of column names to fetch. If omitted, will return all columns. Note that this method will always return item keys, even when not specified, so you may receive more columns that you expect.
+
+count int32
+
+Number of results to fetch. Must be a positive integer.
+
+Default value: `100`
+
+start int32
+
+Starting point for results.
+
+Default value: `0`
+
+reverse boolean
+
+If true, will sort results newest first.
+
+Default value: `false`
+
+startTime string
+
+Starting time filter for results.
+
+endTime string
+
+Ending time filter for results.
+
+pool string
+
+Possible values: [`Primary`, `Secondary`, `Aggregated`]
+
+Quote pool filter. Valid values: Primary, Secondary, Aggregated.
+
+## Responses​
+
+  * 200
+  * 400
+  * 401
+  * 403
+  * 404
+
+OK
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+  * Array [
+
+askPrice double
+
+Quote ask price
+
+askSize int64
+
+Quote ask size
+
+bidPrice double
+
+Quote bid price
+
+bidSize int64
+
+Quote bid size
+
+pool string
+
+Quote orderbook pool
+
+Possible values: [`Primary`, `Secondary`, `Aggregated`]
+
+symbol string
+
+Instrument symbol
+
+timestamp date-time
+
+Quote time
+
+  * ]
+    
+    [
+    
+      {
+    
+        "askPrice": 0,
+    
+        "askSize": 0,
+    
+        "bidPrice": 0,
+    
+        "bidSize": 0,
+    
+        "pool": "Primary",
+    
+        "symbol": "string",
+--------------------------------------------------------------------------------
+Terms of Service (June 2025).docx (https://static.bitmex.com/documents/Terms_of_Service__June_2025.pdf)
+citeturn938search12 [wordlim: 200] Capitalised terms used but not defined shall have the same meaning as in the Terms of Service. ... In line with our mission to lead the development and advance knowledge of the digital assets ecosystem, we issue, contribute to or disseminate reports, data, graphs, tables, indices, research publications, historical data, historical indices levels, blog posts, articles, know-how, documents or other information, including via our Website (including as set out here), APIs, social media and other channels (“BitMEX Publications”).
+parties that possess or have access to your unique API Key(s), and we accept no responsibility or liability for any loss arising from the foregoing.
+
+5. We may make changes to the API at our sole and absolute discretion. We shall not be liable for any losses or damages as a result of (i) varying, suspending, withdrawing or ceasing to provide access to and use of the API or (ii) making changes to how the API is provided.
+
+# ANNEX D - BITMEX PUBLICATIONS
+
+1. This Annex governs your access to and use of the BitMEX Publications (as defined below), and incorporates by reference and supplements the Terms of Service. If you access or use (or attempt to access or use) the BitMEX Publications, you will be deemed to have agreed to the terms and conditions in this Annex. We may amend this Annex at our sole and absolute discretion without further Notice to you. Capitalised terms used but not defined shall have the same meaning as in the Terms of Service.
+
+2. In line with our mission to lead the development and advance knowledge of the digital assets ecosystem, we issue, contribute to or disseminate reports, data, graphs, tables, indices, research publications, historical data, historical indices levels, blog posts, articles, know-how, documents or other information, including via our Website (including as set out here), APIs, social media and other channels (“BitMEX Publications”). You may be able to access BitMEX Publications without an Account through the publicly available portion of our Website, social media and other channels.
+
+3. You agree and acknowledge that BitMEX Publications:
+
+a) are for information purposes only and are not intended to and do not constitute an offer, marketing, advertisement, commitment, solicitation, or any investment advice or recommendation to use any of the Services or enter into any trades.
+
+b) do not constitute an offering document, do not purport to contain all of the information that you may require and are not intended to be taken as forming the basis of any commitment or contract; and
+
+c) are not intended to provide, and must not be relied upon for, accounting, legal, tax or other advice.
+
+46--------------------------------------------------------------------------------
+HDR Global - Terms of Service (March 2026).docx (https://testnet-static.bitmex.com/documents/HDR_Global_Terms_of_Service_March%202026.pdf)
+citeturn938search13 [wordlim: 200] Published: 5 months ago; graphs, tables, indices, research publications, historical data, historical indices ... incorporates by reference and supplements the Terms of Service.
+graphs, tables, indices, research publications, historical data, historical indices 
+levels, blog posts, articles, know-how, documents or other information, 
+including via our Website (including as set out here), APIs, social media and 
+other channels (“BitMEX Publications”). You may be able to access BitMEX 
+Publications without an Account through the publicly available portion of our 
+Website, social media and other channels. 
+ 
+3.​ You agree and acknowledge that BitMEX Publications: 
+a) are for information purposes only and are not intended to and do not 
+constitute an offer, marketing, advertisement, commitment, solicitation, or any 
+investment advice or recommendation to use any of the Services or enter into 
+any trades. 
+b) do not constitute an offering document, do not purport to contain all of the 
+information that you may require and are not intended to be taken as forming the 
+basis of any commitment or contract; and 
+c) are not intended to provide, and must not be relied upon for, accounting, 
+--------------------------------------------------------------------------------
+Get Quotes Bucketed | BitMEX API (https://docs.bitmex.com/api-explorer/get-quote-bucketed)
+citeturn938search2 [wordlim: 200] Crawled: 3 months ago;     ## /api/v1/quote/bucketed ... Retrieves best bid/offer in time buckets. ... Some other common systems use the timestamp as the beginning of the period.
+
+# Get Quotes Bucketed
+    
+    GET 
+    
+    ## /api/v1/quote/bucketed
+
+## Get Quotes Bucketed​
+
+Retrieves best bid/offer in time buckets. Timestamps returned by our bucketed endpoints are the end of the period, indicating when the bucket was written to disk. Some other common systems use the timestamp as the beginning of the period. Please be aware of this when using this endpoint.
+
+## Request​
+
+## Responses​
+
+  * 200
+  * 400
+  * 401
+  * 403
+  * 404
+
+OK
+
+Parameter Error
+
+Unauthorized
+
+Access Denied
+
+Not Found--------------------------------------------------------------------------------
+Trading Rules - BitMEX (https://www.bitmex.com/app/tradingRules)
+citeturn938search3 [wordlim: 200] Crawled: 2 months ago;     * Fetching Historical QVR Data ... We closely monitor user activity for infractions of these Trading Rules, and other abusive or undesirable trading behaviours, and, pursuant to our Terms of Service, reserve the right to restrict your use of our services, including the closure of your account, at any time. ...     * the order size is larger than the current Best Bid size and ... The Quote Value Ratio (QVR) rule aims to discourage use of strategies that submit quotes to the market without the intent to trade and therefore further strengthen the quality of liquidity on the platform.
+
+### Trading Rules
+
+  * Introduction
+  * Fat Finger Protection
+    * Protection on Market Orders
+    * Protection on Limit Orders
+  * Quote Value Ratio Threshold
+    * Definition of Quote Value Ratio (QVR)
+    * Minimum QVR Threshold
+    * Fetching Historical QVR Data
+
+## Introduction
+
+BitMEX enforces the following Trading Rules and implements the following Protections to encourage efficient trading strategies, incentivise behaviours that improve the executable liquidity of the market, and encourage an orderly market. Even though the Trading Rules and Protections apply to all users of the platform, customers who trade predominantly from the website are unlikely to be affected by the Trading Rules due to the thresholds applied to each rule. We closely monitor user activity for infractions of these Trading Rules, and other abusive or undesirable trading behaviours, and, pursuant to our Terms of Service, reserve the right to restrict your use of our services, including the closure of your account, at any time.
+
+### Protection on Limit Orders
+
+In order to prevent sudden price shocks, BitMEX will enforce protection on Limit Orders as follows:
+
+  * Buy orders will be Rejected if:
+    * the order size is larger than the current Best Ask size and
+    * the limit price is more than 5% above the higher of Best Ask and Mark Price
+  * Sell orders will be Rejected if:
+    * the order size is larger than the current Best Bid size and
+    * the limit price is more than 5% below the lower of Best Bid and Mark Price.
+
+Example 1:
+
+  * Best Bid price: 99, Best Bid size: 1 contract.
+  * Best Ask price: 100, Best Ask size: 1 contract.
+  * Mark Price: 99.5
+  * A customer sends a Sell order for 1 contract at a price of 90.
+  * BitMEX accepts this order since its size (1 contract) is NOT larger than Best Bid size of 1 contract.
+
+Example 2:
+
+  * Best Bid price: 99, Best Bid size: 1 contract.
+  * Best Ask price: 100, Best Ask size: 1 contract.
+  * Mark Price: 98
+  * A customer sends a Sell order for 10 contracts at a price of 94.
+  * BitMEX accepts this order since its limit price (94) is within 5% of the 98 (minimum of Best Bid price = 99 and Mark Price = 98).
+
+Example 3:
+
+  * Best Bid price: 99, Best Bid size: 1 contract.
+  * Best Ask price: 100, Best Ask size: 1 contract.
+  * Mark Price: 98
+  * A customer sends a Sell order for 10 contracts at a price of 90.
+  * BitMEX rejects this order since its size (10 contracts) is larger than the Best Bid size of 1 contract and its limit price (90) is more than 5% below the 98 (minimum of Best Bid price = 99 and Mark Price = 98).
+
+## Quote Value Ratio Threshold
+
+The Quote Value Ratio (QVR) rule aims to discourage use of strategies that submit quotes to the market without the intent to trade and therefore further strengthen the quality of liquidity on the platform.
+
+Accounts on the platform making over 3600 quotes per hour (60 quotes per minute) will need to maintain a minimum QVR threshold. Violations of this rule will result in email warnings and an eventual API ban.
+
+#### Definition of Quote Value Ratio (QVR)
+
+We define Quote Value Ratio (QVR) as the proportion of quotes submitted to the platform per value of trades executed. A quote submitted is any individual order sent to the market. Value traded is measured in XBT.
+
+Quote Value Ratio is calculated as follows:
+    
+    `QVR = max(0, # quotes submitted in time period T - # free quotes allowed) / value traded in XBT in time period T
+    `
+
+> Where T = 1 hour
+
+#### Minimum QVR Threshold
+
+QVR must be kept below 10,000 quotes per XBT traded per hour for XBTUSD, with 3,600 free quotes allowed per hour (60 quotes per minute). Other symbols are not currently subject to a minimum QVR threshold.
+
+> We may update the minimum QVR threshold and / or mechanism from time to time. Advanced notice of any changes will be published via the API Announcements section of the blog to ensure users have ample time to adjust their trading behaviour.
+
+#### Fetching Historical QVR Data
+
+QVR statistics for the last 3 days are made available over the BitMEX API. Documentation for this endpoint can be found on our API Explorer.--------------------------------------------------------------------------------
+Get Previous Trades in Time Buckets | BitMEX API (https://docs.bitmex.com/api-explorer/get-trade-bucketed)
+citeturn938search4 [wordlim: 200] Crawled: 3 months ago; Some other common systems use the timestamp as the beginning of the period. ... XBT) to get data for the nearest expiring contract in that series. ... total trade notional in quote currency ... last trade size of bucket ... message string
+
+# Get Previous Trades in Time Buckets
+    
+    GET 
+    
+    ## https://www.bitmex.com/api/v1/trade/bucketed
+
+## Get previous trades in time buckets​
+
+Timestamps returned by our bucketed endpoints are the end of the period, indicating when the bucket was written to disk. Some other common systems use the timestamp as the beginning of the period. Please be aware of this when using this endpoint.
+
+Also note the open price is equal to the close price of the previous timeframe bucket.
+
+## Request​
+
+### Query Parameters
+
+binSize string
+
+Time interval to bucket by. Available options: [1m,5m,1h,1d].
+
+partial boolean
+
+If true, will send in-progress (incomplete) bins for the current time period.
+
+Default value: `false`
+
+symbol string
+
+Instrument symbol. Send a bare series (e.g. XBT) to get data for the nearest expiring contract in that series.
+
+You can also send a timeframe, e.g. XBT:quarterly. Timeframes are nearest, daily, weekly, monthly, quarterly, biquarterly, and perpetual.
+
+Symbols are case-insensitive.
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+  * Array [
+
+close double
+
+bucket close price
+
+foreignNotional double
+
+total trade notional in quote currency
+
+high double
+
+bucket high price
+
+homeNotional double
+
+total trade notional in base currency
+
+lastSize int64
+
+last trade size of bucket
+
+low double
+
+bucket low price
+
+open double
+
+bucket open price
+
+pool string
+
+Trade orderbook pool
+
+Possible values: [`Primary`, `Secondary`, `Aggregated`]
+
+symbol string
+
+Instrument symbol
+
+timestamp date-time
+
+bucket end time
+
+trades int64
+
+Number of trades in bucket
+
+turnover int64
+
+total turnover
+
+volume int64
+
+total trade size of bucket
+
+vwap double
+
+bucket volume weighted average price
+
+  * ]
+
+Parameter Error
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+error object
+
+error object required
+
+message string
+
+name string
+
+message string
+
+name string
+
+Unauthorized
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+error object
+
+error object required
+
+message string
+
+name string
+
+message string
+
+name string
+
+Access Denied
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+error object
+
+error object required
+
+message string
+
+name string
+
+message string
+
+name string
+
+Not Found
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+error object
+
+error object required
+
+message string
+
+name string
+
+message string
+
+name string
+
+#### Authorization: api-key
+    
+    name: api-keytype: apiKey in: header
+    
+    name: api-signaturetype: apiKey in: header
+    
+    name: api-expirestype: apiKey in: header--------------------------------------------------------------------------------
+Get Trade History | BitMEX API (https://docs.bitmex.com/api-explorer/get-execution-trade-history.html)
+citeturn938search5 [wordlim: 200] Crawled: 3 months ago; # Get Trade History ... AccountId fetching data, must be a paired account with main user. ... See the Timestamp Docs for more details. ... Quote currency of the underlying instrument ... The value of the execution in the quote currency, required when ExecType==Trade ... text string ... message string
+
+filter string
+
+Generic table filter. Send JSON key/value pairs, such as {"key": "value"}. You can key on individual fields, and do more advanced querying on timestamps. See the Timestamp Docs for more details.
+
+Default value: `{}`
+
+columns string
+
+Array of column names to fetch. If omitted, will return all columns. Note that this method will always return item keys, even when not specified, so you may receive more columns that you expect.
+
+count int32
+
+Possible values: `>= 0` and `<= 500`
+
+Number of results to fetch. Must be a positive integer.
+
+Default value: `100`
+
+start int32
+
+Possible values: `>= 0`
+
+Starting point for results.
+
+Default value: `0`
+
+reverse boolean
+
+If true, will sort results newest first.
+
+Default value: `false`
+
+startTime string
+
+Starting time filter for results.
+
+endTime string
+
+Ending time filter for results.
+
+## Responses​
+
+  * 200
+  * 400
+  * 401
+  * 403
+  * 404
+
+OK
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+  * Array [
+
+account int64 required
+
+Account identifier
+
+avgPx double
+
+Average fill price for all executions on this order
+
+brokerCommission double
+
+feeType string
+
+Type of fee charged on the execution, required when ExecType==Trade
+
+Possible values: [`Maker`, `Taker`, `Settlement`, `Funding`]
+
+foreignNotional double
+
+The value of the execution in the quote currency, required when ExecType==Trade
+
+homeNotional double
+
+The value of the execution in the underlying instrument, required when ExecType==Trade
+
+lastLiquidityIndicator string
+
+Execution liquidity indicator, required when ExecType==Trade
+
+Possible values: [`RemovedLiquidity`, `AddedLiquidity`]
+
+lastPx double
+
+Execution price of the current trade, required when ExecType==Trade
+
+lastQty int64
+
+Execution qty of the current trade, required when ExecType==Trade
+
+leavesQty int64 required
+
+Unfilled order qty
+
+maxSlippagePct double
+
+ordRejReason string
+
+When ExecType is Rejected this field contains the rejection reason
+
+ordStatus string
+
+order status
+
+Possible values: [`PendingNew`, `New`, `Rejected`, `PartiallyFilled`, `Filled`, `PendingCancel`, `Canceled`, `PendingReplace`, `Expired`, `DoneForDay`, `Stopped`, `Suspended`, `Calculated`, `AcceptedForBidding`]
+side string required
+
+Order side
+
+Possible values: [`Buy`, `Sell`]
+
+stopPx double
+
+Trigger price for 'Stop', 'StopLimit', 'MarketIfTouched', and 'LimitIfTouched' orders
+
+strategy string
+
+Position strategy, optional, or 'Long', 'Short'
+
+Possible values: [`OneWay`, `Long`, `Short`]
+
+symbol string required
+
+Instrument symbol. e.g. 'XBTUSD'
+
+text string
+
+Optional order annotation. e.g. 'Take profit'
+
+timeInForce string
+
+Time in force
+
+Possible values: [`FillOrKill`, `ImmediateOrCancel`, `Day`, `GoodTillCancel`, `AtTheClose`]
+
+timestamp date-time
+
+Time when the risk management system processed the order
+
+tradeMatchID uuid
+
+Unique identifier for the trade, required when ExecType==Trade
+
+tradePool string
+
+Possible values: [`Primary`, `Secondary`]
+
+tradePublishIndicator string
+
+Trade published indicator, required when ExecType==Trade
+
+Possible values: [`PublishTrade`, `DoNotPublishTrade`]
+
+tradeType string
+
+Trade Type
+
+Possible values: [`Regular`, `Block`, `Settlement`, `Referential`, `AutoConversion`, `PositionTransfer`, `Adjustment`, `SpreadLeg`]
+
+transactTime date-time
+
+Time when the matching engine processed the order. Same as timestamp when workingIndicator=false
+
+triggered string
+
+order trigger state. Present on Stop or Contingent orders
+
+Possible values: [`NotTriggered`, `Triggered`, `StopOrderTriggered`]
+
+workingIndicator boolean
+
+If the order is present in the order book
+
+Parameter Error
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+error object
+
+error object required
+
+message string
+
+name string
+
+message string
+
+name string
+
+Unauthorized
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+error object
+
+error object required
+
+message string
+
+name string
+
+message string
+
+name string
+
+Access Denied
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+error object
+
+error object required
+
+message string
+
+name string
+
+message string
+
+name string
+
+Not Found
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+error object
+
+error object required
+
+message string
+
+name string
+
+message string
+
+name string
+
+--------------------------------------------------------------------------------
+Get Historical Exchange Stats | BitMEX API (https://docs.bitmex.com/api-explorer/get-stats-history)
+citeturn938search6 [wordlim: 200] Crawled: 3 months ago;     ## https://www.bitmex.com/api/v1/stats/history ... Get historical exchange-wide and per-series turnover and volume statistics ... Settlement currency for derivatives / Quote currency for spot ... message string
+
+# Get Historical Exchange Stats
+    
+    GET 
+    
+    ## https://www.bitmex.com/api/v1/stats/history
+
+## Get Historical Exchange Stats​
+
+Get historical exchange-wide and per-series turnover and volume statistics
+
+## Responses​
+
+  * 200
+  * 400
+  * 401
+  * 403
+  * 404
+
+OK
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+  * Array [
+
+date date-time required
+
+Stat date
+
+rootSymbol string required
+
+Instrument root symbol
+
+currency string
+
+Settlement currency for derivatives / Quote currency for spot
+
+volume int64
+
+Volume on the given date
+
+turnover int64
+
+Turnover on the given date
+
+  * ]
+    
+    [
+    
+      {
+    
+        "date": "2024-07-29T15:51:28.071Z",
+    
+        "rootSymbol": "string",
+    
+        "currency": "string",
+    
+        "volume": 0,
+    
+        "turnover": 0
+    
+      }
+    
+    ]
+    
+    `
+
+Parameter Error
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+error object
+
+error object required
+
+message string
+
+name string
+
+message string
+--------------------------------------------------------------------------------
+Get Position History | BitMEX API (https://docs.bitmex.com/api-explorer/get-position-history)
+citeturn938search7 [wordlim: 200] Crawled: 3 months ago; # Get Position History ... XBT) to get data for the nearest expiring contract in that series. ... See the Timestamp Docs for more details. ... Filter positions opened on or after this timestamp. ... message string
+
+# Get Position History
+    
+    GET 
+    
+    ## https://www.bitmex.com/api/v1/positionHistory
+
+## Get Position History​
+
+Get the history of position lifecycles for your account.
+
+Each record represents a position from open to close, including entry/exit prices, PnL, and quantities.
+
+## Request​
+
+### Query Parameters
+
+symbol string
+
+Instrument symbol. Send a bare series (e.g. XBT) to get data for the nearest expiring contract in that series.
+
+You can also send a timeframe, e.g. XBT:quarterly. Timeframes are nearest, daily, weekly, monthly, quarterly, biquarterly, and perpetual.
+
+Symbols are case-insensitive.
+
+filter string
+
+Generic table filter. Send JSON key/value pairs, such as {"key": "value"}. You can key on individual fields, and do more advanced querying on timestamps. See the Timestamp Docs for more details.
+
+Default value: `{}`
+
+columns string
+
+Array of column names to fetch. If omitted, will return all columns. Note that this method will always return item keys, even when not specified, so you may receive more columns that you expect.
+--------------------------------------------------------------------------------
+The Exchange Rules for Trading Crypto with BitMEX (https://www.bitmex.com/legal/exchange-rules)
+citeturn938search8 [wordlim: 200] Crawled: last month; At each of the specified times as set out here (each a “Funding Timestamp”): ... The Company may amend the Funding Timestamps, the Funding Terms, the Funding Rate, the methodology for determining the Funding Rate and any other terms relating to the determination of Funding in its sole and absolute discretion and without prior Notice to Exchange Users.
+
+11.3. In respect of each Funding Timestamp, the amount of Funding is equal to:
+
+Mark Value x Funding Rate, as determined by the Company.
+
+11.4. The Mark Value and Funding Rate are determined by the Company as set out in the Funding Terms.
+
+11.5. Funding shall be deducted from Position Margin assigned to a Position or credited to Wallet Balance in respect of a Perpetual Contract only if the Position is held at the relevant Funding Timestamp.
+
+11.6. All calculations in respect of Funding by the Company are final and conclusive. The Company may amend the Funding Timestamps, the Funding Terms, the Funding Rate, the methodology for determining the Funding Rate and any other terms relating to the determination of Funding in its sole and absolute discretion and without prior Notice to Exchange Users.
+
+### 12. Settlement
+
+12.1. Settlement occurs when a Position closes or expires at the Settlement Price and the profit or loss on that Position is credited to or deducted from the Exchange User’s Wallet Balance (“Settle” or “Settlement”).
+--------------------------------------------------------------------------------
+가격제시 가져오기 | BitMEX API (https://docs.bitmex.com/ko-KR/api-explorer/get-quote)
+citeturn938search9 [wordlim: 200] Crawled: 3 months ago;     ## https://www.bitmex.com/api/v1/quote ... bidSize int64
+
+# 가격제시 가져오기
+    
+    GET 
+    
+    ## https://www.bitmex.com/api/v1/quote
+
+## 호가 가져오기​
+
+기호에 대한 최상의 매수/매도 시간 시리즈 반환
+
+## Request​
+
+### Query Parameters
+
+symbol string
+
+상품 기호입니다. 가장 가까운 만기 계약에 대한 데이터를 가져오기 위해 순수 시리즈(e.g. XBT)를 전송하세요.
+
+또한 시간 프레임을 보낼 수도 있습니다, e.g. XBT:분기별. 시간 프레임은 가장 가까운, 일간, 주간, 월간, 분기별, 반기의, 및 영구적입니다.
+
+기호는 대소문자를 구분하지 않습니다.
+
+filter string
+
+일반 테이블 필터입니다. {"key": "value"} 등과 같은 JSON 키/값 쌍을 전송하세요. 개별 필드에 대해 키를 설정할 수 있으며, 타임스탬프에 대한 고급 쿼리를 수행할 수 있습니다. 자세한 내용은 타임스탬프 문서를 참조하세요.
+
+Default value: `{}`
+
+columns string
+
+가져올 열 이름의 배열입니다. 생략할 경우 모든 열을 반환합니다. 이 메서드는 지정되지 않아도 항상 항목 키를 반환하므로, 예상보다 더 많은 열을 받을 수 있습니다.
+
+count int32
+
+가져올 결과 수. 양의 정수여야 합니다.
+
+Default value: `100`
+
+start int32
+
+결과의 시작점입니다.
+
+Default value: `0`
+
+reverse boolean
+
+true인 경우 결과가 최신순으로 정렬됩니다.
+
+Default value: `false`
+
+startTime string
+
+결과의 시작 시간 필터입니다.
+
+endTime string
+
+결과의 종료 시간 필터입니다.
+
+pool string
+
+Possible values: [`Primary`, `Secondary`, `Aggregated`]
+
+호가 풀 필터입니다. 유효한 값: Primary, Secondary, Aggregated.
+
+## Responses​
+
+  * 200
+  * 400
+  * 401
+  * 403
+  * 404
+
+확인
+
+  * application/json
+
+  * Schema
+  * Example (auto)
+
+Schema
+
+  * Array [
+
+askPrice double
+
+호가 매도 가격
+
+askSize int64
+
+호가 매도 수량
+
+bidPrice double
+
+호가 매수 가격
+
+bidSize int64
+
+호가 매수 수량
+
+pool string
+
+호가 주문장 풀(pool)입니다.
+--------------------------------------------------------------------------------
+Get Trades | BitMEX API (https://docs.bitmex.com/api-explorer/get-trade.html)
+citeturn938search10 [wordlim: 200] Crawled: 3 months ago; XBT) to get data for the nearest expiring contract in that series. ... See the Timestamp Docs for more details. ... total volume of quote currency ... Trade size ... message string
+
+# Get Trades
+    
+    GET 
+    
+    ## https://www.bitmex.com/api/v1/trade
+
+## Get Trades​
+
+Please note that indices (symbols starting with .) post trades at intervals to the trade feed. These have a size of 0 and are used only to indicate a changing price.
+
+See the FIX Spec for explanations of these fields.
+
+## Request​
+
+### Query Parameters
+
+symbol string
+
+Instrument symbol. Send a bare series (e.g. XBT) to get data for the nearest expiring contract in that series.
+
+You can also send a timeframe, e.g. XBT:quarterly. Timeframes are nearest, daily, weekly, monthly, quarterly, biquarterly, and perpetual.
+
+Symbols are case-insensitive.
+
+filter string
+
+Generic table filter. Send JSON key/value pairs, such as {"key": "value"}. You can key on individual fields, and do more advanced querying on timestamps. See the Timestamp Docs for more details.
+
+Default value: `{}`
+
+columns string
+
+Array of column names to fetch. If omitted, will return all columns. --------------------------------------------------------------------------------
+Get Insurance Fund History | BitMEX API (https://docs.bitmex.com/api-explorer/get-insurances)
+citeturn938search11 [wordlim: 200] Crawled: 3 months ago; # Get Insurance Fund History ... See the Timestamp Docs for more details. ... timestamp date-time ... message string
+

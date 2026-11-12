@@ -1,0 +1,46 @@
+{
+  "name": "pull-pool-keeper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Profit-aware keeper for FWA PullPool lifecycle work on Ethereum mainnet.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "npm run build:keeper && npm run build:dashboard",
+    "build:keeper": "tsc -p tsconfig.build.json",
+    "build:dashboard": "npm --prefix dashboard ci --ignore-scripts --prefer-offline --no-audit --no-fund && npm --prefix dashboard run build",
+    "codex:update": "node --env-file-if-exists=.env scripts/codex-update.mjs",
+    "db:migrate": "node dist/migrate.js",
+    "db:migrate:dev": "tsx src/migrate.ts",
+    "dev": "tsx watch src/main.ts",
+    "inspect": "tsx src/inspect.ts",
+    "inspect:aura-earmarks": "tsx scripts/inspect-aura-earmarks.ts",
+    "inspect:gacha-table": "tsx scripts/inspect-gacha-table.ts",
+    "inspect:mega-rip": "tsx scripts/inspect-mega-rip.ts",
+    "inspect:maker-barks": "tsx scripts/inspect-maker-barks.ts",
+    "inspect:maker-redos": "tsx scripts/inspect-maker-redos.ts",
+    "inspect:pool-final-purchases": "tsx scripts/inspect-pool-final-purchases.ts",
+    "inspect:pool-lifecycle-block": "tsx scripts/inspect-pool-lifecycle-block.ts",
+    "inspect:pool-pull-block": "tsx scripts/inspect-pool-pull-block.ts",
+    "inspect:pull-pool-v2": "tsx scripts/inspect-pull-pool-v2.ts",
+    "inspect:robinhood": "tsx scripts/inspect-robinhood-stonkpit.ts",
+    "start": "tsx src/main.ts",
+    "start:prod": "node dist/main.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "17.4.2",
+    "pg": "^8.22.0",
+    "viem": "2.55.10"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.2",
+    "@types/pg": "^8.20.0",
+    "tsx": "4.23.1",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10"
+  }
+}

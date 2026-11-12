@@ -1,0 +1,227 @@
+ (https://docs.liquity.org/v2-documentation/technical-docs-and-audits)
+citeturn509view0 [wordlim: 200] Crawled: today; Content type: text/plain; Source: open({"ref_id":"https://docs.liquity.org/v2-documentation/technical-docs-and-audits","lineno":null}); Total lines: 139
+L0: > For the complete documentation index, see [llms.txt](https://docs.liquity.org/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.liquity.org/v2-documentation/technical-docs-and-audits.md).
+L1: 
+L2: # Technical Docs & Audits
+L3: 
+L4: A technical system summary including contract descriptions, function descriptions, and more is available in the V2 developer README.
+L5: ### Technical papers
+L6: 
+L7: [Whitepaper](https://magenta-medical-wildcat-522.mypinata.cloud/ipfs/bafybeihjijrgmytiwb4t7mqgogyyupbn342rregwff7fprlqjytko242ma)
+L8: 
+L9: ### Code base (Github)
+L10: 
+L11: [Bold Core](https://github.com/liquity/bold)\
+L12: [Governance](https://github.com/liquity/V2-gov/tree/main)
+L13: ### Audit reports
+L14: 
+L15: [ChainSecurity - Code Assessment](https://www.chainsecurity.com/security-audit/liquity-bold-smart-contracts), several audits between Aug 2024 and May 2025
+L16: 
+L17: [Dedaub - Core Protocol Audit Report I](https://dedaub.com/audits/liquity/liquity-v2-aug-28-2024/), August 2024
+L18: 
+L19: [Dedaub - Core Protocol Audit Report II](https://dedaub.com/audits/liquity/liquity-v2-second-audit-nov-11-2024/), November 2024
+L20: [Certora - Formal Verification](https://certora.cdn.prismic.io/certora/Z1tLJJbqstJ98b8J_LiquityVerificationReport.pdf), December 2024
+L21: 
+L22: [Coinspect - Bold Core Smart Contract Audit](https://www.coinspect.com/doc/Coinspect%20-%20Smart%20Contract%20Audit%20-%20Liquity%20-%20Bold%20-%20v241231.pdf), December 2024
+L23: 
+L24: [Coinspect - Bold Governance Audit](https://www.coinspect.com/doc/Coinspect%20-%20Smart%20Contract%20Audit%20-%20Liquity%20-%20Bold%20Governance%20-%20v250120.pdf),  January 2025
+L25: [ChainSecurity - Governance Smart Contract Audit](https://www.chainsecurity.com/security-audit/liquity-v2-governance), January 2025
+L26: 
+L27: [Dedaub - Governance Audit 1](https://dedaub.com/audits/liquity/liquity-v2-governance-1st-audit-aug-12-2024/), August 2024
+L28: 
+L29: [Dedaub - Governance Audit 2](https://dedaub.com/audits/liquity/liquity-v2-governance-2nd-audit-nov-11-2024/), November 2024
+L30: 
+L31: [Dedaub - Governance Audit 3](https://dedaub.com/audits/liquity/liquity-v2-governance-3rd-audit-dec-22-2024/), January 2025
+L32: [Recon - Liquity Security Review](https://github.com/GalloDaSballo/bold-review), October 2024
+L33: 
+L34: [Dedaub - Cantina fixes review](https://dedaub.com/audits/liquity/liquity-v2-cantina-fixes-review-may-13-2025/), May 2025
+L35: 
+L36: [Cantina Competiton](https://cantina.xyz/portfolio/fca4f98a-7d24-49f1-9a3b-80e5e65b2b30), March-April 2025
+L37: 
+L38: [Coinspect - Redemption Helper](https://drive.google.com/file/d/1tKLYZj_peUnUKCBmfWbmdi1KvCYJ7WfV/view), October 2025
+L39: ### Economic modelling and simulation
+L40: 
+L41: [Chaos Labs: Mechanism Design Review](https://cdn.sanity.io/files/zmh9mnff/production/ca6a4815e62b05f33fb3ec56c5a4c42d6b7ddbec.pdf), October 2024
+L42: 
+L43: ### Contract addresses
+L44: #### BOLD Token
+L45: | Contract       | Address                                                                                                                          |
+L46: | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+L47: | BOLD Mainnet   | [0x6440f144b7e50D6a8439336510312d2F54beB01D](https://etherscan.io/address/0x6440f144b7e50D6a8439336510312d2F54beB01D)            |
+L48: | BOLD Base      | [0x03569CC076654F82679C4BA2124D64774781B01D](https://basescan.org/address/0x03569CC076654F82679C4BA2124D64774781B01D)            |
+L49: | BOLD Arbitrum  | [0x03569CC076654F82679C4BA2124D64774781B01D](https://arbiscan.io/address/0x03569CC076654F82679C4BA2124D64774781B01D)             |
+L50: | BOLD HyperEVM  | [0x84533b1512A3A23F0c9668D88FDf86FEffdbb11A](https://hyperevmscan.io/address/0x84533b1512A3A23F0c9668D88FDf86FEffdbb11A)         |
+L51: | BOLD Optimism  | [0x03569CC076654F82679C4BA2124D64774781B01D](https://optimistic.etherscan.io/address/0x03569CC076654F82679C4BA2124D64774781B01D) |
+L52: | BOLD Scroll    | [0x03569CC076654F82679C4BA2124D64774781B01D](https://scrollscan.com/address/0x03569CC076654F82679C4BA2124D64774781B01D)          |
+L53: | BOLD Avalanche | [0x03569CC076654F82679C4BA2124D64774781B01D](https://snowtrace.io/address/0x03569CC076654F82679C4BA2124D64774781B01D)            |
+L54: | BOLD Sonic     | [0xf05a207442f14E446b0e32b12D2043bfc68Cb1C9](https://sonicscan.org/address/0xf05a207442f14E446b0e32b12D2043bfc68Cb1C9)           |
+L55: | BOLD Berachain | [0xf05a207442f14E446b0e32b12D2043bfc68Cb1C9](https://berascan.com/address/0xf05a207442f14e446b0e32b12d2043bfc68cb1c9)            |
+L56: | BOLD Swell     | [0x1a17b22d762c8cf2ca0f07e2b3c32e7481bb0d8c](https://swellchainscan.io/address/0x1a17b22d762c8cf2ca0f07e2b3c32e7481bb0d8c)       |
+L57: #### Shared contracts
+L58: | Contract           | Address                                                                                                               |
+L59: | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+L60: | collateralRegistry | [0xf949982b91c8c61e952b3ba942cbbfaef5386684](https://etherscan.io/address/0xf949982b91c8c61e952b3ba942cbbfaef5386684) |
+L61: | boldToken          | [0x6440f144b7e50d6a8439336510312d2f54beb01d](https://etherscan.io/address/0x6440f144b7e50d6a8439336510312d2f54beb01d) |
+L62: | hintHelpers        | [0xf0cae19c96e572234398d6665cc1147a16cbe657](https://etherscan.io/address/0xf0cae19c96e572234398d6665cc1147a16cbe657) |
+L63: | multiTroveGetter   | [0xfa61db085510c64b83056db3a7acf3b6f631d235](https://etherscan.io/address/0xfa61db085510c64b83056db3a7acf3b6f631d235) |
+L64: | exchangeHelpers    | [0x2f60bab0072abec7058017f48d7256ec288c8686](https://etherscan.io/address/0x2f60bab0072abec7058017f48d7256ec288c8686) |
+L65: #### ETH branch
+L66: | Contract           | Address                                                                                                               |
+L67: | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+L68: | collToken          | [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) |
+L69: | addressesRegistry  | [0x20f7c9ad66983f6523a0881d0f82406541417526](https://etherscan.io/address/0x20f7c9ad66983f6523a0881d0f82406541417526) |
+L70: | activePool         | [0xeb5a8c825582965f1d84606e078620a84ab16afe](https://etherscan.io/address/0xeb5a8c825582965f1d84606e078620a84ab16afe) |
+L71: | borrowerOperations | [0x372abd1810eaf23cb9d941bbe7596dfb2c46bc65](https://etherscan.io/address/0x372abd1810eaf23cb9d941bbe7596dfb2c46bc65) |
+L72: | collSurplusPool    | [0xedbe2509e502c0320d2e7f8b6746a49b4b50e2bf](https://etherscan.io/address/0xedbe2509e502c0320d2e7f8b6746a49b4b50e2bf) |
+L73: | defaultPool        | [0xd4558240d50c2e219a21c9d25afd513bb6e5b1a0](https://etherscan.io/address/0xd4558240d50c2e219a21c9d25afd513bb6e5b1a0) |
+L74: | sortedTroves       | [0xa25269e41bd072513849f2e64ad221e84f3063f4](https://etherscan.io/address/0xa25269e41bd072513849f2e64ad221e84f3063f4) |
+L75: | stabilityPool      | [0x5721cbbd64fc7ae3ef44a0a3f9a790a9264cf9bf](https://etherscan.io/address/0x5721cbbd64fc7ae3ef44a0a3f9a790a9264cf9bf) |
+L76: | troveManager       | [0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a](https://etherscan.io/address/0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a) |
+L77: | troveNFT           | [0x1a0fc0b843afd9140267d25d4e575cb37a838013](https://etherscan.io/address/0x1a0fc0b843afd9140267d25d4e575cb37a838013) |
+L78: | metadataNFT        | [0x9b36c3b16299d68c79f174df7e728e35b6af4a12](https://etherscan.io/address/0x9b36c3b16299d68c79f174df7e728e35b6af4a12) |
+L79: | priceFeed          | [0xcc5f8102eb670c89a4a3c567c[REDACTED_PHONE]c24f](https://etherscan.io/address/0xcc5f8102eb670c89a4a3c567c[REDACTED_PHONE]c24f) |
+L80: | gasPool            | [0x7b9ab3de4036cae51f1fa4ec0a2c2fd606bcf921](https://etherscan.io/address/0x7b9ab3de4036cae51f1fa4ec0a2c2fd606bcf921) |
+L81: | interestRouter     | [0x807def5e7d057df05c796f4bc75c3fe82bd6eee1](https://etherscan.io/address/0x807def5e7d057df05c796f4bc75c3fe82bd6eee1) |
+L82: | wethZapper         | [0x7022a4f4a2b9f0c30a5eb0b0073a8bb4c8e70c1f](https://etherscan.io/address/0x7022a4f4a2b9f0c30a5eb0b0073a8bb4c8e70c1f) |
+L83: | gasCompZapper      | [0x0000000000000000000000000000000000000000](https://etherscan.io/address/0x0000000000000000000000000000000000000000) |
+L84: | leverageZapper     | [0xdccbd7a365aee086aa3b4ede8afe895b20770ae3](https://etherscan.io/address/0xdccbd7a365aee086aa3b4ede8afe895b20770ae3) |
+L85: #### wstETH branch
+L86: | Contract           | Address                                                                                                               |
+L87: | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+L88: | collToken          | [0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0](https://etherscan.io/address/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0) |
+L89: | addressesRegistry  | [0x8d733f7ea7c23cbea7c613b6ebd845d46d3aac54](https://etherscan.io/address/0x8d733f7ea7c23cbea7c613b6ebd845d46d3aac54) |
+L90: | activePool         | [0x531a8f99c70d6a56a7cee02d6b4281650d7919a0](https://etherscan.io/address/0x531a8f99c70d6a56a7cee02d6b4281650d7919a0) |
+L91: | borrowerOperations | [0xa741a32f9dcfe6adba088fd0f97e90742d7d5da3](https://etherscan.io/address/0xa741a32f9dcfe6adba088fd0f97e90742d7d5da3) |
+L92: | collSurplusPool    | [0x36e6cbdf68f64cf00fc3a6c634a25be32dd0a235](https://etherscan.io/address/0x36e6cbdf68f64cf00fc3a6c634a25be32dd0a235) |
+L93: | defaultPool        | [0xd796e1648526400386cc4d12fa05e5f11e6a22a1](https://etherscan.io/address/0xd796e1648526400386cc4d12fa05e5f11e6a22a1) |
+L94: | sortedTroves       | [0x84eb85a8c25049255614f0536bea8f31682e86f1](https://etherscan.io/address/0x84eb85a8c25049255614f0536bea8f31682e86f1) |
+L95: | stabilityPool      | [0x9502b7c397e9aa22fe9db7ef7daf21cd2aebe56b](https://etherscan.io/address/0x9502b7c397e9aa22fe9db7ef7daf21cd2aebe56b) |
+L96: | troveManager       | [0xa2895d6a3bf110561dfe4b71ca539d84e1928b22](https://etherscan.io/address/0xa2895d6a3bf110561dfe4b71ca539d84e1928b22) |
+L97: | troveNFT           | [0x857aecebf75f1012dc18e15020c97096aea31b04](https://etherscan.io/address/0x857aecebf75f1012dc18e15020c97096aea31b04) |
+L98: | metadataNFT        | [0x362f822df79790c8077e61110484fffa48f682a1](https://etherscan.io/address/0x362f822df79790c8077e61110484fffa48f682a1) |
+L99: | priceFeed          | [0xe7aa2ba9e086a379d3beb224098bc634a46e314e](https://etherscan.io/address/0xe7aa2ba9e086a379d3beb224098bc634a46e314e) |
+L100: | gasPool            | [0x8c44fba379d8a8608c0e29b2729deb75a981db1f](https://etherscan.io/address/0x8c44fba379d8a8608c0e29b2729deb75a981db1f) |
+L101: | interestRouter     | [0x807def5e7d057df05c796f4bc75c3fe82bd6eee1](https://etherscan.io/address/0x807def5e7d057df05c796f4bc75c3fe82bd6eee1) |
+L102: | wethZapper         | [0x0000000000000000000000000000000000000000](https://etherscan.io/address/0x0000000000000000000000000000000000000000) |
+L103: | gasCompZapper      | [0xbd69d3e0ea967d146e925b7572b765c8e9c4127d](https://etherscan.io/address/0xbd69d3e0ea967d146e925b7572b765c8e9c4127d) |
+L104: | leverageZapper     | [0xe85230de04147c4ea363b21cdb801c1c19df0a56](https://etherscan.io/address/0xe85230de04147c4ea363b21cdb801c1c19df0a56) |
+L105: #### rETH branch
+L106: | Contract           | Address                                                                                                               |
+L107: | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+L108: | collToken          | [0xae78736cd615f374d3085123a210448e74fc6393](https://etherscan.io/address/0xae78736cd615f374d3085123a210448e74fc6393) |
+L109: | addressesRegistry  | [0x6106046f031a22713697e04c08b330ddaf3e8789](https://etherscan.io/address/0x6106046f031a22713697e04c08b330ddaf3e8789) |
+L110: | activePool         | [0x9074d72cc82dad1e13e454755aa8f144c479532f](https://etherscan.io/address/0x9074d72cc82dad1e13e454755aa8f144c479532f) |
+L111: | borrowerOperations | [0xe8119fc02953b27a1b48d2573855738485a17329](https://etherscan.io/address/0xe8119fc02953b27a1b48d2573855738485a17329) |
+L112: | collSurplusPool    | [0xba4a2bd8b76df84cac98eba3f4b967d8423192bf](https://etherscan.io/address/0xba4a2bd8b76df84cac98eba3f4b967d8423192bf) |
+L113: | defaultPool        | [0x5cc5cefd034fdc4728d487a72ca58a410cddcd6b](https://etherscan.io/address/0x5cc5cefd034fdc4728d487a72ca58a410cddcd6b) |
+L114: | sortedTroves       | [0x14d8d8011df2b396ed2bbc4959bb73250324f386](https://etherscan.io/address/0x14d8d8011df2b396ed2bbc4959bb73250324f386) |
+L115: | stabilityPool      | [0xd442e41019b7f5c4dd78f50dc03726c446148695](https://etherscan.io/address/0xd442e41019b7f5c4dd78f50dc03726c446148695) |
+L116: | troveManager       | [0xb2b2abeb5c357a234363ff5d180912d319e3e19e](https://etherscan.io/address/0xb2b2abeb5c357a234363ff5d180912d319e3e19e) |
+L117: | troveNFT           | [0x7ae430e25b67f19b431e1d1dc048a5bcf24c0873](https://etherscan.io/address/0x7ae430e25b67f19b431e1d1dc048a5bcf24c0873) |
+L118: | metadataNFT        | [0x3400874305e1547020fb8e80eaf1308b757171af](https://etherscan.io/address/0x3400874305e1547020fb8e80eaf1308b757171af) |
+L119: | priceFeed          | [0x34f1e9c7dcc279ec70d3c4488eb2d80fba8b7b2b](https://etherscan.io/address/0x34f1e9c7dcc279ec70d3c4488eb2d80fba8b7b2b) |
+L120: | gasPool            | [0x45c81dce308389e1bee63ae30a04fb1e148dad41](https://etherscan.io/address/0x45c81dce308389e1bee63ae30a04fb1e148dad41) |
+L121: | interestRouter     | [0x807def5e7d057df05c796f4bc75c3fe82bd6eee1](https://etherscan.io/address/0x807def5e7d057df05c796f4bc75c3fe82bd6eee1) |
+L122: | wethZapper         | [0x0000000000000000000000000000000000000000](https://etherscan.io/address/0x0000000000000000000000000000000000000000) |
+L123: | gasCompZapper      | [0xbe8b230dcd12e246f5edc5c103cc98be68ab636f](https://etherscan.io/address/0xbe8b230dcd12e246f5edc5c103cc98be68ab636f) |
+L124: | leverageZapper     | [0x75036b1d6de5665c60f5c33bb4a64e8e123211a2](https://etherscan.io/address/0x75036b1d6de5665c60f5c33bb4a64e8e123211a2) |
+L125: #### Governance
+L126: | Contract                 | Address                                                                                                               |
+L127: | ------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+L128: | governance               | [0x807def5e7d057df05c796f4bc75c3fe82bd6eee1](https://etherscan.io/address/0x807def5e7d057df05c796f4bc75c3fe82bd6eee1) |
+L129: | curveUsdcBoldPool        | [0xefc6516323fbd28e80b85a497b65a86243a54b3e](https://etherscan.io/address/0xefc6516323fbd28e80b85a497b65a86243a54b3e) |
+L130: | curveUsdcBoldGauge       | [0x07a01471fa544d9c6531b631e6a96a79a9ad05e9](https://etherscan.io/address/0x07a01471fa544d9c6531b631e6a96a79a9ad05e9) |
+L131: | curveUsdcBoldInitiative  | [0xba415afa8fcd65196764b5e08cb4dbf90bee33b4](https://etherscan.io/address/0xba415afa8fcd65196764b5e08cb4dbf90bee33b4) |
+L132: | curveLusdBoldPool        | [0x7ed17e037b7d88a8270c89b3afa9c38e5218f12b](https://etherscan.io/address/0x7ed17e037b7d88a8270c89b3afa9c38e5218f12b) |
+L133: | curveLusdBoldGauge       | [0xa37cdce0207127204682d3235ead2c7a4c5d6c5c](https://etherscan.io/address/0xa37cdce0207127204682d3235ead2c7a4c5d6c5c) |
+L134: | curveLusdBoldInitiative  | [0x0c76eae597afa2aa163a8c845f7e7e870256ac7e](https://etherscan.io/address/0x0c76eae597afa2aa163a8c845f7e7e870256ac7e) |
+L135: | defiCollectiveInitiative | [0xdc6f869d2d34e4aee3e89a51f2af6d54f0f7f690](https://etherscan.io/address/0xdc6f869d2d34e4aee3e89a51f2af6d54f0f7f690) |
+L136: | stakingV1                | [0x4f9fbb3f1e99b56e0fe2892e623ed36a76fc605d](https://etherscan.io/address/0x4f9fbb3f1e99b56e0fe2892e623ed36a76fc605d) |
+L137: | LQTYToken                | [0x6dea81c8171d0ba574754ef6f8b412f2ed88c54d](https://etherscan.io/address/0x6dea81c8171d0ba574754ef6f8b412f2ed88c54d) |
+L138: | LUSDToken                | [0x5f98805a4e8be255a32880fdec7f6728c6568ba0](https://etherscan.io/address/0x5f98805a4e8be255a32880fdec7f6728c6568ba0) |
+--------------------------------------------------------------------------------
+Blocks | Etherscan-compatible APIs | Routescan (https://routescan.io/docs/api/etherscan/blocks)
+citeturn509view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: click({"ref_id":"turn507view0","id":10}); Total lines: 120
+L0: cite0†Docs L1: 
+L2: Switch to light mode
+L3: 
+L4: Getting Started
+L5: 
+L6:   * cite0†Introduction L7:   * cite1†Get started L8:   * cite2†Supported chains L9:   * cite3†Migrate from Etherscan L10:   * cite4†Use with LLMs L11: 
+L12: Plans & limits
+L13: 
+L14:   * cite5†API keys & pricing L15:   * cite6†Rate limits L16: 
+L17: Build with AI
+L18: 
+L19:   * cite7†MCP server L20: 
+L21: Etherscan-compatible APIs
+L22: 
+L23:   * cite8†Overview L24:   * cite9†Accounts L25:   * cite10†Blocks L26:   * cite11†Contracts L27:   * cite12†Geth-Parity Proxy L28:   * cite13†Gas Tracker L29:   * cite14†Logs L30:   * cite15†Nametags L31:   * cite16†Stats L32:   * cite17†Tokens L33:   * cite18†Transactions L34: High-speed REST APIs
+L35: 
+L36:   * cite19†Overview L37:   * cite20†API conventions L38:   * cite21†Addresses L39:   * cite22†Transactions L40:   * cite23†Tokens L41:   * cite24†Contracts L42:   * cite25†Blocks L43:   * cite26†Stats & aggregations L44:   * cite27†Cross-chain L45:   * cite28†X-Chain L46:   * cite29†P-Chain L47:   * cite30†Network L48: 
+L49: Resources
+L50: 
+L51:   * cite31†Verify Contract L52:   * cite32†Verification Guides†info.routescan.io L53: 
+L54: cite33†Sign in L55: # Blocks
+L56: 
+L57: Copy page as Markdown Open with AI tools
+L58: 
+L59: Etherscan-compatible endpoints for the Blocks module.
+L60: ## cite34†Get Estimated Block Countdown Time by BlockNo# L61: 
+L62: Returns the estimated time remaining, in seconds, until a certain block is mined.
+L63: 
+L64: GET
+L65: 
+L66: [Button: mainnet][Button: testnet]
+L67: 
+L68: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L69: 
+L70: blockno optional[Input: 99999999]the integer block number to estimate time remaining to be mined.
+L71: 
+L72: API key (optional)
+L73: 
+L74: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L75: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=block&action=getblockcountdown&blockno=99999999&apikey=YourApiKeyToken`
+L76: 
+L77: [Button: Send request]
+L78: 
+L79: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L80: 
+L81: 1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=block&action=getblockcountdown&blockno=99999999' \
+L82: 
+L83: 2 -H 'apikey: YourApiKeyToken'
+L84: 
+L85: 1{
+L86: 
+L87: 2 status: string;
+L88: 
+L89: 3 message: string;
+L90: 
+L91: 4 result: string;
+L92: 
+L93: 5}
+L94: ## cite36†Get Block Number by Timestamp# L95: 
+L96: Returns the block number that was mined at a certain timestamp.
+L97: 
+L98: GET
+L99: 
+L100: [Button: mainnet][Button: testnet]
+L101: 
+L102: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L103: 
+L104: timestamp optional[Input: 1619638524]the integer representing the Unix timestamp in seconds.closest optional[Input: before]the closest available block to the provided timestamp, either before or after
+L105: 
+L106: API key (optional)
+L107: 
+L108: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L109: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=block&action=getblocknobytime&timestamp=1619638524&closest=before&apikey=YourApiKeyToken`
+L110: 
+L111: [Button: Send request]
+L112: 
+L113: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L114: 
+L115: 1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=block&action=getblocknobytime&timestamp=1619638524&closest=before' \
+L116: 
+L117: 2 -H 'apikey: YourApiKeyToken'
+L118: 
+L119: cite9†PreviousAccounts cite11†Next Contracts cite37†Questions? Contact us 

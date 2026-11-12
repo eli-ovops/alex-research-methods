@@ -1,0 +1,443 @@
+Do insider investment horizons contain information? Evidence from Australia - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0927538X23000124)
+citeturn1081search0 [wordlim: 200] Crawled: 2 months ago; For example, Cohen et al. (2012) show that the trades of “routine” insiders (those having a consistent historical trading pattern) are not as informed as those of “non-routine” or “opportunistic” insiders. ... Specifically, we fill this research gap by examining insider investment horizons of Australian (AU) insiders in a replication study of AJK's. ... Furthermore, the AU stock market contains many small illiquid stocks compared to the U.S. market, which deters insiders from stock trading due to higher transaction costs (Hodgson and Van Praag, 2006).
+We further find that Australian insider trades are dominated by purchasing transactions, which is contrary to the U.S. insider transactions that are predominately selling transactions. Our study provides useful insights for investors who are interested in detecting insiders' information, and for policy makers who strive for setting more effective insider trading laws.
+
+## Keywords
+
+Australian insiders
+
+;
+
+Investment horizons
+
+;
+
+Information
+
+;
+
+Legal environment
+
+## JEL code
+
+G10
+
+;
+
+G14
+
+## Introduction
+
+The trading behaviour of corporate insiders has been of ongoing interest to investors, regulators, and scholars. Having preferential access to non-public information of the firms they work for, insiders are often incentivised to trade on such advantage for profit (e.g., Seyhun, 1986; Meulbroek, 1992; Lakonishok and Lee, 2001; Cheng and Lo, 2006). Insiders also facilitate price discovery when new information is incorporated into price through insider trading (e.g., Kyle, 1985). While insiders are considered as superiorly informed traders on average, extant studies find that they are not a homogenous group that is equally informed. For example, Cohen et al. (2012) show that the trades of “routine” insiders (those having a consistent historical trading pattern) are not as informed as those of “non-routine” or “opportunistic” insiders. Similarly, Akbas, Jiang, and Koch (2020, hereafter AJK) define a new measure, namely investment horizon, to identify superiorly informed insiders. They find that short-horizon insiders, who frequently trade to update their positions, realize profits in a timelier manner than long-horizon insiders. AJK show that short-horizon insider trades convey more value-relevant private information than long-horizon trades for up to 12 months following insider trades.
+
+Despite extant research indicating the presence of material information in insider investment horizons, evidence is largely limited to the U.S. context. As the trading activity of corporate insiders is generally under more stringent regulation requirements than that of other investors, we believe a country's legal system governing insiders and shaping the institutional environment is an important factor underpinning the trading behaviour of insiders. This has arguably made the monitoring of insider trading in AU more difficult than in the U.S. It also results in different trading behaviours of AU insiders as they can delay the disclosure of transactions for longer. Unlike U.S. insiders that are contrarian (Rozeff and Zaman, 1998; Lakonishok and Lee, 2001), AU insiders tend to exhibit a momentum trading pattern (Brown et al., 2003). Furthermore, the AU stock market contains many small illiquid stocks compared to the U.S. market, which deters insiders from stock trading due to higher transaction costs (Hodgson and Van Praag, 2006). Overall, a study of the information content of AU insider investment horizons may provide different insights from those of AJK.
+
+Based on a sample of AU insider trades from 2002 to 2021, we find that, consistent with the insider trading literature, AU insiders have superior information to other traders regarding future returns. However, contrary to their counterparts in the U.S., AU insider investment horizons do not contain non-public information. 
+### Data and methodology
+
+Australian insider trading data used in this study are sourced from the Securities Industry Research Centre of Asia-Pacific (SIRCA).^{2} We collect stock returns and firms' financial information from Thomson Reuters' Eikon. The original insider trading data span from 2002 to 2021.^{3} Although our sample period is more recent than that in AJK, the 19 years of data covered by our study are
+
+### Descriptive statistics
+
+The descriptive statistics of the main variables are reported in Table 1 for both the U.S. (Panel A) and AU (Panel B) samples.^{8} Comparing the two, we first notice a much smaller sample size (N) with firms of smaller market capitalisation (SIZE) for the AU sample. The smaller AU sample size, however, does not suggest that AU insiders are less active, because the AU equity market is much smaller than the U.S. market,
+
+### Conclusions
+
+In this paper, we replicate AJK's study to examine whether insider trading behaviour varies under different legal regimes. Employing a large sample of AU insider trading transactions, we test whether the information content of insider investment horizons found in the U.S. sample also exists in AU, a very different legal environment. Consistent with the literature, we first show that AU insiders have superior information to earn abnormal returns. However, we then report a stark contrast between
+
+### CRediT author statement
+
+Lai T. Hoang: Data Curation, Methodology, Formal analysis, Investigation, software, Writing-original draft, Writing-review & Editing.
+
+Md Zakir Hossain: Data curation, Methodology, Formal analysis, Investigation, Software, Writing-original draft, Writing-review & editing.
+
+Jamie Y. Tong: Funding acquisition, Investigation, Writing- review &editing.
+
+Joey W. Yang: Conceptualization, Methodology, Supervision, Writing-original draft, Writing-review and editing.
+
+## References (15)
+
+  * U. Ali et al.
+
+### Opportunism as a firm and managerial trait: predicting insider trading profits and misconduct
+
+### J. Financ. Econ.
+
+(2017)
+
+  * H.N. Seyhun
+
+### Insiders’ profits, costs of trading, and market efficiency
+
+### J. Financ. Econ.
+
+(1986)
+
+  * F. Akbas et al.
+
+### Insider investment horizon
+
+### J. Financ.
+
+(2020)
+
+  * P. Brown et al.
+
+### Trading by insiders in Australia: evidence on the profitability of directors' trades
+
+### Company Securities Law J.
+
+(2003)
+
+  * Q. Cheng et al.
+
+### Insider trading and voluntary disclosures
+
+### J. Account. Res.
+
+(2006)
+
+  * B.N. Cline et al.
+
+### The persistence of opportunistic insider trading
+
+### Financ. Manag.
+
+(2017)
+
+  * L. Cohen et al.
+
+### Decoding inside information
+
+### J. Financ.
+
+(2012)
+
+There are more references available in the full text version of this article.--------------------------------------------------------------------------------
+Do insider investment horizons contain information? Evidence from Australia - ScienceDirect (https://www.sciencedirect.com/science/article/abs/pii/S0927538X23000124)
+citeturn1081search1 [wordlim: 200] Published: 3.4 years ago; Crawled: 3 days ago; For example, Cohen et al. (2012) show that the trades of “routine” insiders (those having a consistent historical trading pattern) are not as informed as those of “non-routine” or “opportunistic” insiders. ... Specifically, we fill this research gap by examining insider investment horizons of Australian (AU) insiders in a replication study of AJK's. ... Furthermore, the AU stock market contains many small illiquid stocks compared to the U.S. market, which deters insiders from stock trading due to higher transaction costs (Hodgson and Van Praag, 2006).
+For example, Cohen et al. (2012) show that the trades of “routine” insiders (those having a consistent historical trading pattern) are not as informed as those of “non-routine” or “opportunistic” insiders. Similarly, Akbas, Jiang, and Koch (2020, hereafter AJK) define a new measure, namely investment horizon, to identify superiorly informed insiders. They find that short-horizon insiders, who frequently trade to update their positions, realize profits in a timelier manner than long-horizon insiders. AJK show that short-horizon insider trades convey more value-relevant private information than long-horizon trades for up to 12 months following insider trades.
+
+Despite extant research indicating the presence of material information in insider investment horizons, evidence is largely limited to the U.S. context. As the trading activity of corporate insiders is generally under more stringent regulation requirements than that of other investors, we believe a country's legal system governing insiders and shaping the institutional environment is an important factor underpinning the trading behaviour of insiders. This has arguably made the monitoring of insider trading in AU more difficult than in the U.S. It also results in different trading behaviours of AU insiders as they can delay the disclosure of transactions for longer. Unlike U.S. insiders that are contrarian (Rozeff and Zaman, 1998; Lakonishok and Lee, 2001), AU insiders tend to exhibit a momentum trading pattern (Brown et al., 2003). Furthermore, the AU stock market contains many small illiquid stocks compared to the U.S. market, which deters insiders from stock trading due to higher transaction costs (Hodgson and Van Praag, 2006). Overall, a study of the information content of AU insider investment horizons may provide different insights from those of AJK.
+
+Based on a sample of AU insider trades from 2002 to 2021, we find that, consistent with the insider trading literature, AU insiders have superior information to other traders regarding future returns. However, contrary to their counterparts in the U.S., AU insider investment horizons do not contain non-public information. Hence, unlike in the U.S. market, an investment horizon is not an indicator of insiders' private information in the AU market. In addition, we also show that the majority of AU insiders are buyers while the majority of U.S. insiders are sellers. We believe that the different results in the AU market are driven by the lower litigation risks and the distinct trading behaviours of AU insiders.
+
+We conduct the first study on the information content of AU insider investment horizons, implicitly incorporating the influence of the legal environment surrounding the trading activity of insiders. We add to the insider trading literature by exploring the investment horizons of AU insiders. Although AJK document that short-horizon insider trades convey more private information than long-horizon insider trades in the U.S. market, such results cannot be generalised to the AU market because the insiders of the two counties have distinct trading patterns and are subject to different legal requirements.
+
+
+  * U. Ali et al.
+
+### Opportunism as a firm and managerial trait: predicting insider trading profits and misconduct
+
+### J. Financ. Econ.
+
+(2017)
+
+  * H.N. Seyhun
+
+### Insiders’ profits, costs of trading, and market efficiency
+
+### J. Financ. Econ.
+
+(1986)
+
+  * F. Akbas et al.
+
+### Insider investment horizon
+
+### J. Financ.
+
+(2020)
+
+  * P. Brown et al.
+
+### Trading by insiders in Australia: evidence on the profitability of directors' trades
+
+### Company Securities Law J.
+
+(2003)
+
+  * Q. Cheng et al.
+
+### Insider trading and voluntary disclosures
+
+### J. Account. Res.
+
+(2006)
+
+  * B.N. Cline et al.
+
+### The persistence of opportunistic insider trading
+
+### Financ. Manag.
+
+(2017)
+
+  * L. Cohen et al.
+
+### Decoding inside information
+
+### J. Financ.
+
+(2012)
+
+There are more references available in the full text version of this article.
+
+We would like to thank AFAANZ's shark tank committee 2022 for the opportunity, and for the prize we received. We are especially grateful for the useful comments provided by professor Robert Faff and Professor Garry Monroe.--------------------------------------------------------------------------------
+QuantGPT · Quant research resources (https://quantgpt.co/learn/resources)
+citeturn1081search2 [wordlim: 200] Crawled: today; COHEN, MALLOY & POMORSKI, 2012, JOURNAL OF FINANCESeparate routine insider trades from opportunistic ones and the signal doubles.
+
+  8. Decoding Inside Information
+
+COHEN, MALLOY & POMORSKI, 2012, JOURNAL OF FINANCE
+
+Separate routine insider trades from opportunistic ones and the signal doubles.
+
+RE-RUN IN THE TERMINAL: INSIDER CLUSTER BUYS·RUN IT ▸
+
+  9. Size-related anomalies and stock return seasonality: Further empirical evidence
+
+KEIM, 1983, JOURNAL OF FINANCIAL ECONOMICS
+
+Half the size premium arrives in January, much of it in the first week.
+
+IN THE LIBRARY: JANUARY / TURN-OF-YEAR EFFECT
+
+  10. The Halloween Indicator, "Sell in May and Go Away": Another Puzzle
+
+BOUMAN & JACOBSEN, 2002, AMERICAN ECONOMIC REVIEW
+
+November to April beats May to October in 36 of 37 countries.
+
+RE-RUN ON THE S&P 500 INDEX: SELL IN MAY (HALLOWEEN INDICATOR)·RUN IT ▸
+
+  11. Seasonality in the cross-section of stock returns
+
+HESTON & SADKA, 2008, JOURNAL OF FINANCIAL ECONOMICS
+
+Stocks that did well in a calendar month tend to do well in that month again.
+
+IN THE LIBRARY: SAME-CALENDAR-MONTH SEASONAL MOMENTUM
+
+--------------------------------------------------------------------------------
+The Information Content of Realized Losses (https://www.researchgate.net/publication/329252884_The_Information_Content_of_Realized_Losses)
+citeturn1081search3 [wordlim: 200] Published: 8.3 years ago; Crawled: 5 months ago;   * Lauren Cohen ... Stripping away these routine trades, which comprise over half the entire universe of insider trades, leaves a set of information-rich “opportunistic” trades that contains all the predictive power in the insider trading universe. ... Further, opportunistic trades predict future news and events at a firm level, while routine trades do not.Institutional subscribers to the NBER working paper series, and residents of developing countries may download this paper without additional charge at www.nber.org. ... Insider profits, after an assumed 2 percent transactio ns cost, are a moderate 3 percent per annum for annual holding period s.
+These results provide support for the realization utility model. More generally, they demonstrate that neural data can be helpful in testing models of investor behavior.
+
+View
+
+Show abstract
+
+Decoding Inside Information
+
+Article
+
+  * Oct 2010
+  * J FINANC
+
+  * Lauren Cohen
+  * Christopher J. Malloy
+  * Lukasz Pomorski
+
+Using a simple empirical strategy, we decode the information in insider trades. Exploiting the fact that insiders trade for a variety of reasons, we show that there is predictable, identifiable “routine” insider trading that is not informative for the future of firms. Stripping away these routine trades, which comprise over half the entire universe of insider trades, leaves a set of information-rich “opportunistic” trades that contains all the predictive power in the insider trading universe. A portfolio strategy that focuses solely on opportunistic insider trades yields value-weight abnormal returns of 82 basis points per month, while the abnormal returns associated with routine traders are essentially zero. --------------------------------------------------------------------------------
+Aegis-Finance/docs/AEGIS_FINANCE_DOSSIER_2026-08-02.md at main · Murathanx12/Aegis-Finance · GitHub (https://ithub.global.ssl.fastly.net/Murathanx12/Aegis-Finance/blob/main/docs/AEGIS_FINANCE_DOSSIER_2026-08-02.md)
+citeturn1081search4 [wordlim: 200] Published: 2 months ago; Crawled: last month; Cohen-Malloy-Pomorski ✅: opportunistic trades +82 bps/mo value-weighted; routine ≈ 0, and routine is >50% of the universe. ... ⚠️ The decay is the risk: a 2026 SSRN working paper reports opportunistic alpha falling from ~1.2–1.6%/mo to ~0.3–0.4%/mo, with 70–80% dissipating between the transaction date and the next trading day — i.e. before the Form 4 even posts. ... The data obstacle just dissolved: Compustat Segments is paid, but SFAS 131 major-customer disclosures are in 10-K text on EDGAR and are now extractable with an LLM at near-zero marginal cost.
+Cohen-Malloy-Pomorski ✅: opportunistic trades +82 bps/mo value-weighted; routine ≈ 0, and routine is >50% of the universe. Jeng-Metrick-Zeckhauser ✅: purchases +40–50 bps/mo, sales ≈ 0, with ~1/6 of the abnormal return arriving within 5 days. ⚠️ The decay is the risk: a 2026 SSRN working paper reports opportunistic alpha falling from ~1.2–1.6%/mo to ~0.3–0.4%/mo, with 70–80% dissipating between the transaction date and the next trading day — i.e. before the Form 4 even posts. This matches the project's own prior almost exactly (BRAIN-003: +17 bps/mo net, t 1.40, microcap null, DSR 0.26). But see Part V-B L1 — the live collector is returning zeros, so this trial is currently measuring nothing.
+
+13F — cloning does not work after the lag, and the live evidence is decisive. ✅ GURU (Global X Guru, the flagship high-conviction clone, inception 2012):
+
+ | 1Y  | 3Y  | 5Y  | 10Y  | Since inception
+--- | --- | --- | --- | --- | ---
+GURU NAV  | 30.97%  | 23.85%  | 7.62%  | 12.82%  | 12.62%
+Its own index  | 31.95%  | 24.13%  | 7.90%  | 13.04%  | 12.95%
+--------------------------------------------------------------------------------
+Insider Trading Signal Synthesis | PDF | Market (Economics) | Information (https://ru.scribd.com/document/979770777/Synthesizing-Information-driven-Insider-Trade-Signals)
+citeturn1081search5 [wordlim: 200] Crawled: 9 months ago; Implementation costs, such as search costs, spreads, market impact, idiosyncratic risk, or ... better interpretation of public information, as opposed to opportunistic trading on private ... consider purchases and sales if either the source of an insider transaction is equal to the local ... routine trades following the trade-level approach of Cohen et al. (2012) to focus on the
+consider purchases and sales if either the source of an insider transaction is equal to the local
+regulator or if the transaction was placed on a local exchange. Furthermore, we exclude
+all transactions not labeled as equity transactions by 2iQ and all transactions which can
+be identified as a private transaction either through their exchange or transaction label.
+As the availability of exchange and transaction labels varies greatly between countries, we
+also implement our own private transactions screen by excluding transactions which have
+both an unusual transaction price and trading volume for the given trading day, i.e., the
+transaction price is not within a 20% range of the daily closing price and the volume exceeds
+the exchange volume for the day. Furthermore, we exclude all trades that are considered
+routine trades following the trade-level approach of Cohen et al. (2012) to focus on the
+most informative transactions. These screens imply that we exclude, among others, private
+transactions, awards, and option exercises. Finally, we aggregate purchases and sales by an
+individual insider to obtain net shares bought or sold during a given day. When calculating
+the information-driven measures, we aggregate purchases and sales by an individual insider
+to obtain net shares bought or sold during a given month if not stated otherwise.
+
+--------------------------------------------------------------------------------
+New Framework for Testing Expected Returns | PDF | Type I And Type Ii Errors | P Value (https://www.scribd.com/document/837538294/And-the-Cross-Section-of-Expected-Returns)
+citeturn1081search6 [wordlim: 200] Published: 11.0 years ago; Crawled: 1.6 years ago; Eisfeldt and Papanikolaou (2011) organizational capital C148 Lioui and Maio (2012) future growth opp. cost of money F106 ... Campbell et al. (2012) stochastic volatility* F94 Cohen, Malloy, and Pomorski (2012) opportunistic buy C181
+C178
+Savov (2011) garbage growth F92 Bazdresch, Belo and Lin (2012) firm hiring rate C179
+Adrian, Etula, and Muir (2012) financial intermediary’s wealth F93 Cohen and Lou (2012) infor. processing complexity C180
+Campbell et al. (2012) stochastic volatility* F94 Cohen, Malloy, and Pomorski (2012) opportunistic buy C181
+Chen and Petkova (2012) average variance of equity returns F95 opportunistic sell C182
+Eiling (2013) income growth goods industries F96 Hirshleifer, Hsu, and Li (2012) innovative efficiency C183
+income growth for manufacturing F97 Li (2012) abnormal operating cash flows C184
+income growth for distributive F98 abnormal production costs C185
+income growth for service* F99 Prakash and Sinha (2012) deferred revenues C186
+income growth for government* F100 Price et al. (2012) earnings conference calls C187
+Boguth and Kuehn (2012) consumption volatility F101 So (2012) earnings forecast optimism C188
+Chang, Christoffersen, and Jacobs (2012) market skewness F102 Boons, De Roon, and Szymanowska (2012) commodity index F109
+Viale, Garcia-Feijoo, and Giannetti (2012) learning* F103 Moskowitz, Ooi, and Pedersen (2012) time-series momentum C189
+Knightian uncertainty F104 Koijen et al. (2012) carry C190
+Bali and Zhou (2012) market uncertainty F105 Burlacu et al. (2012) expected return proxy C191
+14 Gómez, Priestley, and Zapatero (2012) labor income‡ Beneish, Lee, and Nichols (2012) fraud probability C192
+43
+
+--------------------------------------------------------------------------------
+SSRN Id2249314 PDF | PDF | Type I And Type Ii Errors | Multiple Comparisons Problem (https://www.scribd.com/document/458261354/SSRN-id2249314-pdf)
+citeturn1081search7 [wordlim: 200] Published: 11.5 years ago; Crawled: 6.5 years ago; 182 Opportunistic sell Prior month sell indicator for oppor- Char. microstructure ... 2012 183 Innovative eﬃciency Patents/citations scaled by research Char. other Journal of Financial Eco- Hirshleifer, Hsu and Li ... 185 Abnormal production costs Abnormal production costs Char. accounting ... 2013 195 Firm’s ability to innovate Rolling firm-by-firm regressions of Char. accounting Review of Financial Stud- Cohen, Diether and Mal-
+## Electronic copy available at: [Link]
+
+182 Opportunistic sell Prior month sell indicator for oppor- Char. microstructure
+tunistic traders who do not trade rou-
+tinely
+2012 183 Innovative eﬃciency Patents/citations scaled by research Char. other Journal of Financial Eco- Hirshleifer, Hsu and Li
+and development expenditures nomics (2012)
+2012 184 Abnormal operating cash flows Abnormal operating cash flows Char. accounting Working Paper Li (2012)
+185 Abnormal production costs Abnormal production costs Char. accounting
+2012 186 Deferred revenues Changes in the current deferred rev- Char. accounting Contemporary Accounting Prakash and Sinha (2012)
+enue liability Research
+2012 187 Earnings conference calls Sentiment of conference call wording Char. other Journal of Banking and Price, Doran, Peterson
+Finance and Bliss (2012)
+. . . continued
+Year # # Factor Formation Type Journal Short reference
+2012 188 Earnings forecast optimism Diﬀerence between characteristic fore- Char. accounting Working Paper So (2012)
+casts and analyst forecasts
+--------------------------------------------------------------------------------
+(PDF) Insider trading regulation and shorting constraints. Evaluating the joint effects of two market interventions (https://www.researchgate.net/publication/359928477_Insider_trading_regulation_and_shorting_constraints_Evaluating_the_joint_effects_of_two_market_interventions)
+citeturn1081search8 [wordlim: 200] Crawled: 4 months ago; in which insider trades are separated into opportunistic trades(with information) and routine trades (without information). ... transaction costs. ... Three traders in each period are (at no cost) ... Our research project employs a 2 ×2 full factorial, between- ... Cohen, L., Diether, K.B., Malloy, C.J., 2007.
+which investigates the role of short sellers and private informa-
+
+tion. They ﬁnd that short-selling activities are informative regard-
+
+ing future stock returns when there are insider trading activities.
+
+To et al. (2018) show that the lifting of short-selling restrictions in
+
+the U.S. market in credit default spreads signiﬁcantly affects the
+
+ability of different groups of insiders to proﬁt from their supe-
+
+rior information. This observation is in line with the experimen-
+
+tal study of King et al. (1993) who report that informed traders
+
+outperform other participants only when short selling and margin
+
+buying is possible. Massa et al. (2015) study a natural experiment
+
+in which insider trades are separated into opportunistic trades
+
+(with information) and routine trades (without information). Only
+
+the opportunistic trades are illegal in most modern capital markets.
+
+Their results show that particularly insiders who trade opportunis-
+
+tically sell more of their assets and do so faster when they fear
+transaction costs.
+
+Assets traded in this market live for a single period and are
+
+bought back by the experimenter after market closing at the buy-
+
+back value ( bbv ), which is denoted in talers (the experimental cur-
+
+rency) and is the same for all traders. There are no other cash
+
+ﬂows originating from assets. Before the beginning of each trad-
+
+ing phase, bbv is drawn from the discrete uniform distribution
+
+U{ 30 . 0 , 30 . 1 , . . . , 85 . 0 } . Successive draws are identically and inde-
+
+pendently distributed. Three traders in each period are (at no cost)
+
+informed of the asset’s exact bbv (informed traders), while six
+
+traders know only the ex-ante distribution of bbv (uninformed
+
+traders).
+
+4 Uninformed traders’ best initial estimate for bbv thus is
+
+bbv ’s unconditional expected value of 57.50 taler.
+
+5 The identity of
+
+uninformed and informed traders is ﬁxed at the beginning of the
+
+experiment. The constant ratio between informed and uninformed
+
+traders remains undisclosed to all participants, including the ob-
+--------------------------------------------------------------------------------
+ (https://www.sec.gov/Archives/edgar/data/1131042/000089418916010724/gpsfunds1_485b.htm)
+citeturn1081search9 [wordlim: 200] Published: 10.2 years ago; Crawled: 9.1 years ago; Portfolio Turnover Risk:  Depending on market and other conditions, the Fund may experience a high portfolio turnover, which may result in higher brokerage costs and transaction costs (which could reduce investment returns). ... GUIDEMARK^{® }OPPORTUNISTIC EQUITY FUND – INSTITUTIONAL SHARES ... Meyers, CFA  |    | Managing Partner and Director of Research  |    | Since 2011
+The Fund’s past performance (before and after taxes) is not necessarily an indication of how the Fund will perform in the future.
+
+GUIDEMARK^{® }OPPORTUNISTIC EQUITY FUND – INSTITUTIONAL SHARES
+
+Calendar Year Returns as of 12/31
+
+Image
+
+The year-to-date performance of the Fund’s Institutional Shares (as of June 30, 2016) was -6.12%.
+
+During the period shown on the bar chart, the Fund’s best and worst quarters are shown below:
+
+Best Quarter:  | Quarter ended March 31, 2012  | 13.78%
+Worst Quarter:  | Quarter ended September 30, 2015  | -8.24%
+
+ 
+
+Table of Contents - Institutional Shares Prospectus
+
+22
+
+* * *
+
+Average Annual Total Returns for Periods Ended December 31, 2015  |    |  
+   | One Year  | Since Inception (April 29, 2011)
+Opportunistic Equity Fund  |    |  
+Return Before Taxes  | -2.19%  | 9.11%
+Return After Taxes on Distributions  | -5.64%  | 6.98%
+Return After Taxes on Distributions and Sale of Fund Shares  | 1.61%  | 7.13%
+Russell 3000^{®} Index (reflects no deduction for fees, expenses or taxes)  | 0.48%  | 10.90%
+--------------------------------------------------------------------------------
+Bagley, C. E., Roellig, M., & Massameno, G. 2016. Who Let The Lawyers Out Reconstructing The Role of The Chief Legal | PDF | Libor | Business (https://www.scribd.com/document/1012953216/Bagley-C-E-Roellig-M-Massameno-G-2016-Who-Let-the-Lawyers-Out-Reconstructing-the-Role-of-the-Chief-Legal)
+citeturn1081search10 [wordlim: 200] Published: 10.7 years ago; Crawled: 7 months ago; ## 2016] WHO LET THE LAWYERS OUT? ... optimize the value of business relationships by reducing overall transactioncosts while increasing trust, decreasing ill-will, and actively deterringopportunistic behavior from either party by assigning a guaranteed highcost for engaging in such behavior.
+## 2016] WHO LET THE LAWYERS OUT? 463
+
+## respective objectives and expectations. Thus, formal contracts can
+
+optimize the value of business relationships by reducing overall transaction
+costs while increasing trust, decreasing ill-will, and actively deterring
+opportunistic behavior from either party by assigning a guaranteed high
+cost for engaging in such behavior. Conversely, especially when the
+different parties’ interests are not naturally aligned, poorly drafted contracts
+can destroy value.253
+Thus, a company’s welfare hinges on how competently and creatively
+that company’s lawyers can work with managers to add value to the firm
+through the contract language they negotiate and draft. This is where the
+in-house counsel’s knowledge of management and operations, as well as
+the business of the company, is key. It allows the counsel to intelligently
+see around corners to anticipate areas of risk and proactively structure
+strategy or relationships to advance the business objectives. Thus,
+creativity extends to foreseeing potential exchange hazards (particularly
+--------------------------------------------------------------------------------
+Continue (https://uploads.strikinglycdn.com/files/e9415815-5261-409f-bd95-3c4ae3c924b6/39612776203.pdf)
+citeturn1081search12 [wordlim: 200] Published: 1.3 years ago; In contrast, in particle physics, it is routine ... In contrast with other fields, such as medical science, it is rare to publish replication studies focusing on only existing factors. ... Ingersoll, and Ross (1985) Δ investment opportunities T Rubinstein (1974) individual investor resources T Amihud and Mendelson (1986) transaction costs T Gupta and Ofer (1975) earnings growth expectations C3 Constantinides (1986) transaction costs T Kraus and Litzenberger (1976) market return†  Stulz (1986) expected inflation T  squared market return* F3 Sweeney and ... × option return‡  Shu (2007) trader composition C90 Gomes, Yaron, and Zhang (2006) financing frictions F48 Baik and Ahn (2007) change in order backlog C91 Li, Vassalou, and Xing (2006) inv. growth (IG) households* F49 Brown and Rowe (2007) firm productivity C92  IG nonfinancial corporates F50 Doran, Fodor, and Peterson (2007) insider forecasts of firm vol. ... Muir (2012) financial intermediary's wealth F93 Cohen and Lou (2012) infor. processing complexity C180 Campbell et al. (2012) stochastic volatility* F94 Cohen, Malloy, and Pomorski (2012) opportunistic buy C181 Chen and Petkova (2012) average variance of equity returns F95  opportunistic sell C182 Eiling (2013) income growth goods industries F96 Hirshleifer, Hsu, and Li
+Zhang (2011) tax expense surprises C164  cons. growth volatility‡  Wahlen and Wieland (2011) predicted earnings increase score‡  Ang, Bali, and Cakici (2012) change in call implied vol. C177 Garlappi and Yan (2011) shareholder recovery   change in put implied vol. C178 Savov (2011) garbage growth F92 Bazdresch, Belo and Lin (2012) firm hiring rate C179 Adrian, Etula, and
+Muir (2012) financial intermediary's wealth F93 Cohen and Lou (2012) infor. processing complexity C180 Campbell et al. (2012) stochastic volatility* F94 Cohen, Malloy, and Pomorski (2012) opportunistic buy C181 Chen and Petkova (2012) average variance of equity returns F95  opportunistic sell C182 Eiling (2013) income growth goods industries F96 Hirshleifer, Hsu, and Li
+(2012) innovative efficiency C183  income growth for manufacturing F97 Li (2012) abnormal operating cash flows C184  income growth for distributive F98  abnormal production costs C185  income growth for service* F99 Prakash and Sinha (2012) deferred revenues C186  income growth for government* F100 Price et al. (2012) earnings conference calls C187 Boguth and Kuehn
+--------------------------------------------------------------------------------
+Insider Cluster Trades: Cohen, Malloy, Pomorski Retested (https://insiders-trades.com/blog/cluster-trades-revisiting-cohen-malloy-pomorski-on-17-markets/)
+citeturn1081search11 [wordlim: 200] Published: 5 months ago; Crawled: last month;   * A cluster trade, defined here as at least three insider filings in the same issuer within 30 days, is a stricter signal than a lone director dealing report and is designed to separate coordinated conviction from routine noise. ... Cohen, Malloy and Pomorski, in a paper that has aged better than much of the factor zoo, formalised a practical idea: insider signals are stronger when several insiders trade in the same direction within a short window. ... Transaction costs, borrow constraints for sell signals, and filing lags can also turn a handsome in-sample Sharpe into a rather ordinary live result. ... A cross-market revisit is not just replication tourism. ... A market-level Sharpe depends on rebalancing frequency, holding horizon, weighting scheme, treatment of overlapping events, transaction cost model and whether shorting clustered sales is allowed.
+

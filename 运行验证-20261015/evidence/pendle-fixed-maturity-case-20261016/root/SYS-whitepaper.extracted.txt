@@ -1,0 +1,357 @@
+PAGE 1
+Standardized Yield Stripping - efficient yield stripping
+mechanism on DeFi’s yield generating assets
+Vu Nguyen
+[REDACTED_EMAIL]
+October 14, 2022
+Abstract
+Yield generating assets are the bedrock of any financial system, both in traditional finance (TradFi)
+and decentralised finance (DeFi). Yield stripping loosely refers to the process of splitting a yield
+generating asset into two components: its principal and yield components. These components take on
+different forms with wide-ranging applications. In DeFi, a number of protocols have proposed different
+ways to do yield stripping. In this paper, we will propose Standardized Yield Stripping - an efficient,
+composable and permissionless mechanism for yield stripping on most yield generating assets in DeFi
+1 Standardized Yield Stripping (SYS)
+In this section, we introduce SYS, a yield stripping mechanism on most yield generating assets in DeFi.
+SYS works on all SY tokens, as defined in the Standardized Yield paper [1] where the compound interest
+is always positive ( SY Index (t) is a non-decreasing function).
+1.1 Overview
+Yield stripping in SYS must always be in the context of a SY token , and an expiry. With a chosen
+expiry, a SY token is split into a Yield Token (YT) and a Principal Token (PT).
+YT represents the right to claim the real-time yields until the expiry, and PT represents the right to
+redeem the principal after the expiry.
+1.2 Basic definitions
+yield stripping pool is a pool of SY tokens that were deposited in total for yield stripping
+up to an expiry. At time t, there are S(t) SY tokens in the yield stripping pool, which is worth
+A(t) = S(t) × SY Index (t) of asset.
+SY token is a Standardized Yield token as defined in the SY paper [1]. Most yield generating
+mechanisms in DeFi can be converted into SY token.
+expiry the end of the period where yield can be traded until. Short form: texpiry
+1
+
+PAGE 2
+asset is the unit to measure value of SY tokens, as defined in the SY standard and GYGP model
+users are entities who interact with the yield stripping pool in one way or another.
+Yield T oken (YT) is a unit that could be created (minted), destroyed (burned) or transferred
+between users. Loosely speaking, it is the yield component that is stripped from the SY token. At
+time t, a user u has a YT balance of ytBalance u(t). The total YT in existence at time t is
+ytSupply (t)
+X
+u
+ytBalance u(t) = ytSupply (t) (1)
+Principal T oken (PT) is a unit that could be created (minted), destroyed (burned) or transferred
+between users. Loosely speaking, it is the principal component of the SY token. At time t, a user u
+has a PT balance of ptBalance u(t). The total PT in existence at time t is ptSupply(t)
+X
+u
+ptBalance u(t) = ptSupply(t) (2)
+reward tokens are tokens generated from holding SY tokens over time, as defined in (insert
+reference). There are nrewards different reward tokens for the SY token . At time t, Ri(t) is the total
+amount of reward token i that has been accrued for the yield stripping pool since t = 0. These
+reward tokens would be distributed among the users. At time t, a user u is entitled to receive a total
+of rui reward token i
+user total accrued interest From tstart until time t, a user u is entitled to receive a total of iu(t)
+of SY token as interests for holding YT over time.
+user claimed interest From tstart until time t, a user u has claimed cu(t) of SY token as interests
+from the yield stripping pool . This means that at time t, user u has an unclaimed amount of interest
+iu(t) − cu(t) in SY token that is sitting in the yield stripping pool
+1.3 State changes
+At any point in time, let’s define t∗ to be the timestamp of the latest global state change. There are
+4 types of state changes:
+1.3.1 Initialisation
+At the start at tstart:
+S(tstart) = A(tstart) = Ri(tstart) = ytSupply (tstart) = ptSupply(tstart) = 0
+1.3.2 Minting/Redeeming YT and PT before the expiry
+At time t < t expiry, a user u can send in dSY SY token , which is worth da asset into the yield
+stripping pool , to mint da YT and da PT out. If dSY < 0, this becomes a redemption where the
+user redeems −dSY SY token from the yield stripping pool after burning −da YT and −da PT.
+It is required that −da ≤ min(ytBalance u(t∗), ptBalanceu(t∗)) to ensure that the user has enough
+2
+
+PAGE 3
+PT and YT for redemption.
+da = dSY × SY Index (t)
+ytBalance u(t) = ytBalance u(t∗) + da
+ptBalance u(t) = ptBalance u(t∗) + da
+S(t) = S(t∗) + dSY
+A(t) = A(t∗) + da
+ytSupply (t) = ytSupply (t∗) + da
+ptSupply(t) = ptSupply(t∗) + da
+1.3.3 Redeeming after expiry
+At time t ≥ texpiry, a user u can burn da PT, to redeem dSY SY token which is worth da asset
+(da ≤ ptBalance u(t∗)).
+dSY = da
+SY Index (t)
+ptBalance u(t) = ptBalance u(t∗) − da
+S(t) = S(t∗) − dSY
+A(t) = A(t∗) − da
+ptSupply(t) = ptSupply(t∗) − da
+1.3.4 Earning of compound interests for SY token
+At time t < t expiry, there could be some interest earned for the SY token , such that
+SY Index (t) > SY Index (t∗). Each user u’s total accrued interest will increase by an amount
+dInterest u as follows:
+dInterest u = ytBalance u(t∗) ×
+ 1
+SY Index (t∗) − 1
+SY Index (t)
+
+iu(t) = iu(t∗) + dInterest u
+1.3.5 Earning of rewards for SY token
+At time t < t expiry, there could be dri of reward token i earned by the yield stripping pool .
+We will distribute these rewards to each user, proportionally to each user’s SY balance to receive
+rewards.
+Reward generating SY balance of a user at time t is the amount of SY tokens that each user
+is entitled to get reward tokens for, rewardGeneratingSY u(t). It is the sum of the unclaimed interest
+and the SY equivalent amount of the YT balance:
+rewardGeneratingSY u(t) = iu(t) − cu(t) + ytBalance u(t)
+SY Index (t) (3)
+3
+
+PAGE 4
+With the definition of rewardGeneratingSY u(t), we can define the formula for distributing dri of
+reward token i among the users: each user u will receive driu of reward token i:
+driu = rewardGeneratingSY u(t∗) × dri
+S(t∗) (4)
+1.3.6 User claiming interests
+At time t, a user u can claim all of their claimable interests of iu(t∗) − cu(t∗), such that:
+cu(t) = iu(t∗)
+S(t) = S(t∗) − (iu(t∗) − cu(t∗))
+1.4 Proofs
+With the mechanism defined, we can prove a number of results:
+1.4.1 Lemma 1
+Before the expiry, there will always be the same amount of YT and PT.
+ytSupply (t) = ptSupply(t)
+This is a trivial result because the only state change prior to expiry that changes YT and PT supply
+(3.3.2) can only change their supplies by the same amount.
+1.4.2 Lemma 2
+The total amount of SY token in the yield stripping pool at any time t < t expiry is exactly the
+amount of SY token that could be redeemed by all the YT and PT, plus the sum of all unclaimed
+interests by users.
+S(t) = ytSupply (t)
+SY Index (t) +
+X
+u
+iu(t) − cu(t) (5)
+This can be proved by induction. Right after initialisation, it’s trivial that (5) is correct since both
+sides are 0. Assume that (5) holds for t∗, which means:
+S(t∗) = ytSupply (t∗)
+SY Index (t∗) +
+X
+u
+iu(t∗) − cu(t∗) (6)
+we could prove that (5) will still hold at t for all the possible state changes:
+Minting/redeeming YT and PT before expiry All the iu(t) and cu(t) values do not change,
+and both S(t) and ytSupply (t)
+SY Index (t) increases by dSY . Hence, (5) still holds for t
+4
+
+PAGE 5
+Earning of compound interests for SY token
+X
+u
+iu(t) − cu(t)
+=
+X
+u
+iu(t∗) + dInterest u − cu(t∗)
+=
+X
+u
+iu(t∗) − cu(t∗) + ytBalance u(t∗) ×
+ 1
+SY Index (t∗) − 1
+SY Index (t)
+
+=
+ X
+u
+iu(t∗) − cu(t∗)
+!
++
+ 1
+SY Index (t∗) − 1
+SY Index (t)
+
+×
+X
+u
+ytBalance u(t∗)
+=
+ X
+u
+iu(t∗) − cu(t∗)
+!
++
+ 1
+SY Index (t∗) − 1
+SY Index (t)
+
+× ytSupply (t∗)
+= S(t∗) − ytSupply (t∗)
+SY Index (t∗) + ytSupply (t∗)
+SY Index (t∗) − ytSupply (t∗)
+SY Index (t)
+= S(t) − ytSupply (t)
+SY Index (t)
+Hence, (5) is satisfied as well.
+Earning of rewards for SY token It is trivial that (5) still holds for t as the values don’t change,
+User claiming interests Both S(t) andP
+u iu(t)−cu(t) decrease by the same amountiu(t∗)−cu(t∗).
+Hence, (5) still holds true for t,
+Since (5) is true for tstart, and is always true for t given that it’s true for t∗, (5) is always true by
+induction.
+1.4.3 Lemma 3
+The interest accrued by user X holding an amount of a YT token from t1 to t2 is equivalent to the
+interest accrued by user Y holding a asset worth of SY token from t1 to t2
+The interests for Y in units of SY:
+interestY =
+a
+SY Index (t1) × SY Index (t2) − a
+SY Index (t2)
+= a ×
+ 1
+SY Index (t1) − 1
+SY Index (t2)
+
+The interests for X in units of SY: (where t1′ is the time stamp of the state change right after t1)
+interestX =
+t2X
+t1′
+dInterest X
+=
+t2X
+t1′
+ytBalance X(t∗) ×
+ 1
+SY Index (t∗) − 1
+SY Index (t)
+
+= a ×
+ 1
+SY Index (t1) − 1
+SY Index (t2)
+
+Hence, Lemma 3 is proven.
+5
+
+PAGE 6
+1.4.4 Lemma 4
+The total amount of reward token i accrued by the yield stripping pool until time t is the same
+as the sum of all users’ total entitled rewards.
+X
+u
+rui(t) = Ri(t) (7)
+At the start, (7) is trivially true with both values being 0. The only state change that changes the
+rewards is 1.3.5 (Earning of rewards for SY token). Hence, we just need to prove that the sum of new
+rewards to all the users is the same as the total new rewards:
+X
+u
+driu = dri
+To prove it:
+L.H.S =
+X
+u
+driu =
+X
+u
+rewardGeneratingSY u(t∗) × dri
+S(t∗)
+= dri
+S(t∗) ×
+X
+u
+
+iu(t) − cu(t) + ytBalance u(t)
+SY Index (t)
+
+= dri
+S(t) ×
+ X
+u
+(iu(t) − cu(t)) +
+X
+u
+ytBalance u(t)
+SY Index (t)
+!
+= dri
+S(t) ×
+ X
+u
+(iu(t) − cu(t)) + ytSupply (t)
+SY Index (t)
+!
+= dri
+S(t) × S(t) (From Lemma 2)
+= dri
+= R.H.S
+Hence, (7) is proven.
+1.5 Lemma 5
+If a user u does not claim their interest, mint or redeem from t1 to t2, their
+rewardGeneratingSY u(t) stays the same.
+We just need to prove the lemma for state change 1.3.5 (Earning of compound interests for SY
+token), which is the only state change left that changes rewardGeneratingSY u(t). Let’s say the state
+change happen at t, and t∗ was the timestamp of the previous state change.
+rewardGeneratingSY u(t) = iu(t) − cu(t) + ytBalance u(t)
+SY Index (t)
+= iu(t∗) + dInterest u − cu(t∗) + ytBalance u(t)
+SY Index (t)
+= iu(t∗) + ytBalance u(t∗) ×
+ 1
+SY Index (t∗) − 1
+SY Index (t)
+
+− cu(t∗) + ytBalance u(t)
+SY Index (t)
+= iu(t∗) − cu(t∗) + ytBalance u(t∗)
+SY Index (t∗)
+= rewardGeneratingSY u(t∗)
+As such, we have proven that rewardGeneratingSY u remains unchanged.
+6
+
+PAGE 7
+1.5.1 Lemma 6
+If the SY token is a Simple SY token (as defined in the SY paper [1]), the amount of reward
+token i gotten by user X holding an amount of a YT token from t1 to t2 is exactly the same as the
+amount of reward token i gotten by user Y holding a asset worth of SY token from t1 to t2
+First, we will define:
+• rSY
+ui (t) as the equivalent of rui(t) in the SY paper [1] (the total rewards for rewards token i
+accrued for user u until time t)
+• SSY (t) as the equivalent of S(t) in the SY paper [1] (total number of shares)
+• sSY
+u (t) as the equivalent of su(t) in the SY paper [1] (amount of shares of user u)
+At t1, a asset is equivalent to su = a
+SY Index (t1) SY tokens
+The amount of reward token i for X (from section 4.1 in the SY paper [1])
+rewards X = su × (rewardIndex i(t2) − rewardIndex i(t1))
+Denote t∗ as the timestamp of the state change right before a state change at t. For the whole yield
+stripping pool, the amount of reward token i received from t∗ to t is:
+dri(t) = S(t∗) × (rewardIndex i(t) − rewardIndex i(t∗)) (8)
+As such, the amount of reward token i received by Y from t∗ to t is:
+driu (t) = rewardGeneratingSY u(t∗) × dri(t)
+S(t∗) From (4)
+= rewardGeneratingSY u(t1) × (rewardIndex i(t) − rewardIndex i(t∗))
+From (8) and lemma 5
+=
+
+iu(t1) − cu(t1) + ytBalance u(t1)
+SY Index (t1)
+
+× (rewardIndex i(t) − rewardIndex i(t∗)) From (3)
+= a
+SY Index (t1) × (rewardIndex i(t) − rewardIndex i(t∗)) Since iu(t1) = cu(t1) = 0
+Hence, the total amount of reward token i for Y from t1 to t2 is:
+rewards Y =
+t2X
+t′
+1
+a
+SY Index (t1) × (rewardIndex i(t) − rewardIndex i(t∗))
+= a
+SY Index (t1) × (rewardIndex i(t2) − rewardIndex i(t1))
+= su × (rewardIndex i(t2) − rewardIndex i(t1))
+Therefore, rewards X = rewards Y and lemma 6 is proven.
+References
+[1] Vu Nguyen and Long Vuong. Standardized Yield. url: https://pendle.finance/SY.pdf.
+7

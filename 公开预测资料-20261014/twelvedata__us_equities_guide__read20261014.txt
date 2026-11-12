@@ -1,0 +1,165 @@
+US equities market data | Twelve Data Support
+Skip to main content
+Search for articles...
+All Collections
+Guides
+Markets
+US equities market data
+US equities market data
+All about sources, coverage, licensing, and usage guide
+Written by
+Team
+August 18, 2026
+Every Twelve Data subscription plan includes access to
+real-time US stock market data
+by default. This data covers the
+entire universe of listed US equities
+, including all companies listed on the
+NYSE
+,
+Nasdaq
+, and every other US exchange.
+Pricing data is sourced from venues that do not require additional licensing. These venues collectively represent approximately
+5% of total US trading volume
+, providing a reliable, compliant, and cost-efficient solution for real-time analytics and application development.
+You can
+explore all available US symbols
+via the
+Markets page
+or directly through the
+Twelve Data API
+.
+Understanding “US trading volume”
+The term
+US trading volume
+refers to the
+aggregate share of executed trades
+across all registered US stock exchanges and alternative trading systems. This includes trading activity from major venues such as NYSE, Nasdaq, Cboe, IEX, and others. The
+default Twelve Data feed
+captures roughly 5% of this total market activity, sourced from compliant, low-latency venues that allow redistribution without additional licensing. This coverage ensures accurate pricing and realistic liquidity representation suitable for most analytical, charting, and application use cases.
+If you require
+broader coverage or higher-volume data
+— for example, consolidated feeds from all major US exchanges — please
+contact our team
+to arrange
+licensed access
+to full-market data.
+Usage & licensing
+All Twelve Data paid plans include access to
+real-time US stock market data
+suitable for both
+personal
+and
+commercial
+use. No additional exchange fees are required to access the default feed. However, some conditions apply depending on your intended use:
+Personal, commercial, display, non-display, use
+(e.g., dashboards, research, automation) is covered under standard plans.
+External distribution to users
+requires a US Equities
+Add-On (read more below).
+If your organization requires:
+Full-market coverage
+across all exchanges,
+High-volume or ultra-low-latency feeds
+, or
+Redistribution and display permissions
+,
+Twelve Data can guide you through the appropriate licensing process to ensure compliance with exchange and data redistribution rules.
+For details about attribution requirements in external or white label cases, please refer to our
+Attribution Rules article
+.
+External distribution (available via Add-Ons)
+If your use case involves
+external redistribution
+— such as brokerage, reselling, or providing access to clients — Twelve Data offers
+Redistribution Rights Add-Ons
+. These grant permission to redistribute data externally in compliance with Twelve Data policies. Redistribution can apply to both
+real-time and delayed feeds
+, across
+display and non-display
+scenarios. Our compliance team will assist you in establishing a
+fully compliant configuration
+aligned with your business needs.
+White label options (available via Add-Ons)
+Twelve Data offers
+White Label solutions
+for businesses that wish to deliver market data under their own brand while maintaining regulatory compliance. With this add-on, you can:
+Serve data through your own domain,
+Customize branding and presentation,
+Integrate Twelve Data endpoints directly into your product,
+Preserve compliance and proper attribution.
+White Label solutions are ideal for
+data vendors, brokers, and enterprise resellers
+leveraging Twelve Data’s infrastructure as their data backbone.
+Historical and end-of-day data
+Historical and end-of-day data becomes available after 12:00 AM ET (midnight Eastern Time) on the next trading day after each market close and is accessible starting with the Basic plan. It does
+not require additional licensing
+and covers
+100% of total US trading volume
+, aggregated from
+every stock exchange
+, offering a comprehensive daily view of all listed US equities.
+OTC securities
+OTC (over-the-counter)
+securities are
+not included by default
+in any Twelve Data plan. These instruments trade outside of traditional exchanges and require
+separate licensing
+.
+If you wish to access
+OTC Markets
+data, please
+contact us
+to discuss options and pricing.
+Frequently asked questions (FAQ)
+1. Does the default feed include all US stocks?
+Yes. The default feed covers
+all listed US equities
+from
+NYSE
+and
+Nasdaq
+, though real-time coverage represents about
+5% of total US trading activity
+.
+2. Are OTC securities included?
+No. OTC symbols are not part of the default plans and require a
+separate license
+.
+3. What does “5% of US trading volume” mean?
+It represents the portion of total trade executions from all US exchanges included in the default Twelve Data feed — providing accurate pricing and representative market liquidity for analytics and non-display use.
+4. Can I redistribute Twelve Data’s US stock data externally?
+Yes — but only with a
+Redistribution Rights Add-On
+, which ensures your use complies with exchange and Twelve Data licensing policies.
+5. Is attribution required?
+Attribution is required, except in specific scenarious, such as white label scenarios. You can read more in our
+Attribution Rules article
+.
+Summary
+Twelve Data offers a
+compliant, flexible, and scalable
+way to access real-time and historical US stock market data. All users gain real-time coverage for
+all listed US equities
+, representing about
+5% of total US trading volume
+, ideal for analytics, development, and internal use. For broader coverage, redistribution rights, or white label delivery, Twelve Data provides
+add-ons and licensing options
+that expand access while maintaining full regulatory compliance.
+What's next to read
+Read more about
+European equities data
+Read more about
+Australian equities data
+Did this answer your question?
+Disappointed Reaction
+😞
+Neutral Reaction
+😐
+Smiley Reaction
+😃
+Market Data
+Spreadsheets
+About
+Pricing
+Log in

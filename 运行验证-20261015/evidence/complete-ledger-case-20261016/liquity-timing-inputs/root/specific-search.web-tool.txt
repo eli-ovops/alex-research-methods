@@ -1,0 +1,714 @@
+Hi! I'm Gabriel (https://gabrielpoca.com/)
+citeturn489search0 [wordlim: 200] Crawled: last week; Gabriel Poça ...   * Liquity V2 and How Liquidation Bots Work 12/15/2025
+Gabriel Poça
+
+# Hi!
+My name is Gabriel Poça
+
+I'm a software developer working in Web3 and Fintech. I' ve built and contributed to many successful products.
+
+I released a new EP. Have a listen and let me know what you think.
+
+See the about for more information.
+
+## Writing
+
+  * Liquity V2 and How Liquidation Bots Work 12/15/2025
+  * Breaking the Boundaries Between Web2 and Web3 10/4/2023
+  * Converting Excel Dates To Javascript 8/9/2023
+  * Hierarchical Deterministic Wallets, Private Keys and AWS 6/6/2023
+  * Ditching Karabiner and keyboard customizations 3/17/2023
+  * Building Utrust And Advice On How To Scale A Product Team 2/25/2022
+  * Adding Netlify CMS to a website built with Still outside of Netlify 10/28/2021
+  * Still building static websites in Elixir 4/27/2021
+  * The Worst Decision Of My Career 9/25/2020
+  * React state management and side-effects with Redux and RxJS 6/9/2020
+  * A bit more lua in your vim 11/13/2019
+  * A little bit of lua in your vim 11/2/2019
+  * Apps on the P2P Web - DatSplit 8/25/2018
+  * Apps on the P2P Web - Beaker Browser 6/4/2018
+  * How to program Vim using Ruby 9/4/2017
+  * How to build offline web applications with CouchDB and PouchDB 4/20/2017
+  * A bridge between Redux and Meteor 4/28/2016
+  * Offline Web Apps with Meteor 11/26/2014
+  * Tutorial: HTML Audio Capture streaming to Node.js (no browser extensions) 6/24/2014--------------------------------------------------------------------------------
+GitHub - ren2140eth/liquity-redemption-watch: Deterministic, agent-free watcher for Liquity v2 redemptions & liquidations — alerts on any watched wallet's troves via a plain cron job. MIT. · GitHub (https://github.com/ren2140eth/liquity-redemption-watch)
+citeturn489search1 [wordlim: 200] Crawled: last month;     export LIQUITY_WATCH_RPC=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY ...     `🔔 Liquity v2 redemption hit trove 0xaaaaaa…bbbb (WETH branch, owner 0x1234…cdef) ... For example, using a Telegram bot every 5 minutes:
+## Install
+
+Requires Python 3.9+.
+    
+    git clone https://github.com/YOUR_USERNAME/liquity-redemption-watch.git
+    cd liquity-redemption-watch
+    python -m venv .venv && . .venv/bin/activate
+    pip install -r requirements.txt
+
+Set an Ethereum mainnet JSON-RPC endpoint. Any node or provider that supports `eth_getLogs` over ~5,000-block ranges works — your own node, or a provider such as Alchemy or Infura:
+    
+    export LIQUITY_WATCH_RPC=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
+
+## Usage
+    
+    # 1. configure: verify contracts, find the wallets' troves, anchor at
+    #    finalized head. Writes config.json + state.json (both gitignored).
+    #    Pass one address, or several to watch a whole set.
+    python watcher.py setup 0xYOURWALLET [0xWALLET2 0xWALLET3 ...]
+    
+    # 2. normal tick — silent unless a watched trove was redeemed/liquidated.
+    python watcher.py run
+    
+    # 3. inspect config, state and current positions.
+    python watcher.py status
+    
+    # 4. replay a historical block range without touching state (verification).
+    python watcher.py run --from-block N --to-block M --verbose
+
+Example alert:
+    
+    `🔔 Liquity v2 redemption hit trove 0xaaaaaa…bbbb (WETH branch, owner 0x1234…cdef)
+      debt retired: 1,234.56 BOLD
+      collateral redeemed: 0.4210 WETH
+      redemption fee kept by trove: +0.0031 WETH
+      redemption price used: $2,950.12/WETH
+      trove now: 3,010.00 BOLD debt, 1.9800 WETH, rate 5.50% — ACTIVE
+      block 20000000, https://etherscan.io/tx/0x0000000000000000000000000000000000000000000000000000000000000000
+
+(All values above are placeholders for illustration.)
+
+## Deploy as a cron job
+
+Because the script is silent on quiet ticks, the simplest deployment is a plain cron entry that pipes any output to your notifier of choice. For example, using a Telegram bot every 5 minutes:
+    
+    */5 * * * * cd /path/to/liquity-redemption-watch && \
+      LIQUITY_WATCH_RPC=https://eth-mainnet.example/v2/KEY \
+      .venv/bin/python watcher.py run 2>&1 | \
+      { read -r line && { printf '%s\n' "$line"; cat; } | \
+        curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" \
+          --data-urlencode "chat_id=$TG_CHAT" --data-urlencode "text=$(cat)"; }
+
+(Any transport works — swap the `curl` for `ntfy`, `mail`, a Slack webhook, etc. The only contract is: no output = no notification.) You can also run it under systemd with an `OnCalendar` timer if you prefer.
+
+To change the watched set, re-run `setup` with the new address(es) — it replaces `config.json` and re-anchors `state.json`. No cron changes needed.
+
+Enumeration walks every open trove protocol-wide (~200) once per branch per run regardless of how many wallets you watch, so watching many addresses costs essentially the same as watching one.
+
+--------------------------------------------------------------------------------
+Liquity Protocol | Santiment Academy (https://academy.santiment.net/metrics/lending-and-borrowing-protocols/liquity/)
+citeturn489search2 [wordlim: 200] Published: 2.6 years ago; Crawled: 2 weeks ago;   * `liquity_action_liquidations` - Amount of liquidated tokens  * `liquity_action_liquidations_usd` - Amount of liquidated tokens in USD ... ## Latency
+  * `liquity_action_repayments` - Amount of repaid tokens
+  * `liquity_action_repayments_usd` - Amount of repaid tokens in USD
+
+Total supplied/borrowed metrics:
+
+  * `liquity_total_supplied` - Total supplied tokens
+  * `liquity_total_supplied_usd` - Total supplied tokens in USD
+  * `liquity_total_borrowed` - Total borrowed tokens
+  * `liquity_total_borrowed_usd` - Total borrowed tokens in USD
+
+APY (annual percentage yield) metrics:
+
+  * `liquity_borrow_fee` - Liquity borrow fee
+
+Daily active addresses:
+
+  * `liquity_active_addresses` - Daily active addresses on Liquity
+
+## Access
+
+Restricted Access.
+
+* * *
+
+## Measuring Unit
+
+  * Amount in tokens/USD
+  * `liquity_borrow_fee` in percentages
+
+## Data Type
+
+Timeseries Data
+
+* * *
+
+## Frequency
+
+Five-minute Intervals
+
+* * *
+
+## Latency
+
+On-Chain Latency
+
+* * *
+
+## Available Assets
+
+Deposit/supply metrics are available for `ethereum`.
+
+Repayment/borrow metrics are available for `liquity-usd`.
+
+### SanAPI
+
+Action metrics: `liquity_action_deposits<_usd>`, `liquity_action_liquidations<_usd>`, `liquity_action_new_debt<_usd>` and `liquity_action_repayments<_usd>`
+--------------------------------------------------------------------------------
+The Markets Conditioning: DCF Valuation & Tail-R... | LogicCompare (https://www.logiccompare.com/blog/the-markets-conditioning-dcf-valuation-tail-risk-models-part-2/)
+citeturn489search3 [wordlim: 200] Published: 6 months ago; Crawled: last week; The Oracle Latency Feedback Loop (Aave, Silo, Liquity) ...   * In Silo, 56% of vault breaches occurred during MEV sandwich attacks, where oracle updates were deliberately delayed to manipulate liquidation thresholds.  * In Liquity, 89% of liquidations happened in sub-5-minute windows when the Chainlink ETH/USD feed updated.
+# The Markets Conditioning: DCF Valuation & Tail-Risk Models (Part 2)
+
+  * Benjamin Clark
+  * 25 Mar, 2026
+  *     * Finance
+
+Image: The Markets Conditioning: DCF Valuation & Tail-Risk Models (Part 2)
+
+This is Part 2 of the series. Read Part 1 here.
+
+### 1. The Oracle Latency Feedback Loop (Aave, Silo, Liquity)
+
+Failure Mode: Oracle latency doesn’t just introduce noise—it creates a self-reinforcing feedback loop where delayed price feeds trigger liquidations, which then cause further price dislocations, which in turn trigger more liquidations.
+
+Field Data:
+
+  * In Aave v3, 47% of liquidations were triggered by oracle updates lagging behind on-chain price movements by >30 seconds.
+  * In Silo, 56% of vault breaches occurred during MEV sandwich attacks, where oracle updates were deliberately delayed to manipulate liquidation thresholds.
+  * In Liquity, 89% of liquidations happened in sub-5-minute windows when the Chainlink ETH/USD feed updated.
+
+Mitigation Strategies:
+--------------------------------------------------------------------------------
+dimension-adapters/helpers/liquity.ts at master · DefiLlama/dimension-adapters · GitHub (https://github.com/DefiLlama/dimension-adapters/blob/master/helpers/liquity.ts)
+citeturn489search4 [wordlim: 200] Crawled: 2 months ago; dailyFees.add(config.stableCoin, -Number(logs['_LUSDLoss']), METRICS.LiquidationProfit) ... fetch: getLiquityV1LogAdapter(chainConfig), ... const v2ExportsConfig = {
+}
+
+})
+
+// count liquidation gain to supplyside
+
+ETHGainWithdrawnLogs.forEach((logs) => {
+
+// add col gain to balance
+
+if (config.collateralCoin) {
+
+dailyFees.add(config.collateralCoin, BigInt(logs['_ETH']), METRICS.LiquidationProfit)
+
+dailySupplySideRevenue.add(config.collateralCoin, BigInt(logs['_ETH']), METRICS.LiquidationProfit)
+
+} else {
+
+dailyFees.addGasToken(BigInt(logs['_ETH']), METRICS.LiquidationProfit)
+
+dailySupplySideRevenue.addGasToken(BigInt(logs['_ETH']), METRICS.LiquidationProfit)
+
+}
+
+// add stablecoin loss to balance
+
+dailyFees.add(config.stableCoin, -Number(logs['_LUSDLoss']), METRICS.LiquidationProfit)
+
+dailySupplySideRevenue.add(config.stableCoin, -Number(logs['_LUSDLoss']), METRICS.LiquidationProfit)
+
+})
+
+return {
+
+dailyFees,
+
+dailyRevenue,
+
+dailySupplySideRevenue,
+
+dailyProtocolRevenue,
+
+dailyHoldersRevenue,
+
+}
+
+}
+
+return fetch
+
+}
+
+const defaultV1methodology = {
+
+Fees: 'Total interest, redemption fees paid by borrowers and liquidation profit',
+
+Revenue: 'Total fees distributed to protocol and token holders',
+
+HoldersRevenue: 'Total fees distributed to holders',
+
+SupplySideRevenue: 'Total gas compensation to liquidators and liquidation profit to stability pool stakers.',
+
+ProtocolRevenue: 'Total fees distributed to protocol',
+
+}
+
+export function liquityV1Exports(config: IJSON<LiquityV1Config>, overrides?: Partial<SimpleAdapter>) {
+
+const exportObject: BaseAdapter = {}
+
+Object.entries(config).map(([chain, chainConfig]) => {
+
+exportObject[chain] = {
+
+fetch: getLiquityV1LogAdapter(chainConfig),
+
+start: chainConfig.start,
+
+}
+
+})
+
+return {
+
+pullHourly: true,
+
+version: 2,
+
+adapter: exportObject,
+
+methodology: defaultV1methodology,
+
+...overrides,
+
+} as SimpleAdapter
+
+}
+
+const v2ExportsConfig = {
+
+felix:{
+
+[CHAIN.HYPERLIQUID]: { collateralRegistry: '0x9De1e57049c475736289Cb006212F3E1DCe4711B', stableTokenAbi: "address:feUSDToken", stabilityPoolRatio: 1, start: '2025-03-14' }
+
+},
+
+mustang:{
+
+[CHAIN.SAGA]: { collateralRegistry: '0xF39bdCfB55374dDb0948a28af00b6474A566Ac22', stabilityPoolRatio: 1, start: '2025-11-28' }
+
+--------------------------------------------------------------------------------
+ktarun1419 (Taruin) · GitHub (https://github.com/ktarun1419)
+citeturn489search5 [wordlim: 200] Crawled: 2 months ago;   * Built an arbitrage bot for prediction markets between Kalshi and Polymarket ...   * Built liquidation bots for Aave, Liquity, and Morpho, focused on execution speed and monitoring liquidation opportunities
+
+* * *
+
+## Selected Projects
+
+  * Built an arbitrage bot for prediction markets between Kalshi and Polymarket
+  * Built a custom last-second sniping strategy for Polymarket
+  * Built liquidation bots for Aave, Liquity, and Morpho, focused on execution speed and monitoring liquidation opportunities
+
+* * *
+
+## Core Work
+
+  * Trading and market interfaces
+  * Real-time frontend systems
+  * Frontend architecture
+  * Wallet auth and execution flows
+  * DeFi and prediction market products
+  * Performance optimization
+
+* * *
+
+## Stack
+
+Next.js, React, TypeScript, Tailwind CSS, ethers.js, Privy, Zustand, websocket-based systems, charting libraries
+
+
+  1. rosettanet rosettanet Public
+
+Forked from Digine-Labs/rosettanet
+
+Ethereum <> Starknet RPC middleware.
+
+TypeScript
+
+  2. starknet-react starknet-react Public
+
+Forked from starknet-start/starknet-start
+
+A collection of React providers and hooks for StarkNet
+
+TypeScript
+
+  3. zk-contracts zk-contracts Public
+
+Solidity
+
+  4. lfglabs-dev/starknet.quest lfglabs-dev/starknet.quest Public
+
+The on-chain quest tool of Starknet
+
+TypeScript 40 180
+
+  5. horuslabsio/tokenbound-frontend horuslabsio/tokenbound-frontend Public
+
+Starknet Tokenbound Explorer
+
+TypeScript 12 17
+
+  6. TBA-FRONTEND TBA-FRONTEND Public
+
+Forked from horuslabsio/tokenbound-frontend
+
+Starknet Tokenbound Explorer
+
+TypeScript
+--------------------------------------------------------------------------------
+Rails | Introducing Rails: DeFi Self-Service Support - Rails Blog (https://rails.finance/blog/introducing-rails-finance)
+citeturn489search6 [wordlim: 200] Published: 11 months ago; Crawled: last week; Traditional block explorers show you event logs and hex data. ... Currently in beta, Rails currently supports Liquity V2 across all collateral types (WETH, wstETH, rETH).
+
+## Beyond raw data
+
+Traditional block explorers show you event logs and hex data. Rails shows you what those events actually mean.
+
+The timeline view displays every action chronologically with visual icons. Borrows, interest rate adjustments, transfers, redemptions—all in sequence showing cause and effect. You see the mechanics in motion.
+
+Rails also provides educational context. When viewing a redemption, there's a "How Redemptions Work" section explaining the mechanism. Links to common questions like "What happens if my Trove gets redeemed?" and "How can I stay protected?"
+
+## Why this matters
+
+DeFi protocols are powerful but complex. Traditional approaches give you documentation and tutorials. Rails shows you something different: the actual mechanics operating in real positions.
+
+See how the largest borrowers manage risk. Notice what interest rates actually protect from redemptions. Watch how positions respond when BOLD loses its peg. Understand the protocol through observed behavior, not theoretical examples.
+
+## What you can do now
+
+Currently in beta, Rails currently supports Liquity V2 across all collateral types (WETH, wstETH, rETH). You can:
+
+  * Browse active Troves to see protocol mechanics in action
+  * View any position's complete timeline by address or ENS name
+  * Explore redemption patterns and borrowing strategies
+  * Understand how the protocol actually works before risking capital
+
+Start with the Trove list. Filter by collateral type. Sort by interest rate or debt size. Click into positions and explore their timelines. See the mechanics operate through hundreds of real transactions.
+
+Then decide if the protocol is right for you.
+
+Try it: rails.finance
+
+Originally published on rails.finance
+
+•November 6, 2025--------------------------------------------------------------------------------
+LUSD Python Liquity: ETH Collateralized 2025 — johal.in (https://www.johal.in/lusd-python-liquity-eth-collateralized-2025)
+citeturn489search7 [wordlim: 200] Published: 10 months ago; Crawled: last week; Liquity Python Bot 92% ... Liquity Python fails when RPC latency >200ms during flash crashes: tx reverts on stale CR. ... Liquidation races: Bot liquidated if CR dips <110% intra-block; mitigate with 125% buffer + pending tx cancel (nonce bump).
+Use this to visualize the data flow and architecture.
+
+Core Components:
+
+  * Oracle Monitor: Polls Chainlink ETH/USD every 60s, computes TWAP for CR accuracy.
+  * Trove Manager (Core Policy): Evaluates state (CR, gas prices), decides open/adjust/close.
+  * Action Dispatcher: Specialized handlers for BorrowerOperations, StabilityPool interactions.
+  * Tx Executor: Signs, simulates (eth_call), broadcasts with nonce management.
+  * Reward Tracker: Logs APY from pool, liquidation gains for backtesting.
+
+Data Flow: Oracle -> Trove Manager -> Dispatcher -> Tx Executor -> Ethereum RPC. Rewards loop back for strategy optimization.
+
+### Performance Benchmarks
+
+#### Gas Efficiency Comparison
+
+Liquity Python Bot 92%
+
+Manual Etherscan 65%
+
+Aave Python 78%
+
+MakerDAO SDK 55%
+
+#### APY Comparison
+
+Liquity Stability Pool 95%
+
+Aave Supply 72%
+
+Compound 68%
+
+Yearn LUSD Vault 82%
+
+#### Tx Throughput
+
+Python Async Bot 88%
+
+Sync Web3 60%
+
+JS Ethers 45%
+
+Brownie Framework 75%
+
+#### Detailed Performance Metrics
+
+Approach  | Avg Gas/Tx (k)  | APY (2025 Avg)  | Memory Usage (MB)  | Tx Latency (s)
+--- | --- | --- | --- | ---
+Liquity Python Bot  | 320  | 18.2  | 45  | 12
+Manual  | 450  | 0  | 10  | 45
+Aave Python  | 420  | 9.5  | 55  | 18
+MakerDAO  | 580  | 7.8  | 70  | 25
+
+Benchmarks on Sepolia testnet, 2025 gas prices ~15 gwei, per DefiLlama infra data.
+
+
+2 days
+
+Pandas CCXT SQLAlchemy
+
+5
+
+#### Production Deployment
+
+Docker, K8s, monitoring, alerts
+
+4 days
+
+Docker Helm Grafana Sentry
+
+## Error Analysis: Limitations and Failure Cases
+
+Liquity Python fails when RPC latency >200ms during flash crashes: tx reverts on stale CR. Root: Single RPC overload; solved by multi-provider rotation (Infura+Alchemy+QuickNode) with exponential backoff (tenacity wait=wait_exponential(2)).
+
+Edge: Mass redemption slippage >5% if pool shallow – detect via getRedemptionRate, abort if >3%. Liquidation races: Bot liquidated if CR dips <110% intra-block; mitigate with 125% buffer + pending tx cancel (nonce bump).
+
+Oracle manipulation: Chainlink secure, but TWAP lag in 10min dumps; use Uniswap V3 TWAP fallback. Debugging: web3.eth.call for simulate, trace tx with Debug API. In prod, we log 95th percentile latency, alert on >500ms. Common: Insufficient gas – dynamic estimate +20% buffer.
+
+Honest: No leverage means lower APY vs perps (but safer). Fails in black swans like 90% ETH drop – diversify collateral planned for 2026.
+
+### Cost Analysis
+
+Resource Type  | Development Phase  | Production Phase  | Optimization Potential
+--- | --- | --- | ---
+ETH Gas (100 tx/day)  | $100 - $300  | $200 - $600/month  | 40-60% with L2 bundlers
+RPC Calls (Alchemy)  | $50 - $150  | $100 - $400/month  | 50-70% with caching
+Monitoring (Grafana)  | $200 - $500  | $150 - $350/month  | 30-50% open-source
+Dev Time (2 Eng)  | $10,000 - $20,000  | $3,000 - $6,000/month  | 25-40% automation
+Total Estimated Cost  | $10,350 - $20,950  | $3,450 - $7,350/month  | 40-60% overall savings
+
+Note: Based on 2025 gas ~10 gwei avg, scales with TVL managed. L2 migration (Base/OP) cuts 80%.
+
+#### Cost Breakdown by RPC Provider
+
+##### Infura
+
+$450 - $850/month
+
+##### Alchemy
+
+$400 - $750/month
+
+##### QuickNode
+
+$420 - $800/month
+
+##### Self-Hosted
+
+$350 - $650/month
+
+--------------------------------------------------------------------------------
+GitHub - azeonprotocol/liquity-v2: Liquity v2 monorepo containing the contracts, subgraph and frontend. · GitHub (https://github.com/azeonprotocol/liquity-v2)
+citeturn489search8 [wordlim: 200] Crawled: last week; When BOLD is trading at <$1 on the external market, arbitrageurs may redeem `$x` worth of BOLD for `>$x` worth of collaterals, and instantly sell those collaterals to make a profit. ... Liquity utilizes a two-step liquidation mechanism in the following order of priority: ... Redemption bot creators should understand the competitive nature of redemptions, and take this dynamic into account when programming them. ... Low latency pull-based oracle  | Mainnet block-time introduces a lower bound for price staleness. ... If your fork uses new types of oracles or oracle logic, the impact of manipulation on stablecoin minting, liquidations and redemptions should be analysed with these priorities in mind.
+
+### Rationale for fee schedule
+
+The larger the redemption volume, the greater the fee percentage applied to that redemption.
+
+The longer the time delay since the last redemption, the more the `baseRate` decreases.
+
+The intent is to throttle large redemptions with higher fees, and to throttle further redemptions immediately after large redemption volumes. The `baseRate` decay over time ensures that the fee will “cool down”, while redemptions volumes are low.
+
+Furthermore, the fees cannot become smaller than the fee floor of 0.5%, which somewhat mitigates arbitrageurs frontrunning Chainlink oracle price updates with redemption transactions.
+
+The redemption fee (red line) should follow this dynamic over time as redemptions occur (blue bars).
+
+[REDEMPTION COOLDOWN GRAPH]
+
+### Fee Schedule
+
+Redemption fees are based on the `baseRate` state variable in `CollateralRegistry`, which is dynamically updated. The `baseRate` increases with each redemption, and exponentially decays according to time passed since the last redemption.
+
+## Liquidation and the Stability Pool
+
+When a Trove’s collateral ratio falls below the minimum collateral ratio (MCR) for its branch, it becomes immediately liquidatable. Anyone may call `batchLiquidateTroves` with a custom list of Trove IDs to attempt to liquidate.
+
+In a liquidation, most of the Trove’s collateral is seized and the Trove is closed.
+
+Liquity utilizes a two-step liquidation mechanism in the following order of priority:
+
+  1. Offset under-collateralized Troves’ debt against the branch’s SP containing BOLD tokens, and award the seized collateral to the SP depositors
+  2. When the SP is empty, Redistribute under-collateralized Troves debt and seized collateral to other Troves in the same branch
+
+Liquity primarily uses the BOLD tokens in its Stability Pool to absorb the under-collateralized debt, i.e. to repay the liquidated borrower's liability.
+
+Any user may deposit BOLD tokens to any Stability Pool. This allows them to earn the collateral from Troves liquidated on the branch. When a liquidation occurs, the liquidated debt is cancelled with the same amount of BOLD in the Pool (which is burned as a result), and the seized collateral is proportionally distributed to depositors.
+
+Stability Pool depositors can expect to earn net gains from liquidations, as in most cases, the value of the seized collateral will be greater than the value of the cancelled debt (since a liquidated Trove will likely have an ICR just slightly below the MCR). MCRs are constants and may differ between branches, but all take a value above 100%.
+
+If the liquidated debt is higher than the amount of BOLD in the Stability Pool, the system applies both steps 1) and then 2): that is, it cancels as much debt as possible with the BOLD in the Stability Pool, and then redistributes the remaining liquidated collateral and debt across all active Troves in the branch.
+
+Could discourage legitimate redemptions
+Canonical rate oracle (ETH-USD_market x LST_ETH_canonical) for redemptions  | Likely fixes the issue - though in case of canonical rate manipulation, redemptions would be unprofitable (upward manipulation) or pay too much collateral (downward manipulation)
+Canonical rate oracle (ETH-USD_market x LST_ETH_canonical) for redemptions, with upward and downward protection (e.g. Aave)  | Likely fixes the issue - but cap parameters may be hard to tune, and could not be changed
+Adapt redemption fee parameters (fee spike gain, fee decay half-life)  | Hard to tune parameters
+
+#### Solution
+
+To mitigate this value extraction on RETH and WSTETH branches, the system uses the maximum of a market price and a canonical price in redemptions. This mitigates oracle lag arbitrages by giving the redeemer the "worst" price at any given moment.
+
+However, this only applies if the delta between market price and canonical price is within the oracle deviation threshold (1% for WSTETH, 2% for RETH). 
+The system could experience distortions in this period due to pricing collateral too low or too high relative to the real market price. Unwanted arbitrages and operations may be possible, such as:
+
+  * Redeeming too profitably or unprofitably
+  * Borrowing (and selling) BOLD with too little collateral provided
+  * Liquidation of healthy Troves
+
+#### Solution
+
+Oracle staleness threshold parameters are TBD and should be carefully chosen in order to minimize the potential price deltas and distortions. The ETH-USD (and STETH-USD) feeds should have a lower staleness threshold than the LST-ETH feeds, since the USD feeds are typically much more volatile, and their prices could deviate by a larger percentage in a given time period than the LST-ETH feeds.
+
+All staleness thresholds must be also greater than the push oracle’s update heartbeat.
+
+Provisionally, the preset staleness thresholds in Liquity v2 as follows, though are subject to change before deployment:
+
+Oracle  | Oracle heartbeat  | Provisional staleness threshold (s.t. change)
+--- | --- | ---
+Chainlink ETH-USD  | 1 hour  | 24 hours
+Chainlink stETH-USD  | 1 hour  | 24 hours
+Chainlink rETH-ETH  | 24 hours  | 48 hours
+
+### 6 - Discrepancy between aggregate and sum of individual debts
+
+As mentioned in the interest rate implementation section, the core debt invariant is given by:
+
+Aggregate total debt always equals the sum of individual entire Trove debts.
+
+That is:
+    
+    `ActivePool.aggRecordedDebt + ActivePool.calcPendingAggInterest()
+    + ActivePool.aggBatchManagementFees() + ActivePool.calcPendingAggBatchManagementFee()
+    + DefaultPool.BoldDebt
+    = SUM_i=1_n(TroveManager.getEntireTroveDebt())
+    `
+
+For all `n` Troves in the branch.
+
+However, this invariant doesn't hold perfectly - the aggregate is sometimes slightly less than the sum over Troves.
+
+Thus, checking for undercollateralized Troves in v2 would require an inefficient loop over all Troves, which is prohibitively expensive gas-wise.
+
+However, no fix is required since it’s expected that:
+
+  * Most liquidations are profitable for SP depositors, i.e. occur at ICR > 100%, so the collateral value that SP depositors receive is greater than the amount of debt cancelled against their BOLD deposit.
+
+  * Liquidations are MEV competitive and a significant portion of liquidations are expected to be performed via private pools e.g. Flashbots, and not via the public gas auction
+
+  * The majority of SP deposits are “sticky” - that is, most depositors leave their deposit in the SP for the medium/long term to earn continuous BOLD yield, and are not running frontrunning bots in order to evade a very occasional unprofitable liquidation.
+
+### 25 - Redistribution Loss evasion
+
+It is possible that a borrower may frontrun and evade an income redistribution liquidation in order to avoid making a net loss. For example:
+
+If your fork uses new types of oracles or oracle logic, the impact of manipulation on stablecoin minting, liquidations and redemptions should be analysed with these priorities in mind.
+
+### Oracle decimals
+
+Liquity v2 expects 8 decimal digit precision for the ETH-USD Chainlink price source and scales it to 18 digits before using it in internal operations. Take care to note the decimal precision of all your oracles and scale them accordingly before using them in system ops.
+
+### Staleness thresholds
+
+When using market oracles which are Chainlink push-based or equivalent, the staleness thresholds should be larger than the oracle’s heartbeat by a healthy buffer.
+
+This ensures that short delays in oracle updates do not trigger an unnecessary branch shutdown.
+
+For example, in Liquity v2 the oracle heartbeats and staleness thresholds are as such:
+
+Market oracle  | Heartbeat  | Staleness threshold
+--- | --- | ---
+ETH-USD  | 1 hour  | 24 hours
+STETH-USD  | 1 hour  | 24 hours
+RETH-ETH  | 24 hours  | 48 hours
+
+### Redemption floor fee and oracle update thresholds
+
+When using market oracles which are Chainlink push-based or equivalent, the redemption floor fee `x` should be equal or greater than the oracle price update deviation threshold `y`. This is to ensure that a market price movement in range `(x, y)` does not lead to adverse redemptions: in this range, a price movement makes redemption profitable when the stablecoin is trading at $1, but does not trigger an oracle update and redeemers can extract value from the system. Thus, the floor fee `x` should be equal to or greater than oracle threshold `y` to eliminate redemption profits in this range.
+
+Liquity v2 actually mitigates this a different way for the LST branches, taking the “worst” price from two sources. For the WETH branch, it sets `x = y`. Systems using purely push-based market oracles to price collateral should set a sufficiently high redemption fee floor.
+
+--------------------------------------------------------------------------------
+Tail Risk in Liquidation Engine Design Explained | ChainScore Blog (https://chainscorelabs.com/blog/defi-protocols/liquidation-mechanism-design/tail-risk-in-liquidation-engine-design)
+citeturn489search9 [wordlim: 200] Published: 1.6 years ago; Crawled: last month; Standard liquidation engines are optimized for the median, not the extreme. ... Fixed-spread liquidations guarantee a profit for the fastest bot, not the fairest price. ... Bot Race Latency ... An adaptive function, like the one pioneered by MakerDAO and refined by Liquity, accelerates price discovery when on-chain volatility spikes and bidder participation is low.
+## Design Principles for Power-Law Markets
+
+Standard liquidation engines are optimized for the median, not the extreme. These architectural principles harden protocols against the fat-tailed volatility that defines crypto markets.
+
+01
+
+### The Problem: Static Discounts Create Risk-Free Arbitrage
+
+Fixed-spread liquidations guarantee a profit for the fastest bot, not the fairest price. During a flash crash, a static 5% discount becomes a toxic subsidy when the true market discount is 20%, leaving the protocol with bad debt. This turns a solvency mechanism into a race for free money.
+
+  * Eliminates the arbitrage loophole during volatility spikes.
+  * Forces keepers to bid the true market price of distressed collateral.
+
+~500ms
+
+Bot Race Latency
+
+-100%
+
+Arbitrage Loophole
+
+02
+
+### The Solution: Adaptive Dutch Auction Decay Functions
+
+A static decay rate is a predictable attack surface. An adaptive function, like the one pioneered by MakerDAO and refined by Liquity, accelerates price discovery when on-chain volatility spikes and bidder participation is low. --------------------------------------------------------------------------------
+Wick Crypto Engine (https://crypto.wick.pics/bots/PLS-LIQ-KEEPER)
+citeturn489search10 [wordlim: 200] Crawled: last month; arrow_back Back to Bot Fleet Bot Detail · Prototype ... Liquidation Keeper · Liquity-Fork Liquidations
+
+Wick Crypto Engine
+
+arrow_back Back to Bot Fleet Bot Detail · Prototype
+
+### Bot Titles
+
+PLS-LIQ-KEEPER-V1
+
+gavel
+
+PLS-LIQ-KEEPER-V1 PLS STOPPED · STOPPED_UNKNOWN
+
+Liquidation Keeper · Liquity-Fork Liquidations
+
+contract 0xD79b...D2Ab
+
+Permissionless liquidations on Liquid Loans (PLS→USDL, liquidateVaults) and PowerCity EARN (PLSX→PXDC, liquidateTroves). Caller earns the 200-unit stablecoin gas compensation + 0.5% of the position's collateral per closing; estimateGas gates every send so a false trigger costs one eth_call — zero principal at risk. Guards: hourly fire cap, 3-revert breaker per protocol, gas-wallet floor, RPC autopick + self-restart. A competition probe logs each real closing's winner and gas premium (measured field: median winner pays ~297× base fee; a winning bid costs well under $1 vs ~$300 avg reward). Dedicated wallet 0xbAb8…cd88 — needs PLS gas funding to act. · Liquity-Fork Liquidations
+
+### Performance So Far
+
+PLS-LIQ-KEEPER-V1
+
+Execution Funnel — no pipeline activity in the last 24h for this bot.
+--------------------------------------------------------------------------------
+Why Liquidation Engines Are Too Slow: A Deep Dive | ChainScore Blog (https://chainscorelabs.com/blog/trading/counterparty-risk-mitigation/why-liquidation-engines-are-too-slow)
+citeturn489search11 [wordlim: 200] Published: 1.2 years ago; Crawled: last month; Liquidation latency creates adverse selection. ... Bot-Captured Liquidations ... If the gas cost exceeds the liquidation profit, liquidations stall, and the protocol accumulates bad debt.\n- Priority Gas Auctions (PGA): Protocols waste treasury funds fighting bots.\n- Stalled State Updates: Bad debt accrues linearly while the engine waits for cheap gas.
+The delta was pure MEV profit, extracted because the liquidation engine could not settle fast enough to prevent keeper exploitation.
+
+key-insights
+
+THE LIQUIDATION TAX
+
+## Executive Summary
+
+Slow liquidation engines are not a mere inconvenience; they are a structural wealth transfer mechanism from passive borrowers to sophisticated bots. Three core flaws transform a risk management tool into a systemic exploit.
+
+01
+
+### The Problem: Stale Oracle Data
+
+Liquidation engines relying on push-based oracles suffer from ~500ms to 2s latency during volatility spikes. This gap creates a window where the on-chain price is a historical artifact, not a tradable quote. Bots exploit this by arbitraging the difference between the stale trigger price and the true market price, extracting value that should belong to the protocol or the borrower.\n- Adverse Selection: Honest borrowers are liquidated on transient wicks.\n- MEV Extraction: Searchers pay high priority fees to capture the stale price delta.
+
+~500ms
+
+Oracle Latency
+

@@ -1,0 +1,686 @@
+Tom Forbes | Kaggle (https://www.kaggle.com/tomforbes/writeups)
+citeturn1044search0 [wordlim: 200] Published: 4.6 years ago; Crawled: last month; tomforbes ... Initial Comments First of all thankyou to G-Research and Cambridge Spark for hosting this competition and to the Kaggle staff for making everything run relatively smoothly. ... Submission This is almost the exact notebook I submitted for my final predictions.
+
+Competitions Master
+
+3,658 of 210,807
+
+tomforbes
+
+# Tom Forbes
+
+  * work
+
+Quantitative Researcher at Optiver
+
+  * pin_drop
+
+Amsterdam, North Holland, Netherlands
+
+  * date_range
+
+Joined 5 years ago · last seen in the past day
+
+AboutCompetitions (10)Code (8)Discussion (153)Writeups (1)Followers (132)Following (13)
+
+## Public Writeups (1)
+
+search[Input: Search]​
+
+tune All Filters
+
+Tags expand_more
+
+Project Solution Hackathon
+
+Recently Posted
+
+[Input]
+
+  * Solution Writeup
+
+cite7†13th Place (Final) 1st Place (6 Weeks In) Final Solution View the final submission notebook here. Final Update - Congratulations to all the winners! While this comp was a bit of a rollercoaster, I'm very pleased to get my first competition Gold. Disappointing to just miss out on the top 10 after being there so long, but thats always possible with this type of challenge. Original post below. Initial Comments First of all thankyou to G-Research and Cambridge Spark for hosting this competition and to the Kaggle staff for making everything run relatively smoothly. It is obviously difficult to accurately predict crypto prices, but it's possible to find some signal - hopefully this notebook will shed some light on how I got mine. Disclaimers this was not my exact final submission but very similar I have removed the dataset containing my pretrained models and scalers - so some commands will error Summary 17 features with lagged and timestamp averages for all models. Ensembles of LGBM and Keras NN models. Target Engineering and prediction switching. Some training on extra cryptos outside competition scope. Test Scores (no lookahead bias): 0.0565 best score on original testing period (Jun 13 2021 - Sep 21 2021) 0.0475 best score on supplemental_train.csv update. (Sep 21 2021 - Jan 24 2022) 0.0465 best single model score (Jun 13 2021 - Sep 21 2021) External Data I downloaded free public data from multiple exchange apis (Binance, FTX, Coinbase, Kucoin… etc.) to see if this extra data would improve my models. Some of my final models were trained on extra data. Specifically, using some currencies not included in the competition (e.g. It was also important to have test folds in several different market regimes to avoid overfitting to one period. My best single model was a NN trained on fold 0 data only (surprisingly). I was fairly selective on picking models to include in the final submission as some folds just trained much better than others and had more consistent outperformance on unseen data. Submission This is almost the exact notebook I submitted for my final predictions. I used lists to store historical data for feature calculations and did most calculations using numpy or lists, avoiding pandas at all costs. The submission completes in roughly 7 hours. What didnt work Layering extra data from different exchanges for the same asset. E.g training on BTC data from Binance + Coinbase + FTX + G-Research version. Didnt harm but didnt improve models significantly either. Framing as a classification problem - poor results Hyperparameter tuning LGBM PCA features Using all 14 assets features per row / predicting on 14 targets. Meta modelling GB and NN predictions With more time id try Extra Feature engineering Pytorch implementation of keras NN for ensembling LSTM Other model architectures Mar 16, 2022 · G-Research Crypto Forecasting · 13th Place
+
+--------------------------------------------------------------------------------
+13th Place (Final) 1st Place (6 Weeks In) Final Solution | Kaggle (https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/tom-forbes-13th-place-final-1st-place-6-weeks-in-f)
+citeturn1044search1 [wordlim: 200] Published: 4.5 years ago; Crawled: last month; First of all thankyou to G-Research and Cambridge Spark for hosting this competition and to the Kaggle staff for making everything run relatively smoothly. ... Tom Forbes. 13th Place (Final) 1st Place (6 Weeks In) Final Solution. https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/tom-forbes-13th-place-final-1st-place-6-weeks-in-f.
+
+13th Place (Final) 1st Place (6 Weeks In) Final Solution — G-Research Crypto Forecasting
+
+# 13th Place (Final) 1st Place (6 Weeks In) Final Solution
+
+G-Research Crypto Forecasting
+
+Solution Writeup · 13th place · May 4, 2022
+
+View the final submission notebook here.
+
+Final Update - Congratulations to all the winners! While this comp was a bit of a rollercoaster, I'm very pleased to get my first competition Gold. Disappointing to just miss out on the top 10 after being there so long, but thats always possible with this type of challenge.
+
+Original post below.
+
+## Initial Comments
+
+First of all thankyou to G-Research and Cambridge Spark for hosting this competition and to the Kaggle staff for making everything run relatively smoothly. I found it so interesting and more open ended than other comps I've competed in, in my short Kaggler career.
+
+It goes without saying that while I'm in 1st Place now there is no guarantee it will stay that way in the next 6 weeks, but I'm confident I'll be there or thereabouts. Hopefully you find this solution useful regardless of the final outcome.
+
+Elephant in the room - there has been a lot of concern about the validity of the final LB results and requests to release the final test data after the competition ends so that competitors can validate their final scores. I think this would be a good idea and should put any concerns to bed. If it's possible & not too much effort for Kaggle to accommodate the request please consider it. However, as far as im concerned my current score seems reasonable based on all the scores I achieved in testing. I have no reason to believe any of the LB scores are incorrect until there is evidence to the contrary.
+
+I would encourage those who feel their score is unexpected share their solutions as the Kaggle community might be able to debug any issues/misunderstandings.
+
+It is obviously difficult to accurately predict crypto prices, but it's possible to find some signal - hopefully this notebook will shed some light on how I got mine.
+
+Disclaimers
+
+  * this was not my exact final submission but very similar
+  * I have removed the dataset containing my pretrained models and scalers - so some commands will error
+
+## Summary
+
+  * 17 features with lagged and timestamp averages for all models.
+  * Ensembles of LGBM and Keras NN models.
+  * Target Engineering and prediction switching.
+  * Some training on extra cryptos outside competition scope.
+
+Test Scores (no lookahead bias):
+
+  * 0.0565 best score on original testing period (Jun 13 2021 - Sep 21 2021)
+  * 0.0475 best score on supplemental_train.csv update. (Sep 21 2021 - Jan 24 2022)
+  * 0.0465 best single model score (Jun 13 2021 - Sep 21 2021)
+
+## External Data
+
+I downloaded free public data from multiple exchange apis (Binance, FTX, Coinbase, Kucoin… etc.) to see if this extra data would improve my models. Some of my final models were trained on extra data. Specifically, using some currencies not included in the competition (e.g. XRP, ZEC…) from Binance seemed to provide a consistent small improvement over multiple timeframes.
+
+## Feature Engineering
+
+I settled on a group of 17 features for all models. There are 8 lagged features - a simple mixture of EMA's, historical returns and historical volatility over various lookback periods - and these features were averaged across timestamps to produce 8 more. Asset_ID was also included. It was tricky to find a group that performed the best consistently across different time periods, adding and removing features from this set seemed to reduce performance. Im sure this isn't the optimal feature set, but this group seemed to work well enough.
+
+It was also important to perform some kind on binning on the features, especially for training the LGBM model. ## Models
+
+I found LightGBM worked well and was easy to experiment with, i used the weighted correlation evaluation metric and fairly out of the box hyperparameters, tuning didnt seem to add much and wasn't consistent across time periods.
+
+I also used a Keras NN heavily influenced by @lucasmorin's
+excellent notebook. This just worked really well for me out of the box and i couldnt find many ways to improve the architecture or hyperparameters.
+
+Ensembling these two models worked well and added an extra 0.005 to my score (roughly) although the improvement varies in different market regimes. I also experimented with ensembles using catboost and XGboost but the predictions from most gradient boosting models were too highly correlated to provide much ensembling benefit. I found the diversity in predictions between NN and GB were a good match.
+
+I used a fairly simple CV method for training and testing. My folds were based on timestamp values similar to the below:
+
+  * Training Fold 0: 1514764860 - 1570000000
+  * Training Fold 1: 1514764860 - 1580000000
+  * Training Fold 2: 1514764860 - 1590000000
+  * Training Fold 3: 1514764860 - 1600000000
+  * Training Fold 4: 1514764860 - 1610000000
+  * Validation Fold 0: 1570000000 - 1580000000
+  * Validation Fold 1: 1580000000 - 1590000000
+  * Validation Fold 2: 1590000000 - 1600000000
+  * Validation Fold 3: 1600000000 - 1610000000
+  * Validation Fold 4: 1610000000 - 1620000000
+  * Test Fold A: 1615000000 - 1623542400
+  * Test Fold B (Supplemental Train Update): 1623542400 - 1643000000
+
+Since this public lb was useless in this competition, it was essential to construct a robust CV framework to have a reliable benchmark for making improvements to models. It was also important to have test folds in several different market regimes to avoid overfitting to one period.
+
+My best single model was a NN trained on fold 0 data only (surprisingly).
+
+I was fairly selective on picking models to include in the final submission as some folds just trained much better than others and had more consistent outperformance on unseen data.
+
+## Submission
+
+This is almost the exact notebook I submitted for my final predictions. I used lists to store historical data for feature calculations and did most calculations using numpy or lists, avoiding pandas at all costs.
+
+The submission completes in roughly 7 hours.
+
+## What didnt work
+
+  * Layering extra data from different exchanges for the same asset. E.g training on BTC data from Binance + Coinbase + FTX + G-Research version. Didnt harm but didnt improve models significantly either.
+  * Framing as a classification problem - poor results
+  * Hyperparameter tuning LGBM
+  * PCA features
+  * Using all 14 assets features per row / predicting on 14 targets.
+  * Meta modelling GB and NN predictions
+
+## With more time id try
+
+  * Extra Feature engineering
+  * Pytorch implementation of keras NN for ensembling
+  * LSTM
+  * Other model architectures
+
+Author
+
+Tom Forbes
+
+tomforbes
+
+arrow_drop_up[Button: 91]
+
+Share[Button: more_horiz]
+
+## Citation
+
+Tom Forbes. 13th Place (Final) 1st Place (6 Weeks In) Final Solution. https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/tom-forbes-13th-place-final-1st-place-6-weeks-in-f. 2022. Kaggle
+--------------------------------------------------------------------------------
+7th place solution | Kaggle (https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/patrick-yam-7th-place-solution)
+citeturn1044search2 [wordlim: 200] Crawled: last month; Here is a very brief description of my model, the final submission is an ensemble of 4 models trained with different sequence lengths. ... Patrick Yam. 7th place solution. https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/patrick-yam-7th-place-solution.
+
+7th place solution — G-Research Crypto Forecasting
+
+# 7th place solution
+
+G-Research Crypto Forecasting
+
+Solution Writeup · 7th place
+
+First of all, thank you G-Research and Kaggle for hosting the competition. I really like the data provided in this competition, actual market data give us more room for creative method development and is much more interesting compared with anonymized tabular data.
+
+My approach is 99% on modeling and the only feature I added is the time of day. Here is a very brief description of my model, the final submission is an ensemble of 4 models trained with different sequence lengths.
+Image
+
+Author
+
+Patrick Yam
+
+wimwim
+
+arrow_drop_up[Button: 74]
+
+
+## Citation
+
+Patrick Yam. 7th place solution. https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/patrick-yam-7th-place-solution. 2022. Kaggle
+
+Image: love4
+
+comment
+
+
+arrow_drop_up[Button: 4]
+
+[Button: more_vert]
+
+Thanks for the question! The scale for features is very different between different assets and different timestamps, I decided to normalize input using only the data from the input sequence with the same asset (90 data points for each feature) to compute the mean and std.
+
+
+I use 3-fold Grouped CV and the key is timestamps.
+
+
+Thanks for the question! I use standardization for input scaling. I find that the features scaling could be very different between different assets (e.g. ETH vs BTC) and different timestamps (2020 vs 2021), so I calculate the mean and std for each asset and only use the data from the input sequence (90 data points) to make the model more stable and robust.
+
+Image
+
+## Appreciation (2)--------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/c/g-research-crypto-forecasting/discussion/284903)
+citeturn1044search3 [wordlim: 200] Crawled: last month; G-Research · Featured Code Competition · 4 years agoLate Submission ... Probably some will even be incorporated into some of the final solutions. ... This basically means that you have a "model per asset" and "one model for all" maybe even "model per weekday"… and so on. by the end you ensemble and merge all the models. ...   * Another interesting article and probably relevant for Kaggle.
+
+G-Research · Featured Code Competition · 4 years ago
+
+Late Submission
+
+# G-Research Crypto Forecasting
+
+Use your ML expertise to predict real crypto market data
+
+## G-Research Crypto Forecasting
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+· Posted 5 years ago
+
+### Initial thoughts about this competition
+
+> TL;DR: Code & Datasets | also see baselines below 👇
+
+Alright, Guys!
+
+The following tutorial details some of my initial guesses for some of the concepts that probably will surface throughout the competition. Probably some will even be incorporated into some of the final solutions.
+
+* * *
+
+Hierarchical Time-series (HTS) This is a time-series competition. moreover - this can be modeled with hierarchical time series (HTS) model.
+
+This basically means that you have a "model per asset" and "one model for all" maybe even "model per weekday"… and so on. by the end you ensemble and merge all the models.
+
+This method had proven to work over and over and over again in previous competitions. --------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/competitions/g-research-crypto-forecasting/rules)
+citeturn1044search4 [wordlim: 200] Crawled: last month; COMPETITION WEBSITE: https://www.kaggle.com/c/g-research-crypto-forecasting ... (a) deliver to the Competition Sponsor the final model's software code as used to generate the winning Submission and associated documentation.
+
+G-Research · Featured Code Competition · 4 years ago
+
+Late Submission
+
+[Button: more_horiz]
+
+# G-Research Crypto Forecasting
+
+Use your ML expertise to predict real crypto market data
+
+Image
+
+## G-Research Crypto Forecasting
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+## Competition Rules
+
+[Button: keyboard_arrow_up]
+
+### One account per participant
+
+You cannot sign up to Kaggle from multiple accounts and therefore you cannot submit from multiple accounts.
+
+### No private sharing outside teams
+
+Privately sharing code or data outside of teams is not permitted. It's okay to share code if made available to all participants on the forums.
+
+### Team Mergers
+
+Team mergers are allowed and can be performed by the team leader. In order to merge, the combined team must have a total submission count less than or equal to the maximum allowed as of the Team Merger Deadline. The maximum allowed is the number of submissions per day multiplied by the number of days the competition has been running.
+
+### Team Limits
+
+The maximum team size is 5.
+
+### Submission Limits
+
+You may submit a maximum of 5 entries per day.
+
+You may select up to 2 final submissions for judging.
+
+### Competition Timeline
+
+Competition Timeline dates (including Entry Deadline, Final Submission Deadline, Start Date, and Team Merger Deadline, as applicable) are reflected on the competition’s Overview > Timeline page.
+
+### COMPETITION-SPECIFIC TERMS
+
+COMPETITION TITLE: G-Research Crypto Forecasting
+
+COMPETITION SPONSOR: Trenchant Employee Services Limited, trading as G-Research
+
+COMPETITION SPONSOR ADDRESS: Whittington House, 19-30 Alfred Pl, Bloomsbury, London WC1E 7EA
+
+COMPETITION WEBSITE: https://www.kaggle.com/c/g-research-crypto-forecasting
+
+TOTAL PRIZES AVAILABLE: $125,000
+
+First Prize: $50,000
+
+Second Prize: $20,000
+
+Third Prize: $15,000
+
+Fourth Prize: $10,000
+
+Fifth - Tenth Prize(s): $5,000
+
+WINNER LICENSE TYPE: Non-Exclusive License
+
+DATA ACCESS AND USE: Competition Use Only
+
+Competitions are open to residents of the United States and worldwide, except that if you are a resident of Crimea, Cuba, Iran, Syria, North Korea, or are subject to U.S. export controls or sanctions, you may not enter the Competition. Other local rules and regulations may apply to you, so please check your local laws to ensure that you are eligible to participate in skills-based competitions. The Competition Sponsor reserves the right to award alternative Prizes where needed to comply with local laws.
+
+ENTRY IN THIS COMPETITION CONSTITUTES YOUR ACCEPTANCE OF THESE OFFICIAL COMPETITION RULES.
+
+The Competition named above is a skills-based competition to promote and further the field of data science. You must register via the Competition Website to enter. Your competition submissions ("Submissions") must conform to the requirements stated on the Competition Website. Your Submissions will be scored based on the evaluation metric described on the Competition Website. Subject to compliance with the Competition Rules, Prizes, if any, will be awarded to participants with the best scores, based on the merits of the data science models submitted. See below for the complete Competition Rules.
+
+#### 3. SPONSOR AND HOSTING PLATFORM.
+
+The Competition is sponsored by Competition Sponsor named above. The Competition is hosted on behalf of Competition Sponsor by Kaggle Inc. ("Kaggle"). Kaggle is an independent contractor of Competition Sponsor, and is not a party to this or any agreement between you and Competition Sponsor. You understand that Kaggle has no responsibility with respect to selecting the potential Competition winner(s) or awarding any Prizes. Kaggle will perform certain administrative functions relating to hosting the Competition, and you agree to abide by the provisions relating to Kaggle under these Rules. As a Kaggle.com account holder and user of the Kaggle competition platform, remember you have accepted and are subject to the Kaggle Terms of Service at www.kaggle.com/terms in addition to these Rules.
+
+#### 4. COMPETITION PERIOD.
+
+For the purposes of Prizes, the Competition will run from the Start Date and time to the Final Submission Deadline (such duration the “Competition Period”). #### 6. INDIVIDUALS AND TEAMS.
+
+A. Individual Account. You may make Submissions only under one, unique Kaggle.com account. You will be disqualified if you make Submissions through more than one Kaggle account, or attempt to falsify an account to act as your proxy. You may submit up to the maximum number of Submissions per day as specified on the Competition Website.
+
+B. Teams. If permitted under the Competition Website guidelines, multiple individuals may collaborate as a team (a "Team"); however, you may join or form only one Team. Each Team member must be a single individual with a separate Kaggle account. You must register individually for the Competition before joining a Team. You must confirm your Team membership to make it official by responding to the Team notification message sent to your Kaggle account. Team membership may not exceed the Maximum Team Size stated on the Competition Website.
+
+C. Team Merger. Teams may request to merge via the Competition Website. Team mergers may be allowed provided that: (i) the combined Team does not exceed the Maximum Team Size; (ii) the number of Submissions made by the merging Teams does not exceed the number of Submissions permissible for one Team at the date of the merger request; (iii) the merger is completed before the earlier of: any merger deadline or the Competition deadline; and (iv) the proposed combined Team otherwise meets all the requirements of these Rules.
+#### 8. SUBMISSION CODE REQUIREMENTS.
+
+A. Private Code Sharing. Unless otherwise specifically permitted under the Competition Website or Competition Specific Rules above, during the Competition Period, you are not allowed to privately share source or executable code developed in connection with or based upon the Competition Data or other source or executable code relevant to the Competition (“Competition Code”). This prohibition includes sharing Competition Code between separate Teams, unless a Team merger occurs. Any such sharing of Competition Code is a breach of these Competition Rules and may result in disqualification.
+
+B. Public Code Sharing. You are permitted to publicly share Competition Code, provided that such public sharing does not violate the intellectual property rights of any third party. If you do choose to share Competition Code or other such code, you are required to share it on Kaggle.com on the discussion forum or notebooks associated specifically with the Competition for the benefit of all competitors. The public leaderboard will be based on the public test set and the private leaderboard will be based on the private test set.
+
+In the event of a tie, the Submission that was entered first to the Competition will be the winner. In the event a potential winner is disqualified for any reason, the Submission that received the next highest score rank will be chosen as the potential winner.
+
+#### 10. NOTIFICATION OF WINNERS & DISQUALIFICATION.
+
+The potential winner(s) will be notified by email.
+
+If a potential winner (i) does not respond to the notification attempt within one (1) week from the first notification attempt or (ii) notifies Kaggle within one week after the Final Submission Deadline that the potential winner does not want to be nominated as a winner or does not want to receive a Prize, then, in each case (i) and (ii) such potential winner will not receive any Prize, and an alternate potential winner will be selected from among all eligible entries received based on the Competition’s judging criteria.
+#### 11. WINNERS OBLIGATIONS.
+
+As a condition to being awarded a Prize, a Prize winner must fulfill the following obligations:
+
+(a) deliver to the Competition Sponsor the final model's software code as used to generate the winning Submission and associated documentation. The delivered software code should follow these documentation guidelines, must be capable of generating the winning Submission, and contain a description of resources required to build and/or run the executable code successfully. To the extent that the final model’s software code includes generally commercially available software that is not owned by you, but that can be procured by the Competition Sponsor without undue expense, then instead of delivering the code for that software to the Competition Sponsor, you must identify that software, method for procuring it, and any parameters or other information necessary to replicate the winning Submission;
+
+(b) grant to the Competition Sponsor the license to the winning Submission stated in the Competition Specific Rules above, and represent that you have the unrestricted right to grant that license;
+--------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/c/g-research-crypto-forecasting/code)
+citeturn1044search5 [wordlim: 200] Crawled: last month; G-Research · Featured Code Competition · 4 years agoLate Submission
+
+G-Research · Featured Code Competition · 4 years ago
+
+Late Submission
+
+[Button: more_horiz]
+
+# G-Research Crypto Forecasting
+
+Use your ML expertise to predict real crypto market data
+
+Image
+
+## G-Research Crypto Forecasting
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+## Notebooks
+
+add New Notebook--------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/competitions/g-research-crypto-forecasting/data?select=supplemental_train.csv)
+citeturn1044search6 [wordlim: 200] Crawled: last month; G-Research · Featured Code Competition · 4 years ago ... The forecasting phase public leaderboard and final private leaderboard will be determined using real market data gathered after the submission period closes.
+
+G-Research · Featured Code Competition · 4 years ago
+
+# G-Research Crypto Forecasting
+
+Use your ML expertise to predict real crypto market data
+
+Image
+
+## G-Research Crypto Forecasting
+
+Late Submission
+
+[Button: more_horiz]
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+## Dataset Description
+
+This dataset contains information on historic trades for several cryptoassets, such as Bitcoin and Ethereum. Your challenge is to predict their future returns.
+
+As historic cryptocurrency prices are not confidential this will be a forecasting competition using the time series API. Furthermore the public leaderboard targets are publicly available and are provided as part of the competition dataset. Expect to see many people submitting perfect submissions for fun. Accordingly, the active phase public leaderboard for this competition was not meaningful and was only provided as a convenience for anyone who wants to test their code. The forecasting phase public leaderboard and final private leaderboard will be determined using real market data gathered after the submission period closes.
+--------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/c/g-research-crypto-forecasting/leaderboard)
+citeturn1044search7 [wordlim: 200] Crawled: last month; This leaderboard reflects the final standings. ...   * 13 Tom Forbes
+
+## Leaderboard
+
+file_download Raw Data
+
+This competition has completed. This leaderboard reflects the final standings.
+
+Prize Winners
+
+  * #Team Members Score Entries Last Solution
+
+  * 1 Meme Lord Capital
+
+Image: gold medal0.0326
+
+2 5y
+
+  * 2 Nathaniel Maddux
+
+Image: gold medal0.0283
+
+2 5ydescription
+
+  * 3 GABA
+
+Image: gold medal0.0232
+
+2 5ydescription
+
+  * 4 cmanning
+
+Image: gold medal0.0229
+
+2 5y
+
+  * 5 Stamford009
+
+Image: gold medal0.0225
+
+2 5y
+
+  * 6 yuto
+
+Image: gold medal0.0203
+
+2 5y
+
+  * 7 Patrick Yam
+
+Image: gold medal0.0202
+
+2 5ydescription
+
+  * 8 404NOTFOUND
+
+Image: gold medal0.0201
+
+2 5y
+
+  * 9 bturan19
+
+Image: gold medal0.0194
+
+2 5ydescription
+
+  * 10 mark4h
+
+Image: gold medal0.0194
+
+2 5y
+
+  * 11 Mark O'Connell
+
+Image: gold medal0.0192
+
+2 5y
+
+  * 12 Shady Mokh
+
+Image: gold medal0.0190
+
+2 5y
+
+  * 13 Tom Forbes
+
+Image: gold medal0.0187
+--------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/c/g-research-crypto-forecasting/)
+citeturn1044search8 [wordlim: 200] Published: 5.0 years ago; Crawled: last month; G-Research · Featured Code Competition · 4 years ago ... Once the submission deadline has passed, your final score will be calculated over the following 3 months using live crypto data as it is collected. ... G-Research Crypto Forecasting . https://www.kaggle.com/competitions/g-research-crypto-forecasting, 2021.
+
+G-Research · Featured Code Competition · 4 years ago
+
+Late Submission
+
+# G-Research Crypto Forecasting
+
+Use your ML expertise to predict real crypto market data
+
+## G-Research Crypto Forecasting
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+## Overview
+
+Start
+
+Nov 2, 2021
+
+Close
+
+May 3, 2022
+
+Merger & Entry
+
+### Description
+
+[Button: link]
+
+[Button: keyboard_arrow_up]
+
+Over $40 billion worth of cryptocurrencies are traded every day. They are among the most popular assets for speculation and investment, yet have proven wildly volatile. Fast-fluctuating prices have made millionaires of a lucky few, and delivered crushing losses to others. Could some of these price movements have been predicted in advance?
+
+In this competition, you'll use your machine learning expertise to forecast short term returns in 14 popular cryptocurrencies. We have amassed a dataset of millions of rows of high-frequency market data dating back to 2018 which you can use to build your model. Once the submission deadline has passed, your final score will be calculated over the following 3 months using live crypto data as it is collected.
+
+The simultaneous activity of thousands of traders ensures that most signals will be transitory, persistent alpha will be exceptionally difficult to find, and the danger of overfitting will be considerable. In addition, since 2018, interest in the cryptomarket has exploded, so the volatility and correlation structure in our data are likely to be highly non-stationary. The successful contestant will pay careful attention to these considerations, and in the process gain valuable insight into the art and science of financial forecasting.
+
+G-Research is Europe’s leading quantitative finance research firm. We have long explored the extent of market prediction possibilities, making use of machine learning, big data, and some of the most advanced technology available. Specializing in data science and AI education for workforces, Cambridge Spark is partnering with G-Research for this competition.     `
+    
+    [Button: content_copy]
+
+A more detailed introduction to the API is available here.
+
+You will get an error if you submission includes nulls or infinities.
+
+### Timeline
+
+[Button: link]
+
+[Button: keyboard_arrow_up]
+
+#### This is a forecasting competition with an active training phase and a second period where models will be run against real market data.
+
+### Training Timeline
+
+  * November 2, 2021 - Start Date
+  * January 25, 2022 - Entry deadline. You must accept the competition rules before this date in order to compete.
+  * January 25, 2022 - Team Merger deadline. This is the last day participants may join or merge teams.
+  * February 1, 2022 - Final submission deadline.
+
+All deadlines are at 11:59 PM UTC on the corresponding day unless otherwise noted. The competition organizers reserve the right to update the contest timeline if they deem it necessary.
+
+### Forecasting Timeline:
+
+Starting after the final submission deadline there will be periodic updates to the leaderboard to reflect market data updates that will be run against selected notebooks. --------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/competitions/g-research-crypto-forecasting/leaderboard)
+citeturn1044search9 [wordlim: 200] Crawled: 2 days ago; G-Research · Featured Code Competition · 4 years agoLate Submission ... This leaderboard reflects the final standings.
+
+G-Research · Featured Code Competition · 4 years ago
+
+Late Submission
+
+[Button: more_horiz]
+
+# G-Research Crypto Forecasting
+
+Use your ML expertise to predict real crypto market data
+
+## G-Research Crypto Forecasting
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+## Leaderboard
+
+file_download Raw Data
+
+refresh Refresh
+
+[Input: Search leaderboard]​
+
+This competition has completed. This leaderboard reflects the final standings.
+
+Prize Winners
+
+  * #Team Members Score Entries Last Solution
+--------------------------------------------------------------------------------
+new ml final (https://www.kaggle.com/code/asmitkr/new-ml-final)
+citeturn1044search10 [wordlim: 200] Crawled: 2 weeks ago; # new ml final ... G-Research Crypto Forecasting
+
+AsmitKr · 3y ago · 523 views
+
+arrow_drop_up[Button: 4]
+
+Copy & Edit
+
+5
+
+file_download Download
+
+[Button: more_vert]
+
+# new ml final
+
+## new ml final
+
+NotebookInputOutputLogsComments (0)
+
+history Version 2 of 2[Button: chevron_right]
+
+## Runtime
+
+play_arrow
+
+21m 53s
+
+## Language
+
+Python
+
+Image: Profile picture for undefined
+
+Competition Notebook
+
+G-Research Crypto Forecasting
+
+Main Notebook Content
+
+## License
+
+This Notebook has been released under the Apache 2.0 open source license.
+
+Input
+
+1 file
+
+arrow_right_alt
+
+  * Image
+
+Output
+
+2 files
+
+arrow_right_alt
+
+  * Image
+
+Logs
+
+1312.8 second run - successful
+
+arrow_right_alt
+
+  * Image
+
+Comments
+
+0 comments--------------------------------------------------------------------------------
+37th place approach in the G-Research Crypto Forecasting Competition. | Kaggle (https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/kirderf-37th-place-approach-in-the-g-research-cryp)
+citeturn1044search11 [wordlim: 200] Published: 4.5 years ago; Crawled: last month; Here I didn’t used much effort this time, afraid of overfit even more, so here I used an ensemble of one light tuned Xgb and one untuned Xgb but with different seeds. ... First submission trained only with the public period dataset and tuned for a more bullish market with a believe that TA works better in that market and second solution trained with the complete dataset with no overlap until evaluation period. ... Kirderf. 37th place approach in the G-Research Crypto Forecasting Competition.. https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/kirderf-37th-place-approach-in-the-g-research-cryp.
+Maybe not the best and maybe can worsen the best scores but I hoped to balance and smoothing it more.
+
+Models
+
+Here I didn’t used much effort this time, afraid of overfit even more, so here I used an ensemble of one light tuned Xgb and one untuned Xgb but with different seeds. Also added two lgbm with different seed and minor differences. In total 4 models ensemble to the prediction.
+
+Training
+
+As many of us we had many solutions and ideas, but many went to trashcan as they didn’t meet the time limit, so I used the same solution for both submissions but trained with different datasets.
+
+First submission trained only with the public period dataset and tuned for a more bullish market with a believe that TA works better in that market and second solution trained with the complete dataset with no overlap until evaluation period.
+
+As validation during training, I manually picked different market condition to validate on, bullish, bearish and between.
+
+Handling test time limit
+
+I tried Pandas, Rapids and Polars and ended up with Polars that also have support for the Talib library used for many of indicators.

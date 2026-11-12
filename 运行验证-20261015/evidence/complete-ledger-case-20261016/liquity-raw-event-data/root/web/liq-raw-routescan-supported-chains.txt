@@ -1,0 +1,78 @@
+Supported chains | Routescan (https://routescan.io/docs/getting-started/supported-chains)
+citeturn508view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: click({"ref_id":"turn507view0","id":2}); Total lines: 111
+L0: cite0†Docs L1: 
+L2: Switch to light mode
+L3: 
+L4: Getting Started
+L5: 
+L6:   * cite0†Introduction L7:   * cite1†Get started L8:   * cite2†Supported chains L9:   * cite3†Migrate from Etherscan L10:   * cite4†Use with LLMs L11: 
+L12: Plans & limits
+L13: 
+L14:   * cite5†API keys & pricing L15:   * cite6†Rate limits L16: 
+L17: Build with AI
+L18: 
+L19:   * cite7†MCP server L20: 
+L21: Etherscan-compatible APIs
+L22: 
+L23:   * cite8†Overview L24:   * cite9†Accounts L25:   * cite10†Blocks L26:   * cite11†Contracts L27:   * cite12†Geth-Parity Proxy L28:   * cite13†Gas Tracker L29:   * cite14†Logs L30:   * cite15†Nametags L31:   * cite16†Stats L32:   * cite17†Tokens L33:   * cite18†Transactions L34: High-speed REST APIs
+L35: 
+L36:   * cite19†Overview L37:   * cite20†API conventions L38:   * cite21†Addresses L39:   * cite22†Transactions L40:   * cite23†Tokens L41:   * cite24†Contracts L42:   * cite25†Blocks L43:   * cite26†Stats & aggregations L44:   * cite27†Cross-chain L45:   * cite28†X-Chain L46:   * cite29†P-Chain L47:   * cite30†Network L48: 
+L49: Resources
+L50: 
+L51:   * cite31†Verify Contract L52:   * cite32†Verification Guides†info.routescan.io L53: 
+L54: cite33†Sign in L55: # Supported chains
+L56: 
+L57: Copy page as Markdown Open with AI tools
+L58: 
+L59: Routescan indexes the chains below; use the matching `{chainId}` in the path. The same list powers the chain selector in every Try it panel.
+L60: 
+L61: Mainnet 24 Testnet 11
+L62: 
+L63: cite34†Image†imgproxy-mainnet.routescan.io Apertum`2786`
+L64: 
+L65: cite35†Image†imgproxy-mainnet.routescan.io Beam`4337`
+L66: 
+L67: cite36†Image†imgproxy-mainnet.routescan.io Blast`81457`
+L68: 
+L69: cite37†Image†imgproxy-mainnet.routescan.io Boba Ethereum`288`
+L70: 
+L71: cite38†Image†imgproxy-mainnet.routescan.io C-Chain`43114`
+L72: cite39†Image†imgproxy-mainnet.routescan.io Chiliz`88888`
+L73: 
+L74: cite40†Image†imgproxy-mainnet.routescan.io Corn`21000000`
+L75: 
+L76: cite41†Image†imgproxy-mainnet.routescan.io Dexalot`432204`
+L77: 
+L78: cite42†Image†imgproxy-mainnet.routescan.io Ethereum`1`
+L79: 
+L80: cite43†Image†imgproxy-mainnet.routescan.io Fifa Blockchain`13322`
+L81: 
+L82: cite44†Image†imgproxy-mainnet.routescan.io GUNZ`43419`
+L83: 
+L84: cite45†Image†imgproxy-mainnet.routescan.io Hemi`43111`
+L85: 
+L86: cite46†Image†cdn.routescan.io Henesys`68414`
+L87: 
+L88: cite47†Image†imgproxy-mainnet.routescan.io Mantle`5000`
+L89: cite48†Image†imgproxy-mainnet.routescan.io Nibiru`6900`
+L90: 
+L91: cite49†Image†imgproxy-mainnet.routescan.io Numbers`10507`
+L92: 
+L93: cite50†Image†imgproxy-mainnet.routescan.io Numine`8021`
+L94: 
+L95: cite51†Image†imgproxy-mainnet.routescan.io PLAYA3ULL Games`3011`
+L96: 
+L97: cite52†Image†cdn.routescan.io Redbelly`151`
+L98: 
+L99: cite53†Image†imgproxy-mainnet.routescan.io Space`8227`
+L100: 
+L101: cite54†Image†imgproxy-mainnet.routescan.io StepNetwork`1234`
+L102: 
+L103: cite55†Image†imgproxy-mainnet.routescan.io StraitsX`5566`
+L104: 
+L105: cite56†Image†imgproxy-mainnet.routescan.io Titan`84358`
+L106: cite57†Image†imgproxy-mainnet.routescan.io UPTN`6119`
+L107: 
+L108: Put the chain id in the path (for example `/v2/network/mainnet/evm/1/...` for Ethereum), or use `all` to aggregate across every chain. A single `apikey` works across all of them. See the cite19†API reference and cite3†Migrate from Etherscan .
+L109: 
+L110: cite1†PreviousGet started cite3†Next Migrate from Etherscan cite58†Questions? Contact us 

@@ -1,0 +1,68 @@
+Liquity V2 and How Liquidation Bots Work (https://gabrielpoca.com/posts/2025-12-15-liquity-v2-and-how-liquidation-bots-work/)
+citeturn491view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: click({"ref_id":"turn490view0","id":4}); Total lines: 55
+L0: cite0†Gabriel Poça L1: 
+L2: # Liquity V2 and How Liquidation Bots Work
+L3: ## Blog Post
+L4: 
+L5: 12/15/2025
+L6: DeFi lending protocols allow anyone borrow against volatile assets, keeping exposure while unlocking liquidity. Modern systems like cite1†Bold†www.liquity.org or cite2†Orki†www.orki.finance (which is a fork of Liquity V2) even allow users to set their own collateral ratio and interest rates (after a certain threshold).
+L7: Users are incentivized to keep their positions healthy, but the liquidation bots are the ones that ensure positions are closed before they create bad debt that could destabilize the entire platform.
+L8: At its core, a liquidation bot is a program that monitors troves ("positions" or "vaults" in other contexts) and liquidates them when they become undercollateralized. In volatile crypto markets, prices can swing dramatically within minutes or even seconds. Manual liquidations simply aren't fast enough to protect protocols during rapid market movements.
+L9: ## Troves And Collateralization Ratio
+L10: 
+L11: Troves are the core of Liquity V2 and they have 2 relevant parameters for liquidation bots:
+L12: 
+L13:   * collateral: The amount of collateral deposited
+L14:   * debt: The amount borrowed
+L15: 
+L16: Each trove's collateralization ratio (CR) can be calculated like this:
+L17: 
+L18:     `Collateralization Ratio = (Collateral Amount * Collateral Price) / Debt
+L19:     `
+L20: The Minimum Collateralization Ratio (MCR) is set by the protocol and determines if a position can be liquidated. This represents the lowest acceptable ratio before a position becomes eligible for liquidation. Each protocol will set the MCR according to some parameters, such as the volatility of the collateral. For instance, if you borrow against ETH in Orki the MCR is 110%, and positions below that become eligible for liquidation. For example:
+L21:   * Day 1: You deposit 1,500 USD of ETH, borrow 1,000 USDK → CR = 150%
+L22:   * Day 2: ETH price drops 20%, your collateral is now worth 1,200 USD → CR = 120%
+L23:   * Day 3: ETH drops another 10%, collateral worth 1,080 USD → CR = 108%
+L24: Your position is now below the MCR and can be liquidated. That means you get to keep your 1,000 USDK, but you lose the collateral. A liquidation bot will be monitoring your trove and call the liquidate function. In return, it receives a small compensation for keeping the system healthy.
+L25: ## Monitoring Troves
+L26: 
+L27: Liquidation bots need to track two things: troves and collateral prices. Both can be monitored via on-chain events.
+L28: 
+L29: Whenever a trove changes, a `TroveOperation` event is emitted from the trove manager contract. The bot should maintain a local copy of trove data to quickly determine which ones are liquidatable.
+L30: Each supported collateral has one or more price oracles. These need to be monitored to detect price updates. Common oracles include Chainlink, RedStone, and Pyth. While their ABIs differ, interacting with them is conceptually similar.
+L31: 
+L32: In theory, the bot also needs to track interest rates for each trove because as debt increases with interest, some troves may fall below the MCR. However, in practice, most liquidations are triggered by price drops, so interest rate monitoring is less important.
+L33: ## Liquidations
+L34: 
+L35: Once we've identified one or more troves to liquidate, the bot calls the `batchLiquidateTroves` in the trove manager with the ids of the troves and that's it.
+L36: 
+L37: I mean, that's where the easy part ends. If you want your call to happen before other bots there's a lot more work to do:
+L38: 
+L39: Optimizing gas fees
+L40: Miners are incentivized to process transactions with higher gas fees first, so you can increase the gas fee to make sure your transaction is included before other bots, but you also need to be careful and ensure you still make a profit when paying higher fees.
+L41: 
+L42: Finding faster RPC APIs
+L43: Not all RPCs are alike, and being first to receive an event will make a huge difference in the time it takes for your bot to react. You should try a few. Free ones will likely not be competitive. Also make sure you use the `eth_subscribe` method to list for events, otherwise you may be polling and that will lead to you getting rate-limited or spending a lot of money.
+L44: 
+L45: Avoiding front runners
+L46: Other bots will be monitoring the mempool and seeing if they can mimic your transaction to make a profit instead of you. It's very annoying. When you can, use cite3†Flashbots†www.flashbots.net .
+L47: 
+L48: Fine-tuning performance
+L49: I'm not sure whether language choice matters, but I'm pretty sure software design does. For instance, if your code receives an event for a drop in the price of a collateral, goes through all the troves to see which ones are liquidatable, and then liquidates the ones it finds, you're not optimizing for being the first to react. You should consider liquidating the troves you find immediately.
+L50: I used Node.js to build the bot, which allowed me to try different things very quickly, and I designed the code around cite4†streams†nodejs.org .
+L51: 
+L52: There's a lot more you can do. If you are interested in diving deeper or just want to chat, do reach out on X https://x.com/gabrielgpoca.
+L53: 
+L54: Reply via email
+--------------------------------------------------------------------------------
+Hi! I'm Gabriel (https://gabrielpoca.com/about)
+citeturn491view1 [wordlim: 200] Crawled: 2 months ago; Content type: text/html; Source: click({"ref_id":"turn490view0","id":2}); Redirected to URL: https://gabrielpoca.com/about/; Total lines: 10
+L0: cite0†Gabriel Poça L1: 
+L2: cite1†Image L3: # About
+L4: 
+L5: I'm currently the CTO at Subvisual, where I've been working since 2013. Subvisual is a venture studio, so most of my work involves researching and building products and teams. Some of my highlights were Utrust (now called cite2†xMoney†www.xmoney.com ) and cite3†Sandclock†www.sandclock.org where I was the interim CTO.
+L6: I'm a software developer building products. I've acquired many skills over the years, but my focus at the moment is Elixir and Cloud Infrastructure. I also have a lot of experience with Ruby, Node.js, and even front-end.
+L7: 
+L8: I'm not looking for job offers, but I'm available as a consultant and advisor. Feel free to reach out on Twitter
+L9: I've had (too) many personal projects, from offline-first journals, to midi instrument, a manga reader or colaborative online editor. Recently I've been focusing my energy on Notedown (a note-taking app), Still (a static site generator) and my custom hardware groovebox (more information to come!).
+

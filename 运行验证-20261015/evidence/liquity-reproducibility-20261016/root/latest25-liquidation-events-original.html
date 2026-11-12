@@ -1,0 +1,841 @@
+
+
+<!doctype html>
+<html id="html" lang="en" data-bs-theme="light">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Description" content="The Ethereum BlockChain Explorer, API and Analytics Platform">
+    <meta name="author" content="etherscan.io">
+    <meta name="keywords" content="ethereum, explorer, ether, search, blockchain, crypto, currency">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href='/images/favicon2.ico'>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/assets/vendor/font-awesome/css/all.min.css?v=[REDACTED_HOST]">
+    <link rel="stylesheet" href="/assets/vendor/animate.css/animate.min.css?v=[REDACTED_HOST]">
+    <link rel="stylesheet" href="/assets/css/theme.min.css?v=[REDACTED_HOST]">
+
+    <style>
+        #overlay {
+            color: #666666;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 5000;
+            top: 0;
+            left: 0;
+            float: left;
+            text-align: center;
+        }
+
+         .js-tree-view-btn::before
+         {
+           font: var(--fa-font-light);
+           margin-right: 0.65rem !important;
+           content: '\f146';
+           color: var(--bs-secondary-color);
+         }
+
+         .js-tree-view-btn.collapsed::before
+         {
+           content: '\f0fe';
+         }
+
+         .js-tree-view-container li.js-tree-view-collapse:last-of-type>ul
+         {
+           --bs-border-opacity: 0;
+         }
+
+         @media (max-width: 992px) {
+  .log-detail .text-truncate {
+    white-space: initial;
+  }
+}
+
+.log-detail-bar {
+  top: -2rem; 
+  right: 0.75rem;
+}
+
+@media (min-width: 576px) {
+  .log-detail-spacer {
+    float: right;
+  }
+
+  .log-detail-bar {
+    top: 0.5rem; 
+    right: 1.25rem;
+  }
+}
+
+table tbody tr td:not(:last-child) {
+    white-space: nowrap;
+}
+
+table tbody tr td td {
+  padding-left: 0 !important; 
+  padding-right: 0 !important;
+}
+
+    </style>
+</head>
+<body id="body">
+    <!-- Spinner --><div id="overlay" class="text-center py-10 "><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><div class="small text-muted mt-1">Loading</div></div><!-- End Spinner -->
+
+    <input type="hidden" name="hdnAgeText" id="hdnAgeText" value="Age" />
+    <input type="hidden" name="hdnDateTimeText" id="hdnDateTimeText" value="Date Time (UTC)" />
+    <input type="hidden" name="hdnAgeTitle" id="hdnAgeTitle" value="Click to show Age Format" />
+    <input type="hidden" name="hdnDateTimeTitle" id="hdnDateTimeTitle" value="Click to show Datetime Format" />
+
+    <!-- Data Info -->
+    <div id="divDataInfo" class="card-body">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <p class="mb-2">
+                <i id="spinwheel" class="fa fa-spin fa-spinner fa-1x fa-pulse me-1" style="display: none;"></i>
+                
+                <span class="d-block small text-muted mt-1">
+                    
+                </span>
+            </p>
+
+            <!-- Filter -->
+            <div class="d-flex gap-2">
+                <div class="dropdown order-md-2">
+                    <button class="btn btn-sm btn-secondary" type="button" id="searchFilterInvoker" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="far fa-search fa-fw"></i>
+                    </button>
+
+                    <div id="searchFilter" class="dropdown-menu" aria-labelledby="searchFilterInvoker" style="min-width: 10rem;">
+                        <div class="input-group" style="min-width: 20rem;">
+                            <form method="post" action="./address-events?m=light&amp;a=0x7bcb64B2c9206a5B699eD43363f6F98D4776Cf5A&amp;v=0x7bcb64B2c9206a5B699eD43363f6F98D4776Cf5A&amp;q=0x7243af9a1cff94d3429b2ee00b78c1c10589259f20dc167cb67704f38f9e824e&amp;sid=77e3fd5d8fe58f1e0120527497f1ed23" id="ctl00" class="js-focus-state input-group input-group-sm w-100">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="JPxFwEQe0I6pHZr2vjMAsObzigXcrOvSWatkKSuvHXFzlpl4uy5vIx04eaYCHmmV3Y5qSaF+evAaW2D2H91uGB4cH9B/I0NBVx4uLawxSp8=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F22D462E" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="wUq3b2+Po1PuusIFCyGYluuBy3yXvLyKCy98qqwXfH7AyicWgzegtm2qyqKMF92SkZGDU5WOpQ5KkrNbyDgEopz2z0zErTc/TSG4AgcsE4btErmCMfb38pXDyiV9Krydhtx9s7psFLygXstl5fS8mA==" />
+</div>
+                                <input name="txtSearch" id="txtSearch" class="form-control py-2" type="search" placeholder="Filtered By BlockNo Or Topic0" />
+                                <input type="submit" name="btnFind" value="Find" id="btnFind" class="btn btn-primary" type="button" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <!-- End Filter -->
+
+        </div>
+    </div>
+    <!-- End Data Info -->
+
+    <!-- Table -->
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead id="theadTable" class="">
+                <tr>
+                    <th scope="col" witdh="1">Transaction Hash</th>
+                    <th scope="col" witdh="1">Block</th>
+                    <th scope="col"><a href="javascript:;" onclick="switchAgeToDateTimeERC721Token(this)" id="lnkErc721AgeDateTime"></a></th>
+                    <th scope="col" width="1">Method</th>
+                    <th scope="col"><i class='fa fa-indent me-1'></i>Logs</th>
+                </tr>
+            </thead>
+            <tbody class="">
+                <tr><td colspan='3'><div class='alert alert-warning mb-0' role='alert'>Please refresh parent page... (bad robot ? ;-))</div></td><tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End Table -->
+
+    <script src="/assets/vendor/xss.min.js"></script>
+    <script src="/assets/vendor/jquery/dist/jquery.min.js?v=[REDACTED_HOST]"></script>
+    <script src="/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js?v=[REDACTED_HOST]"></script>
+    <script src="/assets/vendor/popper.js/dist/umd/popper.min.js?v=[REDACTED_HOST]"></script>
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js?v=[REDACTED_HOST]"></script>
+    <script src="/assets/vendor/clipboard/dist/clipboard.min.js?v=[REDACTED_HOST]"></script>
+    <script src="/assets/js/app.min.js?v=[REDACTED_HOST]"></script>
+    <script src="/assets/js/custom/web3.min.js?v=[REDACTED_HOST]"></script> 
+    <script src="/assets/js/custom/ethereum-abi-encoder.js?v=[REDACTED_HOST]"></script> 
+    <!-- JS Init. -->
+    <script>
+        (function () {
+            // INITIALIZATION OF CLIPBOARD
+            HSCore.components.HSClipboard.init('.js-clipboard');
+        })();
+    </script>
+
+    <!-- JS Front -->
+    
+    <script src="/assets/js/custom/bignumber.min.js?v=[REDACTED_HOST]"></script>
+    <script type="text/javascript" src="/assets/js/custom/commonjs.js?v=[REDACTED_HOST]"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4b3d0f02f4aca53',t:'MTc5MjExOTY1Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>
+    $(window).on('load', function () {
+        $('#overlay').fadeOut();
+    });
+
+    $(document).on('ready', function () {
+        const clipboard = new ClipboardJS('.js-clipboard');
+        clipboard.on('success', function (e) {
+            $('.tooltip-inner').html('Copied!');
+            $(e.trigger).tooltip('update');
+            //e.clearSelection();
+        });
+
+        onERC721DocReady();
+
+        // initialization of unfold component
+        //$.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+        //    afterOpen: function () {
+        //        $(this).find('input[type="search"]').focus();
+        //    }
+        //});
+    });
+
+    // Close tooltip when click outside of tooltip content
+    $(document).on('click', function (e) {
+        $('[data-bs-toggle="popover"]').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+    });
+
+    if ("ontouchstart" in document.documentElement) {
+        $('html').addClass('touch');
+    };
+
+    function funcOnclick(newType, elemid) {
+        if (newType == 'Text') {
+            document.getElementById('chunk_' + elemid).innerHTML = $.sanitize(hex2asc(document.getElementById('chunk_ori_' + elemid).innerHTML));
+        } else if (newType == 'Num') {
+            document.getElementById('chunk_' + elemid).innerHTML = hex2dec(document.getElementById('chunk_ori_' + elemid).innerHTML);
+        } else if (newType == 'Addr') {
+            document.getElementById('chunk_' + elemid).innerHTML = hex2addr(document.getElementById('chunk_ori_' + elemid).innerHTML);
+        } else if (newType == 'Hex') {
+            document.getElementById('chunk_' + elemid).innerHTML = $.sanitize(document.getElementById('chunk_ori_' + elemid).innerHTML);
+        }
+        document.getElementById('convert_button_' + elemid).innerHTML = newType;
+    }
+    function asc2hex(pStr) {
+        tempstr = '';
+        for (a = 0; a < pStr.length; a = a + 1) {
+            tempstr = tempstr + pStr.charCodeAt(a).toString(16);
+        }
+        return tempstr;
+    }
+    function hex2asc(pStr) {
+        tempstr = '';
+        for (b = 0; b < pStr.length; b = b + 2) {
+            tempstr = tempstr + String.fromCharCode(parseInt(pStr.substr(b, 2), 16));
+        }
+        return tempstr;
+    }
+    function hex2dec(pStr) {
+        tempstr = new BigNumber(pStr, 16)
+        return tempstr.toString();
+    }
+    function hex2addr(pStr) {
+        tempstr = pStr.substr(pStr.length - 40)
+        return "<a href='/address/0x" + tempstr + "' target='_parent'>" + "0x" + tempstr + "</a>";
+    }
+    function hexpad(instr) {
+        if (instr.length % 2) return '0' + instr;
+        else return instr;
+    }
+    function expandclose(i) {
+        var abc = $(".servicedrop" + i).data("flag_" + i);
+        if (typeof abc === "undefined") {
+            $(".servicedrop" + i).data("flag_" + i, 1);
+            $(".servicedrop" + i).addClass('fa-chevron-down').removeClass('fa-chevron-right');
+        } else if (abc == 1) {
+            $(".servicedrop" + i).data("flag_" + i, 2);
+            $(".servicedrop" + i).addClass('fa-chevron-right').removeClass('fa-chevron-down');
+        } else {
+            $(".servicedrop" + i).data("flag_" + i, 1);
+            $(".servicedrop" + i).addClass('fa-chevron-down').removeClass('fa-chevron-right');
+        }
+    }
+
+    function convertEventData(type, id) {
+
+        if (type === 'hex') {
+            $("#event_dec_data_" + id).hide();
+            $("#event_raw_data_" + id).show();
+            $('#event_achoc_' + id).hide();
+
+        } else if (type === 'dec') {
+            $("#event_raw_data_" + id).hide();
+            $("#event_dec_data_" + id).show();
+            $('#event_achoc_' + id).hide();
+        }
+
+    }
+
+    function normalizeEventInputsForDecoding(inputs) {
+        return inputs.map(input => {
+            const normalizedInput = { ...input };
+            if (normalizedInput.type === "function" || normalizedInput.type.startsWith("function[")) {
+                normalizedInput.type = "bytes24" + normalizedInput.type.substring("function".length);
+            }
+            if (Array.isArray(normalizedInput.components)) {
+                normalizedInput.components = normalizeEventInputsForDecoding(normalizedInput.components);
+            }
+            return normalizedInput;
+        });
+    }
+
+    function decodeevent(eventcount) {
+        var input_data = $("#event_raw_data_" + eventcount).text();
+        var abi = "";
+        var abilist = $("#abi_hiddenField").text();
+        var topic0 = $("#topic0_hiddenField_" + eventcount).text();
+        var topic1 = $("#topic1_hiddenField_" + eventcount).text();
+        var topic2 = $("#topic2_hiddenField_" + eventcount).text();
+        var topic3 = $("#topic3_hiddenField_" + eventcount).text();
+        var address = $("#address_hiddenField_" + eventcount).text();
+        var eventName = $("#eventName_hiddenField_" + eventcount).text();
+        var paramFlag = $("#paramFlag_hiddenField_" + eventcount).text();
+
+        var strhtml = "";
+
+        const topics = [topic0, topic1, topic2, topic3].filter(topic => topic.length > 0);
+
+        if (topics.length > 0) {
+            try {
+                abilist = JSON.parse(abilist);
+                abi = JSON.parse(abilist[topic0]);
+            } catch {
+                abi = ""
+                strhtml = "<li class='d-lg-flex' style='padding-bottom:0.5em'><span class='text-muted rounded me-1 text-truncate'>Invalid abi</span></li>";
+            }
+
+            if (abi != "") {
+                var web3 = new Web3;
+
+                const eventSignature = web3.eth.abi.encodeEventSignature(abi);
+                if (topic0 !== eventSignature) {
+                    strhtml = "<li class='d-lg-flex' style='padding-bottom:0.5em'><span class='text-muted rounded me-1 text-truncate'>Topic0 does not match the signature of event</span></li>";
+                } else {
+                    try {
+                        const decodedLog = web3.eth.abi.decodeLog(
+                            normalizeEventInputsForDecoding(abi.inputs),
+                            input_data,
+                            topics.slice(1)
+                        );
+
+                        //form div
+                        strhtml = decodeeventinputweb3(decodedLog, abi, paramFlag)
+                    } catch {
+                        strhtml = "<li class='d-lg-flex' style='padding-bottom:0.5em'><span class='text-muted rounded me-1 text-truncate'>Fail Decode Event Log</span></li>";
+                    }
+                }
+            }
+        } else {
+            strhtml = "<li class='d-lg-flex' style='padding-bottom:0.5em'><span class='text-muted rounded me-1 text-truncate'>Empty topic0 signature of event</span></li>";
+        }
+
+        $('#event_achoc_' + eventcount).empty();
+        $('#event_achoc_' + eventcount).prepend(strhtml);
+
+        $('#event_achoc_' + eventcount).show();
+        $('#event_dec_data_' + eventcount).hide();
+        $('#event_raw_data_' + eventcount).hide();
+
+        //re init tooltip
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => bootstrap.Tooltip.getOrCreateInstance(tooltipTriggerEl))
+    }
+
+    (function ($) {
+        $.sanitize = function (val) {
+            var temp = document.createElement('div');
+            temp.textContent = val;
+            return temp.innerHTML;
+
+            //var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '').
+            //    replace(/<[\/\!]*?[^<>]*?>/gi, '').
+            //    replace(/<style[^>]*?>.*?<\/style>/gi, '').
+            //    replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '');
+            //return output;
+        };
+    })(jQuery);
+
+    function showLoader() {
+        window.parent.document.getElementById('overlayMain').style.display = 'block';
+    }
+
+    window.parent.events_tracker = true;
+    var obj = window.parent.document.getElementById('eventsIframe');
+    parent.resizeIframe(obj, 0);
+    window.parent.document.getElementById('overlayMain').style.display = 'none';
+</script>
+<!-- JS Init. -->
+<script>
+    (function () {        
+        // INPUT FOCUS
+        // =======================================================
+        document.getElementById("searchFilterInvoker").addEventListener("click", () => {
+            if (!((('ontouchstart' in window)
+                || (navigator.maxTouchPoints > 0)
+                || (navigator.msMaxTouchPoints > 0))
+                && window.innerWidth <= 991)) {
+                document.getElementById("txtSearch").focus();
+            }
+        });
+    })()
+
+    function decodeeventinputweb3(decodedLog, abi, paramFlag) {
+        var strhtml = "";
+        var inputCounter = 1;
+        var strhtml = "";
+        abi.inputs.forEach(function (input) {
+            var subInputCounter = 1;
+            var paramName = input.name;
+            var displayParamName = inputCounter.toString() + ". " + paramName
+            var paramType = input.type;
+
+            var paramValue = decodedLog[paramName];
+
+            if (Array.isArray(paramValue)) {
+                if (paramType.includes("tuple[][]")) {
+                    var subParamValue = 0;
+                    strhtml += "<ul class='js-tree-view-container list-unstyled' style=''>"
+                    paramValue.forEach(function (param) {
+                        subInputCounter = 1;
+                        var components = input.components;
+                        strhtml += "<li class='d-lg-flex'>"
+                        const uid = Date.now().toString(36) + Math.random().toString(36).substring(2);
+                        strhtml += "<a href='javascript: ; ' class='js-tree-view-btn link-dark' data-bs-toggle='collapse' data-bs-target='#" + uid + "' aria-expanded='true'></a>"
+                        strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displayParamName) + " (" + filterXSS(paramType) + "): " + "</span>"
+                        strhtml += "</li>"
+                        strhtml += "<ul id='" + uid + "' class='js-tree-view-collapse collapse show border-start border-secondary ps-4 ms-1.5' style='list-style-type: none;'>"
+                        components.forEach(function (component) {
+                            var displaySubCounter = inputCounter.toString() + "." + subInputCounter.toString();
+                            var componentName = paramFlag === "True" ? component.name : "";
+                            var displaySubName = inputCounter.toString() + "." + subInputCounter.toString() + ". " + componentName
+                            var componentType = component.type
+                            //here check is array
+                            if (Array.isArray(param[component.name])) {
+                                strhtml += decodeArrayEventInput(param[0][component.name], component, displaySubCounter, 0, paramFlag)
+                            } else {
+                                strhtml += "<li class='d-lg-flex'>"
+                                strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubName) + " (" + filterXSS(componentType) + "): " + "</span>";
+                                if (componentType.includes("address")) {
+                                    strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'><a href='/address/" + filterXSS(param[0][component.name]) + "' target='_parent'>" + filterXSS(paramValue[0][component.name]) + "</a></span>"
+                                }
+                                else {
+                                    var strParamValue = param[0][component.name];
+                                    if (componentType.includes("bool") && strParamValue == "") {
+                                        strParamValue = "false";
+                                    }
+                                    strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'>" + filterXSS(strParamValue) + "</span>"
+                                }
+                                strhtml += "</li>"
+                            }
+
+                            subInputCounter += 1;
+                        });
+                        strhtml += "</ul>"
+
+                        subParamValue += 1;
+                    });
+                    strhtml += "</ul>"
+                }
+                else if (paramType.includes("tuple[]")) {
+                    var subParamValue = 0;
+                    strhtml += "<ul class='js-tree-view-container list-unstyled'  style=''>"
+                    paramValue.forEach(function (param) {
+                        subInputCounter = 1;
+                        var components = input.components;
+                        strhtml += "<li class='d-lg-flex'>"
+                        const uid = Date.now().toString(36) + Math.random().toString(36).substring(2);
+                        strhtml += "<a href='javascript: ; ' class='js-tree-view-btn link-dark' data-bs-toggle='collapse' data-bs-target='#" + uid + "' aria-expanded='true'></a>"
+                        strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displayParamName) + " (" + filterXSS(paramType) + "): " + "</span>"
+                        strhtml += "</li>"
+                        strhtml += "<ul id='" + uid + "' class='js-tree-view-collapse collapse show border-start border-secondary ps-4 ms-1.5' style='list-style-type: none;'>"
+                        components.forEach(function (component) {
+                            var displaySubCounter = inputCounter.toString() + "." + subInputCounter.toString();
+                            var componentName = paramFlag === "True" ? component.name : "";
+                            var displaySubName = inputCounter.toString() + "." + subInputCounter.toString() + ". " + componentName;
+                            var componentType = component.type
+
+                            //here check is array
+                            if (Array.isArray(paramValue[component.name])) {
+                                strhtml += decodeArrayEventInput(paramValue[subParamValue][component.name], component, displaySubCounter, 0, paramFlag)
+                            } else {
+                                strhtml += "<li class='d-lg-flex'>"
+                                strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(componentName) + " (" + filterXSS(componentType) + "): " + "</span>";
+                                if (componentType.includes("address")) {
+                                    strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'><a href='/address/" + filterXSS(paramValue[subParamValue][component.name]) + "' target='_parent'>" + filterXSS(paramValue[subParamValue][component.name]) + "</a></span>"
+                                }
+                                else {
+                                    var strParamValue = paramValue[subParamValue][component.name];
+                                    if (componentType.includes("bool") && strParamValue == "") {
+                                        strParamValue = "false";
+                                    }
+                                    strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'>" + filterXSS(strParamValue) + "</span>"
+                                }
+                                strhtml += "</li>"
+                            }
+
+                            subInputCounter += 1;
+                        });
+                        strhtml += "</ul>"
+                        subParamValue += 1;
+                    });
+                    strhtml += "</ul>"
+                }
+                else if (paramType.includes("tuple")) {
+                    var components = input.components;
+                    strhtml += "<ul class='js-tree-view-container list-unstyled'  style=''>"
+                    strhtml += "<li class='d-lg-flex'>"
+                    const uid = Date.now().toString(36) + Math.random().toString(36).substring(2);
+                    strhtml += "<a href='javascript: ; ' class='js-tree-view-btn link-dark' data-bs-toggle='collapse' data-bs-target='#" + uid + "' aria-expanded='true'></a>"
+                    strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displayParamName) + " (" + filterXSS(paramType) + "): " + "</span>"
+                    strhtml += "</li>"
+                    strhtml += "<ul id='" + uid + "' class='js-tree-view-collapse collapse show border-start border-secondary ps-4 ms-1.5' style='list-style-type: none;'>"
+                    subInputCounter = 1;
+                    components.forEach(function (component) {
+                        var displaySubCounter = inputCounter.toString() + "." + subInputCounter.toString()
+                        componentName = paramFlag === "True" ? component.name : "";
+                        var displaySubName = inputCounter.toString() + "." + subInputCounter.toString() + ". " + componentName
+                        var componentType = component.type
+
+                        if (Array.isArray(paramValue[component.name])) {
+                            strhtml += decodeArrayEventInput(paramValue[component.name], component, displaySubCounter, 0, paramFlag)
+                        }
+                        else {
+                            strhtml += "<li class='d-lg-flex'>"
+                            strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubName) + " (" + filterXSS(componentType) + "): " + "</span>";
+                            if (componentType.includes("address")) {
+                                strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'><a href='/address/" + filterXSS(paramValue[component.name]) + "' target='_parent'>" + filterXSS(paramValue[component.name]) + "</a></span>"
+                            }
+                            else {
+                                var strParamValue = paramValue[component.name];
+                                if (componentType.includes("bool") && strParamValue == "") {
+                                    strParamValue = "false";
+                                }
+                                strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'>" + filterXSS(strParamValue) + "</span>"
+                            }
+                            strhtml += "</li>"
+                        }
+
+                        subInputCounter += 1;
+                    });
+                    strhtml += "</ul>"
+                    strhtml += "</ul>"
+                }
+                else {
+                    strhtml += "<ul class='list-unstyled'>"
+                    strhtml += "<li class='d-lg-flex'>"
+                    strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displayParamName) + " (" + filterXSS(paramType) + "): " + "</span>"
+                    //strhtml += "</li>"
+                    strhtml += "<ul style='list-style-type: none; padding: 0px;'>"
+                    paramValue.forEach(function (param) {
+                        strhtml += "<li class='d-lg-flex'>"
+                        if (paramType.includes("address")) {
+                            strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(paramName) + " (" + filterXSS(paramType) + ")'><a href='/address/" + filterXSS(param) + "' target='_parent'>" + filterXSS(param) + "</a></span>"
+                        }
+                        else {
+                            var strParamValue = param;
+                            if (paramType.includes("bool") && strParamValue == "") {
+                                strParamValue = "false";
+                            }
+                            strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(paramName) + " (" + filterXSS(paramType) + ")'>" + filterXSS(strParamValue) + "</span>"
+                        }
+                        strhtml += "</li>"
+                    });
+                    strhtml += "</ul>"
+                    strhtml += "</li>"
+                    strhtml += "</ul>"
+                }
+            }
+            else {
+                if (paramType.includes("tuple")) {
+                    var components = input.components;
+                    strhtml += "<ul class='js-tree-view-container list-unstyled' style=''>"
+                    strhtml += "<li class='d-lg-flex'>"
+                    strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displayParamName) + " (" + filterXSS(paramType) + "): " + "</span>"
+                    strhtml += "</li>"
+                    strhtml += "<ul>"
+                    subInputCounter = 1;
+                    components.forEach(function (component) {
+                        var displaySubCounter = inputCounter.toString() + "." + subInputCounter.toString() + "."
+                        componentName = paramFlag === "True" ? component.name : "";
+                        var displaySubName = inputCounter.toString() + "." + subInputCounter.toString() + ". " + componentName
+                        var componentType = component.type
+
+                        if (Array.isArray(paramValue[component.name])) {
+                            strhtml += decodeArrayEventInput(paramValue[component.name], component, displaySubCounter, 0, paramFlag)
+                        }
+                        else {
+                            strhtml += "<li class='d-lg-flex'>"
+                            strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubName) + " (" + filterXSS(componentType) + "): " + "</span>";
+                            if (componentType.includes("address")) {
+                                strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'><a href='/address/" + filterXSS(paramValue[component.name]) + "' target='_parent'>" + filterXSS(paramValue[component.name]) + "</a></span>"
+                            }
+                            else {
+                                var strParamValue = paramValue[component.name];
+                                if (componentType.includes("bool") && strParamValue == "") {
+                                    strParamValue = "false";
+                                }
+                                strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'>" + filterXSS(strParamValue) + "</span>"
+                            }
+                            strhtml += "</li>"
+                        }
+                        subInputCounter += 1;
+                    });
+                    strhtml += "</ul>"
+                    strhtml += "</ul>"
+                }
+                else {
+                    strhtml += "<ul class='list-unstyled'>"
+                    strhtml += "<li class='d-lg-flex'>"
+                    strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displayParamName) + " (" + filterXSS(paramType) + "): " + "</span>"
+                    if (paramType.includes("address")) {
+                        strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(paramName) + " (" + filterXSS(paramType) + ")'><a href='/address/" + filterXSS(paramValue) + "' target='_parent'>" + filterXSS(paramValue) + "</a></span>"
+                    }
+                    else {
+                        if (paramType.includes("bool") && paramValue == "") {
+                            paramValue = "false";
+                        }
+                        strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(paramName) + " (" + filterXSS(paramType) + ")'>" + filterXSS(paramValue) + "</span>"
+                    }
+                    strhtml += "</li>"
+                    strhtml += "</ul>"
+                }
+            }
+
+            //console.log(paramValue);
+
+            inputCounter += 1;
+        });
+        return strhtml
+    }
+
+    function decodeArrayEventInput(paramValue, components, displaySubCounter, fromMain, paramFlag) {
+        var strhtml = "";
+        if (components.type.includes("tuple[][]")) {
+            var subParamValue = 0;
+            var subParamCounter = 1;
+            paramValue.forEach(function (param, mainIndex) {
+                mainIndex += 1;
+                var subInputCounter = 1;
+                var displaySubParamCounter = displaySubCounter + "." + mainIndex.toString();
+                var componentsName = paramFlag === "True" ? components.name : "";
+                const uid = Date.now().toString(36) + Math.random().toString(36).substring(2);
+                strhtml += "<li class='d-lg-flex'>"
+                strhtml += "<a href='javascript: ; ' class='js-tree-view-btn link-dark' data-bs-toggle='collapse' data-bs-target='#" + uid + "' aria-expanded='true'></a>"
+                strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubParamCounter) + " " + filterXSS(componentsName) + " (" + filterXSS(components.type) + "): " + "</span>"
+                strhtml += "</li>"
+                strhtml += "<ul id='" + uid + "' class='js-tree-view-collapse collapse show border-start border-secondary ps-4 ms-1.5' style='list-style-type: none;'>"
+                components.components.forEach(function (component, index) {
+                    index += 1;
+                    var componentName = paramFlag === "True" ? component.name : "";
+                    var displaySubName = displaySubParamCounter + "." + index.toString() + ". " + componentName //add num required
+                    var displaySubChaildCounter = displaySubParamCounter + "." + index.toString();
+                    var componentType = component.type
+                    if (Array.isArray(param[0][component.name])) {
+                        strhtml += decodeArrayEventInput(param[0][component.name], component, displaySubChaildCounter, 0, paramFlag)
+                    }
+                    else {
+                        strhtml += "<li class='d-lg-flex'>"
+                        strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubName) + " (" + filterXSS(componentType) + "): " + "</span>";
+                        strhtml += "<ul style='list-style-type: none; padding: 0px;'>"
+                        strhtml += "<li class='d-lg-flex'>"
+                        if (componentType.includes("address")) {
+                            strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'><a href='/address/" + filterXSS(param[0][component.name]) + "' target='_parent'>" + filterXSS(paramValue[0][component.name]) + "</a></span>"
+                        }
+                        else {
+                            var strParamValue = param[0][component.name];
+                            if (componentType.includes("bool") && strParamValue == "") {
+                                strParamValue = "false";
+                            }
+                            strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'>" + filterXSS(strParamValue) + "</span>"
+                        }
+                        strhtml += "</li>"
+                        strhtml += "</ul>"
+                        strhtml += "</li>"
+                    }
+                    subInputCounter += 1;
+                });
+                strhtml += "</ul>"
+                subParamValue += 1;
+                subParamCounter += 1;
+            });
+        }
+        else if (components.type.includes("tuple[]")) {
+            var subParamValue = 0;
+            var subParamCounter = 1;
+            paramValue.forEach(function (param, mainIndex) {
+                mainIndex += 1;
+                subInputCounter = 1;
+                var displaySubParamCounter = displaySubCounter + "." + mainIndex.toString();
+                var componentsName = paramFlag === "True" ? components.name : "";
+                const uid = Date.now().toString(36) + Math.random().toString(36).substring(2);
+                strhtml += "<li class='d-lg-flex'>"
+                strhtml += "<a href='javascript: ; ' class='js-tree-view-btn link-dark' data-bs-toggle='collapse' data-bs-target='#" + uid + "' aria-expanded='true'></a>"
+                strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubParamCounter) + " " + filterXSS(componentsName) + " (" + filterXSS(components.type) + "): " + "</span>"
+                strhtml += "</li>"
+                strhtml += "<ul id='" + uid + "' class='js-tree-view-collapse collapse show border-start border-secondary ps-4 ms-1.5' style='list-style-type: none;'>"
+                components.components.forEach(function (component, index) {
+                    index += 1;
+                    var componentName = paramFlag === "True" ? component.name : "";
+                    var displaySubName = displaySubParamCounter + "." + index.toString() + ". " + componentName; //add num required
+                    var displaySubChaildCounter = displaySubParamCounter + "." + index.toString();
+                    var componentType = component.type
+                    if (Array.isArray(paramValue[subParamValue][component.name])) {
+                        strhtml += decodeArrayEventInput(paramValue[subParamValue][component.name], component, displaySubChaildCounter, 0, paramFlag)
+                    }
+                    else {
+                        strhtml += "<li class='d-lg-flex'>"
+                        strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubName) + " (" + filterXSS(componentType) + "): " + "</span>";
+                        strhtml += "<ul style='list-style-type: none; padding: 0px;'>"
+                        strhtml += "<li class='d-lg-flex'>"
+                        if (componentType.includes("address")) {
+                            strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'><a href='/address/" + filterXSS(paramValue[subParamValue][component.name]) + "' target='_parent'>" + filterXSS(paramValue[subParamValue][component.name]) + "</a></span>"
+                        }
+                        else {
+                            var strParamValue = paramValue[subParamValue][component.name];
+                            if (componentType.includes("bool") && strParamValue == "") {
+                                strParamValue = "false";
+                            }
+                            strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(displaySubName) + " (" + filterXSS(componentType) + ")'>" + filterXSS(strParamValue) + "</span>"
+                        }
+                        strhtml += "</li>"
+                        strhtml += "</ul>"
+                        strhtml += "</li>"
+
+                        subInputCounter += 1;
+                    }
+                });
+                strhtml += "</ul>"
+                subParamValue += 1;
+                subParamCounter += 1;
+            });
+        }
+        else if (components.type.includes("tuple")) {
+            const uid = Date.now().toString(36) + Math.random().toString(36).substring(2);
+            if (fromMain == 0) {
+                var componentsName = paramFlag === "True" ? components.name : "";
+                strhtml += "<li class='d-lg-flex'>"
+                strhtml += "<a href='javascript: ; ' class='js-tree-view-btn link-dark' data-bs-toggle='collapse' data-bs-target='#" + uid + "' aria-expanded='true'></a>"
+                strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubCounter) + " " + filterXSS(componentsName) + " (" + filterXSS(components.type) + "): " + "</span>"
+                strhtml += "</li>"
+            }
+            strhtml += "<ul id='" + uid + "' class='js-tree-view-collapse collapse show border-start border-secondary ps-4 ms-1.5' style='list-style-type: none;'>"
+            subInputCounter = 1;
+            components.components.forEach(function (component, index) {
+                index += 1;
+                var componentName = paramFlag === "True" ? component.name : "";
+                var displaySubName = displaySubCounter + "." + index.toString() + ". " + componentName
+                var displaySubChaildCounter = displaySubCounter + "." + index.toString()
+                var componentType = component.type
+                if (Array.isArray(paramValue[component.name])) {
+                    strhtml += decodeArrayEventInput(paramValue[component.name], component, displaySubChaildCounter, 0, paramFlag)
+                }
+                else {
+                    strhtml += "<li class='d-lg-flex'>"
+                    strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubName) + " (" + filterXSS(componentType) + "): " + "</span>";
+                    strhtml += "<ul style='list-style-type: none; padding:0px;'>"
+                    strhtml += "<li class='d-lg-flex'>"
+                    if (componentType.includes("address")) {
+                        strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'><a href='/address/" + filterXSS(paramValue[component.name]) + "' target='_parent'>" + filterXSS(paramValue[component.name]) + "</a></span>"
+                    }
+                    else {
+                        var strParamValue = paramValue[component.name];
+                        if (componentType.includes("bool") && strParamValue == "") {
+                            strParamValue = "false";
+                        }
+                        strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'>" + filterXSS(strParamValue) + "</span>"
+                    }
+                    strhtml += "</li>"
+                    strhtml += "</ul>"
+                    strhtml += "</li>"
+                }
+                subInputCounter += 1;
+            });
+            strhtml += "</ul>"
+        }
+        else {
+            if (fromMain == 0) {
+                var componentsName = paramFlag === "True" ? components.name : "";
+                strhtml += "<li class='d-lg-flex'>"
+                strhtml += "<span class='text-muted me-1 text-truncate flex-shrink-0'>" + filterXSS(displaySubCounter) + " " + filterXSS(componentsName) + " (" + filterXSS(components.type) + "): " + "</span>"
+            }
+            strhtml += "<ul style='list-style-type: none; padding: 0px;'>"
+            paramValue.forEach(function (param) {
+                if (Array.isArray(paramValue[0])) {
+                    strhtml += "<li class='d-lg-flex'>"
+                    strhtml += decodeArrayEventInput(paramValue[0], components, "", 0, paramFlag) //need change
+                    strhtml += "</li>"
+                }
+                else {
+
+                    strhtml += "<li class='d-lg-flex'>"
+                    if (components.type.includes("address")) {
+                        strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'><a href='/address/" + filterXSS(param) + "' target='_parent'>" + filterXSS(param) + "</a></span>"
+                    }
+                    else {
+                        var strParamValue = param;
+                        if (components.type.includes("bool") && strParamValue == "") {
+                            strParamValue = "false";
+                        }
+                        strhtml += "<span class='font-monospace text-break d-block d-sm-inline-block' data-bs-toggle='tooltip' data-bs-trigger='hover' data-bs-placement='top' title='" + filterXSS(componentName) + " (" + filterXSS(componentType) + ")'>" + filterXSS(strParamValue) + "</span>"
+                    }
+                    strhtml += "</li>"
+
+                }
+
+            });
+            strhtml += "</ul>"
+
+            if (fromMain == 0) {
+                strhtml += "</li>"
+            }
+
+        }
+        return strhtml;
+    }
+
+    function funcDecodeOnclick1(type, elemid, value, isDecoded) {
+
+
+
+        if (isDecoded)
+            document.getElementById('chunk_decode_' + elemid).innerHTML = document.getElementById('chunk_decodeori_' + elemid).innerHTML;
+        else
+            document.getElementById('chunk_decode_' + elemid).innerHTML = value;
+
+        //if (type == 'Hex') {
+
+        //} else if (type == 'Dec') {
+
+        //    var _contractAbi = JSON.parse(document.getElementById('funcabi_' + eventid).innerHTML.split('(')[0].replace(/ /g, ''));
+        //    var contractAbi = {
+        //        'abi': _contractAbi
+        //    };
+        //    var inputs = document.getElementById('eventlogvalues_' + eventid).innerHTML.replace(/ /g, '');
+        //    var name = document.getElementById('funcname_' + eventid).innerHTML.split('(')[0].replace(/ /g, '');
+        //    var result = new Canoe.decodeConstructorArgs(name, contractAbi.abi, inputs);
+        //    var id = parseInt(topicid);
+        //    var _result = result[id];
+
+        //    document.getElementById('chunk_decode_' + elemid).innerHTML = (_result.type === "address") ? hex2addr(_result.data) : _result.data;
+        //}
+
+        document.getElementById('convert_decode_btn_' + elemid).innerHTML = type;
+    }
+</script>
+
+</html>

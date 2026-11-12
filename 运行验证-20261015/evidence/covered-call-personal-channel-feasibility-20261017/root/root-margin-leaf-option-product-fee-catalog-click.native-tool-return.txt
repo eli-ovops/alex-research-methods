@@ -1,0 +1,513 @@
+问题解答详情 | 帮助中心 | uSMART 盈立证券 (https://hk.usmartglobal.com/zh-cn/help-centre/213/detail/12175)
+citeturn682view0 [wordlim: 200] Crawled: yesterday; Content type: text/html; Source: click({"ref_id":"turn681view2","id":41}); Total lines: 443
+L0: cite0†iframe†www.googletagmanager.com L1: 
+L2: 您正在浏览的是香港网站，香港证监会BJA907号，投资有风险，交易需谨慎
+L3: 
+L4: 交易
+L5: 
+L6: cite1†美股 L7: 
+L8: cite2†港股 L9: 
+L10: cite3†ETF L11: 
+L12: cite4†美股期权 L13: 
+L14: cite5†盘前美股期权交易 L15: 
+L16: cite6†基金 L17: 
+L18: cite7†美股碎股 L19: 
+L20: cite8†美债 L21: 
+L22: cite9†A股 L23: 
+L24: cite10†融资服务 L25: 
+L26: cite11†IPO L27: 
+L28: cite12†期货 L29: 
+L30: cite13†结构化票据†yxzq.udesk.cn L31: 
+L32: 市场
+L33: 
+L34: cite14†股票行情 L35: 
+L36: cite15†机构 L37: 
+L38: 费用
+L39: 
+L40: cite16†交易佣金 L41: 
+L42: cite17†串流报价 L43: 
+L44: cite18†优惠活动 L45: 
+L46: cite19†帮助中心 L47: 
+L48: 盈广场
+L49: 
+L50: cite20†投资学堂 L51: 
+L52: cite21†市场资讯 L53: 
+L54: cite22†讲座活动 L55: 
+L56: 下载
+L57: 
+L58: cite23†下载 uSMART APP L59: 
+L60: cite24†下载期货交易终端 L61: 
+L62: 关于
+L63: 
+L64: cite25†关于我们 L65: 
+L66: cite26†重要提示 L67: 
+L68: cite27†加入我们 L69: 
+L70: 香港官网
+L71: 
+L72: 香港官网
+L73: 
+L74: cite28†新加坡官网†sg.usmartglobal.com cite29†美国官网†www.usmartcapital.com cite30†集团官网†www.usmartgroup.com L75: 
+L76: 简
+L77: cite19†繁體中文 cite31†简体中文 cite32†English L78: 
+L79: cite33†注册/登录 L80: 
+L81: 简体中文
+L82: 
+L83: cite19†繁體中文 cite31†简体中文 cite32†English L84: 
+L85: 香港官网
+L86: 
+L87: 香港官网
+L88: 
+L89: cite28†新加坡官网†sg.usmartglobal.com cite29†美国官网†www.usmartcapital.com cite30†集团官网†www.usmartgroup.com L90: 
+L91: 交易
+L92: 
+L93: cite1†美股 L94: 
+L95: cite2†港股 L96: 
+L97: cite3†ETF L98: 
+L99: cite4†美股期权 L100: 
+L101: cite5†盘前美股期权交易 L102: 
+L103: cite6†基金 L104: 
+L105: cite7†美股碎股 L106: 
+L107: cite8†美债 L108: 
+L109: cite9†A股 L110: 
+L111: cite10†融资服务 L112: 
+L113: cite11†IPO L114: 
+L115: cite12†期货 L116: 
+L117: cite13†结构化票据†yxzq.udesk.cn L118: 
+L119: 市场
+L120: 
+L121: cite14†股票行情 L122: 
+L123: cite15†机构 L124: 
+L125: 费用
+L126: 
+L127: cite16†交易佣金 L128: 
+L129: cite17†串流报价 L130: 
+L131: cite18†优惠活动 L132: 
+L133: cite19†帮助中心 L134: 
+L135: 盈广场
+L136: 
+L137: cite20†投资学堂 L138: 
+L139: cite21†市场资讯 L140: 
+L141: cite22†讲座活动 L142: 
+L143: 下载
+L144: 
+L145: cite23†下载 uSMART APP L146: 
+L147: cite24†下载期货交易终端 L148: 
+L149: 关于
+L150: 
+L151: cite25†关于我们 L152: 
+L153: cite26†重要提示 L154: cite27†加入我们 L155: 
+L156: 盈立证券有限公司为香港证监会持牌法团（中央编号：BJA907），持有证券交易（第一类）、期货合约交易（第二类）、就证券提供意见（第四类）、就期货合约提供意见（第五类）、就机构融资提供意见（第六类）及提供资产管理（第九类）牌照。
+L157: 
+L158: cite33†注册/登录 L159: 
+L160: [Input: 搜索]
+L161: ### 等級期權保證金計算方式
+L162: 
+L163: 為提升風險管理能力，本公司將於2025 年 12 月 13 日起正式採用等級期權保證金計算方式。敬請重點關注以下三大核心事項：
+L164: 
+L165: #### 一、規則升級說明
+L166: 
+L167: #### 期權賣方之保證金要求將按A-E 五個等級進行計算，取代原有之統一比例制度。具體規則如下：
+L168: 
+L169:   * 依據標的股票之波動率水準、市場流動性、市值穩定性及產業風險特徵等核心指標，將所有可交易標的劃分為 A（低風險）、B（較低風險）、C（中等風險）、D（較高風險）、E（高風險）五個等級；
+L170:   * 不同等級股票對應之期權沽空保證金比例不同：風險等級越高，所需繳納之保證金比例越高。
+L171: ####
+L172: cite34†Image†jy-common-prd-hongkong-1437675564.cos.accelerate.myqcloud.com L173: 
+L174: 
+L175: 
+L176: 二、股票對應的選擇權保證金等級劃分表
+L177: 
+L178: 
+L179: 
+L180: 1.選擇權保證金等級為 A 的股票
+L181: Stock Code  | Stock Name  | Option Margin Algo
+L182: ISRG  | 直觉外科  | A
+L183: REGN  | 再生元制药  | A
+L184: NVDA  | 英伟达  | A
+L185: INTC  | 英特尔  | A
+L186: MDLZ  | 亿滋国际  | A
+L187: AMZN  | 亚马逊  | A
+L188: ABT  | 雅培  | A
+L189: CVX  | 雪佛龙  | A
+L190: SBUX  | 星巴克  | A
+L191: NOW  | 现在服务公司  | A
+L192: CVS  | 西维斯  | A
+L193: SPG  | 西蒙地产  | A
+L194: OXY  | 西方石油  | A
+L195: WMT  | 沃尔玛  | A
+L196: WBA  | 沃尔格林博姿联合公司  | A
+L197: MSFT  | 微软  | A
+L198: VZ  | 威讯通信  | A
+L199: NTES  | 网易  | A
+L200: MA  | 万事达卡公司  | A
+L201: GD  | 通用动力  | A
+L202: GE  | 通用电气  | A
+L203: CHTR  | 特许通讯公司  | A
+L204: TSLA  | 特斯拉  | A
+L205: TSM  | 台积电  | A
+L206: TGT  | 塔吉特  | A
+L207: CSCO  | 思科  | A
+L208: TMO  | 赛默飞世尔科技  | A
+L209: CRM  | 赛富时  | A
+L210: JNJ  | 强生  | A
+L211: BKNG  | 普利斯林  | A
+L212: PDD  | 拼多多  | A
+L213: BK  | 纽约梅隆银行  | A
+L214: NEM  | 纽蒙特矿业  | A
+L215: NKE  | 耐克  | A
+L216: NFLX  | 奈飞公司  | A
+L217: QQQ  | 纳指100ETF  | A
+L218: MRK  | 默沙东  | A
+L219: MS  | 摩根士丹利  | A
+L220: JPM  | 摩根大通集团  | A
+L221: AXP  | 美国运通  | A
+L222: BAC  | 美国银行  | A
+L223: AA  | 美国铝业公司  | A
+L224: USB  | 美国合众银行  | A
+L225: AIG  | 美国国际集团  | A
+L226: AMT  | 美国电塔  | A
+L227: AMD  | 美国超威  | A
+L228: MDT  | 美敦力  | A
+L229: MCD  | 麦当劳  | A
+L230: TRV  | 旅行者保险  | A
+L231: LMT  | 洛克希德马丁  | A
+L232: LIN  | 林德  | A
+L233: UNP  | 联合太平洋  | A
+L234: UNH  | 联合健康  | A
+L235: FDX  | 联邦快递  | A
+L236: LLY  | 礼来制药  | A
+L237: RTX  | 雷神技术公司  | A
+L238: LOW  | 劳氏  | A
+L239: KO  | 可口可乐  | A
+L240: CMCSA  | 康卡斯特  | A
+L241: COP  | 康菲石油  | A
+L242: CARR  | 开利全球  | A
+L243: CAT  | 卡特彼勒  | A
+L244: JD  | 京东  | A
+L245: ORCL  | 甲骨文  | A
+L246: SCHW  | 嘉信理财  | A
+L247: HD  | 家得宝  | A
+L248: HON  | 霍尼韦尔  | A
+L249: HPQ  | 惠普  | A
+L250: PFE  | 辉瑞  | A
+L251: COST  | 好市多批发  | A
+L252: GOOGL  | 谷歌A  | A
+L253: GOOG  | 谷歌  | A
+L254: QCOM  | 高通公司  | A
+L255: GS  | 高盛  | A
+L256: CL  | 高露洁棕榄  | A
+L257: PM  | 菲利普莫里斯  | A
+L258: DIS  | 迪士尼  | A
+L259: TXN  | 德州仪器  | A
+L260: DIA  | 道指ETF  | A
+L261: DHR  | 丹纳赫  | A
+L262: MET  | 大都会人寿  | A
+L263: INTU  | 财捷  | A
+L264: AVGO  | 博通  | A
+L265: BRK.B  | 伯克希尔-哈撒韦  | A
+L266: BRK.A  | 伯克希尔  | A
+L267: BA  | 波音  | A
+L268: MDY  | 标普中型股400指数ETF-SPDR  | A
+L269: SPY  | 标普500ETF  | A
+L270: BILI  | 哔哩哔哩  | A
+L271: PG  | 宝洁  | A
+L272: PEP  | 百事  | A
+L273: BMY  | 百时美施贵宝  | A
+L274: BIDU  | 百度  | A
+L275: MO  | 奥驰亚  | A
+L276: AMGN  | 安进公司  | A
+L277: EMR  | 艾默生电气  | A
+L278: ABBV  | 艾伯维公司  | A
+L279: ACN  | 埃森哲  | A
+L280: XOM  | 埃克森美孚  | A
+L281: BABA  | 阿里巴巴  | A
+L282: USFR  | WisdomTree浮动利率公债ETF  | A
+L283: V  | VISA  | A
+L284: BND  | Vanguard总体债券市场ETF  | A
+L285: BNDX  | Vanguard总体国际债券ETF  | A
+L286: VXUS  | Vanguard总体国际股票ETF  | A
+L287: VGT  | Vanguard资讯科技类股ETF  | A
+L288: VO  | Vanguard中型股ETF  | A
+L289: VGIT  | Vanguard中期公债ETF  | A
+L290: VCIT  | Vanguard中期公司债券ETF  | A
+L291: VTI  | Vanguard整体股市ETF  | A
+L292: VGLT  | Vanguard长期公债ETF  | A
+L293: VCLT  | Vanguard长期公司债券ETF  | A
+L294: VB  | Vanguard小型股ETF  | A
+L295: VT  | Vanguard全世界股票ETF  | A
+L296: VTEB  | Vanguard免税政府债券ETF  | A
+L297: VTWO  | Vanguard罗素2000指数ETF  | A
+L298: VTV  | Vanguard价值股ETF  | A
+L299: VIG  | Vanguard股利增值ETF  | A
+L300: VYM  | Vanguard高股利收益ETF  | A
+L301: VNQ  | Vanguard房地产ETF  | A
+L302: BSV  | Vanguard短期债券ETF  | A
+L303: VGSH  | Vanguard短期公债ETF  | A
+L304: VCSH  | Vanguard短期公司债券ETF  | A
+L305: VUG  | Vanguard成长股指数  | A
+L306: VOO  | Vanguard标普500指数ETF  | A
+L307: VWO  | Vanguard FTSE新兴市场ETF  | A
+L308: VGK  | Vanguard FTSE欧洲ETF  | A
+L309: VEU  | Vanguard FTSE美国以外全世界ETF  | A
+L310: VEA  | Vanguard FTSE成熟市场ETF  | A
+L311: GDX  | VanEck黄金矿业ETF  | A
+L312: SMH  | VanEck半导体ETF  | A
+L313: TMUS  | T-Mobile US  | A
+L314: XLB  | SPDR原物料类股ETF  | A
+L315: SPDW  | SPDR投资组合已开发国家不含美国ETF  | A
+L316: SPIB  | SPDR投资组合美国中期公司债券ETF  | A
+L317: SPYG  | SPDR投资组合标普500成长股ETF  | A
+L318: SPLG  | SPDR投资组合标普500 ETF  | A
+L319: XLC  | SPDR通讯服务类股ETF  | A
+L320: JNK  | SPDR彭博非投资等级债ETF  | A
+L321: BIL  | SPDR彭博1-3月美国国库券ETF  | A
+L322: XLE  | SPDR能源类股ETF  | A
+L323: XLK  | SPDR科技类股ETF  | A
+L324: XLF  | SPDR金融类股ETF  | A
+L325: XLV  | SPDR健康照护类股ETF  | A
+L326: GLDM  | SPDR黄金MiniShares ETF  | A
+L327: GLD  | SPDR黄金ETF  | A
+L328: XLU  | SPDR公用事业类股ETF  | A
+L329: XLI  | SPDR工业类股ETF  | A
+L330: XLY  | SPDR非必需消费类股ETF  | A
+L331: XOP  | SPDR标普油气开采与生产ETF  | A
+L332: XLP  | SPDR必需性消费类股ETF  | A
+L333: SCHX  | Schwab美国大型股ETF  | A
+L334: SCHG  | Schwab美国大型成长股ETF  | A
+L335: SCHF  | Schwab国际股票ETF  | A
+L336: PYPL  | PayPal  | A
+L337: META  | META  | A
+L338: JEPQ  | JPMorgan纳斯达克股票溢价收益主动型ETF  | A
+L339: JEPI  | JPMorgan股票溢价收益主动型ETF  | A
+L340: JPST  | JPMorgan超短收益主动型ETF  | A
+L341: JAAA  | Janus Henderson AAA级CLO债券主动型ETF  | A
+L342: EMB  | iShares摩根新兴市场美元债券ETF  | A
+L343: USHY  | iShares美元非投资等级公司债券ETF  | A
+L344: MUB  | iShares美国市政债券ETF  | A
+L345: AGG  | iShares美国核心综合债券ETF  | A
+L346: GOVT  | iShares美国公债ETF  | A
+L347: IYR  | iShares美国房地产指数ETF  | A
+L348: IWR  | iShares罗素中型股ETF  | A
+L349: IWN  | iShares罗素2000价值股ETF  | A
+L350: IWM  | iShares罗素2000 ETF  | A
+L351: IWD  | iShares罗素1000价值股ETF  | A
+L352: IWF  | iShares罗素1000成长股ETF  | A
+L353: IWB  | iShares罗素1000 ETF  | A
+L354: IGV  | iShares扩展科技软体类股ETF  | A
+L355: TIP  | iShares抗通膨债券ETF  | A
+L356: IAU  | iShares黄金信托ETF  | A
+L357: IUSB  | iShares核心总体美元计价债券市场ETF  | A
+L358: IJH  | iShares核心标普中型股指数ETF  | A
+L359: IJR  | iShares核心标普小型股指数ETF  | A
+L360: ITOT  | iShares核心标普美股总体市场指数ETF  | A
+L361: IVV  | iShares核心标普500指数ETF  | A
+L362: SHV  | iShares短期美国公债ETF  | A
+L363: MBB  | iShares抵押贷款证券化债券ETF  | A
+L364: IVE  | iShares标普500价值股ETF  | A
+L365: IVW  | iShares标普500成长股ETF  | A
+L366: SOXX  | iShares半导体ETF  | A
+L367: SLV  | iShares白银信托ETF  | A
+L368: INDA  | iShares MSCI印度ETF  | A
+L369: EMXC  | iShares MSCI新兴市场中国除外ETF  | A
+L370: EEM  | iShares MSCI新兴市场ETF  | A
+L371: EWJ  | iShares MSCI日本ETF  | A
+L372: ACWI  | iShares MSCI全世界ETF  | A
+L373: EFV  | iShares MSCI欧澳远东价值股ETF  | A
+L374: EFA  | iShares MSCI欧澳远东ETF  | A
+L375: USMV  | iShares MSCI美国最小波动率因子ETF  | A
+L376: QUAL  | iShares MSCI美国优质因子ETF  | A
+L377: MTUM  | iShares MSCI美国动能因子ETF  | A
+L378: IXUS  | iShares MSCI核心总体国际股市ETF  | A
+L379: IEMG  | iShares MSCI核心新兴市场ETF  | A
+L380: IEFA  | iShares MSCI核心欧澳远东ETF  | A
+L381: EWZ  | iShares MSCI巴西ETF  | A
+L382: LQD  | iShares iBoxx投资等级公司债券ETF  | A
+L383: HYG  | iShares iBoxx非投资等级公司债券ETF  | A
+L384: IBIT  | iShares Bitcoin Trust  | A
+L385: IEF  | iShares 7-10年期美国公债ETF  | A
+L386: IEI  | iShares 3-7年期美国公债ETF  | A
+L387: TLT  | iShares 20年期以上美国公债ETF  | A
+L388: IGSB  | iShares 1-5年期投资级公司债券ETF  | A
+L389: SHY  | iShares 1-3年期美国公债ETF  | A
+L390: SGOV  | iShares 0-3月美国公债ETF  | A
+L391: QQQM  | Invesco纳斯达克100 ETF  | A
+L392: BKLN  | Invesco高级信贷ETF  | A
+L393: RSP  | Invesco标普500平均加权指数ETF  | A
+L394: IBM  | IBM  | A
+L395: GBTC  | Grayscale比特币信托ETF  | A
+L396: FBTC  | Fidelity Wise Origin比特币ETF  | A
+L397: T  | AT&T  | A
+L398: ARKK  | ARK创新主动型ETF  | A
+L399: AAPL  | Apple Inc  | A
+L400: MMM  | 3M  | A
+L401: cite35†2.選擇權保證金等級為 B 等級的股票†m.usmart66.com L402: 
+L403: cite36†3.選擇權保證金等級為 C 等級的股票†m.usmart66.com L404: 
+L405: cite37†4.選擇權保證金等級為 D 等級的股票†m.usmart66.com L406: 
+L407: 
+L408: 
+L409: 注意：表格中未列出的股票，其等級為 E 等級。
+L410: #### 三、帳戶風險預警
+L411: 
+L412: 不同等級對應之保證金具體計算規則如下：
+L413: 
+L414:   * 若 PVHC 風控等級超過 78%，建議您及時入金或調整部位；
+L415:   * 若 PVHC 風控等級超過 83%，系統將自動觸發強制平倉。為避免潛在風險，請您在規則生效前核查當前持倉及可用資金狀況，確保保證金足額覆蓋要求。
+L416: 
+L417: 感謝您的理解與支持。若有任何疑問，敬請隨時聯繫您的專屬客服經理或客服團隊。
+L418: 
+L419: cite38†商务合作 cite33†立即注册 L420: 
+L421: ### 站点服务
+L422: 
+L423: cite16†交易费用 cite19†常见问题 cite39†独家交易工具 L424: 
+L425: ### 关于
+L426: 
+L427: cite25†企业概要 cite38†联络我们 cite40†媒体中心 L428: ### 协议声明
+L429: 
+L430: cite41†免责声明 cite42†私隐声明 L431: 
+L432: 客服专线︰ +852 3018 4526
+L433: 
+L434: 交易日︰全日24小时 | 非交易日：9:00-18:00
+L435: 
+L436: 邮箱︰[REDACTED_EMAIL]
+L437: 
+L438: WhatsApp︰+852 5989 2641
+L439: 
+L440: 盈立证券有限公司为香港证监会持牌法团（中央编号：BJA907），持有证券交易（第一类）、期货合约交易（第二类）、就证券提供意见（第四类）、就期货合约提供意见（第五类）、就机构融资提供意见（第六类）及提供资产管理（第九类）牌照。
+L441: 
+L442: 注册/登录后可进入个人中心
+--------------------------------------------------------------------------------
+美股期權投資 | 期權交易 | uSMART 盈立證券 (https://hk.usmartglobal.com/zh-hk/products/financial-investment/us-share-option)
+citeturn682view1 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: click({"ref_id":"turn679view0","id":4}); Total lines: 217
+L0: cite0†iframe†www.googletagmanager.com L1: 
+L2: 您正在瀏覽的是香港網站，香港證監會BJA907號，投資有風險，交易需謹慎
+L3: 
+L4: 交易
+L5: 
+L6: cite1†美股 L7: 
+L8: cite2†港股 L9: 
+L10: cite3†ETF L11: 
+L12: cite4†美股期權 L13: 
+L14: cite5†盤前美股期權交易 L15: 
+L16: cite6†基金 L17: 
+L18: cite7†美股碎股 L19: 
+L20: cite8†美債 L21: 
+L22: cite9†A股 L23: 
+L24: cite10†融資服務 L25: 
+L26: cite11†IPO L27: 
+L28: cite12†期貨 L29: 
+L30: cite13†結構化票據†yxzq.udesk.cn L31: 
+L32: 市場
+L33: 
+L34: cite14†股票行情 L35: 
+L36: cite15†機構 L37: 
+L38: 費用
+L39: 
+L40: cite16†交易佣金 L41: 
+L42: cite17†串流報價 L43: 
+L44: cite18†優惠活動 L45: 
+L46: cite19†幫助中心 L47: 
+L48: 盈廣場
+L49: 
+L50: cite20†投資學堂 L51: 
+L52: cite21†市場資訊 L53: 
+L54: cite22†講座活動 L55: 
+L56: 下載
+L57: 
+L58: cite23†下載 uSMART APP L59: 
+L60: cite24†下載期貨交易終端 L61: 
+L62: 關於
+L63: 
+L64: cite25†關於我們 L65: 
+L66: cite26†重要提示 L67: 
+L68: cite27†加入我們 L69: 
+L70: 香港官網
+L71: 
+L72: 香港官網
+L73: 
+L74: cite28†新加坡官網†sg.usmartglobal.com cite29†美國官網†www.usmartcapital.com cite30†集團官網†www.usmartgroup.com L75: 
+L76: 繁
+L77: cite4†繁體中文 cite31†简体中文 cite32†English L78: 
+L79: cite33†註冊/登錄 L80: 
+L81: 繁體中文
+L82: 
+L83: cite4†繁體中文 cite31†简体中文 cite32†English L84: 
+L85: 香港官網
+L86: 
+L87: 香港官網
+L88: 
+L89: cite28†新加坡官網†sg.usmartglobal.com cite29†美國官網†www.usmartcapital.com cite30†集團官網†www.usmartgroup.com L90: 
+L91: 交易
+L92: 
+L93: cite1†美股 L94: 
+L95: cite2†港股 L96: 
+L97: cite3†ETF L98: 
+L99: cite4†美股期權 L100: 
+L101: cite5†盤前美股期權交易 L102: 
+L103: cite6†基金 L104: 
+L105: cite7†美股碎股 L106: 
+L107: cite8†美債 L108: 
+L109: cite9†A股 L110: 
+L111: cite10†融資服務 L112: 
+L113: cite11†IPO L114: 
+L115: cite12†期貨 L116: 
+L117: cite13†結構化票據†yxzq.udesk.cn L118: 
+L119: 市場
+L120: 
+L121: cite14†股票行情 L122: 
+L123: cite15†機構 L124: 
+L125: 費用
+L126: 
+L127: cite16†交易佣金 L128: 
+L129: cite17†串流報價 L130: 
+L131: cite18†優惠活動 L132: 
+L133: cite19†幫助中心 L134: 
+L135: 盈廣場
+L136: 
+L137: cite20†投資學堂 L138: 
+L139: cite21†市場資訊 L140: 
+L141: cite22†講座活動 L142: 
+L143: 下載
+L144: 
+L145: cite23†下載 uSMART APP L146: 
+L147: cite24†下載期貨交易終端 L148: 
+L149: 關於
+L150: 
+L151: cite25†關於我們 L152: 
+L153: cite26†重要提示 L154: cite27†加入我們 L155: 
+L156: 盈立證券有限公司為香港證監會持牌法團（中央編號：BJA907），持有證券交易（第一類） 、期貨合約交易(第二類) 、就證券提供意見（第四類） 、就期貨合約提供意見(第五類) 、就機構融資提供意見（第六類）及提供資產管理（第九類）牌照。
+L157: 
+L158: cite33†註冊/登錄 L159: 
+L160: [Input: 搜尋]
+L161: ## 期權簡介
+L162: 
+L163: 期權持有者擁有在特定日期或之前以特定價格買入或賣出一定數量的資產的權利，但非義務。買權可以讓買方在市場上 漲時獲利，而不必實際擁有相應的資產。期權賣方則承擔買方行使期權時的義務，同時賺取權利金作回報。
+L164: 
+L165: cite34†深入了解 L166: 
+L167: cite35†Image†web-static-prd-hongkong-1437675564.cos.accelerate.myqcloud.com L168: ## 期權交易有甚麼優勢？
+L169: 
+L170: cite36†Image†web-static-prd-hongkong-1437675564.cos.accelerate.myqcloud.com L171: 
+L172: 多空槓桿型
+L173: 
+L174: 您可以用較少的資金控制更大數量的資產，使期權交易成為一種更高效利用資本的方式，提高投資回報率。
+L175: 
+L176: cite37†Image†web-static-prd-hongkong-1437675564.cos.accelerate.myqcloud.com L177: 
+L178: 對沖風險
+L179: 
+L180: 期權可以用作保護投資組合的工具。通過持有相應的看跌期權，您可以在股票下跌時獲得利潤，從而抵消損失
+L181: 
+L182: cite38†Image†web-static-prd-hongkong-1437675564.cos.accelerate.myqcloud.com L183: 
+L184: 靈活性
+L185: 
+L186: 無論市場是上漲、下跌還是盤整，您都可以使用不同類型的期權合約來適應不同的市場預期和目標，例如掩護性買權、買方跨式策略等等
+L187: 
+L188: cite39†Image†web-static-prd-hongkong-1437675564.cos.accelerate.myqcloud.com L189: 
+L190: 風險控制
+L191: 期權交易中的風險是可控制的。期權買方支付的僅是購買期權的成本(權利金)，限制了潛在的損失，不會因市場波動而承擔無上限的風險
+L192: 
+L193: cite40†商務合作 cite33†立即註冊 L194: ### 站點服務
+L195: 
+L196: cite16†交易費用 cite19†常見問題 cite41†獨家交易工具 L197: 
+L198: ### 關於
+L199: 
+--------------------------------------------------------------------------------
+美股期權收費標準 | 美股期權 | 幫助中心 | uSMART 盈立證券 (https://hk.usmartglobal.com/zh-hk/help-centre/213/catalog/2)
+citeturn682view2 [wordlim: 200] Crawled: 3 days ago; Content type: text/html; Source: click({"ref_id":"turn679view0","id":36}); Total lines: 198

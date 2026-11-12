@@ -1,0 +1,1 @@
+STOP {"at_utc":"2026-10-15T06:15:26.891931+00:00","reason":"Missing grid rows; no replacements or favorable subset","type":"StopRun"}

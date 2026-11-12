@@ -1,0 +1,1 @@
+{"status": "PASS_VALID_A_DESCRIPTIVELY_DOMINATES_C", "checks": 227200, "ledger_rows": 13152, "independent_check_elapsed_seconds": 0.244580291, "checker_max_RSS_bytes": 56295424, "max_accounting_USD_residual": 7.275957614183426e-11}

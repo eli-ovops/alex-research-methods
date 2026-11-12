@@ -1,0 +1,10 @@
+test_default100_and_explicit300_still_account_then_stop (__main__.Gates.test_default100_and_explicit300_still_account_then_stop) ... ok
+test_missing_or_pending_auth_fails (__main__.Gates.test_missing_or_pending_auth_fails) ... ok
+test_missing_wrong_release_peak_binding_fails (__main__.Gates.test_missing_wrong_release_peak_binding_fails) ... ok
+test_parent_human_deadline_other_caps_fail_closed (__main__.Gates.test_parent_human_deadline_other_caps_fail_closed) ... ok
+test_totalcaps_and_collector_guard_order_unchanged (__main__.Gates.test_totalcaps_and_collector_guard_order_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+OK

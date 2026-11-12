@@ -1,0 +1,138 @@
+etfs: fit NLinear, and correct the holdout the fuller field no longer promotes (#706)
+
+* etfs: fit the nlinear the deep_learning menu has declared and no notebook fitted
+
+Both training menus declare deep_learning: nlinear, lstm_h64. 09_dl_lstm fits the
+recurrent member and 10_dl_tsmixer the mixer; nothing fitted nlinear, which both
+of those notebooks said in prose and neither could close. The registry holds five
+lstm_h64 and two tsmixer training runs and zero nlinear.
+
+The gap matters more here than a missing configuration usually would. NLinear is
+the floor of the sequence family - one linear map over the lookback window after
+the last level is subtracted - so without it the case study reports two larger
+architectures with nothing saying the extra capacity bought anything.
+
+Structurally it is 10_dl_tsmixer with the architecture changed: the same
+resolve-before-fitting plan, the same full-coverage checkpoint guard, the same
+common-support intersection against the linear and GBM leaders. It publishes
+etfs-nlinear-validation-v1, so the two populations in force are unaffected, and it
+carries the menu-versus-registry reconciliation because it is now the last
+sequence notebook to run.
+
+Resolved but not executed: 2 labels x 8 folds x 20 checkpoints, 71 features, 99
+funds. Outputs and the provenance stamp are cleared so the notebook claims
+nothing.
+
+* etfs: execute 10a_dl_nlinear, the third architecture the training menu declares
+
+etfs declares nlinear, lstm_h64 and tsmixer on fwd_ret_21d and nlinear and
+lstm_h64 on fwd_ret_5d; only lstm_h64 and tsmixer had notebooks. Best epoch by
+validation IC: +0.0472 at epoch 15 on the first label, +0.0225 at epoch 40 on the
+second. 1h43m on the 3090, peak 4.9 GB.
+
+Downstream stages still have to run against the widened population.
+
+* etfs: the holdout was spent on a configuration the corrected field does not promote
+
+10a_dl_nlinear added the third architecture the training menu declares, and the
+downstream sweep that followed it ran unparameterized - so it swept fwd_ret_21d,
+the primary label, and nlinear's twenty fwd_ret_5d prediction sets had no
+backtests at all. That is the LABEL="" default, not missing code: 14 through 17
+now run on fwd_ret_5d as well, and label-coverage reports both declared labels
+with rows.
+
+With the variant label backtested through the risk stage, the carrier moves.
+resolve_solvent_carrier - the same call 18_holdout_predictions makes - returned
+fb287093aa02, gbm/default_mae on fwd_ret_21d at validation Sharpe 1.150; it now
+returns 303a3d07b83e, gbm/leaves_63_mse on fwd_ret_5d at 1.317. Two labels that
+were close enough to be described as tied, and the holdout had been spent on the
+weaker one.
+
+A holdout evaluating a configuration the field does not promote is not evidence
+about a strategy, it is evidence about a superseded selection, so it is
+discarded rather than kept beside the new one: scripts/discard-holdout.py
+removed holdout backtest d2e65da031af, prediction set d0fe6611feae and its
+artifact directory, recorded in run_log/holdout-discarded.json. Nothing at the
+validation stage was touched. The registry was copied to
+~/ml4t/backups/etfs-registry-pre-holdout-discard-20260901-215517.db first.
+
+18, 19 and 20 then re-ran against the corrected field:
+
+  old  1.150 validation -> 0.232 holdout
+  new  1.317 validation -> 1.179 holdout, CAGR 15.2%, max drawdown -12.33%,
+       win rate 54%, 469 trades over 502 sessions
+
+**This changes what the chapter says.** etfs was the case study whose holdout
+disconfirmed its validation result almost entirely, and that reading came from
+spending the holdout before the declared architecture was fitted and before the
+variant label was backtested. The corrected holdout largely confirms validation
+instead. The narrative around it needs rewriting, and that is a scope decision
+rather than a number to record.
+
+* etfs/nlinear: publish only the checkpoints that covered their dates
+
+A population is declared before the first fit, so it lists every checkpoint the
+run intended - including one scored on fewer dates than its resolved
+eligibility declares, because a network that collapses into predicting nearly
+the same value for every fund gives those dates no spread to rank and they drop
+out of the daily IC. `14_backtest` sweeps whatever the current population
+lists, so such a checkpoint reached validation-Sharpe selection flattered by the
+days it could not score. The notebook's own prose said the guard was there; the
+guard was a display filter over the primary label and nothing else.
+
+- Coverage is now measured over every label the run fitted, not just the primary
+  one, since the population spans them all.
+- Once coverage is measurable, the full-coverage subset is republished under the
+  same name, naming the declared generation it supersedes. When every checkpoint
+  covered its dates the member list is unchanged and the registry returns the
+  published snapshot rather than writing a second generation, which is this
+  run's case: 40 of 40 declared prediction sets are selectable.
+- `tests/test_prediction_members_in_force.py` pins both halves: the fold-level
+  completeness check passes a date-short member, and narrowing the population is
+  what takes it out of the candidate set.
+
+Two further defects in the same notebook:
+
+- The baseline comparison asked `split_retired_members` over a
+  maximum-coverage inventory. "Not retired" admits every row no population ever
+  listed, and the coverage filter dropped retired lower-coverage generations
+  before the split could name them, so their hashes never reached
+  `exclude_prediction_hashes` and `load_best_ic_per_family` could hand one back
+  as the family leader. It now asks `split_unpublished_members` over the
+  complete inventory. The leaders did not move: Ridge +0.0469, GBM +0.0746.
+- The menu reconciliation ran before this notebook fitted and counted any
+  `training_runs` row as a fitted configuration, so a successful first run
+  reported NLinear as never fitted while an interrupted or single-label run
+  reported it as fitted. It now runs after execution over configuration-label
+  pairs backed by a prediction set listed by a population in force: 5 of 5
+  pairs, none missing.
+
+Section 8 said the reported IC is an average over folds. It is the mean over
+every validation date pooled across folds, and the fold ICs below it do not
+average to it.
+
+* etfs: give 10a_dl_nlinear a CI override, without which the job cannot pass
+
+The notebook has no entry in tests/overrides.yaml, so cs-etfs runs it as a
+preview that declares no reduction and `run_model_population` refuses it. An
+absent block is a failed job, not a slow one - the same shape cs-fx_pairs is
+reporting for 10a_dl_lstm.
+
+The reductions follow 10_dl_tsmixer rather than 09_dl_lstm: folds 0 and 1, and
+no max_symbols, because a cap on the cross-section that the temporal artifact
+does not share is what ml4t/agent-workspace#988 measured diverging. DEVICE and
+POPULATION_NAME travel together for the reason 09_dl_lstm's block states.
+
+* etfs/14_backtest: fold main's cadence wording into the executed notebook
+
+The merge conflict was the notebook's outputs against two markdown lines, and
+taking the branch's executed run left the .ipynb carrying the old prose. This is
+sync-prose's case exactly: markdown-only, no code cell moved, so the outputs and
+the original stamp stand and no re-run is owed. The provenance gate reports the
+pair in sync.
+
+Recorded because the merge commit before this one was made with --no-verify, to
+get past the provenance gate in the window between resolving the conflict and
+running sync-prose. That was the wrong way to do it - the gate was right that the
+pair was inconsistent. Resolving the conflict on the .py first, then syncing,
+then committing once needs no bypass. The tree now passes the gate.

@@ -1,0 +1,210 @@
+Contracts | Etherscan-compatible APIs | Routescan (https://routescan.io/docs/api/etherscan/contracts)
+citeturn512view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://routescan.io/docs/api/etherscan/contracts","lineno":null}); Total lines: 248
+L0: cite0†Docs L1: 
+L2: Switch to light mode
+L3: 
+L4: Getting Started
+L5: 
+L6:   * cite0†Introduction L7:   * cite1†Get started L8:   * cite2†Supported chains L9:   * cite3†Migrate from Etherscan L10:   * cite4†Use with LLMs L11: 
+L12: Plans & limits
+L13: 
+L14:   * cite5†API keys & pricing L15:   * cite6†Rate limits L16: 
+L17: Build with AI
+L18: 
+L19:   * cite7†MCP server L20: 
+L21: Etherscan-compatible APIs
+L22: 
+L23:   * cite8†Overview L24:   * cite9†Accounts L25:   * cite10†Blocks L26:   * cite11†Contracts L27:   * cite12†Geth-Parity Proxy L28:   * cite13†Gas Tracker L29:   * cite14†Logs L30:   * cite15†Nametags L31:   * cite16†Stats L32:   * cite17†Tokens L33:   * cite18†Transactions L34: High-speed REST APIs
+L35: 
+L36:   * cite19†Overview L37:   * cite20†API conventions L38:   * cite21†Addresses L39:   * cite22†Transactions L40:   * cite23†Tokens L41:   * cite24†Contracts L42:   * cite25†Blocks L43:   * cite26†Stats & aggregations L44:   * cite27†Cross-chain L45:   * cite28†X-Chain L46:   * cite29†P-Chain L47:   * cite30†Network L48: 
+L49: Resources
+L50: 
+L51:   * cite31†Verify Contract L52:   * cite32†Verification Guides†info.routescan.io L53: 
+L54: cite33†Sign in L55: # Contracts
+L56: 
+L57: Copy page as Markdown Open with AI tools
+L58: 
+L59: Etherscan-compatible endpoints for the Contracts module.
+L60: ## cite34†Get Contract Creator and Creation Tx Hash# L61: 
+L62: Returns a contract's deployer address and transaction hash it was created, up to 5 at a time.
+L63: 
+L64: GET
+L65: 
+L66: [Button: mainnet][Button: testnet]
+L67: 
+L68: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L69: contractaddresses optional[Input: 0xB83c27805aAcA5C7082eB45C868d955Cf04C337F,0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45,0xe4462eb568E2DFbb5b0cA2D3DbB1A35C9Aa98aad,0xdAC17F958D2ee523a2206206994597C13D831ec7,0xf5b969064b91869fBF676ecAbcCd1c5563F591d0]the contract address , up to 5 at a time
+L70: 
+L71: API key (optional)
+L72: 
+L73: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L74: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getcontractcreation&contractaddresses=0xB83c27805aAcA5C7082eB45C868d955Cf04C337F%2C0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45%2C0xe4462eb568E2DFbb5b0cA2D3DbB1A35C9Aa98aad%2C0xdAC17F958D2ee523a2206206994597C13D831ec7%2C0xf5b969064b91869fBF676ecAbcCd1c5563F591d0&apikey=YourApiKeyToken`
+L75: 
+L76: [Button: Send request]
+L77: 
+L78: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L79: 1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getcontractcreation&contractaddresses=0xB83c27805aAcA5C7082eB45C868d955Cf04C337F%2C0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45%2C0xe4462eb568E2DFbb5b0cA2D3DbB1A35C9Aa98aad%2C0xdAC17F958D2ee523a2206206994597C13D831ec7%2C0xf5b969064b91869fBF676ecAbcCd1c5563F591d0' \
+L80: 
+L81: 2 -H 'apikey: YourApiKeyToken'
+L82: 
+L83: 1{
+L84: 
+L85: 2 status: string;
+L86: 
+L87: 3 message: string;
+L88: 
+L89: 4 result: {
+L90: 
+L91: 5 contractAddress: string;
+L92: 
+L93: 6 contractCreator: string;
+L94: 7 txHash: string;
+L95: 
+L96: 8 contractFactory: string;
+L97: 
+L98: 9 }[];
+L99: 
+L100: 10}
+L101: ## cite36†Get Contract ABI for Verified Contract Source Codes# L102: 
+L103: Returns the Contract Application Binary Interface ( ABI ) of a verified smart contract.
+L104: 
+L105: GET
+L106: 
+L107: [Button: mainnet][Button: testnet]
+L108: 
+L109: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L110: 
+L111: address optional[Input: 0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7]the contract address that has a verified source code
+L112: 
+L113: API key (optional)
+L114: 
+L115: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L116: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getabi&address=0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7&apikey=YourApiKeyToken`
+L117: 
+L118: [Button: Send request]
+L119: 
+L120: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L121: 
+L122: 1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getabi&address=0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7' \
+L123: 
+L124: 2 -H 'apikey: YourApiKeyToken'
+L125: 
+L126: 1{
+L127: 
+L128: 2 status: string;
+L129: 
+L130: 3 message: string;
+L131: 
+L132: 4 result: string;
+L133: 
+L134: 5}
+L135: ## cite37†Get Contract Source Code for Verified Contract Source Codes# L136: 
+L137: Returns the Solidity source code of a verified smart contract.
+L138: 
+L139: GET
+L140: 
+L141: [Button: mainnet][Button: testnet]
+L142: 
+L143: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L144: 
+L145: address optional[Input: 0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7]the contract address that has a verified source code
+L146: 
+L147: API key (optional)
+L148: 
+L149: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L150: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7&apikey=YourApiKeyToken`
+L151: 
+L152: [Button: Send request]
+L153: 
+L154: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L155: 
+L156: 1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7' \
+L157: 
+L158: 2 -H 'apikey: YourApiKeyToken'
+L159: 
+L160: 1{
+L161: 
+L162: 2 status: string;
+L163: 
+L164: 3 message: string;
+L165: 
+L166: 4 result: {
+L167: 5 SourceCode: string;
+L168: 
+L169: 6 ABI: string;
+L170: 
+L171: 7 ContractName: string;
+L172: 
+L173: 8 CompilerVersion: string;
+L174: 
+L175: 9 OptimizationUsed: string;
+L176: 
+L177: 10 Runs: string;
+L178: 
+L179: 11 ConstructorArguments: string;
+L180: 
+L181: 12 EVMVersion: string;
+L182: 
+L183: 13 Library: string;
+L184: 
+L185: 14 LicenseType: string;
+L186: 
+L187: 15 Proxy: string;
+L188: 
+L189: 16 Implementation: string;
+L190: 
+L191: 17 SwarmSource: string;
+L192: 
+L193: 18 }[];
+L194: 
+L195: 19}
+L196: ## cite38†Verify Source Code# L197: 
+L198: POST
+L199: 
+L200: [Button: mainnet][Button: testnet]
+L201: 
+L202: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L203: contractaddress optional[Input: 0x2A1D1C87d18dd13d7a1e91A42C9fFEc486EB6433]0x2A1D1C87d18dd13d7a1e91A42C9fFEc486EB6433 sourceCode optional[Input: // SPDX-License-Identifier: MIT
+L204: // compiler version must be greater than or equal to 0.8.10 and less than 0.9.0
+L205: pragma solidity ^0.8.10;
+L206: contract HelloWorld {
+L207:     string public greet = "Hello World!";
+L208: }
+L209: ]// SPDX-License-Identifier: MIT // compiler version must be greater than or equal to 0.8.10 and less than 0.9.0 pragma solidity ^0.8.10; contract HelloWorld { string public greet = "Hello World!"; } constructorArguments optional[Input: 0xfce353f66162630000000000000000000000000]// for contracts that were created with constructor parameters, using ABI encoding.codeformat optional[Input: solidity-single-file]// solidity-single-file | solidity-standard-json-input contractname optional[Input: HelloWorld]HelloWorld compilerversion optional[Input: v0.8.10+commit.fc410830]v0.8.10+commit.fc410830 evmversion optional[Input: shangai]// shangai for the latest version, otherwise choose from the older versions optimizationUsed optional[Input: 0]// use 0 for no optimization, and 1 if optimization was used runs optional[Input: 200]200 licenseType optional[Input: 1]1
+L210: Request body (application/json)
+L211: 
+L212: API key (optional)
+L213: 
+L214: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L215: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=verifysourcecode&contractaddress=0x2A1D1C87d18dd13d7a1e91A42C9fFEc486EB6433&sourceCode=%2F%2F%20SPDX-License-Identifier%3A%20MIT%0A%2F%2F%20compiler%20version%20must%20be%20greater%20than%20or%20equal%20to%200.8.10%20and%20less%20than%200.9.0%0Apragma%20solidity%20%5E0.8.10%3B%0Acontract%20HelloWorld%20%7B%0A%20%20%20%20string%20public%20greet%20%3D%20%22Hello%20World!%22%3B%0A%7D&constructorArguments=0xfce353f66162630000000000000000000000000&codeformat=solidity-single-file&contractname=HelloWorld&compilerversion=v0.8.10%2Bcommit.fc410830&evmversion=shangai&optimizationUsed=0&runs=200&licenseType=1&apikey=YourApiKeyToken`
+L216: [Button: Send request]
+L217: 
+L218: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L219: 1 curl -X POST 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=verifysourcecode&contractaddress=0x2A1D1C87d18dd13d7a1e91A42C9fFEc486EB6433&sourceCode=%2F%2F%20SPDX-License-Identifier%3A%20MIT%0A%2F%2F%20compiler%20version%20must%20be%20greater%20than%20or%20equal%20to%200.8.10%20and%20less%20than%200.9.0%0Apragma%20solidity%20%5E0.8.10%3B%0Acontract%20HelloWorld%20%7B%0A%20%20%20%20string%20public%20greet%20%3D%20%22Hello%20World!%22%3B%0A%7D&constructorArguments=0xfce353f66162630000000000000000000000000&codeformat=solidity-single-file&contractname=HelloWorld&compilerversion=v0.8.10%2Bcommit.fc410830&evmversion=shangai&optimizationUsed=0&runs=200&licenseType=1' \
+L220: 2 -H 'apikey: YourApiKeyToken' \
+L221: 
+L222: 3 -H 'content-type: application/json' \
+L223: 
+L224: 4 -d '{}'
+L225: ## cite39†Check Source Code Verification Submission Status# L226: 
+L227: GET
+L228: 
+L229: [Button: mainnet][Button: testnet]
+L230: 
+L231: cite35†Image†imgproxy-mainnet.routescan.io Ethereum
+L232: 
+L233: guid optional[Input: ezq878u486pzijkvvmerl6a9mzwhv6sefgvqi5tkwceejc7tvn]ezq878u486pzijkvvmerl6a9mzwhv6sefgvqi5tkwceejc7tvn
+L234: 
+L235: API key (optional)
+L236: 
+L237: [Input: Leave empty for Free (Keyless) tier][Button: Show]
+L238: `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=checkverifystatus&guid=ezq878u486pzijkvvmerl6a9mzwhv6sefgvqi5tkwceejc7tvn&apikey=YourApiKeyToken`
+L239: 
+L240: [Button: Send request]
+L241: 
+L242: ›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+L243: 
+L244: 1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=checkverifystatus&guid=ezq878u486pzijkvvmerl6a9mzwhv6sefgvqi5tkwceejc7tvn' \
+L245: 
+L246: 2 -H 'apikey: YourApiKeyToken'
+L247: cite10†PreviousBlocks cite12†Next Geth-Parity Proxy cite40†Questions? Contact us 

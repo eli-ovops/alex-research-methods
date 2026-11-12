@@ -1,0 +1,615 @@
+Read clock before call: 2026-10-19 11:20:18 UTC
+Public actions in this call: 2
+Source: native web tool text, not original PDF bytes. Unrelated authentication-redirect result omitted if present. Coverage is the returned excerpts only.
+
+The Impact of Volatility Targeting (https://people.duke.edu/~charvey/Research/Published_Papers/P135_The_impact_of.pdf)
+citeturn1129search12 [wordlim: 200] Published: 8.0 years ago; HARVEY — is a professor of finance at Duke University in Durham, NC, and an advisor to Man Group in London, UK. [REDACTED_EMAIL] ... Although most research has concentrated on equity markets, we investigate the impact of volatility targeting across more than 60 assets, with daily data beginning as early as 1926. ... Risk assets exhibit a so-called leverage effect (i.e., a negative relation between returns and volatility), and so volatility scaling effectively introduces some momentum into strategies.
+The Impact of Volatility Targeting
+
+CAMPBELL R. HARVEY, EDWARD HOYLE,  
+RUSSELL KORGAONKAR, SANDY RATTRAY,  
+MATTHEW SARGAISON, AND OTTO VAN HEMERT
+
+<visual_element id="e1">
+Left author bio column:
+- CAMPBELL R. HARVEY — is a professor of finance at Duke University in Durham, NC, and an advisor to Man Group in London, UK. [REDACTED_EMAIL]
+- EDWARD HOYLE — is a senior quantitative analyst at Man AHL in London, UK. [REDACTED_EMAIL]
+- RUSSELL KORGAONKAR — is the director of investment strategies at Man AHL in London, UK. [REDACTED_EMAIL]
+- SANDY RATTRAY — is the chief investment officer of the Man Group in London, UK. [REDACTED_EMAIL]
+- MATTHEW SARGAISON — is the co-chief executive officer of Man AHL in London, UK. [REDACTED_EMAIL]
+- OTTO VAN HEMERT — is the head of macro research at Man AHL in London, UK. [REDACTED_EMAIL]
+</visual_element>
+
+One of the key features of volatility is that it is persistent, or clusters. High volatility over the recent past tends to be followed by high volatility in the near future. This observation underpins Engle’s [1982] pioneering work on autoregressive conditional heteroskedasticity (ARCH) models.¹ In this article, we study the risk and return characteristics of assets and portfolios that are designed to counter the fluctuations in volatility. We achieve this by leveraging the portfolio at times of low volatility and scaling down at times of high volatility. Effectively, the portfolio is targeting a constant level of volatility, rather than a constant level of notional exposure.
+
+Conditioning portfolio choice on volatility has attracted considerable recent attention. The financial media have zoomed in on the increasing popularity of risk parity funds.² In recent work, Moreira and Muir (2017) found that volatility-managed portfolios increase the Sharpe ratios in the case of the broad equity market and a number of dynamic, mostly long-short stock strategies.
+
+Although most research has concentrated on equity markets, we investigate the impact of volatility targeting across more than 60 assets, with daily data beginning as early as 1926. We find that Sharpe ratios are higher with volatility scaling for risk assets (equities and credit), as well as for portfolios that have a substantial allocation to these risk assets, such as a balanced (60–40 equity–bond) portfolio and a risk parity (equity–bond–credit–commodity) portfolio.
+
+Risk assets exhibit a so-called leverage effect (i.e., a negative relation between returns and volatility), and so volatility scaling effectively introduces some momentum into strategies. That is, volatility often increases in periods of negative returns, causing positions to be reduced, which is in the same direction as what one would expect from a time-series momentum strategy. Historically such a momentum strategy has performed well (see, e.g., Hamill, Rattray, and Van Hemert 2016). For other assets, such as bonds, currencies, and commodities, volatility scaling has a negligible effect on realized Sharpe ratios.
+
+We show that volatility targeting consistently reduces the likelihood of extreme returns (and the volatility of volatility) across our 60+ assets. Under reasonable investor preferences, a thinner left tail is much
+
+¹ Robert Engle shared the 2003 Nobel Prize in Economics “for methods of analyzing economic time series with time-varying volatility (ARCH)” (https://www.nobelprize.org).  
+² See, for example, Constable (2017).
+
+14  THE IMPACT OF VOLATILITY TARGETING                                                                 FALL 2018
+
+Downloaded from http://jpm.iijournals.com/ by Campbell Harvey on November 1, 2018--------------------------------------------------------------------------------
+Scholars@Duke publication: The impact of volatility targeting (https://scholars.duke.edu/publication/1370354)
+citeturn1129search0 [wordlim: 200] Published: 8.1 years ago; Crawled: last week; ## The impact of volatility targeting ... ### Duke Scholars ... Harvey Fuqua School of Business
+
+## The impact of volatility targeting
+
+Journal articles  - Journal Article
+
+Harvey, CR; Hoyle, E; Korgaonkar, R; Rattray, S; Sargaison, M; Van Hemert, O
+
+Published in: Journal of Portfolio Management
+
+September 1, 2018
+
+Published version (DOI)
+
+### Duke Scholars
+
+Author Campbell R. Harvey Fuqua School of Business
+
+## Published In
+
+Journal of Portfolio Management
+
+## DOI
+
+10.3905/jpm.2018.45.1.014
+
+## ISSN
+
+0095-4918
+
+## Publication Date
+
+September 1, 2018
+
+## Volume
+
+45
+
+## Issue
+
+1
+
+## Start / End Page
+
+14 / 33
+
+## Related Subject Headings
+
+  * Finance
+  * 3502 Banking, finance and investment
+
+### Citation
+
+APA
+
+Chicago
+
+ICMJE
+
+MLA
+
+NLM
+
+Harvey, C. R., Hoyle, E., Korgaonkar, R., Rattray, S., Sargaison, M., & Van Hemert, O. (2018). The impact of volatility targeting. Journal of Portfolio Management, 45(1), 14–33. https://doi.org/10.3905/jpm.2018.45.1.014
+
+Harvey, C. R., E. Hoyle, R. Korgaonkar, S. Rattray, M. Sargaison, and O. Van Hemert. “The impact of volatility targeting.” Journal of Portfolio Management 45, no. 1 (September 1, 2018): 14–33. https://doi.org/10.3905/jpm.2018.45.1.014.
+
+Harvey CR, Hoyle E, Korgaonkar R, Rattray S, Sargaison M, Van Hemert O. The impact of volatility targeting. Journal of Portfolio Management. 2018 Sep 1;45(1):14–33.
+
+Harvey, C. R., et al. “The impact of volatility targeting.” Journal of Portfolio Management, vol. 45, no. 1, Sept. 2018, pp. 14–33. Scopus, doi:10.3905/jpm.2018.45.1.014.
+
+Harvey CR, Hoyle E, Korgaonkar R, Rattray S, Sargaison M, Van Hemert O. The impact of volatility targeting. Journal of Portfolio Management. 2018 Sep 1;45(1):14–33.--------------------------------------------------------------------------------
+The Impact of Volatility Targeting by Campbell R. Harvey, Edward Hoyle, Russell Korgaonkar, Sandy Rattray, Matthew Sargaison, Otto Van Hemert :: SSRN (https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID3202923_code16198.pdf?abstractid=3175538)
+citeturn1129search1 [wordlim: 200] Published: 8.4 years ago; Crawled: 6 days ago; Duke University - Fuqua School of Business; National Bureau of Economic Research (NBER) ... Harvey, Campbell R. and Hoyle, Edward and Korgaonkar, Russell and Rattray, Sandy and Sargaison, Matthew and van Hemert, Otto, The Impact of Volatility Targeting (June 25, 2018). ... Download PDF Add Paper to My Library ... Tail Risk Targeting: Target VaR and CVaR Strategies
+
+# The Impact of Volatility Targeting
+
+28 Pages Posted: 17 May 2018 Last revised: 11 Jul 2018
+
+See all articles by Campbell R. Harvey
+
+## Campbell R. Harvey
+
+Duke University - Fuqua School of Business; National Bureau of Economic Research (NBER)
+
+## Edward Hoyle
+
+Man AHL
+
+## Russell Korgaonkar
+
+Man AHL
+
+## Sandy Rattray
+
+Man Group plc
+
+## Matthew Sargaison
+
+Man AHL
+
+## Otto Van Hemert
+
+affiliation not provided to SSRN
+
+Date Written: June 25, 2018
+
+### Abstract
+
+Recent studies show that volatility-managed equity portfolios realize higher Sharpe ratios than portfolios with a constant notional exposure. We show that this result only holds for “risk assets”, such as equity and credit, and link this to the so-called leverage effect for those assets. In contrast, for bonds, currencies, and commodities the impact of volatility targeting on the Sharpe ratio is negligible. However, the impact of volatility targeting goes beyond the Sharpe ratio: it reduces the likelihood of extreme returns, across all asset classes. Particularly relevant for investors, “left-tail” events tend to be less severe, as they typically occur at times of elevated volatility, when a target-volatility portfolio has a relatively small notional exposure. We also consider the popular 60-40 equity-bond “balanced” portfolio and an equity-bond-credit-commodity “risk parity” portfolio. Volatility scaling at both the asset and portfolio level improves Sharpe ratios and reduces the likelihood of tail events.
+
+Keywords: volatility, volatility targeting, balanced fund, risk parity, asset allocation, portfolio choice
+
+License Information
+
+The copyright holder has granted SSRN a license. All rights reserved. No reuse allowed without permission.
+
+JEL Classification: E32, E44, G11, G12, G15, G17
+
+Suggested Citation
+
+Harvey, Campbell R. and Hoyle, Edward and Korgaonkar, Russell and Rattray, Sandy and Sargaison, Matthew and van Hemert, Otto, The Impact of Volatility Targeting (June 25, 2018). Available at SSRN: https://ssrn.com/abstract=3175538 or http://dx.doi.org/10.2139/ssrn.3175538
+
+### Campbell R. Harvey (Contact Author)
+
+#### Duke University - Fuqua School of Business ( email )
+
+Box 90120
+Durham, NC 27708-0120
+United States
+919-660-7768 (Phone)
+
+HOME PAGE: http://www.duke.edu/~charvey
+
+#### National Bureau of Economic Research (NBER)
+
+1050 Massachusetts Avenue
+Cambridge, MA 02138
+United States
+
+### Edward Hoyle
+
+#### Man AHL ( email )
+
+Riverbank House
+2 Swan Lane
+London, EC4R 3AD
+United Kingdom
+
+### Russell Korgaonkar
+
+#### Man AHL ( email )
+
+Riverbank House
+2 Swan Lane
+London, EC4R 3AD
+United Kingdom
+
+### Sandy Rattray
+
+#### Man Group plc
+
+Riverbank House
+2 Swan Lane
+London, EC4R 3AD
+United Kingdom
+
+### Matthew Sargaison
+
+#### Man AHL ( email )
+
+Sugar Quay
+Lower Thames Street
+London, EC3R 6DU
+Great Britain
+
+### Otto Van Hemert
+
+#### affiliation not provided to SSRN
+
+
+### 22 References
+
+  1. T Andersen , T Bollerslev , F Diebold , P Labys
+
+Modeling and forecasting realized volatility
+
+Econometrica , volume 71 , issue 2 , p. --------------------------------------------------------------------------------
+The Impact of Volatility Targeting | Request PDF (https://www.researchgate.net/publication/325752936_The_Impact_of_Volatility_Targeting)
+citeturn1129search2 [wordlim: 200] Published: 8.8 years ago; Crawled: 2 months ago; # The Impact of Volatility Targeting ...   * Duke University ... Image: Request Full-text Paper PDF ... In recent years, the assessment of portfolios' risk through volatility measures has garnered significant attention (Brownlees and Gallo 2010), leading to the growing adoption of volatility conditional portfolios (Harvey et al.
+
+# The Impact of Volatility Targeting
+
+  * January 2018
+  * SSRN Electronic Journal
+
+DOI:10.2139/ssrn.3175538
+
+Authors:
+
+Campbell Harvey
+
+  * Duke University
+
+Edward Hoyle
+
+Edward Hoyle
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Russell Korgaonkar
+
+Russell Korgaonkar
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Sandy Rattray
+
+  * University College London
+
+Show all 6 authors Hide
+
+Image: Request Full-text Paper PDF
+
+Request full-text PDF
+
+To read the full-text of this research, you can request a copy directly from the authors.
+
+Image: ResearchGate Logo
+
+Discover the world's research
+
+  * 25+ million members
+  * 160+ million publication pages
+  * 2.3+ billion citations
+Join for free
+
+## No full-text available
+
+Image: Request Full-text Paper PDF
+
+To read the full-text of this research,
+you can request a copy directly from the authors.
+--------------------------------------------------------------------------------
+Author Page for Otto Van Hemert :: SSRN (https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=346474)
+citeturn1129search3 [wordlim: 200] Crawled: 5 days ago; ### The Impact of Volatility Targeting ... Harvey, Edward Hoyle, Russell Korgaonkar, Sandy Rattray, Matthew Sargaison and Otto Van HemertDuke University - Fuqua School of Business, Man Group plc - AHL Man Systematic Strategies, Man AHL, Man Group plc, AHL (Man Investments) and affiliation not provided to SSRN ...   * View PDF
+### The Impact of Volatility Targeting
+
+Number of pages: 28 Posted: 17 May 2018 Last Revised: 11 Jul 2018
+
+Campbell R. Harvey, Edward Hoyle, Russell Korgaonkar, Sandy Rattray, Matthew Sargaison and Otto Van Hemert
+
+Duke University - Fuqua School of Business, Man Group plc - AHL Man Systematic Strategies, Man AHL, Man Group plc, AHL (Man Investments) and affiliation not provided to SSRN
+
+Downloads 12,020
+
+Citation 20
+
+  * View PDF
+  * Download
+  * #### Abstract:
+
+Image: Loading...
+
+volatility, volatility targeting, balanced fund, risk parity, asset allocation, portfolio choice
+
+5.
+
+### The Best of Strategies for the Worst of Times: Can Portfolios be Crisis Proofed?
+
+Number of pages: 26 Posted: 31 May 2019
+
+Campbell R. Harvey, Edward Hoyle, Sandy Rattray, Matthew Sargaison, Dan Taylor and Otto Van Hemert
+
+Duke University - Fuqua School of Business, Man Group plc - AHL Man Systematic Strategies, Man Group plc, AHL (Man Investments), Numeric Investors and affiliation not provided to SSRN
+--------------------------------------------------------------------------------
+Effects of Volatility Targeting on Returns | PDF (https://www.scribd.com/document/694542792/P135-The-impact-of)
+citeturn1129search4 [wordlim: 200] Published: 8.0 years ago; Crawled: 2.6 years ago; This document summarizes a study examining the impact of volatility targeting across over 60 assets from 1926 to 2018. ... Harvey, Edward Hoyle, Russell Korgaonkar, Sandy Rattray, Matthew Sargaison and ... at Duke University in ... investment strategies at the portfolio is targeting a constant level effectively introduces some momentum into ... officer of the Man Group in on the increasing popularity of risk cally such a momentum strategy has per- ... the cross-sectional differences in the impact of volatility Our research shows it is a mistake to extrapolate this
+Under reasonable investor preferences, volatility targeting produces a thinner left tail, which is preferable to investors for a given level of return.
+
+# The Impact of Volatility Targeting
+
+Campbell R. Harvey, Edward Hoyle, Russell Korgaonkar, Sandy Rattray, Matthew Sargaison and
+Otto Van Hemert
+
+## JPM 2018, 45 (1) 14-33
+
+doi: [Link]
+[Link]
+This information is current as of November 1, 2018.
+
+Supplementary [Link]
+Material
+The Impact of Volatility
+Targeting
+Campbell R. Harvey, Edward Hoyle,
+Russell Korgaonkar, Sandy Rattray,
+Matthew Sargaison, and Otto Van Hemert
+
+O
+Campbell R. H arvey ne of the key features of vola- Although most research has concentrated
+is a professor of finance tility is that it is persistent, or on equity markets, we investigate the impact
+at Duke University in
+clusters. High volatility over of volatility targeting across more than 60
+Durham, NC, and an
+advisor to Man Group in the recent past tends to be fol- assets, with daily data beginning as early as
+London, UK. lowed by high volatility in the near future. ## Fall 2018 The Journal of Portfolio Management   15
+
+## Downloaded from [Link] by Campbell Harvey on November 1, 2018
+
+Treasury futures data from 1988, which will again allow rtunscaled = rt × k unscaled
+us to evaluate volatility estimates based on intraday data.
+We also explore credit returns, hedged with Treasuries, Notice that futures and forwards trade on margin,
+creating a long time series for an exposure that should so their returns are already essentially unfunded; thus, the
+resemble the synthetic CDX investment-grade index risk-free rate is not deducted. In addition, the Treasury-
+that is available today. To this end, we use the Bank of hedged credit returns are unfunded by construction.
+America Merrill Lynch U.S. Corporate Master Total To estimate volatility, we use the standard devia-
+Return index, and the hedging methodology follows tion of daily returns, with exponentially decaying
+Cook et al. (2017). weights to returns at different lags.8 We find similar
+We also use daily futures and forwards data for results when using equal weights to returns over a rolling
+That is,
+example, Hamill, Rattray, and Van Hemert (2016).22 In for other assets, such as fixed income, currencies, and
+Exhibit 20, we show that it is indeed the momentumness commodities, the effect of a simple volatility scaling on
+of volatility scaling that explains a large part of the the Sharpe ratio is negligible.
+cross-sectional variation in the Sharpe ratio improve- Although the Sharpe ratio is important, most
+ment when using volatility scaling for the various assets investors have broader investment objectives. We show
+considered. We find the shorter-term, one-month that volatility scaling has one unambiguous effect across
+momentum of returns to be most relevant here. Using assets and asset classes: It reduces the likelihood of
+a 20-day half-life for volatility scaling, the R 2 is 45%. extreme returns (and the volatility of volatility). In par-
+For a slower volatility estimate using a 90-day half-life, ticular, the lower probability of very negative returns
+the R 2 is even higher at 60%. (left-tail events) is valuable for investors.
+Although we provided a detailed historical account
+22
+Dachraoui (2018) also argues there is a link between the of the impact of volatility targeting across 60+ assets and
+presence of a leverage effect and the extent to which volatility
+targeting improves the performance for an asset.
+
+## Fall 2018 The Journal of Portfolio Management   31
+
+## Downloaded from [Link] by Campbell Harvey on November 1, 2018
+
+two multiasset portfolios, some topics are beyond the Asness, C., A. Frazzini, and L. Pedersen. 2012. “Leverage
+scope of this article. We will comment on three. Aversion and Risk Parity.” Financial Analysts Journal 68 (1):
+## 32   The Impact of Volatility Targeting Fall 2018
+
+## Downloaded from [Link] by Campbell Harvey on November 1, 2018
+
+——. 2003. “The Economic Value of Volatility Timing
+Using ‘Realized’ Volatility.” Journal of Financial Economics
+67 (3): 474–509.
+
+## Granger, N., D. Greenig, C. R. Harvey, S. Rattray, and
+
+D. Zou. 2014. “Rebalancing Risk.” Working paper, AHL.
+
+## Hamill, C., S. Rattray, and O. Van Hemert. “Trend Fol-
+
+lowing: Equity and Bond Crisis Alpha.” Working paper, Man
+AHL, 2016.
+
+## Hocquard, A., S. Ng, and N. Papageorgiou. 2013. “A
+
+Constant-Volatility Framework for Managing Tail Risk.”
+The Journal of Portfolio Management 39 (2): 28–40.
+
+## Moreira, A., and T. Muir. 2017. “Volatility Managed Portfo-
+
+lios.” The Journal of Finance 72 (4): 1611–1644.
+
+## Noureldin, D., N. Shephard, and K. Sheppard. 2012. “Multi-
+
+variate High-Frequency-Based Volatility (HEAVY) Models.”
+Journal of Applied Econometrics 27 (6): 907–933.
+
+## To order reprints of this article, please contact David Rowe at
+
+[Link]@[Link] or 646-891-2157.
+
+## Fall 2018 The Journal of Portfolio Management   33
+
+## Downloaded from [Link] by Campbell Harvey on November 1, 2018--------------------------------------------------------------------------------
+Campbell R. Harvey | Scholars@Duke profile: Scholarly Works (https://scholars.duke.edu/person/cam.harvey/scholarly-works)
+citeturn1129search5 [wordlim: 200] Crawled: today; [REDACTED_EMAIL] ... Journal article Research Policy · September 1, 2026 A decentralized exchange, or DEX, is an application deployed on a blockchain that allows investors to exchange digital assets. ... Our study provides a comprehensive empirical analysis of dynamic FX hedging strategies over se ... ... Journal article Journal of Portfolio Management · June 1, 2020 A mechanical rebalancing strategy, such as a monthly or quarterly reallocation toward fixed portfolio weights, is an active strategy. ... ### The Theory and Practice of Corporate Risk Management: Evidence from the Field ... ### The impact of volatility targeting ... Journal article Duke I&E Research Paper · March 31, 2017 Cite ... Journal article Cesifo Dice Report · January 1, 2017 We use industry valuation differentials across European countries to study the impact of membership in the European Union as well as the Eurozone on economic and financial integration. ... ### The Economic Implications of Corporate Financial Reporting
+### Alice’s adventures in Factorland: Three blunders that plague factor investing
+
+Journal article Journal of Portfolio Management · April 1, 2019 Full text Cite
+
+### A Census of the Factor Zoo
+
+Journal article · February 25, 2019 Cite
+
+### The Theory and Practice of Corporate Risk Management: Evidence from the Field
+
+Journal article Financial Management · December 1, 2018 We survey more than 1,100 risk managers from around the world regarding their risk management policies. We find evidence consistent with some traditional theories of risk management, but not with all. We then study “why” or “why not” firms hedge and find t ... Full text Cite
+
+### How Blockchain Will Change Marketing As We Know It
+
+Journal article · September 29, 2018 Cite
+
+### The impact of volatility targeting
+
+Journal article Journal of Portfolio Management · September 1, 2018 Full text Cite
+--------------------------------------------------------------------------------
+Author Page for Campbell R. Harvey :: SSRN (https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=16198)
+citeturn1129search6 [wordlim: 200] Crawled: today; Harvey ...   * View PDF ... Machine Learning, Data Science, Data Mining, Backtesting, Overfitting, Interpretable Classification, Interpretable Policy Design, Trading, Strategies, Anomalies, Selection Bias, Research Protocol ... ### The Impact of Volatility Targeting ... Journal of Financial Economics (JFE), Forthcoming, 27th Annual Conference on Financial Economics and Accounting Paper, Duke I&E Research Paper No.
+
+Downloads 13,146
+
+Citation 16
+
+  * View PDF
+  * Download
+  * #### Abstract:
+
+Image: Loading...
+
+Machine Learning, Data Science, Data Mining, Backtesting, Overfitting, Interpretable Classification, Interpretable Policy Design, Trading, Strategies, Anomalies, Selection Bias, Research Protocol
+
+15.
+
+### The Impact of Volatility Targeting
+
+Number of pages: 28 Posted: 17 May 2018 Last Revised: 11 Jul 2018
+
+Campbell R. Harvey, Edward Hoyle, Russell Korgaonkar, Sandy Rattray, Matthew Sargaison and Otto Van Hemert
+
+Duke University - Fuqua School of Business, Man Group plc - AHL Man Systematic Strategies, Man AHL, Man Group plc, AHL (Man Investments) and affiliation not provided to SSRN
+
+Downloads 12,056
+
+Citation 20
+
+  * View PDF
+  * Download
+  * #### Abstract:
+
+Image: Loading...
+
+volatility, volatility targeting, balanced fund, risk parity, asset allocation, portfolio choice
+
+16.
+
+### Corporate Culture: Evidence from the Field
+--------------------------------------------------------------------------------
+The Impact of Volatility Targeting | Portfolio Management Research (https://www.pm-research.com/content/iijpormgmt/45/1/14)
+citeturn1129search7 [wordlim: 200] Crawled: 1.3 years ago; # The Impact of Volatility Targeting ... Harvey ... Download issue PDF To download content, you need to upgrade your trial to full subscription.
+
+# The Impact of Volatility Targeting
+
+### 
+
+  * Campbell R. Harvey
+  * Edward Hoyle
+  * Russell Korgaonkar
+  * Sandy Rattray
+  * Matthew Sargaison
+  * Otto Van Hemert
+
+The Journal of Portfolio Management  Fall 2018, 45  ( 1) 14 - 33
+
+DOI: 10.3905/jpm.2018.45.1.014
+
+  *   *   * The Journal of Portfolio Management Vol 45 Issue 1
+
+Volume 45, Issue 1 Fall 2018
+
+Download issue PDF To download content, you need to upgrade your trial to full subscription. Please contact your account manager to do this.
+--------------------------------------------------------------------------------
+The Impact of Volatility Targeting | Man Group (https://www.man.com/insights/the-impact-of-volatility-targeting)
+citeturn1129search8 [wordlim: 200] Crawled: today; While most of the research has concentrated on equity markets, we investigate the impact of volatility targeting across more than 60 assets, with daily data from 1926. ... Risk assets exhibit a so-called leverage effect, i.e., a negative relation between returns and volatility, and so volatility scaling effectively introduces some short-term momentum into strategies. ... Harvey Investment Strategy Advisor, Man Group Russell Korgaonkar CIO, Systematic, Man Group and CIO, Man AHL
+  * In contrast, for bonds, currencies, and commodities the impact on the Sharpe ratio is negligible.
+
+## Impact on likelihood of tail events
+
+  * Volatility targeting reduces the likelihood of extreme returns for all asset classes.
+  * Importantly, “left-tail” events tend to be less severe, as they typically occur at times of elevated volatility, when a target-volatility portfolio has a scaled-down notional exposure.
+
+Download
+
+## Introduction
+
+One of the key features of volatility is that it is persistent, or “clusters”. High volatility over the recent past tends to be followed by high volatility in the near future. This observation underpins Engle’s (1982) pioneering work on ARCH models.^{1} In this paper, we study the risk and return characteristics of assets and portfolios that are designed to counter the fluctuations in volatility. We achieve this by leveraging the portfolio at times of low volatility, and scaling down at times of high volatility. Effectively the portfolio is targeting a constant level of volatility, rather than a constant level of notional exposure. Conditioning portfolio choice on volatility has attracted considerable recent attention. The financial media has zoomed in on the increasing popularity of risk parity funds.^{2} In recent work, Moreira and Muir (2017) find that volatility-managed portfolios increase the Sharpe ratios in the case of the broad equity market and a number of dynamic, mostly long-short stock strategies.
+
+While most of the research has concentrated on equity markets, we investigate the impact of volatility targeting across more than 60 assets, with daily data from 1926. We find that Sharpe ratios are higher with volatility scaling for risk assets (equities and credit), as well as for portfolios that have a substantial allocation to these risk assets, such as a balanced (60-40 equity-bond) portfolio and a risk parity (equity-bond-credit-commodity) portfolio. Risk assets exhibit a so-called leverage effect, i.e., a negative relation between returns and volatility, and so volatility scaling effectively introduces some short-term momentum into strategies. The analyses for the multi-asset balanced and risk parity portfolios are covered in Section 5. In Section 6, we discuss the leverage effect to provide further insights as to why the Sharpe ratio of risk assets is improved by volatility scaling. We offer some concluding remarks in the final section and comment on methods other than volatility scaling that may improve the Sharpe ratio and left-tail risk of a long-only portfolio.
+
+Source:
+1. ARCH is autoregressive conditional heteroscedasticity. Robert Engle shared the 2003 Nobel Prize in Economics “for methods of analyzing economic time series with time-varying volatility (ARCH)” (https://www.nobelprize.org).
+2 See e.g. the August 6, 2017 Wall Street Journal article “What is risk parity?”, https://www.wsj.com/articles/what-is-risk-parity-1502071260.
+3 Under the common assumption of a concave utility function, and for a given Sharpe ratio, also a thinner right tail is preferred. A thinner left tail is more relevant though, as large negative returns have a disproportionately large effect on an investor’s utility.
+
+Download
+
+For further clarification on the terms which appear here, please visit our Glossary page.
+
+#### Author(s)
+
+Campbell R. Harvey Investment Strategy Advisor, Man Group Russell Korgaonkar CIO, Systematic, Man Group and CIO, Man AHL--------------------------------------------------------------------------------
+The Impact of Volatility Targeting (2018) | Campbell R. Harvey | 61 Citations (https://scispace.com/papers/the-impact-of-volatility-targeting-180iekbhiy)
+citeturn1129search10 [wordlim: 200] Published: 8.0 years ago; Crawled: last month; # The Impact of Volatility Targeting ... Harvey,Edward Hoyle,Russell Korgaonkar,Sandy Rattray,Matthew Sargaison,Otto Van Hemert +5 more ... PDF ... In contrast, for bonds, currencies, and commodities, the impact of volatility targeting on the Sharpe ratio is negligible.
+
+Journal Article10.3905/JPM.2018.45.1.014
+
+# The Impact of Volatility Targeting
+
+Campbell R. Harvey,Edward Hoyle,Russell Korgaonkar,Sandy Rattray,Matthew Sargaison,Otto Van Hemert +5 more
+
+- 31 Oct 2018
+
+ - The Journal of Portfolio Management 
+
+ - Vol. 45, Iss: 1, pp 14-33
+
+PDF
+
+TL;DR: In this article, the authors show that volatility-managed equity portfolios realize higher Sharpe ratios than portfolios with a constant notional exposure, and they link this finding to the so-called leverage effect for those assets.
+
+read more
+
+Abstract: Recent studies show that volatility-managed equity portfolios realize higher Sharpe ratios than portfolios with a constant notional exposure. The authors show that this result only holds for risk assets, such as equity and credit, and they link this finding to the so-called leverage effect for those assets. In contrast, for bonds, currencies, and commodities, the impact of volatility targeting on the Sharpe ratio is negligible. --------------------------------------------------------------------------------
+The Impact of Volatility Targeting | Request PDF (https://www.researchgate.net/publication/328870981_The_Impact_of_Volatility_Targeting)
+citeturn1129search11 [wordlim: 200] Crawled: last month; # The Impact of Volatility Targeting ... Harvey ... Image: Request Full-text Paper PDFTo read the full-text of this research,
+
+# The Impact of Volatility Targeting
+
+  * November 2018
+  * The Journal of Portfolio Management 45(1):14-33
+
+DOI:10.3905/jpm.2018.45.1.014
+
+Authors:
+
+Campbell R. Harvey
+
+Campbell R. Harvey
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Edward Hoyle
+
+Edward Hoyle
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Russell Korgaonkar
+
+Russell Korgaonkar
+
+  * This person is not on ResearchGate, or hasn't claimed this research yet.
+
+Sandy Rattray
+
+  * University College London
+
+Show all 6 authors Hide
+
+## Abstract
+
+Recent studies show that volatility-managed equity portfolios realize higher Sharpe ratios than portfolios with a constant notional exposure. The authors show that this result only holds for risk assets, such as equity and credit, and they link this finding to the so-called leverage effect for those assets. In contrast, for bonds, currencies, and commodities, the impact of volatility targeting on the Sharpe ratio is negligible. However, the impact of volatility targeting goes beyond the Sharpe ratio: It reduces the likelihood of extreme returns across all asset classes. Particularly relevant for investors, left-tail events tend to be less severe because they typically occur at times of elevated volatility, when a target-volatility portfolio has a relatively small notional exposure. We also consider the popular 60–40 equity–bond balanced portfolio and an equity–bond–credit–commodity risk parity portfolio. Volatility scaling at both the asset and portfolio level improves Sharpe ratios and reduces the likelihood of tail events.
+
+
+## No full-text available
+
+Image: Request Full-text Paper PDF
+
+To read the full-text of this research,
+you can request a copy directly from the authors.
+
+Request full-text PDF
+
+## Citations (82)
+
+## References (0)
+--------------------------------------------------------------------------------
+Volatility&#x02010;Managed Portfolios (https://amoreira2.github.io/alan-moreira.github.io/VolPortfolios_published.pdf)
+citeturn1129view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 34; Source: open({"ref_id":"https://amoreira2.github.io/alan-moreira.github.io/VolPortfolios_published.pdf","lineno":null}); Total lines: 1394
+

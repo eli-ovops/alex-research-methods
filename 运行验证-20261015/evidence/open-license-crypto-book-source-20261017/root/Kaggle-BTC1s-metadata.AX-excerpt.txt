@@ -1,0 +1,93 @@
+Browser tab: 3, Title: "High Frequency Crypto Limit Order Book Data", URL: "https://www.kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1sec.csv".
+0 AXWebArea High Frequency Crypto Limit Order Book Data, URL: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1sec.csv
+				5 link Description: Skip to content, Value: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1sec.csv#site-content
+									23 link (collapsed) Description: Data Hub, Value: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1sec.csv#, Secondary Actions: Expand
+									28 link (collapsed) Description: More on Kaggle, Value: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1sec.csv#, Secondary Actions: Expand
+					33 link Description: Login, Value: kaggle.com/account/login?phase=startSignInTab&returnUrl=%2Fdatasets%2Fmartinsn%2Fhigh-frequency-crypto-limit-order-book-data
+					34 link Description: Sign Up, Value: kaggle.com/account/login?phase=startRegisterTab&returnUrl=%2Fdatasets%2Fmartinsn%2Fhigh-frequency-crypto-limit-order-book-data
+				44 heading High Frequency Crypto Limit Order Book Data, Value: 1
+					45 text High Frequency Crypto Limit Order Book Data
+					48 heading High Frequency Crypto Limit Order Book Data, Value: 2
+						49 text High Frequency Crypto Limit Order Book Data
+				60 heading About Dataset, Value: 2
+					63 heading Context, Value: 3
+					65 text The dataset was created from raw order book messaged acquired by subscribing to the websocket of coinbase.com. The order books where then aggregated to construct snapshots of the limit order book at frequencies of 1 second, 1 minute and 5 minutes.
+					66 heading Content, Value: 3
+					68 text The dataset contains roughly 12 days of limit order book data for Bitcoin (BTC), Ethereum (ETH) and Cardano (ADA). The data contains information for the 15 best bid / ask price levels in the order book.
+					69 heading Features, Value: 3
+					71 text midpoint = the midpoint between the best bid and the best ask
+					72 text spread = the difference between the best bid and the best ask bids_distance_x = the distance of bid level x from the midprice in %
+					73 text asks_distance_x = the distance of ask level x from the midprice in % bids_market_notional_x = volume of market orders at bid level x
+					74 text bids_limit_notional_x = volume of limit orders at bid level x
+					75 text bids_cancel_notional_x = volume of canceled orders at bid level x asks_market_notional_x = volume of market orders at ask level x
+					76 text asks_limit_notional_x = volume of limit orders at ask level x
+					77 text asks_cancel_notional_x = volume of canceled orders at ask level x
+					78 heading Acknowledgements, Value: 3
+				83 heading Usability, Value: 2
+				88 heading License, Value: 2
+				91 heading Expected update frequency, Value: 2
+				94 heading Tags, Value: 2
+					103 heading BTC_1sec.csv(1.76 GB), Value: 2
+						104 text BTC_1sec.csv ( 1.76 GB )
+						913 tab (selectable, settable, boolean) Description: Column, 3 of 3, Value: 0
+					914 button Download CSV with selected columns
+					915 pop up button (collapsed) Description: Change displayed columns, Secondary Actions: Expand
+							917 text 10  of  156  columns
+						925 button calendar_today system_time
+							927 text system_time
+						928 button grid_3x3 midpoint
+							930 text midpoint
+						931 button grid_3x3 spread
+							933 text spread
+						940 button grid_3x3 bids_distance_0
+							942 text bids_distance_0
+						943 button grid_3x3 bids_distance_1
+							945 text bids_distance_1
+						946 button grid_3x3 bids_distance_2
+							948 text bids_distance_2
+						949 button grid_3x3 bids_distance_3
+							951 text bids_distance_3
+													1223 text DateTime
+					110 heading Data Explorer, Value: 2
+						113 button View version history
+							114 text Version 
+						122 container BTC_1sec.csv (1.76 GB)
+							123 text BTC_1sec.csv
+					128 heading Summary, Value: 2
+					135 button (collapsed) Description: Expand 1404 columns, Secondary Actions: Expand
+						136 container Collapse 1404 columns
+						139 text 1404 columns
+				140 heading See what others are saying about this dataset, Value: 2
+				142 heading What have you used this dataset for?, Value: 3, ID: used-dataset-for
+				157 heading How would you describe this dataset?, Value: 3, ID: describe-dataset
+				176 heading Metadata, Value: 2
+					180 heading Collaborators, Value: 3
+					184 heading Authors, Value: 3
+					188 heading Coverage, Value: 3
+					192 heading DOI Citation, Value: 3
+					196 heading Provenance, Value: 3
+					200 heading License, Value: 3
+					204 heading Expected Update Frequency, Value: 3
+				207 heading Activity Overview, Value: 2
+				211 heading Views, Value: 3
+				373 heading Downloads, Value: 3
+					514 text downloading
+				515 heading Engagement, Value: 3
+				521 heading Comments, Value: 3
+				527 heading Top Contributors, Value: 3
+					534 heading Detail View, Value: 3
+					538 heading Views, Value: 4
+					705 heading Downloads, Value: 4
+				852 heading Related Notebooks, Value: 2
+						857 link Value: kaggle.com/code/martinsn/starter-high-frequency-bitcoin-forecasting, Description: Starter: High Frequency Bitcoin Forecasting More options for this notebook Updated 5 years ago High Frequency Crypto Limit Order Book Data
+						864 link Value: kaggle.com/code/donzhen/fork-of-coinbase-hft-v1, Description: Fork of Coinbase_HFT_v1 More options for this notebook Updated 4 years ago High Frequency Crypto Limit Order Book Data
+						871 link Value: kaggle.com/code/nikox2980/finai-llm-expert, Description: FinAI_LLM_Expert More options for this notebook Updated a year ago High Frequency Crypto Limit Order Book Data+2
+				877 heading You May Also Like, Value: 2
+					880 container Cryptocurrency Real-Time Market Data - Bybit
+						881 link Value: kaggle.com/datasets/denisgorobets/cryptocurrency-real-time-market-data-bybit, ID: 9089426, Description: Cryptocurrency Real-Time Market Data - Bybit More options for this dataset Denis Gorobets Usability 8.2 · Updated 10 months ago 1 File (other) · 4 GB · 73 downloads
+						888 link Value: kaggle.com/datasets/fast42/btcusdt-l2-order-book-binance-128-188, ID: 8291616, Description: BTCUSDT L2 Order Book (Binance) - (12/8 - 18/8) More options for this dataset Fast42 Usability 4.7 · Updated a year ago 7 Files (CSV) · 55 kB · 182 downloads
+						895 link Value: kaggle.com/datasets/marvingozo/hyperliquid-btc-high-frequency-microstructure, ID: 10445757, Description: Hyperliquid BTC High-Frequency Microstructure More options for this dataset Marvin Gozo Usability 10.0 · Updated 5 months ago 28 Files (other) · 60 GB · 1,154 downloads
+						902 link Value: kaggle.com/datasets/peterbowman/crypto-data, ID: 9640706, Description: Crypto Data More options for this dataset Peter Bowman Usability 10.0 · Updated 7 months ago 21 Files (CSV) · 2 GB · 285 downloads
+		908 container BTC_1sec.csv (1.76 GB), ID: :re:
+			909 text BTC_1sec.csv (1.76 GB)
+The focused UI element is 122 container BTC_1sec.csv (1.76 GB)

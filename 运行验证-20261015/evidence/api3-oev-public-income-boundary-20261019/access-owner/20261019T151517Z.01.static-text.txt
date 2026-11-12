@@ -1,0 +1,32 @@
+Skip to content
+Search
+K
+Main Navigation
+Home
+dApps
+OEV
+Curation
+Appearance
+Menu
+Return to top
+Sidebar Navigation
+Overview
+In depth
+Getting started
+Data feeds
+MEV with Signed APIs
+On this page
+OEV → In Depth
+Getting started ​
+To dive deep into OEV, there are two key parts to understand:
+Data feeds
+- Focuses on the underlying smart contract architecture and explain how OEV is possible on the lowest level.
+MEV with Signed APIs
+- Explains how to utilize the public API3 signed data endpoints for the delayed data to start searching.
+Pager
+Previous page
+Overview
+Next page
+Data feeds
+Released under the MIT License.
+Copyright © 2019-present API3 Foundation

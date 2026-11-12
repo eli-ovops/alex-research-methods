@@ -1,0 +1,431 @@
+When the insiders and the news disagree: a first look at the cross-signal (https://tommijohnsen.substack.com/p/when-the-insiders-and-the-news-disagree)
+citeturn1073search0 [wordlim: 200] Published: 4 months ago; Crawled: 2 weeks ago; Tommi Johnsen, PhD and Svetlana Shasharina, PHD ... This post reports a first look at that question using twelve days of data from a production pipeline that emits both signals on a common ticker-day grid. ... The news-sentiment signal is itself a layered construct involving two text models, multiple aggregation steps, and tier classification that this post collapsed for simplicity.
+# Tommi Johnsen, PhD
+
+# When the insiders and the news disagree: a first look at the cross-signal
+
+Tommi Johnsen, PhD and Svetlana Shasharina, PHD
+
+Jun 08, 2026
+
+# When the insiders and the news disagree: a first look at the cross-signal
+
+Tommi Johnsen and Svetlana Shasharina
+
+## What this is about
+
+Two different sources each tell you something about where a stock is going. The first is insider trading filings: SEC Form 4, which executives, directors, and large shareholders are required to submit within two business days of buying or selling shares in their own company. The second is the news cycle: analyst reports, earnings coverage, breaking stories. Each source has its own academic literature, its own track record, and its own well-known failure modes. What is less studied is what happens when they disagree. When the CEO is buying their own stock at the moment the financial press is turning bearish on the company, which side is right?
+
+This post reports a first look at that question using twelve days of data from a production pipeline that emits both signals on a common ticker-day grid. 
+All transactions explicitly executed under a Rule 10b5-1 trading plan are excluded throughout. These are pre-announced trading schedules that strip the timing decision from the insider, and the academic literature is unambiguous that they carry minimal signal.
+
+## What “news sentiment” means here
+
+The pipeline reads news articles about each of 536 covered companies each day and runs them through two text-sentiment models: Claude (a large language model) and FinBERT (a domain-specific financial sentiment classifier). Each model produces a positive / negative / neutral label per article, which is aggregated to a per-ticker daily sentiment label.
+
+A “news directional change” is detected when a ticker’s sentiment label flips between yesterday and today. These changes are stratified into tiers by conviction. The highest-conviction tier is when both Claude and FinBERT, two independent models with different architectures and training data, agree on the flip. The next tier is when only one of them flipped. The divergent insider-bullish cell should be the strongest of the four — stronger than even the convergent bullish cell.
+
+These hypotheses make different predictions. They are testable; that is the point.
+
+## What the data shows
+
+Over twelve days of pipeline runs (May 19 through June 2, 2026), there were 91 ticker-days where both a Form 4 signal and a news directional change fired on the same ticker. Distributed across the four cells:
+
+Figure 1. Three-window excess returns by cell of the contingency table. Prior-day, same-day, and next-day excess returns (gray, navy, green respectively) for each of the four joint signal cells, May 19 – June 2, 2026, 536-ticker universe.
+
+Three observations from this table, in increasing order of confidence.
+
+The divergent insider-bullish cell has the highest next-day excess return of any of the four cells (+2.46%). Seven observations is still a small sample, but the magnitude is large enough that it is not noise. This is the cell where insiders are buying their own stock with their own money at the same time that the news cycle is turning negative; the informed-insider hypothesis predicts exactly this pattern. The original two tickers driving the result, WGS (a small-cap genetic testing company, where a director bought $60M) and UPST (a consumer lending platform, where a director bought a smaller amount), have continued to produce strong forward returns when they reappear: WGS posted +4.50% and +2.89% next-day excess on its two appearances, UPST +2.59%. A new pattern in this expanded window is SHAK, which has now appeared three times in the divergent cell as a director kept buying against repeated bearish news flips; the forward returns there have been mixed (−1.29%, +3.60%, and one event from June 2 still resolving), which is what the persistence of insider conviction looks like at the level of individual stocks rather than cell averages. Verdict: this favors the informed-insider hypothesis.
+
+--------------------------------------------------------------------------------
+When Two Models Agree, Pay Attention (https://tommijohnsen.substack.com/p/when-two-models-agree-pay-attention)
+citeturn1073search1 [wordlim: 200] Published: 7 months ago; Crawled: last month; ### Five signals where daily news and earnings transcripts both point the same way — and five where the picture is most concerning Tommi Johnsen and Svetlana Shasharina March 2026 Not investment advice ... Its January 30 earnings call featured management language that was substantially more cautious than the prior trend predicted enough to trigger a WATCH signal with a surprise of −2.6, well into the territory where the model would label it SELL if guidance and EPS data supported it.
+
+# When Two Models Agree, Pay Attention
+
+### Five signals where daily news and earnings transcripts both point the same way — and five where the picture is most concerning Tommi Johnsen and Svetlana Shasharina March 2026 Not investment advice
+
+Mar 18, 2026
+
+We have been running two completely independent experiments on the same group of tech stocks. One of us built a pipeline that reads daily news headlines and classifies them using AI.
+
+Thanks for reading! Subscribe for free to receive new posts and support my work.
+
+The other built a model that scores quarterly earnings calls by counting the specific financial words management uses, no AI, just arithmetic applied to a carefully chosen vocabulary list.
+
+The first model, the Hybrid News Flow Pipeline, asks: is today’s news about this company positive or negative, and does that predict whether the stock rises tomorrow?
+
+The second, the Sentiment Surprise Model, asks: was management’s tone on their last earnings call more or less optimistic than their prior trend predicted, and by how much?
+
+Different data.
+
+Different tools.
+
+Different frequencies, one daily, one quarterly.
+
+We built them separately and compared notes.
+
+Out of 87 IT sector stocks where both models produce a signal, they agree on the direction in 14 cases. That number is not large, but the agreement is meaningful precisely because it is hard to achieve: two orthogonal methods, pointing the same way, is stronger evidence than either alone.
+
+This post covers the five clearest positive agreements and the five most cautionary signals in the data. The full methodology and all 87 tickers are in our working paper.
+
+Two numbers you will see throughout this post
+
+Each ticker card below reports two metrics, one from each model. Here is what they mean in plain terms.
+
+News flow r (Pearson correlation)
+
+r measures how consistently the direction of a company’s daily news predicted whether its stock rose or fell the following day, across all trading days in the observation window. It runs from −1 to +1.
+
+r = +0.40 Strong positive: positive news days reliably preceded gains
+
+r = +0.10 Weak positive: mild directional tendency
+
+r = 0.00 No relationship: news gave no predictive information
+
+r = −0.40 Strong negative: positive news days preceded losses (anti-signal)
+
+Earnings surprise (sentiment surprise score)
+
+The earnings surprise measures whether management’s tone on their most recent quarterly call was more or less optimistic than their prior trend predicted. It works like the EPS surprise concept you may already know, except instead of measuring actual earnings vs. analyst estimates, it measures actual management tone vs. the tone the model expected based on the prior two quarters.
+
+The full analysis, including all 87 tickers, complete methodology, and all definitions, is in our working paper. We make no investment recommendations. These are observations about a specific observation window, from two models that have not been fully backtested against independent periods. Treat them as hypotheses, not conclusions.
+
+Svetlana Shasharina & Tommi Johnsen · March 2026
+
+Working paper available at: [link]. All results are for research purposes only and do not constitute investment advice.--------------------------------------------------------------------------------
+Addendum: five more weeks of data (https://tommijohnsen.substack.com/p/addendum-five-more-weeks-of-data)
+citeturn1073search2 [wordlim: 200] Published: last month; Crawled: 3 weeks ago; # Addendum: five more weeks of data### An update to “Does AI Still Read the News Better Than the Market?”Tommi Johnsen, PhD and Svetlana Shasharina, PHD
+# Tommi Johnsen, PhD
+
+# Addendum: five more weeks of data
+
+### An update to “Does AI Still Read the News Better Than the Market?”
+
+Tommi Johnsen, PhD and Svetlana Shasharina, PHD
+
+Sep 19, 2026
+
+1
+
+Share
+
+When we published that piece we said a re-test was scheduled and that we would report it whichever way it came out. It has now run, on data through 18 September. Here is what it found, and what it changes.
+
+The short version. On all the data together the result is stronger and cleaner than what we published. On the five weeks of genuinely new data considered alone, the size of the effect held up but the window was too short for our own test of it to say anything either way. And one part of the claim turns out to have been doing no work at all, so we are dropping it.
+
+## The result on more data
+
+The original piece rested on six weeks. There are now roughly eleven.
+
+The next-day gap for well-covered companies, measured three ways: the original window alone, all the data together, and the new data alone. 
+## What replicated, and what didn’t
+
+The weekend finding replicated everywhere — in all three windows, including the new data alone. News published while the market is open shows a large same-day gap; news published over a weekend shows none. It remains our most robust result, and the strongest hint that much of what we measure on the day itself is journalism describing a move rather than news preceding one.
+
+The same-day effect persists and, if anything, grows. Still untradeable.
+
+The second-day reversal holds across all the data and is still concentrated in the largest companies rather than the small illiquid ones, so it is not a mechanical artifact. On the new data alone it is too noisy to judge.
+
+The stricter of our two scoring prompts reads the same-day market better than the standard one — that result strengthened and is now clear. On the next day, the edge we thought we might be seeing has gone entirely. We are not switching prompts.
+
+One thing we checked and cleared. Our scoring became noticeably more cautious over the summer, which would be alarming if the model or the instructions had changed underneath us. --------------------------------------------------------------------------------
+A Day Is Now What a Decade Used to Be (https://tommijohnsen.substack.com/p/a-day-is-now-what-a-decade-used-to)
+citeturn1073search3 [wordlim: 200] Published: 5 months ago; Crawled: 2 weeks ago; Tommi Johnsen, PhD and Svetlana Shasharina, PHD ... The signal that academics measure, the correlation between a positive label at time T and a positive return at T+1, exists in the gap between when the news arrives and when the analytical chain finishes processing it. ... That would explain why they look the way they do in our data, not because the news is uninformative but because it has been priced before we measured it.
+
+# A Day Is Now What a Decade Used to Be
+
+### How AI is compressing market efficiency, and what it does to the sentiment signal
+
+Tommi Johnsen, PhD and Svetlana Shasharina, PHD
+
+May 11, 2026
+
+Here is a question we have been circling for a while, and that the financial sentiment literature has not asked sharply enough.
+
+
+Why does sentiment predict returns at all?
+
+The textbook answer is that markets are slow. A positive headline drops at 4:01 PM. By 4:30, sell-side analysts at maybe a dozen banks are scrambling to update their models. By 6 PM, three of them have published preliminary notes. By 9 AM the next day, the buy-side has read those notes, decided, and placed orders. By close on day one, the price reflects most of the new information.
+
+The signal that academics measure, the correlation between a positive label at time T and a positive return at T+1, exists in the gap between when the news arrives and when the analytical chain finishes processing it. Mechanistically, it is a measurement of how long the chain takes.
+# What replaces the signal
+
+The genuinely unsettling possibility is not that sentiment stops working.
+
+It is that sentiment-as-signal is replaced by something we do not yet have the vocabulary for.
+
+Consider what “news” actually is when every major buy-side desk is running an LLM agent that reads, classifies, and recommends action on every public communication in real time. The headline arrives. It is processed by ten thousand instances of Claude or its competitors at fifty institutions, each instance configured slightly differently but trained on overlapping corpora. The recommendations converge within minutes. The trades execute within seconds of the recommendations. The price moves before any human has read the article.
+
+In this world, the lag+1 sentiment signal does not just shrink. It inverts.
+
+The headline at 9 AM is already in the price by 9:05. By close on the same day, the sentiment-positive event has produced its full price response, and the lag+1 return measured the following day is whatever happens after the AI consensus has already played out. --------------------------------------------------------------------------------
+Does AI Still Read the News Better Than the Market? (https://tommijohnsen.substack.com/p/does-ai-still-read-the-news-better)
+citeturn1073search4 [wordlim: 200] Published: 2 months ago; Crawled: last month; Tommi Johnsen, PhD and Svetlana Shasharina, PHD ... A well-known finance paper showed that an AI model could read a news headline about a company and say, better than chance, which way the stock would move. ... We tested that prediction with 2026 data, a different AI model, and about 850 US companies. ... A real signal has to beat both. ... We are deliberately not putting our numbers next to theirs and calling it a replication.
+# Tommi Johnsen, PhD
+
+# Does AI Still Read the News Better Than the Market?
+
+### A 2026 test of a well-known finding — and why it only works when there is enough news to read
+
+Tommi Johnsen, PhD and Svetlana Shasharina, PHD
+
+Aug 11, 2026
+
+4
+
+Share
+
+## The short version
+
+A well-known finance paper showed that an AI model could read a news headline about a company and say, better than chance, which way the stock would move. The same paper predicted the effect would fade as more traders started using the same tools.
+
+Thanks for reading! Subscribe for free to receive new posts and support my work.
+
+We tested that prediction with 2026 data, a different AI model, and about 850 US companies. The effect has not faded. But it only appears for companies with enough news coverage that day for the score to mean anything — and our own scoring formula had been obscuring that, because it treated a company with one positive headline exactly like a company with twenty.
+The other shuffles across companies within a day, which destroys which company the news was about while keeping the day’s overall market mood.
+
+A real signal has to beat both. This one does, roughly four scrambled runs in a thousand did as well.
+
+## 6. How this compares to the original study
+
+Both studies scaled so that their own first trading day’s effect equals 100.
+
+The shapes agree on the first two days: a large immediate reaction, a small residue the next day. They part company on the third day, where their effect has faded to nothing and ours turns negative.
+
+We are deliberately not putting our numbers next to theirs and calling it a replication. They had finer data than we do: the exact minute each article appeared, and opening as well as closing prices. That lets them separate the overnight jump from the trading day that follows. Our measurement blends the two. The agreement here is in the shape, not the digits.
+
+The finding that matters is simpler, and it is worth stating plainly: two years further into the AI adoption that was supposed to erase this effect, with a different model and a different universe of companies, the effect is still there.
+
+## 7. What we are not claiming
+
+That this makes money. The gaps we measure are small enough that ordinary trading costs would likely consume them. The original authors found their own, larger effect unprofitable once costs reached twenty basis points per round trip. We have not built a strategy, tested one, or traded one.
+
+That the news causes the move. Our weekend result raises a real possibility that much of what we measure is coverage following a price move rather than news preceding it. We have a test for this but have not yet run it. Stay tuned.
+
+That six weeks settles anything. This is one window. We have a re-test scheduled for September, and we will report the results whichever way they come out.
+
+## 8. What comes next
+
+The most valuable change is also the most obvious one: separating news that arrives while the market is closed from news that arrives while it is open. Those are different situations, and we currently blend them. It is the difference between “the market has not yet seen this” and “the market saw this an hour ago.”
+
+Beyond that: testing whether the effect differs by the kind of news, for example earnings figures behave differently from analyst opinions and insider-trading disclosures. The original study found that insider transactions were the single category markets absorb most slowly, which makes it an attractive next analysis.
+
+## The bottom line
+
+If you take three things away from this piece, let them be these.
+
+The signal is still there. In 2026, with a different model and a different set of companies, news sentiment still predicts a small piece of the next day’s returns. The decay the original authors expected has not yet arrived.
+
+But only where there is enough news. One headline is an anecdote; three or more begin to be a signal. The next-day effect lives entirely in the well-covered names. Our own averaging had been hiding that from us.
+
+And it is knowledge, not income. The gaps are real but small, and ordinary trading costs would likely swallow them. What survives is the more interesting claim: markets still seem to need about a day to fully digest the news they are given.
+
+Thank you for reading. If you spot a hole in the reasoning, or have a suggestion for what we should test next, comments are open and we would be glad to hear from you. The September re-test is already on the calendar.
+
+A fuller version of this analysis, including the statistical detail, the alternative treatments we tried, and the errors we found and corrected along the way, is available for readers who want it — just ask.
+
+
+ | A guest post by
+Svetlana Shasharina, PHDA physicist, yogi being.--------------------------------------------------------------------------------
+The Market Reads the News. Do You? - Tommi Johnsen, PhD (https://tommijohnsen.substack.com/p/th-market-reads-the-news-do-you)
+citeturn1073search5 [wordlim: 200] Published: 10 months ago; Crawled: 4 days ago; # The Market Reads the News. ... Tommi Johnsen, PhD ... Our focus is methodological: how to go from raw text to a stable daily signal that can be meaningfully aligned with prices and returns. ... Source: Shasharina and Johnsen, 2025.
+
+# The Market Reads the News. Do You?
+
+Tommi Johnsen, PhD
+
+Dec 16, 2025
+
+Every trading day, thousands of financial headlines sweep across screens:
+
+“Company X beats expectations.”
+“Margins under pressure.”
+“Analysts turn cautious.”
+
+
+Prices move. Sometimes sharply. Sometimes not at all. What’s striking is not that markets react to news, that’s obvious, but that they react before any human could possibly read everything. This raises a deceptively simple question:
+
+Can we formalize the narrative flow of the market into a measurable signal?
+
+Our upcoming series is about doing exactly that, without promising magic.
+
+And by the way: I’m now partnering with Svetlana Shasharina, PhD (physics) in producing and publishing our work on Sentiment Indicators.
+
+Does news sentiment actually matter?
+
+Before building anything, it’s worth asking whether the premise holds. Academic finance has been studying textual information for decades, long before transformers or large language models existed. 
+Our focus is methodological: how to go from raw text to a stable daily signal that can be meaningfully aligned with prices and returns.
+
+Why FinBERT?
+
+Financial language is not general language. Words like “liability,” “guidance,” “exposure,” or “headwinds” carry domain-specific meaning. Corporate communication is cautious, euphemistic, and often deliberately indirect.
+
+FinBERT is a transformer model fine-tuned on financial corpora — including news articles, earnings calls, and regulatory filings. Instead of assigning a single label, it outputs a probability distribution over three classes:
+
+  * positive
+
+  * negative
+
+  * neutral
+
+These probabilities are more informative than hard labels. They let us reason in terms of degrees of belief, rather than binary judgments.
+
+From headlines to a daily sentiment signal
+
+The workflow is conceptually simple, but the details matter.
+
+First, we collect firm-specific news using curated RSS feeds and keyword-based filtering (tickers, company names, and carefully chosen synonyms). 
+Seeing sentiment next to price
+
+Once you have a daily sentiment series, visualization becomes essential.
+
+We begin by plotting sentiment as colored points over time:
+
+  * green for positive tone
+
+  * red for negative tone
+
+Narrative regimes appear quickly: manifesting as clusters, transitions, and quiet periods.
+
+  * Position on the y-axis = sentiment
+
+  * Position on the x-axis = timestamp
+
+  * Color scale from red (negative) to green (positive)
+
+Source: “Demystifying FinBERT: How Transformer Models Turn Financial Text into Market Insights”, Journal of Portfolio Management, 2025.
+
+Next, we overlay the stock price (simulations done by us). An example for Amazon is over a recent month shows sentiment remaining broadly positive even as prices below fluctuate, suggesting a supportive narrative backdrop rather than a directional signal.
+
+The stock price is shown in black, the sentiment in blue. The x axis is the timestamps.
+
+Our short experiments showed that sometimes sentiment and price move together. Sometimes sentiment leads. Sometimes nothing happens.
+
+This ambiguity reflects the reality that sentiment shapes risk and expectations, not deterministic outcomes.
+
+Source: Shasharina and Johnsen, 2025.
+
+What comes next, stay tuned!
+
+In the next articles, we want to explore questions like:
+
+  * How does sentiment relate to same-day versus next-day returns?
+
+  * Is negative sentiment more informative than positive sentiment?
+
+  * Does sentiment predict volatility better than direction?
+
+  * When does sentiment matter …. and when does it not?
+
+  * How to use the sentiment signal. Consider a 7-day rolling average as a sentiment indicator… It could be used several ways:
+
+  * Compare it to short-term reversal and 1-week momentum for entry/exit gates.
+
+  * Use cross-sectional ranks of the indicator as an overlay to your value/quality core.
+
+  * Use as a trigger when the indicator crosses zero or hits a z-score band.--------------------------------------------------------------------------------
+AI is no longer an experimental “tool” in finance. (https://tommijohnsen.substack.com/p/ai-is-no-longer-an-experimental-tool)
+citeturn1073search6 [wordlim: 200] Published: 9 months ago; Crawled: 2 months ago; # Tommi Johnsen, PhD ... ### Co-author: Svetlana Shasharina, PhD ...   * The bigger picture (macro signals): “Is the overall tone in the news pointing to growth, slowdown, risk-on, risk-off?” ... They tested multiple models (BERT, FinBERT, RoBERTa, plus Chinese-specific models like Baichuan) and used the AI’s text signals to build a value-weighted long/short portfolio.
+# Tommi Johnsen, PhD
+
+# AI is no longer an experimental “tool” in finance.
+
+### Co-author: Svetlana Shasharina, PhD
+
+Tommi Johnsen, PhD
+
+Jan 20, 2026
+
+But it is increasingly the way markets get read, sized up, and traded. If you work with stocks, you’ve probably felt it already. The advantage isn’t just speedy spreadsheets. The advantage is the ability to chew through messy, human language like headlines, filings, earnings-call transcripts, social chatter, and turn it into usable signals.
+
+The unfair advantage of large language models (LLMs) is brute-force comprehension at scale. Humans can’t read every article, every filing, every forum post, every CEO quote, and every analyst note. LLMs can. And they do it consistently, without getting tired, distracted, or emotionally attached to a ticker.
+
+Thanks for reading! Subscribe for free to receive new posts and support my work.
+
+Researchers have shown again and again that when you feed these models unstructured text, they can extract surprisingly useful information about both:
+--------------------------------------------------------------------------------
+The Age of AI Attractor Markets: One Possible Trajectory (https://tommijohnsen.substack.com/p/the-age-of-ai-attractor-markets-one)
+citeturn1073search7 [wordlim: 200] Published: 8 months ago; Crawled: 2 months ago; # Tommi Johnsen, PhD ... ### Coauthor: Svetlana Shasharina, PhD ... AI is extremely good at taking complex, multi-dimensional inputs like price history, news, transcripts, macro data, and compressing them into mathematical representations, often vectors or embeddings. ... Surface diversity like different codebases and different labels can mask deeper convergence such as shared representations, and shared training distributions. ...   * Strong claim (stronger, but plausible): prices can move based on linguistic structure (tone, pattern, template) even when the substance is unchanged, because the representation layer treats “good-sounding language” as a tradable signal.
+# Tommi Johnsen, PhD
+
+# The Age of AI Attractor Markets: One Possible Trajectory
+
+### Coauthor: Svetlana Shasharina, PhD
+
+Tommi Johnsen, PhD
+
+Jan 24, 2026
+
+How convergence, recursion, and endogeneity can make markets look calmer—until they don’t.
+
+Thanks for reading! Subscribe for free to receive new posts and support my work.
+
+This essay explores one curious, if speculative, scenario for how markets might evolve. It’s not a forecast, just a framework worth examining.
+
+The core question: could modern markets be drifting from an exploratory regime with messy human disagreement, diverse models, and largely uncorrelated mistakes, toward a convergent regime where machines (and humans using machine-like tools) increasingly share the same data, representations, and objectives?
+
+That shift can produce attractor markets best conceived of as self-reinforcing “basins” where many participants arrive at similar actions, creating the appearance of stability and liquidity. Four mechanisms help create these basins: (1) compression (lossy representations), (2) narrow optimization (one “correct” path), (3) recursion (models train on their own footprint), and (4) semantics (trading the shape of language, not its meaning).
+--------------------------------------------------------------------------------
+내부자와 뉴스가 엇갈릴 때, 누구 말이 맞을까 — 교차 신호의 첫 탐색 - systrader79의 트레이딩 이야기 (https://wikidocs.net/blog/%40systrader79/18756/)
+citeturn1073search8 [wordlim: 200] Published: 4 months ago; Crawled: 4 months ago; 이번에 Tommi Johnsen 박사와 Svetlana Shasharina 박사가 함께 올린 글은 바로 이 질문을 정면으로 파고듭니다. ... 👉 원문 전체 읽기: When the insiders and the news disagree: a first look at the cross-signal
+그런데 이 둘이 정반대를 가리킨다면, 다시 말해 회사 임원은 자기 돈으로 자사 주식을 사들이는데 정작 경제 신문은 그 회사를 비관하기 시작한다면, 과연 어느 쪽이 옳을까요?
+
+이번에 Tommi Johnsen 박사와 Svetlana Shasharina 박사가 함께 올린 글은 바로 이 질문을 정면으로 파고듭니다. 본격적인 이야기에 앞서, 생소할 수 있는 핵심 용어부터 차근차근 깔아 두겠습니다.
+
+먼저 내부자 거래 신고, 미국에서는 SEC 양식4(Form 4)라고 부르는 것입니다. 이것은 회사의 임원, 이사, 그리고 10% 이상 대주주가 자기 회사 주식을 사거나 팔면 영업일 기준 이틀 안에 의무적으로 제출해야 하는 공시입니다. 회사 사정을 가장 잘 아는 사람들이 자기 돈을 어디에 거는지를 보여 주는 자료인 셈이지요.
+
+다음으로 이 분석에서 계속 등장하는 초과수익(excess return) 입니다. 이것이 왜 필요할까요? 시장 전체가 움직이는 날에는 개별 종목의 원래 수익률(raw return)만 봐서는 잘했는지 못했는지를 가릴 수 없기 때문입니다. 예를 들어 어느 날 우주(분석 대상 전체 종목)의 평균이 2% 올랐는데 어떤 종목이 1.5% 올랐다면, 숫자만 보면 플러스지만 사실은 시장보다 0.5%포인트 뒤처진 것입니다. 그래서 저자들은 그날 536개 종목 전체의 평균 수익률을 구한 뒤, 각 종목의 수익률에서 이 평균을 빼서 "이 종목이 보통 종목보다 얼마나 더 잘했는가"만 남깁니다. 이 글의 모든 숫자는 바로 이 초과수익입니다. 양수면 시장 평균을 이긴 것, 음수면 뒤처진 것입니다.
+
+## 데이터가 보여 준 것
+
+2026년 5월 19일부터 6월 2일까지 12일 동안, 같은 종목에 양식4 신호와 뉴스 방향 전환이 동시에 발생한 경우는 91건의 종목-일이었습니다. 이를 네 칸에 나눠 담아 봅니다.
+
+Image: 내부자·뉴스 교차 신호의 분할표 — 네 칸별 초과수익
+그림 1. 네 칸별 전일·당일·익일 초과수익 수치표 (출처: Tommi Johnsen, 2026)
+
+Image: 네 칸별 3구간 초과수익 시각화
+그림 2. 분할표 네 칸의 전일(회색)·당일(남색)·익일(녹색) 초과수익, 536개 종목 우주, 2026년 5월 19일~6월 2일 (출처: Tommi Johnsen, 2026)
+
+이 표에서 세 가지 관찰을, 확신이 커지는 순서대로 짚어 보겠습니다.
+
+첫째, 발산 내부자 강세 칸의 익일 초과수익이 네 칸 중 가장 높았습니다(+2.46%). 관측치가 7건뿐이라 여전히 작은 표본이지만, 그 크기가 잡음으로 치부하기엔 충분히 큽니다. 만약 패턴이 무너진다면, 가장 유력한 실패 양상은 표본이 커지면서 발산 내부자 강세 칸의 초과수익이 작거나 0으로 수렴하는 것입니다. 그렇다 해도 괜찮습니다. 검증한다는 것 자체가 중요한 것이니까요.
+
+이 통찰을 한국 시장으로 옮겨 보면 어떨까요? 한국에도 임원·주요주주의 지분 변동을 알리는 공시 제도가 있고, 종목별 뉴스 심리를 수집하는 일도 충분히 가능합니다. 다만 이 글의 진짜 교훈은 특정 매매 규칙이 아니라 "두 정보원이 엇갈리는 순간을 주목하라"는 발상의 전환에 있습니다. 회사 사정을 가장 잘 아는 내부자가 시장의 비관에 맞서 자기 돈을 거는 종목, 바로 그 발산의 순간이 한국 시장에서도 검증해 볼 가치가 있는 가설입니다. 단, 한국 공시는 미국 양식4보다 보고 시점이 늦고 사전 계획 거래의 구분이 까다로우므로, 신호의 압축(이미 주가에 반영되어 버리는 정도)이 미국보다 더 심할 가능성도 함께 염두에 두어야 합니다.
+
+👉 원문 전체 읽기: When the insiders and the news disagree: a first look at the cross-signal
+
+* * *
+
+> 출처 Tommi Johnsen (Substack) | 원저자 Tommi Johnsen·Svetlana Shasharina
+> 발행일 2026-06-08 | 분류 내부자 거래/뉴스 감성/교차 신호/대체 데이터
+> 원문 바로가기 When the insiders and the news disagree: a first look at the cross-signal
+
+이 글은 위 원문을 한국어 독자를 위해 재구성한 콘텐츠입니다. 투자 권유가 아닌 정보 제공을 목적으로 하며, 모든 백테스트 수치는 원문 기준입니다. (원문 기준일: 2026-06-08 · 생성: 2026-06-10)
+
+<이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다>
+
+마지막 편집일시 : 2026년 6월 18일 11:49 오전--------------------------------------------------------------------------------
+AI Still Beats Wall Street Despite Saturation | Tommi Johnsen, PhD posted on the topic | LinkedIn (https://www.linkedin.com/posts/tommi-johnsen-phd-6b3890_does-ai-still-read-the-news-better-than-the-activity-7492931731004723200-lrG2)
+citeturn1073search9 [wordlim: 200] Crawled: last month; The measurable signal only appears when a company receives at least three pieces of news coverage that day. ... Read the full analysis from Tommi Johnsen and Svetlana Shasharina: https://lnkd.in/gZW2DtVw #ArtificialIntelligence #Investing #FinancialMarkets
+
+# AI Still Beats Wall Street Despite Saturation
+
+Tommi Johnsen, PhD
+
+1w
+
+AI was supposed to lose its edge on Wall Street. It hasn’t. A new 2026 analysis tested AI-scored financial news across roughly 850 U.S. companies—and found that news sentiment still predicts a small portion of the following day’s stock movement. But there’s a catch: One headline is mostly noise. The measurable signal only appears when a company receives at least three pieces of news coverage that day. Even more surprising? Part of the movement reverses on the second day, and weekend news produces no immediate effect at all. This isn’t a trading strategy. In fact, transaction costs would likely consume the advantage. But it raises a fascinating question: If Wall Street is already saturated with AI, why hasn’t the market eliminated the signal? Read the full analysis from Tommi Johnsen and Svetlana Shasharina: https://lnkd.in/gZW2DtVw #ArtificialIntelligence #Investing #FinancialMarkets
+
+Does AI Still Read the News Better Than the Market? tommijohnsen.substack.com
+
+`` `` ``
+
+## More from this author
+
+  * Thanks to everyone who bought a copy. It was a best seller for 2020 @Palgrave Tommi Johnsen, PhD 5y
+  * Academic Research Insights: Stock Sentiments from Twitter & StockTwits Tommi Johnsen, PhD 8y
+  * Academic Research Insights: Taking the Smart Beta Plunge? Follow THREE Rules. Tommi Johnsen, PhD 9y
+--------------------------------------------------------------------------------
+Timothy Sepp - Parker, Colorado, United States | Professional Profile | LinkedIn (https://chatgpt-windows.top/?_=%2Fin%2Ftimothy-sepp-aa95933%23V%2BvZjkupYTvi72WktN5ueFr7xJAW8CF5&trk=public_profile__posts-text)
+citeturn1073search10 [wordlim: 200] Crawled: last month; The measurable signal only appears when a company receives at least three pieces of news coverage that day. ... Read the full analysis from Tommi Johnsen and Svetlana Shasharina: https://lnkd.in/gZW2DtVw #ArtificialIntelligence #Investing #FinancialMarkets

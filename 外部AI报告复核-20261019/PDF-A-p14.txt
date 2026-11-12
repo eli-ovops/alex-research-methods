@@ -1,0 +1,80 @@
+XTX 与 AI 量化研究  ·  独立审查 V1                                                                                                     2026-10-19
+
+
+ E10 BTC 日频归因与终审
+
+ 实际仓位、风险、回报和相对两基准的表现。证据性质：包内证据。
+ EVID/BTC-daily-fixed-execution-20261017/attribution-readonly-20261017/attribution-audit.md ｜ 30-38；55-60；68-79
+
+ EVID/BTC-daily-fixed-execution-20261017/review-final/review.md ｜ 17-28
+
+ E11 2014 年度与固定单位对照
+
+ 初配、全期财富和逐年风险；B 不年调固定比例。证据性质：包内证据。
+ EVID/annual-vs-static-execution-20261018/result-report.md ｜ 7-20；28-54
+
+ EVID/annual-vs-static-execution-20261018/artifacts/evaluation-results.json ｜ 66-71；150-156；493-498；577-583
+ EVID/annual-vs-static-execution-20261018/static_hold.py ｜ 80-158
+
+ E12 2020 新资金冻结协议
+
+ 已见历史属性、精确 k、源版本、白名单和原门槛。证据性质：包内证据。
+
+ EVID/annual-restart2020-readiness-20261018/protocol-draft.json ｜ 5-6；23-62；73-111；113-148
+
+ E13 2020 新资金结果与终审
+
+ 2020 路径相同、后五次年度选择、仅 Sharpe 门槛未过。证据性质：包内证据。
+ EVID/annual-restart2020-execution-20261018/result-report.md ｜ 7-43
+
+ EVID/annual-restart2020-execution-20261018/review/final-review.md ｜ 5-16
+ EVID/annual-restart2020-execution-20261018/restart_adapter.py ｜ 45-116；170-196；238-271
+
+ E14 年度账费用与条件成交量审计
+
+ 首笔与末笔数量比、费用已含末次、自融资检查。证据性质：包内证据。
+
+ EVID/risk-scaled-vs-annual-execution-20261017/annual-hold-readonly-audit-20261017/analysis.md ｜ 31-62；82-89
+ EVID/risk-scaled-vs-annual-execution-20261017/adapter.py ｜ 64-141；250-272
+
+ E15 BitMEX 实现与正式 STOP
+
+ 窄时间格式、五日扫描先于拟合、技术停止及聚合 costok。证据性质：包内证据。
+
+ EVID/BitMEX-five-date-once-20261019/execution/adapter.py ｜ 85-105；150-163；189-219
+ EVID/BitMEX-five-date-once-20261019/execution/worker-formal-STOP.json ｜ 全文
+
+ EVID/BitMEX-five-date-once-20261019/review/audit.md ｜ 全文
+
+ E16 BitMEX 报价时钟下一协议
+ 主经济门槛属于 B5；辅助 A 成本缺口的依赖。证据性质：包内证据。
+
+ EVID/BitMEX-quote-clock-semantics-20261018/next-proposal/proposal.md ｜ 21；33-41
+
+ E17 HMM 包内代码与结果审查
+
+ 全期信息链、风险表现、不能沿用端到端严格样本外。证据性质：包内对第三方代码的审查，非本轮原源码复现。
+ EVID/goal-next-source-audit-20261019/root/结论.md ｜ 全文，尤41-52
+
+ EVID/goal-next-source-audit-20261019/code/evidence.md ｜ 9-27
+
+ E18 Ribbon 20 ETH 现金正差
+
+ 直接 Gas 后正 ETH；特定费用版本与尾部风险。证据性质：包内证据。
+ R/Ribbon九笔原账汇总-20ETH新本金扣费正现金案例-20261017.md ｜ 4-25；30-55
+
+ R/Ribbon20ETH正现金来源-权利金费用与份额记账-20261017.md ｜ 9-13；77-94
+ R/Ribbon12轮能否证明持续赚钱-证据判断与下一缺口-20261017.md ｜ 25-33
+
+ E19 Uniswap V2 两资产正差
+ 相对同初始持币，两币均正；单个799.55天路径。证据性质：包内证据。
+
+ R/V2小额持仓闭环-两币扣费后净增与复制边界-20261016.md ｜ 7-39；55-59
+
+
+
+
+
+
+
+静态审查 · 历史证据与现实复制分别判定                                                                                                                  14

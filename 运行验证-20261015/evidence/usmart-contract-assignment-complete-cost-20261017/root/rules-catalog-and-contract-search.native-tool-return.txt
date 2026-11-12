@@ -1,0 +1,1099 @@
+F - Delayed Quotes (https://www.cboe.com/delayed_quotes/f/quote_table)
+citeturn690search0 [wordlim: 200] Crawled: last month; # F - Quotes Dashboard ... 2026-09-10 15:59:59 ET (Delayed)
+
+# F - Quotes Dashboard
+
+Monitor the markets on one page including stocks, options, futures, charts, and more.
+
+  * Dashboard
+  * Charts
+  * Options
+  * Metrics
+  * Multiple
+  * Futures
+  * Options On Futures
+
+[Input: Quotes, Symbol Search]
+
+Search
+
+Options analytics provided by Datashop
+
+# Ford Motor Co (f)
+
+2026-09-10 15:59:59 ET (Delayed)
+
+Bid: 
+
+0
+
+Ask: 
+
+0
+
+Vol: 
+
+47,958,206
+
+Last: 
+
+13.89
+
+Change: 
+
++0.43 (+3.098%)
+
+Filters By:
+
+Volume:
+
+All
+
+[Input]
+
+Expiration Type:
+
+All
+
+[Input]
+
+Options Range:
+
+Near the Money
+
+[Input]
+
+Size:
+
+3
+
+[Input]
+
+Expiration:
+
+2026 September
+
+[Input]
+
+ 
+
+View Chain
+
+Options Chain
+
+Total Records: 18
+
+Calls
+
+(EXPR: Fri Sep 11 2026)
+
+Strike
+
+Last
+
+Net
+
+Bid
+
+Ask
+
+Vol
+
+IV
+
+Delta
+
+Gamma
+
+Int
+
+F 12.500
+
+1.34
+
++0.225
+
+1.33
+
+1.49
+
+15
+
+0.75
+
+0.9926
+
+0.0335
+
+21
+
+F 13.000
+
+0.86
+
++0.24
+
+0.83
+
+0.93
+
+576
+
+0
+
+0.9738
+
+0.1243
+
+342
+
+F 13.500
+
+0.4
+
++0.17
+
+0.39
+
+0.45
+
+2,674
+
+0.4
+
+0.8712
+
+0.5727
+
+1548
+
+F 14.000
+
+0.09
+
++0.045
+
+0.08
+
+0.1
+
+14,200
+
+0.4
+
+0.3893
+
+1.1855
+
+11781
+
+F 14.500
+
+0.01
+
+-0.005
+
+0.01
+
+0.02
+
+2,900
+
+0.56
+
+0.0819
+
+0.3652
+
+11093
+
+F 15.000
+
+0.01
+
++0.005
+
+0
+
+0.01
+
+192
+
+0.73
+
+0.0227
+
+0.1028
+
+6228
+
+Fri Sep 11 2026
+
+Strike
+
+F 12.500
+
+F 13.000
+
+F 13.500
+
+F 14.000
+
+F 14.500
+
+F 15.000
+
+Puts
+
+(EXPR: Fri Sep 11 2026)
+
+Strike
+
+Last
+
+Net
+
+Bid
+
+Ask
+
+Vol
+
+IV
+
+Delta
+
+Gamma
+
+Int
+
+F 12.500
+
+0.01
+
++0.005
+
+0
+
+0.01
+
+95
+
+0.98
+
+-0.0074
+
+0.033
+
+712
+
+F 13.000
+
+0.01
+
+-0.005
+
+0
+
+0.01
+
+1,728
+
+0.67
+
+-0.026
+
+0.124
+
+2425
+
+F 13.500
+
+0.02
+
+-0.095
+
+0.01
+
+0.03
+
+5,313
+
+0.47
+
+-0.1285
+
+0.5727
+
+11831
+
+F 14.000
+
+0.18
+
+-0.245
+
+0.17
+
+0.23
+
+2,633
+
+0.45
+
+-0.6104
+
+1.1857
+
+9359
+
+F 14.500
+
+0.64
+
+-0.265
+
+0.58
+
+0.68
+
+422
+
+0.71
+
+-0.9184
+
+0.3679
+
+2085
+
+F 15.000
+
+1.09
+
+-0.315
+
+1.07
+
+1.18
+
+269
+
+1.04
+
+-0.9781
+
+0.1041
+
+167
+
+Calls
+
+(EXPR: Fri Sep 18 2026)
+
+Strike
+
+Last
+
+Net
+
+Bid
+
+Ask
+
+Vol
+
+IV
+
+Delta
+
+Gamma
+
+Int
+
+F 12.500
+
+1.42
+
++0.25
+
+1.36
+
+1.5
+
+100
+
+0.41
+
+0.9443
+
+0.1168
+
+103
+
+F 13.000
+
+0.95
+
++0.225
+
+0.94
+
+0.98
+
+447
+
+0.38
+
+0.8806
+
+0.2409
+
+9336
+
+F 13.500
+
+0.52
+
++0.155
+
+0.51
+
+0.56
+
+1,155
+
+0.35
+
+0.7309
+
+0.4574
+
+887
+
+F 14.000
+
+0.24
+
++0.085
+
+0.24
+
+F 15.000
+
+1.16
+
+-0.255
+
+1.03
+
+1.24
+
+10
+
+0.4
+
+-0.8412
+
+0.2521
+
+318
+
+Sep 2026 Oct 2026 Nov 2026 Dec 2026 Jan 2027 Mar 2027 Jun 2027 Sep 2027 Dec 2027 Jan 2028 Dec 2028
+
+Download CSV--------------------------------------------------------------------------------
+FG - Delayed Quotes (https://www.cboe.com/delayed_quotes/fg/quote_table)
+citeturn690search1 [wordlim: 200] Crawled: 4 days ago; # FG - Quotes Dashboard ... # F&G Annuities & Life Inc (fg)2026-10-09 15:59:59 ET (Delayed)
+
+# FG - Quotes Dashboard
+
+Monitor the markets on one page including stocks, options, futures, charts, and more.
+
+# F&G Annuities & Life Inc (fg)
+
+2026-10-09 15:59:59 ET (Delayed)
+
+Bid: 
+
+0
+
+Ask: 
+
+0
+
+Vol: 
+
+693,882
+
+Last: 
+
+19.26
+
+Change: 
+
+-0.27 (+-1.4019%)
+
+Filters By:
+
+Volume:
+
+All
+
+[Input]
+
+Expiration Type:
+
+All
+
+[Input]
+
+Options Range:
+
+Near the Money
+
+[Input]
+
+Size:
+
+3
+
+[Input]
+
+Expiration:
+
+2026 October
+
+[Input]
+
+ 
+
+View Chain
+
+Options Chain
+
+Total Records: 6
+
+Calls
+
+(EXPR: Fri Oct 16 2026)
+
+Strike
+
+Last
+
+Net
+
+Bid
+
+Ask
+
+Vol
+
+IV
+
+Delta
+
+Gamma
+
+Int
+
+FG 12.500
+
+16.78
+
++0
+
+6.4
+
+7.8
+
+0
+
+2.59
+
+0.9671
+
+0.0153
+
+0
+
+FG 15.000
+
+8.13
+
++0
+
+4
+
+5.4
+
+0
+
+1.9
+
+0.9359
+
+0.0373
+
+2
+
+FG 17.500
+
+9.87
+
++0
+
+1.6
+
+2.55
+
+0
+
+0.89
+
+0.8404
+
+0.1217
+
+0
+
+FG 20.000
+
+3.4
+
++0
+
+0
+
+0.65
+
+0
+
+0.56
+
+0.3073
+
+0.2769
+
+9
+
+FG 22.500
+
+0.83
+
++0
+
+0
+
+0.75
+
+0
+
+1.25
+
+0.0998
+
+0.0795
+
+13
+
+FG 25.000
+
+0.07
+
++0
+
+0
+
+0.75
+
+0
+
+1.73
+
+0.0563
+
+0.0378
+
+153
+
+Fri Oct 16 2026
+
+Strike
+
+FG 12.500
+
+FG 15.000
+
+FG 17.500
+
+FG 20.000
+
+FG 22.500
+
+FG 25.000
+
+Puts
+
+(EXPR: Fri Oct 16 2026)
+
+Strike
+
+Last
+
+Net
+
+Bid
+
+Ask
+
+Vol
+
+IV
+
+Delta
+
+Gamma
+
+Int
+
+FG 12.500
+
+0.5
+
++0
+
+0
+
+0.75
+
+0
+
+2.76
+
+-0.034
+
+0.0153
+
+53
+
+FG 15.000
+
+0.5
+
++0
+
+0
+
+0.75
+
+0
+
+1.85
+
+-0.0653
+
+0.0374
+
+5
+
+FG 17.500
+
+0.12
+
++0
+
+0
+
+0.75
+
+0
+
+1.02
+
+-0.1616
+
+0.1226
+
+14
+
+FG 20.000
+
+0.35
+
++0
+
+0.2
+
+1.3
+
+0
+
+0.2
+
+-0.7032
+
+0.2816
+
+53
+
+FG 22.500
+
+1.35
+
++0
+
+2.2
+
+3.6
+
+0
+
+0
+
+-0.908
+
+0.0798
+
+3
+
+FG 25.000
+
+2.95
+
++0
+
+5.5
+
+6
+
+0
+
+0.93
+
+-0.9495
+
+0.0374
+
+3--------------------------------------------------------------------------------
+SR-CBOE-2026-056 (https://cdn.cboe.com/resources/regulation/rule_filings/approved/2026/SR-CBOE-2026-056.pdf)
+citeturn690search12 [wordlim: 200] Published: 4 months ago; SR-CBOE-2026-056 ... Clearing Trading Permit Holder Proprietary | Electronic Penny (non-AIM) | Fees Schedule - June [12] 15 , 2026 F L | $0.43 | No | Yes | N/A | Clearing Trading Permit Holder Fee Cap Includes transaction fees assessed as part of a strategy cap (see Footnote 13).
+Exhibit 5
+Changes are indicated by underlining additions and [bracketing] deletions.
+SR-CBOE-2026-056
+Page 40 of 44
+Cboe Exchange, Inc.
+Fees Schedule - June [12] 15 , 2026
+anges are indicated by underlining additions and [bracketing] deletions. Clearing Trading Permit Holder Fee Cap (11)(22)(33)(24) | | Fees Schedule - June [12] 15 , 2026 | | | | | --- | --- | --- | --- | --- | --- | --- | --- anges are indicated by underlining additions and [bracketing] deletions. Capacity | Execution Type | Fees Schedule - June [12] 15 , 2026 Capacity Code | (F) Fee Per Contract | Does Volume Count Toward $250,000 Fee Cap? | Count Toward Proprietary Product Sliding Scale? | (C ) Volume of Paired Order Count for VIP? | Notes anges are indicated by underlining additions and [bracketing] deletions. Clearing Trading Permit Holder Proprietary | Electronic Penny (non-AIM) | Fees Schedule - June [12] 15 , 2026 F L | $0.43 | No | Yes | N/A | Clearing Trading Permit Holder Fee Cap Includes transaction fees assessed as part of a strategy cap (see Footnote 13). --------------------------------------------------------------------------------
+SR-CBOE-2026-052 (https://cdn.cboe.com/resources/regulation/rule_filings/approved/2026/SR-CBOE-2026-052.pdf)
+citeturn690search13 [wordlim: 200] Published: 4 months ago; SR-CBOE-2026-052 ... | LEAPS Surcharge Fee Exotic Surcharge (42) | SPX None | F J L M B N U C | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.25 | --- | --- | --- | --- | --- | --- | LEAPS Surcharge Fee Execution Surcharge (21)(12)(41) (37)(42) | SPX SPX (not incl SPXW) [and SPESG ](15) | F J L M B N U C F J L B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.21 | | LEAPS Surcharge Fee None | SPX SPXW (electronic only) | F J L M B N U None | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.14 | | LEAPS Surcharge Fee Customer Priority Surcharge (31) | SPX VIX (Maker non-turner) | F J L M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.00 | $0.20 | LEAPS Surcharge Fee (37)(42) | SPX | F J L M B N U C | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 | | LEAPS Surcharge Fee | SPX SPX (incl SPXW) | F J L M B N U J M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.50 | | LEAPS Surcharge Fee SPX AIM Hybrid Surcharge (26)(42) | SPX | F J L M B N U F L | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.39 | | LEAPS Surcharge Fee SPX AIM Hybrid Originator Surcharge (26)(42) | SPX SPX (incl SPXW) | F J L M B N U C F J L M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.10 | | LEAPS Surcharge Fee AIM Response Surcharge Fee (12)(41)(42) (Trading Floor Inoperable) | SPX SPX (incl SPXW) [and SPESG] | F J L M B N U C F J L M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.05 | | LEAPS Surcharge Fee AIM Contra Surcharge Fee (12)(41)(42) (Trading Floor Inoperable) | SPX SPX (incl SPXW) [and SPESG] | F J L M B N U C F J L M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.10 | | LEAPS Surcharge Fee AIM Agency/Primary Surcharge Fee (12)(41)(42) | SPX SPX (incl SPXW) [and SPESG] | F J L M B N U C F J L M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.10 | | LEAPS Surcharge Fee (Trading Floor Inoperable) | SPX VIX | F J L M B N U C F J L M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.04 | | LEAPS Surcharge Fee | SPX SPX (incl SPXW) | F J L M B N U C F J L M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.05 | | LEAPS Surcharge Fee RFC Execution Surcharge Fee (41)(21)(25)(42) | SPX VIX | F J L M B N U C F J L M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.04 | | LEAPS Surcharge Fee Floor Broker Solicitation Surcharge Fee (40) | SPX SPX (incl SPXW) | F J L M B N U F J L M B N U | 3 years to < 4 years to expiration - $1.00 4 years to < 5 years to expiration - $1.50 5 years to < 6 years to expiration - $2.00 6+ years to expiration - $2.50 $0.15 |74
+Exhibit 5
+Changes are indicated by underlining additions and [bracketing] deletions.
+SR-CBOE-2026-052
+Page 74 of 84
+Cboe Exchange, Inc.
+Fees Schedule - May [28] 29 , 2026
+Rate Table - Underlying Symbol List A (34) (37)(42)
+Options Transaction Fees (1)(3)(4)(7)(13)(15)(33)(39)(12)
+Transaction Fee Per Contract by Premium Price
+Products
+Capacity
+VIX and SPX (incl SPXw) Only (12)(37)(42)
+Capacity Code
+AIM Contra (18)
+{CO} $0.35
+$0.00 - $0.10
+$0.11 - $0.99
+$1.00 - $1.99
+$2.00+
+AIM Agency/Primary (19)
+OEX and XEO
+{CR} $0.18
+{WR} $0.00
+{CS} $0.36
+RUT
+RLG, RLV, RUI and UKXM
+SPX (incl SPXW) [and SPESG]
+Customer (2)
+{CT} $0.45
+C
+See Rates to Left
+See Rates to Left
+VIX (simple orders) 
+{CV} $0.10
+{CW} $0.25
+{CX} $0.40
+{CY} $0.45
+{DB} $0.30/{CI} $0.00
+{DC} $0.45/{CI} $0.00
+See Rates to Left
+VIX (complex orders) (43)
+{CZ}$0.05/{CI} 
+$0.00
+{DA} $0.17/{CI} 
+$0.00
+SPX (incl SPXW) [and SPESG ](41)(12)
+Underlying Symbol List A (34)
+Clearing Trading Permit Holder Proprietary (11)(12)(16)
+{FH} $0.26 - See Cboe Options Clearing Trading Permit Holder Proprietary Products Sliding Scales/ {WR} $0.00 RLG, RLV, RUI, UKXM Only
+{FK} $0.25 - See Cboe Options Clearing Trading Permit Holder VIX Sliding Scale
+F  L
+{MS} $0.28 - See SPX Liquidity Provider Sliding Scale/ {SC} $0.00
+--------------------------------------------------------------------------------
+Cboe Titanium U.S. Options BOE Specification | Cboe (https://www.cboe.com/document/tech-spec/document/technical-specifications/cboe-titanium-u.s.-options-boe-specification)
+citeturn690search2 [wordlim: 200] Published: 3 weeks ago; Crawled: 2 weeks ago; The following is a list of all quote reason codes used by Cboe. ... F  | Not enabled for quotes ... January 7, 2026  |
+# Reason Codes
+
+# Order Reason Codes
+
+The following is a list of all order related reason codes used by Cboe. These reason codes are used in a variety of contexts (order cancellations and order rejections). All reasons are not valid in all contexts. The reason code will be followed by free form text. The specific text the system delivers may vary from the text listed below, to provide clarification of the reject reason. Cboe may add additional reason codes without notice. Members must gracefully ignore unknown values.
+
+Code  | Description
+--- | ---
+A  | Admin
+D  | Duplicate identifier (e.g., ClOrdID)
+F  | Could not reflect to consolidated quote (OPRA)
+H  | Halted
+I  | Incorrect data center
+J  | Too late to cancel
+K  | Order rate threshold exceeded
+L  | Order would lock or Cross NBBO
+M  | Order size exceeded
+N  | Ran out of liquidity to execute against
+O  | ClOrdID doesn't match a known order
+P  | Can't modify an order that is pending fill
+Q  | Waiting for first trade
+R  | Routing Unavailable
+T  | Fill would trade through the NBBO
+U  | User requested
+V  | Would wash
+W  | Add liquidity only order would remove
+X  | Order expired
+Y  | Symbol not supported
+Z  | Unforeseen reason
+c  | Only Close transactions accepted
+f  | Risk management EFID or Custom Group ID level
+m  | Market access risk limit exceeded
+o  | Max open orders count exceeded
+r  | Reserve reload
+s  | Risk management risk root level
+w  | Would remove on unslide
+x  | Crossed market
+y  | Order received by Cboe during replay
+z  | Session End
++  | Risk management EFID Group level
+4  | After volatility cutoff
+
+# Quote Reason Codes
+
+The following is a list of all quote reason codes used by Cboe. All reasons are not valid in all contexts. The reason code will be followed by free form text. The specific text the system delivers may vary from the text listed below, to provide clarification of the reject reason. Cboe may add additional reason codes without notice. Members must gracefully ignore unknown values.
+
+Code  | Description
+--- | ---
+C  | Invalid EFID (ClearingFirm)
+D  | Invalid WashId
+E  | Invalid SessionEligibility
+F  | Not enabled for quotes
+I  | Incorrect data center
+L  | Invalid QuoteCnt
+M  | Symbols not on same matching engine
+P  | Invalid PostingInstruction
+Q  | Invalid QuoteUpdateID
+R  | Risk root does not match across quotes
+S  | Symbol not found
+U  | Message unable to be sent to Matching Engine
+W  | Invalid WashPreventType
+a  | Admin
+c  | Invalid Capacity
+d  | Close only
+f  | Risk management EFID or Custom Group ID level
+m  | Invalid WashMethod
+n  | Exceedes max notional value per order
+o  | Invalid Open/Close
+p  | Risk management risk root level
+r  | Invalid Remove
+s  | Invalid Side
+t  | Invalid SendTime
+u  | Symbol range unreachable
+x  | Exceeds max size per order
+y  | Quote received by Cboe during replay
+
+# Order and Quote Subreason Codes
+
+The following is a list of subreason codes used to indicate additional detail for order rejections or cancellations. The code will be followed by free form text. The specific text the system delivers may vary from the text listed below, to provide clarification of the reject or cancel reason. --------------------------------------------------------------------------------
+SR-CBOE-2026-004 (https://cdn.cboe.com/resources/regulation/rule_filings/pending/2026/SR-CBOE-2026-004.pdf)
+citeturn690search14 [wordlim: 200] Published: 9 months ago; SR-CBOE-2026-004 ... (f) *Minimum Increments, Execution Prices, and Priority.
+SR-CBOE-2026-004  
+Page 64 of 67
+
+**Delta-Adjusted at Close or DAC**
+
+No change.
+
+**Future-Option Order**
+
+A “future-option order” is defined in Rule 1.1. Only VIX future-option orders with no more than the applicable number of legs are eligible for electronic processing. Future-option orders execute in the same manner as other complex orders, except as otherwise specified in this Rule.
+
+* * * * *
+
+(f) *Minimum Increments, Execution Prices, and Priority.*
+
+(1) *Minimum Increments.*
+
+(A) – (B) No change.
+
+(C) *Future-Option Orders.* Users may express bids and offers for a future-option order in any decimal price the Exchange determines. The minimum increment for the option leg(s) of a future-option order is $0.01 or greater, which the Exchange may determine on a class-by-class basis, regardless of the minimum increments otherwise applicable to the option leg(s), and the futures leg(s) of a future-option order may be executed in any decimal price permitted by the DCM on which the applicable futures trade.
+
+(2) *Execution Prices and Complex Order Priority.*
+
+(A) – (B) No change.
+
+(C) *Future-Option Orders.*
+
+(i) For a future-option order with one option leg, the option leg may not trade at a price worse than the individual component price on the Simple Book or at the same price as a Priority Customer Order on the Simple Book.
+
+(ii) For a future-option order with more than one option leg, the option legs must trade at prices pursuant subparagraph (A) above.
+
+(iii) A future-option order may only execute if the futures leg(s) is executable at the specified price(s).
+
+(3) No change.
+
+(g) *Legging.* A complex order may execute against orders and quotes resting in the Simple Book pursuant to subparagraphs (d)(5)(A) and (e) if it can execute in full or in a permissible ratio and if it has no more than a maximum number of legs (which the Exchange determines on a class-by-class basis and may be up to 16) (“Legging”), subject to the following restrictions:--------------------------------------------------------------------------------
+Cboe U.S. Equities Market Volume Summary (https://www.cboe.com/us/equities/market_share/?autoRefresh=True&data_type=notional&dt=2023-01-12&mode=singleDay)
+citeturn690search3 [wordlim: 200] Published: last week; Crawled: last month; Cboe (Z,Y,K,J) 269,726,436 283,210,480 466,798,638 1,019,735,554 9.37% 8.89% ... Texas Stock Exchange (F) 4,630,128 2,829,191 8,810,239 16,269,558 0.15% 0.12% ... Data as of 14:55 10/09/2026.All share and notional values delayed at least 20 minutes.
+--------------------------------------------------------------------------------
+Cboe UK Energy Sector Index (https://cdn.cboe.com/resources/europe/indices/factsheet/bukengy-factsheet.pdf)
+citeturn690search15 [wordlim: 200] Published: 5 months ago; Cboe.com | X @Cbo | f /CboeGlobalMarkets | in /company/cboe© 2026 Cboe Exchange, Inc.
+--------------------------------------------------------------------------------
+Cboe Europe Energy Sector Index (https://cdn.cboe.com/resources/europe/indices/factsheet/bepengy-factsheet.pdf)
+citeturn690search16 [wordlim: 200] Published: 5 months ago; Cboe.com | X @Cbo | f /CboeGlobalMarkets | in /company/cboe© 2026 Cboe Exchange, Inc.
+--------------------------------------------------------------------------------
+Cboe European Equities Release Notes Notices (https://www.cboe.com/europe/equities/notices/9426/release_notes/)
+citeturn690search4 [wordlim: 200] Crawled: 3 days ago; Cboe Europe are pleased to announce the introduction of Periodic Auctions (PAB) for Regulated Market securities (REGM) on the DXE environment and Iceberg Sweep order changes for CXE, BXE and DXE effective on Monday, 5th October 2026. ... #### CBOE Europe Announces New Delayed Data Feed
+--------------------------------------------------------------------------------
+什麼是期權金？權利金如何計算？ | uSMART (https://hk.usmartglobal.com/en/news-detail/7212296968658338234)
+citeturn690search5 [wordlim: 200] Crawled: last week;   * 期權費（Option Premium）：買方為獲得期權合約的權利而支付給賣方的費用，這就是所謂的期權金或權利金。 ... 對於看漲期權來說，內在價值等於標的資產當前價格與行權價之差（如果大於零），或者為零（如果小於或等於零）。
+--------------------------------------------------------------------------------
+Cboe U.S. Equities Market Volume Summary (https://www.cboe.com/us/equities/market_share/market/2026-07-21/)
+citeturn690search6 [wordlim: 200] Published: 2 months ago; Crawled: 2 weeks ago;   * Cboe Listings ...   * 2026-07-21 ... M  | T  | W  | T  | F  | S  | S
+--------------------------------------------------------------------------------
+Cboe U.S. Equities Market Volume Summary (https://www.cboe.com/us/equities/market_share/market/2026-09-01/)
+citeturn690search7 [wordlim: 200] Published: 9 months ago; Crawled: last month; Cboe (Z,Y,K,J) 373,538,904 318,239,971 585,339,373 1,277,118,248 8.55% 8.45% ... Texas Stock Exchange (F) 5,258,390 3,340,691 9,147,428 17,746,509 0.12% 0.08% ... Data as of 23:59 01/09/2026.
+--------------------------------------------------------------------------------
+Cboe Titanium Equities Timestamping Service Specification | Cboe (https://www.cboe.com/document/tech-spec/document/technical-specifications/cboe-titanium-equities-timestamping-service-specification/)
+citeturn690search8 [wordlim: 200] Published: 2.0 years ago; Crawled: 2 weeks ago;   * Cancel, cancel rejected, or purge/mass cancel records for the subscriber are included where at least one cancel-related messages sent by the subscriber is found within a 500 μs window of time after the Network Discovery Time of the aggressor as well as a 50 μs window of time before the Network Discovery Time of a trade aggressor that executed against a resting, visible, or non-displayed (effective 11/09/2026) subscriber order. ... Cboe Order ID  | 6  | The 12-character, base 36 Cboe Order ID assigned to the order by Cboe. ... Queued  | 17  | Boolean flag to indicate whether message was delayed due to message in flight limits. ...   * F = FIX
+--------------------------------------------------------------------------------
+Cboe U.S. Equities Exchanges BYX Rule Filings (https://www.cboe.com/us/equities/regulation/rule_filings/BYX/)
+citeturn690search9 [wordlim: 200] Crawled: 3 months ago; SR-CboeBYX-2026-026 ...     The Exchange proposes to amend Exchange Rule 11.9(f) to revise the definition of Unique Identifier.
+--------------------------------------------------------------------------------
+Cboe Global Markets, Inc. - Financials - Quarterly Results (https://ir.cboe.com/financials/quarterly-results/default.aspx)
+citeturn690search10 [wordlim: 200] Crawled: 2 weeks ago;   * Increases 2026 Organic Total Net Revenue Growth Target^{2} to 'mid to high teens' from 'low double-digit to mid teens' and Cboe Data Vantage^{3} Organic Net Revenue Growth Target^{2} to 'low teens' from 'low double-digit'
+--------------------------------------------------------------------------------
+Cboe U.S. Equities Market Volume Summary (https://www.cboe.com/us/equities/market_share/market/2026-02-20/)
+citeturn690search11 [wordlim: 200] Published: 7 months ago; Crawled: 2 weeks ago;   * Cboe Listings ...   * 2026-02-20 ... M  | T  | W  | T  | F  | S  | S
+--------------------------------------------------------------------------------
+相關問題解答 | 幫助中心 | uSMART 盈立證券 (https://hk.usmartglobal.com/zh-hk/help-centre/213/catalog/4)
+citeturn690view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: click({"ref_id":"turn679view0","id":38}); Total lines: 198
+--------------------------------------------------------------------------------
+美股期權常見問題 | 美股期權 | 幫助中心 | uSMART 盈立證券 (https://hk.usmartglobal.com/zh-hk/help-centre/213/catalog/3)
+citeturn690view1 [wordlim: 200] Crawled: last week; Content type: text/html; Source: click({"ref_id":"turn679view0","id":37}); Total lines: 199

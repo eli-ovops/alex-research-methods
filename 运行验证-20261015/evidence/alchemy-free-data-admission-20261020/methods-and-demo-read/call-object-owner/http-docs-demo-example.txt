@@ -1,0 +1,19 @@
+### cURL
+
+```bash
+curl --request POST \
+  --url https://eth-mainnet.g.alchemy.com/v2/docs-demo \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "eth_call",
+  "params": [
+    {
+      "to": "0x69498dd54bd25aa0c886cf1f8b8ae0856d55ff13",
+      "value": "0x1"
+    },
+    "latest"
+  ]
+}'
+```

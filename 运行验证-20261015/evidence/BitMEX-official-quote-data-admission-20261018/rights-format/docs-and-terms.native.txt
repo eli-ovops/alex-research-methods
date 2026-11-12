@@ -1,0 +1,410 @@
+BitMEX (https://docs.bitmex.com/api-explorer/get-quote)
+citeturn940view0 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://docs.bitmex.com/api-explorer/get-quote","lineno":null}); Redirected to URL: https://www.bitmex.com/; Total lines: 1027
+L0: cite0†Log In L1: 
+L2: # BitMEX has closed.
+L3: 
+L4: After 11 years of pioneering the crypto derivatives market, including the invention of the perpetual swap, BitMEX has officially wound down its exchange operations. We thank our trading community for being part of this journey. cite1†Learn more .
+L5: 
+L6: Trading ceased on 23 September 2026 at 04:00 UTC. All exchange services have ended.
+L7: 
+L8: You can withdraw your available funds at any time. Remaining balances are subject to account fees.
+L9: 
+L10: cite0†Withdraw Your Available Funds → L11: 
+L12: * * *
+L13: ## All-time leaderboard
+L14: 
+L15: > May the legendary traders of BitMEX live forever in glory.
+L16: 
+L17: [Input] Show private [Input] Show anonymous
+L18: 
+L19: [Input: Find a trader]
+L20: Rank#  | Trader  | Profit (XBT)XBT  | Since
+L21: --- | --- | --- | ---
+L22: 1  | Another Degenerate  | *****  |
+L23: 2  | A Silent Whale  | *****  |
+L24: 3  | The One Who Got Away  | *****  |
+L25: 4  | A Humble Liquidity Provider  | *****  |
+L26: 5  | Someone's Uncle  | *****  |
+L27: 6  | A Retired Perp Enjoyer  | *****  |
+L28: 7  | An Anonymous Legend  | *****  |
+L29: 8  | The Ghost of XBTUSD  | *****  |
+L30: 9  | Hot-Relic-Fancier*  | 4,216.5159  | 2017-12
+L31: 10  | Paper-Feather-Stallion*  | 4,054.6170  | 2015-01
+L32: 11  | A Mysterious Stranger  | *****  |
+L33: 12  | fhrp  | 3,316.2053  | 2017-10
+L34: 13  | Another Degenerate  | *****  |
+L35: 14  | Bog-Pear-Weasel*  | 3,122.9526  | 2015-01
+L36: 15  | Disco-Solar-Fang*  | 2,770.4743  | 2017-08
+L37: 16  | A Humble Liquidity Provider  | *****  |
+L38: 17  | Someone's Uncle  | *****  |
+L39: 18  | A Retired Perp Enjoyer  | *****  |
+L40: 19  | An Anonymous Legend  | *****  |
+L41: 20  | Honeysuckle-South-Rib*  | 1,978.0279  | 2016-06
+L42: 21  | Shubhodeep Das  | 1,975.6062  | 2016-10
+L43: 22  | A Funding Rate Farmer  | *****  |
+L44: 23  | Crypto Research  | 1,764.5478  | 2018-10
+L45: 24  | A Legendary Trader  | *****  |
+L46: 25  | Another Degenerate  | *****  |
+L47: 26  | Quill-Rift-Hoof*  | 1,687.6869  | 2018-07
+L48: 27  | Skitter-Peridot-Raven*  | 1,658.0127  | 2018-03
+L49: 28  | A Humble Liquidity Provider  | *****  |
+L50: 29  | Someone's Uncle  | *****  |
+L51: 30  | A Retired Perp Enjoyer  | *****  |
+L52: 31  | An Anonymous Legend  | *****  |
+L53: 32  | The Ghost of XBTUSD  | *****  |
+L54: 33  | A Quiet Hundred-X  | *****  |
+L55: 34  | Chocolate-Flint-Falcon*  | 1,483.6323  | 2019-06
+L56: 35  | A Mysterious Stranger  | *****  |
+L57: 36  | A Legendary Trader  | *****  |
+L58: 37  | Another Degenerate  | *****  |
+L59: 38  | Fern-Ebony-Slave*  | 1,325.4749  | 2017-11
+L60: 39  | The One Who Got Away  | *****  |
+L61: 40  | linenmito(X)  | 1,306.0866  | 2017-11
+L62: 41  | xorq  | 1,278.1173  | 2018-03
+L63: 42  | SuDoResearch  | 1,274.7730  | 2018-06
+L64: 43  | An Anonymous Legend  | *****  |
+L65: 44  | Winter-Pink-Fang*  | 1,238.6182  | 2019-03
+L66: 45  | A Quiet Hundred-X  | *****  |
+L67: 46  | A Funding Rate Farmer  | *****  |
+L68: 47  | A Mysterious Stranger  | *****  |
+L69: 48  | A Legendary Trader  | *****  |
+L70: 49  | Another Degenerate  | *****  |
+L71: 50  | A Silent Whale  | *****  |
+L72: 51  | Prong-Buttercup-Whale*  | 1,083.0207  | 2017-11
+L73: 52  | A Humble Liquidity Provider  | *****  |
+L74: 53  | Pool-Bloom-Crystal*  | 1,076.1748  | 2016-03
+L75: 54  | Sho00  | 1,075.4567  | 2017-11
+L76: 55  | An Anonymous Legend  | *****  |
+L77: 56  | The Ghost of XBTUSD  | *****  |
+L78: 57  | A Quiet Hundred-X  | *****  |
+L79: 58  | Prairie-Ballistic-Palm*  | 991.8831  | 2019-11
+L80: 59  | A Mysterious Stranger  | *****  |
+L81: 60  | A Legendary Trader  | *****  |
+L82: 61  | Zinc-Short-Snap  | 931.4851  | 2017-04
+L83: 62  | Daisy-Foul-Hornet*  | 917.1374  | 2018-12
+L84: 63  | Fossil-Chatter-Drop*  | 902.3714  | 2020-05
+L85: 64  | A Humble Liquidity Provider  | *****  |
+L86: 65  | Ribbon-Aquamarine-Fright*  | 878.8492  | 2018-05
+L87: 66  | A Retired Perp Enjoyer  | *****  |
+L88: 67  | An Anonymous Legend  | *****  |
+L89: 68  | The Ghost of XBTUSD  | *****  |
+L90: 69  | A Quiet Hundred-X  | *****  |
+L91: 70  | Ripple-Great-Koala*  | 834.4223  | 2018-01
+L92: 71  | A Mysterious Stranger  | *****  |
+L93: 72  | Cosmic-Bush-Wyrm*  | 801.7937  | 2018-11
+L94: 73  | Another Degenerate  | *****  |
+L95: 74  | Legend-Hail-Swisher*  | 797.7103  | 2021-04
+L96: 75  | Sprout-Puddle-Stinger*  | 785.6517  | 2019-07
+L97: 76  | Tulip-Lie-Robin*  | 775.2962  | 2020-04
+L98: 77  | Someone's Uncle  | *****  |
+L99: 78  | A Retired Perp Enjoyer  | *****  |
+L100: 79  | An Anonymous Legend  | *****  |
+L101: 80  | The Ghost of XBTUSD  | *****  |
+L102: 81  | A Quiet Hundred-X  | *****  |
+L103: 82  | A Funding Rate Farmer  | *****  |
+L104: 83  | Honeysuckle-Bramble-Hoof*  | 738.2098  | 2018-04
+L105: 84  | A Legendary Trader  | *****  |
+L106: 85  | Another Degenerate  | *****  |
+L107: 86  | Truth-Bitter-Runner*  | 732.3655  | 2017-11
+L108: 87  | The One Who Got Away  | *****  |
+L109: 88  | Brown-Peat-Myth*  | 710.3571  | 2018-12
+L110: 89  | Someone's Uncle  | *****  |
+L111: 90  | A Retired Perp Enjoyer  | *****  |
+L112: 91  | Bold-Magenta-Owl*  | 682.8047  | 2020-02
+L113: 92  | The Ghost of XBTUSD  | *****  |
+L114: 93  | A Quiet Hundred-X  | *****  |
+L115: 94  | A Funding Rate Farmer  | *****  |
+L116: 95  | A Mysterious Stranger  | *****  |
+L117: 96  | Foil-Carnation-Kicker*  | 651.0275  | 2018-04
+L118: 97  | Another Degenerate  | *****  |
+L119: 98  | A Silent Whale  | *****  |
+L120: 99  | The One Who Got Away  | *****  |
+L121: 100  | A Humble Liquidity Provider  | *****  |
+L122: 101  | Someone's Uncle  | *****  |
+L123: 102  | A Retired Perp Enjoyer  | *****  |
+L124: 103  | An Anonymous Legend  | *****  |
+L125: 104  | The Ghost of XBTUSD  | *****  |
+L126: 105  | Glitter-Twilight-Braid*  | 609.2042  | 2017-04
+L127: 106  | Tulip-Root-Bolt*  | 600.6555  | 2020-03
+L128: 107  | A Mysterious Stranger  | *****  |
+L129: 108  | A Legendary Trader  | *****  |
+L130: 109  | owl  | 579.0846  | 2017-08
+L131: 110  | Cloud-Gravel-Chill*  | 567.3899  | 2015-10
+L132: 111  | Obsidian-Salt-Cockatoo*  | 565.2707  | 2018-11
+L133: 112  | Silent-Plume-Otter*  | 562.9058  | 2016-06
+L134: 113  | Someone's Uncle  | *****  |
+L135: 114  | A Retired Perp Enjoyer  | *****  |
+L136: 115  | Brindle-Amber-Eater*  | 553.0225  | 2017-04
+L137: 116  | The Ghost of XBTUSD  | *****  |
+L138: 117  | A Quiet Hundred-X  | *****  |
+L139: 118  | A Funding Rate Farmer  | *****  |
+L140: 119  | A Mysterious Stranger  | *****  |
+L141: 120  | A Legendary Trader  | *****  |
+L142: 121  | Another Degenerate  | *****  |
+L143: 122  | Splash-Petal-Jackal*  | 510.5438  | 2017-11
+L144: 123  | Sun-Caramel-Hide*  | 510.2670  | 2019-11
+L145: 124  | Dandelion-Well-Cloud*  | 509.6930  | 2020-03
+L146: 125  | Someone's Uncle  | *****  |
+L147: 126  | apfhd  | 497.0103  | 2018-02
+L148: 127  | An Anonymous Legend  | *****  |
+L149: 128  | The Ghost of XBTUSD  | *****  |
+L150: 129  | A Quiet Hundred-X  | *****  |
+L151: 130  | Field-Yellow-Seer*  | 493.9724  | 2017-02
+L152: 131  | A Mysterious Stranger  | *****  |
+L153: 132  | A Legendary Trader  | *****  |
+L154: 133  | Another Degenerate  | *****  |
+L155: 134  | A Silent Whale  | *****  |
+L156: 135  | Spring-Phantom-Servant*  | 477.3988  | 2018-07
+L157: 136  | Slow-Fog-Tiger*  | 476.2195  | 2018-05
+L158: 137  | Someone's Uncle  | *****  |
+L159: 138  | Plume-Cream-Gazelle*  | 472.9859  | 2018-07
+L160: 139  | An Anonymous Legend  | *****  |
+L161: 140  | The Ghost of XBTUSD  | *****  |
+L162: 141  | pyontrader  | 465.4582  | 2015-01
+L163: 142  | A Funding Rate Farmer  | *****  |
+L164: 143  | A Mysterious Stranger  | *****  |
+L165: 144  | A Legendary Trader  | *****  |
+L166: 145  | Another Degenerate  | *****  |
+L167: 146  | A Silent Whale  | *****  |
+L168: 147  | Shade-Sharp-Cowl*  | 458.3319  | 2020-05
+L169: 148  | A Humble Liquidity Provider  | *****  |
+L170: 149  | Someone's Uncle  | *****  |
+L171: 150  | A Retired Perp Enjoyer  | *****  |
+L172: 151  | An Anonymous Legend  | *****  |
+L173: 152  | The Ghost of XBTUSD  | *****  |
+L174: 153  | A Quiet Hundred-X  | *****  |
+L175: 154  | A Funding Rate Farmer  | *****  |
+L176: 155  | Plain-Prong-Thorn*  | 446.1234  | 2017-08
+L177: 156  | A Legendary Trader  | *****  |
+L178: 157  | Rag-Equinox-Eater*  | 440.5390  | 2015-03
+L179: 158  | A Silent Whale  | *****  |
+L180: 159  | The One Who Got Away  | *****  |
+L181: 160  | A Humble Liquidity Provider  | *****  |
+L182: 161  | Someone's Uncle  | *****  |
+L183: 162  | Hickory-White-Servant*  | 430.3610  | 2018-05
+L184: 163  | An Anonymous Legend  | *****  |
+L185: 164  | The Ghost of XBTUSD  | *****  |
+L186: 165  | A Quiet Hundred-X  | *****  |
+L187: 166  | A Funding Rate Farmer  | *****  |
+L188: 167  | A Mysterious Stranger  | *****  |
+L189: 168  | A Legendary Trader  | *****  |
+L190: 169  | Another Degenerate  | *****  |
+L191: 170  | A Silent Whale  | *****  |
+L192: 171  | The One Who Got Away  | *****  |
+L193: 172  | A Humble Liquidity Provider  | *****  |
+L194: 173  | Someone's Uncle  | *****  |
+L195: 174  | Linen-Tulip-Deer*  | 385.7273  | 2018-06
+L196: 175  | jiashou1  | 384.5318  | 2018-07
+L197: 176  | Pink-Cerulean-Vulture*  | 382.5474  | 2017-07
+L198: 177  | A Quiet Hundred-X  | *****  |
+L199: 178  | A Funding Rate Farmer  | *****  |
+L200: 179  | A Mysterious Stranger  | *****  |
+L201: 180  | Palm-Feather-Fly*  | 376.9966  | 2020-04
+L202: 181  | Another Degenerate  | *****  |
+L203: 182  | Dandy-Beryl-Pixie*  | 374.4542  | 2020-09
+L204: 183  | Branch-Magenta-Moth*  | 372.7612  | 2020-09
+L205: 184  | A Humble Liquidity Provider  | *****  |
+L206: 185  | Someone's Uncle  | *****  |
+L207: 186  | A Retired Perp Enjoyer  | *****  |
+L208: 187  | An Anonymous Legend  | *****  |
+L209: 188  | The Ghost of XBTUSD  | *****  |
+L210: 189  | A Quiet Hundred-X  | *****  |
+L211: 190  | A Funding Rate Farmer  | *****  |
+L212: 191  | A Mysterious Stranger  | *****  |
+L213: 192  | Abalone-Rowan-Rat*  | 361.1884  | 2018-01
+L214: 193  | Another Degenerate  | *****  |
+L215: 194  | A Silent Whale  | *****  |
+L216: 195  | Pebble-Thorn-Doom*  | 354.8585  | 2021-12
+L217: 196  | A Humble Liquidity Provider  | *****  |
+L218: 197  | Peridot-Curly-Ant*  | 350.0537  | 2019-10
+L219: 198  | A Retired Perp Enjoyer  | *****  |
+L220: 199  | An Anonymous Legend  | *****  |
+L221: 200  | The Ghost of XBTUSD  | *****  |
+L222: 201  | Kiwi-Sage-Bolt*  | 343.7021  | 2018-07
+L223: 202  | A Funding Rate Farmer  | *****  |
+L224: 203  | A Mysterious Stranger  | *****  |
+L225: 204  | A Legendary Trader  | *****  |
+L226: 205  | Another Degenerate  | *****  |
+L227: 206  | A Silent Whale  | *****  |
+L228: 207  | The One Who Got Away  | *****  |
+L229: 208  | A Humble Liquidity Provider  | *****  |
+L230: 209  | Someone's Uncle  | *****  |
+L231: 210  | A Retired Perp Enjoyer  | *****  |
+L232: 211  | An Anonymous Legend  | *****  |
+L233: 212  | The Ghost of XBTUSD  | *****  |
+L234: 213  | A Quiet Hundred-X  | *****  |
+L235: 214  | A Funding Rate Farmer  | *****  |
+L236: 215  | Mud-Scythe-Ridge*  | 318.6514  | 2018-02
+L237: 216  | A Legendary Trader  | *****  |
+L238: 217  | Another Degenerate  | *****  |
+L239: 218  | A Silent Whale  | *****  |
+L240: 219  | Bitter-Pond-Arrow*  | 311.4553  | 2019-11
+L241: 220  | A Humble Liquidity Provider  | *****  |
+L242: 221  | Someone's Uncle  | *****  |
+L243: 222  | Surf-Bone-Death*  | 308.4250  | 2021-09
+L244: 223  | An Anonymous Legend  | *****  |
+L245: 224  | The Ghost of XBTUSD  | *****  |
+L246: 225  | Prickle-Stone-Heron*  | 305.2472  | 2018-06
+L247: 226  | A Funding Rate Farmer  | *****  |
+L248: 227  | A Mysterious Stranger  | *****  |
+L249: 228  | A Legendary Trader  | *****  |
+L250: 229  | Another Degenerate  | *****  |
+L251: 230  | A Silent Whale  | *****  |
+L252: 231  | The One Who Got Away  | *****  |
+L253: 232  | A Humble Liquidity Provider  | *****  |
+L254: 233  | Someone's Uncle  | *****  |
+L255: 234  | A Retired Perp Enjoyer  | *****  |
+L256: 235  | An Anonymous Legend  | *****  |
+L257: 236  | Mango-Moor-Lasher*  | 280.8113  | 2018-10
+L258: 237  | A Quiet Hundred-X  | *****  |
+L259: 238  | A Funding Rate Farmer  | *****  |
+L260: 239  | A Mysterious Stranger  | *****  |
+L261: 240  | A Legendary Trader  | *****  |
+L262: 241  | Another Degenerate  | *****  |
+L263: 242  | Shell-Mica-Chiller*  | 277.3069  | 2017-12
+L264: 243  | The One Who Got Away  | *****  |
+L265: 244  | Comet-Void-Snake*  | 275.9711  | 2017-11
+L266: 245  | Spark-Big-Stork*  | 275.1059  | 2020-05
+L267: 246  | Spangle-Cherry-Sloth*  | 274.6020  | 2016-02
+L268: 247  | Walnut-Skitter-Skull*  | 274.0755  | 2020-09
+L269: 248  | The Ghost of XBTUSD  | *****  |
+L270: 249  | A Quiet Hundred-X  | *****  |
+L271: 250  | A Funding Rate Farmer  | *****  |
+L272: 251  | A Mysterious Stranger  | *****  |
+L273: 252  | Polar-Maze-Slave*  | 270.2319  | 2017-09
+L274: 253  | Honey-Phantom-Fish*  | 269.4191  | 2018-01
+L275: 254  | A Silent Whale  | *****  |
+L276: 255  | The One Who Got Away  | *****  |
+L277: 256  | Volcano-Noon-Scorpion*  | 268.2628  | 2017-09
+L278: 257  | Someone's Uncle  | *****  |
+L279: 258  | A Retired Perp Enjoyer  | *****  |
+L280: 259  | Chisel-Brown-Pig*  | 266.2444  | 2019-05
+L281: 260  | The Ghost of XBTUSD  | *****  |
+L282: 261  | Pinto-Fantasy-Antler*  | 265.5866  | 2017-08
+L283: 262  | A Funding Rate Farmer  | *****  |
+L284: 263  | A Mysterious Stranger  | *****  |
+L285: 264  | A Legendary Trader  | *****  |
+L286: 265  | Another Degenerate  | *****  |
+L287: 266  | Chestnut-Shell-Stallion*  | 260.3620  | 2018-07
+L288: 267  | The One Who Got Away  | *****  |
+L289: 268  | Fan-Zest-Weaver*  | 260.1858  | 2019-07
+L290: 269  | Someone's Uncle  | *****  |
+L291: 270  | A Retired Perp Enjoyer  | *****  |
+L292: 271  | An Anonymous Legend  | *****  |
+L293: 272  | Agate-Storm-Whimsey*  | 253.5255  | 2018-01
+L294: 273  | A Quiet Hundred-X  | *****  |
+L295: 274  | Sticky-Heather-Snarl*  | 249.7629  | 2016-08
+L296: 275  | A Mysterious Stranger  | *****  |
+L297: 276  | A Legendary Trader  | *****  |
+L298: 277  | Another Degenerate  | *****  |
+L299: 278  | A Silent Whale  | *****  |
+L300: 279  | The One Who Got Away  | *****  |
+L301: 280  | A Humble Liquidity Provider  | *****  |
+L302: 281  | Someone's Uncle  | *****  |
+L303: 282  | lll0220554  | 242.4938  | 2018-02
+L304: 283  | Garnet-Sunset-Foe*  | 242.3994  | 2016-12
+L305: 284  | The Ghost of XBTUSD  | *****  |
+L306: 285  | A Quiet Hundred-X  | *****  |
+L307: 286  | Pebble-Bird-Unicorn*  | 241.5619  | 2018-02
+L308: 287  | A Mysterious Stranger  | *****  |
+L309: 288  | A Legendary Trader  | *****  |
+L310: 289  | Another Degenerate  | *****  |
+L311: 290  | A Silent Whale  | *****  |
+L312: 291  | The One Who Got Away  | *****  |
+L313: 292  | A Humble Liquidity Provider  | *****  |
+L314: 293  | Someone's Uncle  | *****  |
+L315: 294  | Typhoon-Clever-Reaper*  | 238.1734  | 2018-11
+L316: 295  | An Anonymous Legend  | *****  |
+L317: 296  | The Ghost of XBTUSD  | *****  |
+L318: 297  | A Quiet Hundred-X  | *****  |
+L319: 298  | A Funding Rate Farmer  | *****  |
+L320: 299  | A Mysterious Stranger  | *****  |
+L321: 300  | Mango-Sour-Binder*  | 235.4383  | 2017-06
+L322: 301  | Band-Twisty-Puma*  | 234.1010  | 2017-11
+L323: 302  | A Silent Whale  | *****  |
+L324: 303  | The One Who Got Away  | *****  |
+L325: 304  | Split-Fork-Gambler*  | 231.6445  | 2017-03
+L326: 305  | Someone's Uncle  | *****  |
+L327: 306  | Mango-Glory-Leader*  | 230.4566  | 2019-05
+L328: 307  | An Anonymous Legend  | *****  |
+L329: 308  | Noble-Orange-Wasp*  | 229.5094  | 2019-10
+L330: 309  | Citrine-Mirror-Quester*  | 229.2988  | 2018-08
+L331: 310  | A Funding Rate Farmer  | *****  |
+L332: 311  | A Mysterious Stranger  | *****  |
+L333: 312  | A Legendary Trader  | *****  |
+L334: 313  | Mirror-Big-Cloud*  | 225.8434  | 2018-05
+L335: 314  | A Silent Whale  | *****  |
+L336: 315  | The One Who Got Away  | *****  |
+L337: 316  | A Humble Liquidity Provider  | *****  |
+L338: 317  | Someone's Uncle  | *****  |
+L339: 318  | A Retired Perp Enjoyer  | *****  |
+L340: 319  | An Anonymous Legend  | *****  |
+L341: 320  | The Ghost of XBTUSD  | *****  |
+L342: 321  | Field-Treasure-Lasher*  | 221.6270  | 2020-07
+L343: 322  | A Funding Rate Farmer  | *****  |
+L344: 323  | Jade-Titanium-Myth*  | 219.6686  | 2021-11
+L345: 324  | A Legendary Trader  | *****  |
+L346: 325  | Fancy-Charm-Swoop*  | 219.2059  | 2018-09
+L347: 326  | Cotton-River-Hisser*  | 218.6981  | 2023-09
+L348: 327  | The One Who Got Away  | *****  |
+L349: 328  | A Humble Liquidity Provider  | *****  |
+L350: 329  | Rust-Well-Keeper*  | 214.3255  | 2021-12
+L351: 330  | A Retired Perp Enjoyer  | *****  |
+L352: 331  | An Anonymous Legend  | *****  |
+L353: 332  | The Ghost of XBTUSD  | *****  |
+L354: 333  | A Quiet Hundred-X  | *****  |
+L355: 334  | A Funding Rate Farmer  | *****  |
+L356: 335  | A Mysterious Stranger  | *****  |
+L357: 336  | Shore-Viridian-Lizard*  | 209.2917  | 2023-07
+L358: 337  | Ribbon-Fern-Whip*  | 209.2408  | 2020-07
+L359: 338  | Zircon-Pear-Shirt*  | 208.4247  | 2021-02
+L360: 339  | The One Who Got Away  | *****  |
+L361: 340  | Rain-Sunrise-Bunny*  | 207.8346  | 2020-03
+L362: 341  | Someone's Uncle  | *****  |
+L363: 342  | A Retired Perp Enjoyer  | *****  |
+L364: 343  | An Anonymous Legend  | *****  |
+L365: 344  | Quiver-Pear-Hare*  | 206.4634  | 2018-07
+L366: 345  | A Quiet Hundred-X  | *****  |
+L367: 346  | A Funding Rate Farmer  | *****  |
+L368: 347  | A Mysterious Stranger  | *****  |
+L369: 348  | A Legendary Trader  | *****  |
+L370: 349  | Rowan-Surf-Fright*  | 203.4506  | 2020-05
+L371: 350  | A Silent Whale  | *****  |
+L372: 351  | The One Who Got Away  | *****  |
+L373: 352  | A Humble Liquidity Provider  | *****  |
+L374: 353  | Pineapple-Geode-Turner*  | 201.0236  | 2021-01
+L375: 354  | Hurricane-Dew-Lightning*  | 200.4704  | 2021-02
+L376: 355  | An Anonymous Legend  | *****  |
+L377: 356  | The Ghost of XBTUSD  | *****  |
+L378: 357  | A Quiet Hundred-X  | *****  |
+L379: 358  | A Funding Rate Farmer  | *****  |
+L380: 359  | A Mysterious Stranger  | *****  |
+L381: 360  | A Legendary Trader  | *****  |
+L382: 361  | Another Degenerate  | *****  |
+L383: 362  | A Silent Whale  | *****  |
+L384: 363  | The One Who Got Away  | *****  |
+L385: 364  | A Humble Liquidity Provider  | *****  |
+L386: 365  | Glass-Chocolate-Chin*  | 194.5270  | 2018-11
+L387: 366  | A Retired Perp Enjoyer  | *****  |
+L388: 367  | An Anonymous Legend  | *****  |
+L389: 368  | The Ghost of XBTUSD  | *****  |
+L390: 369  | artbc  | 192.9394  | 2016-10
+L391: 370  | A Funding Rate Farmer  | *****  |
+L392: 371  | A Mysterious Stranger  | *****  |
+L393: 372  | A Legendary Trader  | *****  |
+L394: 373  | Tree-Ruby-Thunder*  | 190.1377  | 2019-07
+L395: 374  | Mud-Lake-Spider*  | 190.0868  | 2018-10
+L396: 375  | Fortune-Helix-Viper*  | 189.8623  | 2016-10
+L397: 376  | A Humble Liquidity Provider  | *****  |
+L398: 377  | Honeysuckle-Steel-Stag*  | 187.9940  | 2020-03
+L399: 378  | Geode-Laser-Otter*  | 187.1946  | 2022-06
+L400: 379  | An Anonymous Legend  | *****  |
+L401: 380  | The Ghost of XBTUSD  | *****  |
+L402: 381  | A Quiet Hundred-X  | *****  |
+L403: 382  | Spark-South-Boot*  | 186.0466  | 2018-03
+L404: 383  | Autumn-Fierce-Song*  | 185.5508  | 2019-07
+L405: 384  | A Legendary Trader  | *****  |
+--------------------------------------------------------------------------------
+Terms of Service (June 2025).docx (https://static.bitmex.com/documents/Terms_of_Service__June_2025.pdf)
+citeturn940view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 64; Source: open({"ref_id":"https://static.bitmex.com/documents/Terms_of_Service__June_2025.pdf","lineno":null}); Total lines: 1956
+

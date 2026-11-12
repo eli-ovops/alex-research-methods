@@ -1,0 +1,9 @@
+test_real_HTTPResponse_close_length_complete_then_new_method (test_persistent_https.Persistent) ... ok
+test_real_HTTPResponse_truncated_length_never_success (test_persistent_https.Persistent) ... ok
+test_normal_server_close_new_method_new_connection_not_replay (test_persistent_https.Persistent) ... ok
+test_detached_response_socket_retains_per_read_timeout (test_persistent_https.Persistent) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.014s
+
+OK

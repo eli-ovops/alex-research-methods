@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/crypto-lake-first-footer-QC-20261018/execution/footer_qc.py", line 118, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/crypto-lake-first-footer-QC-20261018/execution/footer_qc.py", line 85, in main
+    if mode=='_worker':worker(sys.argv[2]);return
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/crypto-lake-first-footer-QC-20261018/execution/footer_qc.py", line 62, in worker
+    if tail[4:]!=b'PAR1' or not 0<size<=1048576 or size+12>total:raise RuntimeError('INVALID_FOOTER_LENGTH_OR_MAGIC')
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: INVALID_FOOTER_LENGTH_OR_MAGIC

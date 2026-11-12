@@ -1,0 +1,16 @@
+HTTP/2 200 
+cache-control: max-age=3600
+content-type: text/html; charset=utf-8
+etag: "106b3cd651f841feb5fd56c1e74b82aefc07d265e677eec94a2fef7aaa2d6144"
+last-modified: Sat, 17 Oct 2026 13:57:57 GMT
+strict-transport-security: max-age=31556926
+accept-ranges: bytes
+date: Mon, 19 Oct 2026 15:16:34 GMT
+x-served-by: cache-itm1220051-ITM
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1792422994.462239,VS0,VE266
+vary: x-fh-requested-host, accept-encoding
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 82814
+

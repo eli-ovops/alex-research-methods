@@ -1,0 +1,369 @@
+Terms of Service (June 2025).docx (https://static.bitmex.com/documents/Terms_of_Service__June_2025.pdf)
+citeturn941view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 64; Source: open({"ref_id":"https://static.bitmex.com/documents/Terms_of_Service__June_2025.pdf","lineno":1750}); Total lines: 1956
+L1589@P52: 3. MPL License.  Certain source code incorporated into the Software is subject to the
+L1590@P52: terms of the Mozilla Public License, v. 2.0. You can obtain a copy of the MPL 2.0
+L1591@P52: License at https://mozilla.org/MPL/2.0/ (“MPL 2.0 License”). Any use of the MPL
+L1592@P52: Code is governed by, and subject to, the terms and conditions of the MPL 2.0
+L1593@P52: License and should any terms of the MPL 2.0 License conflict with the terms in this
+L1595@P52: conflicting terms.
+L1596@P52-53: 534. Permitted Use.  You may install, download, use, and run the Software for your
+L1597@P53: personal, non-commercial use or use when operating a cryptocurrency exchange
+L1598@P53: or trading platform (collectively “Commercial Use”).  If you are using the Software
+L1599@P53: for Commercial Use, you must:
+L1600@P53: a) Only offer the Software in jurisdictions where you are permitted to offer the
+L1601@P53: products and services offered or, if you are not permitted to offer products or
+L1602@P53: services in any jurisdiction, only use the Software in such jurisdiction where the
+L1603@P53: offering of the same does not violate any applicable laws or regulations
+L1604@P53: (“Territory”);
+L1605@P53: b) Have at all times adequate reserves available to cover all customer deposits;
+L1606@P53: c) Use the Software for the manner that it was intended, i.e. use the Software to
+L1607@P53: ensure that your system has adequate reserves to protect customers’
+L1608@P53: deposits;
+L1609@P53: d) Comply with all applicable laws in the jurisdictions where you offer your
+L1610@P53: services;
+L1611@P53: e) Agree to immediately inform HDR Global Trading Limited if you violate any of
+L1612@P53: the terms above either knowingly or unknowingly;
+L1613@P53: Except as provided in this Annex, and except as provided under the MPL 2.0
+L1614@P53: License, you agree not to
+L1615@P53: f) modify, correct, adapt, translate, enhance, or otherwise prepare derivative
+L1616@P53: works or improvements of the Software;
+L1617@P53: g) rent, lease, lend, sell, sublicense, assign, distribute, publish, transfer, or
+L1618@P53: otherwise make available the Software to any third party;
+L1619@P53: h) reverse engineer, disassemble, decompile, decode, or adapt the Software, or
+L1620@P53: otherwise attempt to derive or gain access to the source code of the Software,
+L1621@P53: in whole or in part;
+L1622@P53: i) bypass or breach any security device or protection used for or contained in the
+L1623@P53: Software;
+L1624@P53: j) remove, delete, efface, alter, obscure, translate, combine, supplement, or
+L1625@P53: otherwise change any trademarks, warranties, disclaimers, or intellectual
+L1626@P53: property rights, proprietary rights or other symbols, notices, marks, or serial
+L1627@P53: numbers on, in, or relating to the Software;
+L1628@P53: k) use the Software in any manner or for any purpose that infringes,
+L1629@P53: misappropriates, or otherwise violates any intellectual property right or other
+L1630@P53: right of any person/entity;
+L1631@P53: l) use any device, software, or routine that interferes with the proper working of
+L1632@P53: the Software, or introduce any viruses, Trojan horses, worms, logic bombs, or
+L1633@P53: other material that is malicious or technologically harmful that may affect the
+L1634@P53-54: 54Software, or otherwise attempt to interfere with the proper working of the
+L1635@P54: Software;
+L1636@P54: m) attempt to gain unauthorized access to, interfere with, damage, or disrupt any
+L1637@P54: parts of the Software, the server on which the Software is stored, or any server,
+L1638@P54: computer, or database connected to the Software;
+L1639@P54: n) use the Software in any way that violates any applicable federal, state, local, or
+L1640@P54: international law or regulation (including, without limitation, any laws regarding
+L1641@P54: the export of data or software to and from the US or other countries);
+L1642@P54: o) impersonate or attempt to impersonate the Company, a Company employee,
+L1643@P54: another user, or any other person or entity (including, without limitation, by
+L1644@P54: using email addresses associated with any of the foregoing);
+L1645@P54: p) use the Software other than for the Permitted Use or in any manner or for any
+L1646@P54: purpose or application not expressly permitted by this Terms of Service or MPL
+L1647@P54: 2.0 License; or
+L1648@P54: q) use the Software in any manner that may cause harm to the Company, its
+L1649@P54: business, affiliates, products, services, or any third parties, or expose the
+L1650@P54: Company to liability.
+L1651@P54: r) The use restrictions and permitted uses provided in this section are collectively
+L1652@P54: referred to herein as the “Permitted Use.”
+L1653@P54: 5. Upgrades and Releases.  You acknowledge that the Company is under no
+L1654@P54: obligation to provide maintenance services, support services, or software upgrades
+L1655@P54: to or for the Software, and any such services provided by the Company is in its
+L1656@P54: sole discretion.
+L1657@P54: 6. Intellectual Property.  The Company reserves all rights not expressly granted to you
+L1658@P54: under this Terms of Service, or those granted to you or others under the MPL 2.0
+L1659@P54: License. You acknowledge and agree that the Software is licensed, not sold, to you
+L1660@P54: by the Company and you do not have under or in connection with this Terms of
+L1661@P54: Service any ownership interest in the Software, or in any related Intellectual
+L1662@P54: property rights, except as provided under the MPL 2.0 License. You acknowledge
+L1663@P54: and agree that the Company is the sole and exclusive owner of all right, title, and
+L1664@P54: interest in and to the  Software, including all intellectual property rights relating
+L1665@P54: thereto, subject only to the rights of third parties under the MPL 2.0 License and
+L1666@P54: the limited licenses granted under this Terms of Service.
+L1667@P54: 7. Warranty Disclaimer.  The Company does not make any representations or
+L1668@P54: guarantees regarding uptime or availability of the Software or that the Software will
+L1669@P54: not infringe the intellectual property rights of a third party irrespective of whether
+L1670@P54: the Company had knowledge of such potential infringement. The Software is
+L1671@P54: provided "as is" and the Company hereby disclaims all warranties, whether
+L1672@P54: express, implied, statutory, or otherwise. The Company specifically disclaims all
+L1673@P54-55: 55implied warranties of merchantability, fitness for a particular purpose, title, and
+L1674@P55: non-infringement, and all warranties arising from course of dealing, usage, or trade
+L1675@P55: practice.  The Company makes no warranty of any kind that the Software or any
+L1676@P55: products or results of the use thereof, will meet your or any other person's or
+L1677@P55: entity’s requirements, operate without interruption, achieve any intended result, be
+L1678@P55: compatible or work with any software, system, or other services, or be secure,
+L1679@P55: accurate, complete, free of harmful code, or error free.
+L1680@P55: 8. Export Compliance.  You agree not to, directly or indirectly, export or re-export the
+L1681@P55: Software (including any associated products, items, articles, computer software,
+L1682@P55: media, services, technical data, and other information) in violation of any applicable
+L1683@P55: laws or regulations.
+L1684@P55: 9. Term; Termination.
+L1685@P55: a) Term. The license granted to you under the Software is effective as of the date
+L1686@P55: you first use the Software, until terminated by the Company pursuant to this
+L1687@P55: Terms of Service.
+L1688@P55: b) Termination.  The Company reserves the right to terminate the Software license
+L1689@P55: at any time and for reason in its sole and absolute discretion.  Further, the
+L1690@P55: Company may terminate the licenses set forth in this Annex before and
+L1691@P55: separate from rights to other software granted to you in the Terms of Service.
+L1692@P55: c) Termination for Infringement.  You must notify the Company within 2 (two) days
+L1693@P55: of receiving any notice alleging any infringement of third-party intellectual
+L1694@P55: property rights including so called “offers to license” (collectively “Infringement
+L1695@P55: Notice”).  You must terminate your use of the Software the day you receive an
+L1696@P55: Infringement Notice and not resume use of the Software until the Company
+L1697@P55: permits you to do so in writing.
+L1698@P55: d) Termination Of Software License. In addition to the termination requirements
+L1699@P55: provided in the Terms of Service, upon termination of the Software license you
+L1700@P55: agree to immediately discontinue use of the Software.
+L1701@P55: ANNEX J - COPY TRADING
+L1702@P55: BY USING THE COPY TRADING SERVICES YOU ACKNOWLEDGE THAT YOU HAVE
+L1703@P55: READ, UNDERSTOOD, AND AGREED TO BE BOUND BY THE TERMS OF THIS
+L1704@P55-56: 56ANNEX J, IN ADDITION TO THE BITMEX TERMS OF SERVICE. IF YOU DO NOT
+L1705@P56: AGREE TO THESE TERMS, YOU MUST NOT USE THE COPY TRADING SERVICES.
+L1706@P56: 1. Understanding Copy Trading:
+L1707@P56: Copy Trading is an automated trading strategy that allows individuals ("Copiers") to
+L1708@P56: automatically replicate the trades executed by other experienced traders ("Copy
+L1709@P56: Leader(s)".
+L1710@P56: How it Works: When you elect to use the Copy Trading service, you select a Copy
+L1711@P56: Leader whose trades you wish to mirror. Our Copy Trading service then automatically
+L1712@P56: replicates the trading decisions of the chosen Copy Leader in your BitMEX trading
+L1713@P56: account, in real-time and in proportion to your allocated capital.
+L1714@P56: Automated Execution: Once initiated, Copy Trading operates automatically, meaning
+L1715@P56: trades are opened and closed in your account without your direct manual intervention
+L1716@P56: for each specific trade.
+L1717@P56: Selection and Monitoring: You are solely responsible for selecting the Copy Leader(s)
+L1718@P56: you wish to copy. It is crucial to conduct your own due diligence on any Copy Leader,
+L1719@P56: review their historical performance (understanding its limitations as outlined below),
+L1720@P56: and continuously monitor their performance and your copied trades.
+L1721@P56: Risk Management: While Copy Trading automates trade execution, you have the ability
+L1722@P56: to set your own risk parameters, such as stop-loss and take profit limits or maximum
+L1723@P56: investment amounts. You also retain the ability to disconnect from a Copy Leader or
+L1724@P56: close individual copied positions at any time. The user recognises that any intervention
+L1725@P56: by a Copier (including the triggering of any preset limits) as well as insufficient funds in
+L1726@P56: your Copy Trading balance will stop Copy Trading in relation to that Copy Leader. The
+L1727@P56: Copy Leader may also resign their role at any time, ceasing your Copy Trading for that
+L1728@P56: Copy Leader.
+L1729@P56: Profit Sharing: You are agreeing to share with a Copy Leader any profits you may derive
+L1730@P56: arising from following such Copy Leader. The percentage share of profits to be shared
+L1731@P56: will be determined by the Copy Leader, as set out in the information provided about the
+L1732@P56: relevant strategy. If you are a Copy Leader, you confirm that you have chosen the profit
+L1733@P56: share yourself.
+L1734@P56-57: 572. No Endorsement, Oversight, or Responsibility by BitMEX:
+L1735@P57: No Investment Advice: BitMEX does not provide investment advice, recommendations,
+L1736@P57: or endorsements regarding any Copy Leader or any strategy made available via the
+L1737@P57: Copy Trading service. In respect of all information about Copy Leader(s) and their
+L1738@P57: performance, BitMEX makes no representations or warranties as to its accuracy,
+L1739@P57: completeness, or reliability.
+L1740@P57: No Due Diligence on Copy Leader(s): BitMEX does not vet, approve, monitor, or
+L1741@P57: supervise the trading activities, strategies, or performance of any Copy Leader. The
+L1742@P57: past performance data of Copy Leader(s), if provided, is solely for informational
+L1743@P57: purposes and should not be considered an indication or guarantee of future results.
+L1744@P57: No Liability for Losses: BitMEX shall not be liable for any losses, damages, or claims
+L1745@P57: arising out of or in connection with your use of the Copy Trading services, including,
+L1746@P57: but not limited to:
+L1747@P57: ● Losses incurred as a result of the trading activities or strategies of any Copy
+L1748@P57: Leader.
+L1749@P57: ● Losses due to market fluctuations, volatility, or unforeseen market events.
+L1750@P57: ● Losses due to technical issues, delays, or failures of any related software or
+L1751@P57: hardware.
+L1752@P57: ● Losses due to slippage (differences between expected and executed prices) or
+L1753@P57: partial fills of orders.
+L1754@P57: ● Any misrepresentation, fraud, or misconduct by a Copy Leader.
+L1755@P57: 3. Significant Risks of Copy Trading:
+L1756@P57: Engaging in Copy Trading involves significant risks, and you could lose all of your
+L1757@P57: invested capital.
+L1758@P57: These risks include, but are not limited to:
+L1759@P57: ● Market Risk: The value of cryptocurrencies can be highly volatile and
+L1760@P57: unpredictable. Trades copied from a Copy Leader are subject to these market
+L1761@P57: fluctuations.
+L1762@P57-58: 58● Past Performance is Not Indicative of Future Results: The historical performance
+L1763@P58: of a Copy Leader does not guarantee future profits and may not be indicative of
+L1764@P58: actual future returns. Copy Leader(s) can experience periods of significant
+L1765@P58: losses.
+L1766@P58: ● Dependence on Copy Leader: Your trading performance is directly tied to the
+L1767@P58: performance of the Copy Leader(s) you choose. Poor decisions or
+L1768@P58: underperformance by the Copy Leader will directly impact your account.
+L1769@P58: ● Execution Risk: While efforts are made to replicate trades, factors such as
+L1770@P58: network latency, market conditions (e.g., high volatility, low liquidity), and
+L1771@P58: technical issues may lead to delays in execution or price slippage, resulting in
+L1772@P58: different outcomes for your account compared to the Copy Leader's.
+L1773@P58: ● Liquidity Risk: In illiquid markets, it may be challenging to copy trades at desired
+L1774@P58: prices, potentially leading to wider spreads and increased slippage.
+L1775@P58: ● System and Technology Risk: Reliance on automated systems and third-party
+L1776@P58: platforms introduces risks related to software malfunctions, system failures, or
+L1777@P58: cyber-attacks.
+L1778@P58: 4. Your Responsibility:
+L1779@P58: You acknowledge that you are solely responsible for all trading decisions made in your
+L1780@P58: BitMEX account, including the decision to use Copy Trading services, the selection of
+L1781@P58: Copy Leader(s), and the management of your risk parameters.
+L1782@P58: You must carefully consider your financial situation, risk tolerance, and investment
+L1783@P58: objectives before engaging in Copy Trading.
+L1784@P58: You are responsible for monitoring your account and your copied trades regularly.
+L1785@P58: You should seek independent professional advice if you have any doubts about the
+L1786@P58: risks associated with Copy Trading or its suitability for your individual circumstances.
+L1787@P58: By proceeding with the use of Copy Trading services, you expressly acknowledge and
+L1788@P58: accept all the risks outlined in this ANNEX J and the BitMEX Terms of Service. You
+L1789@P58: further agree that BitMEX shall have no liability for any losses or damages you may
+L1790@P58: incur as a result of using these services.
+L1791@P58-59: 59ANNEX K - TRADING BOTS - PROVIDED BY
+L1792@P59: PROFIT VIEW
+L1793@P59: 1. Profit View has built and operates a specific API (the “Profit View API”) which is
+L1794@P59: made available on the BitMEX Trading Platform and allows Customers to utilise
+L1795@P59: Trading Bots (as defined below) while trading on the BitMEX Platform.
+L1796@P59: 2. This Annex governs your access to and use of the Profit View API and the
+L1797@P59: Trading Bots (collectively, the “Profit View Services”), and incorporates by
+L1798@P59: reference and supplements the Terms of Service. If you access or use (or
+L1799@P59: attempt to access or use) the Profit View Services, you will be deemed to have
+L1800@P59: agreed to the terms and conditions in this Annex. We may amend this Annex at
+L1801@P59: our sole and absolute discretion without further Notice to you. Capitalised terms
+L1802@P59: used but not defined shall have the same meaning as in the Terms of Service.
+L1803@P59: 3. No representation or warranty, express or implied, is made with respect to the
+L1804@P59: use of the Profit View Services or views or functionality therein as to (or in
+L1805@P59: relation to) its impartiality, fairness, reasonableness, accuracy, reliability or
+L1806@P59: completeness. We expressly disclaim any and all responsibility or liability for any
+L1807@P59: use by you of the Profit View Services. This service is provided in full by Profit
+L1808@P59: View and there is no obligation for us to update, complete or confirm any
+L1809@P59: information provided by Profit View in respect to the Profit View Services. Design
+L1810@P59: and implementation of the Profit View Services is segregated from any internal
+L1811@P59: BitMEX trading team.
+L1812@P59: 4. We accept no liability (whether in tort or contract or otherwise) for any loss or
+L1813@P59: damage if you rely on information contained on the ProfitView Services or any
+L1814@P59: loss you may experience as a result of using Trading Bots or other products and
+L1815@P59: services that may be provided by the Profit View Services.
+L1816@P59: 5. When you elect to use Trading Bots, you accept and acknowledge the following:
+L1817@P59: a. BitMEX accepts no responsibility for specific orders placed by Trading
+L1818@P59: Bots or the general trading performance of the Trading Bot at any time.
+L1819@P59: b. BitMEX accepts no responsibility for fees charged by Profit View for the
+L1820@P59: use of their services and shall not be obligated to update Users as to any
+L1821@P59: changes to Profit View services and/or associated fees charged by Profit
+L1822@P59: View.
+L1823@P59: c. BitMEX accepts no responsibility for, or any loss arising out of, any
+L1824@P59: restrictions that may be placed on Users by Profit View.
+L1825@P59-60: 60While all products and services made available through the Profit View Services are
+L1826@P60: provided by Profit View, we may restrict your ability to access the Profit View Services
+L1827@P60: at our sole and absolute discretion at any time.
+L1828@P60: “Trading Bot” means a predefined algorithm that Customers can select that will place
+L1829@P60: orders on the Electronic Platform on their behalf.
+L1830@P60: ADDITIONAL TERMS OF SERVICE – ITALY
+L1831@P60: 1 This Annex shall apply to Users established, incorporated, resident or
+L1832@P60: otherwise domiciled in the Republic of Italy (“Italian Users”) and contains
+L1833@P60: additional terms and conditions governing access to and use of the Trading
+L1834@P60: Platform and the Services provided by HDR. This Annex incorporates by
+L1835@P60: reference and supplements the Terms of Service. If, as an Italian User, you
+L1836@P60: access or use (or attempt to access or use) any Services, you will be deemed
+L1837@P60: to have agreed to the additional terms and conditions in this Annex. We may
+L1838@P60: amend this Annex at our sole and absolute discretion without further Notice
+L1839@P60: to you. Capitalised terms used but not defined shall have the same meaning
+L1840@P60: as in the Terms of Service.
+L1841@P60: 2 This Trading Platform is owned and operated by the Company. By accessing
+L1842@P60: and using this Trading Platform, you acknowledge and agree that:
+L1843@P60: a. BXM Services S.r.l., being registered in the Special Section of the
+L1844@P60: Register for Operators in Virtual Currency managed by the Organismo
+L1845@P60: Agenti e Mediatori (“OAM”) under No. PSV73, will ensure compliance with
+L1846@P60: applicable obligations provided under Legislative Decree 21 November
+L1847@P60: 2007, No. 231, as from time to time amended and supplemented (“AML
+L1848@P60: Decree”) and implementing regulations thereto, in relation to Italian Users;
+L1849@P60: b. You will continue to be served by the Company;
+L1850@P60: c. BXM Services S.r.l. is required to comply with, among the others, the
+L1851@P60: reporting obligations set forth under the Decree of the Minister of
+L1852@P60: Economy and Finance dated 13 January 2022 (“MEF Decree”). In
+L1853@P60: particular, BXM Services S.r.l. shall report to the OAM, on a quarterly
+L1854@P60: basis, data relating to transactions carried out in the territory of the Italian
+L1855@P60: Republic, including:
+L1856@P60: i. the customer's identification information, as reported in Annex 1 of
+L1857@P60: the MEF Decree; and
+L1858@P60-61: 61ii. aggregate data relating to overall operations of each provider of
+L1859@P61: services relating to the Service of virtual currencies and digital
+L1860@P61: wallet service provider for each customer, as reported in Annex 1
+L1861@P61: of the MEF Decree.
+L1862@P61: d. failure to comply with the above reporting obligations would imply
+L1863@P61: suspension and/or cancellation of BXM Services S.r.l. from the Register
+L1864@P61: for operators in virtual currency managed by the OAM;
+L1865@P61: e. the OAM shall process data in compliance with General Data Protection
+L1866@P61: Regulation UE 2016/679 (“GDPR”) and Italian Legislative Decree 30 June
+L1867@P61: 2003, No. 196, as from time to time amended and supplemented
+L1868@P61: (“Privacy Code”). In accordance with article 5 paragraph 2 of MEF
+L1869@P61: Decree, the OAM shall retain the data transmitted for 10 years.
+L1870@P61: 3 The Services are provided by the Company, which shall process your
+L1871@P61: personal data, indicated in the Annex 1 of MEF Decree, to perform a contract
+L1872@P61: with you and to comply with legal obligations pursuant to AML Decree and
+L1873@P61: MEF Decree. The Company shall transfer your personal data to BXM
+L1874@P61: Services S.r.l. to carry out such purposes as established above and,
+L1875@P61: therefore, your personal data shall be communicated to OAM. In the event
+L1876@P61: that the data necessary to conclude or perform a contract with you, or for the
+L1877@P61: purpose of complying with a legal obligation are not provided, we will not be
+L1878@P61: in a position to pursue the relationship with you and / or to conclude the
+L1879@P61: contract. In accordance with the principle of data minimization, the controller
+L1880@P61: shall retain your personal data for 10 years, unless otherwise required by
+L1881@P61: laws. The Personal data shall be processed in the European Union. In the
+L1882@P61: event of data being transferred to third countries, the data shall be processed
+L1883@P61: in accordance with art. 44 and following GDPR. You can get more
+L1884@P61: information by contacting the controller. Pursuant from article 15 to 22 GDPR
+L1885@P61: you shall be in the position to exercise your privacy rights. For further
+L1886@P61: information about the processing of your personal data , please see the
+L1887@P61: complete Privacy Notice here.
+L1888@P61: 4 For all matters not expressly provided for in this Annex, reference shall be
+L1889@P61: made to the Terms of Service.
+L1890@P61: 5 The laws of the Republic of Italy, without regard to principles of conflict of
+L1891@P61: laws, govern this Annex and any dispute between an Italian User and the
+L1892@P61: Company arising out of this Annex.
+L1893@P61: TERMINI DI SERVIZIO AGGIUNTIVI – ITALIA
+L1894@P61-62: 621. Il presente Allegato si applica agli Utenti residenti, incorporati, stabiliti o, in
+L1895@P62: qualsiasi altro modo, domiciliati nella Repubblica Italiana (“Utenti Italiani”) e
+L1896@P62: contiene termini e condizioni aggiuntivi che disciplinano l'accesso e l'utilizzo
+L1897@P62: della Piattaforma di Trading e dei Servizi forniti da HDR. Questo Allegato
+L1898@P62: incorpora e integra i Termini di Servizio. Qualora, in qualità di Utente Italiano,
+L1899@P62: lei acceda o utilizzi (o tenti di accedere o utilizzare) qualsiasi Servizio, i
+L1900@P62: termini e le condizioni aggiuntivi del presente Allegato si considereranno
+L1901@P62: implicitamente accettati. L’Allegato e’ modificabile a nostra esclusiva e
+L1902@P62: assoluta discrezione senza ulteriore avviso. I termini in maiuscolo utilizzati,
+L1903@P62: ma non definiti, avranno lo stesso significato indicato nei Termini di Servizio.
+L1904@P62: 2. Questa Piattaforma di Trading è di proprietà ed è gestita dalla Società.
+L1905@P62: Accedendo e utilizzando questa Piattaforma di Trading, lei riconosce e
+L1906@P62: accetta che:
+L1907@P62: a. BXM Services S.r.l. e’ iscritta nella Sezione Speciale dell'Albo degli
+L1908@P62: Operatori in Moneta Virtuale gestito dall'Organismo Agenti e Mediatori
+L1909@P62: (“OAM”) al numero PSV73, e assicura la conformita’ alle disposizioni
+L1910@P62: previste dal D.Lgs. 21 novembre 2007, n. 231,  di volta in volta modificato
+L1911@P62: ed integrato (“Decreto Antiriciclaggio”) e ai regolamenti di attuazione dello
+L1912@P62: stesso, nei confronti degli Utenti Italiani;
+L1913@P62: b. Lei continuera’ a essere servito dalla Societa’;
+L1914@P62: c. BXM Servizi S.r.l. è tenuto ad adempiere, tra gli altri, agli obblighi
+L1915@P62: informativi previsti dal Decreto del Ministro dell'Economia e delle Finanze
+L1916@P62: del 13 gennaio 2022 (“Decreto MEF”). In particolare, BXM Services S.r.l.
+L1917@P62: comunica trimestralmente all'OAM i dati relativi alle operazioni effettuate
+L1918@P62: nel territorio della Repubblica Italiana, tra cui:
+L1919@P62: i. i dati identificativi del cliente, come riportati nell'Allegato 1 del
+L1920@P62: Decreto MEF; e
+L1921@P62: ii. i dati aggregati relativi all'operatività complessiva di ciascun
+L1922@P62: fornitore di servizi relativi al Servizio di valute virtuali e fornitore di
+L1923@P62: servizi di portafoglio digitale per ciascun cliente, come riportato
+L1924@P62: nell'Allegato 1 del Decreto MEF.
+L1925@P62: d. il mancato rispetto dei suddetti obblighi di comunicazione comporterebbe
+L1926@P62: la sospensione e/o la cancellazione di BXM Services S.r.l. dal Registro
+L1927@P62: degli operatori in moneta virtuale gestito dall'OAM;
+L1928@P62-63: 63e. OAM tratterà i dati nel rispetto del Regolamento Generale sulla Protezione
+L1929@P63: dei Dati UE 2016/679 (“GDPR”) e del Decreto Legislativo 30 giugno 2003,
+L1930@P63: n.196, come di volta in volta modificato e integrato (“Codice Privacy”). Ai
+L1931@P63: sensi dell'articolo 5 comma 2 del Decreto MEF, l'OAM conserva i dati
+L1932@P63: trasmessi per 10 anni.
+L1933@P63: 3. I Servizi sono offerti dalla Società, che trattera’ i suoi dati personali, indicati
+L1934@P63: nell'Allegato 1 del Decreto MEF, per eseguire gli adempimenti contrattuali
+L1935@P63: con lei e per adempiere agli obblighi di legge ai sensi del Decreto
+L1936@P63: Antiriciclaggio e del Decreto MEF. La Società trasferirà i suoi dati personali a
+L1937@P63: BXM Services S.r.l. per espletare le finalità sopra stabilite e, pertanto, i suoi
+L1938@P63: dati personali saranno comunicati a OAM. Nel caso in cui non vengano
+L1939@P63: forniti i dati necessari per concludere o eseguire un contratto con lei, o al
+L1940@P63: fine di adempiere ad un obbligo di legge, non saremo nella condizione di
+L1941@P63: proseguire il rapporto con lei e/o di concludere il contratto. Nel rispetto del
+L1942@P63: principio di minimizzazione dei dati, il Titolare conserverà i suoi dati
+L1943@P63: personali per [10] anni, salvo diversa disposizione di legge. I dati personali
+L1944@P63: saranno trattati nell'Unione Europea. In caso di trasferimento dei dati verso
+L1945@P63: paesi terzi, i dati saranno trattati ai sensi dell'art. 44 e seguenti GDPR. Per
+L1946@P63: ottenere maggiori informazioni, puo’ contattare il responsabile del
+L1947@P63: trattamento. Ai sensi degli artt. da 15 a 22 GDPR, lei potrà esercitare i suoi
+L1948@P63: diritti in materia di privacy. Per ulteriori informazioni sul trattamento dei suoi
+L1949@P63: dati personali, puo’ consultare l'Informativa Privacy completa qui.
+L1950@P63: 4. Per tutto quanto non espressamente previsto in questo Allegato, si farà
+L1951@P63: riferimento ai Termini di Servizio.
+L1952@P63: 5. Le leggi della Repubblica Italiana, senza considerare possibili conflitti di
+L1953@P63: legislazioni, disciplinano il presente Allegato e qualsiasi controversia
+L1954@P63: dovesse sorgere tra l’Utente Italiano e la Societa’.
+L1955@P63: 64
+

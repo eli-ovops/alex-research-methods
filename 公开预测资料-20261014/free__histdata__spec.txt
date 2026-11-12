@@ -1,0 +1,287 @@
+Data Files: Detailed Specification – HistData.com
+HistData.com
+Free Forex Historical Data
+Home
+Download Free Forex Data
+Download by FTP or SFTP
+Automatic Updates
+Data Transformation
+F.A.Q. / Support
+Data Files: Merge Tool
+Data Files: Detailed Specification
+MetaTrader: How to Import from CSV
+Cookies and Privacy on HistData.com
+Data Privacy Policy
+Support
+About Us
+Data Files: Detailed Specification
+Here you can find all the details regarding any file we allow you to download.
+Please, don’t hesitate to send us a message in case you find any trouble with the forex data files available in this website.
+Regarding your question, we output the historical data in 6 diferent file formats.
+Here the details:
+1. Generic ASCII in M1 Bars (1 Minute Bars):
+As example, in DAT_ASCII_EURUSD_M1_201202.csv:
+20120201 000000;1.306600;1.306600;1.306560;1.306560;0
+20120201 000100;1.306570;1.306570;1.306470;1.306560;0
+20120201 000200;1.306520;1.306560;1.306520;1.306560;0
+20120201 000300;1.306610;1.306610;1.306450;1.306450;0
+20120201 000400;1.306470;1.306540;1.306470;1.306520;0
+20120201 000500;1.306510;1.306650;1.306510;1.306600;0
+20120201 000600;1.306610;1.306760;1.306610;1.306650;0
+Row Fields:
+DateTime Stamp;Bar OPEN Bid Quote;Bar HIGH Bid Quote;Bar LOW Bid Quote;Bar CLOSE Bid Quote;Volume
+DateTime Stamp Format:
+YYYYMMDD HHMMSS
+Legend:
+YYYY – Year
+MM – Month (01 to 12)
+DD – Day of the Month
+HH – Hour of the day (in 24h format)
+MM – Minute
+SS – Second, in this case it will be allways 00
+TimeZone:
+Eastern Standard Time (EST)
+time-zone WITHOUT Day Light Savings adjustments
+2. Generic ASCII in Ticks:
+As example, in DAT_ASCII_EURUSD_T_201202.csv:
+20120201 000003660,1.306600,1.306770,0
+20120201 000003973,1.306580,1.306750,0
+20120201 000005003,1.306590,1.306760,0
+20120201 000005707,1.306600,1.306770,0
+20120201 000006397,1.306590,1.306760,0
+20120201 000007083,1.306600,1.306770,0
+20120201 000014660,1.306560,1.306730,0
+20120201 000014990,1.306570,1.306740,0
+Row Fields:
+DateTime Stamp,Bid Quote,Ask Quote,Volume
+DateTime Stamp Format:
+YYYYMMDD HHMMSSNNN
+Legend:
+YYYY – Year
+MM – Month (01 to 12)
+DD – Day of the Month
+HH – Hour of the day (in 24h format)
+MM – Minute
+SS – Second
+NNN – Millisecond
+TimeZone:
+Eastern Standard Time (EST)
+time-zone WITHOUT Day Light Savings adjustments
+3. Microsoft Excel in M1 Bars (1 Minute Bars):
+As example, in DAT_XLSX_EURUSD_M1_201202.xlsx:
+20120201 000000;1.306600;1.306600;1.306560;1.306560;0
+20120201 000100;1.306570;1.306570;1.306470;1.306560;0
+20120201 000200;1.306520;1.306560;1.306520;1.306560;0
+20120201 000300;1.306610;1.306610;1.306450;1.306450;0
+20120201 000400;1.306470;1.306540;1.306470;1.306520;0
+20120201 000500;1.306510;1.306650;1.306510;1.306600;0
+20120201 000600;1.306610;1.306760;1.306610;1.306650;0
+Row Fields:
+DateTime Stamp;Bar OPEN Bid Quote;Bar HIGH Bid Quote;Bar LOW Bid Quote;Bar CLOSE Bid Quote;Volume
+DateTime Stamp Format:
+Excel Native
+TimeZone:
+Eastern Standard Time (EST)
+time-zone WITHOUT Day Light Savings adjustments
+4. MetaTrader in M1 Bars (1 Minute Bars):
+As example, in DAT_MT_EURUSD_M1_201202.csv:
+2012.02.01,00:00,1.306600,1.306600,1.306560,1.306560,0
+2012.02.01,00:01,1.306570,1.306570,1.306470,1.306560,0
+2012.02.01,00:02,1.306520,1.306560,1.306520,1.306560,0
+2012.02.01,00:03,1.306610,1.306610,1.306450,1.306450,0
+2012.02.01,00:04,1.306470,1.306540,1.306470,1.306520,0
+2012.02.01,00:05,1.306510,1.306650,1.306510,1.306600,0
+2012.02.01,00:06,1.306610,1.306760,1.306610,1.306650,0
+2012.02.01,00:07,1.306660,1.306660,1.306640,1.306650,0
+Row Fields:
+Date Stamp,Time Stamp,Bar OPEN Bid Quote,Bar HIGH Bid Quote,Bar LOW Bid Quote,Bar CLOSE Bid Quote,Volume
+Date Stamp Format:
+YYYY.MM.DD
+Time Stamp Format:
+HH:MM
+Legend:
+YYYY – Year
+MM – Month (01 to 12)
+DD – Day of the Month
+HH – Hour of the day (in 24h format)
+MM – Minute
+TimeZone:
+Eastern Standard Time (EST)
+time-zone WITHOUT Day Light Savings adjustments
+5. MetaStock in M1 Bars (1 Minute Bars):
+As example, in DAT_MS_EURUSD_M1_201202.csv:
+EURUSD,201202010000,1.306600,1.306600,1.306560,1.306560,0
+EURUSD,201202010001,1.306570,1.306570,1.306470,1.306560,0
+EURUSD,201202010002,1.306520,1.306560,1.306520,1.306560,0
+EURUSD,201202010003,1.306610,1.306610,1.306450,1.306450,0
+EURUSD,201202010004,1.306470,1.306540,1.306470,1.306520,0
+EURUSD,201202010005,1.306510,1.306650,1.306510,1.306600,0
+EURUSD,201202010006,1.306610,1.306760,1.306610,1.306650,0
+EURUSD,201202010007,1.306660,1.306660,1.306640,1.306650,0
+Row Fields:
+Forex Pair,DateTime Stamp,Bar OPEN Bid Quote,Bar HIGH Bid Quote,Bar LOW Bid Quote,Bar CLOSE Bid Quote,Volume
+DateTime Stamp Format:
+YYYYMMDDHHMM
+Legend:
+YYYY – Year
+MM – Month (01 to 12)
+DD – Day of the Month
+HH – Hour of the day (in 24h format)
+MM – Minute
+TimeZone:
+Eastern Standard Time (EST)
+time-zone WITHOUT Day Light Savings adjustments
+6. Ninja Trader in M1 Bars (1 Minute Bars):
+As example, in DAT_NT_EURUSD_M1_201202.csv:
+20120201 000000;1.306600;1.306600;1.306560;1.306560;0
+20120201 000100;1.306570;1.306570;1.306470;1.306560;0
+20120201 000200;1.306520;1.306560;1.306520;1.306560;0
+20120201 000300;1.306610;1.306610;1.306450;1.306450;0
+20120201 000400;1.306470;1.306540;1.306470;1.306520;0
+20120201 000500;1.306510;1.306650;1.306510;1.306600;0
+20120201 000600;1.306610;1.306760;1.306610;1.306650;0
+Row Fields:
+DateTime Stamp;Bar OPEN Bid Quote;Bar HIGH Bid Quote;Bar LOW Bid Quote;Bar CLOSE Bid Quote;Volume
+DateTime Stamp Format:
+YYYYMMDD HHMMSS
+Legend:
+YYYY – Year
+MM – Month (01 to 12)
+DD – Day of the Month
+HH – Hour of the day (in 24h format)
+MM – Minute
+SS – Second, in this case it will be allways 00
+TimeZone:
+Eastern Standard Time (EST)
+time-zone WITHOUT Day Light Savings adjustments
+7. Ninja Trader in Tick Bars (1 Second Bars) with Last Quotes:
+As example, in DAT_NT_AUDCAD_T_LAST_201212.csv:
+20121202 170010;1.035400;0
+20121202 170013;1.035600;0
+20121202 170017;1.035550;0
+20121202 170023;1.035550;0
+20121202 170024;1.035600;0
+20121202 170030;1.035550;0
+20121202 170040;1.035610;0
+Row Fields:
+DateTime Stamp;LAST Quote;Volume
+DateTime Stamp Format:
+YYYYMMDD HHMMSS
+Legend:
+YYYY – Year
+MM – Month (01 to 12)
+DD – Day of the Month
+HH – Hour of the day (in 24h format)
+MM – Minute
+SS – Second
+TimeZone:
+Eastern Standard Time (EST)
+time-zone WITHOUT Day Light Savings adjustments
+8. Ninja Trader in Tick Bars (1 Second Bars) with Bid Quotes:
+As example, in DAT_NT_AUDCAD_T_BID_201212.csv:
+20121202 170010;1.035400;0
+20121202 170013;1.035450;0
+20121202 170017;1.035550;0
+20121202 170023;1.035550;0
+20121202 170024;1.035600;0
+20121202 170030;1.035550;0
+20121202 170040;1.035610;0
+Row Fields:
+DateTime Stamp;BID Quote;Volume
+DateTime Stamp Format:
+YYYYMMDD HHMMSS
+Legend:
+YYYY – Year
+MM – Month (01 to 12)
+DD – Day of the Month
+HH – Hour of the day (in 24h format)
+MM – Minute
+SS – Second
+TimeZone:
+Eastern Standard Time (EST)
+time-zone WITHOUT Day Light Savings adjustments
+9. Ninja Trader in Tick Bars (1 Second Bars) with Ask Quotes:
+As example, in DAT_NT_AUDCAD_T_ASK_201212.csv:
+20121202 170010;1.035990;0
+20121202 170013;1.036050;0
+20121202 170017;1.036100;0
+20121202 170023;1.036050;0
+20121202 170024;1.036100;0
+20121202 170030;1.036100;0
+20121202 170040;1.036210;0
+Row Fields:
+DateTime Stamp;ASK Quote;Volume
+DateTime Stamp Format:
+YYYYMMDD HHMMSS
+Legend:
+YYYY – Year
+MM – Month (01 to 12)
+DD – Day of the Month
+HH – Hour of the day (in 24h format)
+MM – Minute
+SS – Second
+TimeZone:
+Eastern Standard Time (EST)
+time-zone WITHOUT Day Light Savings adjustments
+0 comments:
+Leave a Reply
+Cancel reply
+You must be
+logged in
+to post a comment.
+For a more convenient access you can Download the Forex Historical Data by FTP.
+Get your FTP or SFTP access, via PayPal, here:
+For more details:
+Download by FTP
+DataFiles Last Updated at:
+2026-10-11 04:38:29
+Get Automatic Updates!
+You can get the Forex Historical Data Automatic Updates using Google Drive!
+Subscribe, via PayPal, here:
+Select File Format:
+MetaTrader 4/5 : $7.00 USD - monthly
+Generic ASCII : $7.00 USD - monthly
+Microsoft Excel : $7.00 USD - monthly
+NinjaTrader : $7.00 USD - monthly
+MetaStock : $7.00 USD - monthly
+GoogleDrive/GMail Address:
+For more details:
+Automatic Updates
+Google Drive Last Updated at:
+2026-10-11 04:38:29
+Navigation
+Download Free Forex Data
+Download by FTP or SFTP
+Automatic Updates
+Data Transformation
+F.A.Q. / Support
+Data Files: Detailed Specification
+MetaTrader: How to Import from CSV
+Recent Posts
+3rd Data Update for November 2022
+2nd Data Update for November 2022
+Data Update for November 2022
+Data Update for September 2022
+Data Update for August 2022
+Categories
+Forex Historical Data
+Quotes Update
+Uncategorized
+© 2026 HistData.com
+Powered by
+BestWebLayout
+and
+WordPress
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out or exit the site if you wish.
+Cookie settings
+ACCEPT
+Privacy & Cookies Policy
+Close
+Privacy Overview
+This website uses cookies to improve your experience while you navigate through the website. Out of these cookies, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may have an effect on your browsing experience.
+Necessary
+Always Enabled
+Necessary cookies are absolutely essential for the website to function properly. This category only includes cookies that ensures basic functionalities and security features of the website. These cookies do not store any personal information.
+Non-necessary
+Non-necessary
+Any cookies that may not be particularly necessary for the website to function and is used specifically to collect user personal data via analytics, ads, other embedded contents are termed as non-necessary cookies. It is mandatory to procure user consent prior to running these cookies on your website.

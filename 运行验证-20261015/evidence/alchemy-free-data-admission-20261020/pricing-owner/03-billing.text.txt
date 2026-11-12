@@ -1,0 +1,35 @@
+Why did my invoice suddenly increase on Pay-As-You-Go? | Alchemy Knowledge Base
+</>
+</> All Collections› </collections/6735491124-billing> Billing
+Why did my invoice suddenly increase on Pay-As-You-Go?
+Last updated 1 month ago
+On the Pay-As-You-Go (PAYG) plan, your invoice is calculated directly from your Compute Unit (CU) consumption for the billing period. If your bill increases from one month to the next, it almost always means your app made more or heavier API calls during that period, not that something changed with your pricing or that you were charged in error.
+PAYG bills in arrears: an invoice covers the billing period that has just closed, not the period ahead. Paying an invoice settles usage that already happened, it does not prepay for the next period. If your app keeps making calls afterward, that new usage starts building a separate invoice, so seeing another charge shortly after a payment is expected behavior rather than a duplicate or double charge.
+Your invoice is not based on the request count shown in your dashboard. Each RPC or API method costs a different number of CUs, and WebSocket subscription events (for example newHeads or logs notifications) also consume CUs even though they are not counted as part of your request total. This means a relatively low daily request count can still produce a much larger CU bill if your app runs active WebSocket subscriptions. See the  <https://www.alchemy.com/docs/reference/compute-unit-costs> Compute Unit costs reference for the CU cost of each method.
+Just moved from the Free plan to PAYG?
+If your first PAYG invoice looks much higher than what you saw on the Free plan, your usage may not have changed at all. The Free plan includes a monthly allowance of Compute Units at no cost, so your actual consumption was masked as long as you stayed under that allowance. Adding a credit card or otherwise upgrading moves your team to PAYG immediately, and PAYG bills every CU from the start of the period with no free allowance underneath it. The jump reflects that pricing structure change, not a sudden spike in what your app is doing.
+A common contributor here is a WebSocket subscription (for example a logs subscription) that isn't scoped to specific addresses. Without an address filter, the subscription can emit far more events, and CUs, than intended. These events accumulate independently of your HTTP request count, which is part of why WebSocket usage can drive a large CU bill even when your app's request volume looks low. Narrowing the subscription's filter to only the addresses you care about can significantly reduce both event volume and cost.
+Where to see what changed
+You can see exactly what drove an increase by reviewing your usage in the  <https://dashboard.alchemy.com/usage> Usage tab of your dashboard for the billing period in question. There you can break consumption down by:
+App — see which app generated the most calls
+Network — see which chain or chains accounted for the largest share of Compute Units
+Method — see which RPC or API methods consumed the most Compute Units
+Comparing this breakdown against the prior month usually points to a specific app, network, or method, for example a jump in calls like eth_getLogs or eth_call, that is responsible for most of the increase.
+Ruling out other causes
+Before assuming higher usage is the cause, you can also check:
+Whether your account hit any rate limit or capacity errors during the period. These show up as 429 or 403 responses in your request logs, not as extra charges.
+Whether Gas Sponsorship usage contributed. Sponsored gas is billed and itemized separately from RPC and API compute units, so it appears as its own line item when it's a factor.
+To avoid surprises going forward
+Set a spend cap. From  <https://dashboard.alchemy.com/settings/billing> Billing settings, set a maximum on-demand spend limit in dollars or Compute Units. Once usage reaches that limit, service pauses automatically so a runaway process can't run up another large bill. A cap only limits usage from the point you set it forward: if usage in the current billing period has already passed the cap amount before you configure it, the cap cannot cancel or reduce the charges that already accrued, it will only prevent further usage in that period. See the  <https://www.alchemy.com/docs/how-to-set-usage-limits-and-alerts-for-your-account> guide to setting usage limits and alerts.
+Add usage alerts below your cap. Configure alerts at, for example, 50% and 80% of your budget so you're emailed about a spike well before it becomes a large invoice. See  <https://www.alchemy.com/docs/dashboard-alerts> dashboard alerts.
+Check whether an API key was exposed. If the usage breakdown doesn't match anything you recognize, rotate the key involved (delete and recreate it) and keep keys server-side rather than in client-side code going forward.
+If your invoice line items and usage breakdown still don't explain the increase, contact Alchemy support with your invoice number and we can help investigate further.
+Related Articles
+</articles/2039719489-can-i-upgrade-my-subscription-plan> Can I upgrade my subscription plan?
+</articles/5572341085-how-does-alchemy-bill-me-for-my-usage> How does Alchemy bill me for my usage?
+</articles/9536820611-why-did-i-get-my-account-suspended> Why did I get my account suspended?
+</articles/1517639103-what-is-this-5-charge-from-upgrading-to-pay-as-you-go-payg> What is this $5 charge from upgrading to Pay As You Go (PAYG)?
+</articles/6014629910-how-to-set-a-per-app-spending-limit> How to set a per-app spending limit
+</>
+<https://usepylon.com>
+Powered by Pylon

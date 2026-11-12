@@ -1,0 +1,328 @@
+vanta-network/README.md at main · taoshidev/vanta-network · GitHub (https://github.com/taoshidev/vanta-network/blob/main/README.md)
+citeturn1047search0 [wordlim: 200] Crawled: today; This repository contains the code for the Vanta Network developed by Taoshi.Vanta receives signals from quant and deep learning machine learning trading systems to deliver the world's most complete trading signals across a variety of asset classes. ... Miners can submit LONG, SHORT, or FLAT signal for Forex, Crypto, Equities, or Commodities trade pairs into the network during market hours. ... The fee is equal to 10.95%/3% per year for a 1x leverage position (crypto/forex respectively); equities instead pay a 3%/yr stock-borrow fee (short) or 6.6%/yr margin interest on the borrowed amount (long). ... There is a spread (transaction) fee applied to crypto, equities, and commodities orders, calculated as a percentage of order value - 0.03% for crypto, 0.01% for equities, and 0.005% for commodities (forex and indices have no spread fee).
+
+# Vanta Network
+
+This repository contains the code for the Vanta Network developed by Taoshi.
+
+Vanta receives signals from quant and deep learning machine learning trading systems to deliver the world's most complete trading signals across a variety of asset classes.
+
+# Features
+
+🛠️ Open Source Strategy Building Techniques (In Our Taoshi Community)
+🫰 Signals From a Variety of Asset Classes - Forex, Crypto, Equities, and Commodities
+📈 Millions of $ Funding to Top Traders
+💪 Innovative Trader Performance Metrics that Identify the Best Traders
+🔎 Trading + Metrics Visualization Dashboard
+🔎 Maximum Transparency for all updates
+
+## How does it work?
+
+Vanta is the most challenging & competitive network in the world. Our miners need to provide futures based signals (long/short) that are highly efficient and effective across various markets to compete (forex, crypto, equities, commodities). The top miners are those that provide the most returns, while never exceeding certain drawdown limits.
+
+### Rules
+
+  1. Miners can submit LONG, SHORT, or FLAT signal for Forex, Crypto, Equities, or Commodities trade pairs into the network during market hours. Crypto, commodities and other Hyperliquid perps trade 24/7, forex trades Sunday 17:00 to Friday 17:00 ET, and equities trade 09:30–16:00 ET with limit-only pre-market (04:00–09:30 ET) and after-hours (16:00–20:00 ET) sessions. Market hours and order types · Currently supported trade pairs
+  2. Miners are eliminated if they are detected as plagiarising other miners, if they exceed a 5% intraday drawdown from the day's opening equity, an 8% end-of-day drawdown from their highest-ever end-of-day equity (high-water mark), or if they go 60 days without submitting a single order (more info in the "Eliminations" section).
+  3. There is a fee for leaving positions open "carry fee". The fee is equal to 10.95%/3% per year for a 1x leverage position (crypto/forex respectively); equities instead pay a 3%/yr stock-borrow fee (short) or 6.6%/yr margin interest on the borrowed amount (long). Positions in Hyperliquid-sourced trade pairs (most crypto pairs, commodities, indices, and some equities) pay live Hyperliquid funding rates instead of the flat rates above More info
+  4. There is a spread (transaction) fee applied to crypto, equities, and commodities orders, calculated as a percentage of order value - 0.03% for crypto, 0.01% for equities, and 0.005% for commodities (forex and indices have no spread fee). This simulates a transaction cost that a normal exchange would add. Maker and taker fills are priced identically.
+  5. There is a slippage assessed per order. The slippage cost is is greater for orders with higher leverages, and in assets with lower liquidity.
+  6. Miners are rewarded using a debt-based scoring system that tracks their emissions, performance, and penalties. Weights are set based on the previous week's performance (PnL scaled by penalties), with payout periods starting and ending at midnight UTC on Sunday More info
+
+
+# Eliminations
+
+In the Vanta Network, eliminations occur for miners that commit plagiarism, breach drawdown limits, fail to exit probation in time, or are inactive.
+--------------------------------------------------------------------------------
+GitHub - taoshidev/vanta-network: Vanta Network built on Bittensor · GitHub (https://github.com/taoshidev/vanta-network)
+citeturn1047search1 [wordlim: 200] Crawled: 2 weeks ago; This repository contains the code for the Vanta Network developed by Taoshi.Vanta receives signals from quant and deep learning machine learning trading systems to deliver the world's most complete trading signals across a variety of asset classes. ... Miners can submit LONG, SHORT, or FLAT signal for Forex, Crypto, Equities, or Commodities trade pairs into the network during market hours. ... The fee is equal to 10.95%/3% per year for a 1x leverage position (crypto/forex respectively); equities instead pay a 3%/yr stock-borrow fee (short) or 6.6%/yr margin interest on the borrowed amount (long). ... There is a spread (transaction) fee applied to crypto, equities, and commodities orders, calculated as a percentage of order value - 0.03% for crypto, 0.01% for equities, and 0.005% for commodities (forex and indices have no spread fee).
+# Vanta Network
+
+This repository contains the code for the Vanta Network developed by Taoshi.
+
+Vanta receives signals from quant and deep learning machine learning trading systems to deliver the world's most complete trading signals across a variety of asset classes.
+
+# Features
+
+🛠️ Open Source Strategy Building Techniques (In Our Taoshi Community)
+🫰 Signals From a Variety of Asset Classes - Forex, Crypto, Equities, and Commodities
+📈 Millions of $ Funding to Top Traders
+💪 Innovative Trader Performance Metrics that Identify the Best Traders
+🔎 Trading + Metrics Visualization Dashboard
+🔎 Maximum Transparency for all updates
+
+## How does it work?
+
+Vanta is the most challenging & competitive network in the world. Our miners need to provide futures based signals (long/short) that are highly efficient and effective across various markets to compete (forex, crypto, equities, commodities). The top miners are those that provide the most returns, while never exceeding certain drawdown limits.
+
+### Rules
+
+  1. Miners can submit LONG, SHORT, or FLAT signal for Forex, Crypto, Equities, or Commodities trade pairs into the network during market hours. Currently supported trade pairs
+  2. Miners are eliminated if they are detected as plagiarising other miners, if they exceed a 5% intraday drawdown from the day's opening equity, an 8% end-of-day drawdown from their highest-ever end-of-day equity (high-water mark), or if they go 60 days without submitting a single order (more info in the "Eliminations" section).
+  3. There is a fee for leaving positions open "carry fee". The fee is equal to 10.95%/3% per year for a 1x leverage position (crypto/forex respectively); equities instead pay a 3%/yr stock-borrow fee (short) or 6.6%/yr margin interest on the borrowed amount (long). Positions in Hyperliquid-sourced trade pairs (most crypto pairs, commodities, indices, and some equities) pay live Hyperliquid funding rates instead of the flat rates above More info
+  4. There is a spread (transaction) fee applied to crypto, equities, and commodities orders, calculated as a percentage of order value - 0.03% for crypto, 0.01% for equities, and 0.005% for commodities (forex and indices have no spread fee). This simulates a transaction cost that a normal exchange would add. Maker and taker fills are priced identically.
+  5. There is a slippage assessed per order. The slippage cost is is greater for orders with higher leverages, and in assets with lower liquidity.
+  6. Miners are rewarded using a debt-based scoring system that tracks their emissions, performance, and penalties. Weights are set based on the previous week's performance (PnL scaled by penalties), with payout periods starting and ending at midnight UTC on Sunday More info
+
+With this system only the world's best traders & deep learning / quant based trading systems can compete.
+
+--------------------------------------------------------------------------------
+vanta-network/docs/miner.md at main · taoshidev/vanta-network · GitHub (https://github.com/taoshidev/vanta-network/blob/main/docs/miner.md)
+citeturn1047search2 [wordlim: 200] Crawled: last week; ## History ...   1. vanta-network ... Performance Ledger: Tracks PnL, fees, drawdown, and portfolio returns ... Equities don't use the flat carry fee above — instead, at each UTC midnight: SHORT positions accrue a 3%/yr stock-borrow fee on the position's market value, and LONG positions accrue 6.6%/yr margin interest on the borrowed (margin loan) portion of the position only, not the full market value. ... Send order signals from your choice of data provider (TradingView, python script, manually running `mining/sample_signal_request.py`) ...   * Mainnet: https://dashboard.taoshi.io
+
+# miner.md
+
+Copy path
+
+[Input: Go to file]
+
+Blame More file actions
+
+Blame More file actions
+
+## Latest commit
+
+ 
+
+## History
+
+History
+
+main
+
+## Breadcrumbs
+
+  1. vanta-network
+  2. /docs
+
+/
+
+# miner.md
+
+Copy path
+
+Top
+
+## File metadata and controls
+
+  * Preview
+
+  * Code
+
+  * Blame
+
+808 lines (586 loc) · 43.9 KB
+
+Raw
+
+Copy raw file
+
+Download raw file
+
+Outline
+
+Edit and raw actions
+
+# Miner
+
+Our miners act like traders. To score well and receive incentive, they place orders on our system against different trade pairs. The magnitude of each order is determined by its leverage, which can be thought of as the percentage of the portfolio used for the transaction. An order with a leverage of 1.0x indicates that the miner is betting against their entire portfolio value.
+
+The first time a miner places an order on a trade pair, they will open a position against it. The leverage and directionality of this position determines the miner's expectation of the trade pair's future movement. As long as this position is open, the miner is communicating an expectation of continued trade pair movement in this direction. There are two types of positions: LONG and SHORT.
+
+A long position is a bet that the trade pair will increase, while a short position is a bet that the trade pair will decrease. Even if the overall position is LONG, a miner can submit a number of orders within this position to manage their risk exposure by adjusting the leverage. SHORT orders on a long position will reduce the overall leverage of the position, reducing the miner's exposure to the trade pair. LONG orders on a long position will increase the overall leverage of the position, increasing the miner's exposure to the trade pair.
+
+## Basic Rules
+
+  1. Your miner must register on the Bittensor network to participate.
+
+     * There is a minimal registration fee <1 TAO on mainnet.
+     * There is an immunity period of 4 hours. Eliminated miners do not benefit from being in the immunity period.
+  2. Your miner will start in the challenge period upon entry. ## Scoring Details
+
+Debt-Based Scoring System (Active December 2025+)
+
+Vanta uses a debt-based scoring system that pays miners proportionally based on their previous week's performance. The system tracks three key components for each miner:
+
+  1. Emissions Ledger: Records ALPHA/TAO/USD tokens earned in 12-hour checkpoints
+  2. Performance Ledger: Tracks PnL, fees, drawdown, and portfolio returns
+  3. Penalty Ledger: Applies multipliers for drawdown, risk profile, min collateral, and risk-adjusted performance
+
+These components are combined into a Debt Ledger that calculates:
+
+  * Needed Payout: Previous week's PnL scaled by penalties (in USD)
+  * Actual Payout: Current week's emissions already received (in USD)
+  * Remaining Payout: Debt still owed to the miner (in USD)
+
+Weights are distributed proportionally to remaining payouts, targeting completion by midnight on Sunday of each week.
+
+Average Daily PnL currently has 100% weight and incentivizes miners to maintain high returns while increasing account sizes. 
+### Fees and Transaction Costs
+
+We want to simulate real costs of trading for our miners, to make signals from Vanta more valuable outside our platform. To do this, we have incorporated three primary costs: Cost of Carry, Slippage, and Spread Fee.
+
+Cost of carry is reflective of real exchanges, and how they manage the cost of holding a position overnight. This rate changes depending on the asset class, the logic of which may be found in our proposal 4.
+
+Slippage costs are modeled to estimate the difference between a trade's expected price (typically the last traded price or mid-price between the best bid and ask) and its actual execution price. This cost is higher for larger orders, as well as for assets with lower liquidity and higher volatility. Slippage is only applied to market orders. Read more in proposal 16.
+
+Spread fee is applied to crypto, equities and commodities orders and is calculated as a percentage of the order's USD value (see the table below). This fee simulates a transaction cost that a normal exchange would add.
+
+##### Implementation Details
+
+Carry Fees:
+
+A carry fee is charged at each interval based on the current market value of the position. The fee is calculated as a percentage of the position's market value and deducted at each fee interval.
+
+Market  | Fee Period  | Fee Per Interval  | Annual Rate
+--- | --- | --- | ---
+Forex  | 24h  | 0.008% × position market value  | 3%
+Crypto  | 8h  | 0.01% × position market value  | 10.95%
+Commodities  | —  | None for standard positions  | 0%
+Equities  | 24h  | See below  | —
+
+The rates above apply to Vanta-native trade pairs (`TradePair.src == VANTA`). Equities don't use the flat carry fee above — instead, at each UTC midnight: SHORT positions accrue a 3%/yr stock-borrow fee on the position's market value, and LONG positions accrue 6.6%/yr margin interest on the borrowed (margin loan) portion of the position only, not the full market value.
+
+Positions in Hyperliquid-sourced trade pairs (`TradePair.src == HYPERLIQUID`) are charged actual, live Hyperliquid funding rates instead of the flat carry fee (or the equities borrow/margin-interest fee) above, regardless of asset class. This includes most crypto perp pairs (the USDC-quoted ones; native USD-denominated crypto pairs are blocked in their favor), all commodities and indices pairs, and a subset of equities (e.g. NVDA, AAPL, COIN, MSTR — offered both as Vanta-native and as Hyperliquid-linked USDC perps).
+
+Spread Fee (Transaction Fee):
+
+Market  | Spread Fee Rate  | Applied To
+--- | --- | ---
+Forex  | None  | N/A
+Indices  | None  | N/A
+Crypto  | 0.03% * order value  | Each order placed
+Equities  | 0.01% * order value  | Each order placed
+Commodities  | 0.005% * order value  | Each order placed
+
+The rate depends only on asset class — market and limit orders, and both legs of a bracket order, are all charged the same.
+
+# Easy Setup
+
+Here are platforms that allows you to trade on Vanta with a simple interface or connect to an existing API. These facilitate trading so you can focus on building your strategy.
+
+  1. Horizon
+  2. Delta Prop Shop
+
+# Default Setup
+
+For our power users with more technical knowledge, we've setup some helpful infrastructure for you to send in signals to the network programatically.
+
+When you run `neurons/miner.py`, a REST server starts automatically on port 8088 to receive order signals. You do not need to run any separate server process. Submit signals via `POST http://127.0.0.1:8088/api/submit-order`. To see an example, use `mining/sample_signal_request.py`. Full API documentation is available in docs/miner_rest_server.md.
+
+The current flow of information is as follows:
+
+  1. Run `neurons/miner.py` — the REST server starts automatically alongside the miner
+  2. Send order signals from your choice of data provider (TradingView, python script, manually running `mining/sample_signal_request.py`)
+  3. Allow the miner to automatically send in your signals to validators
+  4. Validators update your existing positions, or create new positions based on your signals
+  5. Validators track your positions returns
+  6. Validators review your positions to assess drawdown every few seconds to determine if a miner should be eliminated (see main README for more info)
+  7. Validators wait for you to send in signals to close out positions (FLAT)
+  8. Validators set weights based on miner returns every 5 minutes based on portfolio performance with both open and closed positions.
+
+When getting set up, we recommend running `neurons/miner.py` and `mining/sample_signal_request.py` locally to verify that order signals can be created and parsed correctly.
+
+After that, we suggest running `neurons/miner.py` on testnet and sending test signals via `mining/sample_signal_request.py`. Inspect the log outputs to ensure that validators receive your orders. Ensure you are on your intended environment and add the appropriate testnet flags.
+
+Environment  | Netuid
+--- | ---
+Mainnet  | 8
+Testnet  | 116
+
+The simplest way to get a miner to submit orders to validators is by manually running `mining/sample_signal_request.py`. However, we expect most top miners to interface their existing trading software with `neurons/miner.py` directly to automatically send trade signals.
+
+DANGER
+
+  * Do not expose your private keys.
+  * Only use your testnet wallet.
+  * Do not reuse the password of your mainnet wallet.
+  * Make sure your incentive mechanism is resistant to abuse.
+  * Your incentive mechanisms are open to anyone. They emit real TAO. Creating these mechanisms incur a lock_cost in TAO.
+  * Before attempting to register on mainnet, we strongly recommend that you run a miner on the testnet.
+  * Miners should use real exchange prices directly for training and live data purposes. This should come from MT5 and CB Pro / Binance. They should not rely on the data sources validators are providing for prices, as the data is subject to change based on potential downtime and fallback logic.
+
+Once an asset class is selected, it cannot be changed. Miners who wish to participate in multiple asset classes must register another miner.
+    
+    vanta asset select
+
+To select an asset class on the testnet add the `--subtensor.network test` flag
+
+### Depositing and managing collateral
+
+Miners can also deposit and manage collateral using the following commands:
+
+View deposited collateral
+    
+    vanta collateral list
+
+Deposit collateral
+    
+    vanta collateral deposit
+
+Withdraw collateral. Withdrawn collateral is subject to slashing proportional the miner's current drawdown. A miner who is eliminated will have their collateral deposit slashed and burnt.
+    
+    vanta collateral withdraw
+
+To manage collateral on the testnet add the `--subtensor.network test` flag
+
+# Miner Dashboard
+
+The old local miner dashboard has been replaced by a new dashboard which can be accessed here:
+
+  * Mainnet: https://dashboard.taoshi.io
+  * Testnet: https://testnet.dashboard.taoshi.io
+
+## Logging In
+
+In order to view your miner's private positions and orders, you will need to log in to the dashboard and authenticate using a browser wallet, such as polkadot.js.
+
+You may connect multiple miner hotkeys, and switch between them.
+
+Once connected, clicking the `Miner Dashboard` button will bring you to your logged in miner's page.
+
+## Important Note
+
+The miner will only have data if validators have already picked up its orders. A brand new miner may not have any data until after submitting an order.
+
+# Issues?
+
+If you are running into issues, please run with `--logging.debug` and `--logging.trace` set so you can better analyze why your miner isn't running.
+
+# Terms of Service
+
+We do not permit any third-party strategies to be used on the platform which are in violation of the terms and services of the original provider. Failure to comply will result in miner removal from the platform.--------------------------------------------------------------------------------
+Taoshi Documentation | Taoshi Documentation (https://docs.taoshi.io/)
+citeturn1047search3 [wordlim: 200] Crawled: 3 days ago; Vanta Network delivers comprehensive trading signals across various asset classes using quant and deep learning systems. ... The Request Network, architected by Taoshi, is a digital marketplace for decentralized data and services from the Bittensor network.
+
+# Taoshi Documentation
+
+Explore our guides and examples to integrate Taoshi's products.
+
+Get Started with Vanta Network View our Github
+
+## Learn more
+
+Strategies
+
+Learn more about our strategies.
+
+Vanta Network
+
+Vanta Network delivers comprehensive trading signals across various asset classes using quant and deep learning systems.
+
+Get Started
+
+Request Network
+
+The Request Network, architected by Taoshi, is a digital marketplace for decentralized data and services from the Bittensor network.
+
+Get Started
+
+Proposals
+
+View Taoshi’s Improvement Proposals (TIPS)
+
+Roadmaps
+
+View Taoshi’s Roadmap of Work
+
+Last updated: Dec 17, 2025--------------------------------------------------------------------------------

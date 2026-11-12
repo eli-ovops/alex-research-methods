@@ -1,0 +1,491 @@
+Browser tab: 4, Title: "Starter: High Frequency Bitcoin Forecasting", URL: "https://www.kaggle.com/code/martinsn/starter-high-frequency-bitcoin-forecasting".
+0 AXWebArea Starter: High Frequency Bitcoin Forecasting, URL: kaggle.com/code/martinsn/starter-high-frequency-bitcoin-forecasting
+	1 container root
+		2 container Main Kaggle page navigation
+			3 button Navigation menu
+			4 link Description: Skip to content, Value: kaggle.com/code/martinsn/starter-high-frequency-bitcoin-forecasting#site-content
+			5 link Description: Return to Kaggle home page, Value: kaggle.com/
+			6 pop up button Create on Kaggle
+				7 text Create
+			8 container
+				9 container
+					10 content list
+						11 container Home List Item
+							12 link Description: Home, Value: kaggle.com/
+						13 container Competitions List Item
+							14 link Description: Competitions, Value: kaggle.com/competitions
+						15 container Benchmarks List Item
+							16 link Description: Benchmarks, Value: kaggle.com/benchmarks
+						17 container Game Arena List Item
+							18 link Description: Game Arena, Value: kaggle.com/game-arena
+					19 content list
+						20 container Data Hub List Item
+							21 container
+								22 link (collapsed) Description: Data Hub, Value: kaggle.com/code/martinsn/starter-high-frequency-bitcoin-forecasting#, Secondary Actions: Expand
+								23 button Expand
+					24 content list
+						25 container More on Kaggle List Item
+							26 container
+								27 link (collapsed) Description: More on Kaggle, Value: kaggle.com/code/martinsn/starter-high-frequency-bitcoin-forecasting#, Secondary Actions: Expand
+								28 button Expand
+		29 container Main menu, search and your account
+			30 container
+				31 text field (settable) :r7:
+				32 link Description: Login, Value: kaggle.com/account/login?phase=startSignInTab&returnUrl=%2Fcode%2Fmartinsn%2Fstarter-high-frequency-bitcoin-forecasting
+				33 link Description: Sign Up, Value: kaggle.com/account/login?phase=startRegisterTab&returnUrl=%2Fcode%2Fmartinsn%2Fstarter-high-frequency-bitcoin-forecasting
+		34 container site-content
+			35 container
+				36 text Kaggle uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+				37 link Description: Learn more, Value: kaggle.com/cookies
+				38 text OK, Got it.
+			39 link Description: Martin Søgaard Nielsen's profile, Value: kaggle.com/martinsn
+			40 text Martin Søgaard Nielsen · 
+			41 container Description: 5 years ago, Help: Fri Sep 03 2021 23:34:58 GMT+0800 (中国标准时间)
+				42 text 5y ago
+			43 text  ·  4,738 views
+			44 container
+				45 button Upvote
+				46 button 36 votes
+			47 link Description: Copy & Edit, Value: kaggle.com/kernels/fork-version/73901708
+			48 button 92 copies
+				49 container 92 copies
+					50 text 92
+			51 pop up button (collapsed) Download, Secondary Actions: Expand
+			52 button More options for this notebook
+			53 heading Starter: High Frequency Bitcoin Forecasting, Value: 1
+				54 text Starter: High Frequency Bitcoin Forecasting
+			55 tab group
+				56 tab (selected, settable, boolean) Description: Notebook, 1 of 5, Value: 1
+				57 tab (selectable, settable, boolean) Description: Input, 2 of 5, Value: 0
+				58 tab (selectable, settable, boolean) Description: Output, 3 of 5, Value: 0
+				59 tab (selectable, settable, boolean) Description: Logs, 4 of 5, Value: 0
+				60 tab (selectable, settable, boolean) Description: Comments (1), 5 of 5, Value: 0
+			61 container
+				62 button Version 1 of 1
+					63 text Version 
+					64 text 1 of 1
+				65 button Description: Collapse Sidebar, ID: notebook-side-bar-trigger
+				66 heading Runtime, Value: 2
+					67 text Runtime
+				68 text play_arrow 1m 28s
+				69 heading Tags, Value: 2
+					70 text Tags
+				71 container Description: Tags, ID: combo-tags-menu-chipset
+					72 link Description: Deep Learning opens in new window, Value: kaggle.com/code?tagIds=13310-Deep+Learning
+					73 link Description: LSTM opens in new window, Value: kaggle.com/code?tagIds=13410-LSTM
+					74 link Description: Keras opens in new window, Value: kaggle.com/code?tagIds=16602-Keras
+					75 link Description: Matplotlib opens in new window, Value: kaggle.com/code?tagIds=16607-Matplotlib
+					76 link Description: pandas opens in new window, Value: kaggle.com/code?tagIds=16611-pandas
+				77 heading Language, Value: 2
+					78 text Language
+				79 text Python
+			80 container Description: Main Notebook Content, ID: rendered-kernel-content
+				81 AXWebArea __notebook__, URL: [REDACTED_TRANSIENT_RENDER_URL]
+					82 container
+						83 container notebook-container
+							84 container
+								85 text In [1]:
+								86 text import matplotlib.pyplot as plt import numpy as np import pandas as pd import tensorflow as tf import keras from keras.preprocessing import timeseries_dataset_from_array
+							87 container
+								88 heading Load Data, Value: 3, ID: Load-Data
+									89 text Load Data
+							90 container
+								91 text In [2]:
+								92 text BTC_df = pd . read_csv ( "/kaggle/input/high-frequency-crypto-limit-order-book-data/BTC_1min.csv" )
+							93 container
+								94 text In [3]:
+								95 text BTC_df . head ()
+								96 text Out[3]:
+								97 table
+									98 row
+										99 cell
+											100 text Unnamed: 0
+										101 cell
+											102 text system_time
+										103 cell
+											104 text midpoint
+										105 cell
+											106 text spread
+										107 cell
+											108 text buys
+										109 cell
+											110 text sells
+										111 cell
+											112 text bids_distance_0
+										113 cell
+											114 text bids_distance_1
+										115 cell
+											116 text bids_distance_2
+										117 cell
+											118 text bids_distance_3
+										119 cell
+											120 text ...
+										121 cell
+											122 text asks_market_notional_5
+										123 cell
+											124 text asks_market_notional_6
+										125 cell
+											126 text asks_market_notional_7
+										127 cell
+											128 text asks_market_notional_8
+										129 cell
+											130 text asks_market_notional_9
+										131 cell
+											132 text asks_market_notional_10
+										133 cell
+											134 text asks_market_notional_11
+										135 cell
+											136 text asks_market_notional_12
+										137 cell
+											138 text asks_market_notional_13
+										139 cell
+											140 text asks_market_notional_14
+									141 row
+										142 cell
+											143 text 0
+										144 cell
+											145 text 0
+										146 cell
+											147 text 2021-04-07 11:33:41.122161+00:00
+										148 cell
+											149 text 55896.285
+										150 cell
+											151 text 0.01
+										152 cell
+											153 text 4.448599e+06
+										154 cell
+											155 text 3.899402e+06
+										156 cell
+											157 text -8.945138e-08
+										158 cell
+											159 text -0.000065
+										160 cell
+											161 text -0.000073
+										162 cell
+											163 text -0.000154
+										164 cell
+											165 text ...
+										166 cell
+											167 text 0.0
+										168 cell
+											169 text 0.000000
+										170 cell
+											171 text 0.0
+										172 cell
+											173 text 0.0
+										174 cell
+											175 text 0.0
+										176 cell
+											177 text 0.0
+										178 cell
+											179 text 0.0
+										180 cell
+											181 text 0.0
+										182 cell
+											183 text 1176.72998
+										184 cell
+											185 text 0.0
+									186 row
+										187 cell
+											188 text 1
+										189 cell
+											190 text 1
+										191 cell
+											192 text 2021-04-07 11:34:41.122161+00:00
+										193 cell
+											194 text 55948.685
+										195 cell
+											196 text 1.43
+										197 cell
+											198 text 1.243244e+06
+										199 cell
+											200 text 3.606502e+06
+										201 cell
+											202 text -1.277957e-05
+										203 cell
+											204 text -0.000013
+										205 cell
+											206 text -0.000242
+										207 cell
+											208 text -0.000242
+										209 cell
+											210 text ...
+										211 cell
+											212 text 0.0
+										213 cell
+											214 text 0.000000
+										215 cell
+											216 text 0.0
+										217 cell
+											218 text 0.0
+										219 cell
+											220 text 0.0
+										221 cell
+											222 text 0.0
+										223 cell
+											224 text 0.0
+										225 cell
+											226 text 0.0
+										227 cell
+											228 text 0.00000
+										229 cell
+											230 text 0.0
+									231 row
+										232 cell
+											233 text 2
+										234 cell
+											235 text 2
+										236 cell
+											237 text 2021-04-07 11:35:41.122161+00:00
+										238 cell
+											239 text 56013.785
+										240 cell
+											241 text 0.01
+										242 cell
+											243 text 3.069094e+06
+										244 cell
+											245 text 1.575759e+06
+										246 cell
+											247 text -8.926374e-08
+										248 cell
+											249 text -0.000009
+										250 cell
+											251 text -0.000070
+										252 cell
+											253 text -0.000088
+										254 cell
+											255 text ...
+										256 cell
+											257 text 0.0
+										258 cell
+											259 text 0.000000
+										260 cell
+											261 text 0.0
+										262 cell
+											263 text 0.0
+										264 cell
+											265 text 0.0
+										266 cell
+											267 text 0.0
+										268 cell
+											269 text 0.0
+										270 cell
+											271 text 0.0
+										272 cell
+											273 text 0.00000
+										274 cell
+											275 text 0.0
+									276 row
+										277 cell
+											278 text 3
+										279 cell
+											280 text 3
+										281 cell
+											282 text 2021-04-07 11:36:41.122161+00:00
+										283 cell
+											284 text 55903.575
+										285 cell
+											286 text 7.17
+										287 cell
+											288 text 1.220819e+06
+										289 cell
+											290 text 1.321487e+06
+										291 cell
+											292 text -6.412827e-05
+										293 cell
+											294 text -0.000182
+										295 cell
+											296 text -0.000188
+										297 cell
+											298 text -0.000225
+										299 cell
+											300 text ...
+										301 cell
+											302 text 0.0
+										303 cell
+											304 text 312.040009
+										305 cell
+											306 text 0.0
+										307 cell
+											308 text 0.0
+										309 cell
+											310 text 0.0
+										311 cell
+											312 text 0.0
+										313 cell
+											314 text 0.0
+										315 cell
+											316 text 0.0
+										317 cell
+											318 text 0.00000
+										319 cell
+											320 text 0.0
+									321 row
+										322 cell
+											323 text 4
+										324 cell
+											325 text 4
+										326 cell
+											327 text 2021-04-07 11:37:41.122161+00:00
+										328 cell
+											329 text 55899.995
+										330 cell
+											331 text 0.01
+										332 cell
+											333 text 2.011287e+06
+										334 cell
+											335 text 3.083005e+06
+										336 cell
+											337 text -8.944544e-08
+										338 cell
+											339 text -0.000129
+										340 cell
+											341 text -0.000130
+										342 cell
+											343 text -0.000143
+										344 cell
+											345 text ...
+										346 cell
+											347 text 0.0
+										348 cell
+											349 text 0.000000
+										350 cell
+											351 text 0.0
+										352 cell
+											353 text 0.0
+										354 cell
+											355 text 0.0
+										356 cell
+											357 text 0.0
+										358 cell
+											359 text 0.0
+										360 cell
+											361 text 0.0
+										362 cell
+											363 text 0.00000
+										364 cell
+											365 text 0.0
+								366 text 5 rows × 156 columns
+							367 container
+								368 text In [4]:
+								369 text BTC_df . drop ( "Unnamed: 0" , inplace = True , axis = 1 ) BTC_df . drop ( "system_time" , inplace = True , axis = 1 )
+							370 container
+								371 heading Split data in to train and test, Value: 3, ID: Split-data-in-to-train-and-test
+									372 text Split data in to train and test
+							373 container
+								374 text In [5]:
+								375 text BTC_df . shape
+								376 text Out[5]:
+								377 text (17113, 154)
+							378 container
+								379 text In [6]:
+								380 text data_length = BTC_df . shape [ 0 ] train_length = round ( 0.8 * data_length ) train_length
+								381 text Out[6]:
+								382 text 13690
+							383 container
+								384 heading Standardize by mean and std in training data, Value: 3, ID: Standardize-by-mean-and-std-in-training-data
+									385 text Standardize by mean and std in training data
+							386 container
+								387 text In [7]:
+								388 text mean_df = BTC_df [: train_length ] . mean () std_df = BTC_df [: train_length ] . std () normalized_df = ( BTC_df - mean_df ) / std_df
+							389 container
+								390 heading Create Sliding Windows, Value: 3, ID: Create-Sliding-Windows
+									391 text Create Sliding Windows
+							392 container
+								393 text In [8]:
+								394 text # Set window size window_size = 30 # Windows for training dataset windows_train = timeseries_dataset_from_array ( normalized_df [:( train_length )], normalized_df [ "midpoint" ][ window_size :( train_length + window_size )], window_size , sequence_stride = 1 , sampling_rate = 1 , batch_size = 64 , shuffle = False , seed = None , start_index = None , end_index = None ) # Windows for test dataset windows_test = timeseries_dataset_from_array ( normalized_df [ train_length :( data_length - window_size )], normalized_df [ "midpoint" ][ train_length + window_size :], 30 , sequence_stride = 1 , sampling_rate = 1 , batch_size = 64 , shuffle = False , seed = None , start_index = None , end_index = None )
+							395 container
+								396 heading Dense Model, Value: 3, ID: Dense-Model
+									397 text Dense Model
+							398 container
+								399 text In [9]:
+								400 text model_dense = keras . models . Sequential ([ keras . layers . Flatten ( input_shape = [ 30 , 154 ]), keras . layers . Dense ( 16 ), keras . layers . Dense ( 1 ) ]) model_dense . compile ( loss = "mse" , optimizer = "adam" , metrics = [ "mse" ]) history = model_dense . fit ( windows_train , epochs = 10 , verbose = 1 )
+								401 text Epoch 1/10
+214/214 [==============================] - 2s 9ms/step - loss: 5.9057 - mse: 5.9057
+Epoch 2/10
+214/214 [==============================] - 2s 9ms/step - loss: 1.3498 - mse: 1.3498
+Epoch 3/10
+214/214 [==============================] - 2s 9ms/step - loss: 0.8066 - mse: 0.8066
+Epoch 4/10
+214/214 [==============================] - 2s 8ms/step - loss: 0.3467 - mse: 0.3467
+Epoch 5/10
+214/214 [==============================] - 2s 8ms/step - loss: 0.1024 - mse: 0.1024
+Epoch 6/10
+214/214 [==============================] - 2s 8ms/step - loss: 0.0526 - mse: 0.0526
+Epoch 7/10
+214/214 [==============================] - 2s 8ms/step - loss: 0.0234 - mse: 0.0234
+Epoch 8/10
+214/214 [==============================] - 2s 8ms/step - loss: 0.0212 - mse: 0.0212
+Epoch 9/10
+214/214 [==============================] - 2s 8ms/step - loss: 0.0168 - mse: 0.0168
+Epoch 10/10
+214/214 [==============================] - 2s 8ms/step - loss: 0.0187 - mse: 0.0187
+
+							402 container
+								403 text In [10]:
+								404 text # Predict preds_dense = model_dense . predict ( windows_test ) # Remove standardization from predictions preds_dense_unstd = preds_dense * std_df [ "midpoint" ] + mean_df [ "midpoint" ] # Plot  plt . plot ( preds_dense_unstd , label = "Prediction" ) plt . plot ( BTC_df [ "midpoint" ][ train_length + window_size :] . reset_index ( drop = True ), label = "True Price" ) plt . legend ( loc = "upper right" )
+								405 text Out[10]:
+								406 text <matplotlib.legend.Legend at 0x7f27448f58d0>
+							407 container
+								408 heading LSTM Model, Value: 3, ID: LSTM-Model
+									409 text LSTM Model
+							410 container
+								411 text In [11]:
+								412 text model_lstm = keras . models . Sequential ([ keras . layers . LSTM ( 16 , input_shape = [ 30 , 154 ]), keras . layers . Dense ( 1 ) ]) model_lstm . compile ( loss = "mse" , optimizer = "adam" , metrics = [ "mse" ]) history = model_lstm . fit ( windows_train , epochs = 10 , verbose = 1 )
+								413 text Epoch 1/10
+214/214 [==============================] - 5s 17ms/step - loss: 0.8713 - mse: 0.8713
+Epoch 2/10
+214/214 [==============================] - 4s 17ms/step - loss: 0.8522 - mse: 0.8522
+Epoch 3/10
+214/214 [==============================] - 4s 17ms/step - loss: 0.3333 - mse: 0.3333
+Epoch 4/10
+214/214 [==============================] - 4s 18ms/step - loss: 0.1052 - mse: 0.1052
+Epoch 5/10
+214/214 [==============================] - 4s 18ms/step - loss: 0.0518 - mse: 0.0518
+Epoch 6/10
+214/214 [==============================] - 4s 17ms/step - loss: 0.0361 - mse: 0.0361
+Epoch 7/10
+214/214 [==============================] - 4s 17ms/step - loss: 0.0268 - mse: 0.0268
+Epoch 8/10
+214/214 [==============================] - 4s 18ms/step - loss: 0.0214 - mse: 0.0214
+Epoch 9/10
+214/214 [==============================] - 4s 18ms/step - loss: 0.0177 - mse: 0.0177
+Epoch 10/10
+214/214 [==============================] - 4s 18ms/step - loss: 0.0151 - mse: 0.0151
+
+							414 container
+								415 text In [12]:
+								416 text # Predict preds_lstm = model_lstm . predict ( windows_test ) # Remove standardization from predictions preds_lstm_unstd = preds_lstm * std_df [ "midpoint" ] + mean_df [ "midpoint" ] # Plot  plt . plot ( preds_lstm_unstd , label = "Prediction" ) plt . plot ( BTC_df [ "midpoint" ][ train_length + window_size :] . reset_index ( drop = True ), label = "True Price" ) plt . legend ( loc = "upper right" )
+								417 text Out[12]:
+								418 text <matplotlib.legend.Legend at 0x7f272085ef10>
+			419 heading License, Value: 2
+				420 text License
+			421 container
+				422 text This Notebook has been released under the
+				423 link Description: Apache 2.0, Value: apache.org/licenses/LICENSE-2.0
+				424 text open source license.
+			425 heading Continue exploring, Value: 2
+				426 text Continue exploring
+			427 content list
+				428 container Input List Item
+					429 link Input
+						430 text input
+						431 text Input
+						432 text 1 file
+				433 container Output List Item
+					434 link Output
+						435 text output
+						436 text Output
+						437 text 0 files
+				438 container Logs List Item
+					439 link Logs
+						440 text list_alt
+						441 text Logs
+						442 text 87.8 second run - successful
+				443 container Comments List Item
+					444 link Comments
+						445 text comment
+						446 text Comments
+						447 text 1 comment
+
+The focused UI element is 51 pop up button (collapsed) Download, Secondary Actions: Expand

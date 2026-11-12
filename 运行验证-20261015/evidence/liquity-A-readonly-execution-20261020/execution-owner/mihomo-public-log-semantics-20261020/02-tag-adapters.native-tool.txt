@@ -1,0 +1,334 @@
+ (https://raw.githubusercontent.com/MetaCubeX/mihomo/v1.19.10/constant/adapters.go)
+citeturn1300view0 [wordlim: 200] Crawled: yesterday; Content type: text/plain; Source: open({"ref_id":"https://raw.githubusercontent.com/MetaCubeX/mihomo/v1.19.10/constant/adapters.go","lineno":null}); Total lines: 332
+L0: package constant
+L1: 
+L2: import (
+L3: 	"context"
+L4: 	"errors"
+L5: 	"fmt"
+L6: 	"net"
+L7: 	"net/netip"
+L8: 	"sync"
+L9: 	"time"
+L10: 
+L11: 	N "github.com/metacubex/mihomo/common/net"
+L12: 	"github.com/metacubex/mihomo/common/utils"
+L13: 	"github.com/metacubex/mihomo/component/dialer"
+L14: )
+L15: 
+L16: // Adapter Type
+L17: const (
+L18: 	Direct AdapterType = iota
+L19: 	Reject
+L20: 	RejectDrop
+L21: 	Compatible
+L22: 	Pass
+L23: 	Dns
+L24: 
+L25: 	Relay
+L26: 	Selector
+L27: 	Fallback
+L28: 	URLTest
+L29: 	LoadBalance
+L30: 
+L31: 	Shadowsocks
+L32: 	ShadowsocksR
+L33: 	Snell
+L34: 	Socks5
+L35: 	Http
+L36: 	Vmess
+L37: 	Vless
+L38: 	Trojan
+L39: 	Hysteria
+L40: 	Hysteria2
+L41: 	WireGuard
+L42: 	Tuic
+L43: 	Ssh
+L44: 	Mieru
+L45: 	AnyTLS
+L46: )
+L47: const (
+L48: 	DefaultTCPTimeout = dialer.DefaultTCPTimeout
+L49: 	DefaultUDPTimeout = dialer.DefaultUDPTimeout
+L50: 	DefaultDropTime   = 12 * DefaultTCPTimeout
+L51: 	DefaultTLSTimeout = DefaultTCPTimeout
+L52: 	DefaultTestURL    = "https://www.gstatic.com/generate_204"
+L53: )
+L54: 
+L55: var ErrNotSupport = errors.New("no support")
+L56: 
+L57: type Connection interface {
+L58: 	Chains() Chain
+L59: 	AppendToChains(adapter ProxyAdapter)
+L60: 	RemoteDestination() string
+L61: }
+L62: 
+L63: type Chain []string
+L64: func (c Chain) String() string {
+L65: 	switch len(c) {
+L66: 	case 0:
+L67: 		return ""
+L68: 	case 1:
+L69: 		return c[0]
+L70: 	default:
+L71: 		return fmt.Sprintf("%s[%s]", c[len(c)-1], c[0])
+L72: 	}
+L73: }
+L74: 
+L75: func (c Chain) Last() string {
+L76: 	switch len(c) {
+L77: 	case 0:
+L78: 		return ""
+L79: 	default:
+L80: 		return c[0]
+L81: 	}
+L82: }
+L83: 
+L84: type Conn interface {
+L85: 	N.ExtendedConn
+L86: 	Connection
+L87: }
+L88: 
+L89: type PacketConn interface {
+L90: 	N.EnhancePacketConn
+L91: 	Connection
+L92: 	ResolveUDP(ctx context.Context, metadata *Metadata) error
+L93: }
+L94: type Dialer interface {
+L95: 	DialContext(ctx context.Context, network, address string) (net.Conn, error)
+L96: 	ListenPacket(ctx context.Context, network, address string, rAddrPort netip.AddrPort) (net.PacketConn, error)
+L97: }
+L98: 
+L99: type ProxyInfo struct {
+L100: 	XUDP        bool
+L101: 	TFO         bool
+L102: 	MPTCP       bool
+L103: 	SMUX        bool
+L104: 	Interface   string
+L105: 	RoutingMark int
+L106: 	DialerProxy string
+L107: }
+L108: 
+L109: type ProxyAdapter interface {
+L110: 	Name() string
+L111: 	Type() AdapterType
+L112: 	Addr() string
+L113: 	SupportUDP() bool
+L114: 	// ProxyInfo contains some extra information maybe useful for MarshalJSON
+L115: 	ProxyInfo() ProxyInfo
+L116: 	MarshalJSON() ([]byte, error)
+L117: 	// Deprecated: use DialContextWithDialer and ListenPacketWithDialer instead.
+L118: 	// StreamConn wraps a protocol around net.Conn with Metadata.
+L119: 	//
+L120: 	// Examples:
+L121: 	//	conn, _ := net.DialContext(context.Background(), "tcp", "host:port")
+L122: 	//	conn, _ = adapter.StreamConnContext(context.Background(), conn, metadata)
+L123: 	//
+L124: 	// It returns a C.Conn with protocol which start with
+L125: 	// a new session (if any)
+L126: 	StreamConnContext(ctx context.Context, c net.Conn, metadata *Metadata) (net.Conn, error)
+L127: 	// DialContext return a C.Conn with protocol which
+L128: 	// contains multiplexing-related reuse logic (if any)
+L129: 	DialContext(ctx context.Context, metadata *Metadata) (Conn, error)
+L130: 	ListenPacketContext(ctx context.Context, metadata *Metadata) (PacketConn, error)
+L131: 
+L132: 	// SupportUOT return UDP over TCP support
+L133: 	SupportUOT() bool
+L134: 	SupportWithDialer() NetWork
+L135: 	DialContextWithDialer(ctx context.Context, dialer Dialer, metadata *Metadata) (Conn, error)
+L136: 	ListenPacketWithDialer(ctx context.Context, dialer Dialer, metadata *Metadata) (PacketConn, error)
+L137: 
+L138: 	// IsL3Protocol return ProxyAdapter working in L3 (tell dns module not pass the domain to avoid loopback)
+L139: 	IsL3Protocol(metadata *Metadata) bool
+L140: 
+L141: 	// Unwrap extracts the proxy from a proxy-group. It returns nil when nothing to extract.
+L142: 	Unwrap(metadata *Metadata, touch bool) Proxy
+L143: 	// Close releasing associated resources
+L144: 	Close() error
+L145: }
+L146: 
+L147: type Group interface {
+L148: 	URLTest(ctx context.Context, url string, expectedStatus utils.IntRanges[uint16]) (mp map[string]uint16, err error)
+L149: 	Touch()
+L150: }
+L151: 
+L152: type DelayHistory struct {
+L153: 	Time  time.Time `json:"time"`
+L154: 	Delay uint16    `json:"delay"`
+L155: }
+L156: 
+L157: type ProxyState struct {
+L158: 	Alive   bool           `json:"alive"`
+L159: 	History []DelayHistory `json:"history"`
+L160: }
+L161: 
+L162: type DelayHistoryStoreType int
+L163: type Proxy interface {
+L164: 	ProxyAdapter
+L165: 	Adapter() ProxyAdapter
+L166: 	AliveForTestUrl(url string) bool
+L167: 	DelayHistory() []DelayHistory
+L168: 	ExtraDelayHistories() map[string]ProxyState
+L169: 	LastDelayForTestUrl(url string) uint16
+L170: 	URLTest(ctx context.Context, url string, expectedStatus utils.IntRanges[uint16]) (uint16, error)
+L171: 
+L172: 	// Deprecated: use DialContext instead.
+L173: 	Dial(metadata *Metadata) (Conn, error)
+L174: 
+L175: 	// Deprecated: use DialPacketConn instead.
+L176: 	DialUDP(metadata *Metadata) (PacketConn, error)
+L177: }
+L178: // AdapterType is enum of adapter type
+L179: type AdapterType int
+L180: func (at AdapterType) String() string {
+L181: 	switch at {
+L182: 	case Direct:
+L183: 		return "Direct"
+L184: 	case Reject:
+L185: 		return "Reject"
+L186: 	case RejectDrop:
+L187: 		return "RejectDrop"
+L188: 	case Compatible:
+L189: 		return "Compatible"
+L190: 	case Pass:
+L191: 		return "Pass"
+L192: 	case Dns:
+L193: 		return "Dns"
+L194: 	case Shadowsocks:
+L195: 		return "Shadowsocks"
+L196: 	case ShadowsocksR:
+L197: 		return "ShadowsocksR"
+L198: 	case Snell:
+L199: 		return "Snell"
+L200: 	case Socks5:
+L201: 		return "Socks5"
+L202: 	case Http:
+L203: 		return "Http"
+L204: 	case Vmess:
+L205: 		return "Vmess"
+L206: 	case Vless:
+L207: 		return "Vless"
+L208: 	case Trojan:
+L209: 		return "Trojan"
+L210: 	case Hysteria:
+L211: 		return "Hysteria"
+L212: 	case Hysteria2:
+L213: 		return "Hysteria2"
+L214: 	case WireGuard:
+L215: 		return "WireGuard"
+L216: 	case Tuic:
+L217: 		return "Tuic"
+L218: 	case Ssh:
+L219: 		return "Ssh"
+L220: 	case Mieru:
+L221: 		return "Mieru"
+L222: 	case AnyTLS:
+L223: 		return "AnyTLS"
+L224: 	case Relay:
+L225: 		return "Relay"
+L226: 	case Selector:
+L227: 		return "Selector"
+L228: 	case Fallback:
+L229: 		return "Fallback"
+L230: 	case URLTest:
+L231: 		return "URLTest"
+L232: 	case LoadBalance:
+L233: 		return "LoadBalance"
+L234: 	default:
+L235: 		return "Unknown"
+L236: 	}
+L237: }
+L238: // UDPPacket contains the data of UDP packet, and offers control/info of UDP packet's source
+L239: type UDPPacket interface {
+L240: 	// Data get the payload of UDP Packet
+L241: 	Data() []byte
+L242: 
+L243: 	// WriteBack writes the payload with source IP/Port equals addr
+L244: 	// - variable source IP/Port is important to STUN
+L245: 	// - if addr is not provided, WriteBack will write out UDP packet with SourceIP/Port equals to original Target,
+L246: 	//   this is important when using Fake-IP.
+L247: 	WriteBack
+L248: 	// Drop call after packet is used, could recycle buffer in this function.
+L249: 	Drop()
+L250: 
+L251: 	// LocalAddr returns the source IP/Port of packet
+L252: 	LocalAddr() net.Addr
+L253: }
+L254: 
+L255: type UDPPacketInAddr interface {
+L256: 	InAddr() net.Addr
+L257: }
+L258: 
+L259: // PacketAdapter is a UDP Packet adapter for socks/redir/tun
+L260: type PacketAdapter interface {
+L261: 	UDPPacket
+L262: 	// Metadata returns destination metadata
+L263: 	Metadata() *Metadata
+L264: 	// Key is a SNAT key
+L265: 	Key() string
+L266: }
+L267: 
+L268: type packetAdapter struct {
+L269: 	UDPPacket
+L270: 	metadata *Metadata
+L271: 	key      string
+L272: }
+L273: // Metadata returns destination metadata
+L274: func (s *packetAdapter) Metadata() *Metadata {
+L275: 	return s.metadata
+L276: }
+L277: 
+L278: // Key is a SNAT key
+L279: func (s *packetAdapter) Key() string {
+L280: 	return s.key
+L281: }
+L282: 
+L283: func NewPacketAdapter(packet UDPPacket, metadata *Metadata) PacketAdapter {
+L284: 	return &packetAdapter{
+L285: 		packet,
+L286: 		metadata,
+L287: 		packet.LocalAddr().String(),
+L288: 	}
+L289: }
+L290: 
+L291: type WriteBack interface {
+L292: 	WriteBack(b []byte, addr net.Addr) (n int, err error)
+L293: }
+L294: 
+L295: type WriteBackProxy interface {
+L296: 	WriteBack
+L297: 	UpdateWriteBack(wb WriteBack)
+L298: }
+L299: type PacketSender interface {
+L300: 	// Send will send PacketAdapter nonblocking
+L301: 	// the implement must call UDPPacket.Drop() inside Send
+L302: 	Send(PacketAdapter)
+L303: 	// Process is a blocking loop to send PacketAdapter to PacketConn and update the WriteBackProxy
+L304: 	Process(PacketConn, WriteBackProxy)
+L305: 	// Close stop the Process loop
+L306: 	Close()
+L307: 	// DoSniff will blocking after sniffer work done
+L308: 	DoSniff(*Metadata) error
+L309: 	// AddMapping add a destination NAT record
+L310: 	AddMapping(originMetadata *Metadata, metadata *Metadata)
+L311: 	// RestoreReadFrom restore destination NAT for ReadFrom
+L312: 	// the implement must ensure returned netip.Add is valid (or just return input addr)
+L313: 	RestoreReadFrom(addr netip.Addr) netip.Addr
+L314: }
+L315: type NatTable interface {
+L316: 	GetOrCreate(key string, maker func() PacketSender) (PacketSender, bool)
+L317: 
+L318: 	Delete(key string)
+L319: 
+L320: 	GetForLocalConn(lAddr, rAddr string) *net.UDPConn
+L321: 
+L322: 	AddForLocalConn(lAddr, rAddr string, conn *net.UDPConn) bool
+L323: 
+L324: 	RangeForLocalConn(lAddr string, f func(key string, value *net.UDPConn) bool)
+L325: 
+L326: 	GetOrCreateLockForLocalConn(lAddr string, key string) (*sync.Cond, bool)
+L327: 
+L328: 	DeleteForLocalConn(lAddr, key string)
+L329: 
+L330: 	DeleteLockForLocalConn(lAddr, key string)
+L331: }

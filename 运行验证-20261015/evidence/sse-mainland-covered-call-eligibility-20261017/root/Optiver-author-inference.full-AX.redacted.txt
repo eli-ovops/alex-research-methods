@@ -1,0 +1,535 @@
+Browser tab: 2, Title: "9th-submission", URL: "https://www.kaggle.com/code/hookman/9th-submission".
+1 AXWebArea 9th-submission, URL: kaggle.com/code/hookman/9th-submission
+	2 container root
+		3 container Main Kaggle page navigation
+			4 button Navigation menu
+			5 link Description: Skip to content, Value: kaggle.com/code/hookman/9th-submission#site-content
+			6 link Description: Return to Kaggle home page, Value: kaggle.com/
+			7 pop up button Create on Kaggle
+				8 text Create
+			9 container
+				10 container
+					11 content list
+						12 container Home List Item
+							13 link Description: Home, Value: kaggle.com/
+						14 container Competitions List Item
+							15 link Description: Competitions, Value: kaggle.com/competitions
+						16 container Benchmarks List Item
+							17 link Description: Benchmarks, Value: kaggle.com/benchmarks
+						18 container Game Arena List Item
+							19 link Description: Game Arena, Value: kaggle.com/game-arena
+					20 content list
+						21 container Data Hub List Item
+							22 container
+								23 link (collapsed) Description: Data Hub, Value: kaggle.com/code/hookman/9th-submission#, Secondary Actions: Expand
+								24 button Expand
+					25 content list
+						26 container More on Kaggle List Item
+							27 container
+								28 link (collapsed) Description: More on Kaggle, Value: kaggle.com/code/hookman/9th-submission#, Secondary Actions: Expand
+								29 button Expand
+		30 container Main menu, search and your account
+			31 container
+				32 text field (settable) :r8:
+				33 link Description: Login, Value: kaggle.com/account/login?phase=startSignInTab&returnUrl=%2Fcode%2Fhookman%2F9th-submission
+				34 link Description: Sign Up, Value: kaggle.com/account/login?phase=startRegisterTab&returnUrl=%2Fcode%2Fhookman%2F9th-submission
+		35 container site-content
+			36 container
+				37 text Kaggle uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+				38 link Description: Learn more, Value: kaggle.com/cookies
+				39 text OK, Got it.
+			40 link Description: ADAM.'s profile, Value: kaggle.com/hookman
+			41 text ADAM. · 
+			42 container Description: 3 years ago, Help: Tue Mar 26 2024 23:58:53 GMT+0800 (中国标准时间)
+				43 text 3y ago
+			44 text  ·  4,279 views
+			45 container
+				46 button Upvote
+				47 button 128 votes
+			48 button (disabled) Copy & Edit
+			49 button 140 copies
+				50 container 140 copies
+					51 text 140
+			52 pop up button (collapsed) Download, Secondary Actions: Expand
+			53 image bronze medal
+			54 button More options for this notebook
+			55 heading 9th-submission, Value: 1
+				56 text 9th-submission
+			57 link [object Object] opens in new window
+				58 container
+					59 text Copied from  private notebook ( + 0 , - 0 )
+			60 tab group
+				61 tab (selected, settable, boolean) Description: Notebook, 1 of 5, Value: 1
+				62 tab (selectable, settable, boolean) Description: Input, 2 of 5, Value: 0
+				63 tab (selectable, settable, boolean) Description: Output, 3 of 5, Value: 0
+				64 tab (selectable, settable, boolean) Description: Logs, 4 of 5, Value: 0
+				65 tab (selectable, settable, boolean) Description: Comments (17), 5 of 5, Value: 0
+			66 container
+				67 button Version 1 of 1
+					68 text Version 
+					69 text 1 of 1
+				70 button Description: Collapse Sidebar, ID: notebook-side-bar-trigger
+				71 heading Runtime, Value: 2
+					72 text Runtime
+				73 text play_arrow 2m 42s  · GPU P100
+				74 button Go to input tab
+				75 text Competitions
+				76 text Optiver - Trading at the Close
+				77 text Datasets
+				78 text [Private Dataset]
+				79 heading Language, Value: 2
+					80 text Language
+				81 text Python
+			82 container
+				83 image Profile picture for undefined
+				84 text Competition Notebook
+				85 link Description: Optiver - Trading at the Close opens in new window, Value: kaggle.com/competitions/optiver-trading-at-the-close
+				86 text Private Score 5.4352 Best Score
+				87 link Description: 5.4352, V,1 opens in new window, Value: kaggle.com/code/hookman/9th-submission?scriptVersionId=168871272
+			88 container Description: Main Notebook Content, ID: rendered-kernel-content
+				89 AXWebArea __notebook__, URL: kaggleusercontent.com/kf/168871272/[temporary-public-render-URL-redacted]
+					90 container
+						91 container notebook-container
+							92 container
+								93 text In [1]:
+								94 text import gc # Garbage collection for memory management import os # Operating system-related functions import time # Time-related functions import warnings # Handling warnings from itertools import combinations # For creating combinations of elements from warnings import simplefilter # Simplifying warning handling # 📦 Importing machine learning libraries import joblib # For saving and loading models import numpy as np # Numerical operations import pandas as pd # Data manipulation and analysis from sklearn.metrics import mean_absolute_error # Metric for evaluation from sklearn.model_selection import KFold , TimeSeriesSplit # Cross-validation techniques import os import lightgbm as lgb # 🤐 Disable warnings to keep the code clean warnings . filterwarnings ( "ignore" ) simplefilter ( action = "ignore" , category = pd . errors . PerformanceWarning ) import time import polars as pl import gc print ( pl . __version__ )
+								95 text /opt/conda/lib/python3.10/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/opt/conda/lib/python3.10/site-packages/dask/dataframe/_pyarrow_compat.py:23: UserWarning: You are using pyarrow version 11.0.0 which is known to be insecure. See https://www.cve.org/CVERecord?id=CVE-2023-47248 for further details. Please upgrade to pyarrow>=14.0.1 or install pyarrow-hotfix to patch your current version.
+  warnings.warn(
+
+								96 text 0.19.13
+
+							97 container
+								98 text In [2]:
+								99 text import catboost as cbt
+							100 container
+								101 text In [3]:
+								102 text import json with open ( "/kaggle/input/optiver/xgb3_feas_v7_157.json" ) as f : feas_dict = json . load ( f ) selected_feas = feas_dict [ 'selected_feas' ] print ( len ( selected_feas ))
+								103 text 157
+
+							104 container
+								105 text In [4]:
+								106 text import xgboost as xgb import catboost as cbt import lightgbm as lgb
+							107 container
+								108 text In [5]:
+								109 text xgb_model_list = [] for k in [ 1 , 2 , 3 , 4 , 5 ]: model = xgb . XGBRegressor () model . load_model ( f '/kaggle/input/optiver/xgb3_v7_k { k } _weight15_debug.json' ) xgb_model_list . append ( model )
+							110 container
+								111 text In [6]:
+								112 text xgb_model_list
+								113 text Out[6]:
+								114 text [XGBRegressor(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None,
+              feature_types=['float', 'float', 'float', 'float', 'float', 'int',
+                             'float', 'float', 'float', 'float', 'float',
+                             'float', 'float', 'float', 'float', 'float',
+                             'flo...
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=None,
+              num_parallel_tree=None, random_state=None, ...),
+ XGBRegressor(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None,
+              feature_types=['float', 'float', 'float', 'float', 'float', 'int',
+                             'float', 'float', 'float', 'float', 'float',
+                             'float', 'float', 'float', 'float', 'float',
+                             'flo...
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=None,
+              num_parallel_tree=None, random_state=None, ...),
+ XGBRegressor(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None,
+              feature_types=['float', 'float', 'float', 'float', 'float', 'int',
+                             'float', 'float', 'float', 'float', 'float',
+                             'float', 'float', 'float', 'float', 'float',
+                             'flo...
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=None,
+              num_parallel_tree=None, random_state=None, ...),
+ XGBRegressor(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None,
+              feature_types=['float', 'float', 'float', 'float', 'float', 'int',
+                             'float', 'float', 'float', 'float', 'float',
+                             'float', 'float', 'float', 'float', 'float',
+                             'flo...
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=None,
+              num_parallel_tree=None, random_state=None, ...),
+ XGBRegressor(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None,
+              feature_types=['float', 'float', 'float', 'float', 'float', 'int',
+                             'float', 'float', 'float', 'float', 'float',
+                             'float', 'float', 'float', 'float', 'float',
+                             'flo...
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=None,
+              num_parallel_tree=None, random_state=None, ...)]
+							115 container
+								116 text In [7]:
+								117 text with open ( "/kaggle/input/optiver/scale_dict_median.json" ) as f : scale_dict = json . load ( f )
+							118 container
+								119 text In [8]:
+								120 container (showing 0-500 of 3593 items)
+									121 text def generate_features_no_hist_polars ( df , target_feas ): size_col = [ 'imbalance_size' , 'matched_size' , 'bid_size' , 'ask_size' ] for _ in size_col : tmp_map = scale_dict [ _ ] . copy () tmp_map = { int ( k ): v for k , v in tmp_map . items ()} df [ f " { _ } _stock_median" ] = df [ 'stock_id' ] . map ( tmp_map ) df [ f "scale_ { _ } " ] = df [ _ ] / df [ f " { _ } _stock_median" ] del df [ f " { _ } _stock_median" ] #buy-side imbalance; 1 #sell-side imbalance; -1 #no imbalance; 0 df [ 'auc_bid_size' ] = df [ 'matched_size' ] df [ 'auc_ask_size' ] = df [ 'matched_size' ] df . loc [ df [ 'imbalance_buy_sell_flag' ] == 1 , 'auc_bid_size' ] += df . loc [ df [ 'imbalance_buy_sell_flag' ] == 1 , 'imbalance_size' ] df . loc [ df [ 'imbalance_buy_sell_flag' ] ==- 1 , 'auc_ask_size' ] += df . loc [ df [ 'imbalance_buy_sell_flag' ] ==- 1 , 'imbalance_size' ] # 加一个ask_size - bid_size的特征 然后Rolling df = pl . from_pandas ( df ) feas_list = [ 'stock_id' , 'seconds_in_bucket' , 'imbalance_size' , 'imbalance_buy_sell_flag' , 'reference_price' , 'matched_size' , 'far_price' , 'near_price' , 'bid_price' , 'bid_size' , 'ask_price' , 'ask_size' , 'wap' , 'scale_imbalance_size' , 'scale_matched_size' , 'scale_bid_size' , 'scale_ask_size' , 'auc_bid_size' , 'auc_ask_size' ] # 基础特征 df = df . with_columns ([ # 阶段1 ( pl . col ( 'ask_size' ) * pl . col ( 'ask_price' )) . alias ( "ask_money" ), ( pl . col ( 'bid_size' ) * pl . col ( 'bid_price' )) . alias ( "bid_money" ), ( pl . col ( 'ask_size' ) + pl . col ( "auc_ask_size" )) . alias ( "ask_size_all" ), ( pl . col ( 'bid_size' ) + pl . col ( "auc_bid_size" )) . alias ( "bid_size_all" ), ( pl . col ( 'ask_size' ) + pl . col ( "auc_ask_size" ) + pl . col ( 'bid_size' ) + pl . col ( "auc_bid_size" )) . alias ( "volumn_size_all" ), ( pl . col ( 'reference_price' ) * pl . col ( 'auc_ask_size' )) . alias ( "ask_auc_money" ), ( pl . col ( 'reference_price' ) * pl . col ( 'auc_bid_size' )) . alias ( "bid_auc_money" ), ( pl . col ( 'ask_size' ) * pl . col ( 'ask_price' ) + pl . col ( 'bid_size' ) * pl . col ( 'bid_price'
+							122 container
+								123 text In [9]:
+								124 container (showing 0-500 of 639 items)
+									125 text weights = [ 0.004 , 0.001 , 0.002 , 0.006 , 0.004 , 0.004 , 0.002 , 0.006 , 0.006 , 0.002 , 0.002 , 0.008 , 0.006 , 0.002 , 0.008 , 0.006 , 0.002 , 0.006 , 0.004 , 0.002 , 0.004 , 0.001 , 0.006 , 0.004 , 0.002 , 0.002 , 0.004 , 0.002 , 0.004 , 0.004 , 0.001 , 0.001 , 0.002 , 0.002 , 0.006 , 0.004 , 0.004 , 0.004 , 0.006 , 0.002 , 0.002 , 0.04 , 0.002 , 0.002 , 0.004 , 0.04 , 0.002 , 0.001 , 0.006 , 0.004 , 0.004 , 0.006 , 0.001 , 0.004 , 0.004 , 0.002 , 0.006 , 0.004 , 0.006 , 0.004 , 0.006 , 0.004 , 0.002 , 0.001 , 0.002 , 0.004 , 0.002 , 0.008 , 0.004 , 0.004 , 0.002 , 0.004 , 0.006 , 0.002 , 0.004 , 0.004 , 0.002 , 0.004 , 0.004 , 0.004 , 0.001 , 0.002 , 0.002 , 0.008 , 0.02 , 0.004 , 0.006 , 0.002 , 0.02 , 0.002 , 0.002 , 0.006 , 0.004 , 0.002 , 0.001 , 0.02 , 0.006 , 0.001 , 0.002 , 0.004 , 0.001 , 0.002 , 0.006 , 0.006 , 0.004 , 0.006 , 0.001 , 0.002 , 0.004 , 0.006 , 0.006 , 0.001 , 0.04 , 0.006 , 0.002 , 0.004 , 0.002 , 0.002 , 0.006 , 0.002 , 0.002 , 0.004 , 0.006 , 0.006 , 0.002 , 0.002 , 0.008 , 0.006 , 0.004 , 0.002 , 0.006 , 0.002 , 0.004 , 0.006 , 0.002 , 0.004 , 0.001 , 0.004 , 0.002 , 0.004 , 0.008 , 0.006 , 0.008 , 0.002 , 0.004 , 0.002 , 0.001 , 0.004 , 0.004 , 0.004 , 0.006 , 0.008 , 0.004 , 0.001 , 0.001 , 0.002 , 0.006 , 0.004 , 0.001 , 0.002 , 0.006 , 0.004 , 0.006 ,
+							126 container
+								127 text In [10]:
+								128 container (showing 0-500 of 765 items)
+									129 text def handle_format ( test_df , revealed_targets ): target_df = pd . DataFrame () if len ( revealed_targets ) > 2 : # 增加try except try : target_df [ 'stock_id' ] = list ( revealed_targets [ 'stock_id' ]) target_df [ 'date_id' ] = list ( revealed_targets [ 'revealed_date_id' ]) target_df [ 'seconds_in_bucket' ] = list ( revealed_targets [ 'seconds_in_bucket' ]) target_df [ 'target' ] = list ( revealed_targets [ 'revealed_target' ]) target_df [ 'stock_id' ] = target_df [ 'stock_id' ] . astype ( np . int64 ) target_df [ 'date_id' ] = target_df [ 'date_id' ] . astype ( np . int64 ) target_df [ 'seconds_in_bucket' ] = target_df [ 'seconds_in_bucket' ] . astype ( np . int64 ) target_df [ 'target' ] = target_df [ 'target' ] . astype ( np . float64 ) except : target_df = pd . DataFrame () # test_df test_df [ 'stock_id' ] = test_df [ 'stock_id' ] . astype ( np . int64 ) test_df [ 'date_id' ] = test_df [ 'date_id' ] . astype ( np . int64 ) test_df [ 'seconds_in_bucket' ] = test_df [ 'seconds_in_bucket' ] . astype ( np . int64 ) test_df [ 'imbalance_size' ] = test_df [ 'imbalance_size' ] . astype ( np . float64 ) test_df [ 'imbalance_buy_sell_flag' ] = test_df [ 'imbalance_buy_sell_flag' ] . astype ( np . int64 ) test_df [ 'reference_price' ] = test_df [ 'reference_price' ] . astype ( np . float64 ) test_df [ 'matched_size' ] = test_df [ 'matched_size' ] . astype ( np . float64 ) test_df [ 'far_price' ] = test_df [ 'far_price' ] . astype ( np . float64 ) test_df [ 'near_price' ] = test_df [ 'near_price' ] . astype ( np . float64 ) test_df [ 'bid_price' ] = test_df [ 'bid_price' ] . astype ( np . float64 ) test_df [ 'bid_size' ] = test_df [ 'bid_size' ] . astype ( np . float64 ) test_df [ 'ask_price' ] = test_df [ 'ask_price' ] . astype ( np . float64 ) test_df [ 'ask_size' ] = test_df [ 'ask_size' ] . astype ( np . float64 ) test_df [ 'wap' ] = test_df [ 'wap' ] . astype ( np . float64 ) return test_df , target_df def get_target_feathers ( df , date_id , second , test_df_mock ): df = df . copy () df = df [ df [ 'seconds_in_bucket' ] == second ] df = df [ df
+							130 container
+								131 text In [11]:
+								132 container (showing 0-500 of 580 items)
+									133 text def reduce_mem_usage ( df , exclude_columns = [], verbose = True ): import time numerics = [ 'int16' , 'int32' , 'int64' , 'float16' , 'float32' , 'float64' ] start_time = time . time () start_mem = df . memory_usage () . sum () / 1024 ** 2 for col in df . columns : if col in exclude_columns : continue col_type = df [ col ] . dtypes if col_type in numerics : c_min = df [ col ] . min () c_max = df [ col ] . max () if str ( col_type )[: 3 ] == 'int' : if c_min > np . iinfo ( np . int8 ) . min and c_max < np . iinfo ( np . int8 ) . max : df [ col ] = df [ col ] . astype ( np . int8 ) elif c_min > np . iinfo ( np . int16 ) . min and c_max < np . iinfo ( np . int16 ) . max : df [ col ] = df [ col ] . astype ( np . int16 ) elif c_min > np . iinfo ( np . int32 ) . min and c_max < np . iinfo ( np . int32 ) . max : df [ col ] = df [ col ] . astype ( np . int32 ) elif c_min > np . iinfo ( np . int64 ) . min and c_max < np . iinfo ( np . int64 ) . max : df [ col ] = df [ col ] . astype ( np . int64 ) else : if c_min > np . finfo ( np . float16 ) . min and c_max < np . finfo ( np . float16 ) . max : df [ col ] = df [ col ] . astype ( np . float16 ) elif c_min > np . finfo ( np . float32 ) . min and c_max < np . finfo ( np . float32 ) . max : df [ col ] = df [ col ] . astype ( np . float32 ) else : df [ col ] = df [ col ] . astype ( np . float64
+							134 container
+								135 text In [12]:
+								136 text target_df = pd . read_feather ( "/kaggle/input/optiver/train_labels.fer" ) target_df = target_df [ target_df [ 'date_id' ] >= 400 ] . reset_index ( drop = True ) gc . collect () # 为了给一个表头 target_df_save_retrain = target_df [ target_df [ 'date_id' ] >= 478 ] . reset_index ( drop = True )
+							137 container
+								138 text In [13]:
+								139 text def retrain_xgb ( train_feas , feas_list , seed ): params = { 'random_state' : seed , 'learning_rate' : 0.01 , 'n_estimators' : 3200 , 'n_jobs' : - 1 , 'objective' : 'reg:absoluteerror' , "device" : "gpu" , 'max_depth' : 10 , 'min_child_weight' : 8.860379669551103 , 'subsample' : 0.7711820080525443 , 'colsample_bytree' : 0.5348780216605801 , 'reg_alpha' : 0.12854342791716195 , 'reg_lambda' : 0.39326076062073634 , 'gamma' : 0.24378704040107024 } date_ids = np . array ( train_feas [ "date_id" ]) max_date = max ( date_ids ) weights_date = np . ones_like ( date_ids ) . astype ( float ) weights_date [ date_ids >= ( max_date - 45 )] = 1.5 del date_ids gc . collect () clf = xgb . XGBRegressor ( ** params ) clf . fit ( train_feas [ feas_list ], train_feas [ 'target' ], sample_weight = weights_date ) gc . collect () return clf
+							140 container
+								141 text In [14]:
+								142 container (showing 0-500 of 1565 items)
+									143 text import time import optiver2023 env = optiver2023 . make_env () # Setting up the environment for the competition iter_test = env . iter_test () # Getting the iterator for the test set counter = 0 # Initializing a counter qps = [] # Queries per second tracking y_min , y_max = - 64 , 64 target_df_back_days = 68 hist_df = pd . DataFrame () max_date = - 1 # 存放后面的labels save_labels_df_list = [] save_feas_df_list = [] train_data_saving_flag = True retrain_flag = False # 现在变成是否第一次训练完的标志了 is_first_scored = False scored_count = 0 ready_to_second_retrain_flag = False for ( test_df , revealed_targets , sample_prediction_df ) in iter_test : print ( 'counter:' , counter ) # 处理下格式 target_df_tmp是前一天的label test_df , target_df_tmp = handle_format ( test_df , revealed_targets ) current_is_score = list ( test_df [ 'currently_scored' ])[ 0 ] if ( not is_first_scored ) and current_is_score : is_first_scored = True test_df = test_df . drop ( 'currently_scored' , axis = 1 ) test_df [ "weight" ] = test_df [ "stock_id" ] . map ( weights ) current_date = test_df [ 'date_id' ] . max () current_second = test_df [ 'seconds_in_bucket' ] . min () if current_is_score and current_date != max_date : scored_count += 1 if scored_count >= 30 and retrain_flag : ready_to_second_retrain_flag = True #481才会增加到target_df上 只有在新日期才会有这个数据 if current_date >= 482 and current_date != max_date : target_df = pd . concat ([ target_df , target_df_tmp ], ignore_index = True ) . sort_values ([ 'date_id' , 'seconds_in_bucket' , 'stock_id' ]) target_df = target_df [ target_df [ 'date_id' ] >= ( current_date - target_df_back_days )] . reset_index ( drop = True ) #只取top80天就够了 gc . collect () # (retrain)存放新数据的labels if len ( target_df_tmp ) > 0 and ( train_data_saving_flag ): save_labels_df_list . append ( target_df_tmp ) # 第一次训练 if ( current_date >= 560 ) and ( is_first_scored ) and ( not retrain_flag ) and ( not ready_to_second_retrain_flag ): # 构建feas retrain_feas = pd . concat ( save_feas_df_list , ignore_index = True ) # 删除这个变量 del save_feas_df_list save_feas_df_list = [] gc . collect () # 特征函数 retrain_feas = reduce_mem_usage ( retrain_feas , exclude_columns = [ 'stock_id' , 'date_id' , 'seconds_in_bucket' ]) gc . collect () # train 0 -500天的 labels_df_retrain = pd . concat ( save_labels_df_list , ignore_index = True
+								144 text This version of the API is not optimized and should not be used to estimate the runtime of your code on the hidden test set.
+counter: 0
+counter: 1
+counter: 2
+counter: 3
+counter: 4
+counter: 5
+counter: 6
+counter: 7
+counter: 8
+counter: 9
+10 queries per second: 0.3350233793258667
+counter: 10
+counter: 11
+counter: 12
+counter: 13
+counter: 14
+counter: 15
+counter: 16
+counter: 17
+counter: 18
+counter: 19
+20 queries per second: 0.3465649724006653
+counter: 20
+counter: 21
+counter: 22
+counter: 23
+counter: 24
+counter: 25
+counter: 26
+counter: 27
+counter: 28
+counter: 29
+30 queries per second: 0.3625314235687256
+counter: 30
+counter: 31
+counter: 32
+counter: 33
+counter: 34
+counter: 35
+counter: 36
+counter: 37
+counter: 38
+counter: 39
+40 queries per second: 0.3742712318897247
+counter: 40
+counter: 41
+counter: 42
+counter: 43
+counter: 44
+counter: 45
+counter: 46
+counter: 47
+counter: 48
+counter: 49
+50 queries per second: 0.3839058828353882
+counter: 50
+counter: 51
+counter: 52
+counter: 53
+counter: 54
+counter: 55
+counter: 56
+counter: 57
+counter: 58
+counter: 59
+60 queries per second: 0.3831640362739563
+counter: 60
+counter: 61
+counter: 62
+counter: 63
+counter: 64
+counter: 65
+counter: 66
+counter: 67
+counter: 68
+counter: 69
+70 queries per second: 0.37864602974482947
+counter: 70
+counter: 71
+counter: 72
+counter: 73
+counter: 74
+counter: 75
+counter: 76
+counter: 77
+counter: 78
+counter: 79
+80 queries per second: 0.3785385638475418
+counter: 80
+counter: 81
+counter: 82
+counter: 83
+counter: 84
+counter: 85
+counter: 86
+counter: 87
+counter: 88
+counter: 89
+90 queries per second: 0.38218315442403156
+counter: 90
+counter: 91
+counter: 92
+counter: 93
+counter: 94
+counter: 95
+counter: 96
+counter: 97
+counter: 98
+counter: 99
+100 queries per second: 0.3852199959754944
+counter: 100
+counter: 101
+counter: 102
+counter: 103
+counter: 104
+counter: 105
+counter: 106
+counter: 107
+counter: 108
+counter: 109
+110 queries per second: 0.3895421895113858
+counter: 110
+counter: 111
+counter: 112
+counter: 113
+counter: 114
+counter: 115
+counter: 116
+counter: 117
+counter: 118
+counter: 119
+120 queries per second: 0.38409310777982075
+counter: 120
+counter: 121
+counter: 122
+counter: 123
+counter: 124
+counter: 125
+counter: 126
+counter: 127
+counter: 128
+counter: 129
+130 queries per second: 0.3820103883743286
+counter: 130
+counter: 131
+counter: 132
+counter: 133
+counter: 134
+counter: 135
+counter: 136
+counter: 137
+counter: 138
+counter: 139
+140 queries per second: 0.3826966268675668
+counter: 140
+counter: 141
+counter: 142
+counter: 143
+counter: 144
+counter: 145
+counter: 146
+counter: 147
+counter: 148
+counter: 149
+150 queries per second: 0.38519389311472574
+counter: 150
+counter: 151
+counter: 152
+counter: 153
+counter: 154
+counter: 155
+counter: 156
+counter: 157
+counter: 158
+counter: 159
+160 queries per second: 0.3877143248915672
+counter: 160
+counter: 161
+counter: 162
+counter: 163
+counter: 164
+The code will take approximately 0.45 hours to reason about
+
+							145 container
+								146 text In [15]:
+								147 text sample_prediction_df
+								148 text Out[15]:
+								149 table
+									150 row
+										151 cell
+											152 text row_id
+										153 cell
+											154 text target
+									155 row
+										156 cell
+											157 text 0
+										158 cell
+											159 text 480_540_0
+										160 cell
+											161 text 0
+									162 row
+										163 cell
+											164 text 1
+										165 cell
+											166 text 480_540_1
+										167 cell
+											168 text 0
+									169 row
+										170 cell
+											171 text 2
+										172 cell
+											173 text 480_540_2
+										174 cell
+											175 text 0
+									176 row
+										177 cell
+											178 text 3
+										179 cell
+											180 text 480_540_3
+										181 cell
+											182 text 0
+									183 row
+										184 cell
+											185 text 4
+										186 cell
+											187 text 480_540_4
+										188 cell
+											189 text 0
+									190 row
+										191 cell
+											192 text ...
+										193 cell
+											194 text ...
+										195 cell
+											196 text ...
+									197 row
+										198 cell
+											199 text 195
+										200 cell
+											201 text 480_540_195
+										202 cell
+											203 text 0
+									204 row
+										205 cell
+											206 text 196
+										207 cell
+											208 text 480_540_196
+										209 cell
+											210 text 0
+									211 row
+										212 cell
+											213 text 197
+										214 cell
+											215 text 480_540_197
+										216 cell
+											217 text 0
+									218 row
+										219 cell
+											220 text 198
+										221 cell
+											222 text 480_540_198
+										223 cell
+											224 text 0
+									225 row
+										226 cell
+											227 text 199
+										228 cell
+											229 text 480_540_199
+										230 cell
+											231 text 0
+								232 text 200 rows × 2 columns
+							233 container
+								234 text In [16]:
+								235 text # pred_df.shape
+							236 container
+								237 text In [17]:
+								238 text # -4.576492
+							239 container
+								240 text In [ ]:
+			241 heading License, Value: 2
+				242 text License
+			243 container
+				244 text This Notebook has been released under the
+				245 link Description: Apache 2.0, Value: apache.org/licenses/LICENSE-2.0
+				246 text open source license.
+			247 heading Continue exploring, Value: 2
+				248 text Continue exploring
+			249 content list
+				250 container Input List Item
+					251 link Input
+						252 text input
+						253 text Input
+						254 text 2 files
+				255 container Output List Item
+					256 link Output
+						257 text output
+						258 text Output
+						259 text 1 file
+				260 container Logs List Item
+					261 link Logs
+						262 text list_alt
+						263 text Logs
+						264 text 162.4 second run - successful
+				265 container Comments List Item
+					266 link Comments
+						267 text comment
+						268 text Comments
+						269 text 17 comments
+
+The focused UI element is 1 AXWebArea 9th-submission, URL: kaggle.com/code/hookman/9th-submission

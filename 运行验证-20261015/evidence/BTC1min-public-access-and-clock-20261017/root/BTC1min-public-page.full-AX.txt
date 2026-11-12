@@ -1,0 +1,2969 @@
+Browser tab: 5, Title: "High Frequency Crypto Limit Order Book Data", URL: "https://www.kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1min.csv".
+0 AXWebArea High Frequency Crypto Limit Order Book Data, URL: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1min.csv
+	1 container root
+		2 container Main Kaggle page navigation
+			3 button Navigation menu
+			4 link Description: Skip to content, Value: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1min.csv#site-content
+			5 link Description: Return to Kaggle home page, Value: kaggle.com/
+			6 pop up button Create on Kaggle
+				7 text Create
+			8 container
+				9 container
+					10 content list
+						11 container Home List Item
+							12 link Description: Home, Value: kaggle.com/
+						13 container Competitions List Item
+							14 link Description: Competitions, Value: kaggle.com/competitions
+						15 container Benchmarks List Item
+							16 link Description: Benchmarks, Value: kaggle.com/benchmarks
+						17 container Game Arena List Item
+							18 link Description: Game Arena, Value: kaggle.com/game-arena
+					19 content list
+						20 container Data Hub List Item
+							21 container
+								22 link (collapsed) Description: Data Hub, Value: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1min.csv#, Secondary Actions: Expand
+								23 button Expand
+					24 content list
+						25 container More on Kaggle List Item
+							26 container
+								27 link (collapsed) Description: More on Kaggle, Value: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1min.csv#, Secondary Actions: Expand
+								28 button Expand
+		29 container Main menu, search and your account
+			30 container
+				31 text field (settable) :r6:
+				32 link Description: Login, Value: kaggle.com/account/login?phase=startSignInTab&returnUrl=%2Fdatasets%2Fmartinsn%2Fhigh-frequency-crypto-limit-order-book-data%3Fselect%3DBTC_1min.csv
+				33 link Description: Sign Up, Value: kaggle.com/account/login?phase=startRegisterTab&returnUrl=%2Fdatasets%2Fmartinsn%2Fhigh-frequency-crypto-limit-order-book-data%3Fselect%3DBTC_1min.csv
+		34 container site-content
+			35 container
+				36 text Kaggle uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+				37 link Description: Learn more, Value: kaggle.com/cookies
+				38 text OK, Got it.
+			39 link Description: Martin Søgaard Nielsen's profile, Value: kaggle.com/martinsn
+			40 text Martin Søgaard Nielsen · Updated 
+			41 container Description: 5 years ago, Help: Thu Sep 02 2021 23:56:55 GMT+0800 (中国标准时间)
+				42 text 5 years ago
+			49 heading High Frequency Crypto Limit Order Book Data, Value: 1
+				50 text High Frequency Crypto Limit Order Book Data
+			51 text Bitcoin, Ethereum and Cardano
+			114 container
+				115 heading High Frequency Crypto Limit Order Book Data, Value: 2
+					116 text High Frequency Crypto Limit Order Book Data
+				117 button Upvote
+				118 button 44 votes
+				119 pop up button (collapsed) Code, Secondary Actions: Expand
+				120 pop up button (collapsed) Download, Secondary Actions: Expand
+				121 pop up button (collapsed) Description: More options for this dataset, Secondary Actions: Expand
+				122 tab group
+					123 tab (selected, settable, boolean) Description: Data Card, 1 of 4, Value: 1
+					124 tab (selectable, settable, boolean) Description: Code (3), 2 of 4, Value: 0
+					125 tab (selectable, settable, boolean) Description: Discussion (0), 3 of 4, Value: 0
+					126 tab (selectable, settable, boolean) Description: Suggestions (0), 4 of 4, Value: 0
+			57 heading About Dataset, Value: 2
+				58 text About Dataset
+			59 container
+				60 heading Context, Value: 3
+					61 text Context
+				62 text The dataset was created from raw order book messaged acquired by subscribing to the websocket of coinbase.com. The order books where then aggregated to construct snapshots of the limit order book at frequencies of 1 second, 1 minute and 5 minutes.
+				63 heading Content, Value: 3
+					64 text Content
+				65 text The dataset contains roughly 12 days of limit order book data for Bitcoin (BTC), Ethereum (ETH) and Cardano (ADA). The data contains information for the 15 best bid / ask price levels in the order book.
+				66 heading Features, Value: 3
+					67 text Features
+				68 text midpoint = the midpoint between the best bid and the best ask
+				69 text spread = the difference between the best bid and the best ask bids_distance_x = the distance of bid level x from the midprice in %
+				70 text asks_distance_x = the distance of ask level x from the midprice in % bids_market_notional_x = volume of market orders at bid level x
+				71 text bids_limit_notional_x = volume of limit orders at bid level x
+				72 text bids_cancel_notional_x = volume of canceled orders at bid level x asks_market_notional_x = volume of market orders at ask level x
+				73 text asks_limit_notional_x = volume of limit orders at ask level x
+				74 text asks_cancel_notional_x = volume of canceled orders at ask level x
+				75 heading Acknowledgements, Value: 3
+					76 text Acknowledgements
+				77 text Credits to Sadighian for creating the awesome tool used to create this dataset.
+				78 link Description: https://github.com/sadighian/crypto-rl (opens in a new tab), Value: github.com/sadighian/crypto-rl
+			79 button (collapsed) Description: View more about this dataset, Secondary Actions: Expand
+			80 heading Usability, Value: 2
+				81 text Usability
+			82 container Hit enter to view usability metrics
+				83 text info
+			127 text 9.71
+			84 heading License, Value: 2
+				85 text License
+			86 link Description: CC0: Public Domain (opens in a new tab) opens in new window, Value: creativecommons.org/publicdomain/zero/1.0/
+			128 heading Expected update frequency, Value: 2
+				129 text Expected update frequency
+			130 text Never
+			87 heading Tags, Value: 2
+				88 text Tags
+			89 container Description: Tags, ID: combo-tags-menu-chipset
+				90 link Description: Tabular opens in new window, Value: kaggle.com/datasets?tags=14101-Tabular
+				91 link Description: Finance opens in new window, Value: kaggle.com/datasets?tags=11108-Finance
+				92 link Description: Currencies and Foreign Exchange opens in new window, Value: kaggle.com/datasets?tags=16373-Currencies+and+Foreign+Exchange
+				93 link Description: Time Series Analysis opens in new window, Value: kaggle.com/datasets?tags=13209-Time+Series+Analysis
+				94 link Description: Advanced opens in new window, Value: kaggle.com/datasets?tags=13104-Advanced
+			131 container
+				132 heading BTC_1min.csv(33.16 MB), Value: 2
+					133 text BTC_1min.csv ( 33.16 MB )
+				134 button Download
+				135 button Maximize view
+				136 button Hide tree
+				137 tab group
+					138 tab (selected, settable, boolean) Description: Detail, 1 of 3, Value: 1
+					139 tab (selectable, settable, boolean) Description: Compact, 2 of 3, Value: 0
+					140 tab (selectable, settable, boolean) Description: Column, 3 of 3, Value: 0
+				141 button Download CSV with selected columns
+				142 pop up button (collapsed) Description: Change displayed columns, Secondary Actions: Expand
+					143 container
+						144 text 10  of  156  columns
+					145 text keyboard_arrow_down
+				146 table
+					147 row dataset-explorer-description
+						148 cell
+							149 text About this file
+							150 text Bitcoin at a one minute frequency.
+					151 pop up button grid_3x3 sort
+					152 pop up button calendar_today system_time sort
+						153 text calendar_today
+						154 text system_time
+						155 text sort
+					156 pop up button grid_3x3 midpoint sort
+						157 text grid_3x3
+						158 text midpoint
+						159 text sort
+					160 pop up button grid_3x3 spread sort
+						161 text grid_3x3
+						162 text spread
+						163 text sort
+					164 pop up button grid_3x3 buys sort
+						165 text grid_3x3
+						166 text buys
+						167 text sort
+					168 pop up button grid_3x3 sells sort
+						169 text grid_3x3
+						170 text sells
+						171 text sort
+					172 pop up button grid_3x3 bids_distance_0 sort
+						173 text grid_3x3
+						174 text bids_distance_0
+						175 text sort
+					176 pop up button grid_3x3 bids_distance_1 sort
+						177 text grid_3x3
+						178 text bids_distance_1
+						179 text sort
+					180 pop up button grid_3x3 bids_distance_2 sort
+						181 text grid_3x3
+						182 text bids_distance_2
+						183 text sort
+					184 pop up button grid_3x3 bids_distance_3 sort
+						185 text grid_3x3
+						186 text bids_distance_3
+						187 text sort
+					188 container value: 0.00 - 855.60 count: 856 value: 855.60 - 1711.20 count: 856 value: 1711.20 - 2566.80 count: 855 value: 2566.80 - 3422.40 count: 856 value: 3422.40 - 4278.00 count: 855 value: 4278.00 - 5133.60 count: 856 value: 5133.60 - 5989.20 count: 856 value: 5989.20 - 6844.80 count: 855 value: 6844.80 - 7700.40 count: 856 value: 7700.40 - 8556.00 count: 855 value: 8556.00 - 9411.60 count: 856 value: 9411.60 - 10267.20 count: 856 value: 10267.20 - 11122.80 count: 855 value: 11122.80 - 11978.40 count: 856 value: 11978.40 - 12834.00 count: 855 value: 12834.00 - 13689.60 count: 856 value: 13689.60 - 14545.20 count: 856 value: 14545.20 - 15400.80 count: 855 value: 15400.80 - 16256.40 count: 856 value: 16256.40 - 17112.00 count: 856
+						189 container
+							190 container A chart.
+								191 image A chart.
+								192 container A tabular representation of the data in the chart.
+									193 table
+										194 row
+											195 cell
+												196 text Label
+											197 cell
+												198 text Count
+										199 row
+											200 cell
+												201 text 0.00 - 855.60
+											202 cell
+												203 text 856
+										204 row
+											205 cell
+												206 text 855.60 - 1711.20
+											207 cell
+												208 text 856
+										209 row
+											210 cell
+												211 text 1711.20 - 2566.80
+											212 cell
+												213 text 855
+										214 row
+											215 cell
+												216 text 2566.80 - 3422.40
+											217 cell
+												218 text 856
+										219 row
+											220 cell
+												221 text 3422.40 - 4278.00
+											222 cell
+												223 text 855
+										224 row
+											225 cell
+												226 text 4278.00 - 5133.60
+											227 cell
+												228 text 856
+										229 row
+											230 cell
+												231 text 5133.60 - 5989.20
+											232 cell
+												233 text 856
+										234 row
+											235 cell
+												236 text 5989.20 - 6844.80
+											237 cell
+												238 text 855
+										239 row
+											240 cell
+												241 text 6844.80 - 7700.40
+											242 cell
+												243 text 856
+										244 row
+											245 cell
+												246 text 7700.40 - 8556.00
+											247 cell
+												248 text 855
+										249 row
+											250 cell
+												251 text 8556.00 - 9411.60
+											252 cell
+												253 text 856
+										254 row
+											255 cell
+												256 text 9411.60 - 10267.20
+											257 cell
+												258 text 856
+										259 row
+											260 cell
+												261 text 10267.20 - 11122.80
+											262 cell
+												263 text 855
+										264 row
+											265 cell
+												266 text 11122.80 - 11978.40
+											267 cell
+												268 text 856
+										269 row
+											270 cell
+												271 text 11978.40 - 12834.00
+											272 cell
+												273 text 855
+										274 row
+											275 cell
+												276 text 12834.00 - 13689.60
+											277 cell
+												278 text 856
+										279 row
+											280 cell
+												281 text 13689.60 - 14545.20
+											282 cell
+												283 text 856
+										284 row
+											285 cell
+												286 text 14545.20 - 15400.80
+											287 cell
+												288 text 855
+										289 row
+											290 cell
+												291 text 15400.80 - 16256.40
+											292 cell
+												293 text 856
+										294 row
+											295 cell
+												296 text 16256.40 - 17112.00
+											297 cell
+												298 text 856
+						299 text 0
+						300 text 17.1k
+					301 container value: 04/07/2021 - 04/08/2021 count: 857 value: 04/08/2021 - 04/08/2021 count: 856 value: 04/08/2021 - 04/09/2021 count: 856 value: 04/09/2021 - 04/09/2021 count: 855 value: 04/09/2021 - 04/10/2021 count: 856 value: 04/10/2021 - 04/11/2021 count: 855 value: 04/11/2021 - 04/11/2021 count: 856 value: 04/11/2021 - 04/12/2021 count: 855 value: 04/12/2021 - 04/12/2021 count: 855 value: 04/12/2021 - 04/13/2021 count: 856 value: 04/13/2021 - 04/14/2021 count: 855 value: 04/14/2021 - 04/14/2021 count: 856 value: 04/14/2021 - 04/15/2021 count: 855 value: 04/15/2021 - 04/15/2021 count: 856 value: 04/15/2021 - 04/16/2021 count: 855 value: 04/16/2021 - 04/17/2021 count: 855 value: 04/17/2021 - 04/17/2021 count: 856 value: 04/17/2021 - 04/18/2021 count: 855 value: 04/18/2021 - 04/18/2021 count: 857 value: 04/18/2021 - 04/19/2021 count: 856
+						302 container
+							303 container A chart.
+								304 image A chart.
+								305 container A tabular representation of the data in the chart.
+									306 table
+										307 row
+											308 cell
+												309 text DateTime
+											310 cell
+												311 text Count
+										312 row
+											313 cell
+												314 text 04/07/2021 - 04/08/2021
+											315 cell
+												316 text 857
+										317 row
+											318 cell
+												319 text 04/08/2021 - 04/08/2021
+											320 cell
+												321 text 856
+										322 row
+											323 cell
+												324 text 04/08/2021 - 04/09/2021
+											325 cell
+												326 text 856
+										327 row
+											328 cell
+												329 text 04/09/2021 - 04/09/2021
+											330 cell
+												331 text 855
+										332 row
+											333 cell
+												334 text 04/09/2021 - 04/10/2021
+											335 cell
+												336 text 856
+										337 row
+											338 cell
+												339 text 04/10/2021 - 04/11/2021
+											340 cell
+												341 text 855
+										342 row
+											343 cell
+												344 text 04/11/2021 - 04/11/2021
+											345 cell
+												346 text 856
+										347 row
+											348 cell
+												349 text 04/11/2021 - 04/12/2021
+											350 cell
+												351 text 855
+										352 row
+											353 cell
+												354 text 04/12/2021 - 04/12/2021
+											355 cell
+												356 text 855
+										357 row
+											358 cell
+												359 text 04/12/2021 - 04/13/2021
+											360 cell
+												361 text 856
+										362 row
+											363 cell
+												364 text 04/13/2021 - 04/14/2021
+											365 cell
+												366 text 855
+										367 row
+											368 cell
+												369 text 04/14/2021 - 04/14/2021
+											370 cell
+												371 text 856
+										372 row
+											373 cell
+												374 text 04/14/2021 - 04/15/2021
+											375 cell
+												376 text 855
+										377 row
+											378 cell
+												379 text 04/15/2021 - 04/15/2021
+											380 cell
+												381 text 856
+										382 row
+											383 cell
+												384 text 04/15/2021 - 04/16/2021
+											385 cell
+												386 text 855
+										387 row
+											388 cell
+												389 text 04/16/2021 - 04/17/2021
+											390 cell
+												391 text 855
+										392 row
+											393 cell
+												394 text 04/17/2021 - 04/17/2021
+											395 cell
+												396 text 856
+										397 row
+											398 cell
+												399 text 04/17/2021 - 04/18/2021
+											400 cell
+												401 text 855
+										402 row
+											403 cell
+												404 text 04/18/2021 - 04/18/2021
+											405 cell
+												406 text 857
+										407 row
+											408 cell
+												409 text 04/18/2021 - 04/19/2021
+											410 cell
+												411 text 856
+						412 text 2021-04-07
+						413 text 2021-04-19
+					414 container value: 52430.65 - 53052.07 count: 3 value: 53052.07 - 53673.48 count: 14 value: 53673.48 - 54294.90 count: 43 value: 54294.90 - 54916.32 count: 114 value: 54916.32 - 55537.74 count: 399 value: 55537.74 - 56159.15 count: 655 value: 56159.15 - 56780.57 count: 1231 value: 56780.57 - 57401.99 count: 882 value: 57401.99 - 58023.41 count: 997 value: 58023.41 - 58644.82 count: 1263 value: 58644.82 - 59266.24 count: 269 value: 59266.24 - 59887.66 count: 1772 value: 59887.66 - 60509.07 count: 2110 value: 60509.07 - 61130.49 count: 1683 value: 61130.49 - 61751.91 count: 732 value: 61751.91 - 62373.33 count: 1052 value: 62373.33 - 62994.74 count: 1639 value: 62994.74 - 63616.16 count: 1630 value: 63616.16 - 64237.58 count: 307 value: 64237.58 - 64859.00 count: 318
+						415 container
+							416 container A chart.
+								417 image A chart.
+								418 container A tabular representation of the data in the chart.
+									419 table
+										420 row
+											421 cell
+												422 text Label
+											423 cell
+												424 text Count
+										425 row
+											426 cell
+												427 text 52430.65 - 53052.07
+											428 cell
+												429 text 3
+										430 row
+											431 cell
+												432 text 53052.07 - 53673.48
+											433 cell
+												434 text 14
+										435 row
+											436 cell
+												437 text 53673.48 - 54294.90
+											438 cell
+												439 text 43
+										440 row
+											441 cell
+												442 text 54294.90 - 54916.32
+											443 cell
+												444 text 114
+										445 row
+											446 cell
+												447 text 54916.32 - 55537.74
+											448 cell
+												449 text 399
+										450 row
+											451 cell
+												452 text 55537.74 - 56159.15
+											453 cell
+												454 text 655
+										455 row
+											456 cell
+												457 text 56159.15 - 56780.57
+											458 cell
+												459 text 1,231
+										460 row
+											461 cell
+												462 text 56780.57 - 57401.99
+											463 cell
+												464 text 882
+										465 row
+											466 cell
+												467 text 57401.99 - 58023.41
+											468 cell
+												469 text 997
+										470 row
+											471 cell
+												472 text 58023.41 - 58644.82
+											473 cell
+												474 text 1,263
+										475 row
+											476 cell
+												477 text 58644.82 - 59266.24
+											478 cell
+												479 text 269
+										480 row
+											481 cell
+												482 text 59266.24 - 59887.66
+											483 cell
+												484 text 1,772
+										485 row
+											486 cell
+												487 text 59887.66 - 60509.07
+											488 cell
+												489 text 2,110
+										490 row
+											491 cell
+												492 text 60509.07 - 61130.49
+											493 cell
+												494 text 1,683
+										495 row
+											496 cell
+												497 text 61130.49 - 61751.91
+											498 cell
+												499 text 732
+										500 row
+											501 cell
+												502 text 61751.91 - 62373.33
+											503 cell
+												504 text 1,052
+										505 row
+											506 cell
+												507 text 62373.33 - 62994.74
+											508 cell
+												509 text 1,639
+										510 row
+											511 cell
+												512 text 62994.74 - 63616.16
+											513 cell
+												514 text 1,630
+										515 row
+											516 cell
+												517 text 63616.16 - 64237.58
+											518 cell
+												519 text 307
+										520 row
+											521 cell
+												522 text 64237.58 - 64859.00
+											523 cell
+												524 text 318
+						525 text 52.4k
+						526 text 64.9k
+					527 container value: 0.01 - 8.03 count: 16296 value: 8.03 - 16.05 count: 660 value: 16.05 - 24.06 count: 96 value: 24.06 - 32.08 count: 34 value: 32.08 - 40.10 count: 13 value: 40.10 - 48.12 count: 4 value: 48.12 - 56.13 count: 2 value: 56.13 - 64.15 count: 3 value: 72.17 - 80.19 count: 1 value: 80.19 - 88.20 count: 1 value: 112.26 - 120.27 count: 1 value: 120.27 - 128.29 count: 1 value: 152.34 - 160.36 count: 1
+						528 container
+							529 container A chart.
+								530 image A chart.
+								531 container A tabular representation of the data in the chart.
+									532 table
+										533 row
+											534 cell
+												535 text Label
+											536 cell
+												537 text Count
+										538 row
+											539 cell
+												540 text 0.01 - 8.03
+											541 cell
+												542 text 16,296
+										543 row
+											544 cell
+												545 text 8.03 - 16.05
+											546 cell
+												547 text 660
+										548 row
+											549 cell
+												550 text 16.05 - 24.06
+											551 cell
+												552 text 96
+										553 row
+											554 cell
+												555 text 24.06 - 32.08
+											556 cell
+												557 text 34
+										558 row
+											559 cell
+												560 text 32.08 - 40.10
+											561 cell
+												562 text 13
+										563 row
+											564 cell
+												565 text 40.10 - 48.12
+											566 cell
+												567 text 4
+										568 row
+											569 cell
+												570 text 48.12 - 56.13
+											571 cell
+												572 text 2
+										573 row
+											574 cell
+												575 text 56.13 - 64.15
+											576 cell
+												577 text 3
+										578 row
+											579 cell
+												580 text 72.17 - 80.19
+											581 cell
+												582 text 1
+										583 row
+											584 cell
+												585 text 80.19 - 88.20
+											586 cell
+												587 text 1
+										588 row
+											589 cell
+												590 text 112.26 - 120.27
+											591 cell
+												592 text 1
+										593 row
+											594 cell
+												595 text 120.27 - 128.29
+											596 cell
+												597 text 1
+										598 row
+											599 cell
+												600 text 152.34 - 160.36
+											601 cell
+												602 text 1
+						603 text 0.01
+						604 text 160
+					605 container value: 1542.18 - 572993.15 count: 14564 value: 572993.15 - 1144444.12 count: 1740 value: 1144444.12 - 1715895.09 count: 453 value: 1715895.09 - 2287346.06 count: 165 value: 2287346.06 - 2858797.03 count: 76 value: 2858797.03 - 3430248.00 count: 32 value: 3430248.00 - 4001698.97 count: 27 value: 4001698.97 - 4573149.93 count: 19 value: 4573149.93 - 5144600.90 count: 10 value: 5144600.90 - 5716051.87 count: 10 value: 5716051.87 - 6287502.84 count: 4 value: 6287502.84 - 6858953.81 count: 2 value: 6858953.81 - 7430404.78 count: 3 value: 7430404.78 - 8001855.75 count: 1 value: 8001855.75 - 8573306.72 count: 1 value: 9716208.66 - 10287659.63 count: 2 value: 10287659.63 - 10859110.60 count: 1 value: 10859110.60 - 11430561.57 count: 3
+						606 container
+							607 container A chart.
+								608 image A chart.
+								609 container A tabular representation of the data in the chart.
+									610 table
+										611 row
+											612 cell
+												613 text Label
+											614 cell
+												615 text Count
+										616 row
+											617 cell
+												618 text 1542.18 - 572993.15
+											619 cell
+												620 text 14,564
+										621 row
+											622 cell
+												623 text 572993.15 - 1144444.12
+											624 cell
+												625 text 1,740
+										626 row
+											627 cell
+												628 text 1144444.12 - 1715895.09
+											629 cell
+												630 text 453
+										631 row
+											632 cell
+												633 text 1715895.09 - 2287346.06
+											634 cell
+												635 text 165
+										636 row
+											637 cell
+												638 text 2287346.06 - 2858797.03
+											639 cell
+												640 text 76
+										641 row
+											642 cell
+												643 text 2858797.03 - 3430248.00
+											644 cell
+												645 text 32
+										646 row
+											647 cell
+												648 text 3430248.00 - 4001698.97
+											649 cell
+												650 text 27
+										651 row
+											652 cell
+												653 text 4001698.97 - 4573149.93
+											654 cell
+												655 text 19
+										656 row
+											657 cell
+												658 text 4573149.93 - 5144600.90
+											659 cell
+												660 text 10
+										661 row
+											662 cell
+												663 text 5144600.90 - 5716051.87
+											664 cell
+												665 text 10
+										666 row
+											667 cell
+												668 text 5716051.87 - 6287502.84
+											669 cell
+												670 text 4
+										671 row
+											672 cell
+												673 text 6287502.84 - 6858953.81
+											674 cell
+												675 text 2
+										676 row
+											677 cell
+												678 text 6858953.81 - 7430404.78
+											679 cell
+												680 text 3
+										681 row
+											682 cell
+												683 text 7430404.78 - 8001855.75
+											684 cell
+												685 text 1
+										686 row
+											687 cell
+												688 text 8001855.75 - 8573306.72
+											689 cell
+												690 text 1
+										691 row
+											692 cell
+												693 text 9716208.66 - 10287659.63
+											694 cell
+												695 text 2
+										696 row
+											697 cell
+												698 text 10287659.63 - 10859110.60
+											699 cell
+												700 text 1
+										701 row
+											702 cell
+												703 text 10859110.60 - 11430561.57
+											704 cell
+												705 text 3
+						706 text 1.54k
+						707 text 11.4m
+					708 container value: 130.46 - 1230763.69 count: 16482 value: 1230763.69 - 2461396.91 count: 471 value: 2461396.91 - 3692030.14 count: 85 value: 3692030.14 - 4922663.36 count: 30 value: 4922663.36 - 6153296.59 count: 23 value: 6153296.59 - 7383929.81 count: 7 value: 7383929.81 - 8614563.04 count: 3 value: 8614563.04 - 9845196.27 count: 4 value: 9845196.27 - 11075829.49 count: 2 value: 12306462.72 - 13537095.94 count: 1 value: 13537095.94 - 14767729.17 count: 2 value: 17228995.62 - 18459628.85 count: 1 value: 23382161.75 - 24612794.97 count: 2
+						709 container
+							710 container A chart.
+								711 image A chart.
+								712 container A tabular representation of the data in the chart.
+									713 table
+										714 row
+											715 cell
+												716 text Label
+											717 cell
+												718 text Count
+										719 row
+											720 cell
+												721 text 130.46 - 1230763.69
+											722 cell
+												723 text 16,482
+										724 row
+											725 cell
+												726 text 1230763.69 - 2461396.91
+											727 cell
+												728 text 471
+										729 row
+											730 cell
+												731 text 2461396.91 - 3692030.14
+											732 cell
+												733 text 85
+										734 row
+											735 cell
+												736 text 3692030.14 - 4922663.36
+											737 cell
+												738 text 30
+										739 row
+											740 cell
+												741 text 4922663.36 - 6153296.59
+											742 cell
+												743 text 23
+										744 row
+											745 cell
+												746 text 6153296.59 - 7383929.81
+											747 cell
+												748 text 7
+										749 row
+											750 cell
+												751 text 7383929.81 - 8614563.04
+											752 cell
+												753 text 3
+										754 row
+											755 cell
+												756 text 8614563.04 - 9845196.27
+											757 cell
+												758 text 4
+										759 row
+											760 cell
+												761 text 9845196.27 - 11075829.49
+											762 cell
+												763 text 2
+										764 row
+											765 cell
+												766 text 12306462.72 - 13537095.94
+											767 cell
+												768 text 1
+										769 row
+											770 cell
+												771 text 13537095.94 - 14767729.17
+											772 cell
+												773 text 2
+										774 row
+											775 cell
+												776 text 17228995.62 - 18459628.85
+											777 cell
+												778 text 1
+										779 row
+											780 cell
+												781 text 23382161.75 - 24612794.97
+											782 cell
+												783 text 2
+						784 text 130
+						785 text 24.6m
+					786 container value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 3 value: -0.00 - -0.00 count: 2 value: -0.00 - -0.00 count: 4 value: -0.00 - -0.00 count: 13 value: -0.00 - -0.00 count: 23 value: -0.00 - -0.00 count: 80 value: -0.00 - -0.00 count: 516 value: -0.00 - -0.00 count: 16467
+						787 container
+							788 container A chart.
+								789 image A chart.
+								790 container A tabular representation of the data in the chart.
+									791 table
+										792 row
+											793 cell
+												794 text Label
+											795 cell
+												796 text Count
+										797 row
+											798 cell
+												799 text -0.00 - -0.00
+											800 cell
+												801 text 1
+										802 row
+											803 cell
+												804 text -0.00 - -0.00
+											805 cell
+												806 text 1
+										807 row
+											808 cell
+												809 text -0.00 - -0.00
+											810 cell
+												811 text 1
+										812 row
+											813 cell
+												814 text -0.00 - -0.00
+											815 cell
+												816 text 1
+										817 row
+											818 cell
+												819 text -0.00 - -0.00
+											820 cell
+												821 text 1
+										822 row
+											823 cell
+												824 text -0.00 - -0.00
+											825 cell
+												826 text 3
+										827 row
+											828 cell
+												829 text -0.00 - -0.00
+											830 cell
+												831 text 2
+										832 row
+											833 cell
+												834 text -0.00 - -0.00
+											835 cell
+												836 text 4
+										837 row
+											838 cell
+												839 text -0.00 - -0.00
+											840 cell
+												841 text 13
+										842 row
+											843 cell
+												844 text -0.00 - -0.00
+											845 cell
+												846 text 23
+										847 row
+											848 cell
+												849 text -0.00 - -0.00
+											850 cell
+												851 text 80
+										852 row
+											853 cell
+												854 text -0.00 - -0.00
+											855 cell
+												856 text 516
+										857 row
+											858 cell
+												859 text -0.00 - -0.00
+											860 cell
+												861 text 16,467
+						862 text 0
+						863 text 0
+					864 container value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 2 value: -0.00 - -0.00 count: 2 value: -0.00 - -0.00 count: 3 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 3 value: -0.00 - -0.00 count: 8 value: -0.00 - -0.00 count: 4 value: -0.00 - -0.00 count: 26 value: -0.00 - -0.00 count: 64 value: -0.00 - -0.00 count: 202 value: -0.00 - -0.00 count: 652 value: -0.00 - -0.00 count: 2933 value: -0.00 - -0.00 count: 13212
+						865 container
+							866 container A chart.
+								867 image A chart.
+								868 container A tabular representation of the data in the chart.
+									869 table
+										870 row
+											871 cell
+												872 text Label
+											873 cell
+												874 text Count
+										875 row
+											876 cell
+												877 text -0.00 - -0.00
+											878 cell
+												879 text 1
+										880 row
+											881 cell
+												882 text -0.00 - -0.00
+											883 cell
+												884 text 2
+										885 row
+											886 cell
+												887 text -0.00 - -0.00
+											888 cell
+												889 text 2
+										890 row
+											891 cell
+												892 text -0.00 - -0.00
+											893 cell
+												894 text 3
+										895 row
+											896 cell
+												897 text -0.00 - -0.00
+											898 cell
+												899 text 1
+										900 row
+											901 cell
+												902 text -0.00 - -0.00
+											903 cell
+												904 text 3
+										905 row
+											906 cell
+												907 text -0.00 - -0.00
+											908 cell
+												909 text 8
+										910 row
+											911 cell
+												912 text -0.00 - -0.00
+											913 cell
+												914 text 4
+										915 row
+											916 cell
+												917 text -0.00 - -0.00
+											918 cell
+												919 text 26
+										920 row
+											921 cell
+												922 text -0.00 - -0.00
+											923 cell
+												924 text 64
+										925 row
+											926 cell
+												927 text -0.00 - -0.00
+											928 cell
+												929 text 202
+										930 row
+											931 cell
+												932 text -0.00 - -0.00
+											933 cell
+												934 text 652
+										935 row
+											936 cell
+												937 text -0.00 - -0.00
+											938 cell
+												939 text 2,933
+										940 row
+											941 cell
+												942 text -0.00 - -0.00
+											943 cell
+												944 text 13,212
+						945 text 0
+						946 text 0
+					947 container value: -0.00 - -0.00 count: 2 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 4 value: -0.00 - -0.00 count: 2 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 2 value: -0.00 - -0.00 count: 2 value: -0.00 - -0.00 count: 5 value: -0.00 - -0.00 count: 15 value: -0.00 - -0.00 count: 30 value: -0.00 - -0.00 count: 129 value: -0.00 - -0.00 count: 376 value: -0.00 - -0.00 count: 1329 value: -0.00 - -0.00 count: 4608 value: -0.00 - -0.00 count: 10606
+						948 container
+							949 container A chart.
+								950 image A chart.
+								951 container A tabular representation of the data in the chart.
+									952 table
+										953 row
+											954 cell
+												955 text Label
+											956 cell
+												957 text Count
+										958 row
+											959 cell
+												960 text -0.00 - -0.00
+											961 cell
+												962 text 2
+										963 row
+											964 cell
+												965 text -0.00 - -0.00
+											966 cell
+												967 text 1
+										968 row
+											969 cell
+												970 text -0.00 - -0.00
+											971 cell
+												972 text 4
+										973 row
+											974 cell
+												975 text -0.00 - -0.00
+											976 cell
+												977 text 2
+										978 row
+											979 cell
+												980 text -0.00 - -0.00
+											981 cell
+												982 text 1
+										983 row
+											984 cell
+												985 text -0.00 - -0.00
+											986 cell
+												987 text 1
+										988 row
+											989 cell
+												990 text -0.00 - -0.00
+											991 cell
+												992 text 2
+										993 row
+											994 cell
+												995 text -0.00 - -0.00
+											996 cell
+												997 text 2
+										998 row
+											999 cell
+												1000 text -0.00 - -0.00
+											1001 cell
+												1002 text 5
+										1003 row
+											1004 cell
+												1005 text -0.00 - -0.00
+											1006 cell
+												1007 text 15
+										1008 row
+											1009 cell
+												1010 text -0.00 - -0.00
+											1011 cell
+												1012 text 30
+										1013 row
+											1014 cell
+												1015 text -0.00 - -0.00
+											1016 cell
+												1017 text 129
+										1018 row
+											1019 cell
+												1020 text -0.00 - -0.00
+											1021 cell
+												1022 text 376
+										1023 row
+											1024 cell
+												1025 text -0.00 - -0.00
+											1026 cell
+												1027 text 1,329
+										1028 row
+											1029 cell
+												1030 text -0.00 - -0.00
+											1031 cell
+												1032 text 4,608
+										1033 row
+											1034 cell
+												1035 text -0.00 - -0.00
+											1036 cell
+												1037 text 10,606
+						1038 text 0
+						1039 text 0
+					1040 container value: -0.00 - -0.00 count: 2 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 5 value: -0.00 - -0.00 count: 3 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 1 value: -0.00 - -0.00 count: 2 value: -0.00 - -0.00 count: 10 value: -0.00 - -0.00 count: 7 value: -0.00 - -0.00 count: 16 value: -0.00 - -0.00 count: 70 value: -0.00 - -0.00 count: 257 value: -0.00 - -0.00 count: 757 value: -0.00 - -0.00 count: 2152 value: -0.00 - -0.00 count: 5883 value: -0.00 - -0.00 count: 7943
+						1041 container
+							1042 container A chart.
+								1043 image A chart.
+								1044 container A tabular representation of the data in the chart.
+									1045 table
+										1046 row
+											1047 cell
+												1048 text Label
+											1049 cell
+												1050 text Count
+										1051 row
+											1052 cell
+												1053 text -0.00 - -0.00
+											1054 cell
+												1055 text 2
+										1056 row
+											1057 cell
+												1058 text -0.00 - -0.00
+											1059 cell
+												1060 text 1
+										1061 row
+											1062 cell
+												1063 text -0.00 - -0.00
+											1064 cell
+												1065 text 1
+										1066 row
+											1067 cell
+												1068 text -0.00 - -0.00
+											1069 cell
+												1070 text 1
+										1071 row
+											1072 cell
+												1073 text -0.00 - -0.00
+											1074 cell
+												1075 text 5
+										1076 row
+											1077 cell
+												1078 text -0.00 - -0.00
+											1079 cell
+												1080 text 3
+										1081 row
+											1082 cell
+												1083 text -0.00 - -0.00
+											1084 cell
+												1085 text 1
+										1086 row
+											1087 cell
+												1088 text -0.00 - -0.00
+											1089 cell
+												1090 text 1
+										1091 row
+											1092 cell
+												1093 text -0.00 - -0.00
+											1094 cell
+												1095 text 1
+										1096 row
+											1097 cell
+												1098 text -0.00 - -0.00
+											1099 cell
+												1100 text 2
+										1101 row
+											1102 cell
+												1103 text -0.00 - -0.00
+											1104 cell
+												1105 text 10
+										1106 row
+											1107 cell
+												1108 text -0.00 - -0.00
+											1109 cell
+												1110 text 7
+										1111 row
+											1112 cell
+												1113 text -0.00 - -0.00
+											1114 cell
+												1115 text 16
+										1116 row
+											1117 cell
+												1118 text -0.00 - -0.00
+											1119 cell
+												1120 text 70
+										1121 row
+											1122 cell
+												1123 text -0.00 - -0.00
+											1124 cell
+												1125 text 257
+										1126 row
+											1127 cell
+												1128 text -0.00 - -0.00
+											1129 cell
+												1130 text 757
+										1131 row
+											1132 cell
+												1133 text -0.00 - -0.00
+											1134 cell
+												1135 text 2,152
+										1136 row
+											1137 cell
+												1138 text -0.00 - -0.00
+											1139 cell
+												1140 text 5,883
+										1141 row
+											1142 cell
+												1143 text -0.00 - -0.00
+											1144 cell
+												1145 text 7,943
+						1146 text 0
+						1147 text 0
+					1148 container
+						1149 row
+							1150 cell
+								1151 text 0
+							1152 cell
+								1153 text 2021-04-07 11:33:41.122161+00:00
+							1154 cell
+								1155 text 55896.285
+							1156 cell
+								1157 text 0.01
+							1158 cell
+								1159 text 4448599.182456281
+							1160 cell
+								1161 text 3899402.119931151
+							1162 cell
+								1163 text -8.94513831894983e-08
+							1164 cell
+								1165 text -6.485225458163768e-05
+							1166 cell
+								1167 text -7.29028761270456e-05
+							1168 cell
+								1169 text -0.0001544825354358
+						1170 row
+							1171 cell
+								1172 text 1
+							1173 cell
+								1174 text 2021-04-07 11:34:41.122161+00:00
+							1175 cell
+								1176 text 55948.685
+							1177 cell
+								1178 text 1.43
+							1179 cell
+								1180 text 1243243.9553593742
+							1181 cell
+								1182 text 3606502.2378910687
+							1183 cell
+								1184 text -1.2779567441612016e-05
+							1185 cell
+								1186 text -1.2958303159393836e-05
+							1187 cell
+								1188 text -0.0002415606431895
+							1189 cell
+								1190 text -0.0002417393698124
+						1191 row
+							1192 cell
+								1193 text 2
+							1194 cell
+								1195 text 2021-04-07 11:35:41.122161+00:00
+							1196 cell
+								1197 text 56013.785
+							1198 cell
+								1199 text 0.01
+							1200 cell
+								1201 text 3069093.672891707
+							1202 cell
+								1203 text 1575759.3929470934
+							1204 cell
+								1205 text -8.926374306383877e-08
+							1206 cell
+								1207 text -8.658583283249754e-06
+							1208 cell
+								1209 text -7.02505640219897e-05
+							1210 cell
+								1211 text -8.756772876949981e-05
+						1212 row
+							1213 cell
+								1214 text 3
+							1215 cell
+								1216 text 2021-04-07 11:36:41.122161+00:00
+							1217 cell
+								1218 text 55903.575
+							1219 cell
+								1220 text 7.17
+							1221 cell
+								1222 text 1220818.6098738438
+							1223 cell
+								1224 text 1321486.8054569992
+							1225 cell
+								1226 text -6.412827497115359e-05
+							1227 cell
+								1228 text -0.0001818309538066
+							1229 cell
+								1230 text -0.0001882706128526
+							1231 cell
+								1232 text -0.0002249408862553
+						1233 row
+							1234 cell
+								1235 text 4
+							1236 cell
+								1237 text 2021-04-07 11:37:41.122161+00:00
+							1238 cell
+								1239 text 55899.995
+							1240 cell
+								1241 text 0.01
+							1242 cell
+								1243 text 2011286.7171372275
+							1244 cell
+								1245 text 3083005.0913830423
+							1246 cell
+								1247 text -8.944544305222736e-08
+							1248 cell
+								1249 text -0.0001294275571126
+							1250 cell
+								1251 text -0.0001296064583584
+							1252 cell
+								1253 text -0.0001426654926035
+						1254 row
+							1255 cell
+								1256 text 5
+							1257 cell
+								1258 text 2021-04-07 11:38:41.122161+00:00
+							1259 cell
+								1260 text 56100.175
+							1261 cell
+								1262 text 0.37
+							1263 cell
+								1264 text 2453270.24482742
+							1265 cell
+								1266 text 1085658.18590054
+							1267 cell
+								1268 text -3.29767249240831e-06
+							1269 cell
+								1270 text -3.4759250411298126e-06
+							1271 cell
+								1272 text -3.654177589851315e-06
+							1273 cell
+								1274 text -6.978587771300226e-05
+						1275 row
+							1276 cell
+								1277 text 6
+							1278 cell
+								1279 text 2021-04-07 11:39:41.122161+00:00
+							1280 cell
+								1281 text 56098.205
+							1282 cell
+								1283 text 3.59
+							1284 cell
+								1285 text 1046330.2336305492
+							1286 cell
+								1287 text 616441.5780202069
+							1288 cell
+								1289 text -3.199745697202161e-05
+							1290 cell
+								1291 text -0.0002696164592634
+							1292 cell
+								1293 text -0.0002785294200293
+							1294 cell
+								1295 text -0.0002822728420142
+						1296 row
+							1297 cell
+								1298 text 7
+							1299 cell
+								1300 text 2021-04-07 11:40:41.122161+00:00
+							1301 cell
+								1302 text 56113.395
+							1303 cell
+								1304 text 0.01
+							1305 cell
+								1306 text 1714847.475032175
+							1307 cell
+								1308 text 665602.022618143
+							1309 cell
+								1310 text -8.910528492833691e-08
+							1311 cell
+								1312 text -1.0959949577227237e-05
+							1313 cell
+								1314 text -0.0001342816685792
+							1315 cell
+								1316 text -0.0001433704019291
+						1317 row
+							1318 cell
+								1319 text 8
+							1320 cell
+								1321 text 2021-04-07 11:41:41.122161+00:00
+							1322 cell
+								1323 text 56191.33
+							1324 cell
+								1325 text 9.86
+							1326 cell
+								1327 text 1887890.3041206696
+							1328 cell
+								1329 text 179883.63406194162
+							1330 cell
+								1331 text -8.773595618549734e-05
+							1332 cell
+								1333 text -0.0001238625263795
+							1334 cell
+								1335 text -0.0001573196495883
+							1336 cell
+								1337 text -0.0001751159870764
+						1338 row
+							1339 cell
+								1340 text 9
+							1341 cell
+								1342 text 2021-04-07 11:42:41.122161+00:00
+							1343 cell
+								1344 text 56111.655
+							1345 cell
+								1346 text 0.01
+							1347 cell
+								1348 text 3193035.26797955
+							1349 cell
+								1350 text 2472761.858634558
+							1351 cell
+								1352 text -8.910804893957902e-08
+							1353 cell
+								1354 text -0.0001011376371025
+							1355 cell
+								1356 text -0.0002069979964289
+							1357 cell
+								1358 text -0.0002077108511002
+						1359 row
+							1360 cell
+								1361 text 10
+							1362 cell
+								1363 text 2021-04-07 11:43:41.122161+00:00
+							1364 cell
+								1365 text 56147.43
+							1366 cell
+								1367 text 3.7
+							1368 cell
+								1369 text 651755.2246950715
+							1370 cell
+								1371 text 700015.6328858593
+							1372 cell
+								1373 text -3.294897032901645e-05
+							1374 cell
+								1375 text -0.0002448910090606
+							1376 cell
+								1377 text -0.000248809257755
+							1378 cell
+								1379 text -0.0002799771900754
+						1380 row
+							1381 cell
+								1382 text 11
+							1383 cell
+								1384 text 2021-04-07 11:44:41.122161+00:00
+							1385 cell
+								1386 text 55984.445
+							1387 cell
+								1388 text 4.59
+							1389 cell
+								1390 text 297924.10176124563
+							1391 cell
+								1392 text 1132280.3574450675
+							1393 cell
+								1394 text -4.099353100173175e-05
+							1395 cell
+								1396 text -0.0001819255267037
+							1397 cell
+								1398 text -0.0002247945812996
+							1399 cell
+								1400 text -0.0002635553537402
+						1401 row
+							1402 cell
+								1403 text 12
+							1404 cell
+								1405 text 2021-04-07 11:45:41.122161+00:00
+							1406 cell
+								1407 text 55868.55
+							1408 cell
+								1409 text 17.22
+							1410 cell
+								1411 text 1179865.6694857955
+							1412 cell
+								1413 text 856559.5623311708
+							1414 cell
+								1415 text -0.0001541117526357
+							1416 cell
+								1417 text -0.0001542907411931
+							1418 cell
+								1419 text -0.000273499143077
+							1420 cell
+								1421 text -0.0003320293908473
+						1422 row
+							1423 cell
+								1424 text 13
+							1425 cell
+								1426 text 2021-04-07 11:46:41.122161+00:00
+							1427 cell
+								1428 text 56068.215
+							1429 cell
+								1430 text 0.01
+							1431 cell
+								1432 text 846262.2441603371
+							1433 cell
+								1434 text 879709.4563437735
+							1435 cell
+								1436 text -8.917708527178547e-08
+							1437 cell
+								1438 text -2.719901021919213e-05
+							1439 cell
+								1440 text -4.057557453052141e-05
+							1441 cell
+								1442 text -7.446286326739937e-05
+						1443 row
+							1444 cell
+								1445 text 14
+							1446 cell
+								1447 text 2021-04-07 11:47:41.122161+00:00
+							1448 cell
+								1449 text 56100.015
+							1450 cell
+								1451 text 0.01
+							1452 cell
+								1453 text 849555.8160892373
+							1454 cell
+								1455 text 1071460.738514379
+							1456 cell
+								1457 text -8.91265372615635e-08
+							1458 cell
+								1459 text -2.6737961889011785e-07
+							1460 cell
+								1461 text -0.0003838679986074
+							1462 cell
+								1463 text -0.0004095364420209
+						1464 row
+							1465 cell
+								1466 text 15
+							1467 cell
+								1468 text 2021-04-07 11:48:41.122161+00:00
+							1469 cell
+								1470 text 55952.485
+							1471 cell
+								1472 text 0.01
+							1473 cell
+								1474 text 510549.32555038447
+							1475 cell
+								1476 text 2283005.454421826
+							1477 cell
+								1478 text -8.936153506056145e-08
+							1479 cell
+								1480 text -0.0003096377186011
+							1481 cell
+								1482 text -0.0003807695175055
+							1483 cell
+								1484 text -0.0003848801425192
+						1485 row
+							1486 cell
+								1487 text 16
+							1488 cell
+								1489 text 2021-04-07 11:49:41.122161+00:00
+							1490 cell
+								1491 text 56099.595
+							1492 cell
+								1493 text 0.01
+							1494 cell
+								1495 text 470299.5711772828
+							1496 cell
+								1497 text 482985.4300424783
+							1498 cell
+								1499 text -8.912720517173511e-08
+							1500 cell
+								1501 text -2.67381608409778e-07
+							1502 cell
+								1503 text -0.0001696090621408
+							1504 cell
+								1505 text -0.0001697873231023
+						1506 row
+							1507 cell
+								1508 text 17
+							1509 cell
+								1510 text 2021-04-07 11:50:41.122161+00:00
+							1511 cell
+								1512 text 56091.94
+							1513 cell
+								1514 text 6.66
+							1515 cell
+								1516 text 847134.3678242721
+							1517 cell
+								1518 text 288836.30523017043
+							1519 cell
+								1520 text -5.936681918683462e-05
+							1521 cell
+								1522 text -9.163526556221768e-05
+							1523 cell
+								1524 text -0.0001058975685737
+							1525 cell
+								1526 text -0.0001866578386398
+						1527 row
+							1528 cell
+								1529 text 18
+							1530 cell
+								1531 text 2021-04-07 11:51:41.122161+00:00
+							1532 cell
+								1533 text 56144.475000000006
+							1534 cell
+								1535 text 0.01
+							1536 cell
+								1537 text 598383.0144041684
+							1538 cell
+								1539 text 278870.0579385342
+							1540 cell
+								1541 text -8.905595905162046e-08
+							1542 cell
+								1543 text -8.98574580787681e-05
+							1544 cell
+								1545 text -0.0001048188642016
+							1546 cell
+								1547 text -0.000104996972368
+						1548 row
+							1549 cell
+								1550 text 19
+							1551 cell
+								1552 text 2021-04-07 11:52:41.122161+00:00
+							1553 cell
+								1554 text 56163.445
+							1555 cell
+								1556 text 5.65
+							1557 cell
+								1558 text 449656.42807516514
+							1559 cell
+								1560 text 88447.3855718138
+							1561 cell
+								1562 text -5.029962267144583e-05
+							1563 cell
+								1564 text -5.0477672630222514e-05
+							1565 cell
+								1566 text -0.000103180995211
+							1567 cell
+								1568 text -0.0001163568231277
+						1569 row
+							1570 cell
+								1571 text 20
+							1572 cell
+								1573 text 2021-04-07 11:53:41.122161+00:00
+							1574 cell
+								1575 text 56161.775
+							1576 cell
+								1577 text 10.09
+							1578 cell
+								1579 text 378791.5531234998
+							1580 cell
+								1581 text 422257.5664600736
+							1582 cell
+								1583 text -8.982978033600375e-05
+							1584 cell
+								1585 text -9.000783757073805e-05
+							1586 cell
+								1587 text -0.0001033621156238
+							1588 cell
+								1589 text -0.0001357684959657
+						1590 row
+							1591 cell
+								1592 text 21
+							1593 cell
+								1594 text 2021-04-07 11:54:41.122161+00:00
+							1595 cell
+								1596 text 56190.945
+							1597 cell
+								1598 text 12.75
+							1599 cell
+								1600 text 560857.7148744796
+							1601 cell
+								1602 text 782251.7499946257
+							1603 cell
+								1604 text -0.000113452442747
+							1605 cell
+								1606 text -0.0001136304053943
+							1607 cell
+								1608 text -0.0001517148339189
+							1609 cell
+								1610 text -0.000163460499607
+						1611 row
+							1612 cell
+								1613 text 22
+							1614 cell
+								1615 text 2021-04-07 11:55:41.122161+00:00
+							1616 cell
+								1617 text 56229.985
+							1618 cell
+								1619 text 0.01
+							1620 cell
+								1621 text 566167.2519240257
+							1622 cell
+								1623 text 936299.2963430868
+							1624 cell
+								1625 text -8.892052960618457e-08
+							1626 cell
+								1627 text -0.0001905566896311
+							1628 cell
+								1629 text -0.000195002721739
+							1630 cell
+								1631 text -0.0002186555793741
+						1632 row
+							1633 cell
+								1634 text 23
+							1635 cell
+								1636 text 2021-04-07 11:56:41.122161+00:00
+							1637 cell
+								1638 text 56201.9
+							1639 cell
+								1640 text 1.4
+							1641 cell
+								1642 text 343519.0714021894
+							1643 cell
+								1644 text 156928.30137506782
+							1645 cell
+								1646 text -1.2455095202312805e-05
+							1647 cell
+								1648 text -1.2633025107788852e-05
+							1649 cell
+								1650 text -1.2810955013264902e-05
+							1651 cell
+								1652 text -1.6191623217309825e-05
+						1653 row
+							1654 cell
+								1655 text 24
+							1656 cell
+								1657 text 2021-04-07 11:57:41.122161+00:00
+							1658 cell
+								1659 text 56229.995
+							1660 cell
+								1661 text 0.01
+							1662 cell
+								1663 text 544661.3340545427
+							1664 cell
+								1665 text 821333.0534331875
+							1666 cell
+								1667 text -8.892051539532987e-08
+							1668 cell
+								1669 text -1.5027566405478863e-05
+							1670 cell
+								1671 text -8.883159171091393e-05
+							1672 cell
+								1673 text -0.0001192424097098
+						1674 row
+							1675 cell
+								1676 text 25
+							1677 cell
+								1678 text 2021-04-07 11:58:41.122161+00:00
+							1679 cell
+								1680 text 56221.115000000005
+							1681 cell
+								1682 text 0.01
+							1683 cell
+								1684 text 776952.7973110682
+							1685 cell
+								1686 text 254867.5184617184
+							1687 cell
+								1688 text -8.893455571978849e-08
+							1689 cell
+								1690 text -1.5029940186650492e-05
+							1691 cell
+								1692 text -1.983240690606181e-05
+							1693 cell
+								1694 text -0.0001059210553648
+						1695 row
+							1696 cell
+								1697 text 26
+							1698 cell
+								1699 text 2021-04-07 11:59:41.122161+00:00
+							1700 cell
+								1701 text 56296.92
+							1702 cell
+								1703 text 8.56
+							1704 cell
+								1705 text 1027701.8995376732
+							1706 cell
+								1707 text 362298.1953808208
+							1708 cell
+								1709 text -7.602547702845186e-05
+							1710 cell
+								1711 text -7.67359888413921e-05
+							1712 cell
+								1713 text -0.0001149263553088
+							1714 cell
+								1715 text -0.0001367748045595
+						1716 row
+							1717 cell
+								1718 text 27
+							1719 cell
+								1720 text 2021-04-07 12:00:41.122161+00:00
+							1721 cell
+								1722 text 56191.325
+							1723 cell
+								1724 text 4.99
+							1725 cell
+								1726 text 812886.8730571957
+							1727 cell
+								1728 text 561651.1611805932
+							1729 cell
+								1730 text -4.440187331056222e-05
+							1731 cell
+								1732 text -6.71811867505312e-05
+							1733 cell
+								1734 text -8.479956886731088e-05
+							1735 cell
+								1736 text -0.0001075788823072
+						1737 row
+							1738 cell
+								1739 text 28
+							1740 cell
+								1741 text 2021-04-07 12:01:41.122161+00:00
+							1742 cell
+								1743 text 56166.375
+							1744 cell
+								1745 text 2.31
+							1746 cell
+								1747 text 610896.9390928713
+							1748 cell
+								1749 text 767346.9990431207
+							1750 cell
+								1751 text -2.0563904399750758e-05
+							1752 cell
+								1753 text -0.000198606372578
+							1754 cell
+								1755 text -0.0002479241229593
+							1756 cell
+								1757 text -0.000248280208325
+						1758 row
+							1759 cell
+								1760 text 29
+							1761 cell
+								1762 text 2021-04-07 12:02:41.122161+00:00
+							1763 cell
+								1764 text 56119.455
+							1765 cell
+								1766 text 0.01
+							1767 cell
+								1768 text 745522.4490103744
+							1769 cell
+								1770 text 995348.23638702
+							1771 cell
+								1772 text -8.909566417969472e-08
+							1773 cell
+								1774 text -1.514626205789682e-06
+							1775 cell
+								1776 text -7.849327812436968e-05
+							1777 cell
+								1778 text -0.0001004108125925
+						1779 row
+							1780 cell
+								1781 text 30
+							1782 cell
+								1783 text 2021-04-07 12:03:41.122161+00:00
+							1784 cell
+								1785 text 56099.995
+							1786 cell
+								1787 text 0.01
+							1788 cell
+								1789 text 583168.8786942108
+							1790 cell
+								1791 text 249369.4957651469
+							1792 cell
+								1793 text -8.912656568327294e-08
+							1794 cell
+								1795 text -2.6737970415524615e-07
+							1796 cell
+								1797 text -2.326203502889257e-05
+							1798 cell
+								1799 text -6.0873444454045966e-05
+						1800 row
+							1801 cell
+								1802 text 31
+							1803 cell
+								1804 text 2021-04-07 12:04:41.122161+00:00
+							1805 cell
+								1806 text 56097.685
+							1807 cell
+								1808 text 0.01
+							1809 cell
+								1810 text 589193.0621200203
+							1811 cell
+								1812 text 261612.63358127253
+							1813 cell
+								1814 text -8.913023918921682e-08
+							1815 cell
+								1816 text -9.688457066658884e-05
+							1817 cell
+								1818 text -9.706283162813634e-05
+							1819 cell
+								1820 text -0.0001382409973302
+						1821 row
+							1822 cell
+								1823 text 32
+							1824 cell
+								1825 text 2021-04-07 12:05:41.122161+00:00
+							1826 cell
+								1827 text 56091.335
+							1828 cell
+								1829 text 0.01
+							1830 cell
+								1831 text 1474224.8116779795
+							1832 cell
+								1833 text 616596.5937036269
+							1834 cell
+								1835 text -8.91403288960646e-08
+							1836 cell
+								1837 text -2.3800466806278564e-05
+							1838 cell
+								1839 text -6.783579010516405e-05
+							1840 cell
+								1841 text -6.979687896091491e-05
+						1842 row
+							1843 cell
+								1844 text 33
+							1845 cell
+								1846 text 2021-04-07 12:06:41.122161+00:00
+							1847 cell
+								1848 text 56004.130000000005
+							1849 cell
+								1850 text 7.54
+							1851 cell
+								1852 text 517918.275169279
+							1853 cell
+								1854 text 677163.5941331057
+							1855 cell
+								1856 text -6.73164613544941e-05
+							1857 cell
+								1858 text -7.374455890385434e-05
+							1859 cell
+								1860 text -9.160038462141527e-05
+							1861 cell
+								1862 text -0.0001042780204443
+						1863 row
+							1864 cell
+								1865 text 34
+							1866 cell
+								1867 text 2021-04-07 12:07:41.122161+00:00
+							1868 cell
+								1869 text 56038.495
+							1870 cell
+								1871 text 0.09
+							1872 cell
+								1873 text 1175965.151208158
+							1874 cell
+								1875 text 721707.3351455701
+							1876 cell
+								1877 text -8.030194180719263e-07
+							1878 cell
+								1879 text -9.814681334319175e-07
+							1880 cell
+								1881 text -1.1599169056353276e-06
+							1882 cell
+								1883 text -1.3383656778387376e-06
+						1884 row
+							1885 cell
+								1886 text 35
+							1887 cell
+								1888 text 2021-04-07 12:08:41.122161+00:00
+							1889 cell
+								1890 text 56085.875
+							1891 cell
+								1892 text 0.01
+							1893 cell
+								1894 text 1011326.5280461428
+							1895 cell
+								1896 text 457738.6145767299
+							1897 cell
+								1898 text -8.914900462286823e-08
+							1899 cell
+								1900 text -7.978836219990626e-05
+							1901 cell
+								1902 text -0.000139518189826
+							1903 cell
+								1904 text -0.0001897982292575
+						1905 row
+							1906 cell
+								1907 text 36
+							1908 cell
+								1909 text 2021-04-07 12:09:41.122161+00:00
+							1910 cell
+								1911 text 56163.235
+							1912 cell
+								1913 text 0.01
+							1914 cell
+								1915 text 643346.5051293444
+							1916 cell
+								1917 text 385793.6744748084
+							1918 cell
+								1919 text -8.902620862727417e-08
+							1920 cell
+								1921 text -9.249823051504792e-05
+							1922 cell
+								1923 text -9.570317342877388e-05
+							1924 cell
+								1925 text -0.0001720876607578
+						1926 row
+							1927 cell
+								1928 text 37
+							1929 cell
+								1930 text 2021-04-07 12:10:41.122161+00:00
+							1931 cell
+								1932 text 55962.375
+							1933 cell
+								1934 text 6.03
+							1935 cell
+								1936 text 628711.1888691594
+							1937 cell
+								1938 text 767493.3073717795
+							1939 cell
+								1940 text -5.387548299040645e-05
+							1941 cell
+								1942 text -6.245267286431044e-05
+							1943 cell
+								1944 text -0.0001232077775057
+							1945 cell
+								1946 text -0.0001512623421149
+						1947 row
+							1948 cell
+								1949 text 38
+							1950 cell
+								1951 text 2021-04-07 12:11:41.122161+00:00
+							1952 cell
+								1953 text 55833.85
+							1954 cell
+								1955 text 2.3
+							1956 cell
+								1957 text 915962.9658822304
+							1958 cell
+								1959 text 1221727.208841726
+							1960 cell
+								1961 text -2.0596824469976127e-05
+							1962 cell
+								1963 text -6.895458500366658e-05
+							1964 cell
+								1965 text -7.808882946847007e-05
+							1966 cell
+								1967 text -0.0001183869608212
+						1968 row
+							1969 cell
+								1970 text 39
+							1971 cell
+								1972 text 2021-04-07 12:12:41.122161+00:00
+							1973 cell
+								1974 text 55854.915
+							1975 cell
+								1976 text 3.41
+							1977 cell
+								1978 text 1524484.079142957
+							1979 cell
+								1980 text 1617470.2340194453
+							1981 cell
+								1982 text -3.052551255677827e-05
+							1983 cell
+								1984 text -0.0001216544696944
+							1985 cell
+								1986 text -0.0001218335019075
+							1987 cell
+								1988 text -0.000124160957057
+						1989 row
+							1990 cell
+								1991 text 40
+							1992 cell
+								1993 text 2021-04-07 12:13:41.122161+00:00
+							1994 cell
+								1995 text 55733.325
+							1996 cell
+								1997 text 0.01
+							1998 cell
+								1999 text 1775903.0145112455
+							2000 cell
+								2001 text 1863254.1895614343
+							2002 cell
+								2003 text -8.97129339705316e-08
+							2004 cell
+								2005 text -0.0001238935656147
+							2006 cell
+								2007 text -0.0002755084133241
+							2008 cell
+								2009 text -0.0002773026644717
+						2010 row
+							2011 cell
+								2012 text 41
+							2013 cell
+								2014 text 2021-04-07 12:14:41.122161+00:00
+							2015 cell
+								2016 text 55845.755000000005
+							2017 cell
+								2018 text 0.01
+							2019 cell
+								2020 text 1451603.3801779477
+							2021 cell
+								2022 text 1120061.8525796072
+							2023 cell
+								2024 text -8.953232111252873e-08
+							2025 cell
+								2026 text -2.9545665256591747e-06
+							2027 cell
+								2028 text -3.1336312531493604e-06
+							2029 cell
+								2030 text -0.0001071701844921
+						2031 row
+							2032 cell
+								2033 text 42
+							2034 cell
+								2035 text 2021-04-07 12:15:41.122161+00:00
+							2036 cell
+								2037 text 55861.355
+							2038 cell
+								2039 text 8.21
+							2040 cell
+								2041 text 2867830.534937667
+							2042 cell
+								2043 text 621623.3446162124
+							2044 cell
+								2045 text -7.348550570895895e-05
+							2046 cell
+								2047 text -0.000204703232157
+							2048 cell
+								2049 text -0.0004284715396352
+							2050 cell
+								2051 text -0.0004565768176689
+						2052 row
+							2053 cell
+								2054 text 43
+							2055 cell
+								2056 text 2021-04-07 12:16:41.122161+00:00
+							2057 cell
+								2058 text 55656.215
+							2059 cell
+								2060 text 0.01
+							2061 cell
+								2062 text 716529.6216932813
+							2063 cell
+								2064 text 1504222.1745478043
+							2065 cell
+								2066 text -8.983722921129812e-08
+							2067 cell
+								2068 text -1.8865817992264056e-06
+							2069 cell
+								2070 text -2.0662562292272924e-06
+							2071 cell
+								2072 text -3.86300052923616e-06
+						2073 row
+							2074 cell
+								2075 text 44
+							2076 cell
+								2077 text 2021-04-07 12:17:41.122161+00:00
+							2078 cell
+								2079 text 56077.065
+							2080 cell
+								2081 text 0.01
+							2082 cell
+								2083 text 2729206.4367439603
+							2084 cell
+								2085 text 714483.2831655067
+							2086 cell
+								2087 text -8.916300942019006e-08
+							2088 cell
+								2089 text -8.024671274142747e-07
+							2090 cell
+								2091 text -0.0001782368635758
+							2092 cell
+								2093 text -0.000178415182745
+						2094 row
+							2095 cell
+								2096 text 45
+							2097 cell
+								2098 text 2021-04-07 12:18:41.122161+00:00
+							2099 cell
+								2100 text 56157.615000000005
+							2101 cell
+								2102 text 0.01
+							2103 cell
+								2104 text 1072343.8237655384
+							2105 cell
+								2106 text 529561.5189007826
+							2107 cell
+								2108 text -8.90351188331806e-08
+							2109 cell
+								2110 text -9.001450962387025e-05
+							2111 cell
+								2112 text -9.339784446638076e-05
+							2113 cell
+								2114 text -9.393205255037174e-05
+						2115 row
+							2116 cell
+								2117 text 46
+							2118 cell
+								2119 text 2021-04-07 12:19:41.122161+00:00
+							2120 cell
+								2121 text 56155.62
+							2122 cell
+								2123 text 8.6
+							2124 cell
+								2125 text 442006.0675685848
+							2126 cell
+								2127 text 607358.2875741415
+							2128 cell
+								2129 text -7.657292007934302e-05
+							2130 cell
+								2131 text -9.954479901352896e-05
+							2132 cell
+								2133 text -0.0001052432489814
+							2134 cell
+								2135 text -0.000105421328044
+						2136 row
+							2137 cell
+								2138 text 47
+							2139 cell
+								2140 text 2021-04-07 12:20:41.122161+00:00
+							2141 cell
+								2142 text 56178.175
+							2143 cell
+								2144 text 0.01
+							2145 cell
+								2146 text 445167.1017252154
+							2147 cell
+								2148 text 278776.[REDACTED_PHONE]
+							2149 cell
+								2150 text -8.900253334331866e-08
+							2151 cell
+								2152 text -2.670076071353833e-07
+							2153 cell
+								2154 text -0.0002612224488984
+							2155 cell
+								2156 text -0.0002747508406173
+						2157 row
+							2158 cell
+								2159 text 48
+							2160 cell
+								2161 text 2021-04-07 12:21:41.122161+00:00
+							2162 cell
+								2163 text 56048.785
+							2164 cell
+								2165 text 0.01
+							2166 cell
+								2167 text 533651.6880208616
+							2168 cell
+								2169 text 458606.3585019184
+							2170 cell
+								2171 text -8.92080009862184e-08
+							2172 cell
+								2173 text -3.835943971353117e-06
+							2174 cell
+								2175 text -4.130330489715561e-05
+							2176 cell
+								2177 text -6.46757980575785e-05
+						2178 row
+							2179 cell
+								2180 text 49
+							2181 cell
+								2182 text 2021-04-07 12:22:41.122161+00:00
+							2183 cell
+								2184 text 56037.0
+							2185 cell
+								2186 text 9.44
+							2187 cell
+								2188 text 894163.2252277689
+							2189 cell
+								2190 text 351153.4210187798
+							2191 cell
+								2192 text -8.423006511293352e-05
+							2193 cell
+								2194 text -0.0002232453553006
+							2195 cell
+								2196 text -0.0002278851461596
+							2197 cell
+								2198 text -0.0002430536987958
+				2199 heading Data Explorer, Value: 2
+					2200 text Data Explorer
+				2201 container
+					2202 button View version history
+						2203 text Version 
+						2204 text 1
+					2205 text (5.48 GB)
+				2206 content list
+					2207 text ADA_1min.csv
+					2208 text ADA_1sec.csv
+					2209 text ADA_5min.csv
+					2210 text BTC_1min.csv
+					2211 text BTC_1sec.csv
+					2212 text BTC_5min.csv
+					2213 text ETH_1min.csv
+					2214 text ETH_1sec.csv
+					2215 text ETH_5min.csv
+				2216 heading Summary, Value: 2
+					2217 text Summary
+				2218 button (collapsed) Description: Expand 9 files, Secondary Actions: Expand
+					2219 container Collapse 9 files
+						2220 text arrow_right
+					2221 text folder
+					2222 text 9 files
+				2223 button (collapsed) Description: Expand 1404 columns, Secondary Actions: Expand
+					2224 container Collapse 1404 columns
+						2225 text arrow_right
+					2226 text calendar_view_week
+					2227 text 1404 columns
+			97 heading See what others are saying about this dataset, Value: 2
+				98 text See what others are saying about this dataset
+			99 heading What have you used this dataset for?, Value: 3, ID: used-dataset-for
+				100 text What have you used this dataset for?
+			101 container What have you used this dataset for?
+				2228 button Learning 1 false
+					2229 text Learning
+					2230 text 1
+				2231 button Research 0 false
+					2232 text Research
+					2233 text 0
+				2234 button Application 2 false
+					2235 text Application
+					2236 text 2
+				2237 button LLM Fine-Tuning 0 false
+					2238 text LLM Fine-Tuning
+					2239 text 0
+			102 heading How would you describe this dataset?, Value: 3, ID: describe-dataset
+				103 text How would you describe this dataset?
+			104 container How would you describe this dataset?
+				2240 button Well-documented 0 false
+					2241 text Well-documented
+					2242 text 0
+				2243 button Well-maintained 1 false
+					2244 text Well-maintained
+					2245 text 1
+				2246 button Clean data 1 false
+					2247 text Clean data
+					2248 text 1
+				2249 button Original 0 false
+					2250 text Original
+					2251 text 0
+				2252 button High-quality notebooks 0 false
+					2253 text High-quality notebooks
+					2254 text 0
+				105 checkbox Description: Other, Value: 0
+			106 heading Metadata, Value: 2
+				107 text Metadata
+			2255 button (collapsed) Description: Expand All Metadata Sections, Secondary Actions: Expand
+			2256 container
+				2257 heading Collaborators, Value: 3
+					2258 text Collaborators
+				2259 button (collapsed) Description: Expand Collaborators, Secondary Actions: Expand
+			2260 container
+				2261 heading Authors, Value: 3
+					2262 text Authors
+				2263 button (collapsed) Description: Expand Authors, Secondary Actions: Expand
+			2264 container
+				2265 heading Coverage, Value: 3
+					2266 text Coverage
+				2267 button (collapsed) Description: Expand Coverage, Secondary Actions: Expand
+			2268 container
+				2269 heading DOI Citation, Value: 3
+					2270 text DOI Citation
+				2271 button (collapsed) Description: Expand DOI Citation, Secondary Actions: Expand
+			2272 container
+				2273 heading Provenance, Value: 3
+					2274 text Provenance
+				2275 button (collapsed) Description: Expand Provenance, Secondary Actions: Expand
+			2276 container
+				2277 heading License, Value: 3
+					2278 text License
+				2279 button (collapsed) Description: Expand License, Secondary Actions: Expand
+			2280 container
+				2281 heading Expected Update Frequency, Value: 3
+					2282 text Expected Update Frequency
+				2283 button (collapsed) Description: Expand Expected Update Frequency, Secondary Actions: Expand
+			108 heading Activity Overview, Value: 2
+				109 text Activity Overview
+			2284 container
+				2285 text visibility
+			2286 heading Views, Value: 3
+				2287 text Views
+			2288 container
+				2289 text 28K
+				2290 container
+					2291 container A chart.
+						2292 image A chart.
+						2293 container A tabular representation of the data in the chart.
+							2294 table
+								2295 row
+									2296 cell
+										2297 text date
+									2298 cell
+										2299 text Views
+								2300 row
+									2301 cell
+										2302 text Sep 18, 2026
+									2303 cell
+										2304 text 16
+								2305 row
+									2306 cell
+										2307 text Sep 19, 2026
+									2308 cell
+										2309 text 14
+								2310 row
+									2311 cell
+										2312 text Sep 20, 2026
+									2313 cell
+										2314 text 11
+								2315 row
+									2316 cell
+										2317 text Sep 21, 2026
+									2318 cell
+										2319 text 22
+								2320 row
+									2321 cell
+										2322 text Sep 22, 2026
+									2323 cell
+										2324 text 22
+								2325 row
+									2326 cell
+										2327 text Sep 23, 2026
+									2328 cell
+										2329 text 12
+								2330 row
+									2331 cell
+										2332 text Sep 24, 2026
+									2333 cell
+										2334 text 12
+								2335 row
+									2336 cell
+										2337 text Sep 25, 2026
+									2338 cell
+										2339 text 8
+								2340 row
+									2341 cell
+										2342 text Sep 26, 2026
+									2343 cell
+										2344 text 15
+								2345 row
+									2346 cell
+										2347 text Sep 27, 2026
+									2348 cell
+										2349 text 15
+								2350 row
+									2351 cell
+										2352 text Sep 28, 2026
+									2353 cell
+										2354 text 19
+								2355 row
+									2356 cell
+										2357 text Sep 29, 2026
+									2358 cell
+										2359 text 16
+								2360 row
+									2361 cell
+										2362 text Sep 30, 2026
+									2363 cell
+										2364 text 5
+								2365 row
+									2366 cell
+										2367 text Oct 1, 2026
+									2368 cell
+										2369 text 11
+								2370 row
+									2371 cell
+										2372 text Oct 2, 2026
+									2373 cell
+										2374 text 18
+								2375 row
+									2376 cell
+										2377 text Oct 3, 2026
+									2378 cell
+										2379 text 23
+								2380 row
+									2381 cell
+										2382 text Oct 4, 2026
+									2383 cell
+										2384 text 13
+								2385 row
+									2386 cell
+										2387 text Oct 5, 2026
+									2388 cell
+										2389 text 14
+								2390 row
+									2391 cell
+										2392 text Oct 6, 2026
+									2393 cell
+										2394 text 23
+								2395 row
+									2396 cell
+										2397 text Oct 7, 2026
+									2398 cell
+										2399 text 11
+								2400 row
+									2401 cell
+										2402 text Oct 8, 2026
+									2403 cell
+										2404 text 5
+								2405 row
+									2406 cell
+										2407 text Oct 9, 2026
+									2408 cell
+										2409 text 9
+								2410 row
+									2411 cell
+										2412 text Oct 10, 2026
+									2413 cell
+										2414 text 20
+								2415 row
+									2416 cell
+										2417 text Oct 11, 2026
+									2418 cell
+										2419 text 23
+								2420 row
+									2421 cell
+										2422 text Oct 12, 2026
+									2423 cell
+										2424 text 7
+								2425 row
+									2426 cell
+										2427 text Oct 13, 2026
+									2428 cell
+										2429 text 14
+								2430 row
+									2431 cell
+										2432 text Oct 14, 2026
+									2433 cell
+										2434 text 18
+								2435 row
+									2436 cell
+										2437 text Oct 15, 2026
+									2438 cell
+										2439 text 21
+								2440 row
+									2441 cell
+										2442 text Oct 16, 2026
+									2443 cell
+										2444 text 22
+				2445 text trending_up 439 in the last 30 days
+			2446 container
+				2447 text download
+			2448 heading Downloads, Value: 3
+				2449 text Downloads
+			2450 container
+				2451 text 5766
+				2452 container
+					2453 container A chart.
+						2454 image A chart.
+						2455 container A tabular representation of the data in the chart.
+							2456 table
+								2457 row
+									2458 cell
+										2459 text date
+									2460 cell
+										2461 text Downloads
+								2462 row
+									2463 cell
+										2464 text Sep 18, 2026
+									2465 cell
+										2466 text 5
+								2467 row
+									2468 cell
+										2469 text Sep 19, 2026
+									2470 cell
+										2471 text 3
+								2472 row
+									2473 cell
+										2474 text Sep 20, 2026
+									2475 cell
+										2476 text 2
+								2477 row
+									2478 cell
+										2479 text Sep 21, 2026
+									2480 cell
+										2481 text 8
+								2482 row
+									2483 cell
+										2484 text Sep 22, 2026
+									2485 cell
+										2486 text 1
+								2487 row
+									2488 cell
+										2489 text Sep 23, 2026
+									2490 cell
+										2491 text 1
+								2492 row
+									2493 cell
+										2494 text Sep 24, 2026
+									2495 cell
+										2496 text 7
+								2497 row
+									2498 cell
+										2499 text Sep 25, 2026
+									2500 cell
+										2501 text 3
+								2502 row
+									2503 cell
+										2504 text Sep 26, 2026
+									2505 cell
+										2506 text 3
+								2507 row
+									2508 cell
+										2509 text Sep 27, 2026
+									2510 cell
+										2511 text 13
+								2512 row
+									2513 cell
+										2514 text Sep 29, 2026
+									2515 cell
+										2516 text 6
+								2517 row
+									2518 cell
+										2519 text Sep 30, 2026
+									2520 cell
+										2521 text 1
+								2522 row
+									2523 cell
+										2524 text Oct 3, 2026
+									2525 cell
+										2526 text 5
+								2527 row
+									2528 cell
+										2529 text Oct 5, 2026
+									2530 cell
+										2531 text 2
+								2532 row
+									2533 cell
+										2534 text Oct 6, 2026
+									2535 cell
+										2536 text 3
+								2537 row
+									2538 cell
+										2539 text Oct 7, 2026
+									2540 cell
+										2541 text 4
+								2542 row
+									2543 cell
+										2544 text Oct 8, 2026
+									2545 cell
+										2546 text 4
+								2547 row
+									2548 cell
+										2549 text Oct 9, 2026
+									2550 cell
+										2551 text 3
+								2552 row
+									2553 cell
+										2554 text Oct 10, 2026
+									2555 cell
+										2556 text 4
+								2557 row
+									2558 cell
+										2559 text Oct 11, 2026
+									2560 cell
+										2561 text 9
+								2562 row
+									2563 cell
+										2564 text Oct 12, 2026
+									2565 cell
+										2566 text 6
+								2567 row
+									2568 cell
+										2569 text Oct 13, 2026
+									2570 cell
+										2571 text 5
+								2572 row
+									2573 cell
+										2574 text Oct 14, 2026
+									2575 cell
+										2576 text 7
+								2577 row
+									2578 cell
+										2579 text Oct 15, 2026
+									2580 cell
+										2581 text 8
+								2582 row
+									2583 cell
+										2584 text Oct 16, 2026
+									2585 cell
+										2586 text 2
+				2587 text trending_up 115 in the last 30 days
+			2588 container
+				2589 text downloading
+			2590 heading Engagement, Value: 3
+				2591 text Engagement
+			2592 container
+				2593 text 0.20626 downloads per view
+			2594 container
+				2595 text forum
+			2596 heading Comments, Value: 3
+				2597 text Comments
+			2598 container
+				2599 text 0 posted
+			2600 container
+				2601 text person
+			2602 heading Top Contributors, Value: 3
+				2603 text Top Contributors
+			2604 container
+				2605 link Description: Martin Søgaard Nielsen's profile, Value: kaggle.com/martinsn
+				2606 link Description: Daniel Dong's profile, Value: kaggle.com/donzhen
+				2607 link Description: Arpan Mukherjee's profile, Value: kaggle.com/nikox2980
+			110 container
+				111 heading Detail View, Value: 3
+					112 text Detail View
+				113 button (expanded) Description: Collapse Detail View, Secondary Actions: Collapse
+			2608 container
+				2609 heading Views, Value: 4
+					2610 text Views
+				2611 combo box (collapsed) Description: Select combobox. Last month currently selected., Value: Last month, Secondary Actions: Expand
+					2612 text Last month
+				2613 container
+					2614 container A chart.
+						2615 image A chart.
+							2616 text 09/21
+							2617 text 09/28
+							2618 text 10/05
+							2619 text 10/12
+							2620 text 0
+							2621 text 10
+							2622 text 20
+							2623 text 30
+						2624 container A tabular representation of the data in the chart.
+							2625 table
+								2626 row
+									2627 cell
+										2628 text date
+									2629 cell
+										2630 text Views
+								2631 row
+									2632 cell
+										2633 text Sep 18, 2026
+									2634 cell
+										2635 text 16
+								2636 row
+									2637 cell
+										2638 text Sep 19, 2026
+									2639 cell
+										2640 text 14
+								2641 row
+									2642 cell
+										2643 text Sep 20, 2026
+									2644 cell
+										2645 text 11
+								2646 row
+									2647 cell
+										2648 text Sep 21, 2026
+									2649 cell
+										2650 text 22
+								2651 row
+									2652 cell
+										2653 text Sep 22, 2026
+									2654 cell
+										2655 text 22
+								2656 row
+									2657 cell
+										2658 text Sep 23, 2026
+									2659 cell
+										2660 text 12
+								2661 row
+									2662 cell
+										2663 text Sep 24, 2026
+									2664 cell
+										2665 text 12
+								2666 row
+									2667 cell
+										2668 text Sep 25, 2026
+									2669 cell
+										2670 text 8
+								2671 row
+									2672 cell
+										2673 text Sep 26, 2026
+									2674 cell
+										2675 text 15
+								2676 row
+									2677 cell
+										2678 text Sep 27, 2026
+									2679 cell
+										2680 text 15
+								2681 row
+									2682 cell
+										2683 text Sep 28, 2026
+									2684 cell
+										2685 text 19
+								2686 row
+									2687 cell
+										2688 text Sep 29, 2026
+									2689 cell
+										2690 text 16
+								2691 row
+									2692 cell
+										2693 text Sep 30, 2026
+									2694 cell
+										2695 text 5
+								2696 row
+									2697 cell
+										2698 text Oct 1, 2026
+									2699 cell
+										2700 text 11
+								2701 row
+									2702 cell
+										2703 text Oct 2, 2026
+									2704 cell
+										2705 text 18
+								2706 row
+									2707 cell
+										2708 text Oct 3, 2026
+									2709 cell
+										2710 text 23
+								2711 row
+									2712 cell
+										2713 text Oct 4, 2026
+									2714 cell
+										2715 text 13
+								2716 row
+									2717 cell
+										2718 text Oct 5, 2026
+									2719 cell
+										2720 text 14
+								2721 row
+									2722 cell
+										2723 text Oct 6, 2026
+									2724 cell
+										2725 text 23
+								2726 row
+									2727 cell
+										2728 text Oct 7, 2026
+									2729 cell
+										2730 text 11
+								2731 row
+									2732 cell
+										2733 text Oct 8, 2026
+									2734 cell
+										2735 text 5
+								2736 row
+									2737 cell
+										2738 text Oct 9, 2026
+									2739 cell
+										2740 text 9
+								2741 row
+									2742 cell
+										2743 text Oct 10, 2026
+									2744 cell
+										2745 text 20
+								2746 row
+									2747 cell
+										2748 text Oct 11, 2026
+									2749 cell
+										2750 text 23
+								2751 row
+									2752 cell
+										2753 text Oct 12, 2026
+									2754 cell
+										2755 text 7
+								2756 row
+									2757 cell
+										2758 text Oct 13, 2026
+									2759 cell
+										2760 text 14
+								2761 row
+									2762 cell
+										2763 text Oct 14, 2026
+									2764 cell
+										2765 text 18
+								2766 row
+									2767 cell
+										2768 text Oct 15, 2026
+									2769 cell
+										2770 text 21
+								2771 row
+									2772 cell
+										2773 text Oct 16, 2026
+									2774 cell
+										2775 text 22
+				2776 heading Downloads, Value: 4
+					2777 text Downloads
+				2778 combo box (collapsed) Description: Select combobox. Last month currently selected., Value: Last month, Secondary Actions: Expand
+					2779 text Last month
+				2780 container
+					2781 container A chart.
+						2782 image A chart.
+							2783 text 09/21
+							2784 text 09/28
+							2785 text 10/05
+							2786 text 10/12
+							2787 text 0
+							2788 text 5
+							2789 text 10
+							2790 text 15
+						2791 container A tabular representation of the data in the chart.
+							2792 table
+								2793 row
+									2794 cell
+										2795 text date
+									2796 cell
+										2797 text Downloads
+								2798 row
+									2799 cell
+										2800 text Sep 18, 2026
+									2801 cell
+										2802 text 5
+								2803 row
+									2804 cell
+										2805 text Sep 19, 2026
+									2806 cell
+										2807 text 3
+								2808 row
+									2809 cell
+										2810 text Sep 20, 2026
+									2811 cell
+										2812 text 2
+								2813 row
+									2814 cell
+										2815 text Sep 21, 2026
+									2816 cell
+										2817 text 8
+								2818 row
+									2819 cell
+										2820 text Sep 22, 2026
+									2821 cell
+										2822 text 1
+								2823 row
+									2824 cell
+										2825 text Sep 23, 2026
+									2826 cell
+										2827 text 1
+								2828 row
+									2829 cell
+										2830 text Sep 24, 2026
+									2831 cell
+										2832 text 7
+								2833 row
+									2834 cell
+										2835 text Sep 25, 2026
+									2836 cell
+										2837 text 3
+								2838 row
+									2839 cell
+										2840 text Sep 26, 2026
+									2841 cell
+										2842 text 3
+								2843 row
+									2844 cell
+										2845 text Sep 27, 2026
+									2846 cell
+										2847 text 13
+								2848 row
+									2849 cell
+										2850 text Sep 29, 2026
+									2851 cell
+										2852 text 6
+								2853 row
+									2854 cell
+										2855 text Sep 30, 2026
+									2856 cell
+										2857 text 1
+								2858 row
+									2859 cell
+										2860 text Oct 3, 2026
+									2861 cell
+										2862 text 5
+								2863 row
+									2864 cell
+										2865 text Oct 5, 2026
+									2866 cell
+										2867 text 2
+								2868 row
+									2869 cell
+										2870 text Oct 6, 2026
+									2871 cell
+										2872 text 3
+								2873 row
+									2874 cell
+										2875 text Oct 7, 2026
+									2876 cell
+										2877 text 4
+								2878 row
+									2879 cell
+										2880 text Oct 8, 2026
+									2881 cell
+										2882 text 4
+								2883 row
+									2884 cell
+										2885 text Oct 9, 2026
+									2886 cell
+										2887 text 3
+								2888 row
+									2889 cell
+										2890 text Oct 10, 2026
+									2891 cell
+										2892 text 4
+								2893 row
+									2894 cell
+										2895 text Oct 11, 2026
+									2896 cell
+										2897 text 9
+								2898 row
+									2899 cell
+										2900 text Oct 12, 2026
+									2901 cell
+										2902 text 6
+								2903 row
+									2904 cell
+										2905 text Oct 13, 2026
+									2906 cell
+										2907 text 5
+								2908 row
+									2909 cell
+										2910 text Oct 14, 2026
+									2911 cell
+										2912 text 7
+								2913 row
+									2914 cell
+										2915 text Oct 15, 2026
+									2916 cell
+										2917 text 8
+								2918 row
+									2919 cell
+										2920 text Oct 16, 2026
+									2921 cell
+										2922 text 2
+			2923 heading Related Notebooks, Value: 2
+				2924 text Related Notebooks
+			2925 button See all Related Notebooks 
+			2926 content list
+				2927 container Starter: High Frequency Bitcoin Forecasting
+					2928 link Value: kaggle.com/code/martinsn/starter-high-frequency-bitcoin-forecasting, Description: Starter: High Frequency Bitcoin Forecasting More options for this notebook Updated 5 years ago High Frequency Crypto Limit Order Book Data
+					2929 container
+						2930 button Upvote
+						2931 container 36 votes
+							2932 text 36
+					2933 link Description: Martin Søgaard Nielsen's profile (opens in a new tab), Value: kaggle.com/martinsn
+				2934 container Fork of Coinbase_HFT_v1
+					2935 link Value: kaggle.com/code/donzhen/fork-of-coinbase-hft-v1, Description: Fork of Coinbase_HFT_v1 More options for this notebook Updated 4 years ago High Frequency Crypto Limit Order Book Data
+					2936 container
+						2937 button Upvote
+						2938 container 18 votes
+							2939 text 18
+					2940 link Description: Daniel Dong's profile (opens in a new tab), Value: kaggle.com/donzhen
+				2941 container FinAI_LLM_Expert
+					2942 link Value: kaggle.com/code/nikox2980/finai-llm-expert, Description: FinAI_LLM_Expert More options for this notebook Updated a year ago High Frequency Crypto Limit Order Book Data+2
+					2943 container
+						2944 button Upvote
+						2945 container 6 votes
+							2946 text 6
+					2947 link Description: Arpan Mukherjee's profile (opens in a new tab), Value: kaggle.com/nikox2980
+			2948 heading You May Also Like, Value: 2
+				2949 text You May Also Like
+			2950 content list
+				2951 container Cryptocurrency Real-Time Market Data - Bybit
+					2952 link Value: kaggle.com/datasets/denisgorobets/cryptocurrency-real-time-market-data-bybit, ID: 9089426, Description: Cryptocurrency Real-Time Market Data - Bybit More options for this dataset Denis Gorobets Usability 8.2 · Updated 10 months ago 1 File (other) · 4 GB · 73 downloads
+					2953 container
+						2954 button Upvote
+						2955 container 0 votes
+							2956 text 0
+					2957 link Description: Denis Gorobets's profile (opens in a new tab), Value: kaggle.com/denisgorobets
+				2958 container BTCUSDT L2 Order Book (Binance) - (12/8 - 18/8)
+					2959 link Value: kaggle.com/datasets/fast42/btcusdt-l2-order-book-binance-128-188, ID: 8291616, Description: BTCUSDT L2 Order Book (Binance) - (12/8 - 18/8) More options for this dataset Fast42 Usability 4.7 · Updated a year ago 7 Files (CSV) · 55 kB · 182 downloads
+					2960 container
+						2961 button Upvote
+						2962 container 1 votes
+							2963 text 1
+					2964 link Description: Fast42's profile (opens in a new tab), Value: kaggle.com/fast42
+				2965 container Hyperliquid BTC High-Frequency Microstructure
+					2966 link Value: kaggle.com/datasets/marvingozo/hyperliquid-btc-high-frequency-microstructure, ID: 10445757, Description: Hyperliquid BTC High-Frequency Microstructure More options for this dataset Marvin Gozo Usability 10.0 · Updated 5 months ago 28 Files (other) · 60 GB · 1,154 downloads
+					2967 container
+						2968 button Upvote
+						2969 container 1 votes
+							2970 text 1
+					2971 link Description: Marvin Gozo's profile (opens in a new tab), Value: kaggle.com/marvingozo
+				2972 container Crypto Data
+					2973 link Value: kaggle.com/datasets/peterbowman/crypto-data, ID: 9640706, Description: Crypto Data More options for this dataset Peter Bowman Usability 10.0 · Updated 7 months ago 21 Files (CSV) · 2 GB · 285 downloads
+					2974 container
+						2975 button Upvote
+						2976 container 2 votes
+							2977 text 2
+					2978 link Description: Peter Bowman's profile (opens in a new tab), Value: kaggle.com/peterbowman
+
+The focused UI element is 0 AXWebArea High Frequency Crypto Limit Order Book Data, URL: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1min.csv

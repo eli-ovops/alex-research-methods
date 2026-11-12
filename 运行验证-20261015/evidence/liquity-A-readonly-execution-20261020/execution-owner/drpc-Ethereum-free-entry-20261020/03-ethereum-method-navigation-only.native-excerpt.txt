@@ -1,0 +1,18 @@
+L102:   * Core RPC API
+L103:   * cite61†Ethereum API L104: 
+L105:     * cite62†Blocks info L106:       * cite63†eth_getBlockByNumber L107:       * cite64†eth_getBlockTransactionCountByHash L108:       * cite65†eth_getBlockTransactionCountByNumber L109:       * cite66†eth_blockNumber L110:       * cite67†eth_getBlockByNumber#full L111:       * cite68†eth_getBlockByHash#full L112:       * cite69†eth_getBlockByHash L113:       * cite70†eth_newBlockFilter L114:       * cite71†eth_getBlockReceipts L115: 
+L116:     * cite72†Transactions info L117:       * cite73†eth_getTransactionByHash L118:       * cite74†eth_getTransactionCount L119:       * cite75†eth_getTransactionReceipt L120:       * cite76†eth_newPendingTransactionFilter L121:       * cite77†eth_getTransactionByBlockHashAndIndex L122:       * cite78†eth_getTransactionByBlockNumberAndIndex L123:       * cite79†txpool_content L124: 
+L125:     * cite80†Debug and trace L126:       * cite81†trace_filter L127:       * cite82†trace_rawTransaction L128:       * cite83†debug_traceBlockByNumber L129:       * cite84†trace_block L130:       * cite85†trace_replayBlockTransactions L131:       * cite86†trace_replayBlockTransactions#vmTrace L132:       * cite87†debug_traceBlockByHash L133:       * cite88†trace_transaction L134:       * cite89†debug_traceTransaction L135:       * cite90†trace_replayTransaction L136:       * cite91†trace_replayTransaction#vmTrace L137:       * cite92†trace_callMany L138:       * cite93†trace_get L139:       * cite94†trace_call L140:       * cite95†debug_traceCall L141:     * cite96†Account info L142: 
+L143:       * cite97†eth_getBalance L144:       * cite98†eth_accounts L145:       * cite99†eth_getCode L146:       * cite100†eth_getProof L147:       * cite101†eth_getStorageAt L148: 
+L149:     * cite102†Event logs L150: 
+L151:       * cite103†eth_getLogs L152:       * cite104†eth_newFilter L153:       * cite105†eth_getFilterChanges L154:       * cite106†eth_uninstallFilter L155:       * cite107†eth_getFilterLogs L156: 
+L157:     * cite108†Chain info L158:       * cite109†eth_chainId L159:       * cite110†eth_protocolVersion L160:       * cite111†net_listening L161:       * cite112†net_version L162:       * cite113†net_peerCount L163:       * cite114†eth_syncing L164:       * cite115†eth_hashrate L165: 
+L166:     * cite116†Executing transactions L167: 
+L168:       * cite117†eth_call L169:       * cite118†eth_sendRawTransaction L170: 
+L171:     * cite119†Gas estimation L172: 
+L173:       * cite120†eth_feeHistory L174:       * cite121†eth_estimateGas L175:       * cite122†eth_gasPrice L176:       * cite123†eth_createAccessList L177:       * cite124†eth_maxPriorityFeePerGas L178: 
+L179:     * cite125†Getting uncles L180:       * cite126†eth_getUncleByBlockHashAndIndex L181:       * cite127†eth_getUncleByBlockNumberAndIndex L182:       * cite128†eth_getUncleCountByBlockHash L183:       * cite129†eth_getUncleCountByBlockNumber L184: 
+L185:     * cite130†Web3 L186: 
+L187:       * cite131†web3_clientVersion L188:       * cite132†web3_sha3 L189: 
+L190:     * cite133†Subscriptions L191: 
+L192:       * cite134†eth_subscribe L193:       * cite135†eth_unsubscribe L194: 

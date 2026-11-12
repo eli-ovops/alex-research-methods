@@ -1,0 +1,148 @@
+[2402.18485v3] A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist (https://arxiv.org/abs/2402.18485v3)
+citeturn1034view0 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://arxiv.org/abs/2402.18485v3","lineno":null}); Total lines: 163
+L0: cite0†Search cite1†Submit cite2†Donate†info.arxiv.org cite3†Log in L1: 
+L2: Search arXiv [Input: Search papers by title, author, abstract, or ID...] [Input] [Input]
+L3: 
+L4: Press Enter to search · cite4†Advanced search L5: 
+L6: # Quantitative Finance > Trading and Market Microstructure
+L7: 
+L8: [Submitted on 28 Feb 2024 (cite5†v1 ), last revised 28 Jun 2024 (this version, v3)]
+L9: # Title:A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist
+L10: 
+L11: Authors:cite6†Wentao Zhang , cite7†Lingxuan Zhao , cite8†Haochong Xia , cite9†Shuo Sun , cite10†Jiaze Sun , cite11†Molei Qin , cite12†Xinyi Li , cite13†Yuqing Zhao , cite13†Yilei Zhao , cite14†Xinyu Cai , cite15†Longtao Zheng , cite16†Xinrun Wang , cite17†Bo An L12: 
+L13: View a PDF of the paper titled A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist, by Wentao Zhang and 12 other authors
+L14: cite18†View PDF cite19†HTML (experimental) L15: > Abstract:Financial trading is a crucial component of the markets, informed by a multimodal information landscape encompassing news, prices, and Kline charts, and encompasses diverse tasks such as quantitative trading and high-frequency trading with various assets.
+L16: While advanced AI techniques like deep learning and reinforcement learning are extensively utilized in finance, their application in financial trading tasks often faces challenges due to inadequate handling of multimodal data and limited generalizability across various tasks. To address these challenges, we present FinAgent, a multimodal foundational agent with tool augmentation for financial trading.
+L17: FinAgent's market intelligence module processes a diverse range of data-numerical, textual, and visual-to accurately analyze the financial market. Its unique dual-level reflection module not only enables rapid adaptation to market dynamics but also incorporates a diversified memory retrieval system, enhancing the agent's ability to learn from historical data and improve decision-making processes. The agent's emphasis on reasoning for actions fosters trust in its financial decisions.
+L18: Moreover, FinAgent integrates established trading strategies and expert insights, ensuring that its trading approaches are both data-driven and rooted in sound financial principles. With comprehensive experiments on 6 financial datasets, including stocks and Crypto, FinAgent significantly outperforms 9 state-of-the-art baselines in terms of 6 financial metrics with over 36% average improvement on profit. Specifically, a 92.27% return (a 84.39% relative improvement) is achieved on one dataset.
+L19: Notably, FinAgent is the first advanced multimodal foundation agent designed for financial trading tasks.
+L20: Subjects:  | Trading and Market Microstructure (q-fin.TR); Artificial Intelligence (cs.AI)
+L21: Cite as:  | cite20†arXiv:2402.18485 [q-fin.TR]
+L22:    | (or cite21†arXiv:2402.18485v3 [q-fin.TR] for this version)
+L23:    | cite22†https://doi.org/10.48550/arXiv.2402.18485†doi.org arXiv-issued DOI via DataCite
+L24: ## Submission history
+L25: 
+L26: From: Wentao Zhang [cite23†view email ]
+L27: cite5†[v1] Wed, 28 Feb 2024 17:06:54 UTC (14,008 KB)
+L28: cite24†[v2] Thu, 29 Feb 2024 12:49:03 UTC (14,008 KB)
+L29: [v3] Fri, 28 Jun 2024 10:35:56 UTC (14,379 KB)
+L30: 
+L31: Full-text links:
+L32: ## Access Paper:
+L33: 
+L34: View a PDF of the paper titled A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist, by Wentao Zhang and 12 other authors
+L35: 
+L36:   * cite18†View PDF L37:   * cite19†HTML (experimental) L38:   * cite25†TeX Source L39: 
+L40: cite26†view license†creativecommons.org L41: 
+L42: ### Current browse context:
+L43: 
+L44: q-fin.TR
+L45: 
+L46: cite27†< prev |   cite28†next > L47: 
+L48: cite29†new | cite30†recent | cite31†2024-02 L49: 
+L50: Change to browse by:
+L51: 
+L52: cite32†cs L53: cite33†cs.AI L54: cite34†q-fin L55: ### References & Citations
+L56: 
+L57:   * cite35†NASA ADS†ui.adsabs.harvard.edu L58:   * cite36†Google Scholar†scholar.google.com L59:   * cite37†Semantic Scholar†api.semanticscholar.org L60: 
+L61: [Button: export BibTeX citation] Loading...
+L62: 
+L63: ## BibTeX formatted citation
+L64: 
+L65: [Button: ×]
+L66: 
+L67: loading...
+L68: 
+L69: Data provided by:
+L70: 
+L71: ### Bookmark
+L72: 
+L73: [Input] Bibliographic Tools
+L74: # Bibliographic and Citation Tools
+L75: 
+L76: [Input] Bibliographic Explorer Toggle
+L77: 
+L78: Bibliographic Explorer (cite38†What is the Explorer?†info.arxiv.org )
+L79: 
+L80: [Input] Connected Papers Toggle
+L81: 
+L82: Connected Papers (cite39†What is Connected Papers?†www.connectedpapers.com )
+L83: 
+L84: [Input] Litmaps Toggle
+L85: 
+L86: Litmaps (cite40†What is Litmaps?†www.litmaps.co )
+L87: 
+L88: [Input] scite.ai Toggle
+L89: 
+L90: scite Smart Citations (cite41†What are Smart Citations?†www.scite.ai )
+L91: 
+L92: [Input] Code, Data, Media
+L93: # Code, Data and Media Associated with this Article
+L94: 
+L95: [Input] alphaXiv Toggle
+L96: 
+L97: alphaXiv (cite42†What is alphaXiv?†alphaxiv.org )
+L98: 
+L99: [Input] Links to Code Toggle
+L100: 
+L101: CatalyzeX Code Finder for Papers (cite43†What is CatalyzeX?†www.catalyzex.com )
+L102: 
+L103: [Input] DagsHub Toggle
+L104: 
+L105: DagsHub (cite44†What is DagsHub?†dagshub.com )
+L106: 
+L107: [Input] GotitPub Toggle
+L108: 
+L109: Gotit.pub (cite45†What is GotitPub?†gotit.pub )
+L110: 
+L111: [Input] Huggingface Toggle
+L112: 
+L113: Hugging Face (cite46†What is Huggingface?†huggingface.co )
+L114: 
+L115: [Input] ScienceCast Toggle
+L116: ScienceCast (cite47†What is ScienceCast?†sciencecast.org )
+L117: 
+L118: [Input] Demos
+L119: # Demos
+L120: 
+L121: [Input] Replicate Toggle
+L122: 
+L123: Replicate (cite48†What is Replicate?†replicate.com )
+L124: 
+L125: [Input] Spaces Toggle
+L126: 
+L127: Hugging Face Spaces (cite49†What is Spaces?†huggingface.co )
+L128: 
+L129: [Input] Spaces Toggle
+L130: 
+L131: TXYZ.AI (cite50†What is TXYZ.AI?†txyz.ai )
+L132: 
+L133: [Input] Related Papers
+L134: # Recommenders and Search Tools
+L135: 
+L136: [Input] Link to Influence Flower
+L137: 
+L138: Influence Flower (cite51†What are Influence Flowers?†influencemap.cmlab.dev )
+L139: 
+L140: [Input] Core recommender toggle
+L141: 
+L142: CORE Recommender (cite52†What is CORE?†core.ac.uk )
+L143: 
+L144:   * Author
+L145:   * Venue
+L146:   * Institution
+L147:   * Topic
+L148: 
+L149: [Input] About arXivLabs
+L150: # arXivLabs: experimental projects with community collaborators
+L151: 
+L152: arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
+L153: 
+L154: Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.
+L155: Have an idea for a project that will add value for arXiv's community? cite53†Learn more about arXivLabs†info.arxiv.org .
+L156: 
+L157: cite54†Which authors of this paper are endorsers? | Disable MathJax (cite55†What is MathJax?†info.arxiv.org )
+L158: 
+L159: We gratefully acknowledge support from our major funders, cite56†member institutions†info.arxiv.org , , and all contributors.
+L160: cite57†About†info.arxiv.org · cite58†Help†info.arxiv.org · cite59†Contact†info.arxiv.org · cite60†Subscribe†info.arxiv.org · cite61†Copyright†info.arxiv.org · cite62†Privacy†info.arxiv.org · cite63†Accessibility†info.arxiv.org · cite64†Operational Status (opens in new tab)†status.arxiv.org L161: 
+L162: Major funding support from

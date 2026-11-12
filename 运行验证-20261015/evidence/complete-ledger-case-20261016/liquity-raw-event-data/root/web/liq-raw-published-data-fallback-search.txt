@@ -1,0 +1,600 @@
+Greater Ethereum Transaction Hash: 0x5dcb25b4a5… | Ethereum L2s (https://ethereum.routescan.io/tx/0x5dcb25b4a58cff82485cebf1ea3ff98da6e305f314038cd47d7639b0bda12295/eventlog?chainid=1)
+citeturn504search0 [wordlim: 200] Crawled: 5 days ago; 0x7bcb64B2c9206a5B699eD43363f6F98D4776Cf5A
+Transaction Details
+
+ETH Price: $2,504.36(+0.75%)Gas:0.08 Gwei TPS: 16.9
+
+Testnet
+
+# Transaction Details 0x5dcb25b4a58cff82485cebf1ea3ff98da6e305f314038cd47d7639b0bda12295 - Ethereum L2s Explorer
+
+Transaction Details
+
+OverviewInternal TxnsLogs (10)State
+
+Transaction Receipt Event Logs
+
+Address
+
+0x5721cbbd64fc7Ae3Ef44A0A3F9a790A9264Cf9BF(Liquity V2: Stability Pool WETH)
+
+Name
+    B_Updated (uint256 _B, uint256 _scale)
+
+Topics
+    
+
+  * 0 0xe367a96648d02811ced605ca0b93efb0b7fe59bda272f8179c454ea64133e756
+
+Data
+    
+
+[Button: Dec][Button: Hex]
+
+_B:102847987668176812297114745965312640
+
+_scale:0
+
+Address
+
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2(Wrapped Ether)
+
+Name
+    Deposit (index_topic_1 address dst, uint256 wad)
+
+Topics
+    
+
+  * 0 0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c
+  * 1: dst Dec
+
+0xdccbd7a365aee086aa3b4ede8afe895b20770ae3
+
+Data
+    
+
+[Button: Dec][Button: Hex]
+
+wad:21325000000000000000
+
+Address
+
+0x7bcb64B2c9206a5B699eD43363f6F98D4776Cf5A
+
+Name
+    TroveUpdated (index_topic_1 uint256 _troveId, uint256 _debt, uint256 _coll, uint256 _stake, uint256 _annualInterestRate, uint256 _snapshotOfTotalCollRedist, uint256 _snapshotOfTotalDebtRedist)
+
+Topics
+    
+
+  * 0 0x0fba2673863b12c7b8463f3fa2f9b0cb1d534c573cdec5b5d895ee00d6ce6f5e
+  * 1: _troveId Dec
+
+--------------------------------------------------------------------------------
+Ethereum Transaction Hash: 0x49835e2dd0... | Etherscan (https://etherscan.io/tx/0x49835e2dd05e6ee133bc16d4e615cbef3547136fa23a9983f0e73c823ed1420c)
+citeturn504search1 [wordlim: 200] Published: 3 months ago; Crawled: 3 months ago;     0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+
+###### Topics
+
+    
+
+  * 0 0x8b3e96f2b889fa771c53c981b40daf005f63f637f1869f707052d15a3dd97140
+  * 1: buyer [Button: Dec]
+    * Decode
+    * Hex
+0x9640c8Dd3B96fC35e08DdEbA4D04637ba096c4260x9640c8Dd3B96fC35e08DdEbA4D04637ba096c426
+
+###### Data
+
+    
+
+[Input] Dec [Input] Hex
+
+0x0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000028ca6a8ff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000251ec4a68f99b1f054d
+
+  * sold_id (int128) :1
+  * tokens_sold (uint256) :10949667071
+  * bought_id (int128) :0
+  * tokens_bought (uint256) :10955945772472250336589
+
+* * *
+
+425
+
+###### Address
+
+    0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+
+  * Matches Topic0 (Advanced Filter)
+
+###### Name
+
+    
+
+TroveUpdated (index_topic_1 uint256 _troveId, uint256 _debt, uint256 _coll, uint256 _stake, uint256 _annualInterestRate, uint256 _snapshotOfTotalCollRedist, uint256 _snapshotOfTotalDebtRedist)View Source
+
+###### Topics
+
+    
+
+  * 0 0x0fba2673863b12c7b8463f3fa2f9b0cb1d534c573cdec5b5d895ee00d6ce6f5e
+  * 1: _troveId [Button: Dec]
+    * Decode
+    * Hex
+88854795228680304587854491987284693590105410643237951630129935343409843979321 88854795228680304587854491987284693590105410643237951630129935343409843979321
+
+###### Data
+
+    
+
+[Input] Dec [Input] Hex
+
+0x000000000000000000000000000000000000000000000578461542b32d69e995000000000000000000000000000000000000000000000001c5536f5dd4de74a1000000000000000000000000000000000000000000000001c5536f5dd4de74a1000000000000000000000000000000000000000000000000002aa1efb94e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+  * _debt (uint256) :25830491719087866636693
+  * _coll (uint256) :32665574971042329761
+  * _stake (uint256) :32665574971042329761
+  * _annualInterestRate (uint256) :12000000000000000
+  * _snapshotOfTotalCollRedist (uint256) :0
+  * _snapshotOfTotalDebtRedist (uint256) :0
+
+* * *
+
+426
+
+
+  * _operation (uint8) :6
+  * _annualInterestRate (uint256) :12000000000000000
+  * _debtIncreaseFromRedist (uint256) :0
+  * _debtIncreaseFromUpfrontFee (uint256) :0
+  * _debtChangeFromOperation (int256) :-1965546165894385219563
+  * _collIncreaseFromRedist (uint256) :0
+  * _collChangeFromOperation (int256) :-1173418005862869117
+
+* * *
+
+427
+
+###### Address
+
+    0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+
+  * Matches Topic0 (Advanced Filter)
+
+###### Name
+
+    
+
+RedemptionFeePaidToTrove (index_topic_1 uint256 _troveId, uint256 _ETHFee)View Source
+
+###### Topics
+
+    
+
+  * 0 0xc7e8309b9b14e7a8561ed352b9fd8733de32417fb7b6a69f5671f79e7bb29ddd
+  * 1: _troveId [Button: Dec]
+    * Decode
+    * Hex
+88854795228680304587854491987284693590105410643237951630129935343409843979321 88854795228680304587854491987284693590105410643237951630129935343409843979321
+
+###### Data
+
+    
+
+[Input] Dec [Input] Hex
+
+0x0000000000000000000000000000000000000000000000000016bbb8a9b3f71d
+
+  * _ETHFee (uint256) :6398851283154717
+--------------------------------------------------------------------------------
+Ethereum Transaction Hash: 0xa6fe01395c... | Etherscan (https://etherscan.io/tx/0xa6fe01395cf3e0645f27f0d8083e7dd50d7b6e0517602d3d027da4e86b2b13d5)
+citeturn504search2 [wordlim: 200] Published: 5 months ago; Crawled: 5 months ago;     0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+###### Transaction Receipt Event Logs
+
+458
+
+###### Address
+
+    0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 (Wrapped Ether)
+
+  * Matches Topic0 (Advanced Filter)
+
+###### Name
+
+    
+
+Deposit (index_topic_1 address dst, uint256 wad)View Source
+
+###### Topics
+
+    
+
+  * 0 0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c
+  * 1: dst [Button: Dec]
+    * Decode
+    * Hex
+0xdCcBD7A365aeE086aa3b4EDe8afe895B20770AE30xdCcBD7A365aeE086aa3b4EDe8afe895B20770AE3
+
+###### Data
+
+    
+
+[Input] Dec [Input] Hex
+
+0x0000000000000000000000000000000000000000000000000bbba982d1b1838c
+
+  * wad (uint256) :845455734391014284
+
+* * *
+
+459
+
+###### Address
+
+    0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+
+  * Matches Topic0 (Advanced Filter)
+
+###### Name
+
+    
+
+BatchedTroveUpdated (index_topic_1 uint256 _troveId, address _interestBatchManager, uint256 _batchDebtShares, uint256 _coll, uint256 _stake, uint256 _snapshotOfTotalCollRedist, uint256 _snapshotOfTotalDebtRedist)View Source
+
+###### Topics
+
+    
+
+  * 0 0x6464838e073667756f10746b26734b60870fdcad31d7861c6e5603430bccac61
+  * 1: _troveId [Button: Dec]
+    * Decode
+    * Hex
+32157120944495908030902205353971001907626687672422354756909740877308907682236 32157120944495908030902205353971001907626687672422354756909740877308907682236
+
+###### Data
+
+    
+
+* * *
+
+460
+
+###### Address
+
+    0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+
+  * Matches Topic0 (Advanced Filter)
+
+###### Name
+
+    
+
+TroveOperation (index_topic_1 uint256 _troveId, uint8 _operation, uint256 _annualInterestRate, uint256 _debtIncreaseFromRedist, uint256 _debtIncreaseFromUpfrontFee, int256 _debtChangeFromOperation, uint256 _collIncreaseFromRedist, int256 _collChangeFromOperation)View Source
+
+###### Topics
+
+    
+
+  * 0 0x962110f281c1213763cd97a546b337b3cbfd25a31ea9723e9d8b7376ba45da1a
+  * 1: _troveId [Button: Dec]
+    * Decode
+    * Hex
+32157120944495908030902205353971001907626687672422354756909740877308907682236 32157120944495908030902205353971001907626687672422354756909740877308907682236
+
+###### Data
+
+    
+
+[Input] Dec [Input] Hex
+
+0x0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000002aa1efb9e696810000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000066829f1c0476e3a00000000000000000000000000000000000000000000002e141ea081ca08000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bbba982d1b1838c
+
+  * _operation (uint8) :2
+  * _annualInterestRate (uint256) :12000000010000001
+  * _debtIncreaseFromRedist (uint256) :0
+  * _debtIncreaseFromUpfrontFee (uint256) :461665080095239738
+  * _debtChangeFromOperation (int256) :850000000000000000000
+  * _collIncreaseFromRedist (uint256) :0
+  * _collChangeFromOperation (int256) :845455734391014284
+
+* * *
+
+461
+
+###### Address
+
+    0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+
+  * Matches Topic0 (Advanced Filter)
+
+###### Name
+
+    
+
+BatchUpdated (index_topic_1 address _interestBatchManager, uint8 _operation, uint256 _debt, uint256 _coll, uint256 _annualInterestRate, uint256 _annualManagementFee, uint256 _totalDebtShares, uint256 _debtIncreaseFromUpfrontFee)View Source
+
+###### Topics
+
+    
+
+  * 0 0xecf6daab6f1facdfdd8dfe32b525744d8a7a940824dd52e2b53c24028ee5faa0
+  * 1: _interestBatchManager [Button: Dec]
+    * Decode
+    * Hex
+0x00000000001991cEE928c561E37725816cBF73ba0x00000000001991cEE928c561E37725816cBF73ba
+
+###### Data
+
+    
+
+[Input] Dec [Input] Hex
+
+0x000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000e5cceb1f3d87a77061aa000000000000000000000000000000000000000000000030a4eee19ee40b4cea000000000000000000000000000000000000000000000000002aa1efb9e69681000000000000000000000000000000000000000000000000000aa87bee53800000000000000000000000000000000000000000000000dbcc83693d83b0982b1f0000000000000000000000000000000000000000000000000000000000000000
+
+  * _operation (uint8) :6
+  * _debt (uint256) :1085202002696161532600746
+  * _coll (uint256) :897328400077282823402
+  * _annualInterestRate (uint256) :12000000010000001
+  * _annualManagementFee (uint256) :3000000000000000
+  * _totalDebtShares (uint256) :1037970864706816386280223
+  * _debtIncreaseFromUpfrontFee (uint256) :0
+
+* * *
+
+462
+
+--------------------------------------------------------------------------------
+Ethereum Transaction Hash: 0x5a874734a8... | Etherscan (https://etherscan.io/tx/0x5a874734a80bc9737aeaa93b48928b910deb4d101e97675ecf0cef4feb8f2457)
+citeturn504search3 [wordlim: 200] Published: 5 months ago; Crawled: 5 months ago;     0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+###### Data
+
+    
+
+0x
+
+* * *
+
+304
+
+###### Address
+
+    0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+
+  * Matches Topic0 (Advanced Filter)
+
+###### Name
+
+    
+
+BatchedTroveUpdated (index_topic_1 uint256 _troveId, address _interestBatchManager, uint256 _batchDebtShares, uint256 _coll, uint256 _stake, uint256 _snapshotOfTotalCollRedist, uint256 _snapshotOfTotalDebtRedist)View Source
+
+###### Topics
+
+    
+
+  * 0 0x6464838e073667756f10746b26734b60870fdcad31d7861c6e5603430bccac61
+  * 1: _troveId [Button: Dec]
+    * Decode
+    * Hex
+70933058916541110247590829234764421139483918647972394707612069119461711228366 70933058916541110247590829234764421139483918647972394707612069119461711228366
+
+###### Data
+
+    
+
+[Input] Dec [Input] Hex
+
+0x00000000000000000000000000000000001991cee928c561e37725816cbf73ba0000000000000000000000000000000000000000000000e70594c15eb1fc52610000000000000000000000000000000000000000000000002409a44b8251960c0000000000000000000000000000000000000000000000002409a44b8251960c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+  * _interestBatchManager (address) :0x00000000001991cEE928c561E37725816cBF73ba
+  * _batchDebtShares (uint256) :4261600039906106430049
+  * _coll (uint256) :2596787304371688972
+  * _stake (uint256) :2596787304371688972
+  * _snapshotOfTotalCollRedist (uint256) :0
+  * _snapshotOfTotalDebtRedist (uint256) :0
+
+* * *
+
+305
+
+###### Address
+
+    0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+
+  * Matches Topic0 (Advanced Filter)
+
+###### Name
+
+    
+
+BatchUpdated (index_topic_1 address _interestBatchManager, uint8 _operation, uint256 _debt, uint256 _coll, uint256 _annualInterestRate, uint256 _annualManagementFee, uint256 _totalDebtShares, uint256 _debtIncreaseFromUpfrontFee)View Source
+
+###### Topics
+
+    
+
+  * 0 0xecf6daab6f1facdfdd8dfe32b525744d8a7a940824dd52e2b53c24028ee5faa0
+  * 1: _interestBatchManager [Button: Dec]
+    * Decode
+    * Hex
+0x00000000001991cEE928c561E37725816cBF73ba0x00000000001991cEE928c561E37725816cBF73ba
+
+###### Data
+
+    
+
+[Input] Dec [Input] Hex
+
+0x000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000f74e37735074162b7da4000000000000000000000000000000000000000000000034cdd57c5cdd5e149e000000000000000000000000000000000000000000000000001ff973cafa8001000000000000000000000000000000000000000000000000000aa87bee53800000000000000000000000000000000000000000000000ec7f03577c5c7658c2f20000000000000000000000000000000000000000000000000000000000000000
+
+  * _operation (uint8) :4
+  * _debt (uint256) :1167867362932305638948260
+  * _coll (uint256) :974062589519004046494
+  * _annualInterestRate (uint256) :9000000000000001
+  * _annualManagementFee (uint256) :3000000000000000
+  * _totalDebtShares (uint256) :1116821467252439035462386
+  * _debtIncreaseFromUpfrontFee (uint256) :0
+
+* * *
+
+A transaction is a cryptographically signed instruction that changes the blockchain state. Block explorers track the details of all transactions in the network. Learn more about transactions in our Knowledge Base.
+--------------------------------------------------------------------------------
+Ethereum Transaction Hash: 0x0df5bc8a46… | Routescan (https://routescan.io/tx/0x0df5bc8a461b6bbcdbc6d1e4cee68242eb76cf7c201df1ae332360e43cd7a4d6/eventlog?chainid=1)
+citeturn504search4 [wordlim: 200] Crawled: last week; 0x7bcb64B2c9206a5B699eD43363f6F98D4776Cf5A
+Transaction Details
+
+ETH Price: $2,669.07(-1.19%)Gas:0.468 Gwei TPS: 52.5
+
+# Transaction Details 0x0df5bc8a461b6bbcdbc6d1e4cee68242eb76cf7c201df1ae332360e43cd7a4d6 - Routescan Explorer
+
+Transaction Details
+
+OverviewInternal TxnsLogs (12)State
+
+Transaction Receipt Event Logs
+
+Address
+
+0x5721cbbd64fc7Ae3Ef44A0A3F9a790A9264Cf9BF(Liquity V2: Stability Pool WETH)
+
+Name
+    B_Updated (uint256 _B, uint256 _scale)
+
+Topics
+    
+
+  * 0 0xe367a96648d02811ced605ca0b93efb0b7fe59bda272f8179c454ea64133e756
+
+Data
+    
+
+[Button: Dec][Button: Hex]
+
+_B:103276754818833239781950754635539079
+
+_scale:0
+
+Address
+
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2(Wrapped Ether)
+
+Name
+    Deposit (index_topic_1 address dst, uint256 wad)
+
+Topics
+    
+
+  * 0 0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c
+  * 1: dst Dec
+
+0xdccbd7a365aee086aa3b4ede8afe895b20770ae3
+
+Data
+    
+
+[Button: Dec][Button: Hex]
+
+wad:2977400000000000000
+
+Address
+
+0x7bcb64B2c9206a5B699eD43363f6F98D4776Cf5A
+
+Name
+    BatchedTroveUpdated (index_topic_1 uint256 _troveId, address _interestBatchManager, uint256 _batchDebtShares, uint256 _coll, uint256 _stake, uint256 _snapshotOfTotalCollRedist, uint256 _snapshotOfTotalDebtRedist)
+
+Topics
+    
+
+  * 0 0x6464838e073667756f10746b26734b60870fdcad31d7861c6e5603430bccac61
+  * 1: _troveId Dec
+
+--------------------------------------------------------------------------------
+GitHub - ren2140eth/liquity-redemption-watch: Deterministic, agent-free watcher for Liquity v2 redemptions & liquidations — alerts on any watched wallet's troves via a plain cron job. MIT. · GitHub (https://github.com/ren2140eth/liquity-redemption-watch)
+citeturn504search5 [wordlim: 200] Crawled: last month; WETH TroveManager / TroveNFT  | `0x7bcb64B2c9206a5B699eD43363f6F98D4776Cf5A` / `0x1A0FC0b843aFD9140267D25d4E575Cb37a838013`
+## Contract addresses (Liquity v2 mainnet)
+
+Source: docs.liquity.org contract addresses (current deployment). Cross-verified on-chain: every address has code, and `CollateralRegistry.getTroveManager(i)` / `getToken(i)` + `TroveManager.troveNFT()` reproduce these addresses exactly. `setup` re-asserts the registry wiring every time it runs.
+
+contract  | address
+--- | ---
+CollateralRegistry  | `0xf949982B91C8c61e952B3bA942cbbfaef5386684`
+BOLD token  | `0x6440f144b7e50D6a8439336510312d2F54beB01D`
+WETH TroveManager / TroveNFT  | `0x7bcb64B2c9206a5B699eD43363f6F98D4776Cf5A` / `0x1A0FC0b843aFD9140267D25d4E575Cb37a838013`
+wstETH TroveManager / TroveNFT  | `0xA2895d6A3bf110561Dfe4b71cA539d84e1928B22` / `0x857aECeBF75f1012DC18E15020C97096aeA31b04`
+rETH TroveManager / TroveNFT  | `0xb2B2ABEb5C357a234363FF5D180912D319e3e19e` / `0x7ae430E25b67f19B431e1D1Dc048a5BCF24C0873`
+
+Event signatures were taken from `liquity/bold` `ITroveEvents.sol` and verified against live logs on the deployed contracts (`TroveOperation` topic0 `0x962110f2...`). If you point the watcher at a different Liquity v2 deployment (e.g. a fork or a testnet), replace the addresses in `watcher.py` accordingly.
+
+## Files
+
+file  | purpose
+--- | ---
+`watcher.py`  | the whole watcher (setup / run / status)
+`config.json`  | generated by `setup`: the watched wallet(s) — gitignored
+`state.json`  | generated by `setup`/`run`: last scanned block + trove ids — gitignored
+`config.example.json`  | shows the shape of `config.json`
+
+The two generated files identify what you're watching, so they are written `0600` (owner-only) on every save, not just at `setup` — the atomic rename would otherwise re-apply your umask each tick and quietly undo a manual `chmod`.
+
+--------------------------------------------------------------------------------
+Ethereum Transaction Hash: 0x5d300e1845... | Etherscan (https://etherscan.io/tx/0x5d300e1845ed025e3fd49e0cffe626ad144a02e41384688c3385925d6acb613a)
+citeturn504search6 [wordlim: 200] Published: 5 months ago; Crawled: 5 months ago;     0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+###### Address
+
+    0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+
+  * Matches Topic0 (Advanced Filter)
+
+###### Name
+
+    
+
+BatchUpdated (index_topic_1 address _interestBatchManager, uint8 _operation, uint256 _debt, uint256 _coll, uint256 _annualInterestRate, uint256 _annualManagementFee, uint256 _totalDebtShares, uint256 _debtIncreaseFromUpfrontFee)View Source
+
+###### Topics
+
+    
+
+  * 0 0xecf6daab6f1facdfdd8dfe32b525744d8a7a940824dd52e2b53c24028ee5faa0
+  * 1: _interestBatchManager [Button: Dec]
+    * Decode
+    * Hex
+0x00000000001991cEE928c561E37725816cBF73ba0x00000000001991cEE928c561E37725816cBF73ba
+
+###### Data
+
+    
+
+[Input] Dec [Input] Hex
+
+0x000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000f5b93bb0e45bf9e52c9e0000000000000000000000000000000000000000000000348e0a6aaa0c447e92000000000000000000000000000000000000000000000000001ff973cafa8001000000000000000000000000000000000000000000000000000aa87bee53800000000000000000000000000000000000000000000000eafc62adf510351341530000000000000000000000000000000000000000000000000000000000000000
+
+  * _operation (uint8) :6
+  * _debt (uint256) :1160396737145427168930974
+  * _coll (uint256) :969465802214632357522
+  * _annualInterestRate (uint256) :9000000000000001
+  * _annualManagementFee (uint256) :3000000000000000
+  * _totalDebtShares (uint256) :1109689447106908433629523
+  * _debtIncreaseFromUpfrontFee (uint256) :0
+
+* * *
+
+293
+
+--------------------------------------------------------------------------------
+liquity-redemption-watch/README.md at main · ren2140eth/liquity-redemption-watch · GitHub (https://github.com/ren2140eth/liquity-redemption-watch/blob/main/README.md)
+citeturn504search7 [wordlim: 200] Crawled: last month; WETH TroveManager / TroveNFT  | `0x7bcb64B2c9206a5B699eD43363f6F98D4776Cf5A` / `0x1A0FC0b843aFD9140267D25d4E575Cb37a838013`
+--------------------------------------------------------------------------------
+Ethereum Transaction Hash: 0x6fdcfb6ea3... | Etherscan (https://etherscan.io/tx/0x6fdcfb6ea3d8cfc657f4ce79291d27a3e0991478a1a58967c210bdfb31939365)
+citeturn504search8 [wordlim: 200] Published: 5 months ago; Crawled: 5 months ago;     0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+--------------------------------------------------------------------------------
+Ethereum Transaction Hash: 0x4721e59f61... | Etherscan (https://etherscan.io/tx/0x4721e59f6136c26472f51f976c0fb98b97cecc7dab50ad94a7d94d61da2aa1d5)
+citeturn504search9 [wordlim: 200] Published: 5 months ago; Crawled: 5 months ago;     0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+--------------------------------------------------------------------------------
+Ethereum Transaction Hash: 0xd8c7382271... | Etherscan (https://etherscan.io/tx/0xd8c73822715fd54c1d6b8d128f809412da62157140252ea70366ce4bc6d6e740)
+citeturn504search10 [wordlim: 200] Published: 1.2 years ago; Crawled: 4 months ago;     0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+--------------------------------------------------------------------------------
+Ethereum Transaction Hash: 0x091e5c2469... | Etherscan (https://etherscan.io/tx/0x091e5c2469c5b8e9e84b1ce6af673ff61dcecbf1d59281315f5cb87e6559f71e)
+citeturn504search11 [wordlim: 200] Published: 5 months ago; Crawled: 5 months ago;     0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a (Liquity V2: Trove Manager WETH)
+

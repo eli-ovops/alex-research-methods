@@ -1,0 +1,285 @@
+Bitstamp Historical Data — Free OHLCV & Trade CSVs | CryptoDataDownload
+Loading...
+USA
+[REDACTED_EMAIL]
+⌕
+Historical Data
+All Historical Data
+US & UK Exchanges
+Bitstamp
+Gemini
+Coinbase
+Kraken
+Bitfinex
+CEX.io
+Poloniex
+Bittrex
+European Exchanges
+DeriBit
+HitBTC
+Exmo
+Bitbay
+Yobit
+Liqui
+Abucoins
+Asia Pacific Exchanges
+Binance
+FTX
+Kucoin
+Bithumb
+OKCoin
+Okex
+Zaif
+Other International
+Bitso
+BTCXIndia
+Unocoin
+Bit2C
+Dashboards
+Volatility & Options
+Volatility Tracker
+Plus+
+Options Strike Heatmap
+Plus+
+Positioning & Leverage
+Funding & Leverage
+Plus+
+CFTC COT Tracker
+Plus+
+Regime & Risk
+Market Regime
+Plus+
+Risk Profile Universe
+Plus+
+Market Health & Breadth
+Market Breadth
+Plus+
+Volume Tracker
+Plus+
+Market Pulse Heatmap
+Free
+Correlation Heatmap
+Free
+Screeners & On-Chain
+Crypto Screener
+Plus+
+On-Chain Pulse
+Plus+
+Build & Test
+No-Code Strategy Builder
+Plus+
+Quant Desk
+Vol Cone & IV-RV
+Quant
+Term Structure & Skew
+Quant
+IV Surface 3D
+Quant
+Greeks & Flow
+Quant
+GEX / Dealer Pos.
+Quant
+Regime & Anomaly
+Quant
+Signals Board
+Quant
+Soon
+Plus
++
+See plans & what's included →
+Plus Analytics Toolkit
+Enhanced Data
+Zero-Gap OHLCV Data
+Backtest Vault
+Plus+ Research & Code
+API
+Articles
+All Articles
+Python Code Examples
+Plus+ Research
+Contact
+Pricing
+Create Account
+Bitstamp Exchange Data
+Educational Resources
+Articles we have published specific to Bitstamp API or analysis:
+**Retrieve Historical OHLCV Data from Bitstamp with Python for any Symbol
+How to create aggregated OHLCV files with Bitstamp minute data
+Use Python to Retrieve EUR/USD Conversion Rate from Bitstamp
+Save all symbol details from the Bitstamp API to csv
+Historical OHLC Price Data includes Volume
+We track and produce files for over 300+ assets i Daily, Hourly, and Minute(!) time granularities for the spot/physical market. Each file is easily downloadable in CSV format and can be consumed automatically by Python scripts or other automated processes. In each file, you will find the below/following fields.
+                    This OHLC (Open/High/Low/Close) pricing data is updated each day and is taken directly from the exchange(s). Please reach out if you find discrepancies or errors in the data that need to be addressed
+Unix Timestamp - This is the unix timestamp or also known as "Epoch Time". Use this to convert to your local timezone
+Date - This timestamp is converted to NY EST Standard Time
+Symbol - The symbol for which the timeseries data refers
+Open - This is the opening price of the time period
+High - This is the highest price of the time period
+Low - This is the lowest price of the time period
+Close - This is the closing price of the time period
+Volume (Crypto) - This is the volume in the transacted Ccy. Ie. For BTC/USDT, this is in BTC amount
+Volume Base Ccy - This is the volume in the base/converted ccy. Ie. For BTC/USDT, this is in USDT amount
+Data Map for Available Bitstamp Daily and Hourly Symbols
+Symbol
+Timeframe
+First Date Available
+Last Date Available
+File Link
+Symbol
+Timeframe
+First Date Available
+Last Date Available
+File Link
+Bitstamp Minute Data Broken Down by Year
+Please register FREE acct to access Minute data
+Aggregated OHLCV Files
+Use this section to download every OHLCV file (everything) at once in a ZIP file.
+                        The file will include every CSV file of that respective timeframe. We will add to what is available over time and
+                  by request. Please reach out to us via our
+contact page
+Please register FREE acct to access this section
+Historical Trade Prints
+Every transaction, regardless of size, takes place between a buyer and a seller and is recorded with the timestamp at which it occurred.
+                    These are actual historical trades; and these "trade prints" are made available below. Due to the sheer amount and size of the files, we compress the files across quarterly timeframes.
+                    Please reach out to us if you are looking for access on a more frequently updated basis.
+Unix Timestamp - This is the unix timestamp or also known as "Epoch Time". Use this to convert to your local timezone
+Date - This timestamp is converted to NY EST Standard Time
+Symbol - The symbol for which the transaction took place
+Price - The price at which the transaction occurred
+Amount - The amount in transacted ccy which occurred. Ie. For BTC/USD, this represents BTC transacted
+Dollar_amount - This is the amount converted to the base ccy. Ie. For BTC/USD, this represents amount * price in USD terms
+Type - Will be either a 'Buy' or a 'Sell'. A 'buy' represents market participant placing a 'buy order' at best available market price (Lowest Ask Price).
+                    A 'sell' represents the opposite; a market participant executing a market order to sell at the best available price (Highest Bid Price)
+Latest Posts
+Aug. 12, 2025, 3:28 p.m.
+by CryptoDataDownload
+Step by Step Guide to Load Cryptocurrency data into MetaTrader
+Jan. 20, 2025, 2:21 p.m.
+by CryptoDataDownload
+New Cryptocurrency Futures Added to CFTC Commitment of Traders Data
+Sept. 20, 2024, 4:10 p.m.
+by CryptoDataDownload
+Blockchain Mining Hashrate and Cryptocurrency Price Arbitrage
+Sept. 17, 2024, 2:31 p.m.
+by CryptoDataDownload
+StableCoin Depegging Risk Prediction Studied with Machine Learning
+Sept. 13, 2024, 6:13 p.m.
+by CryptoDataDownload
+Relationship Between Cryptocurrency Markets and Oil Futures
+Sept. 9, 2024, 1:01 a.m.
+by CryptoDataDownload
+Predicting Zombie Cryptocurrency Assets Using Machine Learning Models
+Aug. 28, 2024, 1:35 a.m.
+by CryptoDataDownload
+Academics Find New Determinants of Cryptocurrency Returns
+May 17, 2024, 9:20 p.m.
+by CryptoDataDownload
+Applying Logistic Regression to Make Predictions About the Next Day in Python
+April 26, 2024, 2:22 a.m.
+by CryptoDataDownload
+ETH Smart Contract Creation Tracking
+April 25, 2024, 1:24 a.m.
+by CryptoDataDownload
+Python Example to Calculate Bitcoin Supply for any Block Height
+April 10, 2024, 10:41 a.m.
+by CryptoDataDownload
+Tracking Ethereum Block Transaction Complexity and Gas Usage With On-Chain Data
+April 7, 2024, 1:28 a.m.
+by CryptoDataDownload
+How to Calculate the Bitcoin Network Hashrate for Any Date in Python
+April 5, 2024, 12:22 a.m.
+by CryptoDataDownload
+Working Example for Accessing Bitcoin or Ethereum Public On-Chain Blockchain Data in Python
+April 3, 2024, 12:43 a.m.
+by CryptoDataDownload
+How to Authenticate with the CryptoDataDownload API Token
+March 12, 2024, 4:21 p.m.
+by CryptoDataDownload
+Differences between On-Chain Data and Exchange Data and Related Use Cases
+Jan. 26, 2024, 4:13 p.m.
+by CryptoDataDownload
+Predictive Power of Cryptocurrency Exchange Inflows and Our Comments
+Jan. 23, 2024, 3:47 p.m.
+by CryptoDataDownload
+Smash Day Candlestick Trading Setup Signals in Python
+Jan. 20, 2024, 12:06 a.m.
+by CryptoDataDownload
+Top 3 Reasons Why Backtesting Trading Strategies is Crucial
+Jan. 18, 2024, 2:31 a.m.
+by CryptoDataDownload
+Foundational Properties of Market Volatility for Strategy Development
+Jan. 14, 2024, 2:26 a.m.
+by CryptoDataDownload
+Combining NR4 Inside Days & Historical Volatility to Produce Trading Signals
+Go beyond the free CSVs
+More from
+CryptoDataDownload.
+The free downloads above are just the start. When you're ready for
+analysis-ready
+data, daily risk analytics, or programmatic access,
+        these products pick up where the CSVs leave off.
+Plus+
+Plus+
+Analytics
+Daily risk metrics, options-strike heatmaps, CFTC COT positioning, and a no-code strategy builder.
+Explore →
+Plus+
+Enhanced
+Data
+Gap-filled, analysis-ready OHLCV and premium datasets.
+Explore →
+Plus+
+Backtest
+Vault
+Ready-to-run historical files built for strategy backtesting.
+Explore →
+Free tier
+Developer
+API
+Programmatic REST access to the full historical catalog.
+Explore →
+Since late 2017
+CryptoData
+Download
+The crypto data platform built before most exchanges existed — free historical
+          OHLCV, premium analytics, an ML feature store, and a 112-endpoint programmatic
+          API.
+One canonical warehouse, three modes of access.
+Trusted by traders, researchers, and institutions for reliable cryptocurrency
+          market intelligence.
+Free data
+Historical CSV
+Binance
+Bitstamp
+Gemini
+Bitfinex
+Correlation heatmap
+Market-pulse heatmap
+Plus+ tools
+Risk profile universe
+No-code backtester
+CFTC COT tracker
+Zero-Gap OHLCV
+Backtest Vault
+Plus+ code library
+API
+API catalog
+Documentation
+Python examples
+R examples
+Research blog
+Company
+About
+Contact
+[REDACTED_EMAIL]
+Legal
+Disclaimer
+Privacy
+Terms
+CryptoDataDownload
+©
+2026
+· All rights reserved ·
+Terms
+·
+Privacy

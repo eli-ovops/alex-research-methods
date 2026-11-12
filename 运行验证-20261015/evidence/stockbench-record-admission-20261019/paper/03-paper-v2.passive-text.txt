@@ -1,0 +1,2185 @@
+StockBench: Can LLM Agents Trade Stocks Profitably In Real-world Markets?
+// Restore the saved color scheme preference, or
+  // enact the browser preference if "automatic", 
+  // without expecting DOM load to have completed.
+  //
+  // Also restore any saved readingmode and ToC display preferences.
+  function initializeReadingPreferences() {
+    let saved_theme = localStorage.getItem("ar5iv_theme") || "automatic";
+    if (saved_theme === "automatic") {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        saved_theme = "dark";
+      }
+    }
+    if (saved_theme == "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+
+    const tocDisplay = localStorage.getItem('arxiv_html_paper_toc_display');
+    if (tocDisplay) {
+      document.documentElement.setAttribute("data-toc-display", tocDisplay);
+    }
+    const readingMode = localStorage.getItem('arxiv_html_paper_reading_mode');
+    if (readingMode) {
+      document.documentElement.setAttribute("data-reading-mode", readingMode);
+    }
+    // Pre-apply spinout-banner dismissal here, before the banner paints, so it
+    // never flashes in only to be hidden later by the deferred arxiv-header.js.
+    // Key matches arxiv-header.js: "arxiv-banner-dismissed:" + data-banner-name.
+    if (localStorage.getItem('arxiv-banner-dismissed:spinout-nonprofit')) {
+      document.documentElement.setAttribute("data-banner-dismissed", "");
+    }
+  }
+  // Run as soon as JS starts, to minimize repainting
+  initializeReadingPreferences();
+/* Banner pre-dismissal (set above before paint -> no flash-then-hide) and
+     reading-mode chrome hiding. */
+  html[data-banner-dismissed] .ds-announcement { display: none; }
+  html[data-reading-mode="enabled"] .ds-announcement,
+  html[data-reading-mode="enabled"] .ds-site-footer { display: none; }
+  /* Keep the announcement text dark on the Open-Blue band in both colour themes
+     (otherwise it inherits the paper's warm-wash text in dark mode and washes out). */
+  .ds-announcement-text { color: var(--arxiv-ink, #1c1a17); }
+Report GitHub Issue
+×
+Title:
+Content selection saved. Describe the issue below:
+Description:
+Submit without GitHub
+Submit in GitHub
+arXiv is now an independent nonprofit!
+Learn more
+×
+Back to arXiv
+Why HTML?
+Report Issue
+Back to Abstract
+Download PDF
+Abstract
+1
+Introduction
+2
+StockBench
+2.1
+Back-Trading Environment
+Investment Targets.
+Historical Market Data.
+News Corpora.
+2.2
+Stock-trading Agent Workflow
+Step 1: Portfolio Overview.
+Step 2: In-Depth Stock Analysis.
+Step 3: Decision Generation.
+Step 4: Execution and Validation.
+2.3
+Features of
+StockBench
+Realistic Market Interaction.
+Continuous Decision Making.
+Contamination-Free Data.
+3
+Main Experiments
+3.1
+Experiment Setup
+Trading Environment.
+Models to Evaluate.
+Passive Baseline.
+Evaluation Metrics.
+Final Return.
+Maximum Drawdown.
+Sortino Ratio.
+3.2
+Experiment Results
+4
+Analysis
+4.1
+Influence of Investment Target Size
+4.2
+Influence of Error in the Trading Workflow
+4.3
+Ablation Study on Data Sources
+4.4
+Impact of Evaluation Window
+5
+Related Work
+5.1
+LLM Agents and General Benchmarks
+5.2
+Financial Agents and Benchmarks
+6
+Conclusion
+7
+Limitations
+8
+Ethical Statement
+References
+A
+Prevent Data Leakage
+B
+Model Return Variance
+C
+The Use of Large Language Models
+License: arXiv.org perpetual non-exclusive license
+arXiv:2510.02209v2 [cs.LG] 02 Mar 2026
+StockBench
+: Can LLM Agents Trade Stocks Profitably In
+Real-world Markets?
+Yanxu Chen
+†
+†
+thanks:
+Equal contribution.
+†
+†
+thanks:
+Work was completed during an internship at Tsinghua University.
+Zijun Yao
+1
+1
+footnotemark:
+1
+Affiliation:
+Tsinghua University
+Yantao Liu
+1
+1
+footnotemark:
+1
+Affiliation:
+Tsinghua University
+Amy Xin
+Affiliation:
+Tsinghua University
+Jin Ye
+Affiliation:
+Beijing University of Posts and Telecommunications
+[REDACTED_EMAIL], [REDACTED_EMAIL]
+Project:
+https://stockbench.github.io/
+GitHub:
+https://github.com/ChenYXxxx/stockbench
+Jianing Yu
+Affiliation:
+Beijing University of Posts and Telecommunications
+[REDACTED_EMAIL], [REDACTED_EMAIL]
+Project:
+https://stockbench.github.io/
+GitHub:
+https://github.com/ChenYXxxx/stockbench
+Lei Hou
+Affiliation:
+Tsinghua University
+Juanzi Li
+Affiliation:
+Tsinghua University
+Abstract
+Large language models (LLMs) demonstrate strong potential as autonomous agents, with promising capabilities in reasoning, tool use, and sequential decision-making.
+While prior benchmarks have evaluated LLM agents in various domains, the financial domain remains underexplored, despite its significant economic value and complex reasoning requirements.
+Most existing financial benchmarks focus on static question-answering, failing to capture the dynamics of real-market trading.
+To address this gap, we introduce
+StockBench
+, a contamination-free benchmark designed to evaluate LLM agents in realistic, multi-month stock trading environments.
+Agents receive daily market signals—including prices, fundamentals, and news—and make sequential buy, sell, or hold decisions.
+Performance is measured using financial metrics such as cumulative return, maximum drawdown, and the Sortino ratio, capturing both profitability and risk management.
+We evaluate a wide range of state-of-the-art proprietary and open-source LLMs.
+Surprisingly, most models struggle to outperform the simple buy-and-hold baseline, while some models demonstrate the potential to achieve higher returns and stronger risk management.
+These findings highlight both the challenges and opportunities of LLM-based trading agents, showing that strong performance on static financial question-answering do not necessarily translate into effective trading behavior.
+We release
+StockBench
+as an open-source benchmark to enable future research on LLM-driven financial agents.
+1
+Introduction
+Large language models (LLMs) have enabled extensive exploration of autonomous agents, demonstrating strong capabilities in reasoning, tool use, and long-horizon decision making
+(
+OpenAI, 2024a
+;
+Anthropic, 2025a
+;
+DeepMind, 2025
+;
+Liu et al., 2024
+;
+Guo et al., 2025a
+;
+Meta-AI, 2025
+;
+Yang et al., 2024a
+;
+Bai et al., 2025
+;
+OpenAI, 2025b
+)
+.
+These agentic capabilities have been verified by benchmarks in various domains, such as software engineering
+(
+Jimenez et al., 2024
+;
+Yang et al., 2024b
+)
+, scientific discovery
+(
+Bragg et al., 2025
+)
+, and marketing
+(
+Chen et al., 2025
+;
+Barres and others, 2025
+)
+.
+Evaluations using state-of-the-art LLMs such as GPT-5
+(
+OpenAI, 2025a
+)
+and Claude-4
+(
+Anthropic, 2025b
+)
+, highlight the protential of LLM agents to support workflow automation and productivity gains.
+As LLMs continue to improve, their growing agentic capabilities increasingly push applications toward real-world deployment with tangible economic value.
+Among various agent application domains, the financial domain stands out with its direct link to economic value and the high stakes of decision making
+(
+Wu et al., 2023
+;
+Lee et al., 2024
+;
+Nie et al., 2024
+)
+.
+To rigorously evaluate the profitability and risk-management capabilities of LLM agents in financial settings, an ideal benchmark should satisfy three key principles:
+(1) Realistic Market Interaction.
+Agents should operate in a dynamic market environment, reacting to real-time price movements and news events.
+(2) Continuous Decision Making.
+Agents should make sequential trading decisions over extended horizons, reflecting the iterative nature of real investment strategies.
+(3) Contamination-Free Data.
+To ensure fair and reliable evaluation, agents must not have prior exposure to the test data during training, requiring careful data curation and strict temporal separation.
+Benchmark
+Market
+Multi Month
+Continuous
+Contamination
+Direct Economic
+Simulation
+Horizon
+Decision
+Free
+Value
+FinQA
+(
+Chen et al., 2021
+)
+✗
+✗
+✗
+✗
+✗
+ConvFinQA
+(
+Chen et al., 2022
+)
+✗
+✗
+✗
+✗
+✗
+FLUE
+(
+Shah et al., 2022
+)
+✗
+✗
+✗
+✗
+✗
+FinEval
+(
+Guo et al., 2025b
+)
+✗
+✗
+✗
+✗
+✗
+CPA-QKA
+(
+Kuang et al., 2025
+)
+✗
+✗
+✗
+✗
+✗
+BizFinBench
+(
+Lu et al., 2025
+)
+✗
+✗
+✗
+✗
+✗
+Finance Agent Benchmark
+(
+Bigeard et al., 2025
+)
+✓
+✗
+✓
+✗
+✗
+INVESTORBENCH
+(
+Li et al., 2024
+)
+✓
+✓
+✓
+✗
+✓
+FinSearchComp
+(
+Hu et al., 2025
+)
+✗
+✓
+✓
+✗
+✓
+StockBench
+(Ours)
+✓
+✓
+✓
+✓
+✓
+Table 1:
+Comparison of
+StockBench
+with existing financial benchmarks.
+However, existing financial benchmarks for LLM agents largely focus on static question-answering tasks
+(
+Chen et al., 2021
+;
+Zhu et al., 2021
+;
+Yin et al., 2023
+)
+, which are designed to test the financial knowledge of LLMs but fail to capture the dynamics of realistic trading scenarios.
+Although recent efforts like INVESTORBENCH
+(
+Li et al., 2025a
+)
+take a step towards simulating trading environments, they are limited to single-stock-trading and rely on historical data prior to 2021, raising concerns about data contamination and outdated market conditions.
+To bridge this gap, we propose
+StockBench
+, an evolving benchmark that places LLM agents in realistic stock-trading environments, directly evaluating their profitability and risk-management capabilities. Specifically,
+StockBench
+is designed to be:
+(1) Realistic.
+Agents receive daily market signals including prices, company fundamentals, and news headlines, reflecting real-world trading conditions.
+(2) Continuous.
+Agents make sequential daily trading decisions (buy, sell, or hold) over a multi-month horizon, mirroring the iterative nature and long-term nature of investment strategies.
+(3) Contamination-Free.
+The benchmark is instantiated using recent market data from March 2025 to July 2025 and will be continuously updated to prevent overlap with the training corpora of LLMs.
+Performance is evaluated using key financial metrics such as cumulative return, maximum drawdown, and the Sortino ratio, providing a quantitative assessment of both profitability and risk control.
+As a proof of concept, we evaluate a diverse set of LLM agents, including both proprietary models (
+e.g.,
+GPT-5
+(
+OpenAI, 2025a
+)
+, Claude-4
+(
+Anthropic, 2025b
+)
+) and open-weight models (
+e.g.,
+Qwen3
+(
+Yang et al., 2025
+)
+, Kimi-K2
+(
+Team et al., 2025
+)
+, GLM-4.5
+(
+Zeng et al., 2025
+)
+), alongside an equal-weight buy-and-hold baseline.
+Surprisingly, despite their strong performance on financial QA benchmarks, most LLM agents fail to outperform this simple baseline in terms of both cumulative return and risk-adjusted return.
+This finding suggests that success on static financial QA does not necessarily translate into effective trading strategies in dynamic market environments, underscoring a key challenge for LLM-based financial agents.
+The main contributions of this work are summarized as follows:
+•
+We introduce
+StockBench
+, a novel benchmark for evaluating LLM agents in a realistic stock-trading environment, measuring both profitability and risk-management capabilities.
+•
+We propose a comprehensive evaluation framework that incorporates realistic market dynamics, diverse input data, and multiple financial metrics to holistically assess agent performance.
+•
+We conduct extensive experiments across a range of state-of-the-art LLMs, revealing their current limitations in achieving profitable trading strategies and underscoring the need for further methodological advances.
+•
+We open-source the implementation of
+StockBench
+to facilitate reproducibility and to encourage community contributions, fostering further research on LLM-based financial agents.
+2
+StockBench
+The construction of
+StockBench
+consists of two main building blocks.
+(1) A back-trading environment, which contains historical data necessary for stock-trading decision making.
+We simulate real-world stock trading using this back-trading setup.
+(2) An associated stock-trading agent workflow.
+This workflow allows us to evaluate LLM backbones as agents to engage in the back-trading environment.
+The overall framework of
+StockBench
+is demonstrated in Figure
+1
+.
+Figure 1:
+Overview of
+StockBench
+. The design of
+StockBench
+includes a back-trading benchmark dataset, and an associated workflow that converts backbone LLMs into agents.
+2.1
+Back-Trading Environment
+We design the back-trading environment to simulate realistic stock trading, where trading agents are exposed only to data available up to the time of each decision.
+To set up the environment, we identify three critical sources of information for trading decision making:
+(1) A bundle of investment targets, which defines the scope of the environment.
+We pre-define these investment targets to facilitate reproducibility of the evaluation on
+StockBench
+.
+(2) Historical market data, which includes both the prices and fundamental indicators.
+These enable the evaluated trading agents to perform quantitative analysis.
+(3) News corpora, which capture events that drive stock price fluctuations.
+Investment Targets.
+The investment targets are a bundle of stocks that allow the trading agents to perform buy and sell operations.
+We manually select the investment targets
+to prevent potential outcome fluctuations caused by stock selection—
+e.g.,
+trading agents might otherwise happen to pick a stock driven by irrational market sentiment—thereby stabilizing the evaluation results.
+To this end, we select
+20
+20
+stocks from the Dow Jones Industrial Average (DJIA) with the highest weights as our investment targets.
+In particular, high-weighted DJIA stocks are representative of the global stock market and are less prone to short-term irrational sentiment-driven events.
+Constraining the trading action space to our selected investment targets mirrors real-world investor attention while keeping the dataset computationally tractable.
+Moreover, information about these well-known stocks is transparent and easy to collect, being readily accessible through web search engines.
+We show the distribution of the selected investment targets across different industries in Figure
+2
+.
+Our selection covers technology, finance, and manufacturing, ensuring stock diversity.
+Historical Market Data.
+We collect and preserve historical market data containing key quantitative information.
+For each stock, we use official opening prices
+with a concise set of fundamental metrics such as market capitalization, price-to-earnings (P/E) ratio, dividend yield, and trading range.
+These signals provide a reliable snapshot of company health and valuation, supporting informed decision making.
+We also retain the timestamps of the collected data to prevent
+leakage of future information to the agent.
+News Corpora.
+We construct news corpora for stocks to enable stock-trading agents to interpret both sentiments and events in a manner that resembles how retail investors react to market narratives.
+For each stock, we collect news articles released within the previous
+48
+48
+hours on a daily basis.
+These articles are retrieved using news-search API
+1
+1
+1
+https://finnhub.io/
+with time restrictions.
+Since news analysis consumes substantial context length in backbone LLMs, we balance information coverage and computational cost by preserving the top five relevant news articles each time the search engine returns results.
+We also carefully select the time window for collecting data in the back-trading environment.
+In principle, the evaluation window should satisfy two conditions: (1) the included stock information must not have been exposed to the evaluated stock-trading agents during their model training stages; and (2) the window should be sufficiently long to mitigate the impact of random noise that affects only short periods of time.
+To this end, we collect data spanning from
+March 3, 2025
+to
+June 30, 2025
+, a four-month period that includes both volatility and trend reversals.
+This period also falls after the knowledge cutoff of mainstream LLMs, ensuring no data leakage.
+It is worth noting that we will continuously update the back-trading environment to avoid overlap with the training corpora of contemporary LLMs.
+Figure 2:
+Industry distribution of selected stocks.
+2.2
+Stock-trading Agent Workflow
+We provide a stock-trading agent workflow that enables backbone LLMs to interact with the back-trading environment as agents.
+The design of the workflow follows two goals.
+(1) Minimal workflow.
+We keep the workflow minimal, since overly complicated workflows introduce inductive biases that may favor certain backbone LLMs.
+(2) Realistic. We design the workflow to align with the iterative decision-making process of retail investors.
+In particular, we follow previous frameworks
+(
+Zhang et al., 2020
+;
+Tsantekidis et al., 2017
+;
+Moody and Saffell, 2001
+;
+Deng et al., 2016
+)
+and organize the stock-trading workflow into four essential stages: portfolio overview, in-depth stock analysis, decision generation, and execution and validation.
+Overall, the design prioritizes realism, fairness, and reproducibility, in line with earlier studies on benchmark construction for trading environments.
+Step 1: Portfolio Overview.
+The agent first scans all available stocks in the market (the “investment target”), receiving relevant data for each stock.
+This includes recent news, current holdings of the agent, historical actions, and the opening price.
+This step mirrors how a trader assesses the broader market and the overall status of each stock in their portfolio.
+Step 2: In-Depth Stock Analysis.
+After the initial overview, the agent selects specific stocks for deeper analysis.
+For these selected stocks, the agent is provided with additional fundamental data such as market capitalization, P/E ratio, and dividend yield.
+This step simulates how a trader focuses on a subset of stocks identified in the initial overview, examining their financial health and other key metrics in greater depth.
+Step 3: Decision Generation.
+With the enriched context, the agent generates decisions for each stock, choosing between three actions:
+(1) increase, (2) decrease, or (3) hold the position.
+These options ensure that
+the agent’s actions are clear, actionable, and executable within the constraints of a retail investor’s decision making process.
+Step 4: Execution and Validation.
+Finally, the decisions are executed by converting dollar targets into share quantities based on the opening price.
+If the decisions of the agents exceed available liquidity, the system flags the issue and requires the agent to revise its decisions until they can be executed within available resources.
+Once validated, the new portfolio weights are locked, and the simulation advances to the next day.
+2.3
+Features of
+StockBench
+We now discuss how the design of
+StockBench
+satisfies the following key principles:
+Realistic Market Interaction.
+The design of the back-trading environment mimics real-world trading scenarios through three key elements: (1) a carefully selected bundle of investment targets, (2) reliable price and fundamental data, and (3) a concise yet timely news corpus.
+These elements ensure that the agent is exposed to information mirroring the complexities of real trading environments,
+avoiding unrealistic or overly expansive inputs.
+Continuous Decision Making.
+In the workflow, the agent first performs a portfolio overview, then conducts in-depth stock analysis, and finally generates daily trading decisions (buy, sell, or hold) based on this analysis.
+These steps reflect the continuous decision-making process of retail investors, enabling the agent to adapt its strategies over time in response to market conditions.
+Contamination-Free Data.
+We ensure that the agent has no prior exposure to the test data during its training.
+To achieve this, the benchmark is instantiated using recent market data, ensuring temporal separation and avoiding any overlap with the training corpora of contemporary LLMs.
+Model
+RT
+DDN
+Sortino
+Rank
+Kimi-K2
+1.9
+1.9
+−
+11.8
+-11.8
+0.0420
+\mathbf{0.0420}
+1
+1
+Qwen3-235B-Ins
+2.4
+2.4
+−
+11.2
+\mathbf{-11.2}
+0.0299
+0.0299
+2
+2
+GLM-4.5
+2.3
+2.3
+−
+13.7
+-13.7
+0.0295
+0.0295
+3
+3
+Qwen3-235B-Think
+2.5
+−
+14.9
+-14.9
+0.0309
+0.0309
+4
+4
+OpenAI-O3
+1.9
+1.9
+−
+13.2
+-13.2
+0.0267
+0.0267
+5
+5
+Qwen3-30B-Think
+2.1
+2.1
+−
+13.5
+-13.5
+0.0255
+0.0255
+6
+6
+Claude-4-Sonnet
+2.2
+2.2
+−
+14.2
+-14.2
+0.0245
+0.0245
+7
+7
+DeepSeek-V3.1
+1.1
+1.1
+−
+14.1
+-14.1
+0.0210
+0.0210
+8
+8
+GPT-5
+0.3
+0.3
+−
+13.1
+-13.1
+0.0132
+0.0132
+9
+9
+Qwen3-Coder
+0.2
+0.2
+−
+13.9
+-13.9
+0.0137
+0.0137
+10
+10
+DeepSeek-V3
+0.2
+0.2
+−
+14.1
+-14.1
+0.0144
+0.0144
+11
+11
+Passive Baseline
+0.4
+0.4
+−
+15.2
+-15.2
+0.0155
+0.0155
+12
+12
+GPT-OSS-120B
+−
+0.9
+-0.9
+−
+14.0
+-14.0
+0.0156
+0.0156
+13
+13
+GPT-OSS-20B
+−
+2.8
+-2.8
+−
+14.4
+-14.4
+−
+0.0069
+-0.0069
+14
+14
+Table 2:
+The performance of tested models over the evaluation period.
+The best performance in each metric is highlighted in bold. Models are ranked based on the z-score aggregation of all three metrics. RT stands for Final Return (%), DDN stands for Max Drawdown (%).
+3
+Main Experiments
+In this section, we present the experimental setup and results of evaluating various LLM agents within the
+StockBench
+trading workflow.
+We describe the trading environment, selected models, baseline strategy, and evaluation metrics.
+We then analyze performance outcomes, highlighting key insights into the capabilities of LLM agents in real-world financial markets.
+3.1
+Experiment Setup
+We detail the experimental setup for evaluating LLM agents in the
+StockBench
+trading workflow.
+Specifically, we describe the trading environment, the models selected for benchmarking, the passive baseline, and the evaluation metrics used to assess performance.
+Trading Environment.
+The top 20 DJIA stocks are selected as the investment targets, ensuring diverse representation across sectors.
+The evaluation period spans four months, from March 3 to June 30, 2025, covering 82 trading days and capturing a range of market conditions.
+Each model starts with $
+100,000
+100,000
+in cash and zero holdings, making daily trading decisions at market open.
+Key inputs include (1) the historical actions on held stocks over the past seven days, (2) up to five recent news articles from the previous 48 hours, and (3) for selected stocks, fundamental data such as market capitalization, P/E ratio, dividend yield, 52-week high/low, and recent quarterly dividends.
+Models to Evaluate.
+We benchmark a diverse set of LLMs, including both open-weight models such as Qwen3
+(
+Yang et al., 2025
+)
+2
+2
+2
+Without special denote, the Qwen3 series in this papers refers to the 2507 variants
+, DeepSeek
+(
+Guo et al., 2025a
+;
+Liu et al., 2024
+)
+, Kimi-K2
+(
+Team et al., 2025
+)
+, GLM-4.5
+(
+Zeng et al., 2025
+)
+and GPT-OSS
+(
+OpenAI, 2024b
+)
+, as well as closed-source APIs like OpenAI’s O3
+(
+OpenAI, 2025b
+)
+and Anthropic’s Claude-4-Sonnet
+(
+Anthropic, 2025b
+)
+. This selection covers a range of architectures, sizes, and training methodologies to assess generality across different LLM designs.
+All models are equipped with
+32,768
+32,768
+token context windows and decoded with official recommended settings to ensure their performance is optimized for the task.
+To hance a reliable result, each LLM agents would be run three times with different random seeds, and the average performance is reported.
+Passive Baseline.
+As a reference point, we implement a passive equal-weight buy-and-hold strategy that allocates the initial capital equally across all selected stocks at the start of the evaluation period and holds these positions unchanged until the end. This naive allocation is a widely accepted benchmark in portfolio research, reflecting passive index tracking behavior and providing a robust lower bound against which more sophisticated active strategies can be compared
+(
+DeMiguel et al., 2009
+;
+Duchin and Levy, 2009
+)
+.
+Evaluation Metrics.
+We adopt three widely used measures in financial analysis:
+Final Return.
+This metric measures overall profitability as the percentage change in portfolio value from the initial amount
+V
+0
+V_{0}
+to the final amount
+V
+T
+V_{T}
+:
+Final Return
+=
+V
+T
+−
+V
+0
+V
+0
+\text{Final Return}=\frac{V_{T}-V_{0}}{V_{0}}
+It directly reflects the portfolio’s overall performance over the evaluation period and is a simple, widely used measure of investment profitability
+(
+Bodie et al., 2014
+)
+.
+Arithmetic
+Schema
+0
+0
+5
+5
+10
+10
+15
+15
+5.6
+5.6
+8
+8
+14.5
+14.5
+6.4
+6.4
+Error Rate (%)
+Qwen3-235B-THK
+Qwen3-235B-INS
+Arithmetic
+Schema
+0
+0
+2
+2
+4
+4
+6
+6
+8
+8
+4
+4
+2
+2
+5.2
+5.2
+0.4
+0.4
+Error Rate (%)
+DPSK-V3.1-THK
+DPSK-V3-INS
+Figure 3:
+Error distribution (%) by type for Think vs Instruct models.
+Maximum Drawdown.
+The maximum drawdown quantifies the largest decline in portfolio value from its peak to its trough throughout the evaluation period, providing a measure for downside risk:
+Max Drawdown
+=
+min
+t
+∈
+[
+0
+,
+T
+]
+⁡
+(
+V
+t
+−
+max
+s
+≤
+t
+⁡
+V
+s
+max
+s
+≤
+t
+⁡
+V
+s
+)
+\text{Max Drawdown}=\min_{t\in[0,T]}\left(\frac{V_{t}-\max_{s\leq t}V_{s}}{\max_{s\leq t}V_{s}}\right)
+It highlights the worst loss an investor could have faced and is commonly used to assess risk and volatility
+(
+Magdon-Ismail et al., 2004
+;
+Chekhlov et al., 2005
+)
+.
+Sortino Ratio.
+The Sortino ratio is a risk adjusted return metric that penalizes only downside volatility. It is defined as the excess return
+R
+p
+R_{p}
+divided by the downside deviation
+σ
+d
+\sigma_{d}
+:
+Sortino Ratio
+=
+R
+p
+σ
+d
+,
+σ
+d
+=
+1
+N
+d
+​
+∑
+i
+=
+1
+N
+d
+min
+⁡
+(
+R
+i
+,
+0
+)
+2
+\text{Sortino Ratio}=\frac{R_{p}}{\sigma_{d}},\quad\sigma_{d}=\sqrt{\frac{1}{N_{d}}\!\sum_{i=1}^{N_{d}}\!\min(R_{i},0)^{2}}
+This metric is more appropriate than the Sharpe ratio when returns are asymmetric, as it focuses on negative volatility
+(
+Sortino and Van der Meer, 1991
+;
+Pedersen and Satchell, 2002
+)
+.
+After computing these metrics for each model, we derive a composite rank by leveraging the z-score of each metric, averaging them to produce a single performance score.
+Composite Rank
+=
+z
+⁡
+(
+Ret
+)
+−
+z
+⁡
+(
+DD
+)
++
+z
+⁡
+(
+SR
+)
+3
+\text{Composite Rank}=\frac{z(\mathrm{Ret})-z(\mathrm{DD})+z(\mathrm{SR})}{3}
+Where
+Ret
+\mathrm{Ret}
+is Final Return,
+DD
+\mathrm{DD}
+is Max Drawdown, and
+SR
+\mathrm{SR}
+is Sordino Ratio.
+This approach balances profitability and risk, rewarding models that achieve high returns while effectively managing downside exposure.
+3.2
+Experiment Results
+Table
+2
+presents the performance of all evaluated models over the four-month period without contamination.
+The results are reported across three key metrics—percentage return, maximum drawdown, and Sortino ratio—along with an overall ranking derived from a composite z-score of these metrics.
+Stocks
+%
+\%
+Mean
+%
+\%
+Std
+CV
+Kimi-K2
+5
+5
+−
+4.6
+-4.6
+0.7
+0.7
+0.2
+0.2
+10
+10
+3.2
+3.2
+0.6
+0.6
+0.2
+0.2
+20
+20
+1.9
+1.9
+1.7
+1.7
+0.9
+0.9
+30
+30
+−
+0.5
+-0.5
+1.2
+1.2
+2.2
+2.2
+GPT-OSS-120B
+5
+5
+−
+5.7
+-5.7
+0.3
+0.3
+0.1
+0.1
+10
+10
+2.5
+2.5
+0.4
+0.4
+0.2
+0.2
+20
+20
+−
+0.4
+-0.4
+3.9
+3.9
+10.2
+10.2
+30
+30
+−
+0.9
+-0.9
+3.9
+3.9
+4.4
+4.4
+Table 3:
+Performance of representative models (Kimi-K2 and GPT-OSS-120B) across different investment target sizes. Results are reported as mean return (% Mean), standard deviation of returns (% Std), and coefficient of variation (CV).
+Here are the key observations:
+(1) LLM agents can trade profitably in real-world markets.
+Most tested models outperform the passive buy-and-hold baseline, which achieves a modest
+0.4
+%
+0.4\%
+return with a
+−
+15.2
+%
+-15.2\%
+drawdown and a Sortino ratio of
+0.0155
+0.0155
+. Several agents deliver returns above
+2
+%
+2\%
+, with improved risk profiles.
+(2) LLM agents can manage downside risk effectively.
+All tested models achieve lower maximum drawdowns than the baseline, indicating that they can mitigate losses during market downturns. The best-performing agents limit drawdowns to around
+−
+11
+%
+-11\%
+to
+−
+14
+%
+-14\%
+, compared to the baseline’s
+−
+15.2
+%
+-15.2\%
+.
+(3) Reasoning model does not guarantee better performance.
+Although reasoning-tuned models such as Qwen3-235B-Think and Qwen3-30B-Think exhibit strong performance in tasks requiring complex reasoning, including math and coding
+(
+Yang et al., 2025
+)
+, they do not consistently outperform instruction-tuned counterparts in this trading task. For example, Qwen3-235B-Ins outperforms its reasoning-tuned version with a lower maximum drawdown (
+−
+11.2
+%
+-11.2\%
+vs.
+−
+14.9
+%
+-14.9\%
+).
+This suggests there is still a gap between reasoning ability and effective decision-making in dynamic, noisy environments like financial markets.
+4
+Analysis
+4.1
+Influence of Investment Target Size
+To evaluate the impact of the investment target size on the agent’s performance,
+we study the effect of investment target size by running daily trading tasks on portfolios of 5, 10, 20, and 30 DJIA stocks, repeating each setting three times and measuring return variability.
+The results show that variability increases as the investment target expands.
+Specifically, as shown in Table
+3
+,
+(1) Scalability is inherently challenging.
+All evaluated models exhibit performance degradation as the investment portfolio size increases, characterized by declining mean returns and rising return volatility. This indicates that scaling the number of tradable assets poses a non-trivial challenge for LLM agents.
+(2) Model scale confers robustness.
+The larger-scale model, Kimi-K2, demonstrates greater robustness to portfolio expansion, maintaining relatively stable risk-return profiles and achieving positive expected returns at moderate portfolio sizes (e.g., 10–20 stocks), whereas the smaller GPT-OSS-120B suffers from severe performance deterioration and excessive variability, suggesting that increased model capacity enhances generalization and stability in multi-asset decision-making contexts.
+4.2
+Influence of Error in the Trading Workflow
+During trading, two common error types arise:
+(1) Arithmetic Errors
+, where agents miscalculate share quantities.
+(2) Schema Errors
+, where the LLM agent’s outputs violate the required JSON format.
+Figure
+3
+illustrates the frequency of these errors across thinking models and instruct models.
+The results show that thinking models make fewer arithmetic errors than instruct models, consistent with their stronger reasoning ability
+(
+Yu et al., 2025
+;
+Guo et al., 2025a
+;
+Yang et al., 2025
+)
+.
+Yet, they also incur more schema errors, likely due to their tendency to generate overly complex outputs that deviate from the expected format
+(
+Fu et al., 2025
+;
+Li et al., 2025b
+)
+.
+4.3
+Ablation Study on Data Sources
+Condition
+Return (%)
+Kimi-K2
+1.9
+1.9
+w/o
+News
+1.4
+1.4
+w/o
+News & Fund.
+0.6
+0.6
+GPT-OSS-120B
+−
+1.2
+-1.2
+w/o
+News
+−
+1.2
+-1.2
+w/o
+News & Fund.
+−
+3.4
+-3.4
+Table 4:
+The cumulative return (CR, %) for Kimi-K2 and GPT-OSS-120B
+under three input settings: full input (Full), without news articles (w/o News), and without both news and fundamental data (w/o News & Fund.).
+In our workflow, LLM agents primarily rely on two main information sources: news and fundamental data.
+These two modalities provide complementary signals, with news capturing market sentiment and fundamentals grounding the model in key financial indicators.
+To better understand their respective contributions, we conduct an ablation study by progressively removing these inputs.
+As shown in Table
+4
+, cumulative returns drop as news and then fundamentals are removed, confirming their importance.
+This behavior matches our expectation that both information sources play an important role in guiding trading decisions.
+The Kimi-K2 model remains relatively robust when only news is removed, but its performance deteriorates when both inputs are absent.
+In contrast, GPT-OSS-120B experiences a sharper decline, indicating that it relies more heavily on explicit signals provided by news and fundamentals.
+Overall, these results show that LLM agents effectively integrate textual and numerical inputs to guide trading decisions.
+4.4
+Impact of Evaluation Window
+A good trading model should be able to adapt to changing market conditions over time.
+To investigate how the choice of evaluation window affects model rankings, we evaluate model robustness across two market time frames: a downturn period (January to April 2025) and an upturn period (May to August 2025).
+Figure
+4
+shows the models’ ranking shifts between these periods.
+Notably, we observe significant shifts in model rankings between the downturn and upturn periods.
+For example, GPT-OSS-120B moves from bottom-ranked in the downturn to top-ranked in the upturn, suggesting sensitivity to bullish markets, while Kimi-K2 remains relatively stable, indicating greater robustness to market fluctuations.
+This suggests that certain models may be better suited to specific market conditions, potentially due to their underlying architectures or training data.
+Notably, all LLM agents underperform the passive baseline during the downturn but outperform it in the upturn, highlighting a key weakness in bearish markets.
+Figure 4:
+Model performance ranking based on the cumulative return,
+over two evaluation windows downturn (Jan-Apr 2025) and upturn (May-Aug 2025).
+5
+Related Work
+5.1
+LLM Agents and General Benchmarks
+Large language models (LLMs) have evolved from text generators into autonomous agents capable of reasoning, planning, and interacting with environments
+(
+OpenAI, 2024a
+;
+Anthropic, 2025a
+;
+DeepMind, 2025
+;
+Liu et al., 2024
+;
+Guo et al., 2025a
+;
+Meta-AI, 2025
+;
+Yang et al., 2024a
+;
+Bai et al., 2025
+;
+OpenAI, 2025b
+)
+.
+Agentic behavior has been increasingly viewed as the next stage of LLM development, as it directly translates into real-world productivity
+(
+OpenAI, 2025a
+;
+Anthropic, 2025b
+)
+.
+To evaluate these emerging capabilities, a range of agent benchmarks has been proposed across domains, including software engineering (SWE-Bench, SWE-Agent
+(
+Jimenez et al., 2024
+;
+Yang et al., 2024b
+)
+), scientific discovery (AstaBench
+(
+Bragg et al., 2025
+)
+), and commercial workflows (XBench, Tau2Bench
+(
+Chen et al., 2025
+;
+Barres and others, 2025
+)
+). While these benchmarks demonstrate the potential of LLM agents for complex tasks, few existing works have examined domains where decisions translate into direct economic outcomes, such as financial trading.
+5.2
+Financial Agents and Benchmarks
+Financial applications of LLMs have attracted growing attention due to their
+relevance to
+profitability, risk management, and high-stakes decision making
+(
+Wu et al., 2023
+;
+Lee et al., 2024
+;
+Nie et al., 2024
+)
+.
+However, most existing benchmarks focus on static question-answering, such as FinQA, TAT-QA, and FinBench
+(
+Chen et al., 2021
+;
+Zhu et al., 2021
+;
+Yin et al., 2023
+)
+.
+While useful for evaluating financial reasoning and domain knowledge, these benchmarks do not reflect the iterative, dynamic nature of real-world trading environments.
+Recent works like INVESTORBENCH
+(
+Li et al., 2025a
+)
+have begun to explore agent-based trading evaluation, but
+primarily considers single-stock settings and relies on historical data up to 2021, raising concerns about both scope and potential data contamination.
+In contrast,
+StockBench
+is the first benchmark to embed LLM agents in realistic, multi-stock trading environments with continuously updated market data.
+StockBench
+bridges the gap between static financial QA benchmarks and the practical challenges of real-world investment strategies, enabling a more faithful assessment of LLM-based financial agents.
+6
+Conclusion
+We introduce
+StockBench
+, a benchmark for evaluating LLM agents in realistic stock-trading environments with dynamic markets and long-horizon decision making.
+Our experiments show that although current agents can be profitable, they rarely outperform simple baselines, revealing substantial room for improvement. We release
+StockBench
+to support future research on building more capable trading agents under complex market dynamics.
+We believe that
+StockBench
+will serve as a valuable resource for the research community, driving further advancements in the development of intelligent, autonomous financial agents capable of navigating complex market dynamics.
+7
+Limitations
+StockBench
+evaluates LLM agents using daily trading over several months on a fixed set of large DJIA stocks. While this setup is realistic and avoids data leakage, it does not cover high-frequency trading, long-term market cycles, or a wide range of assets.
+Since agents can only trade once per day, intraday and event-driven strategies are not tested.
+The four-month window may also miss long bull or bear markets and rare but important market events, which can affect model rankings.
+In addition, we focus on large U.S. stocks and do not model trading costs, slippage, or liquidity limits, which makes trading easier than in real markets.
+We view these limitations as important directions for future work, including extending
+StockBench
+to longer horizons, higher-frequency trading, and more diverse asset classes to provide a more comprehensive assessment of LLM-based financial agents.
+8
+Ethical Statement
+We strictly comply with all applicable financial regulations, data-protection laws, and academic ethical standards during the construction and use of
+StockBench
+. All market data (prices, fundamentals, and news) were collected through licensed data vendors or public APIs that explicitly allow research use; no non-public, insider, or personally identifiable information was accessed or stored.
+The benchmark is provided for academic and non-commercial research purposes only. Users are reminded that
+StockBench
+is not intended to offer, or serve as the basis for, any financial advice, trading recommendation, or commercial activity. Any trading strategy tested on
+StockBench
+carries inherent market risk; past performance recorded in the benchmark does not guarantee future returns.
+References
+Anthropic (2025a)
+Anthropic
+Claude 3.7 Sonnet
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.1
+.
+Anthropic (2025b)
+Anthropic
+Introducing claude 4
+.
+Note:
+https://www.anthropic.com/news/claude-4
+Accessed: 2025-09-14
+Cited by:
+§1
+,
+§1
+,
+§3.1
+,
+§5.1
+.
+Bai
+et al.
+(2025)
+S. Bai, K. Chen, X. Liu, J. Wang, W. Ge, S. Song, K. Dang, P. Wang, S. Wang, J. Tang,
+et al.
+Qwen2.5-VL technical report
+.
+arXiv preprint arXiv:2502.13923
+abs/2502.13923
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.1
+.
+Barres
+et al.
+(2025)
+V. Barres
+et al.
+τ
+2
+\tau^{2}
+-Bench: evaluating conversational agents in a dual-control setting
+.
+arXiv preprint arXiv:2506.07982
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.1
+.
+Bigeard
+et al.
+(2025)
+A. Bigeard, L. Nashold, R. Krishnan, and S. Wu
+Finance agent benchmark: benchmarking llms on real-world financial research tasks
+.
+arXiv preprint arXiv:2508.00828
+.
+External Links:
+Link
+Cited by:
+Table 1
+.
+Bodie
+et al.
+(2014)
+Z. Bodie, A. Kane, and A. J. Marcus
+Investments
+.
+10th edition
+,
+McGraw-Hill Education
+.
+Cited by:
+§3.1
+.
+Bragg
+et al.
+(2025)
+J. Bragg, M. D’Arcy, N. Balepur, D. Bareket, B. Dalvi, S. Feldman, D. Haddad, J. D. Hwang, P. Jansen, V. Kishore,
+et al.
+Astabench: rigorous benchmarking of ai agents with a scientific research suite
+.
+arXiv preprint arXiv:2510.21652
+.
+Cited by:
+§1
+,
+§5.1
+.
+Chekhlov
+et al.
+(2005)
+A. Chekhlov, S. Uryasev, and M. Zabarankin
+Drawdown measure in portfolio optimization
+.
+International Journal of Theoretical and Applied Finance
+8
+(
+1
+),
+pp. 13–58
+.
+Cited by:
+§3.1
+.
+Chen
+et al.
+(2025)
+K. Chen, Y. Ren, Y. Liu, X. Hu, H. Tian, F. Liu, H. Zhang, H. Liu, Y. Gong, C. Sun, H. Hou, H. Yang, J. Pan, J. Lou, J. Mao, J. Liu, J. Li, K. Liu, K. Liu, R. Wang, R. Li, T. Niu, W. Zhang, W. Yan, X. Wang, Y. Zhang, Y. Hung, Y. Jiang, Z. Liu, Z. Yin, Z. Ma, and Z. Mo
+Xbench: tracking agents productivity scaling with profession-aligned real-world evaluations
+.
+arXiv preprint arXiv:2506.13651
+abs/2506.13651
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.1
+.
+Chen
+et al.
+(2021)
+Z. Chen, W. Chen, C. Smiley, S. Shah, I. Borova, D. Langdon, R. Moussa, M. Beane, T. Huang, B. Routledge, and W. Y. Wang
+FinQA: a dataset of numerical reasoning over financial data
+.
+Proceedings of EMNLP 2021
+.
+External Links:
+Link
+Cited by:
+Table 1
+,
+§1
+,
+§5.2
+.
+Chen
+et al.
+(2022)
+Z. Chen, S. Li, C. Smiley, Z. Ma, S. Shah, and W. Y. Wang
+ConvFinQA: exploring the chain of numerical reasoning in conversational finance question answering
+.
+arXiv preprint arXiv:2210.67890
+.
+External Links:
+Link
+Cited by:
+Table 1
+.
+DeepMind (2025)
+G. DeepMind
+Gemini 2.5
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.1
+.
+DeMiguel
+et al.
+(2009)
+V. DeMiguel, L. Garlappi, and R. Uppal
+Optimal versus naive diversification: how inefficient is the 1/n portfolio strategy?
+.
+Review of Financial Studies
+22
+(
+5
+),
+pp. 1915–1953
+.
+Cited by:
+§3.1
+.
+Deng
+et al.
+(2016)
+Y. Deng, F. Bao, Y. Kong, Z. Ren, and Q. Dai
+Deep direct reinforcement learning for financial signal representation and trading
+.
+IEEE Transactions on Neural Networks and Learning Systems
+28
+(
+3
+),
+pp. 653–664
+.
+Cited by:
+§2.2
+.
+Duchin and Levy (2009)
+R. Duchin and H. Levy
+Markowitz versus the talmudic portfolio diversification strategies
+.
+Journal of Portfolio Management
+35
+(
+2
+),
+pp. 71–84
+.
+Cited by:
+§3.1
+.
+Fu
+et al.
+(2025)
+T. Fu, J. Gu, Y. Li, X. Qu, and Y. Cheng
+Scaling reasoning, losing control: evaluating instruction following in large reasoning models
+.
+arXiv preprint arXiv:2505.14810
+abs/2505.14810
+.
+External Links:
+Link
+Cited by:
+§4.2
+.
+Guo
+et al.
+(2025a)
+D. Guo, D. Yang, H. Zhang, J. Song, R. Zhang, R. Xu, Q. Zhu, S. Ma, P. Wang, X. Bi,
+et al.
+DeepSeek-R1: incentivizing reasoning capability in LLMs via reinforcement learning
+.
+arXiv preprint arXiv:2501.12948
+.
+Cited by:
+§1
+,
+§3.1
+,
+§4.2
+,
+§5.1
+.
+Guo
+et al.
+(2025b)
+X. Guo, H. Xia, Z. Liu, H. Cao, Z. Yang, Z. Liu, S. Wang, J. Niu, C. Wang, Y. Wang,
+et al.
+FinEval: a chinese financial domain knowledge evaluation benchmark for large language models
+.
+arXiv preprint arXiv:2504.06258
+.
+External Links:
+Link
+Cited by:
+Table 1
+.
+Hu
+et al.
+(2025)
+L. Hu, J. Jiao, J. Liu, Y. Ren, Z. Wen, K. Zhang, X. Zhang, X. Gao, T. He, F. Hu, Y. Liao, Z. Wang, C. Yang, Q. Yang, M. Yin, Z. Zeng, G. Zhang, X. Zhang, X. Zhao, Z. Zhu, H. Namkoong, W. Huang, and Y. Tang
+FinSearchComp: towards a realistic, expert‑level evaluation of financial search and reasoning
+.
+arXiv preprint arXiv:2509.13160
+.
+External Links:
+Link
+Cited by:
+Table 1
+.
+Jimenez
+et al.
+(2024)
+C. E. Jimenez, J. Yang, A. Wettig, S. Yao, K. Pei, O. Press, and K. Narasimhan
+SWE-bench: can language models resolve real-world github issues?
+.
+arXiv preprint arXiv:2310.06770
+.
+External Links:
+Document
+,
+Link
+Cited by:
+§1
+,
+§5.1
+.
+Kuang
+et al.
+(2025)
+Z. Kuang, F. Zhu, M. Jiang, Y. Lai, Z. Wang, Z. Wang, M. Qiu, J. Huang, M. Peng, Q. Xie, and S. Ananiadou
+From scores to skills: a cognitive diagnosis framework for evaluating financial large language models
+.
+arXiv preprint arXiv:2508.13491
+.
+Cited by:
+Table 1
+.
+Lee
+et al.
+(2024)
+J. Lee, N. Stevens, S. C. Han, and M. Song
+A survey of large language models in finance (finllms)
+.
+arXiv preprint arXiv:2402.02315
+abs/2402.02315
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.2
+.
+Li
+et al.
+(2024)
+H. Li, Y. Cao, Y. Yu, S. R. Javaji, Z. Deng, Y. He, Y. Jiang, Z. Zhu, K. P. Subbalakshmi, J. Huang, L. Qian, X. Peng, Q. Xie, and J. W. Suchow
+INVESTORBENCH: a benchmark for financial decision‑making tasks with llm‑based agent
+.
+arXiv preprint arXiv:2412.18174
+.
+External Links:
+Link
+Cited by:
+Table 1
+.
+Li
+et al.
+(2025a)
+H. Li, Y. Cao, Y. Yu, S. R. Javaji, Z. Deng, Y. He, Y. Jiang, Z. Zhu, K.p. Subbalakshmi, J. Huang, L. Qian, X. Peng, J. W. Suchow, and Q. Xie
+INVESTORBENCH: a benchmark for financial decision-making tasks with LLM-based agent
+.
+In
+Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)
+,
+W. Che, J. Nabende, E. Shutova, and M. T. Pilehvar (Eds.)
+,
+pp. 2509–2525
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.2
+.
+Li
+et al.
+(2025b)
+X. Li, Z. Yu, Z. Zhang, X. Chen, Z. Zhang, Y. Zhuang, N. Sadagopan, and A. Beniwal
+When thinking fails: the pitfalls of reasoning for instruction-following in llms.
+.
+arXiv preprint arXiv:2505.11423
+abs/2505.11423
+.
+External Links:
+Link
+Cited by:
+§4.2
+.
+Liu
+et al.
+(2024)
+A. Liu, B. Feng, B. Xue, B. Wang, B. Wu, C. Lu, C. Zhao, C. Deng, C. Zhang, C. Ruan,
+et al.
+DeepSeek-V3 technical report
+.
+arXiv preprint arXiv:2412.19437
+abs/2412.19437
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§3.1
+,
+§5.1
+.
+Lu
+et al.
+(2025)
+G. Lu, X. Guo, R. Zhang, W. Zhu, and J. Liu
+BizFinBench: a business-driven real-world financial benchmark for evaluating llms
+.
+arXiv preprint arXiv:2505.19457
+.
+External Links:
+Link
+Cited by:
+Table 1
+.
+Magdon-Ismail
+et al.
+(2004)
+M. Magdon-Ismail, A. F. Atiya, A. Pratap, and Y. S. Abu-Mostafa
+On the maximum drawdown of a brownian motion
+.
+Journal of Applied Probability
+41
+(
+1
+),
+pp. 147–161
+.
+Cited by:
+§3.1
+.
+Meta-AI (2025)
+Meta-AI
+The Llama 4 herd: the beginning of a new era of natively multimodal AI innovation
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.1
+.
+Moody and Saffell (2001)
+J. Moody and M. Saffell
+Learning to trade via direct reinforcement
+.
+IEEE Transactions on Neural Networks
+12
+(
+4
+),
+pp. 875–889
+.
+Cited by:
+§2.2
+.
+Nie
+et al.
+(2024)
+Y. Nie, Y. Kong, X. Dong, J. M. Mulvey, H. V. Poor, Q. Wen, and S. Zohren
+A survey of large language models for financial applications: progress, prospects and challenges
+.
+arXiv preprint arXiv:2406.11903
+abs/2406.11903
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.2
+.
+OpenAI (2024a)
+OpenAI
+Hello GPT-4o
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.1
+.
+OpenAI (2024b)
+OpenAI
+Introducing gpt-oss
+.
+Note:
+https://openai.com/index/introducing-gpt-oss/
+Accessed: 2025-09-14
+Cited by:
+§3.1
+.
+OpenAI (2025a)
+OpenAI
+GPT-5 is here
+.
+Note:
+https://openai.com/gpt-5/
+Accessed: 2025-09-14
+Cited by:
+§1
+,
+§1
+,
+§5.1
+.
+OpenAI (2025b)
+OpenAI
+Introducing openai o3 and o4-mini
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§3.1
+,
+§5.1
+.
+Pedersen and Satchell (2002)
+C. S. Pedersen and S. Satchell
+On the foundation of performance measures under asymmetric returns
+.
+Quantitative Finance
+2
+(
+3
+),
+pp. 217–223
+.
+Cited by:
+§3.1
+.
+Shah
+et al.
+(2022)
+R. Shah, K. Chawla, D. Eidnani, A. Shah, W. Du, S. Chava, N. Raman, C. Smiley, J. Chen, and D. Yang
+When flue meets flang: benchmarks and large pretrained language model for financial domain
+.
+arXiv preprint arXiv:2210.12345
+.
+Cited by:
+Table 1
+.
+Sortino and Van der Meer (1991)
+F. A. Sortino and R. Van der Meer
+Downside risk
+.
+Journal of Portfolio Management
+17
+(
+4
+),
+pp. 27–31
+.
+Cited by:
+§3.1
+.
+Team
+et al.
+(2025)
+K. Team, Y. Bai, Y. Bao, G. Chen, J. Chen, N. Chen, R. Chen, Y. Chen, Y. Chen, Y. Chen,
+et al.
+Kimi k2: open agentic intelligence
+.
+arXiv preprint arXiv:2507.20534
+.
+Cited by:
+§1
+,
+§3.1
+.
+Tsantekidis
+et al.
+(2017)
+A. Tsantekidis, N. Passalis, A. Tefas, J. Kanniainen, M. Gabbouj, and A. Iosifidis
+Forecasting stock prices from the limit order book using convolutional neural networks
+.
+IEEE Transactions on Neural Networks and Learning Systems
+29
+(
+9
+),
+pp. 2856–2870
+.
+Cited by:
+§2.2
+.
+Wu
+et al.
+(2023)
+S. Wu, O. Irsoy, S. Lu,
+et al.
+BloombergGPT: a large language model for finance
+.
+arXiv preprint arXiv:2303.17564
+.
+Note:
+Accessed: 2025-09-14
+External Links:
+Link
+Cited by:
+§1
+,
+§5.2
+.
+Yang
+et al.
+(2025)
+A. Yang, A. Li, B. Yang, B. Zhang, B. Hui, B. Zheng, B. Yu, C. Gao, C. Huang, C. Lv,
+et al.
+Qwen3 technical report
+.
+arXiv preprint arXiv:2505.09388
+.
+Cited by:
+§1
+,
+§3.1
+,
+§3.2
+,
+§4.2
+.
+Yang
+et al.
+(2024a)
+A. Yang, B. Yang, B. Zhang, B. Hui, B. Zheng, B. Yu, C. Li, D. Liu, F. Huang, H. Wei,
+et al.
+Qwen2.5 technical report
+.
+arXiv preprint arXiv:2412.15115
+abs/2412.15115
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.1
+.
+Yang
+et al.
+(2024b)
+J. Yang, C. E. Jimenez, A. Wettig, K. Lieret, S. Yao, K. Narasimhan, and O. Press
+SWE-agent: agent-computer interfaces enable automated software engineering
+.
+arXiv preprint arXiv:2405.15793
+.
+External Links:
+Document
+,
+Link
+Cited by:
+§1
+,
+§5.1
+.
+Yin
+et al.
+(2023)
+Y. Yin, Y. Yang, J. Yang, and Q. Liu
+FinPT: financial risk prediction with profile tuning on pretrained foundation models
+.
+arXiv preprint arXiv:2308.00065
+abs/2308.00065
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.2
+.
+Yu
+et al.
+(2025)
+Q. Yu, Z. Zhang, R. Zhu, Y. Yuan, X. Zuo, Y. Yue, W. Dai, T. Fan, G. Liu, L. Liu,
+et al.
+Dapo: an open-source llm reinforcement learning system at scale
+.
+arXiv preprint arXiv:2503.14476
+abs/2503.14476
+.
+External Links:
+Link
+Cited by:
+§4.2
+.
+Zeng
+et al.
+(2025)
+A. Zeng, X. Lv, Q. Zheng, Z. Hou, B. Chen, C. Xie, C. Wang, D. Yin, H. Zeng, J. Zhang,
+et al.
+Glm-4.5: agentic, reasoning, and coding (arc) foundation models
+.
+arXiv preprint arXiv:2508.06471
+abs/2508.06471
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§3.1
+.
+Zhang
+et al.
+(2020)
+Y. Zhang, S. Zohren, and S. Roberts
+Deep reinforcement learning for trading
+.
+The Journal of Financial Data Science
+2
+(
+2
+),
+pp. 25–40
+.
+Cited by:
+§2.2
+.
+Zhu
+et al.
+(2021)
+F. Zhu, W. Lei, Y. Huang, C. Wang, S. Zhang, J. Lv, F. Feng, and T. Chua
+TAT-QA: a question answering benchmark on a hybrid of tabular and textual content in finance
+.
+In
+Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)
+,
+C. Zong, F. Xia, W. Li, and R. Navigli (Eds.)
+,
+pp. 3277–3287
+.
+External Links:
+Link
+Cited by:
+§1
+,
+§5.2
+.
+Appendix A
+Prevent Data Leakage
+In this study, we minimize the risk of data leakage by carefully planning and evaluating the time frame. When testing large language models (LLMS) in the financial field, a potential concern is that during the training process, the model will learn a lot of past financial knowledge, which may lead to the model’s performance being artificially exaggerated. For instance, when asking GPT-5 (without using the search function), we found that the model could accurately predict the stock trend of AAPL in 2021, and the model’s response was consistent with the facts.
+This discovery indicates that if the evaluation time is relatively early, the model may have obtained future information that could not have been reasonably acquired at the time of evaluation. In view of this, we have decided to limit the data used for evaluation to a more recent time frame, thereby minimizing the possibility of such “data leakage” and ensuring that the model is tested more fairly. By focusing on a narrow evaluation time window, we aim to simulate real-world scenarios where agents can only make trading decisions based on the publicly available information at the time of each decision.
+This approach conforms to the best practices of financial model evaluation, ensuring that the evaluation results truly reflect the predictive and decision-making capabilities of LLM agents without being disturbed by the unintentional availability of future data
+Appendix B
+Model Return Variance
+Table 5:
+Model Return Variance Across Different Models. This table presents the variance of model returns for various LLMs.
+Rank
+Model
+Var (
+×
+10
+−
+4
+\times 10^{-4}
+)
+1
+DeepSeek-V3
+0.074
+2
+DeepSeek-V3.1
+0.203
+3
+GPT-5
+0.210
+4
+Claude-4-Sonnet
+0.153
+5
+GLM-4.5
+0.099
+6
+Qwen3-30B-Think
+0.115
+7
+Qwen3-235B-Think
+0.321
+8
+Qwen3-235B-Ins
+0.281
+9
+Qwen3-4B-Ins
+1.382
+10
+GPT-OSS-20B
+1.337
+11
+Qwen3-Coder
+1.655
+12
+Openai-O3
+3.250
+13
+Kimi-K2
+1.866
+14
+GPT-OSS-120B
+10.19
+In this section, we analyze the return variances of different models. Models with higher return variances may exhibit more unpredictable behaviors, which is undesirable in many real-world applications, especially in high-risk environments such as financial decision-making.
+We ranked several large language models (LLMS) based on their return variances, as shown in table
+5
+. In the evaluated model,
+DeepSeek-V3
+exhibited the smallest performance fluctuation, indicating high stability. In contrast,
+GPT-OSS-120B
+exhibits the highest return variance, indicating a volatility in its performance.
+Appendix C
+The Use of Large Language Models
+We use LLMs for two purposes.
+(1) Code implementation. When implementing the code for this paper, including data gathering and experiment implementation, we use LLMs in the form of
+copilot
+to complete code snippets.
+The architecture design is conducted by human researchers.
+(2) Proofreading. To fix grammar issues, we use LLMs as a writing tools to refine the draft.
+We would like to highlight that LLMs are not responsible for creativity tasks during conducting the research of this paper, including but not limited to: ideation, experiment design, paper organizing.
+Experimental support, please
+view the build logs
+for errors. Generated by
+L
+A
+T
+E
+xml
+.
+Instructions for reporting errors
+We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below:
+Click the "Report Issue"
+(
+)
+button, located in the page header.
+Tip:
+You can select the relevant text first, to include it in your report.
+Our team has already identified
+the following issues
+. We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all.
+Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a
+list of packages that need conversion
+, and welcome
+developer contributions
+.
+We gratefully acknowledge support from
+        our
+major funders
+,
+member institutions
+,
+,
+        and all contributors.
+About
+·
+Help
+·
+Contact
+·
+Subscribe
+·
+Copyright
+·
+Privacy
+·
+Accessibility
+·
+Operational Status
+(opens in new tab)
+Major funding support from

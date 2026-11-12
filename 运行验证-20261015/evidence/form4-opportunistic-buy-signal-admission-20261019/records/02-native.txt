@@ -1,0 +1,503 @@
+Aegis-Finance/docs/AEGIS_FINANCE_DOSSIER_2026-08-02.md at main · Murathanx12/Aegis-Finance · GitHub (https://ithub.global.ssl.fastly.net/Murathanx12/Aegis-Finance/blob/main/docs/AEGIS_FINANCE_DOSSIER_2026-08-02.md)
+citeturn1082search0 [wordlim: 200] Published: 2 months ago; Crawled: last month; Insider (Form 4) — the best lag/quality ratio of any family: SOX §403 requires filing within 2 business days, EDGAR dissemination is immediate, and ownership documents are structured XML since 2003 (parseable without NLP). ... ⚠️ The decay is the risk: a 2026 SSRN working paper reports opportunistic alpha falling from ~1.2–1.6%/mo to ~0.3–0.4%/mo, with 70–80% dissipating between the transaction date and the next trading day — i.e. before the Form 4 even posts.
+Cohen-Malloy-Pomorski ✅: opportunistic trades +82 bps/mo value-weighted; routine ≈ 0, and routine is >50% of the universe. Jeng-Metrick-Zeckhauser ✅: purchases +40–50 bps/mo, sales ≈ 0, with ~1/6 of the abnormal return arriving within 5 days. ⚠️ The decay is the risk: a 2026 SSRN working paper reports opportunistic alpha falling from ~1.2–1.6%/mo to ~0.3–0.4%/mo, with 70–80% dissipating between the transaction date and the next trading day — i.e. before the Form 4 even posts. This matches the project's own prior almost exactly (BRAIN-003: +17 bps/mo net, t 1.40, microcap null, DSR 0.26). But see Part V-B L1 — the live collector is returning zeros, so this trial is currently measuring nothing.
+
+13F — cloning does not work after the lag, and the live evidence is decisive. ✅ GURU (Global X Guru, the flagship high-conviction clone, inception 2012):
+
+ | 1Y  | 3Y  | 5Y  | 10Y  | Since inception
+--- | --- | --- | --- | --- | ---
+GURU NAV  | 30.97%  | 23.85%  | 7.62%  | 12.82%  | 12.62%
+Its own index  | 31.95%  | 24.13%  | 7.90%  | 13.04%  | 12.95%
+--------------------------------------------------------------------------------
+FEATURES & ANALYSIS (https://assets.ctfassets.net/lr0atmu04u9z/6QlAWZcyDP3r4Y3eVnggpQ/2697e0b9961b3324cab9bb84a7c10503/ETF_Insider_April_2026.pdf)
+citeturn1082search12 [wordlim: 200] Published: 6 months ago; Crawled: 6 months ago; By contrast, active strategies can manage these risks and spot alpha opportunities through rigorous fundamental research. ... The share of so-called “Reverse Yankee” supply has risen to its highest level in the past five years, driven primarily by opportunisticETF Insider | April 2026
+Active portfolios, on the other hand, can seek out the strongest issuers and most attractive securities from across the market and capital structure. Also, because passive strategies are designed to track the market as a whole, without distinguishing between individual bonds based on their liquidity, downgrade risk, or environmental, social and governance (ESG) factors, they will tend to miss the early signs of improvement, or deterioration, in credit quality. By contrast, active strategies can manage these risks and spot alpha opportunities through rigorous fundamental research.
+
+An active approach is particularly crucial for euro corporate exposure  
+When it comes to the euro corporate bond markets, the importance of active management is even more pronounced when compared to other regions. The euro market is much more fragmented, with smaller issuer sizes and frequent off-benchmark issues meaning that passive strategies will naturally miss out on opportunities. Issuers also span a wide geographic range, from core European countries to the periphery, and companies across the globe that are looking to issue debt in euros.
+
+We have seen a theme emerge in euro corporate markets over the last decade and accelerating throughout 2025 that favours active management: the increase in US companies issuing euro-denominated debt. The share of so-called “Reverse Yankee” supply has risen to its highest level in the past five years, driven primarily by opportunistic
+
+ETF Insider | April 2026  
+10--------------------------------------------------------------------------------
+Insider Routine Decoder, Filings, Insiders & Ownership strategy | Alphactor | alphactor.ai (https://alphactor.ai/alpha-families/insider_routine_decoder)
+citeturn1082search1 [wordlim: 200] Published: 3 months ago; Crawled: last month; Each insider has a 'routine' footprint (monthly/quarterly 10b5-1 clockwork buys) vs 'opportunistic' trades. ... 0 times picked on its own · 41 times inside a blend (40 beat the stock) · updated 2026-07-06 ... 82bps/month VW alpha on opportunistic-filtered (doubles signal-to-noise)
+
+# Insider Routine Decoder
+
+Updated daily Data needs: low
+
+JF 2012 Journal of Finance Cohen, Malloy & Pomorski 2012, Journal of Finance, 'Decoding Inside Information'Read the paper →
+
+## In plain terms
+
+Many insider trades are clockwork 10b5-1 plans with zero info. Filter them out using trade-date entropy; only opportunistic cluster buys predict +82 bps/month.
+
+## How it works
+
+Each insider has a 'routine' footprint (monthly/quarterly 10b5-1 clockwork buys) vs 'opportunistic' trades. Filter OUT routine insiders — the remaining cluster buys predict 82bps/month. Routine alone is zero.
+
+## Live results
+
+0 times picked on its own · 41 times inside a blend (40 beat the stock) · updated 2026-07-06
+
+How its picks scored vs. buy & hold
+
+Each pick is graded on a recent year it was never tuned on, against simply owning the same stock
+
+Where its edge concentrates
+
+Share of picks in each company-size group that beat buy & hold
+
+How often it trades
+
+Active vs. patient. Bars on the left mean it waits for rare setups; bars on the right mean it trades often
+
+Return vs. buy & hold
+
+How much each pick beat or trailed simply owning the stock over the test year (extreme microcap moves trimmed)
+
+Loading substrate evidence…
+
+## Data dependencies
+
+  * 🏛
+
+SEC insider trades (≥3y history)
+
+Form-4 insider transactions with role, size, and trade direction.
+
+## Expected edge
+
+Reported return
+    82bps/month VW alpha (Cohen-Malloy-Pomorski 2012)
+Tested over
+    1996-2009
+
+82bps/month VW alpha on opportunistic-filtered (doubles signal-to-noise)
+
+## Example tickers where this is likely to fire
+
+BACCGS
+
+Illustrative only, the signal fires based on the live data, not a fixed list.
+
+## Related families
+
+Insider Cluster BuyingFilings, Insiders & Ownership When several insiders buy their own stock within a short window (a 'cluster buy'), it's the most reliable insider signal. Sales are mostly noise.
+
+## Explore Insider Routine Decoder on alphactor.ai
+
+See which tickers this family is currently firing on, with live signals and rankings.
+
+Open universe with this filter →Browse all 644 families
+
+For informational and educational purposes only. Not financial advice. Learn more
+
+Popular stocks
+
+  * AAPL
+  * NVDA
+  * GOOG
+  * GOOGL
+  * MSFT
+  * AMZN
+  * 3711.TW
+  * SPCX
+  * 300750.SZ
+  * TSM
+  * AVGO
+  * TSLA--------------------------------------------------------------------------------
+GitHub - Jareedd/qr-alpha-lab: Falsification-first quant research: walk-forward ML with embargo, cost-aware backtests, Deflated Sharpe gates in CI, and a live paper-trading experiment with a control arm. 386 tests. · GitHub (https://github.com/Jareedd/qr-alpha-lab)
+citeturn1082search2 [wordlim: 200] Crawled: 2 weeks ago; Trial #13 (broad-basket insider cluster-buying, the powered redesign after the top-decile book failed its pre-spend power gate) was a clean null: net Sharpe −0.13, opportunistic clusters no better than routine ones. ... The product is the research process, not the alpha.Full write-up: `writeup/research_note.md` (PDF: `writeup/Galvez_2026_falsification_first.pdf`); every number traces to a row in `research_log.md`.
+Trial #9 showed the famous S&P-deletion rebound is just matched small-loser mean reversion (Greenwood–Sammon, reproduced in-house). Trial #10 ran the carry machine into the liquid tail and found a signal just as significant (t_NW −3.62) that loses money net — the cleanest IC-≠-P&L exhibit in the project. Trial #11 (closed-end-fund discount reversion) cleared every pre-registered bar at once — net Sharpe 1.11, DSR 0.999 — and was then overturned by its own entry-lag diagnostic (1.11 → 0.10 at a one-week lag): a bid-ask-bounce microstructure artifact, not reversion. Trial #12 (fundamental quality, unblocked after a free SEC name→CIK crosswalk plus Tiingo delisting-inclusive prices solved the survivorship gate from trial #1) earned a raw net Sharpe of +0.58 (t_NW +2.30) that collapses to −0.18 in the HML-neutral arm where graduation is judged — the "quality" edge was the value factor in disguise, exactly the failure mode the two-arm design was pre-registered to catch. Trial #13 (broad-basket insider cluster-buying, the powered redesign after the top-decile book failed its pre-spend power gate) was a clean null: net Sharpe −0.13, opportunistic clusters no better than routine ones. The discipline killing its own best-looking numbers is the point. The product is the research process, not the alpha. Full write-up: `writeup/research_note.md` (PDF: `writeup/Galvez_2026_falsification_first.pdf`); every number traces to a row in `research_log.md`.
+
+--------------------------------------------------------------------------------
+Insider Cluster Buying and Form 4 | AlgoriQ | AlgoriQ Blog (https://www.algoriq.ai/en/blog/insider-cluster)
+citeturn1082search3 [wordlim: 200] Published: 2 months ago; Crawled: last week; · Published on August 10, 2026 ... The alpha does not come from all insider activity. ... Routine-versus-opportunistic classification is impossible if you do not have enough history for each insider.
+
+Education
+
+The Strategist's Journey
+
+# 08. Insider Cluster Buying : "When Do Insiders Mean It With Their Own Money?"
+
+When several insiders buy their own stock at once, and not as part of a routine pattern, the signal can matter. But the alpha lives only after the filing date, never the trade date.
+
+Daniel Kim
+
+· Published on August 10, 2026
+
+· 5 min read
+
+· 209 views
+
+* * *
+
+Insider trading is one of the most seductive ideas in finance because the story feels obvious. The people closest to a company know more than the rest of the market. If they use their own money to buy shares, why would you not follow them?
+
+The honest version of the strategy is narrower than that slogan. Not every insider trade carries information. A single small purchase may mean little. A scheduled sale may mean nothing at all. The signal becomes interesting only when several insiders buy together, when the trade looks opportunistic rather than routine, and when you measure it from the filing date rather than cheating with the transaction date.
+--------------------------------------------------------------------------------
+#alphaedge #investmentstrategies #sustainablealpha #institutionalinvestor | Institutional Investor | 14 comments (https://www.linkedin.com/posts/institutional-investor_alphaedge-investmentstrategies-sustainablealpha-activity-7356028268736573440-dUxT)
+citeturn1082search4 [wordlim: 200] Crawled: last month; Alpha Edge North America, taking place on May 13-14, 2026 at The Ritz-Carlton, Fort Lauderdale Register now: https://okt.to/ChRgjs Alpha Edge Europe, taking place on 15-17 April, 2026 at the Hilton Tower Bridge, London Register now: https://okt.to/RFoXC0 Alpha Edge Asia – details to be confirmed Jerry is a powerhouse in private markets—having co-founded Cyrus Capital Partners (a $5B boutique credit & PE platform post-Och-Ziff spinout), led landmark distressed and opportunistic credit trades, and helped seed transformative ventures like Virgin America. ...   * Institutional Investor Insider - Monthly Digest Institutional Investor 3w
+
+# Institutional Investor’s Post
+
+Institutional Investor
+
+71,560 followers
+
+1y
+
+Big news for Alpha Edge! We’re beyond excited to welcome Jerry B. as Senior Advisor to Institutional Investor's 2026 Alpha Edge series. Alpha Edge North America, taking place on May 13-14, 2026 at The Ritz-Carlton, Fort Lauderdale Register now: https://okt.to/ChRgjs Alpha Edge Europe, taking place on 15-17 April, 2026 at the Hilton Tower Bridge, London Register now: https://okt.to/RFoXC0 Alpha Edge Asia – details to be confirmed Jerry is a powerhouse in private markets—having co-founded Cyrus Capital Partners (a $5B boutique credit & PE platform post-Och-Ziff spinout), led landmark distressed and opportunistic credit trades, and helped seed transformative ventures like Virgin America. He formerly had a ten-year tenure as a Board Member and Chair of the Compensation Committee for the University of Virginia Investment Management Company (UVIMCO) and has raised billions in capital for leading institutions. --------------------------------------------------------------------------------
+AMR CLUSTER SEC Filing Analysis | SecBot (https://secbot.trade/report/amr-alpha-metallurgical-resources-inc-cluster-june-4-2026-38522)
+citeturn1082search5 [wordlim: 200] Published: 4 months ago; Crawled: 2 weeks ago; Insider Cluster (2 insiders) ·Filed Jun 4, 2026 ... Alpha Metallurgical Resources, Inc. ...   * No 10b5-1 plan designation or pattern noted; sales appear opportunistic but immaterial
+
+Insider Cluster (2 insiders) ·Filed Jun 4, 2026
+
+# AMR
+
+Alpha Metallurgical Resources, Inc.
+
+• NEUTRAL
+
+Impact 2/10
+
+Horizon immediate Processed 3mo ago
+
+Insider cluster: 2 insiders, $457K total
+
+Actionable Insight • Neutral
+
+Insider activity is immaterial in both dollar terms and relative to market cap. The token purchase by Whitehead alongside his larger sale suggests routine portfolio rebalancing, not a signal. No action warranted.
+
+Direction Neutral
+
+Confidence high
+
+Horizon immediate
+
+Final — all horizons settled through T+60d
+
+AMR ▲ +16.46% at T+60d
+
+NEUTRAL call ✓ call won +16.46% · α vs SPY +12.46% · entry $202.38 → $235.70
+
+Entry anchored
+Jun 4, 2026
+via day open
+
+## Price Chart
+
+## Executive Summary
+
+Two senior insiders at AMR sold a combined $457K in open-market sales over a 7-day window, with the President & COO also making a token $21K purchase. The total sales represent ~0.02% of AMR's $2.7B market cap, well below the 0.1% materiality threshold, and the cluster is dominated by a single large sale from the President & COO. Given the small scale relative to market cap and the mixed buy/sell pattern, this cluster is routine and non-informative.
+
+## Key Financial Metrics
+
+Direction
+
+selling
+
+Total Value
+
+$457.0K
+
+Insiders
+
+2
+
+## Key Facts
+
+  * President & COO Jason Whitehead sold 1,694 shares for $358K on June 3, 2026
+  * EVP & GC Mark Manno sold 460 shares for $99K on June 1, 2026
+  * Whitehead also purchased 99 shares for $21K on June 3, 2026, a token amount
+  * Total cluster value of $457K is only ~0.02% of AMR's $2.7B market cap
+  * No 10b5-1 plan designation or pattern noted; sales appear opportunistic but immaterial
+
+## Financial Impact
+
+Total insider sales of $457K represent ~0.02% of market cap, trivial
+
+insider ownership
+
+## Risk Factors
+
+  * Coal sector headwinds (thermal coal demand decline, regulatory pressure) are the primary risk factors, not insider trading patterns
+  * Analyst consensus is heavily bearish (0% bullish), but this cluster does not confirm or contradict that view
+
+## Market Snapshot
+
+Exchange
+
+NYSE
+
+Sector
+
+Bituminous Coal & Lignite Surface Mining
+
+Analyst Consensus
+
+0% bullish (11 analysts)
+
+## Investment Themes
+
+Traditional Energy
+
+## Documents Analyzed
+
+This report is based on 1 SEC document filed with EDGAR.
+
+Document  | Accession Number
+--- | ---
+CLUSTER Data (Synthetic)  | cluster-AMR-1780606299133
+
+Report published Jun 4, 2026--------------------------------------------------------------------------------
+Alpha Metallurgical Resources Insider Buying: Kenneth S. Courtis Invests $15.1 Million in AMR (https://www.metalschannel.com/article/202606/alpha-metallurgical-resources-insider-buying-kenneth-s-courtis-invests-15-1-in-AMR06152026idirs.htm/)
+citeturn1082search6 [wordlim: 200] Published: 4 months ago; Crawled: last week; # Alpha Metallurgical Resources Insider Buying: Kenneth S. ... By Joel Kornblau, Editor, Metals Channel, Monday, June 15, 2026, 11:03 AM ET ... A single insider purchase can reflect opportunistic timing, but a sequence of purchases over several months often conveys a clearer message: the buyer remained comfortable increasing exposure as the market repriced the shares.
+
+# Alpha Metallurgical Resources Insider Buying: Kenneth S. Courtis Invests $15.1 Million in AMR
+
+By Joel Kornblau, Editor, Metals Channel, Monday, June 15, 2026, 11:03 AM ET
+
+Insider buying can be a meaningful signal when it involves repeated open-market purchases by a company director. In Alpha Metallurgical Resources Inc (AMR), director Kenneth S. Courtis disclosed six purchases over the trailing six-month period totaling approximately $15.1 million. The size, frequency, and pricing of those transactions make AMR insider buying a notable development for investors tracking director conviction and capital allocation signals.
+
+Large insider purchases do not, by themselves, establish a valuation floor or predict near-term share performance. They can, however, provide useful context when assessed alongside the company's trading range, commodity exposure, and ownership trends. In this case, Courtis accumulated shares across multiple dates rather than through a single transaction, suggesting a sustained willingness to add exposure to Alpha Metallurgical Resources over time.
+
+That pattern matters. A single insider purchase can reflect opportunistic timing, but a sequence of purchases over several months often conveys a clearer message: the buyer remained comfortable increasing exposure as the market repriced the shares. For AMR, the concentration of buying in March 2026, followed by another sizable purchase in May, points to continued conviction rather than a one-off gesture.
+
+Investors typically focus on three questions when evaluating insider accumulation:
+
+  * Was the buying substantial? In this case, yes. A $15.1 million aggregate commitment is material in absolute terms.
+  * Was it open-market buying? Yes. Open-market purchases are often watched more closely than option exercises or automatic share grants because they involve fresh capital committed at prevailing market prices.
+  * Was the buying repeated? Yes. Multiple purchases can carry more informational value than a single trade.
+
+## AMR Share Price Context
+
+The chart below shows the one-year performance of AMR shares relative to the 200-day moving average:
+--------------------------------------------------------------------------------
+(PDF) Informational Opacity as a Determinant of Insider Alpha (2010-2025) (https://www.researchgate.net/publication/404003201_Informational_Opacity_as_a_Determinant_of_Insider_Alpha_2010-2025)
+citeturn1082search7 [wordlim: 200] Published: 6 months ago; Crawled: 5 months ago;   * January 2026DOI:10.2139/ssrn.6537339 ... span> This research investigates the relationship between informational opacity and insider Alpha generation in U.S. equity markets from 2010 to 2025. ... returns and identified behavioral differences between routine and opportunistic traders,
+Preprint PDF Available
+
+# Informational Opacity as a Determinant of Insider Alpha (2010-2025)
+
+  * January 2026
+
+DOI:10.2139/ssrn.6537339
+
+Authors:
+
+Noah Fraser-Macduff
+
+  * University of California San Diego
+
+Image
+
+Download file PDFRead file
+
+Preprints and early-stage research may not have been peer reviewed yet.
+
+## Abstract
+
+span> This research investigates the relationship between informational opacity and insider Alpha generation in U.S. equity markets from 2010 to 2025. In isolating high-conviction insider transactions through a Z-score filter and anchoring each transaction to its nearest 8-K disclosure, the study evaluates the Opacity Hypothesis: that the capacity for insiders to generate excess returns is a direct function of the informational opacity surrounding their firm’s local environment. A central observance is a significant divergence between excess returns preceding unscheduled 8-K filings (~2.2% CAR) and those scheduled filings (~0.7% CAR). 
+● Strategic Oversight Directors): Accounting for 35% of the total sample,
+
+Directors are the single most frequent anomalous buyers of equity preceding
+
+unscheduled disclosures. This concentration suggests that alpha-generating
+
+information, such as M&A developments or management shifts, is highly
+
+accessible to those in board-level oversight positions.
+
+● The CSuite Aggregate: While the CEO (n=146) is the most active individual
+
+C-level officer, the collective volume of the CSuite 40% indicates that the
+
+group with the highest internal agency are the primary drivers of Figure 1 ʼs
+
+opportunistic trades.
+
+● External Influence 10% Owners): With 138 occurrences, large block-holders
+
+represent a significant portion of the transaction volume in the unscheduled
+
+sample. While these entities are external to corporate operations, their large
+
+inclusion in the unscheduled sample suggests that on occasion they are also privy
+
+to the same pre-disclosure information as internal executives.
+
+14
+
+IV. Attribution Analysis Continued)
+
+Strategic Divergence
+
+The distribution in Figure 4 aligns with the ‘Opportunisticʼ signal profile identified by
+
+Cohen et al. 2012. Their research established that while all insiders may possess private
+
+information, local non-executive insiders (such as the Directors) often generate the most
+
+significant opportunistic signals. They retain seniority enough for information to be easily
+
+accessible but lack the public scrutiny often faced by CEOs or CFOs.
+
+This is reflected in the dataset, where Directors represent the single most frequent
+
+participants (n=204) in anomalous transactions preceding unscheduled disclosures.
+
+Although their CSuite counterparts possess high internal agency, it is likely that they are
+
+subject to significantly higher regulatory oversight which may constrain their trading
+
+activity. Consequently, the high frequency of Director-led trades in Figure 1 ʼs sample
+
+suggests that the ‘Information Gapʼ is most actively utilized by those who possess local
+
+knowledge while being able to operate with fewer oversight constraints.
+
+15
+
+V. CONCLUSION
+
+Summary of Findings
+
+The evidence presented in this study validates the Opacity Hypothesis: that the ability for
+
+The high-frequency of Director-led transactions
+
+(n=204 | 35% of Sample) suggests that insiders who possess more board-level strategic
+
+oversight are more likely to possess alpha generating knowledge. These findings align
+
+with the ‘Opportunisticʼ signal profile identified by Cohen, Malloy, and Pomorski 2012,
+
+suggesting that Directors occupy a unique position where they can possess high-level
+
+strategic information while operating with fewer regulatory constraints than C-suite
+
+executives.
+
+Ultimately, this studyʼs results suggest that market legibility is the binding constraint on
+
+insider Alpha. In low-legibility environments, where a firmʼs operational reality is better
+
+shielded from real-time public mapping, the ‘Information Gapʼ widens and informed
+
+trading is able to generate measurable and persistent excess returns. In high-legibility
+
+environments, whether due to thorough analyst coverage, predictable reporting cycles, or
+
+macroeconomically sensitive price action, the gap appears to close before it can be
+
+monetized. The implication for market participants and regulators being that informational
+
+--------------------------------------------------------------------------------
+Political network and muted insider trading - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0929119926000659)
+citeturn1082search8 [wordlim: 200] Published: 4 months ago; Crawled: 3 months ago; Date: June 2026 ... This paper examines how political networks influence insider trading in China.
+
+## Journal of Corporate Finance
+
+Date: June 2026
+
+Article: 103007
+
+Volume: Volume 99
+
+## Published by: Elsevier
+
+# Political network and muted insider trading
+
+Author links open overlay panel Wei Chen ^{a}, Xian Gu ^{b}, Iftekhar Hasan ^{c}, Hao Zhao ^{b}, Yun Zhu ^{d}
+
+Show more
+
+Cite
+
+Add to Mendeley
+
+Share
+
+10.1016/j.jcorpfin.2026.103007
+
+
+## Abstract
+
+This paper examines how political networks influence insider trading in China. Using biographical data to construct chairman–politician social networks, we find that firms with stronger political networks engage in significantly less insider trading. The effect is stronger for non-state-owned enterprises (non-SOEs) and for long-standing or high-ranking connections. The muted trading persists during periods when insiders possess valuable private information, including prior to M&A announcements and major policy events. The evidence suggests that personal political networks function as informal governance mechanisms that discipline managerial opportunism when formal governance through state ownership is absent.
+--------------------------------------------------------------------------------
+Most of the insider trading alpha is gone by the time you see the filing: poof! (https://tommijohnsen.substack.com/p/most-of-the-insider-trading-alpha)
+citeturn1082search9 [wordlim: 200] Published: 4 months ago; Crawled: 3 weeks ago; The Cohen-Malloy-Pomorski “routine versus opportunistic” filter, which is the gold standard refinement in the academic literature, would not have caught this. ... This matches a January 2026 SSRN paper by Ozlen and Batumoglu that decomposed the insider trading alpha into the portion that lives between the transaction date and public filing, versus the portion that’s accessible after the filing is public.
+# Tommi Johnsen, PhD
+
+# Most of the insider trading alpha is gone by the time you see the filing: poof!
+
+### An empirical companion to an upcoming literature review on SEC Form 4 trading signals.
+
+Tommi Johnsen, PhD and Svetlana Shasharina, PHD
+
+May 27, 2026
+
+The academic literature on legal insider trading is unusually mature. Sixty years of work, replicated across multiple samples and methodologies, has converged on a few consistent claims: insider purchases carry information, insider sales mostly do not, cluster buying by multiple insiders is stronger than individual transactions, and the alpha has been compressing for decades as the market got faster and broader awareness made the signal harder to harvest.
+
+That literature is almost entirely about long historical samples. What does the signal actually look like now, in production, in 2026? A daily sentiment pipeline I run with a collaborator covers 536 US-listed tickers across the nine GICS sectors, and added an SEC Form 4 channel earlier this month. That precision is statistically incompatible with independent opportunistic buying. It’s the unambiguous signature of an Employee Stock Purchase Plan allocation, a directed-share offering, or some similar programmatic compensation event — many officers receiving small allocations on a single corporate trigger date, dressed up by the data structure as a “cluster.”
+
+The Cohen-Malloy-Pomorski “routine versus opportunistic” filter, which is the gold standard refinement in the academic literature, would not have caught this. That filter looks for officers with a multi-year history of trading the same calendar month each year; the TSM officers had no such history. The signature here is different: dozens of officers buying the same security on the same day at the same price, which only happens when a corporate program triggered the buys.
+
+Adding two simple filters — drop individual transactions below $10,000 from the cluster count, and reject the cluster entirely if 80%+ of buys share the same date and price — removed TSM from subsequent runs while preserving the three real clusters. By the time the daily pipeline surfaced the cluster, the market had already moved. Individual cases: ONON had +2.63% prior-day excess and gave back 0.80% the next day. SPGI had +3.91% prior-day excess and gave back 0.56%. GEHC was the exception with positive excess across all three windows.
+
+This matches a January 2026 SSRN paper by Ozlen and Batumoglu that decomposed the insider trading alpha into the portion that lives between the transaction date and public filing, versus the portion that’s accessible after the filing is public. They found that 70 to 80 percent of the apparent return lives in the unobservable window. The implication for production strategies is unambiguous: most of the alpha is captured by people closer to the transaction than a daily-cadence pipeline can be. Run a strategy on filing-date Form 4 data, act at the next open, and you’re working against a strong headwind that the historical academic backtests don’t account for.
+
+There is one important asymmetry in the data, though. Large single-director purchases — six of them in the window, averaging $1M+ in net value, no 10b5-1 plan — showed a completely different timing pattern. --------------------------------------------------------------------------------
+Institutional Investor - Monthly Newsletter (https://www.linkedin.com/pulse/institutional-investor-insider-monthly-digest-wlgle)
+citeturn1082search10 [wordlim: 200] Published: 1.2 years ago; Crawled: last month; We’re beyond excited to welcome Jerry Bias as Senior Advisor to Institutional Investor's 2026 Alpha Edge series!Jerry is a powerhouse in private markets—having co-founded Cyrus Capital Partners (a $5B boutique credit & PE platform post-Och-Ziff spinout), led landmark distressed and opportunistic credit trades, and helped seed transformative ventures like Virgin America.
+
+Jerry is a powerhouse in private markets—having co-founded Cyrus Capital Partners (a $5B boutique credit & PE platform post-Och-Ziff spinout), led landmark distressed and opportunistic credit trades, and helped seed transformative ventures like Virgin America. He formerly had a ten-year tenure as a Board Member and Chair of the Compensation Committee for the University of Virginia Investment Management Company (UVIMCO) and has raised billions in capital for leading institutions.
+
+With his unmatched expertise across private equity, credit, and alternative investments, Jerry will help elevate AlphaEdge as the must-attend platform for PE and private markets leaders in North America.
+
+If you’re serious about navigating the next era of private equity and alternatives, you’ll want to be in the room with Jerry, our exclusive LP Advisory Board, and 100s of other LPs and GPs shaping the future of private markets. Find out more about how to get involved with these exclusive gatherings.
+
+Learn more about Alpha Edge North America: May 13-14, 2026, in Fort Lauderdale, Florida. Learn more about Alpha Edge Europe: 15-17 April 2026, in London.
+
+* * *
+
+--------------------------------------------------------------------------------
+Insider buying pays in sell-offs, not in calm markets - savng.com (https://savng.com/research/insider-stress/)
+citeturn1082search11 [wordlim: 200] Published: last month; Crawled: today;   * Trades: every open-market insider purchase reported to the SEC on Form 4 from 2006 onward that passes our routine-versus-opportunistic filter; for this piece, every open-market purchase that passes the routine-vs-opportunistic filter. ... Reproduce: node savng-insider-history/sector-findings.js → reports/sector-findings.json (generated 2026-09-10); served at /research-data.
+
+Finding SAVNG Research · September 10, 2026
+
+# Insider buying pays in sell-offs, not in calm markets
+
+The claim. If you had bought the same stock the day after every any opportunistic buy became public, from 2006 to 2026, and held for three months, you would have beaten small caps by +3.7 pts on average when the market was in a sell-off (17,563 trades, very unlikely to be luck) and by +1.4 pts when it was calm (51,850 trades, unlikely to be luck). All states together: +2.0 pts across 69,413 trades.
+
+Copying every opportunistic insider purchase barely beats small caps when the market is calm. The same trades beat the market clearly when it is being sold off.
+
+How we tested it
+
+  * Trades: every open-market insider purchase reported to the SEC on Form 4 from 2006 onward that passes our routine-versus-opportunistic filter; for this piece, every open-market purchase that passes the routine-vs-opportunistic filter.
+  * Entry: first session after the filing became public. Held 63 trading days (about three months).
+--------------------------------------------------------------------------------
+Insider trading with options: Evidence from rank-and-file employees (https://helda.helsinki.fi/server/api/core/bitstreams/58174db3-797e-4f18-913c-582c67c4410b/content)
+citeturn1082search13 [wordlim: 200] Published: 8 months ago; Journal of Corporate Finance 98 (2026) 102963 ... setting, whereas previous work based on US disclosure data often finds evidence of informativeness for opportunistic, non-routine ... are likely to dilute measured one-week alpha even if some trades by primary insiders are informed. ... Cziraki and Gider (2021) report that the median primary insider in the US earns only $464 per year
+M. Vacca
+Journal of Corporate Finance 98 (2026) 102963 
+5.1. Higher-ranked and lower-ranked employees
+Own-company call option purchases by higher-ranked employees in my sample do not exhibit short-horizon profitability in my 
+setting, whereas previous work based on US disclosure data often finds evidence of informativeness for opportunistic, non-routine 
+trades by primary insiders (e.g., Cohen et al., 2012). Four mechanisms jointly reconcile these patterns: pre-announcement trading 
+constraints, sample composition and statistical power, investment horizons, and the choice of trading venue.
+First, throughout most of my sample, Finnish practice imposed pre-announcement closed periods of at least 14 days for primary 
+insiders, as detailed in Section A of the Appendix. These constraints bind exactly when information asymmetry is particularly high. 
+Consistent with this intuition, the pre-earnings spike in informativeness in my data (see Fig. 4) is driven by lower-ranked employees: 
+in the week before earnings, one-week market-adjusted returns after own-company call purchases average roughly 150 bps, and the 
+--------------------------------------------------------------------------------
+Kellen D (https://www.cb.cityu.edu.hk/portfolio/getCV.cfm?checksum=599ED7AE57DD35C1888C55288100907F&eid=weikaili&filename=202785.pdf)
+citeturn1082search14 [wordlim: 200] Published: 6 months ago; Temple University; CICF 2026; ARCS conference; ... Do Foreign Institutional Investors Deter Opportunistic Insider Trading?, with Claire Yurong Hong and Qifei Zhu ... Media Coverage: Wall Street Journal; Alpha Architect; AllAboutAlpha ... SSRN Downloads: >25,000
+--------------------------------------------------------------------------------
+Journal of Banking and Finance 185 (2026) 107609 (https://unipub.lib.uni-corvinus.hu/12514/1/1-s2.0-S0378426625002298-main.pdf)
+citeturn1082search15 [wordlim: 200] Published: 5 months ago; Journal of Banking and Finance 185 (2026) 107609 ... positive alpha? ... Sell-by-plan mandate and opportunistic insider selling:
+

@@ -1,0 +1,484 @@
+PINNACLE DATA PRODUCTS - Backtest Trading Using Futures - Continuously Linked Commodity Contracts - CLC Database
+Home
+|
+Products
+|
+About
+              Us
+|
+Contact Us
+BACKTEST FUTURES WITH OUR CLC
+              DATABASE
+Continuously Linked Commodity Contracts
+Backtest Trading Using Futures
+top
+If you are interested in a backtest futures strategy for trading
+			  then look no further than our CLC Database.  Our CLC Database 
+			  covers the 98 most popular commodities and includes
+              the most active contracts. To seriously backtest futures
+              prices, you must work with the most liquid contracts, and then link
+              them together in the most effective way possible. That's what our
+              specialty is! The roll over days we have selected optimize liquidity
+              and continuity, while avoiding First Notice or Last Trading Days.
+Over 7,000 individual contracts
+              were used to create this unique set of commodity history. Our free
+              support software, DataMaker, allows you to link the contracts together
+              using the highly recommended Reverse (Back) Adjusted Method, and also the Non-Adjusted
+              Method, to see actual prices and the new Ratio Adjusted Method that never
+              goes negative.  Our method of linking is regarded as the BEST! 
+			  Again, if your interest is to backtest futures then this database is for you.
+The correct datasets are the crucial information point that make backtesting 
+			  futures as a sound trading strategy work.  More than ever, futures 
+			  contracts are widely spread and extremely popular among profesional futures traders. 
+			  The problem lies within the delivery schedule.  Each month of delivery is connected 
+			  with a completely different price where the price of the 
+			  underlying asset should stand at the expiration date, a preset date in the future. 
+			  The industry standard for backtesting futures strategies is the creation of one data sequence 
+			  from a stream of contracts to avoid confusion.  Our CLC Databse can meet that industry standard for you!
+But
+              don't take our word for it.... READ WHAT THE EXPERTS ON FUTURES BACKTESTING HAVE TO SAY:
+Jack
+              Schwager (Director Futures Research, Prudential) convincingly demonstrates
+              in his October 1992 "Stocks & Commodities" article
+              that forward and reverse adjusted continuous contracts are the only
+              viable choice for back testing futures series.
+Gibbons Burke (Associate
+              Editor, "Futures" Magazine) writes in the "Futures"
+              July 1992 issue that reverse adjusted continuous contracts "provides
+              the greatest realism". Other methods of linking contracts,
+              such as "perpetual
+contracts", result in distortions.
+Bruce Babcock Jr. (Commodity Traders Report Editor) writes
+              "I use price adjusted continuous contracts exclusively in my
+              own trading".
+NEW ADDITION: RATIO ADJUSTED LINKING METHOD
+: This revolutionary
+              new method of linking commodity contracts is described in detail
+              in the June '98 issue of "FUTURES" magazine. (See "Data:
+              Pros & Cons" by Thomas Strictsman). Ratio adjusted series
+              never go negative and back test far superior to other methods.
+PRICE
+top
+$99.00
+Update Service:
+$20.00/month with a 3 month minimum.
+SAVE! Sign up for 1 year of updates for only $18.00/month.
+INCLUDES
+top
+The CLC
+              Database includes:
+Historical
+                CLC Data for
+98 Commodities
+up to the most recent
+                closing market prices: YOU CONTROL LINKING METHOD
+Both Day
+                Session and Electronic 24Hr Session Data: THE MOST ACCURATE DATA AVAILABLE
+DataMaker
+                Software Package and Software Manual. Internet Downloader included if Update Service is ordered.
+DETAILS
+top
+Supplied
+            Fields:
+Open, High, Low, Settle, Open Interest, Total Volume, Total
+            Open Interest
+STARTING
+              DATES AND ROLL OVER DAYS
+COMMODITY
+START
+                    DATE
+ROLL
+                    DAY
+Australian $$, 
+                   Day Session
+1988
+8th
+                    Day of DM
+Australian $$,
+                    Composite Session
+1990
+8th
+                    Day of DM
+British
+                    Pound, Day Session
+1976
+8th
+                    Day of DM
+British
+                    Pound, Composite Session
+1990
+8th
+                    Day of DM
+CAC40 Index
+1999
+2nd
+                    Thur of DM
+Canadian
+                   $$, Day Session
+1978
+8th
+                    of DM
+Canadian
+                    $$, Composite Session
+1990
+8th
+                    of DM
+Canadian
+                   10yr Bond
+1994
+26th
+                    of MPDM
+Cocoa
+1981
+9th
+                    of MPDM
+Coffee
+1974
+11th
+                    of MPDM
+CRB Futures
+1987
+6th 
+                    of DM
+Copper
+1989
+22nd
+                    of MPDM
+Corn
+1970
+22nd
+                    of MPDM
+Cotton #2
+1973
+15th
+                    of MPDM
+Crude Oil
+1984
+11th 
+                   of MPDM
+Dollar
+                    Index #2
+1989
+8th
+                    of DM
+Dow 
+                   Jones Index, Day Session
+1997
+Thur prior
+                    2nd Fri of DM
+Dow 
+                   Jones Index, Composite session
+1998
+2nd
+                    Thur of DM
+Dow Jones
+                    Mini
+2002
+2nd
+                    Thur of DM
+Dow Jones
+                    Eurostoxx50
+2002
+2nd
+                    Thur of DM
+Dow Jones
+                    Stoxx50
+2002
+2nd
+                    Thur of DM
+Euro, Day (DMark from 1975 to 1999)
+1975
+8th
+                    of DM
+Euro,
+                    Composite Session
+1999
+8th
+                    of DM
+Euro, Bobl
+1999
+26th
+                    of MPDM
+Euro
+                    Bond (Bund)
+1989
+26th
+                    of MPDM
+Eurodollars
+1983
+22nd
+                    of MPDM
+Euro
+                    Schatz
+1999
+26th
+                    of MPDM
+Fed
+                    Funds
+1989
+22nd
+                    of DM
+Feeder
+                    Cattle
+1978
+12th
+                    of DM
+FTSE 100 Index
+1990
+13th
+                    of DM
+German
+                    Dax Index
+1997
+2nd
+                    Thur of DM
+Gilt, 
+                    Long Bond
+1989
+26th
+                    of MPDM
+Gold
+                   (Commex)
+1975
+22nd
+                    of MPDM
+Gold (CBOT 24hr electronic)
+2004
+22nd
+                    of MPDM
+Goldman
+                    Saks
+1993
+9th
+                    of DM
+Hang Seng
+1997
+2nd
+                    Thur of DM
+Heating
+                    Oil
+1980
+11th
+                    of MPDM
+Japenese
+                    Yen, Day Session
+1978
+8th
+                    of DM
+Japanese
+                    Yen, Composite Session
+1990
+8th
+                    of DM
+Live
+                    Cattle
+1971
+27th
+                    of MPDM
+Live
+                    Hogs
+1970
+27th
+                    of MPDM
+Lumber
+1974
+1st
+                    of DM
+Mexican
+                    Peso Ind
+1995
+8th
+                    of DM
+Muni
+                    Bonds
+1986
+26th
+                    of MPDM
+Nasdaq
+                    100
+1996
+2nd
+                    Thur of DM
+Nasdaq,
+                    Mini
+1999
+2nd
+                    Thur of DM
+Natural
+                    Gas
+1991
+18th
+                    of MPDM
+Nikkei
+                    Index
+1991
+3rd
+                    of DM
+Oats
+1975
+22nd
+                    of MPDM
+Orange Juice
+1973
+25nd
+                    of MPDM
+Palladium
+1983
+22th
+                    of MPDM
+Platinum
+1973
+22nd
+                    of MPDM
+Pork Bellies
+1970
+27nd
+                    of MPDM
+RBOB Gasoline (with HU history)
+1985
+11th
+                    of MPDM
+Rough
+                    Rice
+1987
+22nd
+                    of MPDM
+Russell
+                    2000 Index
+1993
+2nd
+                    Thur of DM
+Mini
+                    Russell Index
+2002
+2nd
+                    Thur of DM
+S. & P.
+                    400
+1993
+2nd
+                    Thur of DM
+S. & P.
+                    500, Day Session
+1983
+2nd
+                    Thur of DM
+S. & P.
+                    500, Composite Session
+1994
+2nd
+                    Thur of DM
+S. & P. 500, Mini
+1997
+2nd
+                    Thur of DM
+Silver
+                    (Commex)
+1973
+22nd
+                    of MPDM
+Soybeans
+1969
+22nd
+                    of MPDM
+Soybean
+                    Meal
+1969
+22nd
+                    of MPDM
+Soybean
+                    Oil
+1969
+22nd
+                    of MPDM
+Sterling,
+                    Short
+1989
+3rd
+                    of DM
+Sugar,
+                    #11
+1975
+22nd
+                    of MPDM
+Swiss Frank,
+                    Day Session
+1976
+8th
+                    of DM
+Swiss Frank,
+                    Composite Session
+1990
+8th
+                    of DM
+T-Bonds,
+                    Day Session
+1983
+26th
+                    of MPDM
+T-Bonds,
+                    Composite Session
+1978
+26th
+                    of MPDM
+T-Notes,
+                    2yr, Day Session
+1990
+26th
+                    of MPDM
+T-Notes,
+                    2yr, Composite Session
+1990
+26th
+                    of MPDM
+T-Notes,
+                    5yr, Day Session
+1988
+26th
+                    of MPDM
+T-Notes,
+                    5yr, Composite Session
+1989
+26th
+                    of MPDM
+T-Notes,
+                    10yr, Day Session
+1983
+26th
+                    of MPDM
+T-Notes,
+                    10yr, Composite Session
+1983
+26th
+                    of MPDM
+Wheat, Chicago
+1969
+22nd
+                    of MPDM
+Wheat, 
+                    K.C.
+1977
+22nd
+                    of MPDM
+Wheat, Minn.
+1981
+22nd
+                    of MPDM
+DM =
+                  Delivery Month, MPDM = Month Prior to DM
+OTHER PRODUCTS
+top
+Overview of Databases
+Indices, Breadth, Rates
+IDX Database
+Commodity Futures
+CLC Database
+Individual Contracts
+Commitment of Traders
+COT Database
+Privacy
+        Policy
+|
+Feedback
+|
+Disclaimer

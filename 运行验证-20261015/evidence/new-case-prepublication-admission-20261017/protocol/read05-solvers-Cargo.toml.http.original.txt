@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 4085
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 16:38:01 GMT
+Etag: "1877df6c49034a0ba1341c6095de92281c055735"
+Last-Modified: Fri, 16 Oct 2026 14:18:56 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: AC60:B613F:95D27F:E6689D:6AD252E9
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4948
+X-Ratelimit-Reset: 1792169371
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 52
+X-Xss-Protection: 0
+
+{"name":"Cargo.toml","path":"crates/solvers/Cargo.toml","sha":"1877df6c49034a0ba1341c6095de92281c055735","size":2196,"url":"https://api.github.com/repos/cowprotocol/services/contents/crates/solvers/Cargo.toml?ref=82746c5ad016a5f3cfc4b33cc919f4e522f0a929","html_url":"https://github.com/cowprotocol/services/blob/82746c5ad016a5f3cfc4b33cc919f4e522f0a929/crates/solvers/Cargo.toml","git_url":"https://api.github.com/repos/cowprotocol/services/git/blobs/1877df6c49034a0ba1341c6095de92281c055735","download_url":"https://raw.githubusercontent.com/cowprotocol/services/82746c5ad016a5f3cfc4b33cc919f4e522f0a929/crates/solvers/Cargo.toml","type":"file","content":"W3BhY2thZ2VdCm5hbWUgPSAic29sdmVycyIKdmVyc2lvbiA9ICIwLjEuMCIK\nZWRpdGlvbiA9ICIyMDI0IgoKW2xpYl0KZG9jdGVzdCA9IGZhbHNlCm5hbWUg\nPSAic29sdmVycyIKcGF0aCA9ICJzcmMvbGliLnJzIgoKW1tiaW5dXQpuYW1l\nID0gInNvbHZlcnMiCnBhdGggPSAic3JjL21haW4ucnMiCgpbZGVwZW5kZW5j\naWVzXQphbGxveSA9IHsgd29ya3NwYWNlID0gdHJ1ZSB9CmF4dW0gPSB7IHdv\ncmtzcGFjZSA9IHRydWUgfQpiYXNlNjQgPSB7IHdvcmtzcGFjZSA9IHRydWUg\nfQpiaWdkZWNpbWFsID0geyB3b3Jrc3BhY2UgPSB0cnVlLCBmZWF0dXJlcyA9\nIFsic2VyZGUiXSB9CmJ5dGVzLWhleCA9IHsgd29ya3NwYWNlID0gdHJ1ZSB9\nCmNoYWluID0geyB3b3Jrc3BhY2UgPSB0cnVlIH0KY2hyb25vID0geyB3b3Jr\nc3BhY2UgPSB0cnVlLCBkZWZhdWx0LWZlYXR1cmVzID0gZmFsc2UsIGZlYXR1\ncmVzID0gWyJzZXJkZSJdIH0KY2xhcCA9IHsgd29ya3NwYWNlID0gdHJ1ZSwg\nZmVhdHVyZXMgPSBbImRlcml2ZSIsICJlbnYiXSB9CmNvbmZpZ3MgPSB7IHdv\ncmtzcGFjZSA9IHRydWUgfQpjb25zdC1oZXggPSB7IHdvcmtzcGFjZSA9IHRy\ndWUgfQpkZXJpdmVfbW9yZSA9IHsgd29ya3NwYWNlID0gdHJ1ZSB9CmV0aC1k\nb21haW4tdHlwZXMgPSB7IHdvcmtzcGFjZSA9IHRydWUgfQpldGhycGMgPSB7\nIHdvcmtzcGFjZSA9IHRydWUgfQpmdXR1cmVzID0geyB3b3Jrc3BhY2UgPSB0\ncnVlIH0KaG1hYyA9IHsgd29ya3NwYWNlID0gdHJ1ZSB9Cmh1bWFudGltZS1z\nZXJkZSA9IHsgd29ya3NwYWNlID0gdHJ1ZSB9Cml0ZXJ0b29scyA9IHsgd29y\na3NwYWNlID0gdHJ1ZSB9CmxpcXVpZGl0eS1zb3VyY2VzID0geyB3b3Jrc3Bh\nY2UgPSB0cnVlIH0KbW9rYSA9IHsgd29ya3NwYWNlID0gdHJ1ZSwgZmVhdHVy\nZXMgPSBbImZ1dHVyZSJdIH0KbnVtID0geyB3b3Jrc3BhY2UgPSB0cnVlIH0K\nbnVtYmVyID0geyB3b3Jrc3BhY2UgPSB0cnVlIH0KcHJpY2UtZXN0aW1hdGlv\nbiA9IHsgd29ya3NwYWNlID0gdHJ1ZSB9CnByb21ldGhldXMgPSB7IHdvcmtz\ncGFjZSA9IHRydWUgfQpwcm9tZXRoZXVzLW1ldHJpYy1zdG9yYWdlID0geyB3\nb3Jrc3BhY2UgPSB0cnVlIH0KcmF0ZS1saW1pdCA9IHsgd29ya3NwYWNlID0g\ndHJ1ZSB9CnJlcXdlc3QgPSB7IHdvcmtzcGFjZSA9IHRydWUgfQpzZXJkZSA9\nIHsgd29ya3NwYWNlID0gdHJ1ZSB9CnNlcmRlX2pzb24gPSB7IHdvcmtzcGFj\nZSA9IHRydWUgfQpzZXJkZV93aXRoID0geyB3b3Jrc3BhY2UgPSB0cnVlIH0K\nc2hhMiA9IHsgd29ya3NwYWNlID0gdHJ1ZSB9CnNvbHZlcnMtZHRvID0geyB3\nb3Jrc3BhY2UgPSB0cnVlIH0KdGhpc2Vycm9yID0geyB3b3Jrc3BhY2UgPSB0\ncnVlIH0KdGlrdi1qZW1hbGxvY2F0b3IgPSB7IHdvcmtzcGFjZSA9IHRydWUg\nfQp0b2tpbyA9IHsgd29ya3NwYWNlID0gdHJ1ZSwgZmVhdHVyZXMgPSBbIm1h\nY3JvcyIsICJydC1tdWx0aS10aHJlYWQiLCAic2lnbmFsIiwgInRpbWUiXSB9\nCnRvbWwgPSB7IHdvcmtzcGFjZSA9IHRydWUgfQp0b3dlciA9IHsgd29ya3Nw\nYWNlID0gdHJ1ZSB9CnRvd2VyLWh0dHAgPSB7IHdvcmtzcGFjZSA9IHRydWUs\nIGZlYXR1cmVzID0gWyJsaW1pdCIsICJ0cmFjZSJdIH0KdXJsID0geyB3b3Jr\nc3BhY2UgPSB0cnVlLCBmZWF0dXJlcyA9IFsic2VyZGUiXSB9CgojIFRPRE8g\nT25jZSBzb2x2ZXJzIGFyZSBwb3J0ZWQgYW5kIEUyRSB0ZXN0cyBzZXQgdXAs\nIHNsb3dseSBtaWdyYXRlIGNvZGUgYW5kCiMgcmVtb3ZlL3JlLWV2YWx1YXRl\nIHRoZXNlIGRlcGVuZGVuY2llcy4KYW55aG93ID0geyB3b3Jrc3BhY2UgPSB0\ncnVlIH0KY29udHJhY3RzID0geyB3b3Jrc3BhY2UgPSB0cnVlIH0KbW9kZWwg\nPSB7IHdvcmtzcGFjZSA9IHRydWUgfQpvYnNlcnZlID0geyB3b3Jrc3BhY2Ug\nPSB0cnVlIH0Kc2hhcmVkID0geyB3b3Jrc3BhY2UgPSB0cnVlIH0Kc29sdmVy\nID0geyB3b3Jrc3BhY2UgPSB0cnVlIH0KdHJhY2luZyA9IHsgd29ya3NwYWNl\nID0gdHJ1ZSB9CgpbZGV2LWRlcGVuZGVuY2llc10KZ2xvYiA9ICIwLjMiCm1h\ncGxpdCA9IHsgd29ya3NwYWNlID0gdHJ1ZSB9CnRlbXBmaWxlID0geyB3b3Jr\nc3BhY2UgPSB0cnVlIH0KdGVzdGxpYiA9IHsgd29ya3NwYWNlID0gdHJ1ZSB9\nCgpbZmVhdHVyZXNdCnRva2lvLWNvbnNvbGUgPSBbIm9ic2VydmUvdG9raW8t\nY29uc29sZSJdCgpbbGludHNdCndvcmtzcGFjZSA9IHRydWUK\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/cowprotocol/services/contents/crates/solvers/Cargo.toml?ref=82746c5ad016a5f3cfc4b33cc919f4e522f0a929","git":"https://api.github.com/repos/cowprotocol/services/git/blobs/1877df6c49034a0ba1341c6095de92281c055735","html":"https://github.com/cowprotocol/services/blob/82746c5ad016a5f3cfc4b33cc919f4e522f0a929/crates/solvers/Cargo.toml"}}

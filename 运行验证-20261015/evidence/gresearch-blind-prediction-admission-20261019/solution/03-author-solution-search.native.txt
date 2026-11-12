@@ -1,0 +1,494 @@
+13th Place (Final) 1st Place (6 Weeks In) Final Solution | Kaggle (https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/tom-forbes-13th-place-final-1st-place-6-weeks-in-f)
+citeturn1043search0 [wordlim: 200] Published: 4.5 years ago; Crawled: last month; Tom Forbes. 13th Place (Final) 1st Place (6 Weeks In) Final Solution. https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/tom-forbes-13th-place-final-1st-place-6-weeks-in-f.
+
+13th Place (Final) 1st Place (6 Weeks In) Final Solution — G-Research Crypto Forecasting
+
+# 13th Place (Final) 1st Place (6 Weeks In) Final Solution
+
+G-Research Crypto Forecasting
+
+Solution Writeup · 13th place · May 4, 2022
+
+View the final submission notebook here.
+
+Final Update - Congratulations to all the winners! While this comp was a bit of a rollercoaster, I'm very pleased to get my first competition Gold. Disappointing to just miss out on the top 10 after being there so long, but thats always possible with this type of challenge.
+
+Original post below.
+
+## Initial Comments
+
+First of all thankyou to G-Research and Cambridge Spark for hosting this competition and to the Kaggle staff for making everything run relatively smoothly. I found it so interesting and more open ended than other comps I've competed in, in my short Kaggler career.
+
+It goes without saying that while I'm in 1st Place now there is no guarantee it will stay that way in the next 6 weeks, but I'm confident I'll be there or thereabouts. Hopefully you find this solution useful regardless of the final outcome.
+
+Elephant in the room - there has been a lot of concern about the validity of the final LB results and requests to release the final test data after the competition ends so that competitors can validate their final scores. I think this would be a good idea and should put any concerns to bed. If it's possible & not too much effort for Kaggle to accommodate the request please consider it. However, as far as im concerned my current score seems reasonable based on all the scores I achieved in testing. I have no reason to believe any of the LB scores are incorrect until there is evidence to the contrary.
+
+I would encourage those who feel their score is unexpected share their solutions as the Kaggle community might be able to debug any issues/misunderstandings.
+
+It is obviously difficult to accurately predict crypto prices, but it's possible to find some signal - hopefully this notebook will shed some light on how I got mine.
+
+Disclaimers
+
+  * this was not my exact final submission but very similar
+  * I have removed the dataset containing my pretrained models and scalers - so some commands will error
+
+## Summary
+
+  * 17 features with lagged and timestamp averages for all models.
+  * Ensembles of LGBM and Keras NN models.
+  * Target Engineering and prediction switching.
+  * Some training on extra cryptos outside competition scope.
+
+Test Scores (no lookahead bias):
+
+  * 0.0565 best score on original testing period (Jun 13 2021 - Sep 21 2021)
+  * 0.0475 best score on supplemental_train.csv update. (Sep 21 2021 - Jan 24 2022)
+  * 0.0465 best single model score (Jun 13 2021 - Sep 21 2021)
+
+## External Data
+
+I downloaded free public data from multiple exchange apis (Binance, FTX, Coinbase, Kucoin… etc.) to see if this extra data would improve my models. Some of my final models were trained on extra data. Specifically, using some currencies not included in the competition (e.g. XRP, ZEC…) from Binance seemed to provide a consistent small improvement over multiple timeframes.
+
+## Feature Engineering
+
+I settled on a group of 17 features for all models. There are 8 lagged features - a simple mixture of EMA's, historical returns and historical volatility over various lookback periods - and these features were averaged across timestamps to produce 8 more. Asset_ID was also included. It was tricky to find a group that performed the best consistently across different time periods, adding and removing features from this set seemed to reduce performance. Im sure this isn't the optimal feature set, but this group seemed to work well enough.
+
+It was also important to perform some kind on binning on the features, especially for training the LGBM model. The commonly used reduce_mem_usage function and some rounding functions seemed to provide a suitable amount of bins. I found binning to 500-1000 unique values worked well for any given continuous feature.
+
+## Target Engineering
+
+I think a crucial part of this competition was manipulating the target. Thanks to the work of @alexfir and other Kagglers we found out how the target was being calculated.
+I thought it would be useful to split the target into two components:
+
+  * The forward 15 minute return of an asset
+  * The beta component, where we calculate the mean of forward 15 minute returns for all assets and incorporate past 15 minute returns for the previous 3750 timestamps
+
+As @gengdaiziwang illustrates in his helpful notebook, we can see that in the case where an observation is missing for a given asset, the beta component is automatically set to 0.
+
+But this makes it a completely different target! A model trained on the target given as standard will have to deal with training on a target that randomly switches between a 15 minute forward return for one asset vs what is essentially a 15 minute forward return relative to the other assets - very different things.
+
+The approach I took was to create recreate two targets to represent these two different cases. Then I could train separate models on these recreated targets which would learn the two cases much more effectively.
+See an implementation of this target engineering.
+
+Now, having two models trained on different targets, I can alter my predictions to match the target produced by the api. The api provides all the information i need to figure out whether the beta component will be == 0 because if an asset is missing from an iteration i know that for the next 3750 iterations the beta component == 0 for this asset. Therefore my next 3750 predictions will come from a model that was training on a target constructued without a beta component.
+
+This target engineering and dual model method added roughly 0.01 to my score on the original test period, although this did vary quite significantly for other testing periods.
+
+To summarise as simply as possible:
+
+  * TargetZero = A target based on 15 minute Forward Return only
+  * TargetBeta = TargetZero + Beta Component
+  * ModelZero = Model(s) trained on TargetZero
+  * ModelBeta = Model(s) trained on TargetBeta
+
+## Models
+
+I found LightGBM worked well and was easy to experiment with, i used the weighted correlation evaluation metric and fairly out of the box hyperparameters, tuning didnt seem to add much and wasn't consistent across time periods.
+
+I also used a Keras NN heavily influenced by @lucasmorin's
+excellent notebook. This just worked really well for me out of the box and i couldnt find many ways to improve the architecture or hyperparameters.
+
+Ensembling these two models worked well and added an extra 0.005 to my score (roughly) although the improvement varies in different market regimes. I also experimented with ensembles using catboost and XGboost but the predictions from most gradient boosting models were too highly correlated to provide much ensembling benefit. I found the diversity in predictions between NN and GB were a good match.
+
+I used a fairly simple CV method for training and testing. My folds were based on timestamp values similar to the below:
+
+  * Training Fold 0: 1514764860 - 1570000000
+  * Training Fold 1: 1514764860 - 1580000000
+  * Training Fold 2: 1514764860 - 1590000000
+  * Training Fold 3: 1514764860 - 1600000000
+  * Training Fold 4: 1514764860 - 1610000000
+  * Validation Fold 0: 1570000000 - 1580000000
+  * Validation Fold 1: 1580000000 - 1590000000
+  * Validation Fold 2: 1590000000 - 1600000000
+  * Validation Fold 3: 1600000000 - 1610000000
+  * Validation Fold 4: 1610000000 - 1620000000
+  * Test Fold A: 1615000000 - 1623542400
+  * Test Fold B (Supplemental Train Update): 1623542400 - 1643000000
+
+Since this public lb was useless in this competition, it was essential to construct a robust CV framework to have a reliable benchmark for making improvements to models. It was also important to have test folds in several different market regimes to avoid overfitting to one period.
+
+My best single model was a NN trained on fold 0 data only (surprisingly).
+
+I was fairly selective on picking models to include in the final submission as some folds just trained much better than others and had more consistent outperformance on unseen data.
+
+## Submission
+
+This is almost the exact notebook I submitted for my final predictions. I used lists to store historical data for feature calculations and did most calculations using numpy or lists, avoiding pandas at all costs.
+
+The submission completes in roughly 7 hours.
+
+## What didnt work
+
+  * Layering extra data from different exchanges for the same asset. E.g training on BTC data from Binance + Coinbase + FTX + G-Research version. Didnt harm but didnt improve models significantly either.
+  * Framing as a classification problem - poor results
+  * Hyperparameter tuning LGBM
+  * PCA features
+  * Using all 14 assets features per row / predicting on 14 targets.
+  * Meta modelling GB and NN predictions
+
+## With more time id try
+
+  * Extra Feature engineering
+  * Pytorch implementation of keras NN for ensembling
+  * LSTM
+  * Other model architectures
+
+Author
+
+Tom Forbes
+
+tomforbes
+
+arrow_drop_up[Button: 91]
+
+Share[Button: more_horiz]
+
+## Citation
+
+Tom Forbes. 13th Place (Final) 1st Place (6 Weeks In) Final Solution. https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/tom-forbes-13th-place-final-1st-place-6-weeks-in-f. 2022. Kaggle
+--------------------------------------------------------------------------------
+Tom Forbes | Kaggle (https://www.kaggle.com/tomforbes/writeups)
+citeturn1043search1 [wordlim: 200] Published: 4.6 years ago; Crawled: last month; tomforbes ... 13th Place (Final) 1st Place (6 Weeks In) Final Solution View the final submission notebook here. ... Initial Comments First of all thankyou to G-Research and Cambridge Spark for hosting this competition and to the Kaggle staff for making everything run relatively smoothly.
+
+Competitions Master
+
+3,658 of 210,807
+
+tomforbes
+
+# Tom Forbes
+
+  * work
+
+Quantitative Researcher at Optiver
+
+  * pin_drop
+
+Amsterdam, North Holland, Netherlands
+
+  * date_range
+
+Joined 5 years ago · last seen in the past day
+
+AboutCompetitions (10)Code (8)Discussion (153)Writeups (1)Followers (132)Following (13)
+
+## Public Writeups (1)
+
+search[Input: Search]​
+
+tune All Filters
+
+Tags expand_more
+
+Project Solution Hackathon
+
+Recently Posted
+
+[Input]
+
+  * Solution Writeup
+
+cite7†13th Place (Final) 1st Place (6 Weeks In) Final Solution View the final submission notebook here. Final Update - Congratulations to all the winners! While this comp was a bit of a rollercoaster, I'm very pleased to get my first competition Gold. Disappointing to just miss out on the top 10 after being there so long, but thats always possible with this type of challenge. Original post below. Initial Comments First of all thankyou to G-Research and Cambridge Spark for hosting this competition and to the Kaggle staff for making everything run relatively smoothly. I found it so interesting and more open ended than other comps I've competed in, in my short Kaggler career. It goes without saying that while I'm in 1st Place now there is no guarantee it will stay that way in the next 6 weeks, but I'm confident I'll be there or thereabouts. Hopefully you find this solution useful regardless of the final outcome. Elephant in the room - there has been a lot of concern about the validity of the final LB results and requests to release the final test data after the competition ends so that competitors can validate their final scores. I think this would be a good idea and should put any concerns to bed. If it's possible &amp; not too much effort for Kaggle to accommodate the request please consider it. However, as far as im concerned my current score seems reasonable based on all the scores I achieved in testing. I have no reason to believe any of the LB scores are incorrect until there is evidence to the contrary. I would encourage those who feel their score is unexpected share their solutions as the Kaggle community might be able to debug any issues/misunderstandings. It is obviously difficult to accurately predict crypto prices, but it's possible to find some signal - hopefully this notebook will shed some light on how I got mine. Disclaimers this was not my exact final submission but very similar I have removed the dataset containing my pretrained models and scalers - so some commands will error Summary 17 features with lagged and timestamp averages for all models. Ensembles of LGBM and Keras NN models. Target Engineering and prediction switching. Some training on extra cryptos outside competition scope. Test Scores (no lookahead bias): 0.0565 best score on original testing period (Jun 13 2021 - Sep 21 2021) 0.0475 best score on supplemental_train.csv update. (Sep 21 2021 - Jan 24 2022) 0.0465 best single model score (Jun 13 2021 - Sep 21 2021) External Data I downloaded free public data from multiple exchange apis (Binance, FTX, Coinbase, Kucoin… etc.) to see if this extra data would improve my models. Some of my final models were trained on extra data. Specifically, using some currencies not included in the competition (e.g. XRP, ZEC…) from Binance seemed to provide a consistent small improvement over multiple timeframes. Feature Engineering I settled on a group of 17 features for all models. There are 8 lagged features - a simple mixture of EMA's, historical returns and historical volatility over various lookback periods - and these features were averaged across timestamps to produce 8 more. Asset_ID was also included. It was tricky to find a group that performed the best consistently across different time periods, adding and removing features from this set seemed to reduce performance. Im sure this isn't the optimal feature set, but this group seemed to work well enough. It was also important to perform some kind on binning on the features, especially for training the LGBM model. The commonly used reduce_mem_usage function and some rounding functions seemed to provide a suitable amount of bins. I found binning to 500-1000 unique values worked well for any given continuous feature. Target Engineering I think a crucial part of this competition was manipulating the target. Thanks to the work of @alexfir and other Kagglers we found out how the target was being calculated. I thought it would be useful to split the target into two components: The forward 15 minute return of an asset The beta component, where we calculate the mean of forward 15 minute returns for all assets and incorporate past 15 minute returns for the previous 3750 timestamps As @gengdaiziwang illustrates in his helpful notebook, we can see that in the case where an observation is missing for a given asset, the beta component is automatically set to 0. But this makes it a completely different target! A model trained on the target given as standard will have to deal with training on a target that randomly switches between a 15 minute forward return for one asset vs what is essentially a 15 minute forward return relative to the other assets - very different things. The approach I took was to create recreate two targets to represent these two different cases. Then I could train separate models on these recreated targets which would learn the two cases much more effectively. See an implementation of this target engineering. Now, having two models trained on different targets, I can alter my predictions to match the target produced by the api. The api provides all the information i need to figure out whether the beta component will be == 0 because if an asset is missing from an iteration i know that for the next 3750 iterations the beta component == 0 for this asset. Therefore my next 3750 predictions will come from a model that was training on a target constructued without a beta component. This target engineering and dual model method added roughly 0.01 to my score on the original test period, although this did vary quite significantly for other testing periods. To summarise as simply as possible: TargetZero = A target based on 15 minute Forward Return only TargetBeta = TargetZero + Beta Component ModelZero = Model(s) trained on TargetZero ModelBeta = Model(s) trained on TargetBeta Models I found LightGBM worked well and was easy to experiment with, i used the weighted correlation evaluation metric and fairly out of the box hyperparameters, tuning didnt seem to add much and wasn't consistent across time periods. I also used a Keras NN heavily influenced by @lucasmorin's excellent notebook. This just worked really well for me out of the box and i couldnt find many ways to improve the architecture or hyperparameters. Ensembling these two models worked well and added an extra 0.005 to my score (roughly) although the improvement varies in different market regimes. I also experimented with ensembles using catboost and XGboost but the predictions from most gradient boosting models were too highly correlated to provide much ensembling benefit. I found the diversity in predictions between NN and GB were a good match. I used a fairly simple CV method for training and testing. My folds were based on timestamp values similar to the below: Training Fold 0: 1514764860 - 1570000000 Training Fold 1: 1514764860 - 1580000000 Training Fold 2: 1514764860 - 1590000000 Training Fold 3: 1514764860 - 1600000000 Training Fold 4: 1514764860 - 1610000000 Validation Fold 0: 1570000000 - 1580000000 Validation Fold 1: 1580000000 - 1590000000 Validation Fold 2: 1590000000 - 1600000000 Validation Fold 3: 1600000000 - 1610000000 Validation Fold 4: 1610000000 - 1620000000 Test Fold A: 1615000000 - 1623542400 Test Fold B (Supplemental Train Update): 1623542400 - 1643000000 Since this public lb was useless in this competition, it was essential to construct a robust CV framework to have a reliable benchmark for making improvements to models. It was also important to have test folds in several different market regimes to avoid overfitting to one period. My best single model was a NN trained on fold 0 data only (surprisingly). I was fairly selective on picking models to include in the final submission as some folds just trained much better than others and had more consistent outperformance on unseen data. Submission This is almost the exact notebook I submitted for my final predictions. I used lists to store historical data for feature calculations and did most calculations using numpy or lists, avoiding pandas at all costs. The submission completes in roughly 7 hours. What didnt work Layering extra data from different exchanges for the same asset. E.g training on BTC data from Binance + Coinbase + FTX + G-Research version. Didnt harm but didnt improve models significantly either. Framing as a classification problem - poor results Hyperparameter tuning LGBM PCA features Using all 14 assets features per row / predicting on 14 targets. Meta modelling GB and NN predictions With more time id try Extra Feature engineering Pytorch implementation of keras NN for ensembling LSTM Other model architectures Mar 16, 2022 · G-Research Crypto Forecasting · 13th Place
+
+### Tom Forbes
+
+tomforbes
+
+### Writeup activity
+
+Creation
+
+1 Solution Writeups
+
+0 Project Writeups
+
+0 Hackathon Writeups
+
+Stats
+
+24 comments on their Writeups--------------------------------------------------------------------------------
+Kaggle G-research Winner’s solutions 학습 | Wooseok’sDev Blog (https://hoeen.github.io/study/2022-05-11-gresearch_solution/)
+citeturn1043search2 [wordlim: 200] Published: 4.4 years ago; Crawled: 2.6 years ago; 캐글 G-research 암호화폐 예측 대회 공개 solution 학습 내용 ... submission 기한이 지나고 나서 solution 들이 공개되었는데, 그 중에서 Tom Forbes (최종 13등)와 sugghi (최종 3등)의 솔루션을 공부해 보았다.
+
+# Kaggle G-research Winner’s solutions 학습
+
+11 May 2022 in Study
+
+캐글 G-research 암호화폐 예측 대회 공개 solution 학습 내용
+
+Kaggle의 G-research crypto forecasting 대회에 참여하였고, Koreancow 팀명으로 참여하여 815/1947등 (상위 42%)의 성적을 거두었다. 처음으로 진행중인 competition에 참여하여 모델을 설계하고, 제출에 성공하여 evaluate 까지 받아 본 매우 뜻깊은 경험이었다. 아직 나의 데이터 분석 및 ML 모델링 능력이 많이 부족함을 여실히 깨달았지만, 좋은 첫 발이다.
+
+조만간 내가 제출한 notebook을 정리하여 포스팅할 예정이다.
+
+submission 기한이 지나고 나서 solution 들이 공개되었는데, 그 중에서 Tom Forbes (최종 13등)와 sugghi (최종 3등)의 솔루션을 공부해 보았다. 참여한 대회의 솔루션을 공부해 보는 것은 처음이었고, 그래서 매우 집중이 잘 되었고 내가 무엇을 보완해야 하는지, 무엇이 부족했는지 생각해 볼 수 있었다.
+
+아래는 간략한 정리 내용이다.
+
+## Solution of 3rd
+
+### Overview of the model
+
+  * 종가 (Close)만 사용됨.
+  * 7-fold cv with LightGBM
+  * 앙상블을 limited inference time 때문에 쓰지 못했다.
+
+### About the data used for training
+
+  * train 의 start date가 화폐마다 많이 달랐다.
+  * 빌드한 모델은 각 화폐 변동의 평균을 다루기 때문에, 훈련과 평가셋에서 크게 다르면 안된다고 생각했다.
+  * 결측치는 많지 않기 때문에 충분히 화폐들이 존재하는 기간만 가지고 훈련했다.
+  * 결측치를 forward fill (앞으로 채우기)로 채워서 rolling window 를 이용할때 오류가 나지 않게 했다. 이 때, 전체에서 forward fill 을 쓰면 긴 결측기간 때문에 데이터 질이 나빠질 것을 우려하여 fill의 limit 을 설정하였다 (어떻게?)
+
+### Feature engineering
+
+  * 암호화폐 가치가 증가하는 추세이기 때문에, 평가 기간에 상관없이 변화의 크기를 확실히 파악하려 했다.
+
+  * 다수의 lag period ? 를 보기 위해 두가지 feature을 추가했다.
+
+    1. log (현재가 / 특정 기간의 평균) 기간 - 60, 300, 900 으로 설정함 (아마 60분, 300분, 900분인듯)
+
+    2. log (현재가 / 어떤 기간 이전의 가격)
+
+이를 만들기 위해 모든 암호화폐를 평균내었다.
+
+  * 특정 암호화폐와 전체 암호화폐 평균의 차이도 feature로 추가되었다.
+
+## Solution - Tom Forbes
+
+### Summary
+
+17 features with lagged and timestamp averages for all models.
+
+  * 기존의 9개 feature (timestamp를 포함시킴) 에 EMA (Exponential Moving Average), historical returns and historical volatility over various lookback periods를 추가했다.
+8 개의 추가 feature:
+
+    * return30, return120 : 30분, 120분 전 시점에 비한 수익률
+    * volatility15, 200 : 15 - 500분전 동안의 변동성 / 200 - 2000분전 동안의 변동성
+
+    * ema21, 35, 80, 250 : 21분, 35분, 80분, 250분 전부터 현 시점까지의 EMA (즉 21,35,80,250분 동안의 EMA)
+
+Ensembles of LGBM and Keras NN models.
+
+  * ensemble 은 복잡한 것이 아니고 단순 평균 내는 방식이다.
+
+Target Engineering and prediction switching.
+
+( based on link )
+
+  * TargetZero = A target based on 15 minute Forward Return only
+  * TargetBeta = TargetZero + Beta Component
+  * ModelZero = Model(s) trained on TargetZero
+  * ModelBeta = Model(s) trained on TargetBeta
+
+Image: image
+
+train 내 결측치는 이전값으로 채워진 것으로 보이나, train 내 target은 단지 NaN padding된 데이터로부터 계산된 것으로 보여짐. 이에 따라 타겟을 2개로 분할하여 독립된 모델로 학습시킴.
+
+  1. 기존 15분 이후 수익률
+  2. [beta component] 주어진 자산과 시장과의 관계. 관계없을시 0이 됨.
+
+Some training on extra cryptos outside competition scope.--------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/c/g-research-crypto-forecasting/leaderboard)
+citeturn1043search3 [wordlim: 200] Crawled: last month; This leaderboard reflects the final standings. ...   * #Team Members Score Entries Last Solution ...   * 13 Tom Forbes
+
+## Leaderboard
+
+file_download Raw Data
+
+This competition has completed. This leaderboard reflects the final standings.
+
+Prize Winners
+
+  * #Team Members Score Entries Last Solution
+
+  * 1 Meme Lord Capital
+
+Image: gold medal0.0326
+
+2 5y
+
+  * 2 Nathaniel Maddux
+
+Image: gold medal0.0283
+
+2 5ydescription
+
+  * 3 GABA
+
+Image: gold medal0.0232
+
+2 5ydescription
+
+  * 4 cmanning
+
+Image: gold medal0.0229
+
+2 5y
+
+  * 5 Stamford009
+
+Image: gold medal0.0225
+
+2 5y
+
+  * 6 yuto
+
+Image: gold medal0.0203
+
+2 5y
+
+  * 7 Patrick Yam
+
+Image: gold medal0.0202
+
+2 5ydescription
+
+  * 8 404NOTFOUND
+
+Image: gold medal0.0201
+
+2 5y
+
+  * 9 bturan19
+
+Image: gold medal0.0194
+
+2 5ydescription
+
+  * 10 mark4h
+
+Image: gold medal0.0194
+
+2 5y
+
+  * 11 Mark O'Connell
+
+Image: gold medal0.0192
+
+2 5y
+
+  * 12 Shady Mokh
+
+Image: gold medal0.0190
+
+2 5y
+
+  * 13 Tom Forbes
+
+Image: gold medal0.0187
+--------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/c/g-research-crypto-forecasting/discussion/327751)
+citeturn1043search4 [wordlim: 200] Crawled: last month; ### G-Research Crypto Forecasting Solution & Code Summary (🥇Gold Medal) ... Rank  | Team  | Score  | Explain  | Code  | Paper  | Github ... 13  | Tom Forbes  | 0.0187  | 📘  | 📕  | -  | -
+
+# G-Research Crypto Forecasting
+
+Use your ML expertise to predict real crypto market data
+
+Image
+
+## G-Research Crypto Forecasting
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+Kritdikoon Woraitthinan · 560th in this Competition · Posted 4 years ago
+
+arrow_drop_up[Button: 2]
+
+[Button: more_vert]
+
+### G-Research Crypto Forecasting Solution & Code Summary (🥇Gold Medal)
+
+Congratulation to all winners! Thanks for sharing your solution.
+
+G-Research Crypto Forecasting Solution & Code Summary (🥇Gold Medal)
+
+Rank  | Team  | Score  | Explain  | Code  | Paper  | Github
+--- | --- | --- | --- | --- | --- | ---
+1  | Meme Lord Capital  | 0.0326  | 📘  | 📕tensorflow
+📕pytorch  | -  | -
+2  | Nathaniel Maddux  | 0.0283  | 📘  | -  | -  | -
+3  | GABA  | 0.0232  | 📘  | 📕Train
+📕Infer  | -  | -
+4  | cmanning  | 0.0229  | -  | -  | -  | -
+5  | Stamford009  | 0.0225  | -  | -  | -  | -
+6  | yuto  | 0.0203  | -  | -  | -  | -
+7  | Patrick Yam  | 0.0202  | 📘  | -  | -  | -
+8  | 404NOTFOUND  | 0.0201  | -  | -  | -  | -
+9  | bturan19  | 0.0194  | 📘  | -  | -  | -
+10  | mark4h  | 0.0194  | -  | -  | -  | -
+11  | Mark O'Connell  | 0.0192  | -  | -  | -  | -
+12  | Shady Mokh  | 0.0190  | -  | -  | -  | -
+13  | Tom Forbes  | 0.0187  | 📘  | 📕  | -  | -
+
+> All credit goes to winners who share solution and notebook Please upvote those notebooks. 👍
+
+## 3 Comments
+
+Hotness
+
+[Input]
+
+valindor
+
+Posted 4 years ago
+
+arrow_drop_up[Button: 2]
+
+[Button: more_vert]
+
+How do we know first place used Jane Street 1st place model?
+
+DataRegressor
+
+Posted 4 years ago
+
+· 1671st in this Competition
+
+arrow_drop_up[Button: 0]
+
+[Button: more_vert]
+
+I can't understand the mindset of those downvoters!
+
+liyang.chen
+
+Posted 4 years ago
+
+· 23rd in this Competition
+
+arrow_drop_up[Button: 2]
+
+[Button: more_vert]
+
+I guess it is because the first place solution is for Janestreet competition, not this one.--------------------------------------------------------------------------------
+G-Research Crypto Forecasting [tabular data, finance, time series analysis] - Standings - CLIST (https://clist.by/standings/g-research-crypto-forecasting-tabular-data-finance-time-series-analysis-38475122/)
+citeturn1043search5 [wordlim: 200] Published: 4.5 years ago; Crawled: last month; Standings G-Research Crypto Forecasting [tabular data, finance, time series analysis] May 3, 2022 ... 13  | Tom Forbes Image tomforbes  | 0.02  | Jan. 31, 2022, 9:42 p.m.
+
+Standings G-Research Crypto Forecasting [tabular data, finance, time series analysis] May 3, 2022
+
+updated 3 years, 9 months ago
+
+Rank  | Handle  | Score  | Last Submission  | Delta Rank  | Delta Score
+1  | Meme Lord Capital Image joseantonioalatorre | Image eduardopeynetti  | 0.03  | Jan. 31, 2022, 6:39 p.m.  | 1811  | 0.033
+2  | Nathaniel Maddux Image nathanrm  | 0.03  | Feb. 1, 2022, 7 p.m.  | 1445  | 0.028
+3  | GABA Image sugghi  | 0.02  | Feb. 1, 2022, 4:04 p.m.  | 1907  | 0.023
+4  | cmanning Image cmanning  | 0.02  | Jan. 29, 2022, 11:25 p.m.  | 1698  | 0.023
+5  | Stamford009 Image stamford009  | 0.02  | Jan. 27, 2022, 2:05 p.m.  | 1146  | 0.022
+6  | yuto Image inumaru9n  | 0.02  | Jan. 24, 2022, 4:09 p.m.  | 1430  | 0.020
+7  | Patrick Yam Image wimwim  | 0.02  | Feb. 1, 2022, 11:20 a.m.  | 1773  | 0.020
+8  | 404NOTFOUND Image noi031 | Image ctrlcc | Image limeijin | Image kakarroto | Image jungle173770  | 0.02  | Jan. 24, 2022, 1:58 a.m.  | 1457  | 0.020
+9  | bturan19 Image bturan19  | 0.02  | Jan. 26, 2022, 7:17 p.m.  | 1534  | 0.019
+10  | mark4h Image mark4h  | 0.02  | Jan. 30, 2022, 11:42 a.m.  | 1670  | 0.019
+11  | Mark O'Connell Image markajoc  | 0.02  | Dec. 8, 2021, 9:10 a.m.  | 579  | 0.019
+12  | Shady Mokh Image shadymokh  | 0.02  | Jan. 27, 2022, 8:40 a.m.  | 1245  | 0.019
+13  | Tom Forbes Image tomforbes  | 0.02  | Jan. 31, 2022, 9:42 p.m.  | 1794  | 0.019
+14  | T. Morimura Image takeshimorimura  | 0.02  | Feb. 1, 2022, 11:02 a.m.  | 1867  | 0.019
+15  | don't overfit Image tommy1028  | 0.02  | Jan. 27, 2022, 12:51 a.m.  | 1562  | 0.019
+16  | Ernesto Budia Image ebudia  | 0.02  | Jan. 27, 2022, 1:42 p.m.  | 1506  | 0.018
+17  | Never$ Image matrixneo  | 0.02  | Feb. 1, 2022, 5:28 p.m.  | 1825  | 0.018
+--------------------------------------------------------------------------------
+*Ann. rheum. Dis. (1959), 18, 149.* (https://ard.bmj.com/content/annrheumdis/18/2/local/admin.pdf)
+citeturn1043search12 [wordlim: 200] Crawled: yesterday; G. ... The IV European Congress of Rheumatology is being organized by the Association for Rheumatism Research and Treatment in Turkey, and will be held at Istanbul on September 28-30, 1959. ... Tom Williams, M.P., LL.D. ... | Vice-Chairmen | Major Ellert Forbes, M.C., T.D.
+--------------------------------------------------------------------------------
+SBIR/STTR Program Participants List | PDF | Photonics | Physical Sciences (https://pt.scribd.com/document/645244321/Award-Abstracts-for-Phase-II-Conference-Website-FINAL-05162018-xlsx)
+citeturn1043search6 [wordlim: 200] Crawled: 3.4 years ago; uild on the successful Cerenkov BoroSilicate Glass (CBSG) detector prototyping in Phase I/IB to develop a small, low cost, mod ... ased on three innovations that differentiate this solution from others: (1) a scientific Game Research and Development (GR&D) p

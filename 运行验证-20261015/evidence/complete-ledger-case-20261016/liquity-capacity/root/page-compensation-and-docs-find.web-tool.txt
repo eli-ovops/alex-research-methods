@@ -1,0 +1,169 @@
+Liquity V2 TVL, Fees & Revenue (https://defillama.com/protocol/liquity-v2)
+citeturn497view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn495view0","pattern":"Gas Compensation"}); Total lines: 179
+L0: cite0†Navigate to DeFi Dashboard L1: 
+L2: cite0†Home cite1†Metrics cite2†Tools cite3†Chains cite4†Yields cite5†Stablecoins cite6†RWAUpgraded cite7†Exchanges cite8†MiCA cite9†Tokens Equities
+L3: 
+L4: cite10†Rankings cite11†Sectors cite12†Industries cite13†Earnings Calendar L5: 
+L6: cite14†Pre-IPO cite15†Market Makers cite16†Universal Token Rating cite17†Support cite18†API & MCP†api-docs.defillama.com cite19†DEX Aggregator†swap.defillama.com cite20†Investor Relations†investors.defillama.com cite21†DefiLlama Research L7: 
+L8: cite0†Overview DeFi
+L9: 
+L10: cite3†Chains cite22†Categories cite4†Yields cite23†Hacks L11: 
+L12: Metrics
+L13: cite1†All Metrics cite24†DEXs cite25†Perps cite26†Revenue cite27†Fees cite28†Holders Revenue L14: 
+L15: Tools
+L16: 
+L17: cite2†All Tools cite29†Crypto Cards cite30†ChainList†chainlist.org cite31†Dashboard Builder cite32†Watchlist cite33†Rewards L18: 
+L19: Assets
+L20: 
+L21: cite9†Tokens cite5†Stablecoins cite6†RWAsUpgraded cite34†ETFs cite16†Universal Token Rating L22: 
+L23: Equities
+L24: 
+L25: cite10†Rankings cite11†Sectors cite12†Industries cite13†Earnings Calendar cite14†Pre-IPO L26: 
+L27: Exchanges
+L28: 
+L29: cite7†Exchanges cite8†MiCA cite35†Reserves cite15†Market Makers L30: cite21†DefiLlama Research cite20†Investor Relations†investors.defillama.com cite17†Support cite18†API & MCP†api-docs.defillama.com cite19†DEX Aggregator†swap.defillama.com L31: 
+L32: * * *
+L33: 
+L34: Premiumcite36†7-day trial L35: 
+L36: cite36†Pricing cite37†Mobile App cite38†LlamaAI cite39†Downloads cite31†Custom Dashboards cite40†Sheets cite41†LlamaFeed†llamafeed.io L37: 
+L38: More About Us
+L39: 
+L40: * * *
+L41: 
+L42: cite0†Navigate to DeFi Dashboard cite38†Try LlamaAI L43: cite42†Image: Logo of Liquity V2†icons.llamao.fi Liquity V2[Button: Information][Button: TVL][Button: Yields][Button: Fees and Revenue][Button: Forks]
+L44: 
+L45: cite42†Image: Logo of Liquity V2†icons.llamao.fi L46: # Liquity V2(LQTY)
+L47: 
+L48: Add to watchlist
+L49: 
+L50: Total Value Locked$96.66m
+L51: 
+L52: ## TVL by Chain
+L53: 
+L54: Ethereum$96.66m
+L55: 
+L56: ## Key Metrics
+L57: 
+L58: cite43†Image L59: 
+L60: Fees 30d$194,776
+L61: 
+L62: Fees 30d by chain
+L63: 
+L64: Ethereum$194,776
+L65: 
+L66: Fees 7d$45,417
+L67: 
+L68: Ethereum$45,417
+L69: 
+L70: Fees 24h$6,975
+L71: 
+L72: Ethereum$6,975
+L73: 
+L74: Cumulative Fees$3.11m
+L75: 
+L76: Ethereum$3.11m
+L77: 
+L78: Revenue 30d$31,272
+L79: 
+L80: Revenue 30d by chain
+L81: 
+L82: Ethereum$31,272
+L83: 
+L84: Revenue 7d$6,606
+L85: 
+L86: Ethereum$6,606
+L87: 
+L88: Revenue 24h$934
+L89: 
+L90: Ethereum$934
+L91: 
+L92: Cumulative Revenue$665,064
+L93: 
+L94: Ethereum$665,064
+L95: 
+L96: [Button: Report incorrect data].png
+L97: 
+L98: Loading chart...
+L99: ## Protocol Information
+L100: 
+L101: Liquity V2 is a decentralized and immutable borrowing protocol that allows you to set your own interest rate and draw loans against ETH, wstETH and rETH.
+L102: 
+L103: cite44†Website†www.liquity.org cite45†X/Twitter†x.com L104: 
+L105: Category:cite46†CDP L106: 
+L107: Audits:Yes
+L108: ## Methodology
+L109: 
+L110: cite47†TVL: Total value of all coins held in the smart contracts of the protocolView code on GitHub†github.com cite48†Fees: Total interest, redemption fees paid by borrowers and liquidation gas compensate.View code on GitHub†github.com cite48†Revenue: 25% of borrow interests are collected as protocol liquidity incentives.View code on GitHub†github.com L111: 
+L112: ## Yields
+L113: 
+L114: Pools Tracked 3
+L115: 
+L116: Average Supply APY 5.23%
+L117: 
+L118: View all Yields
+L119: ## Competitors
+L120: 
+L121: [Button: Create comparison dashboard]
+L122: 
+L123: cite49†Sky Lending ($5.721b) cite50†USDD ($1.235b) cite51†Liquity V1 ($174.84m) cite52†crvUSD ($136.65m) cite53†Reservoir Protocol ($69.62m) cite54†Frankencoin ($61.22m) cite55†Inverse Finance FiRM ($32.86m) cite56†BIMA CDP ($10.92m) cite57†Inverse Finance Frontier ($5.66m) cite58†Abracadabra Spell ($4.78m) L124: ## Frequently asked questions
+L125: 
+L126: What is Liquity V2's TVL?
+L127: 
+L128: Liquity V2 currently has $96.66m in total value locked. TVL has increased 1.3% over the past 30 days.
+L129: 
+L130: What chains does Liquity V2 operate on?
+L131: 
+L132: Liquity V2 operates on cite59†Ethereum . cite59†Ethereum holds the largest share at 100%.
+L133: 
+L134: How much has Liquity V2 generated in fees and revenue?
+L135: Over the past 30 days, Liquity V2 generated $194,776 in fees. Of that, $31,272 was protocol revenue. Based on the trailing year, the annualized rate is $1.91m in fees and $414,502 in revenue.
+L136: 
+L137: How does Liquity V2's TVL compare to similar protocols?
+L138: Among cite46†CDP protocols tracked by DefiLlama, Liquity V2 ranks #5 by TVL. The category holds $7.84b across 199 protocols, and Liquity V2 accounts for 1.2% of that total. Other leading protocols include cite49†Sky Lending , cite50†USDD , cite51†Liquity V1 , cite52†crvUSD , cite53†Reservoir Protocol , cite54†Frankencoin , cite55†Inverse Finance FiRM , cite56†BIMA CDP , cite57†Inverse Finance Frontier , and cite58†Abracadabra Spell .
+L139: 
+L140: How many yield pools does Liquity V2 have?
+L141: DefiLlama tracks 3 Liquity V2 yield pools with an average APY of 5.2%.
+L142: 
+L143: Add Metrics TVL Fees Events
+L144: 
+L145: [Input]USD[Input]ETH
+L146: 
+L147: [Input]D[Input]W[Input]M[Input]Q[Input]Y[Input]C
+L148: 
+L149: Embed chart
+L150: 
+L151: .csv.png
+L152: ## Income statement for Liquity V2
+L153: 
+L154: [Input]Yearly[Input]Quarterly[Input]Monthly[Input]Cumulative
+L155: 
+L156: .csv
+L157: 
+L158: cite43†Image L159:  | Q4 2026*  | Q3 2026  | Q2 2026  | Q1 2026  | Q4 2025  | Q3 2025  | Q2 2025  | Q1 2025
+L160: --- | --- | --- | --- | --- | --- | --- | --- | ---
+L161: Gross Protocol Revenue  | $90.78K  | $530.28K  | $387.32K  | $413.69K  | $597.9K  | $636.08K  | $230.33K  | $219.1K
+L162: Borrow Interest  | $57.16K  | $457.71K  | $327.05K  | $368.69K  | $535.89K  | $548.1K  | $179.56K  | $186.08K
+L163: Redemption Fees  | $33.59K  | $72.57K  | $59.14K  | $36.82K  | $48.38K  | $87.96K  | $50.5K  | $26.38K
+L164: Gas Compensation  | $37  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+L165: Cost of Revenue  | $76.49K  | $415.85K  | $305.56K  | $321.52K  | $463.93K  | $499.05K  | $185.44K  | $172.57K
+L166: Borrow Interest To Stability Pools  | $42.87K  | $343.29K  | $245.29K  | $276.51K  | $401.92K  | $411.08K  | $134.67K  | $139.56K
+L167: Redemtion Fee To Borrowers  | $33.59K  | $72.57K  | $59.14K  | $36.82K  | $48.38K  | $87.96K  | $50.5K  | $26.38K
+L168: Gas Compensation  | $37  | $0  | $1.13K  | $8.2K  | $13.62K  | $11  | $266  | $6.63K
+L169: Gross Profit  | $14.29K  | $114.43K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+L170: Protocol Incentivized Liquidity  | $14.29K  | $114.43K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+L171: Earnings  | $14.29K  | $114.43K  | $81.76K  | $92.17K  | $133.98K  | $137.03K  | $44.89K  | $46.52K
+L172: ### Income flow visualization
+L173: 
+L174: [Input]Yearly[Input]Quarterly[Input]Monthly[Input]Cumulative
+L175: 
+L176: Q3 2026
+L177: 
+L178: .csv.png
+--------------------------------------------------------------------------------
+API Docs - DefiLlama (https://api-docs.defillama.com/)
+citeturn497view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn495search0","pattern":"Free API endpoints"}); Total lines: 5
+L0: # DefiLlama API documentation
+L1: 
+L2: Explore free and Pro API endpoints for DeFi data.
+L3: 
+L4: cite0†Free API endpoints · cite1†Pro API endpoints 

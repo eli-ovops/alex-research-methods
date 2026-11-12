@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/risk-scaled-vs-annual-execution-20261017/adapter.py", line 349, in <module>
+    if args.stage=='prepare':prepare()
+                             ^^^^^^^^^
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/risk-scaled-vs-annual-execution-20261017/adapter.py", line 185, in prepare
+    synth = fixtures()
+            ^^^^^^^^^^
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/risk-scaled-vs-annual-execution-20261017/adapter.py", line 175, in fixtures
+    assert summary_stats(np.zeros(3),[5000.]*4,5000.,5000.,[],[],True)['Sharpe']==0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/risk-scaled-vs-annual-execution-20261017/adapter.py", line 243, in summary_stats
+    'average_exposure':sum(r['actualweight'] for r in holds)/len(holds),
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ZeroDivisionError: division by zero

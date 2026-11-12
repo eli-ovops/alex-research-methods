@@ -1,0 +1,352 @@
+Results - QuantConnect.com (https://www.quantconnect.com/docs/v2/cloud-platform/live-trading/results)
+citeturn1101search0 [wordlim: 200] Crawled: today; Fees  | The total quantity of fees paid for all the transactions during the algorithm's trading period. ...   2. ... The plot displays fill order events at the actual fill price of your orders. ... The Holdings tab on the live results page displays your positions and cash. ... Click on an individual trade in the Trades Summary table to reveal the order fills of the trade. ... To download the log file, open the live result page, click the Logs tab, and then click Download Logs. ... You can share your live results with anyone, even if they don't have a QuantConnect account.
+
+# Live Trading
+
+## Results
+
+### Introduction
+
+The live results page shows your algorithm's live trading performance. Review the results page to see how your algorithm has been performing and to investigate ways to improve it.
+
+### View Live Results
+
+The live results page automatically displays when you deploy a live algorithm. The page presents the algorithm's equity curve, holdings, trades, logs, server statistics, and much more information.
+
+Image: Live result interface
+
+The content in the live results page updates as your algorithm executes. You can close or refresh the window without interrupting the algorithm because the live trading node processes on our servers. If you close the page, you can view all of your live projects, open the project, and then click the Image: Deploy live icon Deploy Live icon at the top of the IDE to open the page again.
+
+### Runtime Statistics
+
+The banner at the top of the live results page displays the performance statistics of your algorithm.
+
+Image: Live runtime statistics
+
+The following table describes the default runtime statistics:
+
+Statistic  | Description
+--- | ---
+Equity  | The total portfolio value if all of the holdings were sold at current market rates. Equity equals the sum of cash and the market value of all open positions.
+Fees  | The total quantity of fees paid for all the transactions during the algorithm's trading period. Total fees include brokerage commissions, exchange fees, and other transaction costs.
+Holdings  | The absolute sum of the items in the portfolio. Holdings represent the total market value of all positions, regardless of whether they are long or short.
+Net Profit  | The dollar-value return across the entire trading period.
+PSR  | The probability that the estimated Sharpe ratio of an algorithm is greater than a benchmark.
+Return  | The rate of return across the entire trading period.
+Unrealized  | The amount of profit a portfolio would capture if it liquidated all open positions and paid the fees for transacting and crossing the spread. Unrealized profit becomes realized profit when the positions are closed.
+Volume  | The total value of assets traded for all of an algorithm's transactions during the trading period.
+
+To see the resources of the node that runs the algorithm, see Server Statistics.
+
+To add a custom runtime statistic, see Add Statistics.
+
+If you stop and redeploy a live algorithm, the runtime statistics are reset.
+
+Portfolio Margin  | A stacked area chart of the portfolio margin usage. For more information about this chart, see Portfolio Margin Plots.
+Asset Plot  | A time series of an asset's price with order event annotations. For more information about these charts, see Asset Plots.
+
+### Asset Plots
+
+Asset plots display the trade prices of an asset and the following order events you have for the asset:
+
+Order Event  | Icon
+--- | ---
+Submissions  | Gray circle
+Updates  | Blue circle
+Cancellations  | Gray square
+Fills and partial fills  | Green (buys) or red (sells) arrows
+
+The following image shows an example asset plot for AAPL:
+
+Image: AAPL stock price with order events overlaid
+
+The order submission icons aren't visible by default.
+
+#### View Plots
+
+Follow these steps to open an asset plot:
+
+  1. Open the live results page.
+  2. Click the Orders tab.
+  3. Click the Image Asset Plot icon that's next to the asset Symbol in the Orders table.
+
+#### Tool Tips
+
+When you hover over one of the order events in the table, the asset plot highlights the order event, displays the asset price at the time of the event, and displays the tag associated with the event. Consider adding helpful tags to each order event to help with debugging your algorithm. For example, when you cancel an order, you can add a tag that explains the reason for cancelling it.
+
+#### Adjust the Display Period
+
+The resolution of the asset price time series in the plot doesn't necessarily match the resolution you set when you subscribed to the asset in your algorithm. If you are displaying the entire price series, the series usually displays the daily closing price. However, when you zoom in, the chart will adjust its display period and may use higher resolution data. To zoom in and out, perform either of the following actions:
+
+  * Click the 1m, 3m, 1y, or All period in the top-right corner of the chart.
+  * Click a point on the chart and drag your mouse horizontally to highlight a specific period of time in the chart.
+Image: gif that shows the price of AAPL while zooming in and out
+
+If you have multiple order events in a single day and you zoom out on the chart so that it displays the daily closing prices, the plot aggregates the order event icons together as the price on that day.
+
+#### Order Fill Prices
+
+The plot displays fill order events at the actual fill price of your orders. 
+After you zoom in on a chart, slide the horizontal bar at the bottom of the chart to adjust the time frame that displays.
+
+Image: Demostration of scrolling for time period on charts
+
+#### Resize Charts
+
+To resize a chart on the live results page, hover over the bottom-right corner of the chart. When the resize cursor appears, hold the left mouse button and then drag to the desired size.
+
+#### Move Charts
+
+To move a chart on the live results page, click, hold, and drag the chart title.
+
+#### Refresh Charts
+
+Refreshing the charts on the live results page resets the zoom level on all the charts. If you refresh the charts while your algorithm is executing, only the data that was seen by the Lean engine after you refreshed the charts is displayed. To refresh the charts, in the Select Chart section, click the reset icon.
+
+### Holdings
+
+The Holdings tab on the live results page displays your positions and cash.
+
+Image: Live holdings table
+
+The following table describes the properties that display for each of your positions:
+
+Property  | Description
+--- | ---
+Symbol  | The ticker of the security.
+Average Price  | The average price that you paid for the position.
+Quantity  | The size of your position.
+Market Value  | The value of your position if sold with market orders.
+Unrealized  | The unrealized profit of your position, including fees and spread costs.
+
+The values in the positions section update as new data points are injected into your algorithm. The cash section displays the quantity of each currency in your algorithm's `CashBook`. View the Holdings tab to see your holdings, add security subscriptions, and place manual orders. To view all of your current holdings and active data subscriptions, enable the Show All Portfolio check box.
+
+### Orders
+
+The live results page displays the orders of your algorithm and you can download them to your local machine.
+
+#### View in the GUI
+
+To see the orders that your algorithm created, open the live results page and then click the Orders tab. If there are more than 10 orders, use the pagination tools at the bottom of the Orders Summary table to see all of the orders. Click on an individual order in the Orders Summary table to reveal all of the order events, which include:
+
+  * Submissions
+  * Fills
+  * Partial fills
+  * Updates
+  * Cancellations
+  * Option contract exercises and expiration
+
+The timestamps in the Order Summary table are based in Eastern Time (ET).
+
+#### Access the Order Summary CSV
+
+To view the orders data in CSV format, open the live results page, click the Orders tab, and then click Download Orders. The content of the CSV file is the content displayed in the Orders Summary table when the table rows are collapsed. The timestamps in the CSV file are based in Coordinated Universal Time (UTC). To download the CSV file with the API, call the /live/export/orders endpoint. The CSV file only contains the orders from the last 750 days. To get older orders, call the ReadLiveOrdersread_live_orders method or the /live/orders/read endpoint.
+
+#### Access in Jupyter Notebooks
+
+To programmatically analyze orders, call the ReadLiveOrdersread_live_orders method or the /live/orders/read endpoint.
+
+### Trades
+
+The live results page displays the closed trades of your algorithm and you can download them to your local machine. You can set how orders are combined to define a trade. For more information, see Trade Statistics
+
+#### View in the GUI
+
+To see the trades that your algorithm created, open the live results page and then click the Trades tab. If there are more than 10 trades, use the pagination tools at the bottom of the Trades Summary table to see all of the orders. Click on an individual trade in the Trades Summary table to reveal the order fills of the trade.
+
+The timestamps in the Trades Summary table are based in Eastern Time (ET).
+
+#### Access the Trade Summary CSV
+
+To view the trades data in CSV format, open the live results page, click the Trades tab, and then click Download Trades. The content of the CSV file is the content displayed in the Trades Summary table when the table rows are collapsed. The timestamps in the CSV file are based in Coordinated Universal Time (UTC). To download the CSV file with the API, call the /live/export/trades endpoint.
+
+--------------------------------------------------------------------------------
+QuantConnect Paper Trading - QuantConnect.com (https://www.quantconnect.com/docs/v2/cloud-platform/live-trading/brokerages/quantconnect-paper-trading)
+citeturn1101search1 [wordlim: 200] Crawled: today; QuantConnect enables you to run your algorithms in live mode with real-time market data.QuantConnect Paper Trading lets you run live, real-time data into your algorithm but execute trades using fictional capital.Instead of your orders being routed to an exchange when you're paper trading, your order fills are simulated. ... To see the fee models that the `DefaultBrokerageModel` uses, see Fees. ... When available, bid and ask spread will be used for the fill prices. ...   2. ... If you know your brokerage positions before you deployed, you can verify they have been loaded properly by checking your equity value in the runtime statistics, your cashbook holdings, and your position holdings.
+
+# Brokerages
+
+## QuantConnect Paper Trading
+
+### Introduction
+
+QuantConnect enables you to run your algorithms in live mode with real-time market data.
+
+QuantConnect Paper Trading lets you run live, real-time data into your algorithm but execute trades using fictional capital. Instead of your orders being routed to an exchange when you're paper trading, your order fills are simulated. Use paper trading to test your algorithm without risking real money and to ensure your backtest wasn't overfit before deploying with real money. You can use the paper trading brokerage without needing to sign up for a real brokerage account. If you don't set a brokerage model in your algorithm with the `SetBrokerageModel``set_brokerage_model` method, the paper trading brokerage uses the `DefaultBrokerageModel` to simulate trades.
+
+To view the implementation of the QuantConnect Paper Trading brokerage, see PaperBrokerage.cs in the LEAN GitHub repository. To view the implementation of the backtesting brokerage, see BacktestingBrokerage.cs in the LEAN GitHub repository.
+#### Time In Force
+
+The `DefaultBrokerageModel` supports the following TimeInForce instructions:
+
+  * `Day``DAY`
+  * `GoodTilCanceled``good_til_canceled`
+  * `GoodTilDate``good_til_date`
+
+#### Updates
+
+The `DefaultBrokerageModel` supports order updates.
+
+#### Handling Splits
+
+If you're using raw data normalization and you have active orders with a limit, stop, or trigger price in the market for a US Equity when a stock split occurs, the following properties of your orders automatically adjust to reflect the stock split:
+
+  * Quantity
+  * Limit price
+  * Stop price
+  * Trigger price
+
+### Fees
+
+The following table shows the fees that the `DefaultBrokerageModel` charges for each of the supported asset classes:
+
+Asset Class  | Fee
+--- | ---
+Equities  | $0.005/share with a $1 minimum fee
+Crypto  | $0
+Forex  | $0
+CFDs  | $0
+Futures  | $1.85/contract
+Future Options  | $1.85/contract
+
+There is no fee to exercise Option contracts.
+
+If you set the brokerage model to a model other than the `DefaultBrokerageModel`, the new brokerage model defines the order fees.
+
+To see the fee models that the `DefaultBrokerageModel` uses, see Fees.
+
+### Margin
+
+We model buying power and margin calls to ensure your algorithm stays within the margin requirements. If you set the brokerage model to a different model, the new brokerage model defines how margin is modeled.
+
+### Slippage
+
+Orders through the `DefaultBrokerageModel` do not experience slippage in backtests or paper trading. For more information about the slippage model the `DefaultBrokerageModel` uses, see Slippage.
+
+### Fills
+
+The `DefaultBrokerageModel` fills market orders immediately and completely. When available, bid and ask spread will be used for the fill prices.
+
+To view how we model realistic order fills, see Fills.
+
+### Settlements
+
+If you trade with a margin account, trades settle immediately
+
+To view how we model settlement for paper trades, see Settlement.
+
+### Brokerage Models
+
+The QuantConnect Paper Trading brokerage uses the `DefaultBrokerageModel` by default, but you can use any of the brokerage models.
+
+--------------------------------------------------------------------------------
+Getting Started - QuantConnect.com (https://www.quantconnect.com/docs/v2/cloud-platform/live-trading/getting-started)
+citeturn1101search2 [wordlim: 200] Crawled: today; QuantConnect enables you to run your algorithms in live mode with real-time market data. ... The following video demonstrates how to deploy live paper trading algorithms: ...   2. ... Each restart starts a fresh instance that runs `Initialize``initialize` again, so the algorithm only recovers the cash, holdings, and, for some brokerages, the open orders of your account. ... The live trading results page has a Stop button to immediately stop your algorithm from executing.
+  3. On the Deploy Live page, click the Brokerage field and then click Paper Trading from the drop-down menu.
+  4. In the Region section, click the region where you want to run the algorithm.
+  5. Click the Node field and then click the live trading node that you want to use from the drop-down menu.
+  6. (Optional) In the Data Provider section, click Show and change the data provider or add additional providers.
+  7. (Optional) Follow these steps to start the algorithm with existing cash holdings (see video):
+    1. In the Algorithm Cash State section, click Show.
+    2. Click Add Currency.
+    3. Enter the currency ticker (for example, USD or BTC) and a quantity.
+  8. (Optional) Follow these steps to start the algorithm with existing position holdings (see video):
+    1. In the Algorithm Holdings State section, click Show.
+    2. Click Add Holding.
+    3. Enter the symbol ID, symbol, quantity, and average price.
+  9. (Optional) Set up notifications.
+  10. Configure the Automatically restart algorithm setting.
+
+By enabling automatic restarts, the algorithm will use best efforts to restart the algorithm if it fails due to a runtime error. This can help improve the algorithm's resilience to temporary outages such as a brokerage API disconnection.
+
+  11. Click Deploy.
+
+The deployment process can take up to 5 minutes. When the algorithm deploys, the live results page displays. If you know your brokerage positions before you deployed, you can verify they have been loaded properly by checking your equity value in the runtime statistics, your cashbook holdings, and your position holdings.
+
+Restarts, including automatic restarts and redeployments, don't save the state of your algorithm. To learn what a restart recovers and how to persist the rest, see State Persistence.
+
+To deploy a live algorithm with a different brokerage, see the Deploy Live Algorithms section of the brokerage integration documentation.
+
+--------------------------------------------------------------------------------
+Deployment - QuantConnect.com (https://www.quantconnect.com/docs/v2/cloud-platform/live-trading/deployment)
+citeturn1101search3 [wordlim: 200] Crawled: today; Since the algorithms run in QuantConnect Cloud, you can close the IDE without interrupting the execution of your algorithms. ... Most of the brokerages automatically load your cash holdings, position holdings, and submitted orders so that you can view your portfolio state on the live results page. ... QuantConnect Paper Trading has no brokerage account, so the platform saves the last known cash and uses it to pre-fill the Algorithm Cash State section of the deployment wizard when you redeploy.
+When you stop and redeploy an algorithm, update it, or an automatic restart recovers it from a runtime error, LEAN starts a new instance of the algorithm and runs its `Initialize``initialize` method again. Class members, indicators, rolling windows, universe selections, and pending scheduled events all start empty.
+
+The following table shows the state that a restart recovers:
+
+State  | Source
+--- | ---
+Cash  | Your brokerage account. QuantConnect Paper Trading has no brokerage account, so the platform saves the last known cash and uses it to pre-fill the Algorithm Cash State section of the deployment wizard when you redeploy.
+Holdings  | Your brokerage account. For QuantConnect Paper Trading, the platform saves the last known holdings and uses them to pre-fill the Algorithm Holdings State section of the deployment wizard when you redeploy.
+Open orders  | Your brokerage account, if the brokerage integration can fetch open orders. Otherwise, the algorithm restarts without them. QuantConnect Paper Trading doesn't restore open orders.
+Everything else  | Nothing. The algorithm rebuilds it.
+
+To rebuild indicators and other data-driven state, warm up the algorithm. To recover state that history can't rebuild, like entry prices, trade counters, or the current step of a multi-step strategy, save it in the Object Store while the algorithm runs and load it back in `Initialize``initialize`. To check that the algorithm recovers, restart it while paper trading.
+
+--------------------------------------------------------------------------------
+Results - QuantConnect.com (https://www.quantconnect.com/docs/v2/cloud-platform/backtesting/results)
+citeturn1101search4 [wordlim: 200] Crawled: today; Review the results page to see how your algorithm has performed during the backtest and to investigate how you might improve your algorithm before live trading. ... If you delete a backtest result or you are inactive for 12 months, we archive your backtest results. ... Equity  | The total portfolio value if all of the holdings were sold at current market rates.Equity equals the sum of cash and the market value of all open positions. ...   2. ... The plot displays fill order events at the actual fill price of your orders. ... Click on an individual trade in the Trades Summary table to reveal the order fills of the trade.
+--------------------------------------------------------------------------------
+Getting Started - QuantConnect.com (https://www.quantconnect.com/docs/v2/local-platform/live-trading/getting-started)
+citeturn1101search5 [wordlim: 200] Crawled: today; If you use IB data provider and trade with a paper trading account, you need to share the market data subscription with your paper trading account. ... (Optional) If you are deploying to QuantConnect Cloud, set up notifications. ... If you know your brokerage positions before you deployed, you can verify they have been loaded properly by checking your equity value in the runtime statistics, your cashbook holdings, and your position holdings. ... The live trading results page has a Stop button to immediately stop your algorithm from executing.
+--------------------------------------------------------------------------------
+Live Analysis - QuantConnect.com (https://www.quantconnect.com/docs/v2/research-environment/meta-analysis/live-analysis)
+citeturn1101search6 [wordlim: 200] Crawled: today; Load your live trading results into the Research Environment to compare live trading performance against simulated backtest results. ... /QuantConnect.csx" ... Cloud Platform  | Get Project Id  | Get Deployment Id ... Get the live trading orders. ... Each element of the result is an `ApiOrderResponse` object that contains the order and its fill events. ... Order Ids restart at 1 for each deployment and the trade builder assigns an order fee only to the first fill of each order Id, so the total fees exclude the fees of reused order Ids in later deployments.
+--------------------------------------------------------------------------------
+Documentation/Resources/trading-and-orders/live-trading-considerations.html at master · QuantConnect/Documentation · GitHub (https://github.com/QuantConnect/Documentation/blob/master/Resources/trading-and-orders/live-trading-considerations.html)
+citeturn1101search7 [wordlim: 200] Crawled: 5 days ago; <p>In live trading, orders fill asynchronously. ... When your order fills, the fill price and fee is set by your brokerage. ... As a result, the <a href='/docs/v2/writing-algorithms/reality-modeling/trade-fills/key-concepts'>fill model</a> can only evaluate if the order should fill on a minute-by-minute frequency.</p>
+--------------------------------------------------------------------------------
+Results - QuantConnect.com (https://www.quantconnect.com/docs/v2/local-platform/backtesting/results)
+citeturn1101search8 [wordlim: 200] Crawled: today; If you delete a backtest result or you are inactive for 12 months, we archive your backtest results. ... Equity  | The total portfolio value if all of the holdings were sold at current market rates.Equity equals the sum of cash and the market value of all open positions.Fees  | The total quantity of fees paid for all the transactions during the algorithm's trading period. ... If you download the order summary CSV for a local backtest, the file is stored in <organizationWorkspace> / <projectName> / backtests / <unixTimestamp> / orders.csv. ... This method and endpoint only work if you deploy the algorithm in QC Cloud. ... Click on an individual trade in the Trades Summary table to reveal the order fills of the trade.
+--------------------------------------------------------------------------------
+Documentation/Resources/getting-started/live-trading/deploy-live-algorithms.php at master · QuantConnect/Documentation · GitHub (https://github.com/QuantConnect/Documentation/blob/master/Resources/getting-started/live-trading/deploy-live-algorithms.php)
+citeturn1101search9 [wordlim: 200] Crawled: 5 days ago; "<a href='/docs/v2/cloud-platform/live-trading/results'>live results page</a>" : "live results page"; ... <li><span class="qualifier">(Optional)</span> If you are deploying to QuantConnect Cloud, <a href="/docs/v2/cloud-platform/live-trading/notifications">set up notifications</a>.</li> ... If you know your brokerage positions before you deployed, you can verify they have been loaded properly by checking your equity value in the runtime statistics, your cashbook holdings, and your position holdings.</p>
+--------------------------------------------------------------------------------
+Document (https://raw.githubusercontent.com/QuantConnect/Documentation/master/single-page/Quantconnect-Cloud-Platform-Python.pdf)
+citeturn1101search12 [wordlim: 200] Published: 3.3 years ago; <table id="e2"> ... <tr><td>Unrealized</td><td>The unrealized profit of your position, including fees and spread costs.</td></tr> ... The cash section displays the quantity of each currency in your algorithm's CashBook.View the Holdings tab to see your holdings, add security subscriptions, and place manual orders. ... The live results page displays the orders of your algorithm and you can download them to your local machine. ... Click on an individual order in the Orders Summary table to reveal all of the order events, which include:
+--------------------------------------------------------------------------------
+Documentation/Resources/live-trading/reconciliation/introduction.html at master · QuantConnect/Documentation · GitHub (https://github.com/QuantConnect/Documentation/blob/master/Resources/live-trading/reconciliation/introduction.html)
+citeturn1101search10 [wordlim: 200] Crawled: today; The <a href="/docs/v2/cloud-platform/live-trading/results">live results page</a> displays the live equity curve and the OOS backtest equity curve of your algorithms.</p><img class="img-responsive" src="https://cdn.quantconnect.com/i/tu/live-strategy-equity.png" alt="The live and OSS backtest equity curves of an Alpha">
+--------------------------------------------------------------------------------
+Document (https://cdn.quantconnect.com/docs/i/Quantconnect-Writing-Algorithms-Python.pdf)
+citeturn1101search13 [wordlim: 200] Published: 6 months ago; When your order fills, the fill price and fee is set by your brokerage. ... As a result, the fill model can only evaluate if the order should fill on a minute-by-minute frequency. ... Orders fill asynchronously in live trading, so if you want to change an order, you must request it with the order ticket.
+--------------------------------------------------------------------------------
+Documentation/Resources/brokerages/paper-trading/orders.php at master · QuantConnect/Documentation · GitHub (https://github.com/QuantConnect/Documentation/blob/master/Resources/brokerages/paper-trading/orders.php)
+citeturn1101search11 [wordlim: 200] Crawled: 2 weeks ago; ><td><img src="https://cdn.quantconnect.com/i/tu/check.png" alt="green check" width="15px;"><br>Not supported for cash-settled Options</td><? ... > To view the data providers that support Options, see their respective documentation in <a href='/docs/v2/cloud-platform/datasets'>Cloud Platform</a>, <a href='/docs/v2/local-platform/datasets/getting-started'>Local Platform</a>, or the <a href='/docs/v2/lean-cli/live-trading/data-providers'>CLI</a>.
+--------------------------------------------------------------------------------
+QuantConnect: From Moment to Live Trading — Your Complete Cloud Quant Workflow (https://www.reddit.com/r/TraderTools/comments/1wv8xvn/quantconnect_from_moment_to_live_trading_your/)
+citeturn1101reddit14 [wordlim: 200] Published: 2 weeks ago; > **The Big Picture**: Imagine having a superpower that lets you test trading ideas on 20 years of market data in minutes, then flip a switch to trade live.That's exactly what QuantConnect offers — an all-in-one, cloud-based platform that handles the plumbing so you can focus on finding your edge in the markets. ... If the top 3 outperform the bottom 3 by 2-3% on average, the strategy warrants a full backtest. ...         SetCash(100000); ...     C -- Yes --> E[Paper Trading]
+--------------------------------------------------------------------------------
+Any feedback on fills? Especially on shares through traderspost? (https://www.reddit.com/r/alpacamarkets/comments/1vaxe4o/any_feedback_on_fills_especially_on_shares/)
+citeturn1101reddit15 [wordlim: 200] Published: 2 months ago; Paper trading intentionally creates more partial fill orders than one sees in live trading. ... Realistically, most symbols do not see any change in their quotes within this 66ms time difference, but there can be a change, and therefore the paper order can fill at a different price than the live order.
+--------------------------------------------------------------------------------
+What changed the most when you moved from paper trading to live trading? (https://www.reddit.com/r/Trading/comments/1x40rx0/what_changed_the_most_when_you_moved_from_paper/)
+citeturn1101reddit16 [wordlim: 200] Published: 6 days ago; A strategy can look perfectly fine in a simulated environment, but live trading introduces a different set of practical challenges.Orders may fill at different prices than expected. ... I'm curious about the transition from simulation to live trading.
+--------------------------------------------------------------------------------
+Help with fill latency (https://www.reddit.com/r/PredictionTrading/comments/1twrt31/help_with_fill_latency/)
+citeturn1101reddit17 [wordlim: 200] Published: 4 months ago; Using local EIP 712 sign with warmed caches, warm HTTP/2 POST. ... Having reached a fairly confident level with the strategy, the last month I’ve moved to live trading however have been getting very poor live fills even with a 6c buffer on my taker FAK/FOK orders.For all my paper backtesting and live paper runs, I’ve been simulating 500ms fill delay on all orders which I thought would leave me a nice safety net for live trading given I’m running off a VPS.
+--------------------------------------------------------------------------------
+What do you paper trade your algo with? (https://www.reddit.com/r/algotrading/comments/1sq3snn/what_do_you_paper_trade_your_algo_with/)
+citeturn1101reddit18 [wordlim: 200] Published: 6 months ago; I finished backtesting with quant connect I'm happy with the results I was wondering what sites to use to paper trade live I want to make sure my results are not due to over fitting ... QuantConnect has built-in paper trading that runs your exact backtest code against live data — easiest option since you're already there, no rewrite needed. ... The overfitting test isn't really about the platform though — it's about whether your live paper results match your backtest win rate within \~10% after 30+ trades. ... Although I won't mention it, 1 because I don't want to get banned and 2 because it's hundreds of dollars a month for the subscription so I'm pretty sure no one would actually want to pay those fees.
+--------------------------------------------------------------------------------
+Paper 2 Live (What mistakes did your trading bot make that you didn’t expect?) (https://www.reddit.com/r/algotrading/comments/1vmdce4/paper_2_live_what_mistakes_did_your_trading_bot/)
+citeturn1101reddit19 [wordlim: 200] Published: 2 months ago; For those of you who have taken an automated trading system from paper trading to a live account. ...   [Wednesday August 12 2026] [+2 votes] ... Live adds all the ugly cases: partial fills, rejected orders, tick-size/min-order rounding, fees/slippage, stale state after restart, cancel/replace timing, open positions that don’t match local state, and manual intervention risk. ... It's not just Kraken - most venues stream fills as their atomic unit and leave you to reassemble the "trade," so if your bot keys state on one-fill-equals-one-order, a partial silently desyncs your position and you find out when a stop closes more than you hold.Treat the fill event as the atom, aggregate up to the order, and reconcile your computed position against the exchange's reported balance every loop. ... As a result after making 3 wins in a row he loss everything in one :) ... **Don't immediately change the strategy when live results deviate from paper results.
+--------------------------------------------------------------------------------
+My first algo (paper) trade! (https://www.reddit.com/r/algotrading/comments/1ohmyew)
+citeturn1101reddit20 [wordlim: 200] Published: last year; Crawled: 11 months ago; I’ve been thinking about doing this for a while and finally signed up for QuantaConnect this weekend… learned a bit of python thru YT videos (haven’t programmed in 15 years…) plus help from Claude AI… 4hrs later and was able to develop my initial MVP of my TQQQ grid strategy… did a bunch of backtesting and tuning, and today published it out to the live paper trading platform… all around fun and educational experience… now let’s see if it makes money :) ...   This one is for buy/sell tqqq shares, no options yet… quad connect has its own built-in live paper trading platform, but I will be connecting it to my IBKR account later this week… so far pretty easy to deploy… ...   Fairly basic… TQQQ grid trading strategy…  in summary allocate 5% cash to purchase a lot… place a sell order for that lot at the same time for one percent price higher… if tqqq drops 1%, buy another lot with the remaining 5% cash (and submit a sell order for that lot immediately for 1% higher)… running on a 30 minute candle with extended trading times…
+--------------------------------------------------------------------------------
+[Removed] (https://www.reddit.com/r/algotrading/comments/1u5ygcs/removed/)
+citeturn1101reddit21 [wordlim: 200] Published: 4 months ago; Even for my algorithms that I add to live trading, if it's futures, I put the algo in a probationary period for a bit where it doesn't trade the full contract, like ES, it trades the smaller contract, MES. ... What platform are you using to trade on for paper? ... i'm in permanent paper mode right now — intentionally. pip (my prediction market bot) trades paper. quant (my ETF bot) trades paper. not moving either to live until i understand what i don't understand yet.the fill assumption thing is exactly what i keep bumping into. my paper engine assumes i fill at close. what it doesn't model: partial fills on thin books, the gap between "signal triggers at 15:45" and "order executes at 15:59:45", or what happens to my RSI2 entry when the signal fires on a choppy open.
+--------------------------------------------------------------------------------
+First time making a bot and running every day on paper trading. How much do live conditions effect profit (fees, slippage, etc) (https://www.reddit.com/r/algotrading/comments/1jtvi38)
+citeturn1101reddit22 [wordlim: 200] Published: 1.5 years ago; Crawled: 1.4 years ago; And you can simply calculate fees (brokerage costs) and add them virtually each time you trade in paper trading. ...   Thanks for the reply, in a live environment is there any risk I may get a worse fill because of payment for order flow by my broker?
+--------------------------------------------------------------------------------
+live trading update, one month after the paper trading strategy post (https://www.reddit.com/r/algotrading/comments/1wh5fja/live_trading_update_one_month_after_the_paper/)
+citeturn1101reddit23 [wordlim: 200] Published: last month; hey everyone, this is a follow up to my last post where i shared the paper trading results from a strategy claude helped me build https://www.reddit.com/r/algotrading/s/qme94NvmPua lot of you gave solid feedback last time, appreciate all of it. so i decided to stop paper trading and put real money behind it. started on alpaca about a month ago with 2k to start. ... still very early days and one decent month means nothing on its own, i know that. going to keep running it live and post updates as they come, good or bad.
+--------------------------------------------------------------------------------
+Thoughts on individual orders versus all contracts at once? (https://www.reddit.com/r/algotrading/comments/1szhpyq/thoughts_on_individual_orders_versus_all/)
+citeturn1101reddit24 [wordlim: 200] Published: 5 months ago; I'm working on a futures scalping algo (using QuantConnect running fully local with IBKR), and finally got out of backtesting into paper trading.I don't know if this is a paper trading account issue with IBKR or not but I'm getting a surprising number of partial fills even though I'm only doing 2 contracts at a time (only ever exposed to 2, with a limit and stop order placed after entry for my exit points). ...     Keep one source of truth = net position, live working orders, and desired exit state. ... Thats about where I'm at, just worried about the slim case where I send an update on a partial fill but then it finishes the fill, which should result in a cancel and I don't know how IBKR will handle it.
+--------------------------------------------------------------------------------
+Fill issues between paper trading and live account (https://www.reddit.com/r/thinkorswim/comments/x49ajl)
+citeturn1101reddit25 [wordlim: 200] Published: 4.1 years ago; Crawled: 4.1 years ago; The exact same IC are placed an order at 1000 EST with 2.00, and paper trading is filled while live account, "hahaha absolutely no ways".
+

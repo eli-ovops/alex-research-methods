@@ -1,0 +1,10 @@
+Official source: https://eips.ethereum.org/EIPS/eip-1898
+Layer: native web tool parsed text, not raw HTTP. Read in this task: one public page; individual request UTC not recorded (UNKNOWN).
+Title: EIP-1898: Add blockHash to defaultBlock methods. Status: Final.
+L28-L35: affected methods include eth_getCode and eth_call.
+L46-L48: OBJECT supports blockNumber: QUANTITY or blockHash: DATA.
+L50: If the block is not found, the callee SHOULD raise a JSON-RPC error (the recommended error code is -32001: Resource not found).
+L51: With blockHash, optional requireCanonical defaults false.
+L52: requireCanonical true additionally checks canonical membership; recommended noncanonical code -32000, distinguished from not-found. Not-found takes precedence.
+L58: Example object {"blockHash":"0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3","requireCanonical":true}.
+This excerpt contains quoted and summarized source lines; it is not a byte-for-byte source-page snapshot. The standard does not certify provider support.

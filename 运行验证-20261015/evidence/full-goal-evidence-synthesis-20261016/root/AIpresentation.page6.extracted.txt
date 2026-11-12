@@ -1,0 +1,22 @@
+XTX Markets Ltd – Private & Confidential 
+Why Large-Scale Deep Learning for Trading is challenging……..SNR
+Signal = the real, meaningful, repeatable part of a price move
+Noise = random fluctuations, market chaos, irrelevant variation
+• If your signal is weak and noise is high, your edge gets buried.
+• If your signal is strong and noise is low, you can extract alpha 
+with confidence.
+• In trading, SNR is like trying to hear a whisper in a hurricane. The 
+whisper is your alpha. The hurricane is the market.
+Many strategies fail not because they’re logically flawed — but 
+because they’re trying to extract signal in a low SNR environment
+• Financial markets are dominated by noise
+• The real edge (if it exists) is usually tiny and fleeting
+• Even strong-looking backtests can be false positives created by 
+fitting noise.
+Machine learning struggles in markets because
+• Most market data has very low SNR
+• The signal changes over time (nonstationarity)
+• AI is powerful enough to learn anything — including pure noise
+• This means unless you’re careful, your AI will confidently 
+“discover” patterns that have no predictive value whatsoever
+Even with huge resources, applying the model can be difficult………

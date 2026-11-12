@@ -1,0 +1,337 @@
+Service and Charges | Commissions & Platform Fees | uSMART Securities (https://hk.usmartglobal.com/en/charges)
+citeturn695search0 [wordlim: 200] Published: 5 months ago; Crawled: last month; Standard Commission Plan  | Commission: 0.03% of transaction amount (Minimum HK$0/transaction) Platform Fee: HK$12/transaction  | uSMART ... uSmart Securities Limited is a corporation licensed by the Hong Kong Securities and Futures Commission (CE No.: BJA907) and is authorised to carry on Type 1 (Dealing in Securities), Type 2 (Dealing in Futures Contracts), Type 4 (Advising on Securities), Type 5 (Advising on Futures Contracts), Type 6 (Advising on Corporate Finance) and Type 9 (Asset Management) regulated activities.
+
+A-Shares
+
+Futures
+
+Hong Kong Stocks
+
+Commission
+
+0.03%*
+
+Platform Fee
+
+$12*
+
+Enjoy upon registration
+
+Streaming Quotes
+
+Free real-time
+
+Selected Hong Kong ETFs
+
+Commission
+
+$0*
+
+Platform Fee
+
+$0*
+
+*Please note that these promotional fees are subject to a limited timeframe and are governed by the terms and conditions of the promotion.
+
+HK Stock Fees
+
+Grey Market Trading
+
+IPO Subscription Fees
+
+Margin Rate
+
+Other Fees
+
+Other Services
+
+Transaction Type  | Charges  | Fee Collecting Party
+--- | --- | ---
+Commission for Manual Trade  | 0.1%*of transaction amount (Minimum HK$100/transaction)  | uSMART
+Standard Commission Plan  | Commission: 0.03% of transaction amount (Minimum HK$0/transaction) Platform Fee: HK$12/transaction  | uSMART
+Trader Account
+(Only applicable to clients holding a valid Hong Kong identification document)  | Commission fee: 0.00% of the transaction amount, minimum HK$0 per order
+Platform usage fee: HK$12 per order  | uSMART
+High-Frequency Trading Plan  | ImageRemarks1: Platform fee of HK$12 per transaction will be adjusted daily based on the monthly total. The difference will be charged or rebated to the customer.
+Remarks2: High-frequency transactions are calculated monthly. If customers switch plans after the first trading day of the month, the count starts from the day of the successful plan change until the last trading day of that month.  | uSMART
+PRO Account - Default Commission Plan  | HK Stock Commission:0.06%*of transaction amount (Minimum HK$0/transaction)
+HK Stock Platform Fee:HK$18/transaction  | uSMART
+PRO Account High-Frequency Plan  | Image  | uSMART
+Daily Margin Service Charges  | Commission: 0.05%(Minimum HK$10/transaction) Platform Fee: HK$0/transaction  | uSMART
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+Commissions for users who enable algorithm trading are 0.1% of the transaction value, with no platform fees.
+To view your account type: Open the uSMART App → Tap on the bottom-right "Me" icon → Select your account and tap on "Details"
+To view the selected fee plan: Open the uSMART App → Tap on the top-left uSMART logo → Tap on "My Commission"
+Switching to Regular Plan
+1）Users will have an opportunity to switch to others commission plan every month.
+2）Forcommission plan selected before 08:00, it will be effective on the same day at 08:00. If selected at or after 08:00, it will be effective on next day at 08:00.
+
+Transaction Type  | Charges  | Fee Collecting Party
+--- | --- | ---
+Standard Account Trading Fees  | Commission: 0.05%，Minimum HK$12 per order
+Platform usage fee: HK$0 per order  | uSMART
+Trader Account
+(Only applicable to clients holding a valid Hong Kong identification document)  | Commission: 0.05%, minimum HK$12 per order
+Platform usage fee: HK$0 per order  | uSMART
+PRO Account - Default Commission Plan  | Commission for Manual Trade：0.1%*of transaction amount (Minimum HK$100/transaction)
+App trading:0.06%*of transaction amount (Minimum HK$0/transaction)
+Platform usage fee: HK$18/transaction  | uSMART
+PRO Account High-Frequency Plan  | Phone trading: 0.1% of transaction amount, minimum HK$100
+App trading: Commission 0.08%, minimum HK$0 per order
+Platform usage fee: HK$15 per order  | uSMART
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+Commissions for users who enable algorithm trading are 0.1% of the transaction value, with no platform fees.
+To view your account type: Open the uSMART App → Tap on the bottom-right "Me" icon → Select your account and tap on "Details"
+To view the selected fee plan: Open the uSMART App → Tap on the top-left uSMART logo → Tap on "My Commission"
+
+Transaction Type  | Charges  | Fee Collecting Party
+--- | --- | ---
+Subscription Handling Fee  | Cash subscription at HK$0 per unit
+Margin subscription at HK$80 per unit (additional margin interest required)
+Remark: Actual charges are subject to the IPO subscription page.  | uSMART
+Brokerage Commission  | 1% of allotted amount  | Brokerage Firm
+Transaction Levy  | 0.0027% of allotted amount  | Securities and Futures Commission of Hong Kong
+Trading Fee  | 0.00565% of allotted amount  | Hong Kong Stock Exchange
+Financial Transaction Levy  | 0.00015% of transaction amount  | Financial Services Bureau
+Grey Market Trading  | Commission for Manual Trade：0.1%*of transaction amount (Minimum HK$100/transaction)
+App Trading: Commission 0.05%, minimum HK$12 per order  | uSMART
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+Commissions for users who enable algorithm trading are 0.1% of the transaction value, with no platform fees.
+
+Fee Type  | Fee  | Charged By
+--- | --- | ---
+
+4. Hong Kong stock margin interest will be handled on a "charged first, refunded afterwards" basis. The relevant interest will first be charged at an annual interest rate of 7.63%. For clients who satisfy the above conditions, the overcharged concession amount is expected to be refunded to their trading accounts on or before the 15th business day of the following month. The actual refund timing shall be subject to the Company's processing arrangements.
+5. This offer applies only to financing interest arising from the purchase of Hong Kong stocks with HKD financing and calculated based on the HKD Hong Kong stock margin financing rate. It does not apply to IPO loans, borrowing in other markets or other currencies, overdue interest, handling fees, platform fees, transaction levies, stamp duties, third-party fees, or any other charges.
+
+* * *
+
+The fees shall take effect from 1 May 2026 until further notice.
+All other charges shall remain the same as those applicable to securities trading accounts (i.e. cash accounts).
+The Company reserves the right to adjust the interest charged on account debit balances, concession arrangements, calculation methods and related terms from time to time without prior notice.
+The Company reserves the right to determine whether a client is eligible for this financing rate concession based on the client's past credit, trading, and position records, account status, and/or risk assessment results. In case of any dispute, the Company's decision shall be final and binding.
+
+Transaction Type  | Charges  | Fee Collecting Party
+--- | --- | ---
+Trading Fee  | 0.00565% of transaction amount (minimum HK$0.01 per order)  | Hong Kong Stock Exchange
+Settlement Fee  | 0.0042% of the transaction amount per trade  | Hong Kong Clearing Limited
+Stamp Duty  | 0.1% of transaction amount, rounded up to HK$1 if less than HK$1  | Hong Kong Government
+Transaction Levy  | 0.0027% of transaction amount  | Securities and Futures Commission of Hong Kong
+Financial Transaction Levy  | 0.00015% of transaction amount  | Financial Services Bureau
+### 〖Standard Account〗
+
+Commission :
+$0/ share, minimum $0/ transaction Platform usage fee :
+$0.009/ share, minimum $1.88/ transaction (Fees are capped at 1% of transaction amount. If this conflicts with the minimum fee, the minimum fee applies.)
+
+### 〖Designated Individual Standard Account〗(Limited to HK customers and non-HK customers with accounts opened within the past 180 days.)
+
+Commission :
+$0/ share, minimum $0/ transaction Platform usage fee :
+$0.99/ transaction (Stocks Priced ≥ US$100); US$0.009/ share, minimum US$1.88/ transaction (Stocks Priced < US$100) (Fees are capped at 1% of transaction amount. If this conflicts with the minimum fee, the minimum fee applies.) *Please note that these promotional fees are subject to a limited timeframe and are governed by the terms and conditions of the promotion. For details, please Click Here >  | uSMART
+Trader Account
+(Only applicable to clients holding a valid Hong Kong identification document)  | 
+
+### [Standard Fees]
+
+Commission: US$0 per share, minimum US$0 per order Platform Fee: US$0.005 per share, minimum US$1 per order
+Fees for US OTC Stocks  | Commission: $0 Platform Fee: $0.019 USD per share, minimum $6 USD per order (maximum not exceeding 2% of total order amount)  | uSMART
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+Commissions for users who enable algorithm trading are 0.1% of the transaction value, with no platform fees.
+To view your account type: Open the uSMART App → Tap on the bottom-right "Me" icon → Select your account and tap on "Details"
+To view the selected fee plan: Open the uSMART App → Tap on the top-left uSMART logo → Tap on "My Commission"
+*Please note that the above fees are for reference only. uSMART Securities Ltd reserves the right to adjust and add any service fees from time to time. For accurate fees, please refer to uSMART Securities Ltd online investment platform.
+^Applicable to standard account
+Switching to Regular Plan
+1）Users will have an opportunity to switch to others commission plan every month.
+2）Forcommission plan selected before 08:00, it will be effective on the same day at 08:00. If selected at or after 08:00, it will be effective on next day at 08:00.
+
+Transaction Type  | Charges  | Fee Collecting Party
+--- | --- | ---
+Phone Trading  | Trading Commission: US$0.015 per share, minimum US$15 per order
+Platform Fee: US$0.01 per share, minimum US$5 per order  | uSMART
+Fractional Share Trading Fee  | Commission-free, platform usage fee fixed at $0.99 USD per order  | uSMART
+Settlement Fee  | $0.003 USD * number of shares traded (minimum $0.01 USD, maximum not exceeding 3% of transaction amount)  | The Depository Trust & Clearing Corporation (DTCC) and uSMART
+Securities and Futures Commission Fee (for sell orders only)  | 0.00206% * Transaction Amount, Minimum USD 0.01  | Securities and Exchange Commission (SEC) of the United States
+Trading Activity Fee(for sell orders only)  | $0.000195 USD per share, minimum $0.01 USD, maximum $9.79 USD  | Financial Industry Regulatory Authority (FINRA) of the United States
+Consolidated Audit Trail Fee  | $0.000003 USD per share, minimum $0.01 USD  | Financial Industry Regulatory Authority (FINRA) of the United States
+Dividend Tax  | 30% of total dividend amount (automatically deducted upon dividend distribution)
+The company reserves the right to adjust the account overdue interest charges from time to time without prior notice.
+
+Margin rate offers are determined based on individual customers' credit history, trading, and/or holding records.
+
+Transaction Type  | Charges  | Fee Collecting Party
+--- | --- | ---
+Standard and Pro Accounts  | Trading Commission: US$0 per contract (when premium ≤ US$0.1); US$0.45 per contract (when premium > US$0.1)
+Platform Fee: US$0.3 per contract, Minimum US$1 / order  | uSMART
+Trader Account
+(Only applicable to clients holding a valid Hong Kong identification document)  | Trading Commission: US$0 per contract
+Platform Fee: US$0.4 per contract, Minimum US$1 / order  | uSMART
+Securities and Exchange Commission Fee (for sell orders only)  | 0.00206% * Transaction Amount, Minimum USD 0.01  | Securities and Exchange Commission (SEC)
+Trading Activity Fee (for sell orders only)  | $0.00329 USD per contract, minimum $0.01 USD  | Financial Industry Regulatory Authority (FINRA) of the United States
+Options Regulatory Fee  | US$0.013346/Contract  | Exchange
+Options Clearing Fee  | US$0.025/Contract  | Options Clearing Corporation (OCC)
+Exchange Fees  | US$0.18/Contract or as per the actual fees charged by the exchange.  | Exchange
+Consolidated Audit Trail Fee  | $0.0003 USD per contract, with a minimum of $0.01 USD per order  | Financial Industry Regulatory Authority (FINRA) of the United States
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+*Please note that the above fees are for reference only. uSMART Securities Ltd reserves the right to adjust and add any service fees from time to time. For accurate fees, please refer to uSMART Securities Ltd online investment platform.
+
+1. The fee structure above is based on a single-sided transaction (buy or sell) per contract.
+2. uSMART Fees (Commission + Platform Fee) are charged per contract per side, regardless of day, overnight, or expiry trading.
+
+The above information is for reference only. Actual fees may vary depending on the product, exchange, contract month, market conditions and the Company's latest arrangements, and may be adjusted from time to time. The actual applicable fees shall be subject to the figures displayed on the trading platform and the Company's latest announcements.
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+
+Product Name  | Symbol  | Exchange  | Currency  | uSMART Fees *Per Contract Per Side  | Other Fees *Per Contract
+--- | --- | --- | --- | --- | ---
+Commission  | Platform Fee  | Exchange Fee  | Regulatory Fee
+2. uSMART charges (Commission + Platform Fee) are collected per contract per side, regardless of whether the trade is "Intraday, Overnight, or Expiry".
+
+The above information is for reference only. Actual fees may vary depending on the product, exchange, contract month, market conditions and the Company's latest arrangements, and may be adjusted from time to time. The actual applicable fees shall be subject to the figures displayed on the trading platform and the Company's latest announcements.
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+
+Product Name  | Symbol  | Exchange  | Currency  | uSMART Fees *Per Contract Per Side  | Other Fees *Per Contract
+--- | --- | --- | --- | --- | ---
+Commission  | Platform Fee  | Exchange Fee  | Regulatory Fee
+--- | --- | --- | ---
+1. The fee structure for the above products is based on a per-contract side (buy or sell).
+2. uSMART charges (Commission + Platform Fee) are collected per contract per side, regardless of whether the trade is "Intraday, Overnight, or Expiry".
+
+The above information is for reference only. Actual fees may vary depending on the product, exchange, contract month, market conditions and the Company's latest arrangements, and may be adjusted from time to time. The actual applicable fees shall be subject to the figures displayed on the trading platform and the Company's latest announcements.
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+
+Product Name  | Symbol  | Exchange  | Currency  | uSMART Fees *Per Contract Per Side  | Other Fees *Per Contract
+--- | --- | --- | --- | --- | ---
+Commission  | Platform Fee  | Exchange Fee  | Regulatory Fee
+--- | --- | --- | ---
+U.S. Treasury Bond Futures  | ZB  | CBOT  | USD  | 1.49  | 1  | 0.87  | 0.02
+10-Year T-Note Futures  | ZN  | CBOT  | USD  | 1.49  | 1  | 0.8  | 0.02
+5-Year T-Note Futures  | ZF  | CBOT  | USD  | 1.49  | 1  | 0.65  | 0.02
+2-Year T-Note Futures  | ZT  | CBOT  | USD  | 1.49  | 1  | 0.65  | 0.02
+Eurodollar Futures  | ED  | CME  | USD  | 1.49  | 1  | 1.25  | 0.02
+Euro-Bund  | GBL  | EUREX  | EUR  | 0.99  | 1  | 0.25  | 0
+Euro-Bobl  | GBM  | EUREX  | EUR  | 0.99  | 1  | 0.25  | 0
+Euro-Schatz  | GBS  | EUREX  | EUR  | 0.99  | 1  | 0.25  | 0
+Euro-Buxl  | GBX  | EUREX  | EUR  | 0.99  | 1  | 0.25  | 0
+Euro-BTP  | BTP  | EUREX  | EUR  | 0.99  | 1  | 0.25  | 0
+Euro-OAT  | OAT  | EUREX  | EUR  | 0.99  | 1  | 0.25  | 0
+Tencent Holdings Ltd. Futures  | TCH  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+
+1. The fee structure for the above products is based on a per-contract side (buy or sell).
+2. uSMART charges (Commission + Platform Fee) are collected per contract per side, regardless of whether the trade is "Intraday, Overnight, or Expiry".
+
+The above information is for reference only. Actual fees may vary depending on the product, exchange, contract month, market conditions and the Company's latest arrangements, and may be adjusted from time to time. The actual applicable fees shall be subject to the figures displayed on the trading platform and the Company's latest announcements.
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+
+Product Name  | Symbol  | Exchange  | Currency  | uSMART Fees *Per Contract Per Side  | Other Fees *Per Contract
+--- | --- | --- | --- | --- | ---
+Commission  | Platform Fee  | Exchange Fee  | Regulatory Fee
+--- | --- | --- | ---
+Euro FX Futures  | EC  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+British Pound Futures  | BP  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+Swiss Franc Futures  | SF  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+Australian Dollar Futures  | AD  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+New Zealand Dollar Futures  | NE  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+Canadian Dollar Futures  | CD  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+Japanese Yen Futures  | JY  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+South African Rand  | RA  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+Micro CAD/USD Futures  | MCD  | CME  | USD  | 0.79  | 0.5  | 0.24  | 0.02
+Micro CHF/USD Futures  | MSF  | CME  | USD  | 0.79  | 0.5  | 0.24  | 0.02
+Mexican Peso Futures  | MP  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+Micro Japanese Yen Futures  | MJY  | CME  | USD  | 0.79  | 0.5  | 0.24  | 0.02
+INR/USD FUTURE  | SIR  | CME  | USD  | 1.49  | 1  | 1.6  | 0.02
+SGX USD/SGD (Mini) Futures  | US  | SGX  | SGD  | 1.49  | 1  | 0.75  | 0.1
+SGX INR/USD FX Futures  | IU  | SGX  | USD  | 1.49  | 1  | 0.6  | 0.05
+SGX USD/CNH Futures  | UC  | SGX  | CNH  | 0.99  | 0.5  | 1  | 0
+USD/CNH  | CUS  | HKEX  | CNH  | 3  | 5  | 8  | 0
+MINI USD/CNH Futures  | MCS  | HKEX  | CNH  | 3  | 3  | 1.6  | 0
+Micro AUD/USD Futures  | M6A  | CME  | USD  | 0.79  | 0.5  | 0.24  | 0.02
+Micro GBP/USD Futures  | M6B  | CME  | USD  | 0.79  | 0.5  | 0.24  | 0.02
+Micro EUR/USD Futures  | M6E  | CME  | USD  | 0.79  | 0.5  | 0.24  | 0.02
+U.S. Dollar Index  | DX  | ICE  | USD  | 1.49  | 1  | 1.3  | 0.07
+
+1. The fee structure for the above products is based on a per-contract side (buy or sell).
+2. uSMART charges (Commission + Platform Fee) are collected per contract per side, regardless of whether the trade is "Intraday, Overnight, or Expiry".
+
+The above information is for reference only. Actual fees may vary depending on the product, exchange, contract month, market conditions and the Company's latest arrangements, and may be adjusted from time to time. The actual applicable fees shall be subject to the figures displayed on the trading platform and the Company's latest announcements.
+
+Please note: The above fee schedule applies to individual clients only. The actual fees applicable may vary depending on the client category, account type, selected fee plan and other applicable arrangements. Fees for corporate/institutional clients shall be subject to confirmation by the Company.
+
+Product Name  | Symbol  | Exchange  | Currency  | uSMART Fees *Per Contract Per Side  | Other Fees *Per Contract
+--- | --- | --- | --- | --- | ---
+Commission  | Platform Fee  | Exchange Fee  | Regulatory Fee
+--- | --- | --- | ---
+Hong Kong Exchanges and Clearing Limited Futures  | HEX  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+CSOP FTSE China A50 ETF Futures  | CSA  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+Ping An Insurance (Group) Company of China, Ltd. Futures  | PAI  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+HSBC Holdings Plc. Futures  | HKB  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+XiaoMi Corporation Futures  | MIU  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+China Construction Bank Corporation Futures  | CCB  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+Industrial and Commercial Bank of China Limited Futures  | ICB  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+Meituan Dianping Futures  | MET  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+Anhui Conch Cement Co. Ltd. Futures  | ACC  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+Alibaba Corporation Futures  | ALB  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+JD.com, Inc.  | JDC  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+NetEase, Inc.  | NTE  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+China Merchants Bank Futures  | CMB  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+Kuaishou Technology  | KST  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+XPeng Futures  | PEN  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+Galaxy Entertainment Group Limited Futures  | GLX  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+Sands China Limited Futures  | SAN  | HKEX  | HKD  | 3  | 5  | 3  | 0.1
+
+1. The fee structure for the above products is based on a per-contract side (buy or sell).
+2. uSMART charges (Commission + Platform Fee) are collected per contract per side, regardless of whether the trade is "Intraday, Overnight, or Expiry".
+
+CS Hotline: +852 3018 4526
+
+Trading days: 24 hours | Non-trading days: 9:00-18:00
+
+Email: [REDACTED_EMAIL]
+
+WhatsApp: +852 5989 2641
+
+uSmart Securities Limited is a corporation licensed by the Hong Kong Securities and Futures Commission (CE No.: BJA907) and is authorised to carry on Type 1 (Dealing in Securities), Type 2 (Dealing in Futures Contracts), Type 4 (Advising on Securities), Type 5 (Advising on Futures Contracts), Type 6 (Advising on Corporate Finance) and Type 9 (Asset Management) regulated activities.--------------------------------------------------------------------------------
+IPO: Autonomous Driving Solution Provider UISEE TECHNOLOGIES Launches Hong Kong Listing | uSMART (https://hk.usmartglobal.com/en/news-detail/-1/7459871675417527154)
+citeturn695search1 [wordlim: 200] Crawled: 2 weeks ago; Offering structure: Approximately 5% of the global offering (723,100 H shares) will be allocated to the Hong Kong public offering, while approximately 95% (13,738,100 H shares, subject to reallocation and the exercise of the offer size adjustment option) will be allocated to the international placing. ... # uSMART launches “HK IPO Fee-Waiver Offer” – subscribe to new shares at zero cost
+--------------------------------------------------------------------------------
+Help Center | FAQ | uSMART Securities (https://hk.usmartglobal.com/en/help-centre/faq)
+citeturn695search2 [wordlim: 200] Crawled: today; uSmart Securities Limited is a corporation licensed by the Hong Kong Securities and Futures Commission (CE No.: BJA907) and is authorised to carry on Type 1 (Dealing in Securities), Type 2 (Dealing in Futures Contracts), Type 4 (Advising on Securities), Type 5 (Advising on Futures Contracts), Type 6 (Advising on Corporate Finance) and Type 9 (Asset Management) regulated activities. ... Fee For Trading US Stocks ... The rule of U.S. stock option exercise
+--------------------------------------------------------------------------------
+Microsoft Word - 2021219 uSMART - Client Agreement (HEP Cmts v6)(500733.1)_RY-hazel (https://jy-common-sg-prd-singapore-1257884527.cos.ap-singapore.myqcloud.com/admin/market/2023-01-17/85afbbfd-039f-4da2-ba34-94f67a2d4b9a/bd358233-03c8-4a5b-a46b-ce62c9dbaa58.pdf)
+citeturn695search12 [wordlim: 200] Published: 3.8 years ago; 308 Des Voeux Road Central, Hong Kong ... In the case of long put options, uSMART SG will only exercise those options if uSMART SG is able to lend the securities to the Client for delivery, in which case the Client may be charged a fee that may change on a daily basis.
+--------------------------------------------------------------------------------
+FAQ Details | Help Center | uSMART Securities (https://hk.usmartglobal.com/en/help-centre/218/detail/11224)
+citeturn695search3 [wordlim: 200] Crawled: yesterday; If U.S. options short-selling is enabled but Hong Kong and A-share buying power has not been consolidated, the U.S. account will use the PVHC Ratio, while Hong Kong and A-share accounts will continue to use the MV Ratio. ... Is There a Fee? ... Does uSMART Support Multi-Leg Options Orders? ... Once the contract is settled, the short position will be closed, the margin requirement will be released, and the premium originally received will be applied toward the exercise settlement amount.
+--------------------------------------------------------------------------------
+美股證券行邊間好？2026年美國股票開戶優惠、佣金/平台費/開戶要求 - MoneyHero (https://www.moneyhero.com.hk/zh/investment/comparison/us-stock-account?from=ccpr&preview=true&trk=public_post-text)
+citeturn695search4 [wordlim: 200] Crawled: today;     * 於2026年03月23日至2026年06月30日，美股期權 0佣，美股每單只收US$0.99/筆，美股期權不設最低訂單收費  * 〖uSMART盈立收費〗以股票市值HK$10萬、1筆交易為例（以HK$計算）
+--------------------------------------------------------------------------------
+盈立集團·uSMART評價-中文平台怎麼樣？外匯交易商-外匯天眼(WikiFX) (https://www.wikifx.com/zh/dealer/1778532917.html)
+citeturn695search5 [wordlim: 200] Published: 1.2 years ago; Crawled: 4 months ago; 詳細信息可通過點擊以下鏈接獲取：https://www.usmartglobal.com/pricing
+--------------------------------------------------------------------------------
+uSMART Group Review: Regulated Platform? -WikiFX (https://www.wikifx.com/en/dealer/1778532917.html)
+citeturn695search6 [wordlim: 200] Crawled: last month; Email: [REDACTED_EMAIL] (Singapore)/[REDACTED_EMAIL] (Hong Kong) ... Product Type  | Fee Type  | Rate/Amount  | Minimum  | Maximum  | Applicable GST (9%)
+--------------------------------------------------------------------------------
+CTF Services Limited - Earnings Release 2025 | FinancialFilings (https://financialfilings.com/filings/ctf-services-limited/earnings-release/2025/19481220/)
+citeturn695search7 [wordlim: 200] Published: 1.1 years ago; Crawled: last month; Yuk, Genius, Sinowise and Country Magic, the “uSmart Vendors”) for the acquisition of certain shares in uSMART by VVL from the uSmart Vendors and the entire issued share capital of Genius from Mr.
+--------------------------------------------------------------------------------
+View Filing Data for SEC filing 0001213900-26-014932 (https://s3.amazonaws.com/sec.irpass.cc/2897/0001213900-26-014932.htm)
+citeturn695search8 [wordlim: 200] Published: 8 months ago; Crawled: 8 months ago; Kowloon, Hong Kong ... Boral”), uSmart Securities Limited (“uSmart,” together with D.
+--------------------------------------------------------------------------------
+Đánh giá Sàn uSMART có lừa đảo không? giao dịch Forex-Việt Nam-WikiFX (https://www.wikifx.com/vi/dealer/1778532917.html)
+citeturn695search9 [wordlim: 200] Crawled: 4 months ago; Đối với Đô la Singapore (SGD), uSMART Group chấp nhận eGIRO, Paynow, FAST, chuyển tiền điện tử và BigPay để nạp tiền. ... HKD đến các ngân hàng Hong Kong  | 10
+--------------------------------------------------------------------------------
+Options Trading In Singapore: Complete Guide To Platforms And Brokerage Fees (https://dollarsandsense.sg/options-trading-singapore-complete-guide-platforms-brokerage-fees/)
+citeturn695search10 [wordlim: 200] Published: 1.9 years ago; Crawled: last week; Usmart  | For premiums ≤ US$ 0.1, US$0.10 (no min.) ... They offer stock options for Hong Kong, Europe and Australia markets. ... – Stock brokerages may also charge various carrying costs, including for margin, short positions, exercise, assignment fees and others.
+--------------------------------------------------------------------------------
+CTF Services Limited - Earnings Release 2026 | FinancialFilings (https://financialfilings.com/filings/ctf-services-limited/earnings-release/2026/61264764/)
+citeturn695search11 [wordlim: 200] Published: 3 weeks ago; Crawled: 3 weeks ago; During FY2026, the Group acquired a 13.05% stake in uSmart Inlet Group Ltd. (“uSMART”), a technology-driven financial services provider.

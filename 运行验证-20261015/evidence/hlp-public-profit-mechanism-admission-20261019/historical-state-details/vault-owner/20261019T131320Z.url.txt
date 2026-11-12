@@ -1,0 +1,1 @@
+https://docs.hypedexer.com/api-reference/vaults/raw-vault-equity-snapshots-~hourly

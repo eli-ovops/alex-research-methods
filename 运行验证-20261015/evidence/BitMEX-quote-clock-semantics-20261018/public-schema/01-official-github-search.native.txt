@@ -1,0 +1,1072 @@
+api-connectors/swagger.json at master · BitMEX/api-connectors · GitHub (https://github.com/BitMEX/api-connectors/blob/master/swagger.json)
+citeturn946search0 [wordlim: 200] Crawled: 2 weeks ago; /Quote/Quote_get)\n\n- [Trade Data](#! ... Many more functions are available.\n\n##### Swagger Specification\n\n[⇩ Download Swagger JSON](swagger.json)\n\n-\n\n## All API Endpoints\n\nClick to expand a section.\n", ... See the [Timestamp Docs](https://www.bitmex.com/app/restAPI#Timestamp-Filters) for more details.",
+
+BitMEX / api-connectors Public
+
+  * Notifications You must be signed in to change notification settings
+  * Fork 775
+  * Star
+
+  * Code
+  * Issues 155
+  * Pull requests 18
+  * Actions
+  * Projects
+  * Security and quality 0
+  * Insights
+
+## Files Expand file tree
+
+master
+
+## Breadcrumbs
+
+  1. api-connectors
+
+/
+
+# swagger.json
+
+## File metadata and controls
+
+  * Code
+
+  * Blame
+
+9510 lines (9510 loc) · 265 KB
+
+Raw
+
+Copy raw file
+
+Download raw file
+
+Open symbols panel
+
+Edit and raw actions
+
+{
+
+"swagger": "2.0",
+
+"info": {
+
+"title": "BitMEX API",
+
+"description": "## REST API for the BitMEX Trading Platform\n\n_If you are building automated tools, please subscribe to the_\n_[BitMEX API RSS Feed](https://blog.bitmex.com/api_announcement/feed/) for changes. The feed will be updated_\n_regularly and is the most reliable way to get downtime and update announcements._\n\n[View Changelog](/app/apiChangelog)\n\n-\n\n#### Getting Started\n\nBase URI: [https://www.bitmex.com/api/v1](/api/v1)\n\n##### Fetching Data\n\nAll REST endpoints are documented below. You can try out any query right from this interface.\n\nMost table queries accept `count`, `start`, and `reverse` params. Set `reverse=true` to get rows newest-first.\n\nAdditional documentation regarding filters, timestamps, and authentication\nis available in [the main API documentation](/app/restAPI).\n\n_All_ table data is available via the [Websocket](/app/wsAPI). We highly recommend using the socket if you want\nto have the quickest possible data without being subject to ratelimits.\n\n##### Return Types\n\nBy default, all data is returned as JSON. Send `?_format=csv` to get CSV data or `?_format=xml` to get XML data.\n\n##### Trade Data Queries\n\n_This is only a small subset of what is available, to get you started._\n\nFill in the parameters and click the `Try it out!` button to try any of these queries.\n\n- [Pricing Data](#!/Quote/Quote_get)\n\n- [Trade Data](#!/Trade/Trade_get)\n\n- [OrderBook Data](#!/OrderBook/OrderBook_getL2)\n\n- [Settlement Data](#!/Settlement/Settlement_get)\n\n- [Exchange Statistics](#!/Stats/Stats_history)\n\nEvery function of the BitMEX.com platform is exposed here and documented. Many more functions are available.\n\n##### Swagger Specification\n\n[⇩ Download Swagger JSON](swagger.json)\n\n-\n\n## All API Endpoints\n\nClick to expand a section.\n",
+
+"operationId": "Execution.get",
+
+"parameters": [
+
+{
+
+"name": "symbol",
+
+"in": "query",
+
+"description": "Instrument symbol. Send a bare series (e.g. XBT) to get data for the nearest expiring contract in that series.\n\nYou can also send a timeframe, e.g. `XBT:quarterly`. Timeframes are `nearest`, `daily`, `weekly`, `monthly`, `quarterly`, `biquarterly`, and `perpetual`.\n\nSymbols are case-insensitive.",
+
+"required": false,
+
+"type": "string"
+
+},
+
+{
+
+"name": "filter",
+
+"in": "query",
+
+"description": "Generic table filter. Send JSON key/value pairs, such as `{\"key\": \"value\"}`. You can key on individual fields, and do more advanced querying on timestamps. See the [Timestamp Docs](https://www.bitmex.com/app/restAPI#Timestamp-Filters) for more details.",
+
+"required": false,
+
+"type": "string",
+
+"format": "JSON"
+
+},
+
+{
+
+"name": "columns",
+
+"in": "query",
+
+"description": "Array of column names to fetch. If omitted, will return all columns.\n\nNote that this method will always return item keys, even when not specified, so you may receive more columns that you expect.",
+
+"required": false,
+
+"type": "string",
+
+"format": "JSON"
+
+},
+
+{
+
+"name": "count",
+
+"in": "query",
+
+"description": "Number of results to fetch. Must be a positive integer.",
+
+"required": false,
+
+"format": "int32",
+
+"default": 100,
+
+"type": "integer"
+
+},
+
+{
+
+"name": "start",
+
+"in": "query",
+
+"description": "Starting point for results.",
+
+"required": false,
+
+"format": "int32",
+
+"default": 0,
+
+"type": "integer"
+
+},
+
+{
+
+"name": "reverse",
+
+"in": "query",
+
+"description": "If true, will sort results newest first.",
+
+"required": false,
+
+"default": false,
+
+"type": "boolean"
+
+},
+
+{
+
+"name": "startTime",
+
+"in": "query",
+
+"description": "Starting date filter for results.",
+
+"required": false,
+
+"type": "string",
+
+"format": "date-time"
+
+},
+
+{
+
+"name": "endTime",
+
+"in": "query",
+
+"description": "Ending date filter for results.",
+
+"required": false,
+
+"type": "string",
+
+"format": "date-time"
+
+}
+
+],
+
+"responses": {
+
+"200": {
+
+"description": "Request was successful",
+
+Can be wildcard * to get all accounts linked to the authenticated user",
+
+"required": false,
+
+"type": "string",
+
+"format": "JSON"
+
+},
+
+{
+
+"name": "symbol",
+
+"in": "query",
+
+"description": "Instrument symbol. Send a bare series (e.g. XBT) to get data for the nearest expiring contract in that series.\n\nYou can also send a timeframe, e.g. `XBT:quarterly`. Timeframes are `nearest`, `daily`, `weekly`, `monthly`, `quarterly`, `biquarterly`, and `perpetual`.\n\nSymbols are case-insensitive.",
+
+"required": false,
+
+"type": "string"
+
+},
+
+{
+
+"name": "filter",
+
+"in": "query",
+
+"description": "Generic table filter. Send JSON key/value pairs, such as `{\"key\": \"value\"}`. You can key on individual fields, and do more advanced querying on timestamps. See the [Timestamp Docs](https://www.bitmex.com/app/restAPI#Timestamp-Filters) for more details.",
+
+"required": false,
+
+"type": "string",
+
+"format": "JSON"
+
+},
+
+{
+
+"name": "columns",
+
+"in": "query",
+
+"description": "Array of column names to fetch. If omitted, will return all columns.\n\nNote that this method will always return item keys, even when not specified, so you may receive more columns that you expect.",
+
+"required": false,
+
+"type": "string",
+
+"format": "JSON"
+
+},
+
+{
+
+"name": "count",
+
+"in": "query",
+
+"description": "Number of results to fetch. Must be a positive integer.",
+
+"required": false,
+
+"format": "int32",
+
+"default": 100,
+
+"type": "integer"
+
+},
+
+{
+
+"name": "start",
+
+"in": "query",
+
+"description": "Starting point for results.",
+
+"required": false,
+
+"format": "int32",
+
+"default": 0,
+
+"type": "integer"
+
+},
+
+{
+
+"name": "reverse",
+
+"in": "query",
+
+"description": "If true, will sort results newest first.",
+
+"required": false,
+
+"default": false,
+
+"type": "boolean"
+
+},
+
+{
+
+"name": "startTime",
+
+"in": "query",
+
+"description": "Starting date filter for results.",
+
+"required": false,
+
+"type": "string",
+
+"format": "date-time"
+
+},
+
+{
+
+"name": "endTime",
+
+"in": "query",
+
+"description": "Ending date filter for results.",
+
+"required": false,
+
+"type": "string",
+
+"format": "date-time"
+
+}
+
+],
+
+"responses": {
+
+"200": {
+
+"description": "Request was successful",
+
+"schema": {
+
+"type": "array",
+
+"items": {
+
+"$ref": "#/definitions/Execution"
+
+}
+
+}
+
+},
+
+"400": {
+
+"description": "Parameter Error",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+},
+
+"401": {
+
+"description": "Unauthorized",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+},
+
+"403": {
+
+"description": "Access Denied",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+},
+
+"404": {
+
+"description": "Not Found",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+}
+
+},
+
+"deprecated": false
+
+}
+
+},
+
+"/funding": {
+
+"get": {
+
+"tags": [
+
+"Funding"
+
+],
+
+"summary": "Get funding history.",
+
+"operationId": "Funding.get",
+
+"parameters": [
+
+{
+
+"name": "symbol",
+
+"in": "query",
+
+"description": "Instrument symbol. Send a bare series (e.g. XBT) to get data for the nearest expiring contract in that series.\n\nYou can also send a timeframe, e.g. `XBT:quarterly`. Timeframes are `nearest`, `daily`, `weekly`, `monthly`, `quarterly`, `biquarterly`, and `perpetual`.\n\nSymbols are case-insensitive.",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+}
+
+},
+
+"deprecated": false,
+
+"security": []
+
+}
+
+},
+
+"/instrument": {
+
+"get": {
+
+"tags": [
+
+"Instrument"
+
+],
+
+"summary": "Get instruments.",
+
+"description": "This returns all instruments and indices, including those that have settled or are unlisted.\nUse this endpoint if you want to query for individual instruments or use a complex filter.\nUse `/instrument/active` to return active instruments, or use a filter like `{\"state\": \"Open\"}`.\n\nThe instrument type is specified by the `typ` param.\n\n- Perpetual Contracts - `FFWCSX`\n- Perpetual Contracts (FX underliers) - `FFWCSF`\n- Spot - `IFXXXP`\n- Futures - `FFCCSX`\n- BitMEX Basket Index - `MRBXXX`\n- BitMEX Crypto Index - `MRCXXX`\n- BitMEX FX Index - `MRFXXX`\n- BitMEX Lending/Premium Index - `MRRXXX`\n- BitMEX Volatility Index - `MRIXXX`\n",
+
+"operationId": "Instrument.get",
+
+"parameters": [
+
+{
+
+"name": "symbol",
+
+"in": "query",
+
+"description": "Instrument symbol. Send a bare series (e.g. XBT) to get data for the nearest expiring contract in that series.\n\nYou can also send a timeframe, e.g. `XBT:quarterly`. Timeframes are `nearest`, `daily`, `weekly`, `monthly`, `quarterly`, `biquarterly`, and `perpetual`.\n\nSymbols are case-insensitive.",
+
+"required": false,
+
+"type": "string"
+
+},
+
+{
+
+"name": "filter",
+
+"in": "query",
+
+"description": "Generic table filter. Send JSON key/value pairs, such as `{\"key\": \"value\"}`. You can key on individual fields, and do more advanced querying on timestamps. See the [Timestamp Docs](https://www.bitmex.com/app/restAPI#Timestamp-Filters) for more details.",
+
+"required": false,
+
+"type": "string",
+
+"format": "JSON"
+
+},
+
+{
+
+"name": "columns",
+
+"in": "query",
+
+"description": "Array of column names to fetch. If omitted, will return all columns.\n\nNote that this method will always return item keys, even when not specified, so you may receive more columns that you expect.",
+
+"required": false,
+
+"type": "string",
+
+"format": "JSON"
+
+},
+
+{
+
+"name": "count",
+
+"in": "query",
+
+"description": "Number of results to fetch. Must be a positive integer.",
+
+"required": false,
+
+"format": "int32",
+
+"default": 100,
+
+"type": "integer"
+
+},
+
+{
+
+"name": "start",
+
+"in": "query",
+
+"description": "Starting point for results.",
+
+"required": false,
+
+"format": "int32",
+
+"default": 0,
+
+"type": "integer"
+
+},
+
+{
+
+"name": "reverse",
+
+"in": "query",
+
+"description": "If true, will sort results newest first.",
+
+"required": false,
+
+"default": false,
+
+"type": "boolean"
+
+},
+
+{
+
+"name": "startTime",
+
+"in": "query",
+
+"description": "Starting date filter for results.",
+
+"required": false,
+
+"type": "string",
+
+"format": "date-time"
+
+},
+
+{
+
+"name": "endTime",
+
+"in": "query",
+
+"description": "Ending date filter for results.",
+
+"required": false,
+
+"type": "string",
+
+"format": "date-time"
+
+}
+
+],
+
+"responses": {
+
+"200": {
+
+"description": "Request was successful",
+
+"schema": {
+
+"type": "array",
+
+"items": {
+
+"$ref": "#/definitions/Instrument"
+
+}
+
+}
+
+},
+
+"400": {
+
+"description": "Parameter Error",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+},
+
+"401": {
+
+"description": "Unauthorized",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+},
+
+"403": {
+
+"description": "Access Denied",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+},
+
+"404": {
+
+"description": "Not Found",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+}
+
+},
+
+"deprecated": false,
+
+"security": []
+
+}
+
+},
+
+"/instrument/active": {
+
+"get": {
+
+"tags": [
+
+"Instrument"
+
+],
+
+"summary": "Get all active instruments and instruments that have expired in <24hrs.",
+
+"operationId": "Instrument.getActive",
+
+"parameters": [],
+
+"responses": {
+
+"200": {
+
+"description": "Request was successful",
+
+"schema": {
+
+"type": "array",
+
+"items": {
+
+"$ref": "#/definitions/Instrument"
+
+}
+
+}
+
+},
+
+"400": {
+
+"description": "Parameter Error",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+}
+
+},
+
+"401": {
+
+"description": "Unauthorized",
+
+"schema": {
+
+"$ref": "#/definitions/Error"
+
+--------------------------------------------------------------------------------
+api-connectors/auto-generated/android/src/main/java/io/swagger/client/request/PostRequest.java at master · BitMEX/api-connectors · GitHub (https://github.com/BitMEX/api-connectors/blob/master/auto-generated/android/src/main/java/io/swagger/client/request/PostRequest.java)
+citeturn946search1 [wordlim: 200] Crawled: 3 weeks ago; _ [View Changelog](/app/apiChangelog) - #### Getting Started Base URI: [https://www.bitmex.com/api/v1](/api/v1) ##### Fetching Data All REST endpoints are documented below. ... /Quote/Quote_get) - [Trade Data](#! ... ##### Swagger Specification [⇩ Download Swagger JSON](swagger.json) - ## All API Endpoints Click to expand a section. ... * https://github.com/swagger-api/swagger-codegen.git
+##### Return Types By default, all data is returned as JSON. Send `?_format=csv` to get CSV data or `?_format=xml` to get XML data. ##### Trade Data Queries _This is only a small subset of what is available, to get you started._ Fill in the parameters and click the `Try it out!` button to try any of these queries. - [Pricing Data](#!/Quote/Quote_get) - [Trade Data](#!/Trade/Trade_get) - [OrderBook Data](#!/OrderBook/OrderBook_getL2) - [Settlement Data](#!/Settlement/Settlement_get) - [Exchange Statistics](#!/Stats/Stats_history) Every function of the BitMEX.com platform is exposed here and documented. Many more functions are available. ##### Swagger Specification [⇩ Download Swagger JSON](swagger.json) - ## All API Endpoints Click to expand a section.
+
+*
+
+* OpenAPI spec version: 1.2.0
+
+* Contact: [REDACTED_EMAIL]
+
+*
+
+* NOTE: This class is auto generated by the swagger code generator program.
+
+* https://github.com/swagger-api/swagger-codegen.git
+
+* Do not edit the class manually.
+
+*/
+
+package io.swagger.client.request;
+--------------------------------------------------------------------------------
+api-connectors/official-http/python-swaggerpy/README.md at master · BitMEX/api-connectors · GitHub (https://github.com/BitMEX/api-connectors/blob/master/official-http/python-swaggerpy/README.md)
+citeturn946search2 [wordlim: 200] Crawled: 2 weeks ago; Python objects are created dynamically using Bravado to auto-generate a `BitMEX` adapter object from BitMEX's Swagger JSON. ...     >>> result[0][0]['bidSize'] ...     >>> client.Quote.Quote_get(symbol="XBTUSD", startTime=datetime.datetime(2018, 1, 1)).result()    ([{'timestamp': datetime.datetime(2018, 1, 1, 0, 0, 11, 701000, tzinfo=tzutc()), 'symbol': 'XBTUSD', ...
+    >>> result = client.Quote.Quote_get(symbol="XBTUSD", reverse=True, count=1).result()
+    >>> result[0][0]['bidPrice']
+    13489.5
+    
+    >>> result[0][0]['bidSize']
+    4950
+    
+    >>> result[0][0]['askPrice']
+    13495.5
+    `
+
+### Instrument data
+
+The API supports fetching full data for one or multiple instruments.
+    
+    `>>> client.Instrument.Instrument_get(filter=json.dumps({'symbol': 'XBTJPY'})).result()
+    ([{'symbol': 'XBTJPY', 'rootSymbol': 'XBJ', 'state': 'Open', 'typ': 'FFWCSX', 'listing': datetime.datetime(2017, 10, 29, 12, 0, ...
+    `
+
+### Date ranges
+
+Any time-based parameters accept Python `datetime` objects. All timestamps returned from BitMEX are UTC.
+    
+    `>>> client = bitmex.bitmex()
+    >>> client.Quote.Quote_get(symbol="XBTUSD", startTime=datetime.datetime(2018, 1, 1)).result()
+    ([{'timestamp': datetime.datetime(2018, 1, 1, 0, 0, 11, 701000, tzinfo=tzutc()), 'symbol': 'XBTUSD', ...
+    
+    >>> client.Quote.Quote_get(symbol="XBTUSD", endTime=datetime.datetime.utcnow()).result()
+    ([{'timestamp': datetime.datetime(2018, 1, 11, 12, 14, 9, 392000, tzinfo=tzutc()), 'symbol': 'XBTUSD', ...
+
+### Authenticated endpoints
+
+Private endpoints require authentication. Clients authenticate with an API key. Keys can be generated here.
+
+To get an authenticated client instance:
+    
+    `>>> client = bitmex.bitmex(api_key=<YOUR API KEY>, api_secret=<YOUR API SECRET>)
+    `
+
+If you try to access a private endpoint with an unauthenticated client, an `HTTPUnauthorized` error is raised. Calls to private endpoints work the same as regular ones:
+    
+    `client.Position.Position_get(filter=json.dumps({'symbol': 'XBTUSD'})).result()
+    `
+
+## Advanced usage
+
+### Placing orders
+
+An order can be placed through the `Order_new()` function. See the API explorer for required and optional parameters.
+    
+    `client.Order.Order_new(symbol='XBTUSD', orderQty=10, price=12345.0).result()
+    `
+
+Instruments can be shorted by specifying a negative order quantity:
+--------------------------------------------------------------------------------
+api-connectors/auto-generated/python/swagger_client/api/order_api.py at master · BitMEX/api-connectors · GitHub (https://github.com/BitMEX/api-connectors/blob/master/auto-generated/python/swagger_client/api/order_api.py)
+citeturn946search3 [wordlim: 200] Crawled: 3 weeks ago; 'Take profit'. :return: Order If the method is called asynchronously, returns the request thread. """ all_params = ['symbol', 'side', 'simple_order_qty', 'order_qty', 'price', 'display_qty', 'stop_px', 'cl_ord_id', 'cl_ord_link_id', 'peg_offset_value', 'peg_price_type', 'ord_type', 'time_in_force', 'exec_inst', 'contingency_type', 'text'] # noqa: E501 all_params.append('async_req') all_params.append('_return_http_data_only') all_params.append('_preload_content') all_params.append('_request_timeout') params = locals() for key, val in six.iteritems(params['kwargs']): if key not in all_params: raise TypeError( "Got an unexpected keyword argument '%s'" " to method order_new" % key ) params[key] = val del params['kwargs'] # verify the required parameter 'symbol' is set if self.api_client.client_side_validation and ('symbol' not in params or params['symbol'] is None): # noqa: E501 raise ValueError("Missing the required parameter `symbol` when calling `order_new`") # noqa: E501 collection_formats = {} path_params = {} query_params = [] header_params = {} form_params = [] local_var_files = {} if 'symbol' in params: form_params.append(('symbol', params['symbol'])) # noqa: E501 if 'side' in params: form_params.append(('side', params['side'])) # noqa: E501 if 'simple_order_qty' in params: form_params.append(('simpleOrderQty', params['simple_order_qty'])) # noqa: E501 if 'order_qty' in params: form_params.append(('orderQty', params['order_qty'])) # noqa: E501 if 'price' in params: form_params.append(('price', params['price'])) # noqa: E501 if 'display_qty' in params: form_params.append(('displayQty', params['display_qty'])) # noqa: E501 if 'stop_px' in params: form_params.append(('stopPx', params['stop_px'])) # noqa: E501 if 'cl_ord_id' in params: form_params.append(('clOrdID', params['cl_ord_id'])) # noqa: E501 if 'cl_ord_link_id' in params: form_params.append(('clOrdLinkID', params['cl_ord_link_id'])) # noqa: E501 if 'peg_offset_value' in params: form_params.append(('pegOffsetValue', params['peg_offset_value'])) # noqa: E501 if 'peg_price_type' in params: form_params.append(('pegPriceType', params['peg_price_type'])) # noqa: E501 if 'ord_type' in params: form_params.append(('ordType', params['ord_type'])) # noqa: E501 if 'time_in_force' in params: form_params.append(('timeInForce', params['time_in_force'])) # noqa: E501 if 'exec_inst' in params: form_params.append(('execInst', params['exec_inst'])) # noqa: E501 if 'contingency_type' in params: form_params.append(('contingencyType', params['contingency_type'])) # noqa: E501 if 'text' in params: form_params.append(('text', params['text'])) # noqa: E501 body_params = None # HTTP header `Accept` header_params['Accept'] = self.api_client.select_header_accept( ['application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript']) # noqa: E501 # HTTP header `Content-Type` header_params['Content-Type'] = self.api_client.select_header_content_type( # noqa: E501 ['application/json', 'application/x-www-form-urlencoded']) # noqa: E501 # Authentication setting auth_settings = ['apiExpires', 'apiKey', 'apiSignature'] # noqa: E501 return self.api_client.call_api( '/order', 'POST', path_params, query_params, header_params, body=body_params, post_params=form_params, files=local_var_files, response_type='Order', # noqa: E501 auth_settings=auth_settings, async_req=params.get('async_req'), _return_http_data_only=params.get('_return_http_data_only'), _preload_content=params.get('_preload_content', True), _request_timeout=params.get('_request_timeout'), collection_formats=collection_formats) ... /Quote/Quote_get) - [Trade Data](#! ... Generated by: https://github.com/swagger-api/swagger-codegen.git ... See the [Timestamp Docs](https://www.bitmex.com/app/restAPI#Timestamp-Filters) for more details.
+Send `?_format=csv` to get CSV data or `?_format=xml` to get XML data. ##### Trade Data Queries _This is only a small subset of what is available, to get you started._ Fill in the parameters and click the `Try it out!` button to try any of these queries. - [Pricing Data](#!/Quote/Quote_get) - [Trade Data](#!/Trade/Trade_get) - [OrderBook Data](#!/OrderBook/OrderBook_getL2) - [Settlement Data](#!/Settlement/Settlement_get) - [Exchange Statistics](#!/Stats/Stats_history) Every function of the BitMEX.com platform is exposed here and documented. Many more functions are available. ##### Swagger Specification [⇩ Download Swagger JSON](swagger.json) - ## All API Endpoints Click to expand a section. # noqa: E501
+
+OpenAPI spec version: 1.2.0
+
+Contact: [REDACTED_EMAIL]
+
+Generated by: https://github.com/swagger-api/swagger-codegen.git
+
+"""
+
+class OrderApi(object):
+
+"""NOTE: This class is auto generated by the swagger code generator program.
+
+Do not edit the class manually.
+
+Ref: https://github.com/swagger-api/swagger-codegen
+--------------------------------------------------------------------------------
+api-connectors/auto-generated/android/src/main/java/io/swagger/client/auth/Authentication.java at master · BitMEX/api-connectors · GitHub (https://github.com/BitMEX/api-connectors/blob/master/auto-generated/android/src/main/java/io/swagger/client/auth/Authentication.java)
+citeturn946search4 [wordlim: 200] Crawled: 2 months ago; /Quote/Quote_get) - [Trade Data](#! ... /Stats/Stats_history) Every function of the BitMEX.com platform is exposed here and documented. ... ##### Swagger Specification [⇩ Download Swagger JSON](swagger.json) - ## All API Endpoints Click to expand a section. ... * https://github.com/swagger-api/swagger-codegen.git
+You can try out any query right from this interface. Most table queries accept `count`, `start`, and `reverse` params. Set `reverse=true` to get rows newest-first. Additional documentation regarding filters, timestamps, and authentication is available in [the main API documentation](/app/restAPI). _All_ table data is available via the [Websocket](/app/wsAPI). We highly recommend using the socket if you want to have the quickest possible data without being subject to ratelimits. ##### Return Types By default, all data is returned as JSON. Send `?_format=csv` to get CSV data or `?_format=xml` to get XML data. ##### Trade Data Queries _This is only a small subset of what is available, to get you started._ Fill in the parameters and click the `Try it out!` button to try any of these queries. - [Pricing Data](#!/Quote/Quote_get) - [Trade Data](#!/Trade/Trade_get) - [OrderBook Data](#!/OrderBook/OrderBook_getL2) - [Settlement Data](#!/Settlement/Settlement_get) - [Exchange Statistics](#!/Stats/Stats_history) Every function of the BitMEX.com platform is exposed here and documented. Many more functions are available. ##### Swagger Specification [⇩ Download Swagger JSON](swagger.json) - ## All API Endpoints Click to expand a section.
+
+*
+
+* OpenAPI spec version: 1.2.0
+
+* Contact: [REDACTED_EMAIL]
+
+*
+
+* NOTE: This class is auto generated by the swagger code generator program.
+
+* https://github.com/swagger-api/swagger-codegen.git
+
+* Do not edit the class manually.
+
+*/
+
+package io.swagger.client.auth;
+
+import io.swagger.client.Pair;
+
+import java.util.Map;
+
+import java.util.List;
+
+public interface Authentication {
+
+/** Apply authentication settings to header and query params. */
+
+void applyToParams(List<Pair> queryParams, Map<String, String> headerParams);
+
+}--------------------------------------------------------------------------------
+api-connectors/auto-generated/android/src/main/java/io/swagger/client/model/InlineResponse200.java at master · BitMEX/api-connectors · GitHub (https://github.com/BitMEX/api-connectors/blob/master/auto-generated/android/src/main/java/io/swagger/client/model/InlineResponse200.java)
+citeturn946search5 [wordlim: 200] Crawled: 2 months ago; _ [View Changelog](/app/apiChangelog) - #### Getting Started Base URI: [https://www.bitmex.com/api/v1](/api/v1) ##### Fetching Data All REST endpoints are documented below. ... /Quote/Quote_get) - [Trade Data](#! ... ##### Swagger Specification [⇩ Download Swagger JSON](swagger.json) - ## All API Endpoints Click to expand a section. ... * https://github.com/swagger-api/swagger-codegen.git
+` button to try any of these queries. - [Pricing Data](#!/Quote/Quote_get) - [Trade Data](#!/Trade/Trade_get) - [OrderBook Data](#!/OrderBook/OrderBook_getL2) - [Settlement Data](#!/Settlement/Settlement_get) - [Exchange Statistics](#!/Stats/Stats_history) Every function of the BitMEX.com platform is exposed here and documented. Many more functions are available. ##### Swagger Specification [⇩ Download Swagger JSON](swagger.json) - ## All API Endpoints Click to expand a section.
+
+*
+
+* OpenAPI spec version: 1.2.0
+
+* Contact: [REDACTED_EMAIL]
+
+*
+
+* NOTE: This class is auto generated by the swagger code generator program.
+
+* https://github.com/swagger-api/swagger-codegen.git
+
+* Do not edit the class manually.
+
+*/
+
+package io.swagger.client.model;
+
+import io.swagger.annotations.*;
+
+import com.google.gson.annotations.SerializedName;
+
+@ApiModel(description = "")
+
+public class InlineResponse200 {
+
+@SerializedName("name")
+
+private String name = null;
+
+/**
+
+**/
+
+@ApiModelProperty(value = "")
+
+public String getName() {
+
+return name;
+
+}
+
+public void setName(String name) {
+
+this.name = name;
+
+}
+
+@Override
+
+public boolean equals(Object o) {
+
+if (this == o) {
+
+return true;
+
+}
+
+if (o == null || getClass() != o.getClass()) {
+
+return false;
+
+}
+
+InlineResponse200 inlineResponse200 = (InlineResponse200) o;
+
+return (this.name == null ? inlineResponse200.name == null : this.name.equals(inlineResponse200.name));
+
+}
+
+@Override
+
+public int hashCode() {
+
+int result = 17;
+
+result = 31 * result + (this.name == null ? 0: this.name.hashCode());
+
+return result;
+
+}
+
+@Override
+
+public String toString() {
+
+StringBuilder sb = new StringBuilder();
+
+sb.append("class InlineResponse200 {\n");
+
+sb.append(" name: ").append(name).append("\n");
+
+sb.append("}\n");
+
+return sb.toString();
+
+}
+
+}--------------------------------------------------------------------------------
+GitHub - BitMEX/api-connectors: Libraries for connecting to the BitMEX API. · GitHub (https://github.com/BitMEX/api-connectors)
+citeturn946search6 [wordlim: 200] Crawled: 2 months ago; swagger.json  | swagger.json  |    | ... A few simple connectors for connecting to the BitMEX API, which conforms to the Swagger spec. ... www.bitmex.com/app/restAPI
+swagger.json  | swagger.json  |    |  
+[Button: View all files]
+
+## Repository files navigation
+
+  *   * README
+
+More items
+
+# BitMEX API Connectors
+
+A few simple connectors for connecting to the BitMEX API, which conforms to the Swagger spec.
+
+Connectors in the `clients` directory are autogenerated. Connectors in the `official-*` directory are written or vetted by BitMEX employees to showcase various features.
+
+## Official Examples
+
+#### HTTP
+
+  * C#
+  * mIRC
+  * Node-Request
+  * Node-Swagger
+  * Python-SwaggerPy
+  * VBA
+
+#### Websockets
+
+> The easiest way to get real-time data from BitMEX is via the BitMEX Delta Server, a locally-runnable HTTP server that subscribes to live data on your behalf. You can poll this local server as often as you want.
+
+  * BitMEX-Delta-Server (Start Here)
+  * NodeJS
+  * Browser (Primus)
+  * Python
+
+## Auto-Generated Languages
+
+Clients:
+
+  * Android
+  * Clojure
+  * C#
+  * C++-Qt5
+  * C++-REST
+  * Go
+  * Java
+  * JavaScript
+  * Objective C
+  * PHP
+  * Python
+  * Ruby
+
+## About
+
+Libraries for connecting to the BitMEX API.
+
+www.bitmex.com/app/restAPI
+
+
+### Stars
+
+907 stars
+
+### Watchers
+
+86 watching
+
+### Forks
+
+776 forks
+--------------------------------------------------------------------------------
+api-connectors/auto-generated/go/docs/FundingApi.md at master · BitMEX/api-connectors · GitHub (https://github.com/BitMEX/api-connectors/blob/master/auto-generated/go/docs/FundingApi.md?plain=1)
+citeturn946search7 [wordlim: 200] Crawled: 2 days ago; See the [Timestamp Docs](https://www.bitmex.com/app/restAPI#Timestamp-Filters) for more details. ... - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+--------------------------------------------------------------------------------
+api-connectors/auto-generated/python/docs/Instrument.md at master · BitMEX/api-connectors · GitHub (https://github.com/BitMEX/api-connectors/blob/master/auto-generated/python/docs/Instrument.md)
+citeturn946search8 [wordlim: 200] Crawled: last month; funding_quote_symbol  | str  |  | [optional] ... funding_timestamp  | datetime  |  | [optional] ... bid_price  | float  |  | [optional]
+--------------------------------------------------------------------------------
+api-doc/bitmax-api-doc-v1.2.md at master · bitmax-exchange/api-doc · GitHub (https://github.com/bitmax-exchange/api-doc/blob/master/bitmax-api-doc-v1.2.md)
+citeturn946search9 [wordlim: 200] Crawled: last month;     GET api/v1/quote? ...       "bidSize":  "1.56", ...        "ts":     1557422548511, // timestamp, 64-bit integer ...       'email': '[REDACTED_EMAIL]',  // this field will be deprecated soon
+--------------------------------------------------------------------------------
+api-connectors/auto-generated/python/docs/FundingApi.md at master · BitMEX/api-connectors · GitHub (https://github.com/BitMEX/api-connectors/blob/master/auto-generated/python/docs/FundingApi.md)
+citeturn946search10 [wordlim: 200] Crawled: 2 days ago; # swagger_client.FundingApi ... Send JSON key/value pairs, such as `{\"key\": \"value\"}`. ... See the [Timestamp Docs](https://www.bitmex.com/app/restAPI#Timestamp-Filters) for more details. (optional)
+--------------------------------------------------------------------------------
+bitmex-client/README.md at master · joliveros/bitmex-client · GitHub (https://github.com/joliveros/bitmex-client/blob/master/README.md)
+citeturn946search11 [wordlim: 200] Crawled: 2 weeks ago; * Pricing Data * Trade Data * OrderBook Data * Settlement Data * Exchange Statistics Every function of the BitMEX.com platform is exposed here and documented. ... ##### Swagger Specification ⇩ Swagger JSON ---- ## All API Endpoints Click to expand a section. ...     pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+--------------------------------------------------------------------------------
+CDS Curb | CV Events Additions (https://github.com/user-attachments/files/17108020/NEX-CDS.Curb._.CV.Events.Additions-240924-043833.pdf)
+citeturn946search12 [wordlim: 200] Published: 1.3 years ago; A Curb Event is represented as a JSON object, whose fields are as follows: ... me  | Timestamp  | Required  | Time at which the event
+

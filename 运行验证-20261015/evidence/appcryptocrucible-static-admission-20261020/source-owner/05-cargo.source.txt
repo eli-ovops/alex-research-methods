@@ -1,0 +1,118 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/liq-types",
+    "crates/liq-config",
+    "crates/liq-obs",
+    "crates/liq-protocol",
+    "crates/liq-state",
+    "crates/liq-node",
+    "crates/liq-adapters",
+    "crates/liq-adapters/aave-v4",
+    "crates/liq-adapters/aave-v3",
+    "crates/liq-adapters/morpho-blue",
+    "crates/liq-adapters/euler-v2",
+    "crates/liq-adapters/silo-v2",
+    "crates/liq-adapters/liquity-v2",
+    "crates/liq-adapters/fluid",
+    "crates/liq-adapters/gearbox",
+    "crates/liq-adapters/compound-v2",
+    "crates/liq-oracle",
+    "crates/liq-engine",
+    "crates/liq-flash",
+    "crates/liq-router",
+    "crates/liq-sim",
+    "crates/liq-wire",
+    "crates/liq-plan",
+    "crates/liq-exec",
+    "crates/liq-risk",
+    "crates/liq-watch",
+    "crates/liq-replay",
+    "crates/liq-books",
+    "crates/liq-bot",
+    "crates/liq-reth",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+alloy-primitives = { version = "=1.6.1", default-features = false }
+alloy-sol-types = { version = "=1.6.1", default-features = false }
+alloy-provider = { version = "=2.4.2", default-features = false, features = ["reqwest", "reqwest-default-tls"] }
+alloy-rpc-types-eth = { version = "=2.4.2", default-features = false }
+alloy-signer = { version = "=1.6.1", default-features = false }
+alloy-signer-local = { version = "=1.6.1", default-features = false }
+tokio = { version = "=1.52.3", default-features = false, features = ["rt", "macros", "time"] }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = { version = "=1.0.145", default-features = false, features = ["std"] }
+# `http2` + `native-tls-alpn`: every builder and the MEV-Share relay
+# negotiate h2 over TLS 1.3 (ALPN probe 2026-10-10, ops/net/README.md), so a
+# warm POST and a bundle share one socket instead of the bundle opening a
+# cold one. Without `native-tls-alpn` the native TLS backend offers no ALPN
+# and every connection stays HTTP/1.1.
+reqwest = { version = "=0.12.23", default-features = false, features = ["json", "stream", "default-tls", "http2", "native-tls-alpn"] }
+eventsource-stream = "=0.2.3"
+futures-util = { version = "=0.3.31", default-features = false, features = ["std"] }
+toml = "=1.1.6"
+figment = { version = "=0.10.19", features = ["toml", "env"] }
+tracing = "=0.1.44"
+metrics = "=0.24.6"
+thiserror = "=2.0.20"
+eyre = "=0.6.14"
+crossbeam-channel = "=0.5.17"
+tokio-tungstenite = { version = "=0.26.2", default-features = false, features = ["connect", "native-tls"] }
+rtrb = "=0.4.0"
+triple_buffer = "=9.0.0"
+arc-swap = "=1.9.2"
+parking_lot = "=0.12.5"
+smallvec = "=1.13.2"
+arrayvec = "=0.7.8"
+bumpalo = "=3.20.3"
+bytemuck = { version = "=1.25.2", features = ["derive"] }
+crc32fast = { version = "=1.5.2", default-features = false, features = ["std"] }
+fixedbitset = "=0.5.7"
+mimalloc = { version = "=0.1.52", default-features = false }
+core_affinity = "=0.8.3"
+proptest = "=1.11.0"
+loom = "=0.7.2"
+criterion = { version = "=0.8.2", features = ["html_reports"] }
+revm = { version = "=43.0.2", default-features = false, features = ["std"] }
+arrow = { version = "=55.2.0", default-features = false }
+parquet = { version = "=55.2.0", features = ["zstd"] }
+rusqlite = { version = "=0.37.0", features = ["bundled"] }
+notify = { version = "=6.1.1" }
+signal-hook = { version = "=0.3.18", default-features = false, features = ["iterator"] }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unreachable_pub = "warn"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+indexing_slicing = "deny"
+arithmetic_side_effects = "deny"
+float_arithmetic = "deny"
+await_holding_lock = "deny"
+mutex_atomic = "warn"
+rc_buffer = "warn"
+
+# Dev/test builds: line tables only for workspace crates (backtraces keep
+# file:line), none for dependencies. Most test-build time was linking full
+# debug info.
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+debug = false
+
+[profile.release]
+overflow-checks = true
+panic = "unwind"
+lto = "fat"
+codegen-units = 1
+debug = 1

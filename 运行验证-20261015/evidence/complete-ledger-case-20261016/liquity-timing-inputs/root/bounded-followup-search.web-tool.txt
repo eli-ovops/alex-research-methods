@@ -1,0 +1,440 @@
+GitHub - azeonprotocol/liquity-v2: Liquity v2 monorepo containing the contracts, subgraph and frontend. · GitHub (https://github.com/azeonprotocol/liquity-v2)
+citeturn492search0 [wordlim: 200] Crawled: last week; Redemption bot creators should understand the competitive nature of redemptions, and take this dynamic into account when programming them. ...   * PriceFeed refers to the internal Liquity v2 system contract which contains price calculations and logic for a given branch - e.g. "the WETH PriceFeed, which fetches price data from the ETH-USD oracle" ...   * The redemption arbitrage is highly competitive, and flash loan fees reduce profits (though, the manipulation could still result in a greater profit as mentioned above) ... The redemption fee formula is path-dependent: that is, given some given prior system state, the fee incurred from redeeming one big chunk of BOLD in a single transaction is greater than the total fee incurred by redeeming the same BOLD amount in many smaller chunks with many transactions (assuming no other system state change in between chunks).
+pnpm-lock.yaml  | pnpm-lock.yaml  |    |  
+pnpm-workspace.yaml  | pnpm-workspace.yaml  |    |  
+vercel.json  | vercel.json  |    |  
+
+## Table of Contents
+
+  * Significant changes in Liquity v2
+  * Liquity v2 Overview
+  * Multicollateral Architecture Overview
+  * Core System Contracts
+    * Top level contracts
+    * Branch-level contracts
+    * Peripheral helper contracts
+    * Mainnet PriceFeed contracts
+  * Public state-changing functions
+    * CollateralRegistry
+    * BorrowerOperations
+    * TroveManager
+    * StabilityPool
+    * All PriceFeeds
+    * BOLDToken
+  * Borrowing, fees and interest rates
+    * Interest on Trove debt
+    * Applying a Trove's interest
+    * Interest rate scheme implementation
+    * Aggregate vs individual recorded debts
+    * 19 - Users Can Game Upfront Fees by Chunking Debt
+    * 20 - Users can game upfront fees by joining an empty batch
+    * 21 - Deployment backrunning
+    * 22 - Repeated redistribution can eventually result in zero stake Troves
+    * 23 - Redistributions and CR drag down cascades
+    * 24 - SP loss evasion
+    * 25 - Redistribution loss evasion
+    * 26 - Debt in front considerations
+    * Issues identified in audits requiring no fix
+  * Considerations for v2 forks
+    * High level trust assumptions
+    * Known issues in Liquity v2
+    * Collateral choices
+    * Immutable vs upgradeable forks
+    * Branch risk parameters
+    * Redemption floor fee
+    * Bootstrapping, seeding liquidity and early growth
+    * Oracle considerations
+    * Redemption impact on borrowers
+    * Closing the last Trove in the system
+    * Redemptions should be left to bots
+    * Security and audits
+    * Code diff with Liquity v2
+
+## BOLD Redemptions
+
+Any BOLD holder (whether or not they have an active Trove) may redeem their BOLD directly with the system. Their BOLD is exchanged for a mixture of collaterals at face value: redeeming 1 BOLD token returns $1 worth of collaterals (minus a dynamic redemption fee), priced at their current market values according to their respective oracles. Redemptions have two purposes:
+
+  1. When BOLD is trading at <$1 on the external market, arbitrageurs may redeem `$x` worth of BOLD for `>$x` worth of collaterals, and instantly sell those collaterals to make a profit. This reduces the circulating supply of BOLD which in turn should help restore the $1 BOLD peg.
+
+  2. Redemptions improve the relative health of the least healthy collateral branches (those with greater "outside" debt, i.e. debt not covered by their SP).
+
+## Redemption routing
+
+Redemptions are performed via the `CollateralRegistry.redeemCollateral` endpoint. A given redemption may be routed across several collateral branches.
+
+A given BOLD redemption is split across branches according in proportion to the outside debt of that branch, i.e. (pseudocode):
+## Redemption warning
+
+As explained above, redemptions are an economic mechanism intended to keep BOLD peg floor. It is expected that professional bots perform them (usually through private mempools). A redemption is a complex operation and is not meant for regular end users. That’s why the protection against attacks like frontrunning, implemented in the smart contracts redemption function, is relatively simple. We expect that bots integrate those functions into their smart contracts that perform the whole arbitrage loop, and make sure the operation is profitable (and, of course, revert otherwise). If users want to redeem BOLD they should be aware of these dangers. Some examples of the attacks they may suffer:
+
+  * An attacker frontrunning with another redemption, which makes user’s one unpfrofitable
+  * An attacker frontrunning to mess the total supply (repaying to reduce it in order to increase the fee) or the unbacked portions of each branch (to change the proportions of collaterals, or even to make a branch fully backed and reduce the redeemable amount).
+  * An attacker sandwiching the collateral / BOLD swap if the user tries to complete the arbitrage.
+
+It is also recommended to simulate the transaction. The final redeemed amount may be less than the requested amount, and redeemers could pay a higher than needed redemption rate. The election of proper `_maxIterationsPerCollateral` param is important and hard: it’s intended to avoid out of gas errors, but it may cap the redemption if set too low.
+
+## Zombie Troves
+
+In Liquity v2, redemptions do not close Troves (unlike v1).
+
+Rationale for leaving Troves open: Troves are now ordered by interest rate rather than ICR, and so (unlike v1) it is now possible to redeem Troves with ICR > TCR. If such Troves were closed upon redemption, then redemptions may lower the TCR - this would be an economic risk / attack vector.
+
+Hence redemptions in v2 always leave Troves open. This ensures that normal redemptions never lower the TCR* of a branch.
+
+Need for zombie Troves: Leaving Troves open at redemption means redemptions may result in Troves with very small (or zero) `debt < MIN_DEBT`.   * Do not redeem Troves in order of interest rate. Instead, the redeemer passes a list of Troves to redeem from.
+  * Do not create Zombie Troves, even if the Trove is left with tiny or zero debt - since, due to the preceding point there is no risk of clogging up future urgent redemptions with tiny Troves.
+
+#### Urgent redemption best practice
+
+The `urgentRedeemCollateral` params are as such:
+
+  * `_boldAmount` specifying the intended amount to redeem
+  * `_troveIds` specifying the target Troves to redeem from
+  * `_minCollateral` allows the user specify the minimum collateral returned from the operation
+
+It’s expected that `_minCollateral` be calculated off-chain by the redeemer.
+
+Consider two redeemers Alice and Bob. Since there will be competition for urgent redemptions when they are profitable, if Alice’s redemption lands first, it may redeem from Bob’s target Troves in `_troveIds` before his redemption lands. The redemption logic skips Troves in the list that are unredeemable, and thus the actual BOLD amount redeemed by Bob could be significantly lower than `_boldAmount`. This in turn may result in the returned collateral being significantly lower than `_minCollateral`.
+
+Redemption bot creators should understand the competitive nature of redemptions, and take this dynamic into account when programming them. Mitigating frontrunning via transactions sent to private pools e.g. Flashbots may be preferable.
+
+## Collateral choices in Liquity v2
+
+Provisionally, v2 has been developed with the following collateral assets in mind:
+
+  * WETH
+  * WSTETH
+  * RETH
+
+Since this could be due to one being manipulated upward, we take the minimum (as per the normal primary price calculation), which should ensure legitimately profitable redemptions remain so in this case.
+
+### Mitigating redemption arbitrages / oracle frontrunning
+
+Since market oracles have update thresholds, they will inevitably lag the "true" market price at times - particularly, when their deviation from the market price is less than their update threshold. This may be exploitable for profit. An attack sequence may look like this:
+
+  * Observe collateral price increase oracle update in the mempool
+  * Frontrun with redemption transaction for $x worth of BOLD and receive `$x` - fee worth of collateral
+  * Oracle price increase update transaction is validated
+  * Sell redeemed collateral for $y such that `$y > $x`, due to the price increase
+  * Extracts `$(y-x)` from the system.
+
+This is “hard” frontrunning: the attacker directly frontrun the oracle price update. “Soft” frontrunning is also possible when the attacker sees the market price increase before even seeing the oracle price update transaction in the mempool.
+The largest was 0.46% in the dataset. Assuming no depeg (i.e.that the true RETH-ETH price equals the LST exchange rate), this implies the deltas between market oracle and exchange rate were always well under 2%. Thus usage of the min price for redemptions should be very rare, if it ever happens. In nearly all cases, it will use the “worst” price.
+
+Thus, the RETH branch just inherits the adverse arb risks of the ETH-USD oracle.
+
+### STETH branch
+
+The STETH redemption price logic compares two market oracles - STETH-USD and ETH-USD.
+
+When the delta between oracle prices is >1%,the system uses the STETH-USD price rather than the max (“worst”) price.
+
+However it is ultimately the redemption fee that protects the system against market price movements:
+
+As in Liquity v1, any market price rise in range `[0.5%,1%]` can result in adverse profitable redemptions, since even though the ETH-USD oracle should update and the v2 system would use that (max) price, it can still be frontrun, and the fee is only 0.5%. The attacker can extract a profit (ignoring gas) of `market_price - stale_oracle_price - fee`.
+
+For market price rises above 1%, the STETH-USD oracle is used. The oracle should update, but if its frontrun (or if it’s just laggy and doesn’t update) the impact is actually the same as in v1: the system doesn’t use a max “worst” price, but it also didn’t in v1 either. The attacker extracts a profit of `market_price - stale_oracle_price - fee`, which for a given market price change >1%, would be the same quantity as if they frontran a stale ETH-USD oracle update.
+
+As long as both oracles are responsive (and assuming no LST depegs), the v2 system inherits the same adverse redemption arb risks as Liquity v1.
+
+If for some reason the STETH-USD oracle doesn’t update quickly enough when the market price movement should trigger it to update, then a larger `market_price - stale_oracle_price` delta could result, in turn leading to larger adverse redemption volumes.
+
+However that would be purely an oracle issue. Chainlink has been chosen as the oracle provider in part due to their highly responsive oracles, and it’s assumed that STETH-USD oracle updates as responsively as ETH-USD, since they utilise the same underlying oracle network and infrastructure.
+
+Finally, Liquity v2 has extra protection from two measures that each reduce overall adverse arb profits: 1) a greater redemption fee gain (lower `BETA` parameter) and 2) redemption routing, which reduces adverse profits either by routing itself, or the flash loan fee required to manipulate StabilityPool quantities and bypass routing.
+
+### PriceFeed Deployment
+
+Upon deployment, the `stalenessThreshold` property of each oracle is set. This is in all cases greater than the oracle’s intrinsic update heartbeat.
+
+### Fetching the price
+
+When a system branch operation needs to know the current price of collateral, it calls `fetchPrice` on the relevant PriceFeed.
+
+  * If the PriceFeed has already been disabled, return the `lastGoodPrice`. Otherwise:
+  * Fetch all necessary oracle answers with `aggregator.latestRoundData`
+  * Verify each oracle answer. If any oracle used is deemed to have failed, disable the PriceFeed and shut the branch down
+  * Calculate the final LST-USD price (according to table above)
+  * Store the final LST-USD price and return it
+## Known issues and mitigations
+
+### 1 - Oracle price frontrunning
+
+Push oracles are used for all collateral pricing. Since these oracles push price update transactions on-chain, it is possible to frontrun them with redemption transactions.
+
+An attack sequence may look like this:
+
+  * Observe collateral price increase oracle update in the mempool
+  * Frontrun with redemption transaction for `$x` worth of BOLD and receive `$x - fee` worth of collateral
+  * Oracle price increase update transaction is validated
+  * Sell redeemed collateral for `$y` such that `$y > $x`, due to the price increase
+  * Extracts `$(y-x)` from the system.
+
+This is “hard” frontrunning: the attacker directly frontrun the oracle price update. “Soft” frontrunning is also possible when the attacker sees the market price increase before even seeing the oracle price update transaction in the mempool.
+
+The value extracted is excessive, i.e. above and beyond the arbitrage profit expected from BOLD peg restoration. In fact, oracle frontrunning can even be performed when BOLD is trading >= $1.
+If the difference is greater, then the normal primary pricing calculation is used - a large delta is assumed to reflect a legitimate difference between market price and canonical rate.
+
+### 2 - Bypassing redemption routing logic via temporary SP deposits
+
+The redemption routing logic reduces the “outside” debt of each branch by the same percentage, where outside debt for branch `i` is given by:
+
+`outside_debt_i = bold_debt_i - bold_in_SP_i`.
+
+It is clearly possible for a redeemer to temporarily manipulate the outside debt of one or more branches by depositing to the SP.
+
+Thus, an attacker could direct redemptions to their chosen branch(es) by depositing to SPs in branches they don’t wish to redeem from.
+
+This sequence - deposit to SPs on unwanted branches, then redeem from chosen branch(es) - can be performed in one transaction and a flash loan could be used to obtain the BOLD funds for deposits.
+
+By doing this redeemer extracts no extra value from the system, though it may increase their profit if they are able to choose LSTs to redeem which have lower slippage on external markets. The manipulation does not change the fee the attacker pays (which is based purely on the `baseRate`, the redeemed BOLD and the total BOLD supply).
+
+#### Solution
+
+Currently no fix is in place, because:
+
+  * The redemption arbitrage is highly competitive, and flash loan fees reduce profits (though, the manipulation could still result in a greater profit as mentioned above)
+  * There is no direct value extraction from the system
+  * Redemption routing is not critical to system health. It is intended as a soft measure to nudge the system back to a healthier state, but in the end the system is heavily reliant on the health of all collateral markets/assets.
+
+### 3 - Path-dependent redemptions: lower fee when chunking
+
+The redemption fee formula is path-dependent: that is, given some given prior system state, the fee incurred from redeeming one big chunk of BOLD in a single transaction is greater than the total fee incurred by redeeming the same BOLD amount in many smaller chunks with many transactions (assuming no other system state change in between chunks).
+
+As such, redeemers may be incentivized to split their redemption into many transactions in order to pay a lower total redemption fee.
+
+See this example from this sheet: https://docs.google.com/spreadsheets/d/1MPVI6edLLbGnqsEo-abijaaLnXle-cJA_vE4CN16kOE/edit?usp=sharing
+
+#### Solution
+
+No fix is deemed necessary, since:
+
+  * Redemption arbitrage is competitive and profit margins are thin. Chunking redemptions incurs a higher total gas cost and eats into arb profits.
+  * Redemptions in Liquity v1 (with the same fee formula) have broadly functioned well, and proven effective in restoring the BOLD peg.
+
+https://github.com/liquity/bold/blob/b2ff26c5f09e72eaa5ad7eb24210aded4e80f00e/contracts/src/StabilityPool.sol#L530
+
+The same bound can be found for the sums `G` and `B`, e.g. where `B` is updated in: https://github.com/liquity/bold/blob/b2ff26c5f09e72eaa5ad7eb24210aded4e80f00e/contracts/src/StabilityPool.sol#L372
+
+An upper bound of ~1e23 BOLD before overflow is deemed acceptable - the USD value of total global wealth is many orders of magnitudes lower. However, forks should consider overflow calculations if they further increase precision or expect a much higher supply of their minted asset.
+
+### 16 - Just in time StabilityPool deposits
+
+It is possible for a depositor to front-run a liquidation transaction with a large SP deposit and reap most of the liquidation gains.
+
+For example:
+
+  * User sees incoming profitable liquidation transaction
+  * User front-runs it and immediately makes a large deposit with `provideToSP`
+  * User extracts most of the collateral gain from the liquidation
+Thus, checking for undercollateralized Troves in v2 would require an inefficient loop over all Troves, which is prohibitively expensive gas-wise.
+
+However, no fix is required since it’s expected that:
+
+  * Most liquidations are profitable for SP depositors, i.e. occur at ICR > 100%, so the collateral value that SP depositors receive is greater than the amount of debt cancelled against their BOLD deposit.
+
+  * Liquidations are MEV competitive and a significant portion of liquidations are expected to be performed via private pools e.g. Flashbots, and not via the public gas auction
+
+  * The majority of SP deposits are “sticky” - that is, most depositors leave their deposit in the SP for the medium/long term to earn continuous BOLD yield, and are not running frontrunning bots in order to evade a very occasional unprofitable liquidation.
+
+### 25 - Redistribution Loss evasion
+
+It is possible that a borrower may frontrun and evade an income redistribution liquidation in order to avoid making a net loss. For example:
+
+  * Borrower sees incoming redistribution liquidation of a Trove with ICR < 100% in the mempool
+  * Borrower frontruns and closes their Trove before the redistribution occurs
+  * Redistribution is absorbed by the remaining active Troves
+  * Borrower re-opens Trove
+
+The impact of this is that all other active Troves absorb the loss from the unprofitable liquidation, and the frontrunniner evades it.
+
+However, no fix is required since it’s expected that:
+
+  * Most redistributions are profitable for active Troves, i.e. occur at ICR > 100% - thus the collateral value that active Troves receive is greater than the amount of debt cancelled against their BOLD deposit.
+
+  * Redistributions are expected to be very rare, and only occur if the Stability Pool has already been emptied. Even if the SP is empty, JIT deposits to the Stability Pool can in most cases profitably absorb liquidations
+
+  * Liquidations are MEV intensive and a significant portion of liquidations are expected to be performed via private pools e.g. Flashbots, and not performed via the public gas auction
+
+
+It is recommended to wrap such tokens in an intermediate one with 18 decimal digits, and then use the wrapped token for all internal system operations. Collateral should be wrapped at inflow and unwrapped just prior to outflow. This reduces room for conversion error and helps ensure that all system operations are scaled correctly.
+
+## Immutable vs upgradeable forks
+
+Liquity v2 is immutable, which added development constraints: in particular, collateral and oracle price sources/calculations had to be chosen carefully, and all security work was front-loaded since no changes could be made post launch.
+
+If your system is upgradeable you may be tempted to take more risk in certain areas - for example, collateral choice or system risk parameters.
+
+However, upgradeability should not be seen as a reason to underinvest in security or economic modelling. Upgradeability is also an attack surface in itself.
+
+## Branch risk parameters
+
+In general, we suggest `SCR <= MCR < CCR`. While Liquity v2 sets `MCR = SCR`, a larger MCR is viable.
+
+The more risky the collateral - i.e. the greater the chance of a large, sudden price drop - the larger the values these risk parameters should take.
+
+Ideally:
+
+  * Most liquidations should occur at CR > 100%, to ensure profitability for SP depositors.
+  * Branch shutdown should clear most branch debt (via liquidations, urgent redemptions and borrowers closing Troves) before the branch becomes undercollateralized, i.e. before the TCR drops below 100%
+  * Economic modelling should be performed based on your assumptions about collateral volatility to select these risk parameters.
+
+## Redemption floor fee
+
+The greater the redemption floor fee the looser the peg, and vice versa. A non-zero floor fee is recommended, as it imposes a minimum cost on system griefing and/or some kinds of economic manipulation.
+
+The redemption floor fee should also be considered in tandem with oracle update thresholds (see oracle considerations below).
+
+## Redemption impact on borrowers
+
+Fork teams should be aware that redemptions technically may cause a slight short-term loss for borrowers, even though redemption fees are paid to the borrower. See the explanation here.
+
+## Redemptions should be left to bots
+
+Though redemptions are permissionless, they are complicated and MEV-competitive. They are generally performed by sophisticated bots / savvy aribtrageurs. Fork teams should make ordinary users aware they if they manually redeem e.g. through front ends or Etherscan, they risk losing their funds - see here for more detail.
+
+## Closing the last Trove in the system
+
+As explained here, the last Trove in a branch can not be closed unless that branch has been shut down.
+
+## `MIN_DEBT` parameter choice
+
+The minimum debt should be chosen based on gas costs of redemption (both USD and raw gas). In canonical v2, 2000 BOLD was chosen as the `MIN_DEBT` in order to ensure that, in the wost case where the lower end of the interest-sorted list is filled with minimum debt Troves, redemptions can not be significantly griefed and substantial BOLD volumes can still be redeemed. For chains with cheaper gas costs (in USD), a lower `MIN_DEBT` may be economically viable. It's also worth comparing raw gas costs - though often very similar across EVM chains, opcodes may be priced differently and so raw gas cost may vary. Lower raw gas costs imply more redemptions can be fit into a single block/tx and vice versa.
+
+## `ETH_GAS_COMPENSATION` and `COLL_GAS_COMPENSATION_CAP` parameter choices
+
+The canonical v2 value of `ETH_GAS_COMPENSATION = 0.0375` was chosen based on ETH, WSTETH and RETH collateral. For collateral tokens whereby the market price differs by orders of magnitude, the `ETH_GAS_COMPENSATION` should be adjusted accordingly - the default v2 value may be insufficient if your collateral price is much lower, and too generous if the price is much higher.
+
+Similarly, the `COLL_GAS_COMPENSATION_CAP` may be too low or high depending on order of magnitude of your collateral price.
+
+## Security and audits
+
+It is advisable to perform one or more security audits for any changes made to the core system contracts or parameters. Even seemingly tiny or trivial changes can have outsized and unintended impacts on system security and economic resilience.
+
+## Code diff with Liquity v2
+
+It’s advisable to publicly showcase the diff between your code and the original Liquity v2 code in your repo, so that all code changes to original smart contracts are surfaced and readily visible.
+
+## About
+
+Liquity v2 monorepo containing the contracts, subgraph and frontend.
+
+www.liquity.org/liquity-v2--------------------------------------------------------------------------------
+GitHub - MustangProtocol/must-finance: Must Finance protocol monorepo. Liquity v2 fork for Saga chain. · GitHub (https://github.com/MustangProtocol/must-finance)
+citeturn492search1 [wordlim: 200] Crawled: 2 weeks ago;   * PriceFeed refers to the internal Liquity v2 system contract which contains price calculations and logic for a given branch - e.g. "the WETH PriceFeed, which fetches price data from the ETH-USD oracle" ... This may be exploitable for profit. ... “Soft” frontrunning is also possible when the attacker sees the market price increase before even seeing the oracle price update transaction in the mempool.
+package.json  | package.json  |    |  
+pnpm-lock.yaml  | pnpm-lock.yaml  |    |  
+pnpm-workspace.yaml  | pnpm-workspace.yaml  |    |  
+
+# Must Finance
+
+https://must.finance
+
+Must Finance is a liquity V2 fork for the Saga EVM, with additional collaterals and security features.
+
+## Versioning
+
+This repo is updated to Solidity 0.8.23, but some dependencies are still 0.8.24 for governance and testing, which are not used in the core contracts, and so can be safely ignored.
+
+## Changes between Must Finance and Liquity:
+
+  1. New collateral types and pricefeeds: tBTC, SAGA, WETH, stATOM.
+  2. Ability to add and remove collateral branches via new admin funtions in the Collateral Registry.
+  3. Governoring of more protocol parameters, such as fees, LTV requirements, minimum debt, minimum interest rate, and more.
+  4. Removal of Liquity Governance in favor of a more manual incentive direction system.
+  5. Liquity v2 is made for Cancun EVM and Saga uses an older EVM version.
+
+LST-ETH canonical exchange rates are also used as sanity checks for the more vulnerable LSTs (i.e. lower liquidity/volume).
+
+Collateral  | Primary Price  | Rationale  | Redemption Price  | Rationale
+--- | --- | --- | --- | ---
+WETH  | ETH-USD  | The closest there is to a WETH-USD price  | ETH-USD  | The closest there is to a WETH-USD price
+
+### Mitigating redemption arbitrages / oracle frontrunning
+
+Since market oracles have update thresholds, they will inevitably lag the "true" market price at times - particularly, when their deviation from the market price is less than their update threshold. This may be exploitable for profit. An attack sequence may look like this:
+
+  * Observe collateral price increase oracle update in the mempool
+  * Frontrun with redemption transaction for $x worth of BOLD and receive `$x` - fee worth of collateral
+  * Oracle price increase update transaction is validated
+  * Sell redeemed collateral for $y such that `$y > $x`, due to the price increase
+  * Extracts `$(y-x)` from the system.
+
+This is “hard” frontrunning: the attacker directly frontrun the oracle price update. “Soft” frontrunning is also possible when the attacker sees the market price increase before even seeing the oracle price update transaction in the mempool.
+
+The value extracted is excessive, i.e. above and beyond the arbitrage profit expected from BOLD peg restoration. In fact, oracle frontrunning can even be performed when BOLD is trading >= $1.
+
+The trade-off of this solution that redemptions may sometimes be unprofitable during volatile periods with high oracle lag. However, as long as redemptions do happen eventually and in the long term, then peg maintenance will hold.
+
+### Is the “worst price” approach sufficient to mitigate front-running?
+
+An assumption of the v2 system is that adverse redemption arbs from oracle frontrunning are overall not worse than in Liquity v1, which uses only the ETH-USD Chainlink oracle. This is justified as follows:
+
+### WETH branch
+
+The WETH branch uses only the ETH-USD oracle, thus the adverse arb risks are the same as v1.
+
+https://docs.google.com/spreadsheets/d/1LxaKZwipSWmre2YxS_0AHT0cDd97yVae_DuJwKbejkQ/edit?usp=sharing
+
+### STETH branch
+
+The STETH redemption price logic compares two market oracles - STETH-USD and ETH-USD.
+
+When the delta between oracle prices is >1%,the system uses the STETH-USD price rather than the max (“worst”) price.
+
+However it is ultimately the redemption fee that protects the system against market price movements:
+
+As in Liquity v1, any market price rise in range `[0.5%,1%]` can result in adverse profitable redemptions, since even though the ETH-USD oracle should update and the v2 system would use that (max) price, it can still be frontrun, and the fee is only 0.5%. The attacker can extract a profit (ignoring gas) of `market_price - stale_oracle_price - fee`.
+
+For market price rises above 1%, the STETH-USD oracle is used. The oracle should update, but if its frontrun (or if it’s just laggy and doesn’t update) the impact is actually the same as in v1: the system doesn’t use a max “worst” price, but it also didn’t in v1 either. The attacker extracts a profit of `market_price - stale_oracle_price - fee`, which for a given market price change >1%, would be the same quantity as if they frontran a stale ETH-USD oracle update.
+
+As long as both oracles are responsive (and assuming no LST depegs), the v2 system inherits the same adverse redemption arb risks as Liquity v1.
+
+If for some reason the STETH-USD oracle doesn’t update quickly enough when the market price movement should trigger it to update, then a larger `market_price - stale_oracle_price` delta could result, in turn leading to larger adverse redemption volumes.
+
+However that would be purely an oracle issue. Chainlink has been chosen as the oracle provider in part due to their highly responsive oracles, and it’s assumed that STETH-USD oracle updates as responsively as ETH-USD, since they utilise the same underlying oracle network and infrastructure.
+
+Finally, Liquity v2 has extra protection from two measures that each reduce overall adverse arb profits: 1) a greater redemption fee gain (lower `BETA` parameter) and 2) redemption routing, which reduces adverse profits either by routing itself, or the flash loan fee required to manipulate StabilityPool quantities and bypass routing.
+
+
+Market oracle  | Heartbeat  | Staleness threshold
+--- | --- | ---
+ETH-USD  | 1 hour  | 24 hours
+STETH-USD  | 1 hour  | 24 hours
+
+### Redemption floor fee and oracle update thresholds
+
+When using market oracles which are Chainlink push-based or equivalent, the redemption floor fee `x` should be equal or greater than the oracle price update deviation threshold `y`. This is to ensure that a market price movement in range `(x, y)` does not lead to adverse redemptions: in this range, a price movement makes redemption profitable when the stablecoin is trading at $1, but does not trigger an oracle update and redeemers can extract value from the system. Thus, the floor fee `x` should be equal to or greater than oracle threshold `y` to eliminate redemption profits in this range.
+
+Liquity v2 actually mitigates this a different way for the LST branches, taking the “worst” price from two sources. For the WETH branch, it sets `x = y`. Systems using purely push-based market oracles to price collateral should set a sufficiently high redemption fee floor.
+
+## Redemption impact on borrowers
+
+Fork teams should be aware that redemptions technically may cause a slight short-term loss for borrowers, even though redemption fees are paid to the borrower. See the explanation here.
+
+## Redemptions should be left to bots
+
+Though redemptions are permissionless, they are complicated and MEV-competitive. They are generally performed by sophisticated bots / savvy aribtrageurs. Fork teams should make ordinary users aware they if they manually redeem e.g. through front ends or Etherscan, they risk losing their funds - see here for more detail.
+
+--------------------------------------------------------------------------------
+GitHub - liquity/bold: Liquity v2 monorepo containing the contracts, subgraph and frontend. · GitHub (https://github.com/liquity/bold/)
+citeturn492search2 [wordlim: 200] Crawled: 3 weeks ago; This was partially mitigated in Liquity v1 by requiring that no undercollateralized Troves were present in the system upon a withdrawal from the SP.However, this is infeasible in v2 since Troves are no longer ordered by collateral ratio, and also accrue interest at different rates.
+--------------------------------------------------------------------------------
+Liquity V2 and How Liquidation Bots Work (https://gabrielpoca.com/posts/2025-12-15-liquity-v2-and-how-liquidation-bots-work/)
+citeturn492search3 [wordlim: 200] Published: 10 months ago; Crawled: last week; Miners are incentivized to process transactions with higher gas fees first, so you can increase the gas fee to make sure your transaction is included before other bots, but you also need to be careful and ensure you still make a profit when paying higher fees. ... Not all RPCs are alike, and being first to receive an event will make a huge difference in the time it takes for your bot to react.
+--------------------------------------------------------------------------------
+GitHub - liquity/bold: Liquity v2 monorepo containing the contracts, subgraph and frontend. · GitHub (https://github.com/liquity/bold)
+citeturn492search4 [wordlim: 200] Crawled: last week;     * Code diff with Liquity v2
+--------------------------------------------------------------------------------
+ethereum-reports/lending/lending-borrowing-market-report-2022-2026.md at main · 0xapriori/ethereum-reports · GitHub (https://github.com/0xapriori/ethereum-reports/blob/main/lending/lending-borrowing-market-report-2022-2026.md)
+citeturn492search5 [wordlim: 200] Published: 7 months ago; Crawled: today; Liquidation MEV is the value extracted when bots race to liquidate undercollateralized positions, capturing the liquidation bonus (typically 5–10%) as profit. ... When a position becomes liquidatable (usually on oracle price update), bots race to submit the liquidation transaction ... Post-2022: Competitive liquidators submit via private channels (Flashbots bundles, builder-direct endpoints) rather than public mempool gas wars
+--------------------------------------------------------------------------------
+Hi! I'm Gabriel (https://gabrielpoca.com/)
+citeturn492search6 [wordlim: 200] Crawled: last week;   * Liquity V2 and How Liquidation Bots Work 12/15/2025
+--------------------------------------------------------------------------------
+defi-native-skill/references/concepts.md at main · emlai/defi-native-skill · GitHub (https://github.com/emlai/defi-native-skill/blob/main/references/concepts.md)
+citeturn492search7 [wordlim: 200] Crawled: last month; Being redeemed is a forced deleverage, not a liquidation: debt and collateral shrink roughly equally in USD terms, minus execution costs (in Liquity V2 the redemption fee stays in the trove, so borrower loss equals redeemer gain; markets that unwind through auctions add slippage on top).
+--------------------------------------------------------------------------------
+rotki/docs/changelog.rst at develop · rotki/rotki · GitHub (https://github.com/rotki/rotki/blob/develop/docs/changelog.rst)
+citeturn492search8 [wordlim: 200] Crawled: 2 weeks ago;   * :feature:`-` 1inch v4 events should now be properly decoded. ...   * :feature:`3973` Users will now be able to track their profit in Liquity staking and stability pool.
+

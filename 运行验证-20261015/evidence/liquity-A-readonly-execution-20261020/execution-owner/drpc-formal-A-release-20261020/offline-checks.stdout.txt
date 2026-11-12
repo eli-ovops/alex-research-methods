@@ -1,0 +1,9 @@
+PASS no global180s/16frame/128KiB preflight lifetime caps
+PASS per-message control cap remains fail-closed
+PASS seven read-only methods include logs transaction receipt
+PASS public log cap stops with incomplete-coverage reason
+PASS pending template cannot publish or start
+PASS formal terminal save failure cannot remain successful
+PASS original economics Episodes and audit loop preserved except explicit metadata/continuity
+PASS formal cumulative methods are not preflight30-capped or reset
+SYNTHETIC_ONLY 8 PASS; no route/network/main/economic execution

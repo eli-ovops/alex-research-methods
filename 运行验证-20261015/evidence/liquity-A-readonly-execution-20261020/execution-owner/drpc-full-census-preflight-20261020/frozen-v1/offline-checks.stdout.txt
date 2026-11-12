@@ -1,0 +1,7 @@
+PASS five ABI/runtime frozen bindings and selectors
+PASS original snapshot/qualify/forecast retained and no live entry
+PASS hash object/data/from/gas aggregate wiring
+PASS data-key lossless delta roundtrip using synthetic variation of prior public bytes
+PASS diagnostic method cap keeps cumulative baseline
+PASS unchanged economic and resource function identity
+SYNTHETIC_ONLY 6 PASS; no route/TLS/API/WS or strategy execution

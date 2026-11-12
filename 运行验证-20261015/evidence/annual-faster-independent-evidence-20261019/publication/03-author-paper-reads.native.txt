@@ -1,0 +1,438 @@
+Read clock before call: 2026-10-19 11:20:39 UTC
+Public actions in this call: 2
+Source: native web tool text, not original PDF bytes. Unrelated authentication-redirect result omitted if present. Coverage is the returned excerpts only.
+
+Volatility&#x02010;Managed Portfolios (https://amoreira2.github.io/alan-moreira.github.io/VolPortfolios_published.pdf)
+citeturn1130view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 34; Source: open({"ref_id":"turn1129view0","lineno":60}); Total lines: 1394
+L14@P0: was recently high and vice versa. We call these volatility-managed portfolios.
+L15@P0: We document that this simple trading strategy earns large alphas across a
+L16@P0: wide range of asset pricing factors, suggesting that investors can benefit from
+L17@P0: volatility timing. We then interpret these results from both a portfolio choice
+L18@P0: and a general equilibrium perspective.
+L19@P0: We motivate our analysis from the vantage point of a mean-variance investor,
+L20@P0: who adjusts her allocation according to the attractiveness of the mean-variance
+L21@P0: trade-off, μt/σ 2
+L22@P0: t . Because variance is highly forecastable at short horizons, and
+L23@P0: variance forecasts are only weakly related to future returns at these horizons,
+L24@P0: our volatility-managed portfolios produce significant risk-adjusted returns for
+L25@P0: ∗Alan Moreira is with the University of Rochester, Tyler Muir is with UCLA and the NBER.
+L26@P0: We thank the Editor (Ken Singleton), two anonymous referees, Matthew Baron, Jonathan Berk,
+L27@P0: Olivier Boguth, John Campbell, John Cochrane, Kent Daniel, Peter DeMarzo, Marcelo Fernandes,
+L28@P0: Wayne Ferson, Stefano Giglio, William Goetzmann, Mark Grinblatt, Ben Hebert, Steve Heston,
+L29@P0: Jon Ingersoll, Ravi Jagannathan, Bryan Kelly, Ralph Koijen, Serhiy Kosak, Hanno Lustig, Toby
+L30@P0: Moskowitz, Justin Murfin, Stefan Nagel, David Ng, Lubos Pastor, Lasse Pedersen, Myron Scholes,
+L31@P0: Ivan Shaliastovich, Tuomo Vuoltenahoo, Jonathan Wallen, Lu Zhang, and participants at Yale
+L32@P0: SOM, UCLA Anderson, Stanford GSB, Michigan Ross, Chicago Booth, Ohio State, Baruch College,
+L33@P0: Cornell, the NYU Five Star conference, the Colorado Winter Finance Conference, the Jackson Hole
+L34@P0: Winter Finance Conference, the ASU Sonoran Conference, the UBC winter conference, the NBER,
+L35@P0: the Paul Woolley Conference, the SFS Calvacade, and Arrowstreet Capital for comments. We especially thank Nick Barberis for many useful discussions. We also thank Ken French, Lasse Pedersen,
+L36@P0: Alexi Savov, Adrien Verdelhan, and Lu Zhang for providing data. Both authors disclose that, after our work had already circulated, this research was solicited for compensated presentations at
+L37@P0: Arrowstreet Capital, Mellon Capital, Panagora Asset Management, and Phase Capital.
+L38@P0: DOI: 10.1111/jofi.12513
+L39@P0-1: 12 The Journal of FinanceR
+L40@P1: the market, value, momentum, profitability, return on equity, investment, and
+L41@P1: betting-against-beta factors in equities as well as for the currency carry trade.
+L42@P1: Annualized alphas and Sharpe ratios with respect to the original factors are
+L43@P1: substantial. For the market portfolio our strategy produces an alpha of 4.9%,
+L44@P1: an appraisal ratio of 0.33, and an overall 25% increase in the buy-and-hold
+L45@P1: Sharpe ratio.
+L46@P1: Figure 1 provides intuition for our results for the market portfolio. In line
+L47@P1: with our trading strategy, we group months by the previous month’s realized
+L48@P1: volatility and plot average returns, volatility, and the mean-variance trade-off
+L49@P1: over the subsequent month. There is little relation between lagged volatility
+L50@P1: and average returns but there is a strong relationship between lagged volatility
+L51@P1: and current volatility. This means that the mean-variance trade-off weakens
+L52@P1: in periods of high volatility. From a portfolio choice perspective, this pattern
+L53@P1: implies that a standard mean-variance investor should time volatility, that is,
+L54@P1: take more risk when the mean-variance trade-off is attractive (volatility is low),
+L55@P1: and take less risk when the mean-variance trade-off is unattractive (volatility
+L56@P1: is high). From a general equilibrium perspective, this pattern presents a challenge to representative agent models focused on the dynamics of risk premia.
+L57@P1: From the vantage point of these theories, the empirical pattern in Figure 1
+L58@P1: implies that an investor’s willingness to take stock market risk must be higher
+L59@P1: in periods of high stock market volatility, which runs counter to most theories.
+L60@P1: Sharpening the puzzle is the fact that volatility is typically high during recessions, financial crises, and in the aftermath of market crashes when theory
+L61@P1: generally suggests investors should, if anything, be more risk averse relative
+L62@P1: to normal times.
+L63@P1: Our volatility-managed portfolios reduce risk-taking during these bad
+L64@P1: times—times when the conventional wisdom is to increase risk-taking or hold
+L65@P1: risk-taking constant.1 For example, in the aftermath of the sharp price declines
+L66@P1: in the fall of 2008, a widely held view was that those that reduced positions
+L67@P1: in equities were missing a once-in-a-generation buying opportunity.2 Yet, our
+L68@P1: strategy cashed out almost completely and returned to the market only as the
+L69@P1: spike in volatility receded. Indeed, we show that our simple strategy worked
+L70@P1: well throughout several crisis episodes, including the Great Depression, the
+L71@P1: Great Recession, and 1987 stock market crash. More broadly, we show that our
+L72@P1: volatility-managed portfolios take substantially less risk during recessions.
+L73@P1: These facts may be surprising in light of evidence showing that expected
+L74@P1: returns are high in recessions (Fama and French (1989)) and in the aftermath of market crashes (Muir (2016)). To better understand the business cycle
+L75@P1: 1 For example, in August 2015, a period of high volatility, Vanguard—a leading mutual fund
+L76@P1: company—gave advice consistent with this view :“What to do during market volatility? Perhaps
+L77@P1: nothing.” See https://personal.vanguard.com/us/insights/article/market-volatility-082015. 2 See, for example, John Cochrane (“Is now time to buy stocks?” 2008, Wall Street Journal)
+L78@P1: and Warren Buffet (“Buy America. I am,” 2008, The New York Times) make the case for this view.
+L79@P1: However, consistent with our main findings, Nagel et al. (2016) show that many households respond
+L80@P1: to volatility by selling stocks in 2008 and that this effect is larger for higher income households,
+L81@P1-2: which may be more sophisticated traders.Volatility-Managed Portfolios 3
+L82@P2: Figure 1. Sorts on the previous month’s volatility. We use the monthly time series of realized
+L83@P2: volatility to sort the following month’s returns into five buckets. The lowest, “low vol,” looks at
+L84@P2: the properties of returns over the month following the lowest 20% of realized volatility months.
+L85@P2: We show the average return over the next month, the standard deviation over the next month,
+L86@P2: and the average return divided by variance. Average return per unit of variance represents the
+L87@P2: optimal risk exposure of a mean-variance investor in partial equilibrium, and also represents
+L88@P2: “effective risk-aversion” from a general equilibrium perspective (i.e., the implied risk aversion, γt, of
+L89@P2: a representative agent needed to satisfy Et[Rt+1] = γtσ 2
+L90@P2: t ). The last panel shows the probability of
+L91@P2: a recession across volatility buckets by computing the average of an NBER recession dummy. Our
+L92@P2: sorts should be viewed as analogous to standard cross-sectional sorts (i.e., book-to-market sorts)
+L93@P2: but are instead done in the time series using lagged realized volatility. (Color figure can be viewed
+L94@P2: at wileyonlinelibrary.com)
+L95@P2: behavior of the risk-return trade-off, we combine information about timevariation in both expected returns and variance. Using a vector autoregression (VAR), we show that, in response to a variance shock, the conditional
+L96@P2: variance initially increases by far more than the expected return. A meanvariance investor would decrease his or her risk exposure by around 50% after
+L97@P2-3: a one-standard-deviation shock to the market variance. However, since volatility movements are less persistent than movements in expected returns, our4 The Journal of FinanceR
+L98@P3: optimal portfolio strategy prescribes a gradual increase in exposure as the initial volatility shock fades. This difference in persistence helps reconcile the
+L99@P3: evidence on countercyclical expected returns with the profitability of our strategy. Relatedly, we also show that our alphas slowly decline as the rebalancing
+L100@P3: period grows because current volatility is a weaker forecast for future volatility
+L101@P3: as we increase horizon.
+L102@P3: We conduct an extensive battery of tests to evaluate the robustness of our
+L103@P3: result. We show that the typical investor can benefit from volatility timing
+L104@P3: even if subject to realistic transaction costs and tight leverage constraints. The
+L105@P3: strategy works just as well if implemented through options to achieve high embedded leverage, which further suggests that leverage constraints are unlikely
+L106@P3: to explain the high alphas of our volatility-managed strategies. Consistent with
+L107@P3: these results, we show that our volatility-managed strategy is different from
+L108@P3: strategies that explore low-risk anomalies in the cross-section such as risk parity (Asness, Frazzini, and Pedersen (2012)) and betting against beta (Frazzini
+L109@P3: and Pedersen (2014)). Moreover, we also study a volatility-managed version of
+L110@P3: the betting-against-beta factor to show how our approach can also be combined
+L111@P3: with a cross-sectional low-risk strategy.
+L112@P3: In the Internet Appendix, we show that our strategy works for a credit-risk
+L113@P3: factor formed from excess corporate bond returns; that it works for international stock market indices; that it can be further improved through the use
+L114@P3: of more sophisticated models of variance forecasting; that it does not generate
+L115@P3: fatter left tails than the original factors or create option-like payoffs; that it
+L116@P3: is less exposed to volatility shocks than the original factors (ruling out explanations based on the variance risk premium); that it cannot be explained by
+L117@P3: downside market risk (Ang, Chen, and Xing (2006), Lettau, Maggiori, and Weber (2014)), disaster risk, or jump risk; and that it outperforms not only using
+L118@P3: alpha and Sharpe ratios but also manipulation-proof measures of performance
+L119@P3: (Goetzmann et al. (2007)).3
+L120@P3: Once we establish that the profitability of our volatility-managed portfolios
+L121@P3: is a robust feature of the data, we study the economic interpretation of our
+L122@P3: results in terms of utility gains, the behavior of the aggregate price of risk, and
+L123@P3: equilibrium models. First, we find that mean-variance utility gains from our
+L124@P3: volatility-managed strategy are large, about 65% of lifetime utility. This compares favorably with Campbell and Thompson (2008), and a longer literature
+L125@P3: on return predictability, who find mean-variance utility benefits of 35% from
+L126@P3: timing expected returns.
+L127@P3: Next we show more formally how the alpha of our volatility-managed
+L128@P3: portfolio relates to the risk-return trade-off. In particular, we show that
+L129@P3: α ∝−cov(μt/σ 2
+L130@P3: t ,σ 2t ). Thus, consistent with Figure 1, the negative relationship
+L131@P3: between μt/σ 2
+L132@P3: t and conditional variance drives our positive alphas. The positive alphas we document across all strategies implies that the factor prices of
+L133@P3: risk, μt/σ 2
+L134@P3: t , are negatively related to factor variances in each case. When the
+L135@P3: factors span the conditional mean-variance frontier, this result tells us about
+L136@P3-4: 3 The Internet Appendix may be found in the online version of this article.Volatility-Managed Portfolios 5
+L137@P4: the aggregate variation in the price of risk, that is, about compensation for
+L138@P4: risk over time and the dynamics of the stochastic discount factor. Formally, we
+L139@P4: show how to use our strategy alpha to construct a stochastic discount factor
+L140@P4: that incorporates these dynamics and that can unconditionally price a broader
+L141@P4: set of dynamic strategies with a large reduction in pricing errors.
+L142@P4: Lastly, we contrast the price of risk dynamics we recover from the data with
+L143@P4: leading structural asset pricing theories. These models all feature a weakly positive correlation between μt/σ 2
+L144@P4: t and variance so that volatility-managed alphas
+L145@P4: are either negative or near zero. This is because, in bad times when volatility
+L146@P4: increases, effective risk-aversion in these models also increases, driving up the
+L147@P4: compensation for risk. This is a typical feature of standard rational, behavioral, and intermediary models of asset pricing. More specifically, the alphas of
+L148@P4: our volatility-managed portfolios pose a challenge to macrofinance models that
+--------------------------------------------------------------------------------
+The Impact of Volatility Targeting (https://people.duke.edu/~charvey/Research/Published_Papers/P135_The_impact_of.pdf)
+citeturn1130view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 21; Source: open({"ref_id":"https://people.duke.edu/~charvey/Research/Published_Papers/P135_The_impact_of.pdf","lineno":60}); Total lines: 2192
+L0@P0: The Impact of Volatility Targeting
+L1@P0: Otto Van Hemert
+L2@P0: Campbell R. Harvey, Edward Hoyle, Russell Korgaonkar, Sandy Rattray, Matthew Sargaison and
+L3@P0: http://jpm.iijournals.com/content/45/1/14
+L4@P0: doi: https://doi.org/10.3905/jpm.2018.45.1.014
+L5@P0: JPM 2018, 45 (1) 14-33
+L6@P0: This information is current as of November 1, 2018.
+L7@P0: Material
+L8@P0: Supplementary http://jpm.iijournals.com/content/suppl/2018/11/01/45.1.14.DC1
+L9@P0: Email Alerts
+L10@P0: http://jpm.iijournals.com/alerts
+L11@P0: Receive free email-alerts when new articles cite this article. Sign up at:
+L12@P0: © 2017 Institutional Investor LLC. All Rights Reserved
+L13@P0: New York, NY 10036, Phone: +1 212-224-3589
+L14@P0: 1120 Avenue of the Americas, 6th floor,
+L15@P0: Institutional Investor Journals
+L16@P0-1: Downloaded from http://jpm.iijournals.com/ by Campbell Harvey on November 1, 201814
+L17@P1: The Impact of Volatility Targeting Fall 2018
+L18@P1: Campbell R. Harvey
+L19@P1: is a professor of finance
+L20@P1: at Duke University in
+L21@P1: Durham, NC, and an
+L22@P1: advisor to Man Group in
+L23@P1: London, UK.
+L24@P1: [REDACTED_EMAIL]
+L25@P1: Edward Hoyle
+L26@P1: is a senior quantitative
+L27@P1: analyst at Man AHL in
+L28@P1: London, UK.
+L29@P1: [REDACTED_EMAIL]
+L30@P1: Russell
+L31@P1: Korgaonkar
+L32@P1: is the director of
+L33@P1: investment strategies at
+L34@P1: Man AHL in London,
+L35@P1: UK.
+L36@P1: [REDACTED_EMAIL]
+L37@P1: Sandy Rattray
+L38@P1: is the chief investment
+L39@P1: officer of the Man Group
+L40@P1: in London, UK.
+L41@P1: [REDACTED_EMAIL]
+L42@P1: Matthew Sargaison
+L43@P1: is the co-chief executive
+L44@P1: officer of Man AHL in
+L45@P1: London, UK.
+L46@P1: [REDACTED_EMAIL]
+L47@P1: Otto Van Hemert
+L48@P1: is the head of macro
+L49@P1: research at Man AHL in
+L50@P1: London, UK.
+L51@P1: [REDACTED_EMAIL]
+L52@P1: The Impact of Volatility
+L53@P1: Targeting
+L54@P1: Campbell R. Harvey, Edward Hoyle,
+L55@P1: Russell Korgaonkar, Sandy Rattray,
+L56@P1: Matthew Sargaison, and Otto Van Hemert
+L57@P1: One of the key features of volatility is that it is persistent, or
+L58@P1: clusters. High volatility over
+L59@P1: the recent past tends to be followed by high volatility in the near future.
+L60@P1: This observation underpins Engle’s [1982]
+L61@P1: pioneering work on autoregressive conditional heteroskedasticity (ARCH) models.1
+L62@P1: In this article, we study the risk and return
+L63@P1: characteristics of assets and portfolios that
+L64@P1: are designed to counter the fluctuations in
+L65@P1: volatility. We achieve this by leveraging the
+L66@P1: portfolio at times of low volatility and scaling
+L67@P1: down at times of high volatility. Effectively,
+L68@P1: the portfolio is targeting a constant level
+L69@P1: of volatility, rather than a constant level of
+L70@P1: notional exposure.
+L71@P1: Conditioning portfolio choice on
+L72@P1: volatility has attracted considerable recent
+L73@P1: attention. The financial media have zoomed
+L74@P1: in on the increasing popularity of risk
+L75@P1: parity funds.2
+L76@P1:  In recent work, Moreira and
+L77@P1: Muir (2017) found that volatility-managed portfolios increase the Sharpe ratios
+L78@P1: in the case of the broad equity market and
+L79@P1: a number of dynamic, mostly long–short
+L80@P1: stock strategies.
+L81@P1: 1
+L82@P1: Robert Engle shared the 2003 Nobel Prize in
+L83@P1: Economics “for methods of analyzing economic time
+L84@P1: series with time-varying volatility (ARCH)” (https://
+L85@P1: www.nobelprize.org). 2
+L86@P1: See, for example, Constable (2017).
+L87@P1: Although most research has concentrated
+L88@P1: on equity markets, we investigate the impact
+L89@P1: of volatility targeting across more than 60
+L90@P1: assets, with daily data beginning as early as
+L91@P1: 1926. We find that Sharpe ratios are higher
+L92@P1: with volatility scaling for risk assets (equities
+L93@P1: and credit), as well as for portfolios that have
+L94@P1: a substantial allocation to these risk assets,
+L95@P1: such as a balanced (60–40 equity–bond) portfolio and a risk parity (equity–bond–credit–
+L96@P1: commodity) portfolio.
+L97@P1: Risk assets exhibit a so-called leverage
+L98@P1: effect (i.e., a negative relation between returns
+L99@P1: and volatility), and so volatility scaling
+L100@P1: effectively introduces some momentum into
+L101@P1: strategies. That is, volatility often increases
+L102@P1: in periods of negative returns, causing positions to be reduced, which is in the same
+L103@P1: direction as what one would expect from
+L104@P1: a time-series momentum strategy. Historically such a momentum strategy has performed well (see, e.g., Hamill, Rattray, and
+L105@P1: Van Hemert 2016). For other assets, such as
+L106@P1: bonds, currencies, and commodities, volatility scaling has a negligible effect on realized Sharpe ratios.
+L107@P1: We show that volatility targeting consistently reduces the likelihood of extreme
+L108@P1: returns (and the volatility of volatility) across
+L109@P1: our 60+ assets. Under reasonable investor
+L110@P1: preferences, a thinner left tail is much
+L111@P1-2: Downloaded from http://jpm.iijournals.com/ by Campbell Harvey on November 1, 2018Fall 2018 The Journal of Portfolio Management
+L112@P2: 15
+L113@P2: preferred (for a given Sharpe ratio).3 Volatility targeting
+L114@P2: also reduces the maximum drawdowns for both the balanced and risk parity portfolios.
+L115@P2: PRELIMINARIES
+L116@P2: Data
+L117@P2: Our study relies on daily return data as a starting
+L118@P2: point. Often, monthly data are available for longer histories, but these data are less suitable for obtaining responsive volatility estimates. Exhibit 1 provides an overview.
+L119@P2: In the next section, we will consider U.S. equity
+L120@P2: data. The earliest daily return dataset available to us
+L121@P2: is from July 1, 1926, and is obtained from Kenneth
+L122@P2: French’s website.4
+L123@P2:  It is the value-weighted returns of
+L124@P2: firms listed on the NYSE, AMEX, and NASDAQ,
+L125@P2: 3
+L126@P2: Under the common assumption of concave utility, investors
+L127@P2: dislike the left tail more than they like the right tail. Hence, for a
+L128@P2: given Sharpe ratio, investors are willing to give up some of the right
+L129@P2: tail to reduce the left tail. 4
+L130@P2: See http://mba.tuck.dartmouth.edu/pages/faculty/ken.
+L131@P2: french/data_library.html. Until 1952, stocks on the NYSE traded
+L132@P2: henceforth referred to as Equities All U.S. We will also
+L133@P2: use the returns of the 10 industry portfolios, available
+L134@P2: from the same source and start date. We additionally
+L135@P2: use S&P 500 futures data from 1988, which allows us
+L136@P2: to estimate volatility based on intraday data.
+L137@P2: In the following section, we focus our attention on
+L138@P2: fixed income and other assets. For U.S. Treasury bonds,
+L139@P2: daily yields are available since 1962 from the Federal
+L140@P2: Reserve.5
+L141@P2:  We construct proxy daily returns by assuming
+L142@P2: that 10-year yields are par yields and computing the
+L143@P2: return of par coupon bonds.6
+L144@P2:  We also use 10-year
+L145@P2: on Saturday as well, and thus the data include the Saturday returns
+L146@P2: up to then. 5
+L147@P2: Federal Reserve Economic Data (see https://fred.stlouisfed
+L148@P2: .org). To illustrate the return dynamics over a longer period of
+L149@P2: time, we will use monthly data in Exhibit 10, obtained from Global
+L150@P2: Financial Data from July 1926 (to match the start date of the equity
+L151@P2: data). 6
+L152@P2: Assuming that the 10-year yield is the par yield on a semiannual coupon paying bond, we reprice the bond the following day
+L153@P2: using that day’s 10-year yield and assuming that all cash flows are
+L154@P2: now 1/261 years closer (with 261 the assumed number of weekdays
+L155@P2: per year). The return over the one-day period is the new price
+L156@P2: minus one (par).
+L157@P2: E x h i b i t 1
+L158@P2: Securities and Sample Periods
+L159@P2: Notes: In all cases, the frequency of the data used is at least daily. For S&P 500 and 10-year Treasury futures, we also use five-minute intraday data.
+L160@P2: Data before the start of sample periods, where available, are used to initialize volatility measures.
+L161@P2: $VVHW&ODVV 6DPSOH3HULRG
+L162@P2: (TXLWLHV
+L163@P2: (TXLWLHV
+L164@P2: $OO86
+L165@P2: (TXLWLHV
+L166@P2: $OO86
+L167@P2: 
+L168@P2: (TXLWLHV
+L169@P2: $OO86
+L170@P2: 
+L171@P2: (TXLWLHV
+L172@P2: $OO86
+L173@P2: 
+L174@P2: (TXLWLHV
+L175@P2: 6	3IXWXUHV
+L176@P2: 
+L177@P2: (TXLWLHV
+L178@P2: LQGXVWULHV86
+L179@P2: 
+L180@P2: 2WKHUDVVHWV
+L181@P2: (TXLW\LQGH[IXWXUHV
+L182@P2: 
+L183@P2: 
+L184@P2: %RQGV
+L185@P2: 86SUR[LHGIURP\LHOGGDWD
+L186@P2: 
+L187@P2: %RQGV
+L188@P2: \HDU7UHDVXU\IXWXUH
+L189@P2: 
+L190@P2: &UHGLW
+L191@P2: %R$0/86&RUS&UHGLW,QGH[KHGJHGZLWK7UHDVXULHV
+L192@P2: 
+L193@P2: &RPPRGLW\IXWXUHV
+L194@P2: DJULFXOWXUDOHQHUJLHVPHWDOV
+L195@P2: 
+L196@P2: &XUUHQF\IRUZDUGV
+L197@P2: 
+L198@P2: FURVVHVDJDLQVWWKH86GROODU
+L199@P2: 
+L200@P2: )L[HG±LQFRPHIXWXUHV
+L201@P2: 
+L202@P2: ERQGVLQWHUHVWUDWH
+L203@P2: 
+L204@P2: 3RUWIROLR
+L205@P2: %DODQFHG
+L206@P2: ±HTXLW\±ERQG
+L207@P2: 5LVNSDULW\
+L208@P2: ±±±HTXLWLHV±ERQGV±FUHGLW±FRPPRGLWLHV
+L209@P2: 
+L210@P2: )XOO
+L211@P2: ,
+L212@P2: ,,
+L213@P2: ,,,
+L214@P2: ,,,
+L215@P2: )XOO
+L216@P2: ,,,,,
+L217@P2: ,,,
+L218@P2: ,,,
+L219@P2: ,,,
+L220@P2: ,,,
+L221@P2: ,,,
+L222@P2: ,,,
+L223@P2: ,,,
+L224@P2: ,,,
+L225@P2: 
+L226@P2: ±
+L227@P2: 
+L228@P2: ±
+L229@P2: 
+L230@P2: 
+L231@P2: ±
+L232@P2: 
+L233@P2: 
+L234@P2: ±
+L235@P2: 
+L236@P2: ±
+L237@P2: 
+L238@P2: ±
+L239@P2: 
+L240@P2: ±
+L241@P2: 
+L242@P2: ±
+L243@P2: 
+L244@P2: ±
+L245@P2: 
+L246@P2: ±
+L247@P2: 
+L248@P2: ±
+L249@P2: 
+L250@P2: ±
+L251@P2: 
+L252@P2: ±
+L253@P2: 
+L254@P2: ±
+L255@P2: 
+L256@P2: ±
+L257@P2: 6RXUFH
+L258@P2: .)UHQFKZHEVLWH
+L259@P2: .)UHQFKZHEVLWH
+L260@P2: .)UHQFKZHEVLWH
+L261@P2: .)UHQFKZHEVLWH
+L262@P2: 0DQ$+/GDWD
+L263@P2: .)UHQFKZHEVLWH
+L264@P2: )5%RI6W/RXLV
+L265@P2: 0DQ$+/GDWD
+L266@P2: %ORRPEHUJ0DQ$+/GDWD
+L267@P2: 0DQ$+/GDWD
+L268@P2: 0DQ$+/GDWD
+L269@P2: 0DQ$+/GDWD
+L270@P2: 0DQ$+/GDWD
+L271@P2: 0DQ$+/GDWD
+L272@P2: 0DQ$+/GDWD
+L273@P2-3: Downloaded from http://jpm.iijournals.com/ by Campbell Harvey on November 1, 201816
+L274@P3: The Impact of Volatility Targeting Fall 2018
+L275@P3: Treasury futures data from 1988, which will again allow
+L276@P3: us to evaluate volatility estimates based on intraday data.
+L277@P3: We also explore credit returns, hedged with Treasuries,
+L278@P3: creating a long time series for an exposure that should
+L279@P3: resemble the synthetic CDX investment-grade index
+L280@P3: that is available today. To this end, we use the Bank of
+L281@P3: America Merrill Lynch U.S. Corporate Master Total
+L282@P3: Return index, and the hedging methodology follows
+L283@P3: Cook et al. (2017).
+L284@P3: We also use daily futures and forwards data for
+L285@P3: 50 liquid assets from Cook et al. (2017). This dataset
+L286@P3: covers commodities (six agricultural, six energy, and
+L287@P3: seven metal contracts), nine currencies (all against the
+L288@P3: U.S. dollar), 10 equity indexes, nine bonds, and three
+L289@P3: interest rate contracts.
+L290@P3: Volatility Scaling
+L291@P3: We focus on excess returns because they capture
+L292@P3: the compensation for bearing risk, not the time value of
+

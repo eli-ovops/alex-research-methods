@@ -1,0 +1,9 @@
+PASS successful receive settles exactly once
+PASS partial EOF settles received bytes
+PASS partial timeout settles received bytes without exception text
+PASS save-before-delivery failure settles once
+PASS save-after-delivery failure does not double debit
+PASS resource guard before debit records owed shadow and window
+PASS delivered post-debit cap exception does not debit twice
+PASS terminal archive failure forbids PASS and preserves earlier fixed failure
+SYNTHETIC_ONLY 8 PASS; no network, system route, old suite or preflight entry

@@ -1,0 +1,10 @@
+test_both_channels_share_route_TLS_before_business_and_guards (__main__.Route.test_both_channels_share_route_TLS_before_business_and_guards) ... ok
+test_config_rejection_and_read_once_without_env (__main__.Route.test_config_rejection_and_read_once_without_env) ... ok
+test_headercap_and_no_direct_fallback (__main__.Route.test_headercap_and_no_direct_fallback) ... ok
+test_non200_TLSfail_no_retry_no_business_and_close (__main__.Route.test_non200_TLSfail_no_retry_no_business_and_close) ... ok
+test_single_CONNECT_no_API_path_and_strict_TLS (__main__.Route.test_single_CONNECT_no_API_path_and_strict_TLS) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.019s
+
+OK

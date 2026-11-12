@@ -1,0 +1,24 @@
+test_effective_overlay_exact_and_invalid_release_fail (__main__.Flow.test_effective_overlay_exact_and_invalid_release_fail) ... ok
+test_entry_halfwindow_and_remaining20min (__main__.Flow.test_entry_halfwindow_and_remaining20min) ... ok
+test_old_sample_fullforecast_pass_newcaps_and_fail_oldcaps (__main__.Flow.test_old_sample_fullforecast_pass_newcaps_and_fail_oldcaps) ... ok
+test_preparation_identity_expiry_failures (__main__.Flow.test_preparation_identity_expiry_failures) ... ok
+test_prescreen_is_no_network_and_actual_disk_checked (__main__.Flow.test_prescreen_is_no_network_and_actual_disk_checked) ... ERROR
+test_publicprobe_once_before_key_and_legacy_auth_kept (__main__.Flow.test_publicprobe_once_before_key_and_legacy_auth_kept) ... ok
+test_runtime_caps_OS_limit_and_writecap_consistent (__main__.Flow.test_runtime_caps_OS_limit_and_writecap_consistent) ... ok
+
+======================================================================
+ERROR: test_prescreen_is_no_network_and_actual_disk_checked (__main__.Flow.test_prescreen_is_no_network_and_actual_disk_checked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/liquity-A-readonly-execution-20261020/execution-owner/offline-resource-flow-run06/test_resource_flow.py", line 48, in test_prescreen_is_no_network_and_actual_disk_checked
+    result=c.old_sample_prescreen(binding);self.assertIn('NOT_NEW_BLOCK',result['status']);self.assertGreater(result['actual_available_disk_bytes'],result['required_additional_disk_with_safety_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/liquity-A-readonly-execution-20261020/execution-owner/offline-resource-flow-run06/readonly_collector.py", line 401, in old_sample_prescreen
+    budget=Budget(c['verified_free_working_ceiling_CU'],400000,peak=binding.authorized_peak,cpu=limits['CPU_total_seconds_cumulative'],state=state)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'types.SimpleNamespace' object has no attribute 'authorized_peak'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.010s
+
+FAILED (errors=1)

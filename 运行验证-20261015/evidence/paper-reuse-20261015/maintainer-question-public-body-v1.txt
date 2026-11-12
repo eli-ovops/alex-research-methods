@@ -1,0 +1,8 @@
+Hi, thank you for releasing Kronos and for the earlier explanations in this thread. I am checking the reproducibility of the Kronos-small investment simulation in Table 10 and Appendix D, separately from the fine-tuning demo. Could you clarify the following?
+
+1. Which exact public model and tokenizer revisions, Qlib version/commit, and market-data snapshot correspond to the Table 10 small results? File checksums or a fixed experiment configuration would be sufficient where the data cannot be redistributed.
+2. Was the paper's stock-ranking signal the raw-price expected return in Equation (13), or a difference in per-stock normalized price space as in the demo? Those scores need not preserve the same cross-sectional ordering when the normalization scale differs across stocks.
+3. For a signal dated T whose last historical daily bar is T, was the paper's fill at the close of T or the close of the next trading day? The standard Qlib TopkDropoutStrategy queries the previous trading step with shift=1, so I want to distinguish the signal date from the execution date.
+4. Is the paper's 0.15% cost charged separately on each buy and sell, or per round trip? How does it map to the demo's open_cost=0.001, close_cost=0.0015, and min_cost=5?
+
+If a fixed configuration or per-date prediction scores, holdings, and cost records for that experiment are already public, a link would be very helpful. No redistribution of vendor-licensed raw market data is requested. Thank you.

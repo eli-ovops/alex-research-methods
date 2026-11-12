@@ -1,0 +1,421 @@
+A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist (https://arxiv.org/html/2402.18485v3)
+citeturn1033view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn1029view0","pattern":"Code"}); Total lines: 2065
+L583: SOR$\uparrow$  | CR$\uparrow$  | VOL$\downarrow$  |  | SOR$\uparrow$  | CR$\uparrow$  | VOL$\downarrow$  |  | SOR$\uparrow$  | CR$\uparrow$  | VOL$\downarrow$  |  | SOR$\uparrow$  | CR$\uparrow$  | VOL$\downarrow$  |  | SOR$\uparrow$  | CR$\uparrow$  | VOL$\downarrow$  |  | SOR$\uparrow$  | CR$\uparrow$  | VOL$\downarrow$
+L584: Market  | B&H  | 16.5846  | 0.9589  | 0.0114  |  | 35.1804  | 2.4319  | 0.0188  |  | 18.5186  | 1.9025  | 0.0167  |  | 26.5133  | 1.8135  | 0.0135  |  | 23.3319  | 1.3856  | 0.0301  |  | 23.2235  | 1.3831  | 0.0222
+L585: Rule-based  | MACD  | 13.7755  | 1.1877  | 0.0082  |  | 19.2452  | 1.9176  | 0.0103  |  | -20.917  | -0.8883  | 0.0097  |  | 18.7485  | 1.8966  | 0.0099  |  | -0.4067  | -0.0544  | 0.0182  |  | 10.8951  | 0.5433  | 0.0166
+L586: KDJ&RSI  | 3.3994  | 0.2578  | 0.0084  |  | 16.6915  | 1.2471  | 0.016  |  | 36.6655  | 11.4076  | 0.0052  |  | 19.5346  | 2.4169  | 0.0085  |  | 3.3617  | 0.2737  | 0.0192  |  | 7.7786  | 0.6106  | 0.012
+L587: ZMR  | -2.9977  | -0.37  | 0.0072  |  | 9.5853  | 2.4473  | 0.011  |  | 35.1125  | 5.7782  | 0.0103  |  | 12.9275  | 1.6385  | 0.0069  |  | -1.8214  | -0.1642  | 0.0182  |  | 21.4433  | 2.1715  | 0.0137
+L588: ML&DL-based  | LGBM  | 45.2444  | 6.5825  | 0.0049  |  | 26.2943  | 1.8469  | 0.0193  |  | 19.7497  | 2.082  | 0.0167  |  | 22.6593  | 1.5993  | 0.0134  |  | 12.1981  | 4.0837  | 0.0081  |  | 21.8037  | 1.2503  | 0.0217
+L589: LSTM  | 14.5498  | 0.9915  | 0.0095  |  | 14.7442  | 1.1241  | 0.0184  |  | 19.5489  | 2.0865  | 0.0167  |  | 21.5244  | 1.7144  | 0.0128  |  | 16.1653  | 4.0391  | 0.0099  |  | 27.1716  | 1.7031  | 0.0193
+L590: Transformer  | 28.3604  | 2.288  | 0.0078  |  | 27.8371  | 6.5258  | 0.0125  |  | 11.5053  | 1.2619  | 0.0154  |  | 19.7493  | 6.6012  | 0.0051  |  | 34.1884  | 4.8624  | 0.0164  |  | 27.864  | 2.4209  | 0.0166
+L591: RL-based  | DQN  | 10.3705  | 0.6266  | 0.0111  |  | 29.7698  | 5.1156  | 0.0111  |  | 37.7389  | 4.619  | 0.0114  |  | 32.8642  | 2.8493  | 0.0122  |  | 11.0394  | 0.7399  | 0.0225  |  | 24.6279  | 3.0545  | 0.0143
+L592: SAC  | 33.5676  | 2.0552  | 0.0105  |  | 32.432  | 2.766  | 0.0112  |  | 19.3937  | 1.9708  | 0.0165  |  | 26.0662  | 1.7829  | 0.0135  |  | 26.2869  | 1.441  | 0.0251  |  | 13.3918  | 1.9199  | 0.0146
+L593: PPO  | 16.766  | 0.9747  | 0.0113  |  | 20.3167  | 1.6735  | 0.0159  |  | 42.7201  | 4.3691  | 0.0136  |  | 14.7808  | 0.7484  | 0.013  |  | 19.1547  | 1.3203  | 0.0231  |  | 27.2416  | 2.9836  | 0.0147
+L594: LLM-based  | FinGPT  | -4.6731  | -0.246  | 0.0111  |  | 34.8082  | 2.2545  | 0.0186  |  | 11.6596  | 1.1842  | 0.0167  |  | 30.1935  | 2.5867  | 0.0127  |  | 23.1813  | 1.4402  | 0.0291  |  | 18.5817  | 1.0131  | 0.0221
+L595: FinMem  | 29.8819  | 2.2731  | 0.0102  |  | 33.0779  | 2.1843  | 0.0188  |  | 34.7826  | 3.4572  | 0.0134  |  | 47.1061  | 5.1266  | 0.0123  |  | 25.8819  | 2.0887  | 0.028  |  | 34.1492  | 3.1349  | 0.0194
+L596: FinAgent (Our)  | No-finetuned  | -0.5635  | -0.0295  | 0.011  |  | 46.9773  | 7.5705  | 0.0127  |  | 17.5637  | 1.7864  | 0.0164  |  | 26.6949  | 1.8259  | 0.0135  |  | 17.2111  | 3.0426  | 0.0136  |  | 19.6504  | 1.1081  | 0.0188
+L597: w/o-MLH  | 20.8183  | 1.5678  | 0.009  |  | 53.4328  | 4.9724  | 0.0166  |  | 24.9489  | 2.9016  | 0.0137  |  | 22.0401  | 1.9273  | 0.01  |  | 20.3649  | 1.8355  | 0.0221  |  | 14.0758  | 1.1917  | 0.0174
+L598: w/o-LHT  | 16.15  | 0.9396  | 0.0114  |  | 35.1674  | 2.9256  | 0.0186  |  | 15.1339  | 1.552  | 0.0168  |  | 22.4806  | 1.3883  | 0.0133  |  | 22.2082  | 1.5162  | 0.0286  |  | 21.0778  | 1.2131  | 0.0222
+L599: w/o-HT  | 29.5194  | 1.576  | 0.0105  |  | 40.4896  | 2.9758  | 0.0184  |  | 33.6191  | 3.2906  | 0.0139  |  | 46.4396  | 5.054  | 0.0123  |  | 28.3015  | 2.2956  | 0.0278  |  | 37.172  | 3.6027  | 0.0212
+L600: w/o-T  | 46.6145  | 3.9301  | 0.0101  |  | 50.1096  | 5.9255  | 0.0162  |  | 62.2508  | 5.7201  | 0.0125  |  | 40.3937  | 5.2137  | 0.0129  |  | 41.5642  | 2.9306  | 0.0266  |  | 37.4619  | 4.2958  | 0.0208
+L601:  | FinAgent  | 44.2812  | 2.9424  | 0.0102  |  | 52.5602  | 4.4841  | 0.0176  |  | 62.2992  | 6.0365  | 0.0138  |  | 49.6249  | 7.4209  | 0.0111  |  | 45.4139  | 6.4543  | 0.0187  |  | 31.0159  | 3.3078  | 0.0207
+L602: Improvement(%)  | 3.0282  | -  | -  |  | 51.8823  | 16.0088  | -  |  | 45.8311  | -  | -  |  | 5.3471  | 12.4174  | -  |  | 32.8342  | 32.7390  | -  |  | 9.7007  | 37.0315  | -
+L603: ## Appendix D Details of Benchmark Methods
+L604: We compare and evaluate the trading performance of FinAgent with four widely accepted conventional benchmark trading strategies (B&H, MACD, KDJ&RSI and ZMR) and five advanced algorithms. Among these, SAC (cite160†Haarnoja et al., 2018 ), PPO (cite161†Schulman et al., 2017 ) and DQN (cite162†Mnih et al., 2013 ) are three models employed deep reinforcement learning (RL) methods, FinGPT (cite111†Yang et al., 2023b ) is based on LLM, and another is FinMem (cite112†Yu et al., 2023 ) that based on LLM Agents.
+L605: The following will provide a brief introduction to each model:
+L606:   * •
+L607: 
+L608: Rule-based
+L609: 
+L610:     * –
+L611: 
+L612: Buy-and-Hold (B&H) involves holding assets for an extended period, regardless of short-term market fluctuations, assuming that long-term returns will be more favorable.
+L613: 
+L614:     * –
+L615: 
+L616: Moving Average Convergence Divergence (MACD) is a technical analysis tool that uses MACD indicator and signal line crossovers to identify trading signals and market trends.
+L617: 
+L618:     * –
+L619: KDJ with RSI Filter (KDJ&RSI) integrates the KDJ indicator for detecting market extremes with the RSI indicator for momentum analysis to identify precise trading signals in financial markets.
+L620: 
+L621:     * –
+L622: 
+L623: Z-score Mean Reversion (ZMR) assumes that the price will revert to its mean over time with the metric of Z-score.
+L624: 
+L625:   * •
+L626: 
+L627: RL-based
+L628: 
+L629:     * –
+L630: SAC (cite160†Haarnoja et al., 2018 ) is an off-policy actor-critic algorithm that optimizes trading strategies using entropy regularization and soft value functions in continuous action spaces.
+L631: 
+L632:     * –
+L633: 
+L634: PPO (cite161†Schulman et al., 2017 ) updates trading policies iteratively to balance exploration and exploitation, ensuring stability and sample efficiency.
+L635: 
+L636:     * –
+L637: DQN (cite162†Mnih et al., 2013 ) uses deep neural networks (DNNs) to make trading decisions by approximating the action-value function based on market data.
+L638: 
+L639:   * •
+L640: 
+L641: LLM-based
+L642: 
+L643:     * –
+L644: 
+L645: FinGPT (cite111†Yang et al., 2023b ) is an open-source LLM framework designed to transform textual and numerical inputs into insightful financial decisions, asserting its advantage over conventional B&H strategies.
+L646: 
+L647:     * –
+L648: FinMem (cite112†Yu et al., 2023 ) is an advanced LLM agent framework for automated trading, optimized through fine-tuning the agent’s perceptual span and character settings, significantly enhancing trading performance and boosting cumulative investment returns.
+L649: ## Appendix E Details of Workflow of FinAgent
+L650: 
+L651: In this section we focus on FinAgent’s workflow and code implementation.
+L652: ### E.1. Main Entry
+L653: 
+L654: We follow the RL process, as shown in the code below, where we initialize the dataset and construct environment for subsequent training and inference.
+L655: 
+L656: ⬇
+L657: 
+L658: 1 # load config
+L659: 
+L660: 2 cfg = Config.fromfile(config_path)
+L661: 
+L662: 3 # build dataset
+L663: 
+L664: 4 dataset = DATASET.build(cfg.dataset)
+L665: 
+L666: 5 # build environment
+L667: 
+L668: 6 env = ENVIRONMENT.build(cfg.environment)
+L669: 
+L670: 7 # init environment
+L671: 
+L672: 8 state, info = env.reset()
+L673: 
+L674: 9 # execute steps
+L675: 
+L676: 10 while True:
+L677: 
+L678: 11 action = run_step(cfg, state, info, ...)
+L679: 12 state, reward, done, truncated, info = env.step(action)
+L680: 
+L681: 13 if done:
+L682: 
+L683: 14 break
+L684: 
+L685: 15 # done
+L686: ### E.2. Run Step
+L687: 
+L688: The whole process is mainly through the global params storage and transimit parameters, we do not list the parameter transmition process in detail here. To execute each step, the following primary procedures are adhered to:
+L689: 
+L690: ⬇
+L691: 
+L692: 1 # global params
+L693: 
+L694: 2 params = dict()
+L695: 
+L696: 3 # plot Kline chart
+L697: 
+L698: 4 kline_path = plots.plot_kline(state, info, ...)
+L699: 
+L700: 5 params.update({"kline_path": kline_path})
+L701: 
+L702: 6 # prepare tools params
+L703: 
+L704: 7 tools_params = prepared_tools_params(state, info, ...)
+L705: 8 params.update(tools_params)
+L706: 
+L707: 9 # 01 - latest market intelligence
+L708: 
+L709: 10 template = read_resource_file(...) # load latest market intelligence prompt template
+L710: 
+L711: 11 lmi = PROMPT.build(...) # build instance
+L712: 
+L713: 12 lmi_res = lmi.run(state, info, params, template,...) # run
+L714: 
+L715: 13 # 02 - retrieve the past market intelligence
+L716: 
+L717: 14 retrieved_params = retrieve_pmi(state, info, params, memory, diverse_query, ...)
+L718: 
+L719: 15 params.update(retrieved_params)
+L720: 
+L721: 16 # 03 - add latest market intelligence to memory
+L722: 17 lmi.add_to_memory(lmi_res, memory, ...)
+L723: 
+L724: 18 # 04 - past market intelligence
+L725: 
+L726: 19 template = read_resource_file(...) # load past market intelligence prompt template
+L727: 
+L728: 20 pmi = PROMPT.build(...) # build instance
+L729: 
+L730: 21 pmi_res = pmi.run(state, info, params, template,...) # run
+L731: 
+L732: 22 # 05 - low-level reflection
+L733: 
+L734: 23 template = read_resource_file(...) # load low level reflection prompt template
+L735: 
+L736: 24 llr = PROMPT.build(...) # build instance
+L737: 
+L738: 25 llr_res = llr.run(state, info, params, template,...) # run
+L739: 26 # 06 - retrieve the past low-level reflection
+L740: 
+L741: 27 retrieved_params = retrieve_pllr(state, info, params, memory, diverse_query, ...)
+L742: 
+L743: 28 params.update(retrieved_params)
+L744: 
+L745: 29 # 07 - add low-level reflection to memory
+L746: 
+L747: 30 llr.add_to_memory(llr_res, memory, ...)
+L748: 
+L749: 31 # plot trading chart
+L750: 
+L751: 32 trading_path = plots.plot_trading(state, info, ...)
+L752: 
+L753: 33 params.update({"trading_path": trading_path})
+L754: 
+L755: 34 # 08 - high-level reflection
+L756: 
+L757: 35 template = read_resource_file(...) # load high level reflection prompt template
+L758: 36 hlr = PROMPT.build(...) # build instance
+L759: 
+L760: 37 hlr_res = hlr.run(state, info, params, template,...) # run
+L761: 
+L762: 38 # 09 - retrieve the past high-level reflection
+L763: 
+L764: 39 retrieved_params = retrieve_phlr(state, info, params, memory, diverse_query, ...)
+L765: 
+L766: 40 params.update(retrieved_params)
+L767: 
+L768: 41 # 10 - add high-level reflection to memory
+L769: 
+L770: 42 hlr.add_to_memory(hlr_res, memory, ...)
+L771: 
+L772: 43 # 11 - decision-making
+L773: 
+L774: 44 template = read_resource_file(...) # load decision-making prompt template
+L775: 45 decision = PROMPT.build(...) # build instance
+L776: 
+L777: 46 decision_res = decision.run(state, info, params, template,...) # run
+L778: 
+L779: 47 action, reasoning = decision_res["action"], decision_res["reasoing"]
+L780: ## Appendix F Details of Prompt Design
+L781: Our prompt templates are designed modularly, featuring separate templates for the latest and past market intelligence, low-level reflection, high-level reflection, and decision-making modules. These templates include variables marked as "$$key$$" within the "params" dictionary. Our template utilizes HTML for its ability to combine formatting with user-friendly visualizations. In our testing, we find that JSON’s strict formatting requirements frequently lead to errors.
+L782: As a result, we opt for XML, a format with more flexible standards. XML is easy to parse, and extracting fields is simpler, making it an ideal output format for GPT-4. Next, we use the "params" to populate the template with the relevant fields. Following this, we employ an HTML parsing tool to create the JSON message format GPT-4 API demands. We then make API requests to obtain the response output. An example of low level reflection template running is shown as the following Figure cite172†6 .
+L783: cite173†Image: Refer to caption Figure 6. An example of low level reflection template running.
+L784: 
+L785: Lastly, we extract the necessary field information using an XML parsing tool as depicted in Figure cite174†7 . Each of these iframe modules is carefully designed by us, and we will show each of them in the following subsections.
+L786: 
+L787: cite175†Image: Refer to caption Figure 7. Example of parsing the results of a low-level reflection template running that call to GPT-4 get responded XML.
+L788: ### F.1. Market Intelligence
+L789: 
+L790: Market intelligence consists of 2 templates and 7 iframe modules, the XML templates of which are detailed as follows:
+L791: ##### Latest Market Intelligence Template
+L792: 
+L793: ⬇
+L794: 
+L795: 1 <!DOCTYPE html>
+L796: 
+L797: 2 <html lang="en">
+L798: 
+L799: 3 <head>
+L800: 
+L801: 4 <meta charset="UTF-8">
+L802: 
+L803: 5 <meta name="viewport" content="width=device-width,␣initial-scale=1.0">
+L804: 
+L805: 6 <title>Summary of Latest Market Intelligence</title>
+L806: 
+L807: 7 </head>
+L808: 
+L809: 8 <body>
+L810: 
+L811: 9
+L812: 
+L813: 10 <iframe name="system_content_trading"></iframe>
+L814: 
+L815: 11
+L816: 
+L817: 12 <div class="message" role="user">
+L818: 
+L819: 13 <iframe name="market_intelligence_task_description_trading"></iframe>
+L820: 
+L821: 14
+L822: 
+L823: 15 <div class="market_intelligence">
+L824: 16 <p class="placeholder">The following market intelligence (e.g., news, financial reports) contains latest (i.e., today) information related to $$asset_symbol$$, including the corresponding dates, headlines, and contents, with each item distinguished by a unique ID. Furthermore, if the day is not closed for trading, the section also provides the open, high, low, close, and adjusted close prices.
+L825: 
+L826: 17 <br><br>Latest market intelligence and prices are as follows:
+L827: 
+L828: 18 <br>$$latest_market_intelligence$$
+L829: 19 </p>
+L830: 
+L831: 20 </div>
+L832: 
+L833: 21
+L834: 
+L835: 22 <iframe name="market_intelligence_effects_trading"></iframe>
+L836: 
+L837: 23
+L838: 
+L839: 24 <iframe name="market_intelligence_latest_summary_prompt_trading"></iframe>
+L840: 
+L841: 25
+L842: 
+L843: 26 <iframe name="market_intelligence_latest_summary_output_format_trading"></iframe>
+L844: 
+L845: 27
+L846: 
+L847: 28 </div>
+L848: 
+L849: 29
+L850: 
+L851: 30 </body>
+L852: 
+L853: 31 </html>
+L854: ##### Past Market Intelligence Template
+L855: 
+L856: ⬇
+L857: 
+L858: 1 <!DOCTYPE html>
+L859: 
+L860: 2 <html lang="en">
+L861: 
+L862: 3 <head>
+L863: 
+L864: 4 <meta charset="UTF-8">
+L865: 
+L866: 5 <meta name="viewport" content="width=device-width,␣initial-scale=1.0">
+L867: 
+L868: 6 <title>Summary of Past Market Intelligence</title>
+L869: 
+L870: 7 </head>
+L871: 
+L872: 8 <body>
+L873: 
+L874: 9
+L875: 
+L876: 10 <iframe name="system_content_trading"></iframe>
+L877: 
+L878: 11
+L879: 
+L880: 12 <div class="message" role="user">
+L881: 
+L882: 13 <iframe name="market_intelligence_task_description_trading"></iframe>
+L883: 
+L884: 14
+L885: 
+L886: 15 <div class="market_intelligence">
+L887: 16 <p class="placeholder">The following market intelligence (e.g., news, financial reports) contains past (i.e., before today) information related to $$asset_symbol$$, including the corresponding dates, headlines, and contents, with each item distinguished by a unique ID. Furthermore, if the day is not closed for trading, the section also provides the open, high, low, close, and adjusted close prices.
+L888: 
+L889: 17 <br><br>Past market intelligence and prices are as follows:
+L890: 
+L891: 18 <br>$$past_market_intelligence$$
+L892: 19 </p>
+L893: 
+L894: 20 </div>
+L895: 
+L896: 21
+L897: 
+L898: 22 <iframe name="market_intelligence_effects_trading"></iframe>
+L899: 
+L900: 23
+L901: 
+L902: 24 <iframe name="market_intelligence_past_summary_prompt_trading"></iframe>
+L903: 
+L904: 25
+L905: 
+L906: 26 <iframe name="market_intelligence_past_summary_output_format_trading"></iframe>
+L907: 
+L908: 27 </div>
+L909: 
+L910: 28
+L911: 
+L912: 29 </body>
+L913: 
+L914: 30 </html>
+L915: ##### System Content
+L916: 
+L917: ⬇
+L918: 
+L919: 1 <div class="message" role="system">
+L920: 2 <p class="text">You are an expert trader who have sufficient financial experience and provides expert guidance. Imagine working in a real market environment where you have access to various types of information (e.g., daily real-time market price, news, financial reports, professional investment guidance and market sentiment) relevant to financial markets.
+L921: You will be able to view visual data that contains comprehensive information, including Kline charts accompanied by technical indicators, historical trading curves and cumulative return curves. And there will be some auxiliary strategies providing you with explanations for trading decisions. You are capable of deeply analyzing, understanding, and summarizing information, and use these information to make informed and wise trading decisions (i.e., BUY, HOLD and SELL).
+L922: 3 </p>
+L923: 
+L924: 4 </div>
+L925: ##### Task Description
+L926: 
+L927: ⬇
+L928: 
+L929: 1 <div class="task_description">
+L930: 2 <p class="placeholder">You are currently focusing on summarizing and extracting the key insights of the market intelligence of a $$asset_type$$ known as $$asset_name$$, which is denoted by the symbol $$asset_symbol$$. This $$asset_type$$ is publicly traded and is listed on the $$asset_exchange$$. Its primary operations are within the $$asset_sector$$ sector, specifically within the $$asset_industry$$ industry.
+L931: To provide you with a better understanding, here is a brief description of $$asset_name$$: $$asset_description$$. In this role, your current goal as an analyst is to conduct a comprehensive summary of the market intelligence of the asset represented by the symbol $$asset_symbol$$. To do so effectively, you will rely on a comprehensive set of information as follows:
+L932: 3 </p>
+L933: 
+L934: 4 </div>
+L935: ##### Market Intelligence Effects
+L936: 
+L937: ⬇
+L938: 
+L939: 1 <div class="market_intelligence_effects">
+L940: 
+L941: 2 <p class="placeholder">Considering the effects of market intelligence can be in the following ways:
+L942: 
+L943: 3 <br>1. If there is market intelligence UNRELATED to asset prices, you should ignore it. For example, advertisements on some news platforms.
+L944: 
+L945: 4 <br>2. Based on the duration of their effects on asset prices, market intelligence can be divided into three types:
+L946: 5 <br> - SHORT-TERM market intelligence can significantly impact asset prices over the next few days.
+L947: 
+L948: 6 <br> - MEDIUM-TERM market intelligence is likely to impact asset prices for the upcoming few weeks.
+L949: 
+L950: 7 <br> - LONG-TERM market intelligence should have an impact on asset prices for the next several months.
+L951: 
+L952: 8 <br> - If the duration of the market intelligence impact is not clear, then you should consider it as LONG-TERM.
+L953: 9 <br>3. According to market sentiment, market intelligence can be divided into three types:
+L954: 
+L955: 10 <br> - POSITIVE market intelligence typically has favorable effects on asset prices. You should focus more on the favorable effects, but do not ignore the unfavorable effects:
+L956: 
+L957: 11 <br> - Favorable: Positive market intelligence boosts investor confidence, increases asset demand, enhances asset image, and reflects asset health. It may lead to increased buying activity and a potential increase in asset prices.
+L958: 12 <br> - Unfavorable: Positive market intelligence can lead to market overreaction and volatility, short-term investment focus, risk of price manipulation, and may have only a temporary effect on stock prices. It may contribute to a decline in asset prices.
+L959: 
+L960: 13 <br> - NEGATIVE market intelligence typically has unfavorable effects on asset prices. You should focus more on the unfavorable effects, but do not ignore the favorable effects:
+L961: 14 <br> - Favorable: Negative market intelligence act as a market correction mechanism, provide crucial investment information, ultimately contributing to the long-term health of the market and the asset prices.
+L962: 
+L963: 15 <br> - Unfavorable: Negative market intelligence lead to investor panic and a short-term decline in stock prices, as well as cause long-term damage to a company’s reputation and brand, adversely contributing to a decline in asset prices.
+L964: 16 <br> - NEUTRAL market intelligence describes an event that has an uncertain impact on the asset price with no apparent POSITIVE or NEGATIVE bias.
+L965: 
+L966: 17 <br> - If the market intelligence is RELATED to the $$asset_name$$, but it’s not clear whether the sentiment is positive or negative. Then you should consider it as NEUTRAL.
+L967: 
+L968: 18 <br>4. Market intelligence related to the asset collaborators or competitors may influence the asset prices.
+L969: 19 <br>5. Because the past market intelligence has a lower effect on the present, you should pay MORE attention to the latest market intelligence.
+L970: 
+L971: 20 </p>
+L972: 
+L973: 21 </div>
+L974: ##### Latest Market Intelligence Prompt
+L975: 
+L976: ⬇
+L977: 
+L978: 1 <div class="prompt">
+L979: 
+L980: 2 <p class="placeholder">Based on the above information, you should analyze the key insights and summarize the market intelligence. Please strictly follow the following constraints and output formats:
+L981: 
+L982: 3 <br><br>"analysis": This field is used to extract key insights from the above information. You should analyze step-by-step and follow the rules as follows and do not miss any of them:
+L983: 4 <br>1. Please disregard UNRELATED market intelligence.
+L984: 
+L985: 5 <br>2. For each piece of market intelligence, you should analyze it and extract key insights according to the following steps:
+L986: 
+L987: 6 <br> - Extract the key insights that can represent this market intelligence. It should NOT contain IDs, $$asset_name$$ or $$asset_symbol$$.
+L988: 7 <br> - Analyze the market effects duration and provide the duration of the effects on asset prices. You are only allowed to select the only one of the three types: SHORT-TERM, MEDIUM-TERM and LONG-TERM.
+L989: 
+L990: 8 <br> - Analyze the market sentiment and provide the type of market sentiment. A clear preference over POSITIVE or NEGATIVE is much better than being NEUTRAL. You are only allowed to select the only one of the three types: POSITIVE, NEGATIVE and NEUTRAL.
+L991: 9 <br>3. The analysis you provide for each piece of market intelligence should be concise and clear, with no more than 40 tokens per piece.
+L992: 
+L993: 10 <br>4. Your analysis MUST be in the following format:
+L994: 
+L995: 11 <br> - ID: 000001 - Analysis that you provided for market intelligence 000001.
+L996: 
+L997: 12 <br> - ID: 000002 - Analysis that you provided for market intelligence 000002.
+L998: 
+L999: 13 <br> - ...
+L1000: 
+L1001: 14

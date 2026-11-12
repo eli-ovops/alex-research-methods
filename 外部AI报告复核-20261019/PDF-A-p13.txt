@@ -1,0 +1,78 @@
+XTX 与 AI 量化研究  ·  独立审查 V1                                                                                              2026-10-19
+
+ 附录 B. 可追溯证据索引
+
+
+ E 为包内证据；W 为本轮公开一手来源。包内路径均相对原 ZIP 的顶层目录；R/ = 02_原研究档案/运行验证-20261015/，EVID/ =
+ R/evidence/。行号按包内文本实际行号，字段定位表示定向读取相关 JSON/代码路径，不能推成全文逐字审计。随附
+ evidence_index.tsv 保留无缩写完整路径。
+
+ E01 原始目标与独立审查任务
+
+ 本次授权范围、原目标、应答格式与本轮禁做动作。证据性质：包内证据。
+
+ README.md ｜ 全文
+ 00_完整交接与审查任务.md ｜ 全文
+
+ E02 11 组实验事实专题
+
+ 实验概况、既有结果及缺失原件。证据性质：包内证据。
+
+ 01_专题/实验事实与证据边界.md ｜ 1-131
+
+ E03 最新总决策
+ 完整商业证据条件与不再启动的总判断。证据性质：包内证据。
+
+ EVID/goal-evidence-synthesis-20261019/root/决策报告.md ｜ 7；80-88
+
+ E04 Kronos 固定预测协议与结果
+
+ 80→12 的终点 MSE、AAPL 与 50 股结果、按同步时窗聚合。证据性质：包内证据。
+ R/protocol.json ｜ 16-18；26-32；49-57
+
+ R/evaluate_kronos.py ｜ 300-341；396-421
+
+ R/results/summary.json ｜ MSE 与配对区间字段
+ R/transfer50-20261015/protocol.json ｜ 124-145
+
+ R/transfer50-20261015/evaluate_transfer50.py ｜ 278-326；397-417
+ R/transfer50-20261015/results/summary.json ｜ MSE、样本数与配对区间字段
+
+ E05 Kronos 经济重放时序
+
+ 旧预测收益分数、origin+2 入场与 origin+14 末端。证据性质：包内证据。
+
+ R/economic-replay-20261015/replay_economics.py ｜ 144-169；417-423；460-490
+
+ E06 Kronos 经济报告
+ 成本敏感性、零成本有限正点估计、换手费用构成。证据性质：包内证据。
+
+ R/economic-replay-20261015/离线收益探索报告-20261015.md ｜ 11-52；85-105；134
+
+ E07 BTC 分钟失败诊断
+
+ 误差倍率含义、已观察价格样本、9 条 Ridge 数值警告。证据性质：包内证据。
+ R/BTC预测失败诊断-35倍误差从哪里来-20261017.md ｜ 13-19；37-49；53-88
+
+ E08 BTC 分钟训练内诊断与实现
+ TRAIN/TEST 误差、连续性、TRAIN 缩放及 Ridge 路径。证据性质：包内证据。
+
+ EVID/BTC1min-train-forward-diagnosis-20261017/artifacts/train-forward-diagnostic-summary.json ｜ TRAIN/TEST MSE 倍率字
+ 段
+ EVID/BTC1min-fixed-evaluation-run-20261017/protocol/fixed_evaluation.py ｜ 123-166；188-205；291-347
+
+ EVID/BTC1min-train-forward-diagnosis-20261017/protocol/train_only_forward.py ｜ 封存模型读取及 TRAIN 前向评分路径
+
+ E09 BTC 日频协议与实现
+
+ 年份 purge、sigmoid×风险上限、负净 Sharpe 训练和因果窗口。证据性质：包内证据。
+ EVID/BTC-daily-fixed-protocol-20261017/protocol.json ｜ 57-75；101-120；146-174；208-232
+
+ EVID/BTC-daily-fixed-execution-20261017/daily_adapter.py ｜ 67-136；199-248；274-283；390-396；415-460
+
+
+
+
+
+
+静态审查 · 历史证据与现实复制分别判定                                                                                                           13

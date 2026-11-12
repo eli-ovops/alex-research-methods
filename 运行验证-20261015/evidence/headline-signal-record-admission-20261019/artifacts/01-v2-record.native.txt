@@ -1,0 +1,51 @@
+Can ChatGPT Forecast Stock Price Movements? Return Predictability and Large Language Models - Replication Package - Mendeley Data (https://data.mendeley.com/datasets/f39x226htv/2)
+citeturn1065view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://data.mendeley.com/datasets/f39x226htv/2","lineno":null}); Total lines: 62
+L0: cite0†Skip to main content L1: 
+L2: Sign In / Register
+L3: 
+L4: # Can ChatGPT Forecast Stock Price Movements? Return Predictability and Large Language Models - Replication Package
+L5: 
+L6: Published: 15 June 2026| Version 2 | DOI: 10.17632/f39x226htv.2
+L7: 
+L8: Contributors:
+L9: 
+L10: Alejandro Lopez-Lira
+L11: 
+L12: , Yuehua Tang
+L13: 
+L14: ## Description
+L15: 
+L16: Replication package for Can ChatGPT Forecast Stock Price Movements? Return Predictability and Large Language Models.
+L17: 
+L18: [Button: Download All ]
+L19: 
+L20: ## Files
+L21: 
+L22: ## Steps to reproduce
+L23: 
+L24: Follow README.md
+L25: ## Institutions
+L26: 
+L27:   * cite1†University of Florida†ror.org L28: 
+L29: Florida, Gainesville
+L30: 
+L31: ## Categories
+L32: 
+L33: Finance
+L34: ## Licence
+L35: 
+L36: CC BY 4.0 Learn more
+L37: 
+L38:   * cite2†Home L39:   * |
+L40:   * cite3†About L41:   * |
+L42:   * cite4†Accessibility Statement L43:   * |
+L44:   * cite5†Archive Policy L45:   * |
+L46:   * cite6†File Formats L47:   * |
+L48:   * cite7†API Docs L49:   * |
+L50:   * cite8†OAI L51:   * |
+L52:   * cite9†Mission L53:   * |
+L54:   * cite10†Status Updates†digitalcommons.elsevier.com L55: 
+L56:   * cite11†Terms of Use†www.mendeley.com L57:   * |
+L58:   * cite12†Privacy Policy†www.elsevier.com L59:   * |
+L60:   * [Button: Cookie Settings]
+L61:   * All content on this site: Copyright © 2026 Elsevier inc, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training and similar technologies. For all open access content, the Creative Commons licensing terms apply.

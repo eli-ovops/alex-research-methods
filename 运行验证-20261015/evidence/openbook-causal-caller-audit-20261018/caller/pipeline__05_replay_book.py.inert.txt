@@ -1,0 +1,97 @@
+#!/usr/bin/env python
+"""Stage 5: replay the full month of timestamped diffs of one coin through the numba book engine.
+
+Input   <work>/derived/diffs_ts/<coin>/*.parquet (hourly files in order)
+Output  <work>/derived/<out-name>/bbo_<coin>.parquet     one row per block close (BBO, touch sizes and counts,
+                                                          live orders, gated flag, depth within 5 / 10 bps)
+        <work>/derived/<out-name>/orders_<coin>.parquet  one row per order at removal (or month end): lifecycle,
+                                                          close source, queue ahead and spread at placement
+
+``--date-max`` replays only the files up to that date and writes to ``book_test`` unless ``--out-name`` is given;
+this is how the small test sample used by the analysis scripts' ``--test`` flag is produced.
+
+Usage:  python pipeline/05_replay_book.py COIN [--date-max 20251203] [--out-name book]
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+import time
+from pathlib import Path
+
+import polars as pl
+import pyarrow.parquet as pq
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from hlmicro.book import BBO_SCHEMA, ORD_SCHEMA, BookState  # noqa: E402
+from hlmicro.config import DER  # noqa: E402
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("coin")
+    ap.add_argument("--date-max", default=None, help="last date (YYYYMMDD) to replay; implies --out-name book_test")
+    ap.add_argument(
+        "--out-name", default=None, help="output folder under derived/ (default: book, or book_test with --date-max)"
+    )
+    args = ap.parse_args()
+    coin = args.coin
+    out_name = args.out_name or ("book_test" if args.date_max else "book")
+    outd = DER / out_name
+    outd.mkdir(parents=True, exist_ok=True)
+    t0 = time.time()
+
+    files = sorted((DER / "diffs_ts" / coin).glob("*.parquet"))
+    if args.date_max:
+        files = [f for f in files if f.name[:8] <= args.date_max]
+    if not files:
+        raise SystemExit(f"no timestamped diffs for {coin} under {DER / 'diffs_ts'}")
+    state = BookState(coin)
+    wb = pq.ParquetWriter(outd / f"bbo_{coin}.parquet.partial", BBO_SCHEMA, compression="zstd")
+    wo = pq.ParquetWriter(outd / f"orders_{coin}.parquet.partial", ORD_SCHEMA, compression="zstd")
+    nproc = nblk = nord = 0
+    for fi, f in enumerate(files):
+        d = pl.read_parquet(f).filter(~pl.col("ephemeral")).sort("seq")
+        if d.height == 0:
+            continue
+        last = fi == len(files) - 1
+        bbo, orders = state.replay(d, close_last=last)
+        if bbo is not None:
+            wb.write_table(bbo)
+            nblk += bbo.num_rows
+        if orders is not None:
+            wo.write_table(orders)
+            nord += orders.num_rows
+        nproc += d.height
+        if fi % 24 == 23 or last:
+            s = state.summary()
+            print(
+                f"[{coin}] {f.name}: diffs {nproc:,} blocks {nblk:,} orders {nord:,} live {state.n_live:,} "
+                f"crossed {s['crossed_block_closes']:,} resets {s['gap_resets']:,} skipped_replayed {s['skipped_replayed']:,} "
+                f"miss_rem {s['miss_rem']:,} miss_upd {s['miss_upd']:,} dup {s['dup_new']:,} oor {s['out_of_range']:,} "
+                f"({time.time() - t0:.0f}s)",
+                flush=True,
+            )
+    still_open = state.open_orders()
+    n_open = 0
+    if still_open is not None:
+        wo.write_table(still_open)
+        n_open = still_open.num_rows
+    wb.close()
+    wo.close()
+    for nm in ("bbo", "orders"):
+        (outd / f"{nm}_{coin}.parquet.partial").replace(outd / f"{nm}_{coin}.parquet")
+    s = state.summary()
+    print(
+        f"DONE {coin}: diffs {nproc:,} blocks {nblk:,} orders {nord:,}+{n_open:,} open; "
+        f"crossed-block-closes {s['crossed_block_closes']:,}; gap-resets {s['gap_resets']:,}; "
+        f"skipped-replayed {s['skipped_replayed']:,}; miss_rem {s['miss_rem']:,} miss_upd {s['miss_upd']:,} "
+        f"dup {s['dup_new']:,} oor {s['out_of_range']:,} ({time.time() - t0:.0f}s)",
+        flush=True,
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,159 @@
+Skip to content
+Search
+K
+Main Navigation
+Home
+dApps
+OEV
+Curation
+Appearance
+Menu
+Return to top
+Sidebar Navigation
+Overview
+In depth
+Getting started
+Data feeds
+MEV with Signed APIs
+On this page
+OEV → In Depth
+Data feeds ​
+Searchers need a way to monitor real-time off-chain prices to find profitable opportunities. Traditionally, searchers have needed to buy API subscriptions from underlying oracle sources, creating additional friction in the process. API3 simplifies this process by providing the same data that is used for updating data feeds to searchers publicly and without cost. But before that, one needs to understand how API3 oracles work.
+How data feeds work? ​
+Let's start from the ground up. The data feed logic is dictated by the Api3ServerV1 contract. The central part of API3 feeds is first-party oracles, relying on cryptographic signatures verified on-chain.
+Internally, we refer to our data feeds as dAPIs. This is also the terminology used across API3 contracts. We'll be following the same terminology in this section.
+dAPI structure ​
+The simplest primitive is a "beacon".
+It consists of:
+Airnode address = The identifier of the data provider, e.g. Nodary.
+Template ID = A template represents an endpoint of the data provider API, e.g. ETH/USD.
+Together they represent a data point from a specific data provider. Beacons are identified by beacon ID, which is the hash of their Airnode address and template ID. They can be aggregated into "beacon sets" which are identified by the IDs of the constituent beacons.
+Both beacons and beacon sets can be used as price feeds. We use the term "data feed" to refer to either of them. Term data feed ID is a common name for beacon ID or beacon set ID. Finally, a dAPI is simply a mapping from a human-readable data feed name to a data feed ID.
+Updating data feed value ​
+So far, we've referred to dAPIs and data feeds as sources of data, not mentioning how they are kept up-to-date. API3 feeds are permissionless and anyone can perform an update, provided they have valid data. To update a beacon, anyone can call updateBeaconWithSignedData
+on the Api3ServerV1 contract:
+solidity
+Similarly, to update a beacon set, one first updates the constituent beacons and then calls updateBeaconSetWithBeacons
+:
+solidity
+By updating a beacon set, we aggregate the values and timestamps of the constituent beacons. The typical dAPI refers to a beacon set of multiple sources. As dAPI references a particular data feed under the hood, modifying the underlying beacon set also updates the dAPI value.
+Off-chain components ​
+There are several off-chain components that are used to keep dAPI values up to date:
+Airnode feed
+- Deployed by the data providers themselves, Airnode feed continuously queries the API of the data provider, processes the response, and signs it with the Airnode wallet. The cryptographically signed data is then pushed to Signed APIs.
+Signed API
+- Signed API accepts signed data from API providers and provides an API layer for off-chain querying.
+Airseeker
+- Airseeker is an API3 push oracle. It monitors the off-chain and on-chain data and triggers an update when needed.
+All of these tools are open-sourced for transparency.
+Update schedule ​
+dAPIs are updated based on the configured update parameters. An update is performed whenever a dAPI value exceeds the allowed threshold or the feed was not updated for a particular amount time.
+OEV updates ​
+⚠️ Warning
+Currently, OEV updates are possible only for the API3 partnered searchers and not the general public.
+After a dAPI is updated, the changed value is reflected across all protocols that use the particular dAPI. We call these "base feed updates" to differentiate them from the OEV updates, which are dApp-specific.
+For dApps, OEV is an extension to base feeds, supported by the Api3ReaderProxyV1 contract. This contract is a simple proxy that reads the value either from the base feed or the OEV feed, whichever is fresher.
+The OEV feed is specific to the dApp, and its update only reflects the price for the dApp that uses this proxy. This is accomplished by the proxy being tied to an immutable dApp ID field. This allows separate value capturing for each dApp.
+ℹ️ Info
+Base feeds are configured to serve the signed data with a delay. This design choice guarantees searchers the exclusive rights for OEV update.
+OEV feed ​
+The OEV feed is derived from the base feed by changing its beacons to "OEV beacons".
+An OEV beacon is derived from the base feed beacon by hashing its template ID using keccak256
+. This makes it possible to share the signed data for OEV beacons freely, because they cannot be used to update the base feed. The Api3ServerV1OevExtension contract allows them to be used only with a valid signature and after paying the adequate auction amount.
+ℹ️ Example
+Say we have the following base feed beacon:
+jsonc
+To derive the template ID of the OEV beacon, we hash its template ID:
+solidity
+Which gives us the following OEV beacon:
+json
+Notice that the beacon ID is different, but the Airnode address is the same.
+dApp IDs ​
+Each dApp that uses OEV feeds is assigned a unique ID, called the "dApp ID". The granularity of auctions is at the dApp level, meaning the auction winner is able to update any of the price feeds associated with this dApp ID. This ID is hardcoded in the OEV proxies of the dApp.
+The ID has no meaning other than to group proxies of the same dApp together.
+Programmatically ​
+Searchers can use unsafeComputeDappId
+from the @api3/contracts
+package available as an NPM package.
+ℹ️ Example
+Say we want to determine dApp ID for dTRINITY
+. Its dApp alias is dtrinity
+, as listed in the dApp registry
+of @api3/contracts
+, and the chain is Fraxtal. Fraxtal has chain ID 252
+. To derive the dApp ID we call unsafeComputeDappId
+with arguments dtrinity
+and 252
+.
+js
+Using the CLI ​
+Alternatively, searchers can use the compute-dapp-id
+command from the @api3/contracts
+package.
+ℹ️ Example
+For the same example as above, run the following command:
+sh
+The command will output:
+dApp sources ​
+Searchers need to know the proxy address and the underlying dAPI name used by the OEV proxy. The dApps have full control over what proxies they use, and searchers should refer to their documentation or inspect the chain-state of their contracts to get an up-to-date proxy address.
+To determine the underlying beacons used by the dAPI, you can use the AirseekerRegistry contract on the target chain. Searchers need to monitor values for these beacons with the public Signed APIs. Note that these are the base feed beacons and the searcher is expected to derive the OEV beacons to monitor the OEV data.
+Data feed details encoding ​
+The AirseekerRegistry contract uses a particular encoding for data feed details so that the details can be persisted on-chain as a single bytes
+value. The callers need to decode this value to get the actual data feed details.
+Decoding depends on whether the feed is a beacon or a beacon set. Assume we have encoded dataFeedDetails
+and we need to decode it. Note that the encoding follows a similar principle.
+The decoding of a beacon:
+solidity
+The decoding of a beacon set:
+solidity
+To know which encoding to use, you can check the length of the dataFeedDetails
+. For a single beacon, the length is always 64
+bytes, because both address
+and bytes32
+are encoded using 32 bytes. For a beacon set, the length depends on the number of beacons encoded.
+⚠️ Airnode Mnemonic Rotation
+Data providers rotate their Airnode mnemonics every 6 months as part of API3's security practices. This results in new Airnode addresses being generated. Please refer to the API3 Market
+or directly on-chain data for the latest Airnode addresses.
+ℹ️ Example
+Say there is a dApp proxy that uses the ETH/USD
+dAPI. We can compute the details for this dAPI off-chain by:
+js
+To determine the data feed ID for this dAPI, we can use the dapiNameHashToDataFeedId
+function on the Api3ServerV1 contract:
+js
+To determine the data feed details, use the dataFeedIdToDetails
+function on the AirseekerRegistry contract:
+js
+The data feed details need to be decoded first. The following is a simplified version of that decodes the data off-chain:
+js
+Say the following is the output after decoding the data feed details:
+json
+Public Signed APIs ​
+Signed APIs store the data pushed by Airnode feeds and expose them to the public via an API. As mentioned, base feed updates are delayed, permissionless and can be updated by anyone. The OEV feeds are real-time and can only be updated by the API3 partnered searchers. The Signed APIs are publicly available.
+Signed APIs only support querying data for a particular Airnode feed at a time. The Airnode address is supplied as an HTTP path parameter. The endpoint is cached and can be called repeatedly. However, excessive call frequency is restricted by rate limiting or full access denial.
+Base feed endpoints ​
+The following are the base feed endpoints that are publicly available:
+https://signed-api.api3.org/public/<AIRNODE_ADDRESS>
+- The official API3 Signed APIs used by the push oracle to update the base feeds.
+For example, see the API3 response for Nodary Airnode feed
+.
+OEV endpoints ​
+The following are the OEV endpoints that are publicly available:
+https://signed-api.api3.org/public-oev/<AIRNODE_ADDRESS>
+For example, see the API3 response for Nodary Airnode feed
+.
+Response ​
+The response of the Signed API is a JSON object with the following fields:
+count
+- The number of signed data entries.
+data
+- An object with the signed data entries. The keys are the beacon IDs and the values are the signed data objects for the particular beacon(s).
+For example:
+json
+Pager
+Previous page
+Getting started
+Next page
+MEV with Signed APIs
+Released under the MIT License.
+Copyright © 2019-present API3 Foundation

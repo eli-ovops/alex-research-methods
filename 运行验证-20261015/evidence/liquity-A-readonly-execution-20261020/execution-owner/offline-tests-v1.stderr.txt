@@ -1,0 +1,27 @@
+test_aggregate_decode_return_fixture (test_readonly_collector.ABI) ... ok
+test_aggregate_encoding_offsets (test_readonly_collector.ABI) ... ok
+test_keccak_vectors_and_saved_real_ABI (test_readonly_collector.ABI) ... ok
+test_static_length_address_and_status (test_readonly_collector.ABI) ... ok
+test_code_hash_release_drift_rejected (test_readonly_collector.DeadlineReleaseAndFeed) ... ok
+test_expired_preflight_never_prompts_secret (test_readonly_collector.DeadlineReleaseAndFeed) ... ok
+test_feed_newfailure_is_policy_unknown_and_fetch_is_last (test_readonly_collector.DeadlineReleaseAndFeed) ... ok
+test_WS_notification_charge_by_actual_payload_and_frame (test_readonly_collector.NewSafetyAndEvidence) ... ok
+test_actual_notification_bytes_not_fixed_typical_value (test_readonly_collector.NewSafetyAndEvidence) ... ok
+test_delta_lossless_byte_ranges_and_periodic_full_baseline (test_readonly_collector.NewSafetyAndEvidence) ... ok
+test_missing_release_stops_before_secret_prompt (test_readonly_collector.NewSafetyAndEvidence) ... ok
+test_real_dependency_ABIs_and_runtime_records_decode_static (test_readonly_collector.NewSafetyAndEvidence) ... ok
+test_exception_redaction_to_disk (test_readonly_collector.Safety) ... ok
+test_method_CU_peak_CPU_RAM_disk (test_readonly_collector.Safety) ... ok
+test_method_allowlist_before_network (test_readonly_collector.Safety) ... ok
+test_secret_not_represented_and_schema_rejects (test_readonly_collector.Safety) ... ok
+test_episode_no_new_opportunity_from_gap_or_next_day (test_readonly_collector.State) ... ok
+test_forecast_does_not_pass_over_quota (test_readonly_collector.State) ... ok
+test_full_SP_zombie_fee_anchor_and_last_trove (test_readonly_collector.State) ... ok
+test_mixedblock_scanner_fence (test_readonly_collector.State) ... ok
+test_oracle_strict_boundary_negative_future_and_fallback (test_readonly_collector.State) ... ok
+test_reorg_correction_and_missing_gap (test_readonly_collector.State) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.074s
+
+OK

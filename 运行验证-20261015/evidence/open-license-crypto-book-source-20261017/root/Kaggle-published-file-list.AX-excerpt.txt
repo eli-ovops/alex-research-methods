@@ -1,0 +1,27 @@
+				25 link Description: Login, Value: kaggle.com/account/login?phase=startSignInTab&returnUrl=%2Fdatasets%2Fmartinsn%2Fhigh-frequency-crypto-limit-order-book-data
+				122 heading ADA_1min.csv(35.9 MB), Value: 2
+					123 text ADA_1min.csv ( 35.9 MB )
+				131 button Download CSV with selected columns
+				132 pop up button (collapsed) Description: Change displayed columns, Secondary Actions: Expand
+						134 text 10  of  156  columns
+					2179 button View version history
+						2180 text Version 
+					2182 text (5.48 GB)
+					2184 text ADA_1min.csv
+					2185 text ADA_1sec.csv
+					2186 text ADA_5min.csv
+					2187 text BTC_1min.csv
+					2188 text BTC_1sec.csv
+					2189 text BTC_5min.csv
+					2190 text ETH_1min.csv
+					2191 text ETH_1sec.csv
+					2192 text ETH_5min.csv
+				2195 button (collapsed) Description: Expand 9 files, Secondary Actions: Expand
+					2196 container Collapse 9 files
+					2199 text 9 files
+				2200 button (collapsed) Description: Expand 1404 columns, Secondary Actions: Expand
+					2201 container Collapse 1404 columns
+					2204 text 1404 columns
+					2942 link Value: kaggle.com/datasets/fast42/btcusdt-l2-order-book-binance-128-188, ID: 8291616, Description: BTCUSDT L2 Order Book (Binance) - (12/8 - 18/8) More options for this dataset Fast42 Usability 4.7 · Updated a year ago 7 Files (CSV) · 55 kB · 182 downloads
+					2949 link Value: kaggle.com/datasets/marvingozo/hyperliquid-btc-high-frequency-microstructure, ID: 10445757, Description: Hyperliquid BTC High-Frequency Microstructure More options for this dataset Marvin Gozo Usability 10.0 · Updated 5 months ago 28 Files (other) · 60 GB · 1,154 downloads
+					2956 link Value: kaggle.com/datasets/peterbowman/crypto-data, ID: 9640706, Description: Crypto Data More options for this dataset Peter Bowman Usability 10.0 · Updated 7 months ago 21 Files (CSV) · 2 GB · 285 downloads

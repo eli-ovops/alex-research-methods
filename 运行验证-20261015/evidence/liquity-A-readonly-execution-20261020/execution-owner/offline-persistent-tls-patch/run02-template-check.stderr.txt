@@ -1,0 +1,6 @@
+test_collector_close_changes_only_group_lifecycle (test_persistent_https.Persistent) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.013s
+
+OK

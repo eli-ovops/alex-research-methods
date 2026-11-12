@@ -1,0 +1,86 @@
+XTX 与 AI 量化研究  ·  独立审查 V1                                                                                                    2026-10-19
+
+ 附录 C. 公开一手来源
+
+
+ 以下均于 2026-10-19 定向核查。网页当前内容不能自动证明旧冻结版本的实现，也不能作为私人交易账、权重或收益认证。
+
+ W01 XTX Markets — Global eFX Trading Practices Disclosures
+
+ 本金交易对手、流动性、风险与执行收费；PDF 定向阅读。用途：业务机制与零售主动交易的区别。
+ https://www.xtxmarkets.com/assets/disclosures/global-efx-trading-practices-disclosures.pdf
+
+
+ W02 XTX / Bank of Canada — Use of Artificial Intelligence in Market Making
+
+ 深度学习、定价、数据与市场噪声的公开演示。用途：公开机制信息不等于可复制生产模型。
+ https://www.bankofcanada.ca/wp-content/uploads/2026/04/Use-of-Artificial-Intelligence-in-Market-Making-XTX-Markets-0203
+ 26.pdf
+
+
+ W03 Kronos: A Foundation Model for the Language of Financial Markets
+
+ 预测 IC/RankIC 与投资实验方法，尤其日频路径、换手和持有期。用途：原论文任务与本包 MSE/经济重放的差异。
+ https://arxiv.org/html/2508.02739v1
+
+
+ W04 shiyu-coder/Kronos — Official GitHub README
+ OHLC required；volume/amount optional and zero-filled。用途：OHLC-only 不足以单独断定实现无效；这是当前 README。
+
+ https://github.com/shiyu-coder/Kronos
+
+
+ W05 Albers 等 — Bitcoin market microstructure study, arXiv:2108.09750v1
+ 6.3 Market making 结果；作者报告的成交与 maker rebate。用途：做市的报价收益与返佣机制可分别核查，不是个人复刻认证。
+
+ https://arxiv.org/html/2108.09750v1
+
+
+ W06 Numerai Tournament — Staking
+
+ NMR 奖励/销毁、非基金持股、无押注评分。用途：预测奖励与基金所有权/底层交易收益分开。
+
+ https://docs.numer.ai/numerai-tournament/staking
+
+
+ W07 PyPortfolioOpt — expected_returns source documentation
+
+ returns_from_prices 与 mean_historical_return；仅辅助函数语义。用途：筛选价格日期后的默认相邻行收益转换是条件风险；未量
+ 化旧 HMM 结果误差。
+ https://pyportfolioopt.readthedocs.io/en/latest/_modules/pypfopt/expected_returns.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+静态审查 · 历史证据与现实复制分别判定                                                                                                                 16

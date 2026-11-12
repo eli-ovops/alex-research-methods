@@ -1,0 +1,23 @@
+L2131: 
+L2132: Welcome to the Ethereum API Quickstart and Reference Guide. This guide provides everything you need to start building on Ethereum using dRPC’s JSON-RPC API. Whether you're retrieving account balances, fetching block details, executing transactions, or estimating gas fees, this comprehensive guide will help you integrate Ethereum seamlessly into your applications.
+L2133: 
+L2134: This page includes:
+L2135:   * A Quickstart Guide to help you set up and make your first Ethereum API request.
+L2136:   * A detailed list of all Ethereum API methods, categorized for easy reference.
+L2137: 
+L2138: cite1684†Scroll to API Methods L2139: ## Ethereum API Quickstartcite1668†# L2140: 
+L2141: To get started with building on Ethereum using dRPC's Ethereum RPC API, follow these steps:
+L2142: 
+L2143: 1. Create a dRPC Account or Use Public Ethereum RPC endpoints
+L2144: 
+L2145: By signing up for a free dRPC account, you can access their Premium Ethereum RPC endpoints.
+L2146: 
+L2147: Public endpoints:
+L2148: 
+L2149: HTTPS
+L2150: 
+L2151:     `https://eth.drpc.org/`
+L2152: 
+L2153: WSS:
+L2154: 
+L2155:     `wss://eth.drpc.org`

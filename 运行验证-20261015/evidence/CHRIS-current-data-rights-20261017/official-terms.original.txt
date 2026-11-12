@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+  <!DOCTYPE html>
+<html lang="en" class="nef-light">
+  <head profile="http://a9.com/-/spec/opensearch/1.1/">
+    <meta charset="utf-8" />
+    <meta name="msvalidate.01" content="82C779DE57BA1BC37AEF2B7FC6D31D04"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="search" type="application/opensearchdescription+xml" title="Nasdaq Data Link" href="opensearch.xml"/>
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <link rel="image_src" type="image/jpeg" href="ndl-og.jpg">
+    <link rel="icon" href="favicon.ico">
+
+    <meta property="og:title" content="Nasdaq Data Link">
+    <meta property="og:url" content="https://data.nasdaq.com">
+    <meta property="og:description" content="The source for financial, economic, and alternative datasets, serving investment professionals.">
+    <meta property="og:image" content="ndl-og.jpg">
+    <meta property="og:type" content="website">
+
+    <meta name="msvalidate.01" content="9AA8D9E90DBCA4138E42EF9D32B42C01"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="The source for financial, economic, and alternative datasets, serving investment professionals."
+    />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <script>window.prerenderReady = false</script>
+    
+    <!-- Consent helper to check privacy_setting cookie -->
+    <script>
+      window.getConsentFromCookie = function() {
+        var cookies = decodeURIComponent(document.cookie).split(";");
+        var privacyCookie = cookies.find(function(c) { return c.trim().startsWith("privacy_setting="); });
+        
+        if (!privacyCookie) {
+          return { performance: false, functionality: false, accepted: false };
+        }
+        
+        try {
+          var cookieValue = privacyCookie.split("=").slice(1).join("");
+          var parsed = JSON.parse(cookieValue);
+          return {
+            performance: parsed.performance === true,
+            functionality: parsed.functionality === true,
+            accepted: parsed.accepted === true
+          };
+        } catch (e) {
+          return { performance: false, functionality: false, accepted: false };
+        }
+      };
+    </script>
+    
+    <!-- BEGIN Pendo (pendo.io) Integration - script is not loaded until consent is given -->
+    <script>
+      (function() {
+        var PENDO_PUBLIC_APP_ID = '484e782c-6573-46e7-54b3-cd315ae4e741';
+        var PENDO_ENABLED = 'true' === 'true';
+
+        // Config options such as excludeNonGuideAnalytics can only be set via initialize(),
+        // so consent changes require pendo.teardown() followed by another loadPendo() call.
+        window.loadPendo = function(options) {
+          if (!PENDO_ENABLED) {
+            return;
+          }
+
+          if (!window.pendo) {
+            (function(apiKey){
+                (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+                v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+                    o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+                    y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+                    z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+            })(PENDO_PUBLIC_APP_ID);
+          }
+
+          window.pendo.initialize(options);
+        };
+
+        var consent = window.getConsentFromCookie();
+        if (consent.accepted) {
+          window.loadPendo({
+            excludeNonGuideAnalytics: !(consent.performance || consent.functionality),
+            visitor: { email: null }
+          });
+        }
+      })();
+    </script>
+    <!-- END Pendo (pendo.io) integration -->
+    
+    <title>Financial, Economic and Alternative Data | Nasdaq Data Link</title>
+      <!-- Google tag manager only works for public site, for production only -->
+      <!-- Google tag manager data layer init - always initialize, GTM script checks consent -->
+      <script>dataLayer = [{}];</script>
+      <!-- Google Tag Manager - Gated by Performance Consent -->
+      <script>
+        var gtmConsent = window.getConsentFromCookie();
+        if ('true' === 'true' && gtmConsent.accepted && gtmConsent.performance) {
+          (function(w,d,s,l,i){
+            w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-TWCGRPQ');
+        }
+      </script>
+      <!-- End Google Tag Manager -->
+      <!-- Bizible marketing attribution - gated by Performance and Analytics consent -->
+      <script>
+        var bizibleConsent = window.getConsentFromCookie();
+        if (bizibleConsent.accepted && bizibleConsent.performance) {
+          var bizibleScript = document.createElement("script");
+          bizibleScript.type = "text/javascript";
+          bizibleScript.async = true;
+          bizibleScript.src = "//cdn.bizible.com/scripts/bizible.js";
+          document.head.appendChild(bizibleScript);
+        }
+      </script>
+
+    <script type="module" crossorigin src="https://next-pro.cdn.data.nasdaq.com/assets/index-B01J3yUv.js"></script>
+    <link rel="stylesheet" crossorigin href="https://next-pro.cdn.data.nasdaq.com/assets/index-CCtIShU2.css">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+
+

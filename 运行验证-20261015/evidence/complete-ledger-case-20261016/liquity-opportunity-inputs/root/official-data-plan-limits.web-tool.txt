@@ -1,0 +1,180 @@
+Why do I see a Free tier error when calling eth_getLogs with a large block range? | Alchemy Knowledge Base (https://support.alchemy.com/articles/1883074130-why-do-i-see-a-free-tier-error-when-calling-eth-getlogs-with-a-large-block-range)
+citeturn488view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn487view2","lineno":null}); Total lines: 22
+L0: # Why do I see a Free tier error when calling eth_getLogs with a large block range?
+L1: 
+L2: Last updated 1 month ago
+L3: 
+L4: The `eth_getLogs` method applies a block range limit that depends on your plan tier. On the Free tier, this limit is small, so a request with a wider block range fails with an error referencing the Free tier restriction.
+L5: Upgrading to the Pay As You Go (PAYG) plan raises this limit substantially for most major chains, but it does not remove the limit entirely. On PAYG, a request to `eth_getLogs` on most major chains succeeds if it either stays within a 10,000 block range with no cap on response size, or spans any wider block range as long as the response contains 10,000 logs or fewer (and stays under the general 150MB response size cap). A request that satisfies neither condition is rejected, even on PAYG.
+L6: The Enterprise plan can raise the block range limit further on some chains, though the exact limit still varies by chain. Contact [REDACTED_EMAIL] if you need the current limit for a specific chain on your plan.
+L7: ## How to upgrade
+L8: 
+L9:   1. Go to cite0†Billing Settings†dashboard.alchemy.com in the Alchemy Dashboard.
+L10: 
+L11:   2. Select the Pay As You Go plan. PAYG has no upfront commitment, and you're billed based on compute unit usage. See cite1†Alchemy Pricing†www.alchemy.com for current rates.
+L12: 
+L13:   3. Once the upgrade takes effect, your `eth_getLogs` requests follow the PAYG block range and response size limits described above instead of the smaller Free tier restriction.
+L14: For billing or invoice questions, contact [REDACTED_EMAIL].
+L15: ## Related docs
+L16: 
+L17:   * cite2†eth_getLogs†www.alchemy.com L18: 
+L19:   * cite3†Understanding Logs: Deep Dive into eth_getLogs†www.alchemy.com L20: 
+L21: cite4†Powered by Pylon†usepylon.com --------------------------------------------------------------------------------
+Pricing Plans | Alchemy Docs (https://www.alchemy.com/docs/reference/pricing-plans)
+citeturn488view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn487view1","lineno":125}); Total lines: 171
+L0: > For the complete documentation index, see cite0†llms.txt .
+L1: 
+L2: cite1†Skip to content L3: 
+L4: Search or Ask AI
+L5: 
+L6:   * cite2†Chains L7:   * cite3†Data L8:   * cite4†Wallets L9:   * cite5†Build with AI L10:   * cite6†Tools & Resources L11: cite7†Changelog L12: 
+L13:   * cite2†Chains L14:   * cite3†Data L15:   * cite4†Wallets L16:   * cite5†Build with AI L17:   * cite6†Tools & Resources L18:   * cite7†Changelog L19: 
+L20: ### Pricing
+L21: 
+L22: cite6†Pricing Plans cite8†Compute Units cite9†Compute Unit Costs L23: 
+L24: Pricing FAQ
+L25: 
+L26: Resources
+L27: ### Tools
+L28: 
+L29: cite10†Tools Quickstart L30: 
+L31: Admin API
+L32: 
+L33: cite11†Sandbox cite12†Testnet Faucets cite13†Alerts cite14†Request Logs cite15†Roles cite16†Single Sign-On (SSO) L34: 
+L35: Activity Log
+L36: 
+L37: ### Tutorials
+L38: 
+L39: cite17†Alchemy Quickstart Guides L40: 
+L41: Transactions
+L42: 
+L43: Streaming Data
+L44: 
+L45: API Security and Authentication
+L46: 
+L47: cite18†Developer Best Practices L48: 
+L49: Understanding the EVM
+L50: 
+L51: Snapshots Service
+L52: 
+L53: ### New to Web3
+L54: 
+L55: Alchemy University
+L56: 
+L57: Developer Basics
+L58: 
+L59: cite19†Go to Dashboard†dashboard.alchemy.com L60: ### Pricing
+L61: 
+L62: cite6†Pricing Plans cite8†Compute Units cite9†Compute Unit Costs L63: 
+L64: Pricing FAQ
+L65: 
+L66: Resources
+L67: 
+L68: ### Tools
+L69: 
+L70: cite10†Tools Quickstart L71: 
+L72: Admin API
+L73: 
+L74: cite11†Sandbox cite12†Testnet Faucets cite13†Alerts cite14†Request Logs cite15†Roles cite16†Single Sign-On (SSO) L75: 
+L76: Activity Log
+L77: 
+L78: ### Tutorials
+L79: 
+L80: cite17†Alchemy Quickstart Guides L81: 
+L82: Transactions
+L83: 
+L84: Streaming Data
+L85: 
+L86: API Security and Authentication
+L87: 
+L88: cite18†Developer Best Practices L89: 
+L90: Understanding the EVM
+L91: 
+L92: Snapshots Service
+L93: 
+L94: ### New to Web3
+L95: 
+L96: Alchemy University
+L97: 
+L98: Developer Basics
+L99: 
+L100:   1. Pricing
+L101: # Pricing Plans
+L102: 
+L103: A guide to understand Alchemy's pricing plans.
+L104: 
+L105: # Plans overview
+L106: ## Feature comparison
+L107: Feature  | Free Tier  | PAYG  | Enterprise Tier
+L108: --- | --- | --- | ---
+L109: Base Compute Units  | 30,000,000  | -  | Custom
+L110: Compute Unit rate  | -  | $0.525/M CU  | Custom
+L111: Base Throughput (CUs/second)  | 300  | 10,000  | Custom
+L112: # of apps  | 5  | 30  | Unlimited
+L113: webhooks  | 5  | 100  | 500
+L114: Full Archive Data  | ✓  | ✓  | ✓
+L115: Node API  | ✓  | ✓  | ✓
+L116: Debug API  | ✗  | ✓  | ✓
+L117: Trace API  | ✗  | ✓  | ✓
+L118: NFT API  | ✓  | ✓  | ✓
+L119: Transfers API  | ✓  | ✓  | ✓
+L120: Token API  | ✓  | ✓  | ✓
+L121: Gas-optimized Transactions  | ✗  | ✓  | ✓
+L122: Smart WebSockets  | ✓  | ✓  | ✓
+L123: JavaScript SDK  | ✓  | ✓  | ✓
+L124: Analytics & Reporting  | ✓  | ✓  | ✓
+L125: Email Support  | ✓  | ✓  | ✓
+L126: Devoted Support Channels  | ✗  | ✗  | ✓
+L127: Access to Engineering & PM Teams  | ✗  | ✗  | ✓
+L128: Custom SLAs  | ✗  | ✗  | ✓
+L129: Priority on Product Roadmaps  | ✗  | ✗  | ✓
+L130: High Volume Discounts  | ✗  | ✗  | ✓
+L131: ## Account Abstraction (AA) Pricing
+L132: 
+L133: Feature  | Free Tier  | PAYG  | Enterprise Tier
+L134: --- | --- | --- | ---
+L135: Gas Manager  | Free on testnets  | 8% admin fee  | Custom admin fee
+L136: Gas Sponsorship Base Limit  | -  | $0/mo (Contact us for Custom limits)  | Custom
+L137: Account Kit SDK  | ✓  | ✓  | ✓
+L138: Bundler API  | ✓  | ✓  | ✓
+L139: Gas Manager Coverage API  | ✓  | ✓  | ✓
+L140: Gas Manager Admin API  | ✗  | ✓  | ✓
+L141: ## Throughput (CUPS)
+L142: 
+L143: Each application has reserved dedicated throughput, measured in Compute Units per Second (CUPS). Your app can exceed these limits based on elastic demand in our system.
+L144: 
+L145: Tier  | Base CUPS
+L146: --- | ---
+L147: Free  | 300
+L148: PAYG  | 10,000
+L149: Enterprise  | Custom
+L150: 
+L151: Note: Even if your application limit is lower, the system may allow higher throughput based on available capacity. For a more robust experience, we recommend implementing retries when experiencing throughput errors.
+L152: 
+L153: Was this page helpful?
+L154: Yes No
+L155: 
+L156: cite8†Compute Units The explanation for what Compute Units are and how we use them. L157: 
+L158: AI tools
+L159: 
+L160:   * Copy as Markdown
+L161:   * cite20†View as Markdown(opens in new tab) L162:   * cite21†Ask Claude(opens in new tab)†claude.ai L163:   * cite22†Ask ChatGPT(opens in new tab)†chat.openai.com L164: 
+L165: On this page
+L166: 
+L167:   * cite23†Plans overview L168:   * cite24†Feature comparison L169:   * cite25†Account Abstraction (AA) Pricing L170:   * cite26†Throughput (CUPS) --------------------------------------------------------------------------------
+What is included in the Free Tier? | Alchemy Knowledge Base (https://support.alchemy.com/articles/5827006872-what-is-included-in-the-free-tier)
+citeturn488view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://support.alchemy.com/articles/5827006872-what-is-included-in-the-free-tier","lineno":null}); Total lines: 14
+L0: # What is included in the Free Tier?
+L1: 
+L2: Last updated 7 days ago
+L3: 
+L4: Free Tier Compute Units (CUs) and Compute Units Per Second (CUPs)
+L5: 
+L6: Here's what you can expect from the free tier:
+L7: 
+L8:   * Monthly Compute Units Limit: Each free tier account is allocated up to 30 million Compute Units (CUs) every month. This account-wide limit ensures you have ample capacity to run your applications and explore different products that we offer!
+L9:   * Compute Units Per Second (CUPs) Limit: On an application-wide basis, you can use up to 300 Compute Units Per Second (CUPs). This rate limit allows your applications to perform operations efficiently within that limit.
+L10: ## Understanding Compute Unit Costs
+L11: 
+L12: Every method or operation within Alchemy's services consumes a certain amount of CUs and CUPs. Knowing these costs is crucial for managing your usage and staying within the free tier limits. Detailed information on the compute unit cost for each method call is readily available, helping you plan and optimize your blockchain interactions! For a comprehensive breakdown of CU and CUP costs by method, please visit: cite0†Compute Unit Costs†www.alchemy.com .
+L13: cite1†Powered by Pylon†usepylon.com 

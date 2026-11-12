@@ -1,0 +1,11 @@
+test_real_HTTPResponse_close_length_complete_then_new_method (test_compatibility.Persistent.test_real_HTTPResponse_close_length_complete_then_new_method) ... ok
+test_real_HTTPResponse_truncated_length_never_success (test_compatibility.Persistent.test_real_HTTPResponse_truncated_length_never_success) ... ok
+test_normal_server_close_new_method_new_connection_not_replay (test_compatibility.Persistent.test_normal_server_close_new_method_new_connection_not_replay) ... ok
+test_detached_response_socket_retains_per_read_timeout (test_compatibility.Persistent.test_detached_response_socket_retains_per_read_timeout) ... ok
+test_completed_response_still_checks_elapsed_deadline (test_compatibility.Persistent.test_completed_response_still_checks_elapsed_deadline) ... ok
+test_runtime_and_guards (__main__.Metadata.test_runtime_and_guards) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.041s
+
+OK

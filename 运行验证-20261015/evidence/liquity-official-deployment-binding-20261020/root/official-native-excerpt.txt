@@ -1,0 +1,32 @@
+Source URL: https://docs.liquity.org/v2-documentation/technical-docs-and-audits
+Read date: 2026-10-20
+Acquisition: native web tool parsed content, already returned before separate .md raw GET refusal; this is not a raw HTTP body or a status-200 receipt.
+Exact native fetch UTC: UNKNOWN; date known from current session.
+Native tool reference: turn1284view0
+Coverage: only parsed original lines 57-80 selected, not full page review or current chain-state verification.
+
+L57: #### Shared contracts
+L58: | Contract           | Address                                                                                                               |
+L59: | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+L60: | collateralRegistry | [0xf949982b91c8c61e952b3ba942cbbfaef5386684](https://etherscan.io/address/0xf949982b91c8c61e952b3ba942cbbfaef5386684) |
+L61: | boldToken          | [0x6440f144b7e50d6a8439336510312d2f54beb01d](https://etherscan.io/address/0x6440f144b7e50d6a8439336510312d2f54beb01d) |
+L62: | hintHelpers        | [0xf0cae19c96e572234398d6665cc1147a16cbe657](https://etherscan.io/address/0xf0cae19c96e572234398d6665cc1147a16cbe657) |
+L63: | multiTroveGetter   | [0xfa61db085510c64b83056db3a7acf3b6f631d235](https://etherscan.io/address/0xfa61db085510c64b83056db3a7acf3b6f631d235) |
+L64: | exchangeHelpers    | [0x2f60bab0072abec7058017f48d7256ec288c8686](https://etherscan.io/address/0x2f60bab0072abec7058017f48d7256ec288c8686) |
+L65: #### ETH branch
+L66: | Contract           | Address                                                                                                               |
+L67: | ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+L68: | collToken          | [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) |
+L69: | addressesRegistry  | [0x20f7c9ad66983f6523a0881d0f82406541417526](https://etherscan.io/address/0x20f7c9ad66983f6523a0881d0f82406541417526) |
+L70: | activePool         | [0xeb5a8c825582965f1d84606e078620a84ab16afe](https://etherscan.io/address/0xeb5a8c825582965f1d84606e078620a84ab16afe) |
+L71: | borrowerOperations | [0x372abd1810eaf23cb9d941bbe7596dfb2c46bc65](https://etherscan.io/address/0x372abd1810eaf23cb9d941bbe7596dfb2c46bc65) |
+L72: | collSurplusPool    | [0xedbe2509e502c0320d2e7f8b6746a49b4b50e2bf](https://etherscan.io/address/0xedbe2509e502c0320d2e7f8b6746a49b4b50e2bf) |
+L73: | defaultPool        | [0xd4558240d50c2e219a21c9d25afd513bb6e5b1a0](https://etherscan.io/address/0xd4558240d50c2e219a21c9d25afd513bb6e5b1a0) |
+L74: | sortedTroves       | [0xa25269e41bd072513849f2e64ad221e84f3063f4](https://etherscan.io/address/0xa25269e41bd072513849f2e64ad221e84f3063f4) |
+L75: | stabilityPool      | [0x5721cbbd64fc7ae3ef44a0a3f9a790a9264cf9bf](https://etherscan.io/address/0x5721cbbd64fc7ae3ef44a0a3f9a790a9264cf9bf) |
+L76: | troveManager       | [0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a](https://etherscan.io/address/0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a) |
+L77: | troveNFT           | [0x1a0fc0b843afd9140267d25d4e575cb37a838013](https://etherscan.io/address/0x1a0fc0b843afd9140267d25d4e575cb37a838013) |
+L78: | metadataNFT        | [0x9b36c3b16299d68c79f174df7e728e35b6af4a12](https://etherscan.io/address/0x9b36c3b16299d68c79f174df7e728e35b6af4a12) |
+L79: | priceFeed          | [0xcc5f8102eb670c89a4a3c567c[REDACTED_PHONE]c24f](https://etherscan.io/address/0xcc5f8102eb670c89a4a3c567c[REDACTED_PHONE]c24f) |
+L80: | gasPool            | [0x7b9ab3de4036cae51f1fa4ec0a2c2fd606bcf921](https://etherscan.io/address/0x7b9ab3de4036cae51f1fa4ec0a2c2fd606bcf921) |
+

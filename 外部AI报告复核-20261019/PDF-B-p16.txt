@@ -1,0 +1,83 @@
+        XTX / AI 量化研究 · 独立审查                                                                                         2026-10-19 · v1.0
+
+附录B｜公开一手来源
+
+访问日期：2026-10-19。以下明确本轮实际阅读范围；当前网页不能替代原实验时点的版本绑定。链接是来源导航
+，原网页或第三方全文不随本报告再分发。
+
+W01｜XTX官网
+本轮实际读取第14-16行等正文；当前官网公司自述，非私人利润审计。
+
+https://www.xtxmarkets.com/
+
+W02｜XTX eFX Trading Practices
+本轮读取公开5页PDF文本；自营身份、风险管理、价差与算法执行费。没有再分发PDF。
+
+https://www.xtxmarkets.com/assets/disclosures/global-efx-trading-practices-disclosures.pdf
+
+W03｜XTX在加拿大央行托管的AI演示
+本轮读取9页文本，重点第6页弱信号/非平稳/拟合噪声。属于公司演示，不复制受限原件。
+
+https://www.bankofcanada.ca/wp-content/uploads/2026/04/Use-of-Artificial-Intelligence-in-Market-Making-XTX-Markets-020326.pdf
+
+W04｜Kronos官方仓库
+本轮读取当前master页面；OHLC为必需，量额可选，页面标MIT。当前页面不是原试验vendor逐文件复核；原模型身份沿包内记录。
+
+https://github.com/shiyu-coder/Kronos
+
+W05a｜Gould/Bonart: Queue Imbalance as a One-Tick-Ahead Price Predictor
+v1，2015-12-11；只读摘要，第16-19行。10只Nasdaq股票的下一次mid变动分类，不是个人全费用交易结果。
+
+https://arxiv.org/abs/1512.03492
+
+W05b｜Cont/Kukanov/Stoikov: The Price Impact of Order Book Events
+v3，2011-04-13；只读摘要，第16-17行。订单事件流和价格冲击，未认证前瞻可交易信号。
+
+https://arxiv.org/abs/1011.6402
+
+W06｜Bailey等: The Probability of Backtest Overfitting
+作者网站，2015年2月修订版；只读摘要/引言节选。支持多次策略选择与回测过拟合的一般问题，未为本项目计算PBO。
+
+https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf
+
+W07｜FreqAI官方文档
+本轮读取current stable文档，重点第100-139行；示例非生产。没有固定本轮安装commit或依赖版本，也没有执行文档命令。
+
+https://www.freqtrade.io/en/stable/freqai/
+
+W08｜Kaggle既有数据集入口
+本轮打开返回无可读正文；无法据此重新验证版本、Volume单位或许可。采用E24作为既有记录，保留未核边界。
+
+https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+证据审查完成 ≠ 盈利或财富目标认证                                                                                                                  16

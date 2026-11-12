@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Arbitrage in Prediction Markets Strategies, Impact and Open Questions - Research - The Flashbots Collective</title>
+    <meta name="description" content="Authors: @saguillo2000, Lucianna Kiffer, Vahid Ghafouri, Guillermo Suarez 
+Arxiv Link: [2508.03474] Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets 
+TL;DR
+Polymarket’s binary-condition design enable…">
+    <meta name="generator" content="Discourse 2026.10.0-latest - https://github.com/discourse/discourse version 4abc00f560c86c222747b1cd40148755d9852f8a">
+<link rel="icon" type="image/png" href="https://collective.flashbots.net/uploads/default/optimized/1X/7a99a7f355a2ab01e7eec8bb90f6cc59be63573a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://collective.flashbots.net/uploads/default/optimized/1X/7a99a7f355a2ab01e7eec8bb90f6cc59be63573a_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f8">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#202123">
+
+<meta name="color-scheme" content="light dark">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://collective.flashbots.net/t/arbitrage-in-prediction-markets-strategies-impact-and-open-questions/5198" />
+
+<meta name="discourse-track-view-session-id" content="bsTA1mFYmCrfb6lZeZt7nuxS8oxd4kJL">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://collective.flashbots.net/opensearch.xml" title="The Flashbots Collective Search">
+
+    
+    <link href="/stylesheets/color_definitions_latex-light_13_13_e34f1a8dd740e5d63efc18c771f7224c6b1a9989.css?__ws=collective.flashbots.net" media="(prefers-color-scheme: light)" rel="stylesheet" class="light-scheme" data-scheme-id="13"/><link href="/stylesheets/color_definitions_latex-dark_12_13_5b1866355683ecd8b7d6b4094986589ce3c2ce64.css?__ws=collective.flashbots.net" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme" data-scheme-id="12"/>
+
+<link href="/stylesheets/common_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common"  />
+
+
+
+  <link href="/stylesheets/checklist_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="/stylesheets/discourse-details_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="/stylesheets/discourse-graphviz_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-graphviz"  />
+  <link href="/stylesheets/discourse-lazy-videos_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="/stylesheets/discourse-local-dates_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="/stylesheets/discourse-math_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-math"  />
+  <link href="/stylesheets/discourse-narrative-bot_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="/stylesheets/discourse-presence_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="/stylesheets/discourse-reactions_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="/stylesheets/discourse-solved_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="/stylesheets/discourse-templates_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-templates"  />
+  <link href="/stylesheets/discourse-topic-voting_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+  <link href="/stylesheets/discourse-workflows_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="discourse-workflows"  />
+  <link href="/stylesheets/docker_manager_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="/stylesheets/footnote_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="/stylesheets/poll_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="/stylesheets/spoiler-alert_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="/stylesheets/discourse-reactions_mobile_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="(width < 40rem)" rel="stylesheet" data-target="discourse-reactions_mobile"  />
+  <link href="/stylesheets/discourse-reactions_desktop_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="/stylesheets/poll_desktop_5f1e4a94d6e63ce921b844d9b8c440b7d5e34ba8.css?__ws=collective.flashbots.net" media="(width >= 40rem)" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_9170b8f64d3f3efcd1680edfeb343a88c07daaa1.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="custom header links"/>
+<link href="/stylesheets/common_theme_2_00295cd55b0b7606a10044c961eacf3c4139c598.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="2" data-theme-name="discotoc"/>
+<link href="/stylesheets/common_theme_9_8676dcb637b8385b490166434b1794b8169102eb.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="9" data-theme-name="discourse-homepage-feature-component"/>
+<link href="/stylesheets/common_theme_17_d6e8ff832f83cf0d240ed7bf6bb3495b125a2f40.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="17" data-theme-name="dropdown header"/>
+<link href="/stylesheets/common_theme_5_d403790fd12e7606db9a8a51996af1b863cbf376.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="5" data-theme-name="nav links component"/>
+<link href="/stylesheets/common_theme_7_f1e4789d8afadfeb07df33abce01c58ba7423ea9.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="7" data-theme-name="slick - gallery component"/>
+<link href="/stylesheets/common_theme_14_875ce09b0bdc653c3467bb484f59773d89353ecc.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="14" data-theme-name="tag banners"/>
+<link href="/stylesheets/common_theme_13_2acf292425ccb10ff2f6f55872a0251faf8c2d45.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="13" data-theme-name="latex theme"/>
+<link href="/stylesheets/common_theme_24_c3a71437741263d4931f96f010248d31d394b7d7.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="24" data-theme-name="agentic mev day — embedded reader"/>
+<link href="/stylesheets/common_theme_23_892c192e36609a1f4a2eb18079a9aebc478e105b.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="23" data-theme-name="flashcam"/>
+<link href="/stylesheets/common_theme_21_0be14198b16226e6ed8c7464fb11447f192605ae.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="21" data-theme-name="the-mev-letter-explorer"/>
+<link href="/stylesheets/common_theme_22_190a62044cae3c95d38aace31089b15d130b7b5b.css?__ws=collective.flashbots.net" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="22" data-theme-name="tml100"/>
+  <link href="/stylesheets/mobile_theme_17_324d61bb0ee24c675b80702971ad229294241a50.css?__ws=collective.flashbots.net" media="(width < 40rem)" rel="stylesheet" data-target="mobile_theme" data-theme-id="17" data-theme-name="dropdown header"/>
+<link href="/stylesheets/mobile_theme_13_0737180bc08c21be095c124b78da093b461c085b.css?__ws=collective.flashbots.net" media="(width < 40rem)" rel="stylesheet" data-target="mobile_theme" data-theme-id="13" data-theme-name="latex theme"/>
+  <link href="/stylesheets/desktop_theme_17_2f65c3a76960a6f4061dbf6835808d8211347a40.css?__ws=collective.flashbots.net" media="(width >= 40rem)" rel="stylesheet" data-target="desktop_theme" data-theme-id="17" data-theme-name="dropdown header"/>
+<link href="/stylesheets/desktop_theme_13_b6ea18f6c41aee63ecb3551210b7264ed9ce4611.css?__ws=collective.flashbots.net" media="(width >= 40rem)" rel="stylesheet" data-target="desktop_theme" data-theme-id="13" data-theme-name="latex theme"/>
+
+    <script type="text/discourse-plugin" version="0.8.7" nonce="cakirMvvpEWZUHUBY3WevP49q">
+  api.onPageChange(() => {
+    const path = window.location.pathname;
+    const isTarget = path.startsWith("/t/explorer/100");
+
+    document.body.classList.toggle("mev-letter-explorer", isTarget);
+
+    const titleText = "The MEV Letter Explorer";
+
+    // Set a custom title when on the Explorer topic
+    if (isTarget) {
+      document.title = titleText;
+    }
+
+    // Clean up custom nav title
+    const existing = document.getElementById("mev-explorer-title");
+    if (!isTarget && existing) {
+      existing.remove();
+    }
+
+    if (isTarget && !existing) {
+      const span = document.createElement("span");
+      span.id = "mev-explorer-title";
+      span.textContent = "The MEV Letter Explorer";
+      document.body.appendChild(span);
+    }
+  });
+</script>
+
+<script type="text/discourse-plugin" version="0.8.7" nonce="cakirMvvpEWZUHUBY3WevP49q">
+  api.onPageChange(() => {
+    const path = window.location.pathname;
+    const isTarget = path.startsWith("/t/flashcam/5393");
+
+    document.body.classList.toggle("flashcam-explorer", isTarget);
+
+    const titleText = "Flashcam";
+
+    // Set a custom title when on the Flashcam topic
+    if (isTarget) {
+      document.title = titleText;
+    }
+
+    // Clean up custom nav title
+    const existing = document.getElementById("flashcam-explorer-title");
+    if (!isTarget && existing) {
+      existing.remove();
+    }
+
+    if (isTarget && !existing) {
+      const span = document.createElement("span");
+      span.id = "flashcam-explorer-title";
+      span.textContent = "Flashcam";
+      document.body.appendChild(span);
+    }
+  });
+</script>
+<script type="text/discourse-plugin" version="0.8.7" nonce="cakirMvvpEWZUHUBY3WevP49q">
+const TOPIC_ID=6004;
+const SITE='https://agentic-mev-day.vercel.app';
+const CHANNEL='agentic-mev-live-v1';
+let shell=null, frame=null, resizeObserver=null, listener=null, authFrame=null;
+const topic=()=>api.container.lookup('controller:topic')?.model;
+const isTarget=()=>/^\/t\/(?:[^/]+\/)?6004(?:\/|$)/.test(location.pathname) && Number(topic()?.id)===TOPIC_ID;
+const canEdit=()=>Boolean(api.getCurrentUser()?.groups?.some(group=>['mates','friends'].includes(group.name)));
+function cleanup(){
+  document.body.classList.remove('am6004-reader-active');
+  if(listener)window.removeEventListener('message',listener);
+  resizeObserver?.disconnect();shell?.remove();authFrame?.remove();
+  shell=null;frame=null;listener=null;resizeObserver=null;authFrame=null;
+}
+function mount(){
+  if(!isTarget()||shell)return;
+  shell=document.createElement('section');shell.className='am6004-shell';shell.setAttribute('aria-label','Agentic MEV Day website');
+  frame=document.createElement('iframe');frame.className='am6004-frame';frame.title='Agentic MEV Day — talks, articles and live text editing';
+  frame.src=SITE+'/?embed=discourse&topic=6004';
+  frame.setAttribute('sandbox','allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-presentation');
+  frame.setAttribute('allow','fullscreen; encrypted-media; picture-in-picture');frame.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+  shell.append(frame);document.body.append(shell);
+  const header=document.querySelector('.d-header');
+  const resize=()=>{if(shell)shell.style.top=Math.max(0,header?.getBoundingClientRect().bottom||60)+'px';};
+  if(header){resizeObserver=new ResizeObserver(resize);resizeObserver.observe(header);}resize();
+  listener=event=>{
+    if(!isTarget()||event.origin!==SITE)return;
+    if(authFrame&&event.source===authFrame.contentWindow&&event.data?.channel==='agentic-mev-live-auth'&&typeof event.data.token==='string'){
+      if(canEdit())frame.contentWindow.postMessage({channel:CHANNEL,topicId:TOPIC_ID,type:'authorized',token:event.data.token},SITE);
+      authFrame.remove();authFrame=null;return;
+    }
+    if(event.source!==frame?.contentWindow||event.data?.channel!==CHANNEL||event.data.topicId!==TOPIC_ID)return;
+    if(event.data.type==='ready'){
+      frame.contentWindow.postMessage({channel:CHANNEL,topicId:TOPIC_ID,type:'context',canEdit:canEdit()},SITE);
+    }
+    if(event.data.type==='authenticate'&&canEdit()&&typeof event.data.url==='string'&&event.data.url.length<12000){
+      let url;try{url=new URL(event.data.url);}catch{return;}
+      if(url.origin!==location.origin||url.pathname!=='/session/sso_provider'||!url.searchParams.has('sso')||!url.searchParams.has('sig'))return;
+      // A same-origin child of the forum uses the existing forum session.
+      // Its signed response is delivered only to this parent and this reader.
+      authFrame?.remove();authFrame=document.createElement('iframe');authFrame.hidden=true;authFrame.title='';authFrame.setAttribute('aria-hidden','true');authFrame.src=url.href;
+      document.body.append(authFrame);
+    }
+  };
+  window.addEventListener('message',listener);
+  document.body.classList.add('am6004-reader-active');
+}
+api.onPageChange(()=>{if(isTarget())mount();else cleanup();});
+api.decorateCookedElement(()=>{if(isTarget())mount();},{id:'agentic-mev-6004-embed',onlyStream:true});
+</script>
+
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Arbitrage in Prediction Markets Strategies, Impact and Open Questions&#39;" href="https://collective.flashbots.net/t/arbitrage-in-prediction-markets-strategies-impact-and-open-questions/5198.rss" />
+    <meta property="og:site_name" content="The Flashbots Collective" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://collective.flashbots.net/uploads/default/optimized/2X/c/c038e782facbfdd2875c77623ad6b5fcd6f6417b_2_1023x370.png" />
+<meta property="og:image" content="https://collective.flashbots.net/uploads/default/optimized/2X/c/c038e782facbfdd2875c77623ad6b5fcd6f6417b_2_1023x370.png" />
+<meta property="og:image:width" content="3533" />
+<meta property="og:image:height" content="1278" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:url" content="https://collective.flashbots.net/t/arbitrage-in-prediction-markets-strategies-impact-and-open-questions/5198" />
+<meta name="twitter:url" content="https://collective.flashbots.net/t/arbitrage-in-prediction-markets-strategies-impact-and-open-questions/5198" />
+<meta property="og:title" content="Arbitrage in Prediction Markets Strategies, Impact and Open Questions" />
+<meta name="twitter:title" content="Arbitrage in Prediction Markets Strategies, Impact and Open Questions" />
+<meta property="og:description" content="Authors: @saguillo2000, Lucianna Kiffer, Vahid Ghafouri, Guillermo Suarez  Arxiv Link: [2508.03474] Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets  TL;DR Polymarket’s binary-condition design enables three forms of arbitrage: two types of Rebalancing Arbitrage within a single market (of one or more conditions), and Combinatorial Arbitrage across markets.  We compute that the total amount extracted using these strategies is approximately $40 million over one year of data, fr..." />
+<meta name="twitter:description" content="Authors: @saguillo2000, Lucianna Kiffer, Vahid Ghafouri, Guillermo Suarez  Arxiv Link: [2508.03474] Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets  TL;DR Polymarket’s binary-condition design enables three forms of arbitrage: two types of Rebalancing Arbitrage within a single market (of one or more conditions), and Combinatorial Arbitrage across markets.  We compute that the total amount extracted using these strategies is approximately $40 million over one year of data, fr..." />
+<meta property="og:article:section" content="Research" />
+<meta property="og:article:section:color" content="A5D742" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="7 ❤" />
+<meta property="article:published_time" content="2025-08-21T21:01:28+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <link rel="alternate" type="text/markdown" href="https://collective.flashbots.net/t/arbitrage-in-prediction-markets-strategies-impact-and-open-questions/5198.md">
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">The Flashbots Collective</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/arbitrage-in-prediction-markets-strategies-impact-and-open-questions/5198">Arbitrage in Prediction Markets Strategies, Impact and Open Questions</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/research/20" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #A5D742'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Research</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="itemscope" itemtype="http://schema.org/DiscussionForumPosting">
+      <meta itemprop='headline' content='Arbitrage in Prediction Markets Strategies, Impact and Open Questions'>
+      <link itemprop='url' href='https://collective.flashbots.net/t/arbitrage-in-prediction-markets-strategies-impact-and-open-questions/5198'>
+      <meta itemprop='datePublished' content='2025-08-21T21:01:27Z'>
+      <meta itemprop='keywords' content=''>
+          <meta itemprop='articleSection' content='Research'>
+        <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+          <meta itemprop='name' content='Flashbots Ltd.'>
+            <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop='url' content='https://collective.flashbots.net/uploads/default/original/1X/7a99a7f355a2ab01e7eec8bb90f6cc59be63573a.png'>
+            </div>
+        </div>
+
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://collective.flashbots.net/u/saguillo2000'><span itemprop="name">saguillo2000</span></a>
+                  <meta itemprop='url' content='https://collective.flashbots.net/u/saguillo2000'>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://collective.flashbots.net/t/arbitrage-in-prediction-markets-strategies-impact-and-open-questions/5198">
+
+                <link itemprop="image" href="https://collective.flashbots.net/uploads/default/original/2X/c/c038e782facbfdd2875c77623ad6b5fcd6f6417b.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-08-21T21:01:28Z' class='post-time'>
+                    August 21, 2025,  9:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-21T21:01:28Z'>
+              <span itemprop="position">1</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Authors: <a class="mention" href="/u/saguillo2000">@saguillo2000</a>, Lucianna Kiffer, Vahid Ghafouri, Guillermo Suarez</p>
+<p>Arxiv Link: <a href="https://arxiv.org/abs/2508.03474" class="inline-onebox" rel="noopener nofollow ugc">[2508.03474] Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets</a></p>
+<h1><a name="p-10505-tldr-1" class="anchor" href="#p-10505-tldr-1" aria-label="Heading link"></a>TL;DR</h1>
+<p><strong>Polymarket’s</strong> binary-condition design enables three forms of arbitrage: two types of <strong>Rebalancing Arbitrage</strong> within a single market (of one or more conditions), and <strong>Combinatorial Arbitrage</strong> across markets.</p>
+<p>We compute that the total amount extracted using these strategies is approximately <strong>$40 million</strong> over one year of data, from <strong>April 1, 2024</strong>, to <strong>April 1, 2025</strong>.</p>
+<h1><a name="p-10505-background-2" class="anchor" href="#p-10505-background-2" aria-label="Heading link"></a>Background</h1>
+<p>Polymarket is a prediction market platform that allows users to speculate on the outcomes of future events by trading shares tied to specific outcomes. Polymarket is built on top of the Polygon blockchain, providing some decentralized properties to the platform (i.e., users own their positions and can settle on-chain, though bid matching remains centralized). Each <strong>condition</strong> poses a question about a future event, such as “Will team A defeat team B in the big game?”. Users can buy shares (or <em>tokens</em>) in “YES” (the condition will become true) or “NO” (the condition will not become true) outcomes, with share prices fluctuating based on market demand and reflecting the collective belief about the likelihood of each outcome.</p>
+<p>A <strong>market</strong> is thus a future event associated with one or more conditions. For example, consider the question, “Who will win the Team A vs. Team B match?”. In this case, the market would include three conditions:</p>
+<p>(1) Team A wins,</p>
+<p>(2) the match ends in a tie, or</p>
+<p>(3) Team B wins.</p>
+<p>Each condition is represented by a binary token indicating whether the condition is true or false. To ensure proper resolution, the set of conditions must be <strong>exhaustive</strong>, collectively covering all possible outcomes of the event, and <strong>independent</strong>, where only one condition can resolve to true.</p>
+<h1><a name="p-10505-types-of-arbitrage-3" class="anchor" href="#p-10505-types-of-arbitrage-3" aria-label="Heading link"></a>Types of Arbitrage</h1>
+<p>We define two types of arbitrage strategies:</p>
+<ol>
+<li>
+<p><strong>Market Rebalancing Arbitrage</strong>, which occurs within a single market.</p>
+</li>
+<li>
+<p><strong>Combinatorial Arbitrage</strong>, which occurs across multiple markets.</p>
+</li>
+</ol>
+<hr>
+<h3><a name="p-10505-h-1-market-rebalancing-arbitrage-4" class="anchor" href="#p-10505-h-1-market-rebalancing-arbitrage-4" aria-label="Heading link"></a>(1) Market Rebalancing Arbitrage</h3>
+<h2><a name="p-10505-single-condition-arbitrage-5" class="anchor" href="#p-10505-single-condition-arbitrage-5" aria-label="Heading link"></a>Single-Condition Arbitrage</h2>
+<p>With the current bidding system, the following scenario can occur:</p>
+<p>Suppose there is a market predicting whether Trump will be president in 2024. You can buy either <strong>YES</strong> tokens (he will) or <strong>NO</strong> tokens (he won’t).</p>
+<p>Since pricing of the two tokens is handled separately, it’s possible for <strong>YES</strong> to trade at 0.50 and <strong>NO</strong> at 0.47. By design, the sum of both prices should equal 1. In this case, there is an arbitrage opportunity: by buying both tokens at the given price and holding, once the market resolves, you would capture the difference — in this example, <strong>3%</strong>. This is an example of a <strong>long position</strong>.</p>
+<p>A similar situation arises if <strong>YES</strong> is valued at 0.50 and <strong>NO</strong> at 0.55. In that case, you can provide liquidity for both tokens, securing an extra <strong>5% yield</strong>. This is an example of a <strong>short position</strong>.</p>
+<p>Below we show how these opportunities look like over time with a market capturing whether Assad would remain president of Syria. We see that for the majority of the market duration, the <strong>YES</strong> position held at over .90, with the market flipping in early December with rebel forces seizing Damascus. The black <em>x</em>’s show when arbitrage opportunities existed in this market with a margin of more than $0.02 profit per Dollar (from a weighted average of prices from executed bids). Given historical bid data, we also find players who purchased (or sold) both tokens at a guaranteed profit. We see that these opportunities exist at times of uncertainty in the market, and that our estimates of profit generally <strong>undercount</strong> the potential arbitrage profit players are able to execute.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://collective.flashbots.net/uploads/default/original/2X/c/c038e782facbfdd2875c77623ad6b5fcd6f6417b.png" data-download-href="https://collective.flashbots.net/uploads/default/c038e782facbfdd2875c77623ad6b5fcd6f6417b" title=""><img src="https://collective.flashbots.net/uploads/default/optimized/2X/c/c038e782facbfdd2875c77623ad6b5fcd6f6417b_2_690x249.png" alt="" data-base62-sha1="rqtAF1uICGf6ov4i7GCetviiyoP" width="690" height="249" role="presentation" srcset="https://collective.flashbots.net/uploads/default/optimized/2X/c/c038e782facbfdd2875c77623ad6b5fcd6f6417b_2_690x249.png, https://collective.flashbots.net/uploads/default/optimized/2X/c/c038e782facbfdd2875c77623ad6b5fcd6f6417b_2_1035x373.png 1.5x, https://collective.flashbots.net/uploads/default/optimized/2X/c/c038e782facbfdd2875c77623ad6b5fcd6f6417b_2_1380x498.png 2x" data-dominant-color="F2F2F1"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">3533×1278 282 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<em>Market behavior visualization for the condition: “Will Assad remain President of Syria through 2024?”</em></p>
+<p>Over all single-condition markets during our measurement period, we calculate that the total profit extracted with the single condition strategy was:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Direction</th>
+<th>Total Profit (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single Condition</td>
+<td>Long</td>
+<td>$5,899,287.43</td>
+</tr>
+<tr>
+<td>Single Condition</td>
+<td>Short</td>
+<td>$4,682,074.77</td>
+</tr>
+</tbody>
+</table>
+</div><h2><a name="p-10505-multiple-condition-arbitrage-6" class="anchor" href="#p-10505-multiple-condition-arbitrage-6" aria-label="Heading link"></a>Multiple-Condition Arbitrage</h2>
+<p>Consider a market with three conditions: who will win the 2024 election — Trump, Biden, or another candidate. You can buy <strong>YES</strong> tokens for each outcome (YES-Trump, YES-Biden, YES-Other).</p>
+<p>By design, the total price of all YES tokens should add up to 1. But imagine this situation:</p>
+<ul>
+<li>
+<p>YES-Trump = 0.40</p>
+</li>
+<li>
+<p>YES-Biden = 0.35</p>
+</li>
+<li>
+<p>YES-Other = 0.20</p>
+</li>
+</ul>
+<p>Here, the sum is 0.95. Since it’s <strong>less than 1</strong>, there is a long opportunity: you can buy all three tokens for less than their combined guaranteed payout of 1, locking in a 5% gain.</p>
+<p>On the other hand, if the prices were:</p>
+<ul>
+<li>
+<p>YES-Trump = 0.45</p>
+</li>
+<li>
+<p>YES-Biden = 0.40</p>
+</li>
+<li>
+<p>YES-Other = 0.20</p>
+</li>
+</ul>
+<p>The sum would be 1.05. In this case, the short strategy applies: by selling exposure to all three tokens, you secure a 5% return.</p>
+<p>For <strong>NO tokens</strong>, the rule flips. In a 3-condition market, the sum of all NO token prices should equal <em>(N - 1) = 2</em>.</p>
+<ul>
+<li>
+<p>If the total is <strong>less than 2</strong>, you can go long on NO tokens.</p>
+</li>
+<li>
+<p>If it’s <strong>greater than 2</strong>, a short position will yield a profit.</p>
+</li>
+</ul>
+<p>The total profit extracted in our measurement period within markets with multiple conditions was:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Token Type</th>
+<th>Total Profit (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Long</td>
+<td>YES</td>
+<td>$11,092,286.31</td>
+</tr>
+<tr>
+<td>Short</td>
+<td>YES</td>
+<td>$612,188.83</td>
+</tr>
+<tr>
+<td>Long</td>
+<td>NO</td>
+<td>$17,307,113.81</td>
+</tr>
+<tr>
+<td>Short</td>
+<td>NO</td>
+<td>$4,264.33</td>
+</tr>
+</tbody>
+</table>
+</div><hr>
+<h3><a name="p-10505-h-2-combinatorial-arbitrage-7" class="anchor" href="#p-10505-h-2-combinatorial-arbitrage-7" aria-label="Heading link"></a>(2) Combinatorial Arbitrage</h3>
+<p>We now consider <strong>two linked markets about the same election</strong> and their conditions.</p>
+<ul>
+<li>
+<p><strong>Market M1 (Winner):</strong></p>
+</li>
+<li>
+<p>Democrats win (M1–S1)</p>
+</li>
+<li>
+<p>Republicans win (M1–S2)</p>
+</li>
+<li>
+<p><strong>Market M2 (Winning margin, partitioned into buckets):</strong></p>
+</li>
+<li>
+<p>D by 0–5 pts</p>
+</li>
+<li>
+<p>D by 5–10 pts</p>
+</li>
+<li>
+<p>D by 10+ pts</p>
+</li>
+<li>
+<p>R by 0–5 pts</p>
+</li>
+<li>
+<p>R by 5–10 pts</p>
+</li>
+<li>
+<p>R by 10+ pts</p>
+</li>
+</ul>
+<p>By logic, if <strong>Democrats win</strong> in M1, the true outcome in M2 must be <strong>one of the D margin buckets</strong>; if <strong>Republicans win</strong>, it must be <strong>one of the R margin buckets</strong>.</p>
+<p><strong>Suppose current YES prices are:</strong></p>
+<ul>
+<li>
+<p><strong>M1 (Winner)</strong></p>
+</li>
+<li>
+<p>Democrats win = <strong>0.48</strong></p>
+</li>
+<li>
+<p>Republicans win = <strong>0.52</strong> (notice M1 sums to 1.00 one would expect)</p>
+</li>
+<li>
+<p><strong>M2 (Margins)</strong></p>
+</li>
+<li>
+<p>D 0–5 = <strong>0.35</strong>, D 5–10 = <strong>0.15</strong>, D 10+ = <strong>0.10</strong> → D total <strong>0.6</strong></p>
+</li>
+<li>
+<p>R 0–5 = <strong>0.20</strong>, R 5–10 = <strong>0.10</strong>, R 10+ = <strong>0.10</strong> → R total <strong>0.4</strong></p>
+</li>
+</ul>
+<p>These markets are <strong>dependent</strong> but priced inconsistently. That opens a <strong>combinatorial arbitrage</strong>:</p>
+<p><strong>Portfolio (guaranteed to hit at least one winner):</strong></p>
+<ul>
+<li>
+<p>Buy <strong>YES–Democrats win</strong> in <strong>M1</strong> for <strong>0.48</strong>, <strong>and</strong></p>
+</li>
+<li>
+<p>Buy <strong>all four Republican margin YESs</strong> in <strong>M2</strong> for <strong>0.4</strong> total.</p>
+</li>
+</ul>
+<p><strong>Why this guarantees a win</strong></p>
+<ul>
+<li>
+<p>If <strong>Democrats win</strong>, your M1 ticket pays <strong>1</strong>.</p>
+</li>
+<li>
+<p>If <strong>Republicans win</strong>, <em>some</em> R margin bucket must occur, so one of your M2 R tickets pays <strong>1</strong>.</p>
+</li>
+</ul>
+<p><strong>Cost vs. payoff</strong></p>
+<ul>
+<li>
+<p>Total cost = <strong>0.48 + 0.4 = 0.88</strong></p>
+</li>
+<li>
+<p>Guaranteed payout = <strong>1.00</strong></p>
+</li>
+<li>
+<p><strong>Locked-in profit = 0.12 (13.63% profit)</strong></p>
+</li>
+</ul>
+<p>This is the essence of <strong>combinatorial arbitrage</strong>: use the logical links between markets (e.g. winner ↔ margin buckets) to cover <em>every</em> possible world with overlapping bets, so at least one side must pay out. The opportunity exists because the cross-market prices don’t add up coherently (here, M1 is rich on “Republicans win,” while M2 underprices the sum of all Republican margins).</p>
+<p>We find all pairs of markets with this conditional dependency (i.e., the outcome of either determines the outcome of the other). We find 11 such pairs where arbitrage opportunities existed (all relating to the U.S. 2024 election). Only 4 of these pairs had arbitrage extracted via the combinatorial condition strategy, with a total profit detected as:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Pair</th>
+<th>Total Profit (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pair 1</td>
+<td>$15,818.53</td>
+</tr>
+<tr>
+<td>Pair 2</td>
+<td>$60,236.71</td>
+</tr>
+<tr>
+<td>Pair 3</td>
+<td>$629.16</td>
+</tr>
+<tr>
+<td>Pair 4</td>
+<td>$18,472.31</td>
+</tr>
+</tbody>
+</table>
+</div><p>Check out our paper for formal definitions of these strategies and our full analysis. <a href="https://arxiv.org/abs/2508.03474" class="inline-onebox" rel="noopener nofollow ugc">[2508.03474] Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets</a></p>
+<h1><a name="p-10505-wrapping-up-and-open-questions-8" class="anchor" href="#p-10505-wrapping-up-and-open-questions-8" aria-label="Heading link"></a>Wrapping up and Open Questions</h1>
+<p>In this project, we focused on arbitrage between <strong>strictly dependent conditions</strong>. Within a single market, that’s straightforward: conditions are exhaustive by definition, so rebalancing creates guaranteed profit opportunities. Between markets, we only counted strict dependencies that lock in profit no matter what happens. That leaves plenty of room for looser definitions—like one-directional dependencies—or more nuanced strategies, such as hedging and partial exits.</p>
+<p>When measuring <strong>realized arbitrage</strong>, we required evidence that a trader actually bought all the needed positions at the right prices. We then computed the profit as the guaranteed return if they held until resolution. Of course, holding comes with opportunity cost and liquidity constraints, so these numbers represent an <strong>upper bound</strong> on extractable profit, not what was actually pocketed in practice.</p>
+<p>Looking ahead, a few big questions stand out:</p>
+<ul>
+<li>
+<p><strong>Market relationships:</strong> How do we detect subtler dependencies across markets, beyond strict overlaps?</p>
+</li>
+<li>
+<p><strong>Risk and realism:</strong> What changes if traders hedge, exit early, or rebalance dynamically instead of holding to resolution?</p>
+</li>
+<li>
+<p><strong>Inefficiency vs. discovery:</strong> Which arbitrages are real mistakes, and which are just markets catching up to new information?</p>
+</li>
+</ul>
+<p>Finally, mapping these obvious arbitrages isn’t just about quantifying profit—it’s also about <strong>protecting less strategic users</strong>. If simple, structural inefficiencies exist, they can be consistently exploited by sophisticated players at the expense of newcomers. Understanding and exposing these patterns is a first step toward making prediction markets fairer and more robust.</p>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="7" />
+                <span class='post-likes'>7 Likes</span>
+              </div>
+
+
+            
+
+
+          </div>
+          <div id='post_2' itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://collective.flashbots.net/u/Archidoge'><span itemprop="name">Archidoge</span></a>
+                  <meta itemprop='url' content='https://collective.flashbots.net/u/Archidoge'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2025-12-08T01:42:47Z' class='post-time'>
+                    December 8, 2025,  1:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-08T01:42:47Z'>
+              <span itemprop="position">2</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Hi, thanks for the great paper — I’m trying to reproduce the multiple-condition (NegRisk) arbitrage results, and I’m stuck on two points:</p>
+<ol>
+<li>
+<p>Could you share some benchmark numbers for <strong>multi-condition (NegRisk) arbitrage</strong> for the <strong>top 10 addresses</strong> (total profit, total USDC spent/notional, and number of opportunities)? In my reproduction, the <em>profit per USD</em> looks much lower than what the paper suggests, so I’d like to check whether this is due to implementation details.</p>
+</li>
+<li>
+<p>In Section 7.1, for the <strong>T = 950 block window</strong>, how exactly is an “opportunity” defined? Is it one opportunity per arbitrage pattern per window, or are all bids in the window aggregated into a single opportunity? If possible, could you also share how many such windows/opportunities were aggregated for the top 10 users listed in the paper?</p>
+</li>
+</ol>
+<p>Any brief clarification would be very helpful for aligning my implementation with yours. Thanks again!</p>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="0" />
+                <span class='post-likes'></span>
+              </div>
+
+
+            
+
+
+          </div>
+
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <footer class="wrap">
+  <div class="links">
+    <p><a href="https://github.com/flashbots" target="_blank">Github</a> - <a href="https://docs.flashbots.net/" target="_blank">Documentation</a> - <a href="https://status.flashbots.net/" target="_blank">Status</a></p>
+    <p><a href="http://discord.gg/flashbots" target="_blank">Discord</a> - <a href="https://www.youtube.com/channel/UCclbTgsnYUy3vmrptIqCmqQ" target="_blank">Youtube</a> - <a href="https://calendar.flashbots.net/" target="_blank">Calendar</a></p>
+  </div>
+  <p>© <script defer="" src="/theme-javascripts/399d4ddaf140bb06696eeae68fd7ab9e2e661ba8.js?__ws=collective.flashbots.net" data-theme-id="13" nonce="cakirMvvpEWZUHUBY3WevP49q"></script> Flashbots Ltd</p>
+</footer>
+
+    <script type="text/discourse-plugin" version="0.8.7" nonce="cakirMvvpEWZUHUBY3WevP49q">
+  api.onPageChange(() => {
+    const isTarget = window.location.pathname.startsWith("/t/the-mev-letter-explorer/100");
+    if (isTarget && !document.getElementById("mev-explorer-title")) {
+      const span = document.createElement("span");
+      span.id = "mev-explorer-title";
+      span.textContent = "The MEV Letter Explorer";
+      document.body.appendChild(span);
+    }
+  });
+</script>
+<script type="text/discourse-plugin" version="0.8.7" nonce="cakirMvvpEWZUHUBY3WevP49q">
+  api.onPageChange(() => {
+    const isTarget = window.location.pathname.startsWith("/t/flashcam/5393");
+    if (isTarget && !document.getElementById("flashcam-explorer-title")) {
+      const span = document.createElement("span");
+      span.id = "flashcam-explorer-title";
+      span.textContent = "Flashcam";
+      document.body.appendChild(span);
+    }
+  });
+</script>
+  </body>
+  
+</html>

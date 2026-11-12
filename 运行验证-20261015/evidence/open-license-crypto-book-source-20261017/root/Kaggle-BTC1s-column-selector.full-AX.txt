@@ -1,0 +1,794 @@
+Browser tab: 3, Title: "High Frequency Crypto Limit Order Book Data", URL: "https://www.kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1sec.csv".
+0 AXWebArea High Frequency Crypto Limit Order Book Data, URL: kaggle.com/datasets/martinsn/high-frequency-crypto-limit-order-book-data?select=BTC_1sec.csv
+	1 container
+		2 container
+			3 text field (settable) :r18:
+		4 button select all Select all
+			5 container select all
+				6 checkbox (settable, integer) Description: select all, Value: 0
+			7 text Select all
+		8 container
+			9 text 10  of  156  selected
+		10 content list
+			11 container  List Item
+				12 link
+					13 checkbox (settable, integer) 1
+			14 container system_time List Item
+				15 link system_time
+					16 container system_time
+						17 checkbox (settable, integer) Description: system_time, Value: 1
+					18 text system_time
+			19 container midpoint List Item
+				20 link midpoint
+					21 container midpoint
+						22 checkbox (settable, integer) Description: midpoint, Value: 1
+					23 text midpoint
+			24 container spread List Item
+				25 link spread
+					26 container spread
+						27 checkbox (settable, integer) Description: spread, Value: 1
+					28 text spread
+			29 container buys List Item
+				30 link buys
+					31 container buys
+						32 checkbox (settable, integer) Description: buys, Value: 1
+					33 text buys
+			34 container sells List Item
+				35 link sells
+					36 container sells
+						37 checkbox (settable, integer) Description: sells, Value: 1
+					38 text sells
+			39 container bids_distance_0 List Item
+				40 link bids_distance_0
+					41 container bids_distance_0
+						42 checkbox (settable, integer) Description: bids_distance_0, Value: 1
+					43 text bids_distance_0
+			44 container bids_distance_1 List Item
+				45 link bids_distance_1
+					46 container bids_distance_1
+						47 checkbox (settable, integer) Description: bids_distance_1, Value: 1
+					48 text bids_distance_1
+			49 container bids_distance_2 List Item
+				50 link bids_distance_2
+					51 container bids_distance_2
+						52 checkbox (settable, integer) Description: bids_distance_2, Value: 1
+					53 text bids_distance_2
+			54 container bids_distance_3 List Item
+				55 link bids_distance_3
+					56 container bids_distance_3
+						57 checkbox (settable, integer) Description: bids_distance_3, Value: 1
+					58 text bids_distance_3
+			59 container bids_distance_4 List Item
+				60 link bids_distance_4
+					61 container bids_distance_4
+						62 checkbox (settable, integer) Description: bids_distance_4, Value: 0
+					63 text bids_distance_4
+			64 container bids_distance_5 List Item
+				65 link bids_distance_5
+					66 container bids_distance_5
+						67 checkbox (settable, integer) Description: bids_distance_5, Value: 0
+					68 text bids_distance_5
+			69 container bids_distance_6 List Item
+				70 link bids_distance_6
+					71 container bids_distance_6
+						72 checkbox (settable, integer) Description: bids_distance_6, Value: 0
+					73 text bids_distance_6
+			74 container bids_distance_7 List Item
+				75 link bids_distance_7
+					76 container bids_distance_7
+						77 checkbox (settable, integer) Description: bids_distance_7, Value: 0
+					78 text bids_distance_7
+			79 container bids_distance_8 List Item
+				80 link bids_distance_8
+					81 container bids_distance_8
+						82 checkbox (settable, integer) Description: bids_distance_8, Value: 0
+					83 text bids_distance_8
+			84 container bids_distance_9 List Item
+				85 link bids_distance_9
+					86 container bids_distance_9
+						87 checkbox (settable, integer) Description: bids_distance_9, Value: 0
+					88 text bids_distance_9
+			89 container bids_distance_10 List Item
+				90 link bids_distance_10
+					91 container bids_distance_10
+						92 checkbox (settable, integer) Description: bids_distance_10, Value: 0
+					93 text bids_distance_10
+			94 container bids_distance_11 List Item
+				95 link bids_distance_11
+					96 container bids_distance_11
+						97 checkbox (settable, integer) Description: bids_distance_11, Value: 0
+					98 text bids_distance_11
+			99 container bids_distance_12 List Item
+				100 link bids_distance_12
+					101 container bids_distance_12
+						102 checkbox (settable, integer) Description: bids_distance_12, Value: 0
+					103 text bids_distance_12
+			104 container bids_distance_13 List Item
+				105 link bids_distance_13
+					106 container bids_distance_13
+						107 checkbox (settable, integer) Description: bids_distance_13, Value: 0
+					108 text bids_distance_13
+			109 container bids_distance_14 List Item
+				110 link bids_distance_14
+					111 container bids_distance_14
+						112 checkbox (settable, integer) Description: bids_distance_14, Value: 0
+					113 text bids_distance_14
+			114 container bids_notional_0 List Item
+				115 link bids_notional_0
+					116 container bids_notional_0
+						117 checkbox (settable, integer) Description: bids_notional_0, Value: 0
+					118 text bids_notional_0
+			119 container bids_notional_1 List Item
+				120 link bids_notional_1
+					121 container bids_notional_1
+						122 checkbox (settable, integer) Description: bids_notional_1, Value: 0
+					123 text bids_notional_1
+			124 container bids_notional_2 List Item
+				125 link bids_notional_2
+					126 container bids_notional_2
+						127 checkbox (settable, integer) Description: bids_notional_2, Value: 0
+					128 text bids_notional_2
+			129 container bids_notional_3 List Item
+				130 link bids_notional_3
+					131 container bids_notional_3
+						132 checkbox (settable, integer) Description: bids_notional_3, Value: 0
+					133 text bids_notional_3
+			134 container bids_notional_4 List Item
+				135 link bids_notional_4
+					136 container bids_notional_4
+						137 checkbox (settable, integer) Description: bids_notional_4, Value: 0
+					138 text bids_notional_4
+			139 container bids_notional_5 List Item
+				140 link bids_notional_5
+					141 container bids_notional_5
+						142 checkbox (settable, integer) Description: bids_notional_5, Value: 0
+					143 text bids_notional_5
+			144 container bids_notional_6 List Item
+				145 link bids_notional_6
+					146 container bids_notional_6
+						147 checkbox (settable, integer) Description: bids_notional_6, Value: 0
+					148 text bids_notional_6
+			149 container bids_notional_7 List Item
+				150 link bids_notional_7
+					151 container bids_notional_7
+						152 checkbox (settable, integer) Description: bids_notional_7, Value: 0
+					153 text bids_notional_7
+			154 container bids_notional_8 List Item
+				155 link bids_notional_8
+					156 container bids_notional_8
+						157 checkbox (settable, integer) Description: bids_notional_8, Value: 0
+					158 text bids_notional_8
+			159 container bids_notional_9 List Item
+				160 link bids_notional_9
+					161 container bids_notional_9
+						162 checkbox (settable, integer) Description: bids_notional_9, Value: 0
+					163 text bids_notional_9
+			164 container bids_notional_10 List Item
+				165 link bids_notional_10
+					166 container bids_notional_10
+						167 checkbox (settable, integer) Description: bids_notional_10, Value: 0
+					168 text bids_notional_10
+			169 container bids_notional_11 List Item
+				170 link bids_notional_11
+					171 container bids_notional_11
+						172 checkbox (settable, integer) Description: bids_notional_11, Value: 0
+					173 text bids_notional_11
+			174 container bids_notional_12 List Item
+				175 link bids_notional_12
+					176 container bids_notional_12
+						177 checkbox (settable, integer) Description: bids_notional_12, Value: 0
+					178 text bids_notional_12
+			179 container bids_notional_13 List Item
+				180 link bids_notional_13
+					181 container bids_notional_13
+						182 checkbox (settable, integer) Description: bids_notional_13, Value: 0
+					183 text bids_notional_13
+			184 container bids_notional_14 List Item
+				185 link bids_notional_14
+					186 container bids_notional_14
+						187 checkbox (settable, integer) Description: bids_notional_14, Value: 0
+					188 text bids_notional_14
+			189 container bids_cancel_notional_0 List Item
+				190 link bids_cancel_notional_0
+					191 container bids_cancel_notional_0
+						192 checkbox (settable, integer) Description: bids_cancel_notional_0, Value: 0
+					193 text bids_cancel_notional_0
+			194 container bids_cancel_notional_1 List Item
+				195 link bids_cancel_notional_1
+					196 container bids_cancel_notional_1
+						197 checkbox (settable, integer) Description: bids_cancel_notional_1, Value: 0
+					198 text bids_cancel_notional_1
+			199 container bids_cancel_notional_2 List Item
+				200 link bids_cancel_notional_2
+					201 container bids_cancel_notional_2
+						202 checkbox (settable, integer) Description: bids_cancel_notional_2, Value: 0
+					203 text bids_cancel_notional_2
+			204 container bids_cancel_notional_3 List Item
+				205 link bids_cancel_notional_3
+					206 container bids_cancel_notional_3
+						207 checkbox (settable, integer) Description: bids_cancel_notional_3, Value: 0
+					208 text bids_cancel_notional_3
+			209 container bids_cancel_notional_4 List Item
+				210 link bids_cancel_notional_4
+					211 container bids_cancel_notional_4
+						212 checkbox (settable, integer) Description: bids_cancel_notional_4, Value: 0
+					213 text bids_cancel_notional_4
+			214 container bids_cancel_notional_5 List Item
+				215 link bids_cancel_notional_5
+					216 container bids_cancel_notional_5
+						217 checkbox (settable, integer) Description: bids_cancel_notional_5, Value: 0
+					218 text bids_cancel_notional_5
+			219 container bids_cancel_notional_6 List Item
+				220 link bids_cancel_notional_6
+					221 container bids_cancel_notional_6
+						222 checkbox (settable, integer) Description: bids_cancel_notional_6, Value: 0
+					223 text bids_cancel_notional_6
+			224 container bids_cancel_notional_7 List Item
+				225 link bids_cancel_notional_7
+					226 container bids_cancel_notional_7
+						227 checkbox (settable, integer) Description: bids_cancel_notional_7, Value: 0
+					228 text bids_cancel_notional_7
+			229 container bids_cancel_notional_8 List Item
+				230 link bids_cancel_notional_8
+					231 container bids_cancel_notional_8
+						232 checkbox (settable, integer) Description: bids_cancel_notional_8, Value: 0
+					233 text bids_cancel_notional_8
+			234 container bids_cancel_notional_9 List Item
+				235 link bids_cancel_notional_9
+					236 container bids_cancel_notional_9
+						237 checkbox (settable, integer) Description: bids_cancel_notional_9, Value: 0
+					238 text bids_cancel_notional_9
+			239 container bids_cancel_notional_10 List Item
+				240 link bids_cancel_notional_10
+					241 container bids_cancel_notional_10
+						242 checkbox (settable, integer) Description: bids_cancel_notional_10, Value: 0
+					243 text bids_cancel_notional_10
+			244 container bids_cancel_notional_11 List Item
+				245 link bids_cancel_notional_11
+					246 container bids_cancel_notional_11
+						247 checkbox (settable, integer) Description: bids_cancel_notional_11, Value: 0
+					248 text bids_cancel_notional_11
+			249 container bids_cancel_notional_12 List Item
+				250 link bids_cancel_notional_12
+					251 container bids_cancel_notional_12
+						252 checkbox (settable, integer) Description: bids_cancel_notional_12, Value: 0
+					253 text bids_cancel_notional_12
+			254 container bids_cancel_notional_13 List Item
+				255 link bids_cancel_notional_13
+					256 container bids_cancel_notional_13
+						257 checkbox (settable, integer) Description: bids_cancel_notional_13, Value: 0
+					258 text bids_cancel_notional_13
+			259 container bids_cancel_notional_14 List Item
+				260 link bids_cancel_notional_14
+					261 container bids_cancel_notional_14
+						262 checkbox (settable, integer) Description: bids_cancel_notional_14, Value: 0
+					263 text bids_cancel_notional_14
+			264 container bids_limit_notional_0 List Item
+				265 link bids_limit_notional_0
+					266 container bids_limit_notional_0
+						267 checkbox (settable, integer) Description: bids_limit_notional_0, Value: 0
+					268 text bids_limit_notional_0
+			269 container bids_limit_notional_1 List Item
+				270 link bids_limit_notional_1
+					271 container bids_limit_notional_1
+						272 checkbox (settable, integer) Description: bids_limit_notional_1, Value: 0
+					273 text bids_limit_notional_1
+			274 container bids_limit_notional_2 List Item
+				275 link bids_limit_notional_2
+					276 container bids_limit_notional_2
+						277 checkbox (settable, integer) Description: bids_limit_notional_2, Value: 0
+					278 text bids_limit_notional_2
+			279 container bids_limit_notional_3 List Item
+				280 link bids_limit_notional_3
+					281 container bids_limit_notional_3
+						282 checkbox (settable, integer) Description: bids_limit_notional_3, Value: 0
+					283 text bids_limit_notional_3
+			284 container bids_limit_notional_4 List Item
+				285 link bids_limit_notional_4
+					286 container bids_limit_notional_4
+						287 checkbox (settable, integer) Description: bids_limit_notional_4, Value: 0
+					288 text bids_limit_notional_4
+			289 container bids_limit_notional_5 List Item
+				290 link bids_limit_notional_5
+					291 container bids_limit_notional_5
+						292 checkbox (settable, integer) Description: bids_limit_notional_5, Value: 0
+					293 text bids_limit_notional_5
+			294 container bids_limit_notional_6 List Item
+				295 link bids_limit_notional_6
+					296 container bids_limit_notional_6
+						297 checkbox (settable, integer) Description: bids_limit_notional_6, Value: 0
+					298 text bids_limit_notional_6
+			299 container bids_limit_notional_7 List Item
+				300 link bids_limit_notional_7
+					301 container bids_limit_notional_7
+						302 checkbox (settable, integer) Description: bids_limit_notional_7, Value: 0
+					303 text bids_limit_notional_7
+			304 container bids_limit_notional_8 List Item
+				305 link bids_limit_notional_8
+					306 container bids_limit_notional_8
+						307 checkbox (settable, integer) Description: bids_limit_notional_8, Value: 0
+					308 text bids_limit_notional_8
+			309 container bids_limit_notional_9 List Item
+				310 link bids_limit_notional_9
+					311 container bids_limit_notional_9
+						312 checkbox (settable, integer) Description: bids_limit_notional_9, Value: 0
+					313 text bids_limit_notional_9
+			314 container bids_limit_notional_10 List Item
+				315 link bids_limit_notional_10
+					316 container bids_limit_notional_10
+						317 checkbox (settable, integer) Description: bids_limit_notional_10, Value: 0
+					318 text bids_limit_notional_10
+			319 container bids_limit_notional_11 List Item
+				320 link bids_limit_notional_11
+					321 container bids_limit_notional_11
+						322 checkbox (settable, integer) Description: bids_limit_notional_11, Value: 0
+					323 text bids_limit_notional_11
+			324 container bids_limit_notional_12 List Item
+				325 link bids_limit_notional_12
+					326 container bids_limit_notional_12
+						327 checkbox (settable, integer) Description: bids_limit_notional_12, Value: 0
+					328 text bids_limit_notional_12
+			329 container bids_limit_notional_13 List Item
+				330 link bids_limit_notional_13
+					331 container bids_limit_notional_13
+						332 checkbox (settable, integer) Description: bids_limit_notional_13, Value: 0
+					333 text bids_limit_notional_13
+			334 container bids_limit_notional_14 List Item
+				335 link bids_limit_notional_14
+					336 container bids_limit_notional_14
+						337 checkbox (settable, integer) Description: bids_limit_notional_14, Value: 0
+					338 text bids_limit_notional_14
+			339 container bids_market_notional_0 List Item
+				340 link bids_market_notional_0
+					341 container bids_market_notional_0
+						342 checkbox (settable, integer) Description: bids_market_notional_0, Value: 0
+					343 text bids_market_notional_0
+			344 container bids_market_notional_1 List Item
+				345 link bids_market_notional_1
+					346 container bids_market_notional_1
+						347 checkbox (settable, integer) Description: bids_market_notional_1, Value: 0
+					348 text bids_market_notional_1
+			349 container bids_market_notional_2 List Item
+				350 link bids_market_notional_2
+					351 container bids_market_notional_2
+						352 checkbox (settable, integer) Description: bids_market_notional_2, Value: 0
+					353 text bids_market_notional_2
+			354 container bids_market_notional_3 List Item
+				355 link bids_market_notional_3
+					356 container bids_market_notional_3
+						357 checkbox (settable, integer) Description: bids_market_notional_3, Value: 0
+					358 text bids_market_notional_3
+			359 container bids_market_notional_4 List Item
+				360 link bids_market_notional_4
+					361 container bids_market_notional_4
+						362 checkbox (settable, integer) Description: bids_market_notional_4, Value: 0
+					363 text bids_market_notional_4
+			364 container bids_market_notional_5 List Item
+				365 link bids_market_notional_5
+					366 container bids_market_notional_5
+						367 checkbox (settable, integer) Description: bids_market_notional_5, Value: 0
+					368 text bids_market_notional_5
+			369 container bids_market_notional_6 List Item
+				370 link bids_market_notional_6
+					371 container bids_market_notional_6
+						372 checkbox (settable, integer) Description: bids_market_notional_6, Value: 0
+					373 text bids_market_notional_6
+			374 container bids_market_notional_7 List Item
+				375 link bids_market_notional_7
+					376 container bids_market_notional_7
+						377 checkbox (settable, integer) Description: bids_market_notional_7, Value: 0
+					378 text bids_market_notional_7
+			379 container bids_market_notional_8 List Item
+				380 link bids_market_notional_8
+					381 container bids_market_notional_8
+						382 checkbox (settable, integer) Description: bids_market_notional_8, Value: 0
+					383 text bids_market_notional_8
+			384 container bids_market_notional_9 List Item
+				385 link bids_market_notional_9
+					386 container bids_market_notional_9
+						387 checkbox (settable, integer) Description: bids_market_notional_9, Value: 0
+					388 text bids_market_notional_9
+			389 container bids_market_notional_10 List Item
+				390 link bids_market_notional_10
+					391 container bids_market_notional_10
+						392 checkbox (settable, integer) Description: bids_market_notional_10, Value: 0
+					393 text bids_market_notional_10
+			394 container bids_market_notional_11 List Item
+				395 link bids_market_notional_11
+					396 container bids_market_notional_11
+						397 checkbox (settable, integer) Description: bids_market_notional_11, Value: 0
+					398 text bids_market_notional_11
+			399 container bids_market_notional_12 List Item
+				400 link bids_market_notional_12
+					401 container bids_market_notional_12
+						402 checkbox (settable, integer) Description: bids_market_notional_12, Value: 0
+					403 text bids_market_notional_12
+			404 container bids_market_notional_13 List Item
+				405 link bids_market_notional_13
+					406 container bids_market_notional_13
+						407 checkbox (settable, integer) Description: bids_market_notional_13, Value: 0
+					408 text bids_market_notional_13
+			409 container bids_market_notional_14 List Item
+				410 link bids_market_notional_14
+					411 container bids_market_notional_14
+						412 checkbox (settable, integer) Description: bids_market_notional_14, Value: 0
+					413 text bids_market_notional_14
+			414 container asks_distance_0 List Item
+				415 link asks_distance_0
+					416 container asks_distance_0
+						417 checkbox (settable, integer) Description: asks_distance_0, Value: 0
+					418 text asks_distance_0
+			419 container asks_distance_1 List Item
+				420 link asks_distance_1
+					421 container asks_distance_1
+						422 checkbox (settable, integer) Description: asks_distance_1, Value: 0
+					423 text asks_distance_1
+			424 container asks_distance_2 List Item
+				425 link asks_distance_2
+					426 container asks_distance_2
+						427 checkbox (settable, integer) Description: asks_distance_2, Value: 0
+					428 text asks_distance_2
+			429 container asks_distance_3 List Item
+				430 link asks_distance_3
+					431 container asks_distance_3
+						432 checkbox (settable, integer) Description: asks_distance_3, Value: 0
+					433 text asks_distance_3
+			434 container asks_distance_4 List Item
+				435 link asks_distance_4
+					436 container asks_distance_4
+						437 checkbox (settable, integer) Description: asks_distance_4, Value: 0
+					438 text asks_distance_4
+			439 container asks_distance_5 List Item
+				440 link asks_distance_5
+					441 container asks_distance_5
+						442 checkbox (settable, integer) Description: asks_distance_5, Value: 0
+					443 text asks_distance_5
+			444 container asks_distance_6 List Item
+				445 link asks_distance_6
+					446 container asks_distance_6
+						447 checkbox (settable, integer) Description: asks_distance_6, Value: 0
+					448 text asks_distance_6
+			449 container asks_distance_7 List Item
+				450 link asks_distance_7
+					451 container asks_distance_7
+						452 checkbox (settable, integer) Description: asks_distance_7, Value: 0
+					453 text asks_distance_7
+			454 container asks_distance_8 List Item
+				455 link asks_distance_8
+					456 container asks_distance_8
+						457 checkbox (settable, integer) Description: asks_distance_8, Value: 0
+					458 text asks_distance_8
+			459 container asks_distance_9 List Item
+				460 link asks_distance_9
+					461 container asks_distance_9
+						462 checkbox (settable, integer) Description: asks_distance_9, Value: 0
+					463 text asks_distance_9
+			464 container asks_distance_10 List Item
+				465 link asks_distance_10
+					466 container asks_distance_10
+						467 checkbox (settable, integer) Description: asks_distance_10, Value: 0
+					468 text asks_distance_10
+			469 container asks_distance_11 List Item
+				470 link asks_distance_11
+					471 container asks_distance_11
+						472 checkbox (settable, integer) Description: asks_distance_11, Value: 0
+					473 text asks_distance_11
+			474 container asks_distance_12 List Item
+				475 link asks_distance_12
+					476 container asks_distance_12
+						477 checkbox (settable, integer) Description: asks_distance_12, Value: 0
+					478 text asks_distance_12
+			479 container asks_distance_13 List Item
+				480 link asks_distance_13
+					481 container asks_distance_13
+						482 checkbox (settable, integer) Description: asks_distance_13, Value: 0
+					483 text asks_distance_13
+			484 container asks_distance_14 List Item
+				485 link asks_distance_14
+					486 container asks_distance_14
+						487 checkbox (settable, integer) Description: asks_distance_14, Value: 0
+					488 text asks_distance_14
+			489 container asks_notional_0 List Item
+				490 link asks_notional_0
+					491 container asks_notional_0
+						492 checkbox (settable, integer) Description: asks_notional_0, Value: 0
+					493 text asks_notional_0
+			494 container asks_notional_1 List Item
+				495 link asks_notional_1
+					496 container asks_notional_1
+						497 checkbox (settable, integer) Description: asks_notional_1, Value: 0
+					498 text asks_notional_1
+			499 container asks_notional_2 List Item
+				500 link asks_notional_2
+					501 container asks_notional_2
+						502 checkbox (settable, integer) Description: asks_notional_2, Value: 0
+					503 text asks_notional_2
+			504 container asks_notional_3 List Item
+				505 link asks_notional_3
+					506 container asks_notional_3
+						507 checkbox (settable, integer) Description: asks_notional_3, Value: 0
+					508 text asks_notional_3
+			509 container asks_notional_4 List Item
+				510 link asks_notional_4
+					511 container asks_notional_4
+						512 checkbox (settable, integer) Description: asks_notional_4, Value: 0
+					513 text asks_notional_4
+			514 container asks_notional_5 List Item
+				515 link asks_notional_5
+					516 container asks_notional_5
+						517 checkbox (settable, integer) Description: asks_notional_5, Value: 0
+					518 text asks_notional_5
+			519 container asks_notional_6 List Item
+				520 link asks_notional_6
+					521 container asks_notional_6
+						522 checkbox (settable, integer) Description: asks_notional_6, Value: 0
+					523 text asks_notional_6
+			524 container asks_notional_7 List Item
+				525 link asks_notional_7
+					526 container asks_notional_7
+						527 checkbox (settable, integer) Description: asks_notional_7, Value: 0
+					528 text asks_notional_7
+			529 container asks_notional_8 List Item
+				530 link asks_notional_8
+					531 container asks_notional_8
+						532 checkbox (settable, integer) Description: asks_notional_8, Value: 0
+					533 text asks_notional_8
+			534 container asks_notional_9 List Item
+				535 link asks_notional_9
+					536 container asks_notional_9
+						537 checkbox (settable, integer) Description: asks_notional_9, Value: 0
+					538 text asks_notional_9
+			539 container asks_notional_10 List Item
+				540 link asks_notional_10
+					541 container asks_notional_10
+						542 checkbox (settable, integer) Description: asks_notional_10, Value: 0
+					543 text asks_notional_10
+			544 container asks_notional_11 List Item
+				545 link asks_notional_11
+					546 container asks_notional_11
+						547 checkbox (settable, integer) Description: asks_notional_11, Value: 0
+					548 text asks_notional_11
+			549 container asks_notional_12 List Item
+				550 link asks_notional_12
+					551 container asks_notional_12
+						552 checkbox (settable, integer) Description: asks_notional_12, Value: 0
+					553 text asks_notional_12
+			554 container asks_notional_13 List Item
+				555 link asks_notional_13
+					556 container asks_notional_13
+						557 checkbox (settable, integer) Description: asks_notional_13, Value: 0
+					558 text asks_notional_13
+			559 container asks_notional_14 List Item
+				560 link asks_notional_14
+					561 container asks_notional_14
+						562 checkbox (settable, integer) Description: asks_notional_14, Value: 0
+					563 text asks_notional_14
+			564 container asks_cancel_notional_0 List Item
+				565 link asks_cancel_notional_0
+					566 container asks_cancel_notional_0
+						567 checkbox (settable, integer) Description: asks_cancel_notional_0, Value: 0
+					568 text asks_cancel_notional_0
+			569 container asks_cancel_notional_1 List Item
+				570 link asks_cancel_notional_1
+					571 container asks_cancel_notional_1
+						572 checkbox (settable, integer) Description: asks_cancel_notional_1, Value: 0
+					573 text asks_cancel_notional_1
+			574 container asks_cancel_notional_2 List Item
+				575 link asks_cancel_notional_2
+					576 container asks_cancel_notional_2
+						577 checkbox (settable, integer) Description: asks_cancel_notional_2, Value: 0
+					578 text asks_cancel_notional_2
+			579 container asks_cancel_notional_3 List Item
+				580 link asks_cancel_notional_3
+					581 container asks_cancel_notional_3
+						582 checkbox (settable, integer) Description: asks_cancel_notional_3, Value: 0
+					583 text asks_cancel_notional_3
+			584 container asks_cancel_notional_4 List Item
+				585 link asks_cancel_notional_4
+					586 container asks_cancel_notional_4
+						587 checkbox (settable, integer) Description: asks_cancel_notional_4, Value: 0
+					588 text asks_cancel_notional_4
+			589 container asks_cancel_notional_5 List Item
+				590 link asks_cancel_notional_5
+					591 container asks_cancel_notional_5
+						592 checkbox (settable, integer) Description: asks_cancel_notional_5, Value: 0
+					593 text asks_cancel_notional_5
+			594 container asks_cancel_notional_6 List Item
+				595 link asks_cancel_notional_6
+					596 container asks_cancel_notional_6
+						597 checkbox (settable, integer) Description: asks_cancel_notional_6, Value: 0
+					598 text asks_cancel_notional_6
+			599 container asks_cancel_notional_7 List Item
+				600 link asks_cancel_notional_7
+					601 container asks_cancel_notional_7
+						602 checkbox (settable, integer) Description: asks_cancel_notional_7, Value: 0
+					603 text asks_cancel_notional_7
+			604 container asks_cancel_notional_8 List Item
+				605 link asks_cancel_notional_8
+					606 container asks_cancel_notional_8
+						607 checkbox (settable, integer) Description: asks_cancel_notional_8, Value: 0
+					608 text asks_cancel_notional_8
+			609 container asks_cancel_notional_9 List Item
+				610 link asks_cancel_notional_9
+					611 container asks_cancel_notional_9
+						612 checkbox (settable, integer) Description: asks_cancel_notional_9, Value: 0
+					613 text asks_cancel_notional_9
+			614 container asks_cancel_notional_10 List Item
+				615 link asks_cancel_notional_10
+					616 container asks_cancel_notional_10
+						617 checkbox (settable, integer) Description: asks_cancel_notional_10, Value: 0
+					618 text asks_cancel_notional_10
+			619 container asks_cancel_notional_11 List Item
+				620 link asks_cancel_notional_11
+					621 container asks_cancel_notional_11
+						622 checkbox (settable, integer) Description: asks_cancel_notional_11, Value: 0
+					623 text asks_cancel_notional_11
+			624 container asks_cancel_notional_12 List Item
+				625 link asks_cancel_notional_12
+					626 container asks_cancel_notional_12
+						627 checkbox (settable, integer) Description: asks_cancel_notional_12, Value: 0
+					628 text asks_cancel_notional_12
+			629 container asks_cancel_notional_13 List Item
+				630 link asks_cancel_notional_13
+					631 container asks_cancel_notional_13
+						632 checkbox (settable, integer) Description: asks_cancel_notional_13, Value: 0
+					633 text asks_cancel_notional_13
+			634 container asks_cancel_notional_14 List Item
+				635 link asks_cancel_notional_14
+					636 container asks_cancel_notional_14
+						637 checkbox (settable, integer) Description: asks_cancel_notional_14, Value: 0
+					638 text asks_cancel_notional_14
+			639 container asks_limit_notional_0 List Item
+				640 link asks_limit_notional_0
+					641 container asks_limit_notional_0
+						642 checkbox (settable, integer) Description: asks_limit_notional_0, Value: 0
+					643 text asks_limit_notional_0
+			644 container asks_limit_notional_1 List Item
+				645 link asks_limit_notional_1
+					646 container asks_limit_notional_1
+						647 checkbox (settable, integer) Description: asks_limit_notional_1, Value: 0
+					648 text asks_limit_notional_1
+			649 container asks_limit_notional_2 List Item
+				650 link asks_limit_notional_2
+					651 container asks_limit_notional_2
+						652 checkbox (settable, integer) Description: asks_limit_notional_2, Value: 0
+					653 text asks_limit_notional_2
+			654 container asks_limit_notional_3 List Item
+				655 link asks_limit_notional_3
+					656 container asks_limit_notional_3
+						657 checkbox (settable, integer) Description: asks_limit_notional_3, Value: 0
+					658 text asks_limit_notional_3
+			659 container asks_limit_notional_4 List Item
+				660 link asks_limit_notional_4
+					661 container asks_limit_notional_4
+						662 checkbox (settable, integer) Description: asks_limit_notional_4, Value: 0
+					663 text asks_limit_notional_4
+			664 container asks_limit_notional_5 List Item
+				665 link asks_limit_notional_5
+					666 container asks_limit_notional_5
+						667 checkbox (settable, integer) Description: asks_limit_notional_5, Value: 0
+					668 text asks_limit_notional_5
+			669 container asks_limit_notional_6 List Item
+				670 link asks_limit_notional_6
+					671 container asks_limit_notional_6
+						672 checkbox (settable, integer) Description: asks_limit_notional_6, Value: 0
+					673 text asks_limit_notional_6
+			674 container asks_limit_notional_7 List Item
+				675 link asks_limit_notional_7
+					676 container asks_limit_notional_7
+						677 checkbox (settable, integer) Description: asks_limit_notional_7, Value: 0
+					678 text asks_limit_notional_7
+			679 container asks_limit_notional_8 List Item
+				680 link asks_limit_notional_8
+					681 container asks_limit_notional_8
+						682 checkbox (settable, integer) Description: asks_limit_notional_8, Value: 0
+					683 text asks_limit_notional_8
+			684 container asks_limit_notional_9 List Item
+				685 link asks_limit_notional_9
+					686 container asks_limit_notional_9
+						687 checkbox (settable, integer) Description: asks_limit_notional_9, Value: 0
+					688 text asks_limit_notional_9
+			689 container asks_limit_notional_10 List Item
+				690 link asks_limit_notional_10
+					691 container asks_limit_notional_10
+						692 checkbox (settable, integer) Description: asks_limit_notional_10, Value: 0
+					693 text asks_limit_notional_10
+			694 container asks_limit_notional_11 List Item
+				695 link asks_limit_notional_11
+					696 container asks_limit_notional_11
+						697 checkbox (settable, integer) Description: asks_limit_notional_11, Value: 0
+					698 text asks_limit_notional_11
+			699 container asks_limit_notional_12 List Item
+				700 link asks_limit_notional_12
+					701 container asks_limit_notional_12
+						702 checkbox (settable, integer) Description: asks_limit_notional_12, Value: 0
+					703 text asks_limit_notional_12
+			704 container asks_limit_notional_13 List Item
+				705 link asks_limit_notional_13
+					706 container asks_limit_notional_13
+						707 checkbox (settable, integer) Description: asks_limit_notional_13, Value: 0
+					708 text asks_limit_notional_13
+			709 container asks_limit_notional_14 List Item
+				710 link asks_limit_notional_14
+					711 container asks_limit_notional_14
+						712 checkbox (settable, integer) Description: asks_limit_notional_14, Value: 0
+					713 text asks_limit_notional_14
+			714 container asks_market_notional_0 List Item
+				715 link asks_market_notional_0
+					716 container asks_market_notional_0
+						717 checkbox (settable, integer) Description: asks_market_notional_0, Value: 0
+					718 text asks_market_notional_0
+			719 container asks_market_notional_1 List Item
+				720 link asks_market_notional_1
+					721 container asks_market_notional_1
+						722 checkbox (settable, integer) Description: asks_market_notional_1, Value: 0
+					723 text asks_market_notional_1
+			724 container asks_market_notional_2 List Item
+				725 link asks_market_notional_2
+					726 container asks_market_notional_2
+						727 checkbox (settable, integer) Description: asks_market_notional_2, Value: 0
+					728 text asks_market_notional_2
+			729 container asks_market_notional_3 List Item
+				730 link asks_market_notional_3
+					731 container asks_market_notional_3
+						732 checkbox (settable, integer) Description: asks_market_notional_3, Value: 0
+					733 text asks_market_notional_3
+			734 container asks_market_notional_4 List Item
+				735 link asks_market_notional_4
+					736 container asks_market_notional_4
+						737 checkbox (settable, integer) Description: asks_market_notional_4, Value: 0
+					738 text asks_market_notional_4
+			739 container asks_market_notional_5 List Item
+				740 link asks_market_notional_5
+					741 container asks_market_notional_5
+						742 checkbox (settable, integer) Description: asks_market_notional_5, Value: 0
+					743 text asks_market_notional_5
+			744 container asks_market_notional_6 List Item
+				745 link asks_market_notional_6
+					746 container asks_market_notional_6
+						747 checkbox (settable, integer) Description: asks_market_notional_6, Value: 0
+					748 text asks_market_notional_6
+			749 container asks_market_notional_7 List Item
+				750 link asks_market_notional_7
+					751 container asks_market_notional_7
+						752 checkbox (settable, integer) Description: asks_market_notional_7, Value: 0
+					753 text asks_market_notional_7
+			754 container asks_market_notional_8 List Item
+				755 link asks_market_notional_8
+					756 container asks_market_notional_8
+						757 checkbox (settable, integer) Description: asks_market_notional_8, Value: 0
+					758 text asks_market_notional_8
+			759 container asks_market_notional_9 List Item
+				760 link asks_market_notional_9
+					761 container asks_market_notional_9
+						762 checkbox (settable, integer) Description: asks_market_notional_9, Value: 0
+					763 text asks_market_notional_9
+			764 container asks_market_notional_10 List Item
+				765 link asks_market_notional_10
+					766 container asks_market_notional_10
+						767 checkbox (settable, integer) Description: asks_market_notional_10, Value: 0
+					768 text asks_market_notional_10
+			769 container asks_market_notional_11 List Item
+				770 link asks_market_notional_11
+					771 container asks_market_notional_11
+						772 checkbox (settable, integer) Description: asks_market_notional_11, Value: 0
+					773 text asks_market_notional_11
+			774 container asks_market_notional_12 List Item
+				775 link asks_market_notional_12
+					776 container asks_market_notional_12
+						777 checkbox (settable, integer) Description: asks_market_notional_12, Value: 0
+					778 text asks_market_notional_12
+			779 container asks_market_notional_13 List Item
+				780 link asks_market_notional_13
+					781 container asks_market_notional_13
+						782 checkbox (settable, integer) Description: asks_market_notional_13, Value: 0
+					783 text asks_market_notional_13
+			784 container asks_market_notional_14 List Item
+				785 link asks_market_notional_14
+					786 container asks_market_notional_14
+						787 checkbox (settable, integer) Description: asks_market_notional_14, Value: 0
+					788 text asks_market_notional_14
+		789 button Cancel
+		790 button Apply
+
+The focused UI element is 3 text field (settable) :r18:

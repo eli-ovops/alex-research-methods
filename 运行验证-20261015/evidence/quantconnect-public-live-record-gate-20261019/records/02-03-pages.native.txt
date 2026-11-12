@@ -1,0 +1,328 @@
+Results - QuantConnect.com (https://www.quantconnect.com/docs/v2/cloud-platform/live-trading/results)
+citeturn1102view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.quantconnect.com/docs/v2/cloud-platform/live-trading/results","lineno":null}); Total lines: 570
+L0: cite0†Download Our Brand Kit QuantConnect, LEAN and Terminal Link.†cdn.quantconnect.com L1: 
+L2: [Input] [Input: ]
+L3: 
+L4: ↑↓ to select, press enter to go, use esc to exit
+L5: 
+L6: cite1†Image†cdn.quantconnect.com L7: 
+L8:   * Platform
+L9:   * cite2†Pricing L10:   * cite3†Research L11:   * cite4†Strategies L12:   *   * cite5†Datasets L13:   *   *   * cite6†Documentation L14:   * cite7†Algorithm Lab L15:   * ### SIGN IN
+L16: 
+L17:   * cite8†Sign in L18:   * Don't have an account? Join QuantConnect Today
+L19: 
+L20:   * cite9†Sign up for Free L21: #### Browse
+L22: 
+L23: cite10†Cloud Platform cite11†Welcome cite12†Getting Started cite13†Security and IP cite14†▶Organizations L24: 
+L25:   * cite15†Getting Started L26:   * cite16†Tier Features L27:   * cite17†Resources L28:   * cite18†Object Store L29:   * cite19†Support L30:   * cite20†Members L31:   * cite21†Administration L32:   * cite22†Billing L33:   * cite23†Credit L34:   * cite24†Training L35: cite25†▶Learning Center L36: 
+L37:   * cite26†Training L38:   * cite27†Educators L39:   * cite28†Course Structure L40: cite29†▶Projects L41:   * cite30†Getting Started L42:   * cite31†Structure L43:   * cite32†Files L44:   * cite33†IDE L45:   * cite34†Encryption L46:   * cite35†Debugging L47:   * cite36†Collaboration L48:   * cite37†Code Sessions L49:   * cite38†Shared Libraries L50:   * cite39†Package Environments L51:   * cite40†LEAN Engine Versions L52: cite41†▶Research L53: 
+L54:   * cite42†Getting Started L55:   * cite43†Deployment L56: cite44†▶Backtesting L57:   * cite45†Getting Started L58:   * cite46†Research Guide L59:   * cite47†Deployment L60:   * ▶cite48†Results L61:     * cite49†Portfolio Margin Plots L62:   * cite50†Debugging L63:   * cite51†Report L64:   * cite52†Engine Performance L65: cite53†▶Datasets L66:   * cite54†Navigating the Market L67:   * cite55†Categories L68:   * cite56†Data Issues L69:   * cite57†Misconceptions L70:   * cite58†Licensing L71:   * cite59†Vendors L72:   * ▶cite60†QuantConnect L73:     * cite61†US Equities L74:     * cite62†US Equity Options L75:     * cite63†Crypto L76:     * cite64†Crypto Futures L77:     * cite65†Forex L78:     * cite66†Futures L79:     * cite67†US Indices L80:     * cite68†US Index Options L81:     * cite69†CFD L82:     * cite70†Alternative Data L83:     * cite71†Auxiliary Data L84:   * cite72†Interactive Brokers L85:   * cite73†TradeStation L86:   * cite74†Tastytrade L87:   * cite75†Alpaca L88:   * cite76†Charles Schwab L89:   * cite77†Databento L90:   * cite78†Tradier L91:   * cite79†Bloomberg BPIPE L92:   * cite80†SSC Eze L93:   * cite81†Trading Technologies L94:   * cite82†Polygon L95: cite83†▶Live Trading L96:   * cite84†Getting Started L97:   * ▶cite85†Brokerages L98:     * cite86†QuantConnect Paper Trading L99:     * cite87†Interactive Brokers L100:     * cite88†TradeStation L101:     * cite89†Tastytrade L102:     * cite90†Public L103:     * cite91†Alpaca L104:     * cite92†Charles Schwab L105:     * cite93†Clear Street L106:     * cite94†Webull L107:     * cite95†Binance L108:     * cite96†Bybit L109:     * cite97†Tradier L110:     * cite98†Kraken L111:     * cite99†Coinbase L112:     * cite100†Bitfinex L113:     * cite101†dYdX L114:     * cite102†Bloomberg EMSX L115:     * cite103†Bloomberg FIX L116:     * cite104†SSC Eze L117:     * cite105†Trading Technologies L118:     * cite106†Wolverine L119:     * cite107†FIX Connections L120:     * cite108†CFD and FOREX Brokerages L121:     * cite109†Unsupported Brokerages L122:   * cite110†Deployment L123:   * cite111†Notifications L124:   * cite112†Results L125:   * cite113†Algorithm Control L126:   * cite114†Reconciliation L127:   * cite115†Risks L128: cite116†▶Optimization L129:   * cite117†Getting Started L130:   * cite118†Parameters L131:   * cite119†Objectives L132:   * cite120†Strategies L133:   * cite121†Deployment L134:   * cite122†Results L135: cite123†Research Pipeline cite124†Object Store cite125†▶Community L136: 
+L137:   * cite126†Code of Conduct L138:   * cite127†Forum L139:   * cite128†Discord L140:   * cite129†Profile L141:   * cite130†Academic Grants L142:   * cite131†Integration Partners L143:   * cite132†Affiliates L144:   * cite133†Research L145:   * cite134†Strategies L146: cite135†▶API Reference L147:   * cite136†Authentication L148:   * ▶cite137†Project Management L149:     * cite138†Create Project L150:     * cite139†Read Project L151:     * cite140†Update Project L152:     * cite141†Delete Project L153:     * ▶Collaboration
+L154:       * cite142†Create Project Collaborator L155:       * cite143†Read Project Collaborators L156:       * cite144†Update Project Collaborator L157:       * cite145†Delete Project Collaborator L158:       * cite146†Lock Project L159:     * ▶Nodes
+L160:       * cite147†Read Project Nodes L161:       * cite148†Update Project Nodes L162:   * ▶cite149†File Management L163:     * cite150†Create File L164:     * cite151†Read File L165:     * cite152†Update File L166:     * cite153†Delete File L167:     * cite154†Patch File L168:   * ▶cite155†Compiling Code L169:     * cite156†Create Compilation Job L170:     * cite157†Read Compilation Result L171:   * ▶cite158†Backtest Management L172:     * cite159†Create Backtest L173:     * ▶cite160†Read Backtest L174:       * cite161†Backtest Statistics L175:       * cite162†Charts L176:       * cite163†Orders L177:       * cite164†Trades L178:       * cite165†Insights L179:       * cite166†Logs L180:       * cite167†Export Orders L181:       * cite168†Export Trades L182:     * cite169†Update Backtest L183:     * cite170†Delete Backtest L184:     * cite171†List Backtests L185:   * ▶cite172†Live Management L186:     * cite173†Create Live Algorithm L187:     * ▶cite174†Read Live Algorithm L188:       * cite175†Live Algorithm Statistics L189:       * cite176†Charts L190:       * cite177†Portfolio State L191:       * cite178†Orders L192:       * cite179†Trades L193:       * cite180†Insights L194:       * cite181†Logs L195:       * cite182†Export Orders L196:       * cite183†Export Trades L197:     * ▶cite184†Update Live Algorithm L198:       * cite185†Liquidate Live Portfolio L199:       * cite186†Stop Live Algorithm L200:     * cite187†List Live Algorithms L201:     * ▶cite188†Live Commands L202:       * cite189†Create Live Command L203:       * cite190†Broadcast Live Command L204:   * ▶Optimization Management
+L205:     * cite191†Create Optimization L206:     * cite192†Read Optimization L207:     * cite193†Update Optimization L208:     * cite194†Delete Optimization L209:     * cite195†Abort Optimization L210:     * cite196†List Optimization L211:     * cite197†Estimate Optimization Cost L212:   * ▶Object Store Management
+L213:     * cite198†Upload Object Store Files L214:     * cite199†Get Object Store Metadata L215:     * cite200†Get Object Store File L216:     * cite201†Delete Object Store File L217:     * cite202†List Object Store Files L218:   * ▶AI Assistance
+L219:     * ▶Tools
+L220:       * cite203†Backtest Initialization L221:       * cite204†Code Completion L222:       * cite205†Error Enhancement L223:       * cite206†PEP8 Conversion L224:       * cite207†Syntax Check L225:       * cite208†Search L226:   * ▶cite209†Reports L227:     * cite210†Backtest Report L228:   * cite211†Account L229:   * cite212†Lean Version L230:   * ▶Agent Management
+L231:     * ▶Agents
+L232:       * cite213†Create Agent L233:       * cite214†Read Agent L234:       * cite215†Update Agent L235:       * cite216†Delete Agent L236:       * cite217†List Agents L237:     * ▶Tasks
+L238:       * cite218†Create Task L239:       * cite219†Read Task L240:       * cite220†Update Task L241:       * cite221†Delete Task L242:       * cite222†List Tasks L243:     * ▶Deployments
+L244:       * cite223†Create Deployment L245:       * cite224†Read Deployment L246:       * cite225†Update Deployment L247:       * cite226†List Deployments L248:       * cite227†Stop Deployment L249:       * cite228†Delete Deployment L250:       * cite229†Read Conversation L251:   * ▶Data Issues
+L252:     * cite230†Create Data Issue L253:     * cite231†List Data Issues L254:   * ▶Support
+L255:     * cite232†Create Support Ticket L256:     * cite233†List Support Tickets L257:     * cite234†Read Support Ticket L258:   * cite235†Examples L259: cite236†AI Assistance cite237†Writing Algorithms cite238†Research Environment cite239†Local Platform cite240†LEAN CLI cite241†LEAN Engine L260: cite242†Change Log L261: 
+L262: [Input: Search documentation or get help from our trained AI agent] [Button: Ask AI]
+L263: 
+L264:   * Ask AI
+L265:   * Articles
+L266: 
+L267: [Input] [Button: SEND]
+L268: 
+L269: ↑ ↓ to select, press enter to go, use esc to exit.
+L270: 
+L271: cite243†Image: trophy L272: #### Hello
+L273: 
+L274: [Button: Contents]
+L275: 
+L276: In This Page
+L277: 
+L278: cite244†Introduction L279: 
+L280: cite245†View Live Results L281: 
+L282: cite246†Runtime Statistics L283: 
+L284: cite247†Built-in Charts L285: 
+L286: cite248†Asset Plots L287: 
+L288: cite249†Custom Charts L289: 
+L290: cite250†Adjust Charts L291: 
+L292: cite251†Holdings L293: 
+L294: cite252†Orders L295: 
+L296: cite253†Trades L297: 
+L298: cite254†Insights L299: 
+L300: cite255†Logs L301: 
+L302: cite256†Project Files L303: 
+L304: cite257†View All Live Projects L305: 
+L306: cite258†Errors L307: 
+L308: cite259†Share Results L309: 
+L310: # Live Trading
+L311: 
+L312: ## Results
+L313: ### Introduction
+L314: 
+L315: The live results page shows your algorithm's live trading performance. Review the results page to see how your algorithm has been performing and to investigate ways to improve it.
+L316: ### View Live Results
+L317: 
+L318: The live results page automatically displays when you cite260†deploy a live algorithm . The page presents the algorithm's equity curve, holdings, trades, logs, server statistics, and much more information.
+L319: 
+L320: cite261†Image: Live result interface†cdn.quantconnect.com L321: The content in the live results page updates as your algorithm executes. You can close or refresh the window without interrupting the algorithm because the live trading node processes on our servers. If you close the page, you can cite257†view all of your live projects , open the project, and then click the cite262†Image: Deploy live icon†cdn.quantconnect.com Deploy Live icon at the top of the IDE to open the page again.
+L322: ### Runtime Statistics
+L323: 
+L324: The banner at the top of the live results page displays the performance statistics of your algorithm.
+L325: 
+L326: cite263†Image: Live runtime statistics†cdn.quantconnect.com L327: 
+L328: The following table describes the default runtime statistics:
+L329: Statistic  | Description
+L330: --- | ---
+L331: Equity  | The total portfolio value if all of the holdings were sold at current market rates. Equity equals the sum of cash and the market value of all open positions.
+L332: Fees  | The total quantity of fees paid for all the transactions during the algorithm's trading period. Total fees include brokerage commissions, exchange fees, and other transaction costs.
+L333: Holdings  | The absolute sum of the items in the portfolio. Holdings represent the total market value of all positions, regardless of whether they are long or short.
+L334: Net Profit  | The dollar-value return across the entire trading period.
+L335: PSR  | The probability that the estimated Sharpe ratio of an algorithm is greater than a benchmark.
+L336: Return  | The rate of return across the entire trading period.
+L337: Unrealized  | The amount of profit a portfolio would capture if it liquidated all open positions and paid the fees for transacting and crossing the spread. Unrealized profit becomes realized profit when the positions are closed.
+L338: Volume  | The total value of assets traded for all of an algorithm's transactions during the trading period.
+L339: To see the resources of the node that runs the algorithm, see cite264†Server Statistics .
+L340: 
+L341: To add a custom runtime statistic, see cite265†Add Statistics .
+L342: 
+L343: If you cite266†stop and redeploy a live algorithm, the runtime statistics are reset.
+L344: ### Built-in Charts
+L345: 
+L346: The live results page displays the equity curve of your algorithm so that you can analyze its performance in real-time.
+L347: 
+L348: cite267†Image: Live strategy equity candle chart†cdn.quantconnect.com L349: 
+L350: The following table describes the series in the Strategy Equity chart:
+L351: Series  | Description
+L352: --- | ---
+L353: Equity  | The live equity curve of your algorithm.
+L354: Out of Sample Backtest  | The cite114†backtest equity curve of your algorithm during the live trading period.
+L355: Meta  | Points in time when you deployed your algorithm, stopped your algorithm, and when your algorithm encountered a runtime error.
+L356: 
+L357: The following table describes the other charts displayed on the page:
+L358: Chart
+L359:  | Description
+L360: --- | ---
+L361: Drawdown  | A time series of equity peak-to-trough value.
+L362: Benchmark  | A time series of the benchmark closing price (SPY, by default).
+L363: Exposure  | A time series of long and short exposure ratios.
+L364: Assets Sales Volume  | A chart showing the proportion of total volume for each traded security.
+L365: Portfolio Turnover  | A time series of the portfolio turnover rate.
+L366: Portfolio Margin  | A stacked area chart of the portfolio margin usage. For more information about this chart, see cite49†Portfolio Margin Plots .
+L367: Asset Plot  | A time series of an asset's price with order event annotations. For more information about these charts, see cite248†Asset Plots .
+L368: ### Asset Plots
+L369: 
+L370: Asset plots display the trade prices of an asset and the following cite268†order events you have for the asset:
+L371: 
+L372: Order Event  | Icon
+L373: --- | ---
+L374: Submissions  | Gray circle
+L375: Updates  | Blue circle
+L376: Cancellations  | Gray square
+L377: Fills and partial fills  | Green (buys) or red (sells) arrows
+L378: 
+L379: The following image shows an example asset plot for AAPL:
+L380: 
+L381: cite269†Image: AAPL stock price with order events overlaid†cdn.quantconnect.com L382: 
+L383: The order submission icons aren't visible by default.
+L384: #### View Plots
+L385: 
+L386: Follow these steps to open an asset plot:
+L387: 
+L388:   1. Open the live results page.
+L389:   2. Click the Orders tab.
+L390:   3. Click the cite270†Image†cdn.quantconnect.com Asset Plot icon that's next to the asset Symbol in the Orders table.
+L391: #### Tool Tips
+L392: 
+L393: When you hover over one of the order events in the table, the asset plot highlights the order event, displays the asset price at the time of the event, and displays the cite271†tag associated with the event. Consider adding helpful tags to each order event to help with debugging your algorithm. For example, when you cancel an order, you can add a tag that explains the reason for cancelling it.
+L394: #### Adjust the Display Period
+L395: 
+L396: The resolution of the asset price time series in the plot doesn't necessarily match the resolution you set when you subscribed to the asset in your algorithm. If you are displaying the entire price series, the series usually displays the daily closing price. However, when you zoom in, the chart will adjust its display period and may use higher resolution data. To zoom in and out, perform either of the following actions:
+L397:   * Click the 1m, 3m, 1y, or All period in the top-right corner of the chart.
+L398:   * Click a point on the chart and drag your mouse horizontally to highlight a specific period of time in the chart.
+L399: cite272†Image: gif that shows the price of AAPL while zooming in and out†cdn.quantconnect.com L400: 
+L401: If you have multiple order events in a single day and you zoom out on the chart so that it displays the daily closing prices, the plot aggregates the order event icons together as the price on that day.
+L402: #### Order Fill Prices
+L403: 
+L404: The plot displays fill order events at the actual fill price of your orders. The fill price is usually not equal to the asset price that displays because of the following reasons:
+L405: 
+L406:   * Your order experiences cite273†slippage .
+L407:   * If you use quote data, your order fills at the bid or ask price.
+L408:   * The cite274†fill model may fill your order at the high or low price.
+L409: 
+L410: ### Custom Charts
+L411: 
+L412: The results page shows the custom charts that you create.
+L413: #### Supported Chart Types
+L414: 
+L415: We support the following types of charts:
+L416: If you use `SeriesType.Candle` and plot enough values, the plot displays candlesticks. However, the `Plot``plot` method only accepts one numerical value per time step, so you can't plot candles that represent the open, high, low, and close values of each bar in your algorithm. The charting software automatically groups the data points you provide to create the candlesticks, so you can't control the period of time that each candlestick represents.
+L417: To create other types of charts, save the plot data in the Object Store and then load it into the Research Environment. In the Research Environment, you can cite275†create other types of charts with third-party charting packages .
+L418: #### Supported Markers
+L419: 
+L420: When you create scatter plots, you can set a marker symbol. We support the following marker symbols:
+L421: 
+L422: #### Chart Sampling
+L423: 
+L424: Charts are sampled every one and ten minutes. If you create 1-minute resolution custom charts, the IDE charting will downgrade the granularity and display the 10-minutes sampling after a certain amount of samples.
+L425: 
+L426: #### Demonstration
+L427: 
+L428: For more information about creating custom charts, see cite276†Charting .
+L429: ### Adjust Charts
+L430: 
+L431: You can manipulate the charts displayed on the live results page.
+L432: 
+L433: cite277†iframe†player.vimeo.com L434: 
+L435: #### Toggle Charts
+L436: 
+L437: To display and hide a chart on the live results page, in the Select Chart section, click the name of a chart.
+L438: 
+L439: #### Toggle Chart Series
+L440: 
+L441: To display and hide a series on a chart on the live results page, click the name of a series at the top of a chart.
+L442: 
+L443: cite278†Image: Demostration of toggling series displays on charts†cdn.quantconnect.com L444: #### Adjust the Display Period
+L445: 
+L446: To zoom in and out of a time series chart on the live results page, perform either of the following actions:
+L447: 
+L448:   * Click the 1m, 3m, 1y, or All period in the top-right corner of the chart.
+L449:   * Click a point on the chart and drag your mouse horizontally to highlight a specific period of time in the chart.
+L450: cite279†Image: Demostration of zooming in for time period on charts†cdn.quantconnect.com L451: 
+L452: If you adjust the zoom on a chart, it affects all of the charts.
+L453: After you zoom in on a chart, slide the horizontal bar at the bottom of the chart to adjust the time frame that displays.
+L454: 
+L455: cite280†Image: Demostration of scrolling for time period on charts†cdn.quantconnect.com L456: #### Resize Charts
+L457: 
+L458: To resize a chart on the live results page, hover over the bottom-right corner of the chart. When the resize cursor appears, hold the left mouse button and then drag to the desired size.
+L459: 
+L460: #### Move Charts
+L461: 
+L462: To move a chart on the live results page, click, hold, and drag the chart title.
+L463: #### Refresh Charts
+L464: 
+L465: Refreshing the charts on the live results page resets the zoom level on all the charts. If you refresh the charts while your algorithm is executing, only the data that was seen by the Lean engine after you refreshed the charts is displayed. To refresh the charts, in the Select Chart section, click the reset icon.
+L466: ### Holdings
+L467: 
+L468: The Holdings tab on the live results page displays your positions and cash.
+L469: 
+L470: cite281†Image: Live holdings table†cdn.quantconnect.com L471: 
+L472: The following table describes the properties that display for each of your positions:
+L473: Property  | Description
+L474: --- | ---
+L475: Symbol  | The ticker of the security.
+L476: Average Price  | The average price that you paid for the position.
+L477: Quantity  | The size of your position.
+L478: Market Value  | The value of your position if sold with market orders.
+L479: Unrealized  | The unrealized profit of your position, including fees and spread costs.
+L480: The values in the positions section update as new data points are injected into your algorithm. The cash section displays the quantity of each currency in your algorithm's `CashBook`. View the Holdings tab to see your holdings, cite282†add security subscriptions , and cite283†place manual orders . To view all of your current holdings and active data subscriptions, enable the Show All Portfolio check box.
+L481: ### Orders
+L482: 
+L483: The live results page displays the orders of your algorithm and you can download them to your local machine.
+L484: #### View in the GUI
+L485: 
+L486: To see the orders that your algorithm created, open the live results page and then click the Orders tab. If there are more than 10 orders, use the pagination tools at the bottom of the Orders Summary table to see all of the orders. Click on an individual order in the Orders Summary table to reveal all of the cite268†order events , which include:
+L487: 
+L488:   * Submissions
+L489:   * Fills
+L490:   * Partial fills
+L491:   * Updates
+L492:   * Cancellations
+L493:   * Option contract exercises and expiration
+L494: The timestamps in the Order Summary table are based in Eastern Time (ET).
+L495: #### Access the Order Summary CSV
+L496: To view the orders data in CSV format, open the live results page, click the Orders tab, and then click Download Orders. The content of the CSV file is the content displayed in the Orders Summary table when the table rows are collapsed. The timestamps in the CSV file are based in Coordinated Universal Time (UTC). To download the CSV file with the API, call the cite182†/live/export/orders endpoint. The CSV file only contains the orders from the last 750 days.
+L497: To get older orders, call the cite284†ReadLiveOrdersread_live_orders method or the cite178†/live/orders/read endpoint.
+L498: #### Access in Jupyter Notebooks
+L499: 
+L500: To programmatically analyze orders, call the cite284†ReadLiveOrdersread_live_orders method or the cite178†/live/orders/read endpoint.
+L501: 
+L502: ### Trades
+L503: 
+L504: The live results page displays the closed trades of your algorithm and you can download them to your local machine. You can set how orders are combined to define a trade. For more information, see cite285†Trade Statistics L505: #### View in the GUI
+L506: 
+L507: To see the trades that your algorithm created, open the live results page and then click the Trades tab. If there are more than 10 trades, use the pagination tools at the bottom of the Trades Summary table to see all of the orders. Click on an individual trade in the Trades Summary table to reveal the cite268†order fills of the trade.
+L508: 
+L509: The timestamps in the Trades Summary table are based in Eastern Time (ET).
+L510: #### Access the Trade Summary CSV
+L511: 
+L512: To view the trades data in CSV format, open the live results page, click the Trades tab, and then click Download Trades. The content of the CSV file is the content displayed in the Trades Summary table when the table rows are collapsed. The timestamps in the CSV file are based in Coordinated Universal Time (UTC). To download the CSV file with the API, call the cite183†/live/export/trades endpoint.
+L513: ### Insights
+L514: 
+L515: The live results page displays the insights of your algorithm and you can download them to your local machine.
+L516: 
+L517: #### View in the GUI
+L518: 
+L519: To see the insights your algorithm emit, open the live result page and then click the Insights tab. If there are more than 10 insights, use the pagination tools at the bottom of the Insights Summary table to see all of the insights. The timestamps in the Insights Summary table are based in Eastern Time (ET).
+L520: #### Download JSON
+L521: 
+L522: To view the insights in JSON format, open the live result page, click the Insights tab, and then click Download Insights. The timestamps in the CSV file are based in Coordinated Universal Time (UTC).
+L523: ### Logs
+L524: The Logs tab on the live results page displays all of the cite286†logging statements and status messages your algorithm creates. Their timestamps in the log file are in Coordinated Universal Time (UTC). The status messages include all of the points in time when your algorithm deployed, encountered an error, sent an order, or quit executing. It's good practice to add logs in live algorithms because then you can see what is happening while it executes.
+L525: If you stop and redeploy your algorithm, the logs are retained. You can view the log file on the live results page or download them to your local machine.
+L526: #### View in the GUI
+L527: 
+L528: To see the log file your algorithm has created, open the live results page and then click the Logs tab.
+L529: 
+L530: To filter the logs, enter a search string in the Filter logs field.
+L531: 
+L532: cite287†Image†cdn.quantconnect.com L533: 
+L534: #### Download Log File
+L535: 
+L536: To download the log file, open the live result page, click the Logs tab, and then click Download Logs.
+L537: ### Project Files
+L538: 
+L539: The live results page displays the project files used to deploy the algorithm. To view the files, click the Code tab. By default, the main.py Main.cs file displays. To view other files in the project, click the file name and then select a different file from the drop-down menu.
+L540: 
+L541: cite288†Image: Algorithm code snippets†cdn.quantconnect.com L542: 
+L543: To create a new project with the project files used to deploy the algorithm, click Clone Algorithm.
+L544: ### View All Live Projects
+L545: 
+L546: The cite289†Live Dashboard page displays the status of all the live algorithms in your organizations. To view the page, log in to the Algorithm Lab and then, in the left navigation bar, click the lightning bolt icon.
+L547: 
+L548: To view the results of one of the algorithms, click its row in the table. The project opens in the Algorithm Lab. To see the live results page, click the cite262†Image: Deploy live icon†cdn.quantconnect.com Deploy Live icon at the top of the IDE.
+L549: ### Errors
+L550: 
+L551: If your live algorithm throws a runtime error, it stops executing and we send you an email. If you enabled cite290†automatic restarts when you deployed your algorithm, your algorithm will try five times to restart.
+L552: ### Share Results
+L553: 
+L554: You can share your live results with anyone, even if they don't have a QuantConnect account. To share your results, follow these steps:
+L555: 
+L556:   1. In the Share Results section of the live results page, click Make Public.
+L557:   2. To get a URL that you can share with others, click Live Stream.
+L558:   3. To get an iframe that you can embed on a website, click Embed Code.
+L559: 
+L560: The `theme` parameter of the URL defines the color theme. Valid values are `darkly` (dark) or `chrome` (light).
+L561: To stop sharing your live results, in the Share Results section of the live results page, click Make Private.
+L562: 
+L563: You can also see our cite291†Videos†www.youtube.com . You can also get in touch with us via cite292†Discord .
+L564: 
+L565: Did you find this page helpful?
+L566: 
+L567: [Button: Yes ][Button: No ]
+L568: 
+L569: Contribute to the documentation:
+--------------------------------------------------------------------------------
+QuantConnect Paper Trading - QuantConnect.com (https://www.quantconnect.com/docs/v2/cloud-platform/live-trading/brokerages/quantconnect-paper-trading)
+citeturn1102view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.quantconnect.com/docs/v2/cloud-platform/live-trading/brokerages/quantconnect-paper-trading","lineno":null}); Total lines: 506
+L0: cite0†Download Our Brand Kit QuantConnect, LEAN and Terminal Link.†cdn.quantconnect.com L1: 
+L2: [Input] [Input: ]
+L3: 
+L4: ↑↓ to select, press enter to go, use esc to exit
+L5: 
+L6: cite1†Image†cdn.quantconnect.com L7: 
+L8:   * Platform
+L9:   * cite2†Pricing L10:   * cite3†Research L11:   * cite4†Strategies L12:   *   * cite5†Datasets L13:   *   *   * cite6†Documentation L14:   * cite7†Algorithm Lab L15:   * ### SIGN IN
+L16: 
+L17:   * cite8†Sign in L18:   * Don't have an account? Join QuantConnect Today
+L19: 
+L20:   * cite9†Sign up for Free L21: #### Browse
+L22: 
+L23: cite10†Cloud Platform cite11†Welcome cite12†Getting Started cite13†Security and IP cite14†▶Organizations L24: 
+L25:   * cite15†Getting Started L26:   * cite16†Tier Features L27:   * cite17†Resources L28:   * cite18†Object Store L29:   * cite19†Support L30:   * cite20†Members L31:   * cite21†Administration 

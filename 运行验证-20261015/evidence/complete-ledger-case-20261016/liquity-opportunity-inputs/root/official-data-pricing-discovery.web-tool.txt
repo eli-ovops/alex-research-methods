@@ -1,0 +1,492 @@
+How to Query a Subgraph Using The Graph | Docs | The Graph (https://thegraph.com/docs/en/subgraphs/querying/introduction/)
+citeturn486search0 [wordlim: 200] Crawled: 3 weeks ago; # How to Query a Subgraph Using The Graph ... Each query URL requires a valid API key. ... Subgraph Studio users start on a Free Plan, which allows them to make 100,000 queries per month.
+
+2 minutes
+
+# How to Query a Subgraph Using The Graph
+
+To start querying right away, visit Graph Explorer. This guide shows you how to find a Subgraph, generate a unique URL, and run queries.
+
+## Overview
+
+Querying a Subgraph with The Graph lets you access onchain data in a fast, reliable, and structured way, without running your own indexing infrastructure. This guide shows you how to get started so you can power your dapp or analysis with blockchain data.
+
+## Steps
+
+### Step 1: Locate Your Subgraph
+
+After a Subgraph is published to The Graph Network, you can visit its Subgraph details page on Graph Explorer.
+
+### Step 2: Retrieve the Query URL
+
+On the Subgraph details page, click Query (top right) or scroll down. Each Subgraph published to The Graph Network has a unique query URL in Graph Explorer to make direct queries.
+
+ImageQuery Subgraph Button ImageQuery Subgraph URL
+
+Please see the Query API for a complete reference on how to query the Subgraph’s entities.
+
+### Step 3: Manage Your API Key
+
+Each query URL requires a valid API key. In Subgraph Studio, locate the API Keys section to create or manage your keys. Learn more about how to use Subgraph Studio here.
+
+### Step 4: Check Your Usage Plan
+
+Subgraph Studio users start on a Free Plan, which allows them to make 100,000 queries per month. Additional queries are available on the Growth Plan, which offers usage based pricing for additional queries, payable by credit card, or GRT on Arbitrum. You can learn more about billing here.
+
+## Handling Errors
+
+If you encounter 405 errors with a GET request to the Graph Explorer URL, please switch to a POST request instead.
+
+## Additional Resources
+
+  * Use GraphQL querying best practices.
+  * To query from an application, click here.
+  * View querying examples⁠.--------------------------------------------------------------------------------
+Subgraph Studio | Docs | The Graph (https://thegraph.com/docs/en/subgraphs/providers/subgraph-studio/introduction/)
+citeturn486search1 [wordlim: 200] Crawled: 6 days ago;   * Free Plan: The Free Plan includes 100,000 free monthly queries with full access to the Subgraph Studio testing environment. ... ## Query Payments with credit card ... Subgraph users can use The Graph Token (or GRT) to pay for queries on The Graph Network.With GRT, invoices will be processed at the end of each month and require a sufficient balance of GRT to make queries beyond the Free Plan quota of 100,000 monthly queries.You’ll be required to pay fees generated from your API keys.
+
+# Subgraph Studio
+
+## Querying Plans
+
+There are two plans to use when querying Subgraphs on The Graph Network.
+
+  * Free Plan: The Free Plan includes 100,000 free monthly queries with full access to the Subgraph Studio testing environment. This plan is designed for hobbyists, hackathoners, and those with side projects to try out The Graph before scaling their dapp.
+
+  * Growth Plan: The Growth Plan includes everything in the Free Plan with all queries after 100,000 monthly queries requiring payments with GRT or credit card. The Growth Plan is flexible enough to cover teams that have established dapps across a variety of use cases.
+
+Learn more about pricing here.
+
+## Query Payments with credit card
+
+  * To set up billing with credit/debit cards, users should access Subgraph Studio (https://thegraph.com/studio/)
+    1. Go to the Subgraph Studio Billing page.
+    2. Click on the “Connect Wallet” button on the top right corner of the page. You’ll be redirected to the wallet selection page. Select your wallet and click on “Connect”.
+    3. Choose “Upgrade plan” if you are upgrading from the Free Plan or choose “Manage Plan” if you have already added GRT to your billing balance in the past. Next, you can estimate the number of queries to get a pricing estimate, but this is not a required step.
+    4. To choose a credit card payment, choose “Credit card” as the payment method and fill out your credit card information. Those who have used Stripe before can use the Link feature to autofill their details.
+  * Invoices will be processed at the end of each month and require an active credit card on file for all queries beyond the free plan quota.
+
+## Query Payments with GRT
+
+Subgraph users can use The Graph Token (or GRT) to pay for queries on The Graph Network. With GRT, invoices will be processed at the end of each month and require a sufficient balance of GRT to make queries beyond the Free Plan quota of 100,000 monthly queries. You’ll be required to pay fees generated from your API keys. --------------------------------------------------------------------------------
+Pricing & Payments | Docs | The Graph (https://thegraph.com/docs/en/gateways/subgraphs/consumer-side/pricing-payments/)
+citeturn486search2 [wordlim: 200] Crawled: 3 weeks ago; A key concept for pricing is that querying and indexing are separate economic activities on The Graph Network, and a Gateway is concerned almost entirely with the first. ... For example, Edge & Node’s Subgraph Studio pricing is a reference point for this model: a free tier of 100,000 queries per month, then usage-based pricing beyond it (for example, $2 per additional 100,000 queries). ...   * Subscription Tiers: bundle an included query volume into a monthly price, with overage billed usage-based above the cap.
+
+# Pricing & Payments
+
+One of the main reasons to run a Gateway is to control how consumers pay. The Gateway settles with Indexers in the background through Graph Tally, which frees an Operator to present whatever pricing model fits their customers: pay-as-you-go, a subscription, a flat enterprise fee, or a blend of different plans. This page covers how Gateway costs are structured and the models an Operator can offer on top.
+
+## Separating Query Costs From Indexing
+
+A key concept for pricing is that querying and indexing are separate economic activities on The Graph Network, and a Gateway is concerned almost entirely with the first.
+
+  * Query Costs: what Gateway Operators pay Indexers to serve live queries. These are the per-query fees a Gateway settles through Graph Tally, sized by each Indexer’s Agora cost model and an Operator’s budget. Query cost scales with usage: more queries, more fees. This is the cost a Gateway Operator passes through (with margin) to data consumers.
+  * Indexing Costs: what it takes to get a Subgraph indexed and kept fresh in the first place. This maps directly onto how the Gateway itself incurs cost, so margins are predictable.
+
+There are two common implementations:
+
+  * Metered API Keys: a consumer holds an API key, a Gateway meters queries per key (Titorelli’s `gateway_client_fees_hourly` aggregation is built for exactly this), and an Operator bills periodically. For example, Edge & Node’s Subgraph Studio pricing is a reference point for this model: a free tier of 100,000 queries per month, then usage-based pricing beyond it (for example, $2 per additional 100,000 queries). An Operator can mirror that shape or set their own rates and free allowance.
+  * x402 Pay-Per-Query: for autonomous agents and accountless consumers, x402 settles each query in USDC on Base at request time. There is no bill and no account; the consumer pays as they go, query by query. This is the pure pay-as-you-go model and is well suited to AI data services and agent traffic.
+
+Pay-as-you-go pricing is transparent and fair, and it aligns an Operator’s revenue with their cost. Its tradeoff is variability: a consumer with spiky usage sees a spiky bill.
+
+## Subscription and Flat-Fee Models
+
+For customers who prefer predictable spend, or for enterprise relationships, a Gateway can offer subscription or flat-fee pricing instead of (or alongside) metering.
+
+  * Subscription Tiers: bundle an included query volume into a monthly price, with overage billed usage-based above the cap. The Substreams pricing tiers are a reference for this shape: a free tier, mid tiers at fixed monthly prices with generous included volume, and per-unit overage rates. Tiers let a consumer pick a predictable plan and only pay usage-based rates once they exceed it.
+  * Enterprise Tier: a single negotiated price for a defined scope of access, often paired with an SLA, dedicated support, and possibly a dedicated or staging indexing environment. This suits large customers who value predictability and guarantees over paying exactly per query. See Gateway Indexing Approaches for the SLA-backed environments that typically accompany these deals.
+
+Because a Gateway absorbs the underlying per-query settlement, an Operator is free to decouple what the consumer pays from what any single query costs the Operator. Subscriptions trade some usage-alignment for predictability, which is often exactly what enterprise customers want.
+
+## Payment Methods
+
+A Gateway can accept familiar payment rails from consumers, independent of the GRT settlement happening underneath:
+
+  * Card: for metered and subscription billing, the same way Subgraph Studio and The Graph Market accept cards.
+  * Crypto: GRT and, for x402, USDC on Base.
+
+Underneath any of these, a Gateway pays Indexers in GRT through Graph Tally escrow. The consumer’s payment method and an Operator’s Indexer settlement are deliberately decoupled, which is what makes flexible pricing possible.--------------------------------------------------------------------------------
+Subgraph Studio Pricing | The Graph (https://thegraph.com/studio-pricing/)
+citeturn486search3 [wordlim: 200] Crawled: last month; # Subgraph Studio Pricing Start free. ... Start accessing blockchain data with 100,000 free monthly queries. ... Migrating the subgraph to The Graph’s decentralized service results in faster indexing and better query resolution performance.”
+
+# Subgraph Studio Pricing Start free. Pay as you grow.
+
+Start accessing blockchain data with 100,000 free monthly queries.
+Need more data? Keep going for just $2 per 100,000 queries.
+
+  * Unlimited subgraph creation
+  * Dedicated indexing
+  * Unlimited testing
+  * Usage-based billing
+
+Start for freeGet in touch
+
+## Only pay for
+what you need
+
+### Monthly cost
+
+$4
+
+300,000 queries
+
+Free
+
+300K
+
+[Input]
+
+100K
+
+300K
+
+500K
+
+750K
+
+1M
+
+10M
+
+50M
+
+100M
+
+Subgraph Studio allows you to scale easily as your needs grow. Your first 100K monthly queries are always free.
+
+Set up plan
+
+
+## Build with performant
+and reliable data
+
+Low Latency
+
+High Uptime
+
+Resilient Network
+
+Fast Syncing
+
+
+Instantly access blockchain data on 60+ networks.
+
+See all⁠
+
+
+## The Graph powers web3
+
+### Atrium
+
+Image
+
+> “We’re using a subgraph on The Graph’s decentralized network to deliver a high-quality seamless auction experience that connects creators and artists with the collectors and brands that love their work.”
+--------------------------------------------------------------------------------
+What is included in the Free Tier? (https://support.alchemy.com/articles/5827006872-what-is-included-in-the-free-tier)
+citeturn486search4 [wordlim: 200] Crawled: last week; Last updated: August 25, 2026Free Tier Compute Units (CUs) and Compute Units Per Second (CUPs) ... Every method or operation within Alchemy's services consumes a certain amount of CUs and CUPs. ... Detailed information on the compute unit cost for each method call is readily available, helping you plan and optimize your blockchain interactions!
+
+# What is included in the Free Tier?
+
+Last updated: August 25, 2026
+
+Free Tier Compute Units (CUs) and Compute Units Per Second (CUPs)
+
+Here's what you can expect from the free tier:
+
+  * Monthly Compute Units Limit: Each free tier account is allocated up to 30 million Compute Units (CUs) every month. This account-wide limit ensures you have ample capacity to run your applications and explore different products that we offer!
+
+  * Compute Units Per Second (CUPs) Limit: On an application-wide basis, you can use up to 500 Compute Units Per Second (CUPs). This rate limit allows your applications to perform operations efficiently within that limit.
+
+## Understanding Compute Unit Costs
+
+Every method or operation within Alchemy's services consumes a certain amount of CUs and CUPs. Knowing these costs is crucial for managing your usage and staying within the free tier limits. Detailed information on the compute unit cost for each method call is readily available, helping you plan and optimize your blockchain interactions! For a comprehensive breakdown of CU and CUP costs by method, please visit: Compute Unit Costs.--------------------------------------------------------------------------------
+Alchemy Pricing: Free, Pay as You Go & Enterprise Plans (https://www.alchemy.com/pricing)
+citeturn486search5 [wordlim: 200] Crawled: last week; Arc mainnet is live on Alchemy. ... Free ... Get a recommendation on the most suitable plan for you.Configure ... [Button: Compute units][Button: Requests] ... #### Flat-rate compute pricing
+
+Arc mainnet is live on Alchemy. Start building
+
+# Built for performance. Priced for scale.
+
+Flexible plans built around your workload, not the other way around.
+
+Free
+
+Web3's most powerful free tier.
+
+  * 25 requests per second
+  * 5 apps & 5 webhooks
+  * Free 30M CU per month
+
+  * Full developer platform
+  * All mainnets & testnets
+  * Standard support
+
+Start for free
+
+Pay as You Go
+
+Pay for what you use.
+
+  * Starting from 300 requests/second
+  * 30 apps & 100 webhooks
+  * $0.525/1M CUs
+
+Included:
+
+  * Premium endpoints
+  * Enterprise-grade latency & uptime
+  * Throughput add-on to fit your needs
+
+Start building
+
+Enterprise
+
+For critical performance, security and support
+
+  * Starting from 1000 requests/second
+  * 100 apps & 500 webhooks
+  * Premium support packages
+  * Volume discounts
+  * Priority on product roadmaps
+
+Included:
+
+  * Advanced security
+  * Signed SLAs
+  * Increased eth_getLogs() ranges
+
+Contact sales
+
+Free
+
+Web3's most powerful free tier.
+
+  * 25 requests per second
+  * 5 apps & 5 webhooks
+  * Free 30M CU per month
+
+  * Full developer platform
+  * All mainnets & testnets
+  * Standard support
+
+Start for free
+
+Pay as You Go
+
+Pay for what you use.
+
+  * Starting from 300 requests/second
+  * 30 apps & 100 webhooks
+  * $0.525/1M CUs
+
+Included:
+
+  * Premium endpoints
+  * Enterprise-grade latency & uptime
+  * Throughput add-on to fit your needs
+
+Start building
+
+Enterprise
+
+For critical performance, security and support
+
+  * Starting from 1000 requests/second
+  * 100 apps & 500 webhooks
+  * Premium support packages
+  * Volume discounts
+  * Priority on product roadmaps
+
+Included:
+
+  * Advanced security
+  * Signed SLAs
+  * Increased eth_getLogs() ranges
+
+Contact sales
+
+Get a recommendation on the most suitable plan for you.Configure
+
+
+  1. 1
+
+#### Each request uses compute units
+
+Different API methods use different numbers of CUs. If you estimate from requests, choose an average that reflects the methods your app calls.
+
+  2. 2
+
+#### Flat-rate compute pricing
+
+Compute usage costs $0.525 per 1 million CUs. Throughput capacity is priced separately.
+
+  3. 3
+
+#### Peak capacity is separate
+
+Pay as You Go includes 300 RPS (10,000 CU/s). Above that, each additional 5,000 CU/s block costs $160 per month.
+
+  4. 4
+
+#### Self-serve capacity ends at 30,000 CU/s
+
+If you need more than 30,000 CU/s, contact sales for a custom capacity quote.
+
+Estimates use published self-serve Pay as You Go rates. Actual compute usage varies by API method. Throughput is measured over a rolling 10-second window.
+
+## Scale your business and your rates
+
+Features
+
+FreeStart building
+
+Pay as You GoStart building
+
+EnterpriseContact sales
+
+CORE APIS
+
+### Node API
+
+Full developer platform and core blockchain infrastructure.
+--------------------------------------------------------------------------------
+Pricing Plans | Alchemy Docs (https://www.alchemy.com/docs/reference/pricing-plans)
+citeturn486search6 [wordlim: 200] Crawled: last month; A guide to understand Alchemy's pricing plans. ... Feature  | Free Tier  | PAYG  | Enterprise Tier ... Base Compute Units  | 30,000,000  | -  | CustomCompute Unit rate  | -  | $0.525/M CU  | Custom
+
+# Pricing Plans
+
+A guide to understand Alchemy's pricing plans.
+
+# Plans overview
+
+## Feature comparison
+
+Feature  | Free Tier  | PAYG  | Enterprise Tier
+--- | --- | --- | ---
+Base Compute Units  | 30,000,000  | -  | Custom
+Compute Unit rate  | -  | $0.525/M CU  | Custom
+Base Throughput (CUs/second)  | 300  | 10,000  | Custom
+# of apps  | 5  | 30  | Unlimited
+webhooks  | 5  | 100  | 500
+Full Archive Data  | ✓  | ✓  | ✓
+Node API  | ✓  | ✓  | ✓
+Debug API  | ✗  | ✓  | ✓
+Trace API  | ✗  | ✓  | ✓
+NFT API  | ✓  | ✓  | ✓
+Transfers API  | ✓  | ✓  | ✓
+Token API  | ✓  | ✓  | ✓
+Transaction Simulation  | ✓  | ✓  | ✓
+Gas-optimized Transactions  | ✗  | ✓  | ✓
+Smart WebSockets  | ✓  | ✓  | ✓
+JavaScript SDK  | ✓  | ✓  | ✓
+Analytics & Reporting  | ✓  | ✓  | ✓
+Email Support  | ✓  | ✓  | ✓
+Devoted Support Channels  | ✗  | ✗  | ✓
+Access to Engineering & PM Teams  | ✗  | ✗  | ✓
+Custom SLAs  | ✗  | ✗  | ✓
+Priority on Product Roadmaps  | ✗  | ✗  | ✓
+--------------------------------------------------------------------------------
+Serving Queries | Docs | The Graph (https://thegraph.com/docs/en/gateways/subgraphs/consumer-side/serving-queries/)
+citeturn486search7 [wordlim: 200] Crawled: 3 weeks ago; Graph Gateways support two methods: ... x402 is the method for autonomous agents and accountless consumers: pay-per-query in USDC on Base with no API key. ... The endpoints mirror the API-key paths under an `x402` prefix (for example, `POST /api/x402/subgraphs/id/{subgraph_id}`).
+
+3 minutes
+
+# Serving Queries
+
+This page covers the consumer-facing mechanics of querying through a Gateway: how a consumer sends a query for a Subgraph, and how they authenticate. The internal routing and Indexer selection that happen behind these requests are covered in Technical Overview and Indexer Selection.
+
+## How to Query a Subgraph
+
+A consumer queries a Subgraph by sending a GraphQL request to a Gateway endpoint for that Subgraph, with credentials in the header. The Gateway resolves the target, selects Indexers, and returns the response.
+
+Requests take one of two consumer-facing shapes:
+
+  * Subgraph ID: `POST /api/subgraphs/id/{subgraph_id}`. The Gateway resolves the Subgraph ID to the appropriate deployment automatically (the latest deployment an Indexer reports as sufficiently synced). This is the usual path for a consumer who wants “the current version of this Subgraph.”
+  * Deployment ID: `POST /api/deployments/id/{deployment_id}`. The Deployment ID is the IPFS hash of a specific Subgraph manifest, used directly. This pins the consumer to an exact version.
+
+A minimal query against a running Gateway looks like this:
+    
+    `curl "https://your-gateway.example/api/subgraphs/id/<SUBGRAPH_ID>" \  -H 'content-type: application/json' \  -H "Authorization: Bearer <API_KEY>" \  -d '{"query":"{ _meta { block { number } } }"}'`
+
+The Gateway returns the first Indexer response that passes through its filters, with any fields the consumer did not request stripped out. If every selected Indexer fails, the Gateway re-selects until candidates are exhausted, so a data consumer generally sees a good response or a clear error rather than a hung request. On a Gateway whose escrow is unfunded or whose sender is not yet whitelisted by Indexers, paid queries return a `402`.
+
+## Authentication and API Keys
+
+Every request must carry credentials so a Gateway can attribute usage and enforce access. Graph Gateways support two methods:
+
+### API Keys
+
+API keys are the primary method for humans and applications, passed as `Authorization: Bearer <API_KEY>`. --------------------------------------------------------------------------------
+Pricing - Alchemy Free, Growth, Scale, and Enterprise (https://www.alchemy.com/alchemy.com/pricing)
+citeturn486search8 [wordlim: 200] Crawled: 1.3 years ago; A compute unit is a measure of how many resources (CPU, RAM, disk, etc) an API method consumes on Alchemy. ... The Pay As You Go plan is our newest pricing option, launched on February 1, 2025. ... Free plan - your onchain development journey starts here. ... Alchemy currently supports Ethereum: ... ### Why does Alchemy use compute units and not per-request pricing?
+--------------------------------------------------------------------------------
+eth_call - Ethereum API | Alchemy Docs (https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-call)
+citeturn486search9 [wordlim: 200] Crawled: today;     `curl --request POST \  --url https://eth-mainnet.g.alchemy.com/v2/docs-demo \  --header 'Content-Type: application/json' \  --data '{  "jsonrpc": "2.0",  "id": 1,  "method": "eth_call",  "params": [    {      "to": "0x69498dd54bd25aa0c886cf1f8b8ae0856d55ff13",      "value": "0x1"    },    "latest"  ]}'`
+--------------------------------------------------------------------------------
+docs/website/src/pages/en/subgraphs/querying/from-an-application.mdx at main · graphprotocol/docs · GitHub (https://github.com/graphprotocol/docs/blob/main/website/src/pages/en/subgraphs/querying/from-an-application.mdx)
+citeturn486search10 [wordlim: 200] Crawled: last week;     `https://api.studio.thegraph.com/query/<ID>/<SUBGRAPH_NAME>/<VERSION> ...     `https://gateway.thegraph.com/api/<API_KEY>/subgraphs/id/<SUBGRAPH_ID>
+--------------------------------------------------------------------------------
+Why do I see a Free tier error when calling eth_getLogs with a large block range? (https://support.alchemy.com/articles/1883074130-why-do-i-see-a-free-tier-error-when-calling-eth-getlogs-with-a-large-block-range)
+citeturn486search11 [wordlim: 200] Crawled: today; Contact [REDACTED_EMAIL] if you need the current limit for a specific chain on your plan. ... Once the upgrade takes effect, your `eth_getLogs` requests follow the PAYG block range and response size limits described above instead of the smaller Free tier restriction.
+--------------------------------------------------------------------------------
+Abstracting Key Management for Blockchain (https://upcommons.upc.edu/server/api/core/bitstreams/0abaaca7-8028-4dde-b8a6-fa34159f4cfc/content)
+citeturn486search12 [wordlim: 200] Published: 7 months ago; Alchemy has been chosen as the RPC provider for blockchain connectivity[23]. ... Plan provides 30 million Compute Units (CU) per month at no cost, with support for all ... Alchemy RPC (Free Plan)
+--------------------------------------------------------------------------------
+Looking for rough costs of querying The Graph as an API consumer (https://www.reddit.com/r/thegraph/comments/sb6rb9)
+citeturn486reddit13 [wordlim: 200] Published: 4.7 years ago; Crawled: 3.4 years ago; I'm looking for a *rough* idea of how much it costs as an api consumer to query a subgraph, given I have an api key loaded and ready to use. ... Why not use the “hosted service” by Graph since it’s completely free to query through it? ... As of right now, I have all of my cost models set so a simple 0.00005 DAI per query, which is about average for the subgraphs I'm indexing and that I've also checked.
+--------------------------------------------------------------------------------
+Tokenomics of The Graph Network (https://resources.cryptocompare.com/asset-management/18630/1739527333138.pdf)
+citeturn486search14 [wordlim: 200] Published: 3.0 years ago; Crawled: 3.0 years ago; Once a subgraph is published to The Graph's decentralized network, anyone can create an API key, add GRT to their billing balance, and query the subgraph. ... In order to run an indexing node, Indexers must stake 100,000 GRT or more with the network.
+--------------------------------------------------------------------------------
+An MCP server that finds the right subgraph by meaning, not name, then queries it for $0.01 with no API key (https://www.reddit.com/r/thegraph/comments/1w1xizh/an_mcp_server_that_finds_the_right_subgraph_by/)
+citeturn486reddit15 [wordlim: 200] Published: last month; Subgraph MCP is good at the part after that — it holds a Gateway key and ...       "query_url_x402": "https://gateway.thegraph.com/api/x402/subgraphs/id/...",
+--------------------------------------------------------------------------------
+💫 Q3 2026 on The Graph (https://www.reddit.com/r/thegraph/comments/1wv4wjy/q3_2026_on_the_graph/)
+citeturn486reddit16 [wordlim: 200] Published: 2 weeks ago; Crawled: 2 weeks ago; * Still on the Studio staging endpoint for these chains: publish before Oct 8, set up billing and an API key, then switch to a Gateway endpoint. ... A qualifying query returns HTTP 200 in under 5,000 ms, is within 50,000 blocks of chainhead, and hits a Subgraph with at least 500 GRT in signal. ... It runs the Subgraph Gateway, Subgraph Studio, and Graph Explorer, with engineers from GraphOps and Edge & Node joining to run infrastructure and own protocol work.
+--------------------------------------------------------------------------------
+Dapps & Subgraphs (https://storage.thegraph.com/2022-grants-report.pdf)
+citeturn486search17 [wordlim: 200] CryptoPunks Subgraph ... SkyDocs ... The Graph Help Bot for Telegram ... Dapp Query
+--------------------------------------------------------------------------------
+Weekly r/thegraph Discussion Thread - Nov 15 2021 - Questions, Answers, Chit Chat (https://www.reddit.com/r/thegraph/comments/quh2fw)
+citeturn486reddit18 [wordlim: 200] Published: 4.9 years ago; Crawled: 4.9 years ago; That is, I want to query data from the Uniswap V2/3 subgraph(s) directly from Python or something. ... `https://gateway.thegraph.com/api/[api-key]/subgraphs/id/0x9bde7bf4d5b13ef94373ced7c8ee0be59735a298-2` ... I succeed in Python if I call `https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3` and pass my query but I only get 100 rows, I figure because I'm not paying for it.
+--------------------------------------------------------------------------------
+Query for free? (https://www.reddit.com/r/thegraph/comments/n62rk4)
+citeturn486reddit19 [wordlim: 200] Published: 5.4 years ago; Crawled: 5.4 years ago; However it also seems possible to run any GraphQL query directly on the site for free, e.g. https://thegraph.com/explorer/subgraph/uniswap/uniswap-v2?
+--------------------------------------------------------------------------------
+It has never been easier to ship a subgraph (https://www.reddit.com/r/thegraph/comments/1wifp86/it_has_never_been_easier_to_ship_a_subgraph/)
+citeturn486reddit20 [wordlim: 200] Published: 4 weeks ago; If a subgraph already covers it, you are done, and a subgraph earning real query fees is a strong signal it works, because somebody is paying indexers to serve it. ... ** The swap, mint, burn and pricing code is Uniswap's, battle-tested across nineteen chains. ... The Graph's own Substreams docs carry a section titled *Reuse Existing Substreams Before Building*, pointing at published packages from StreamingFast, Pinax and TopLedger. ... ** An early activity check reported zero swaps in 40,000 blocks, which would have killed the project on the spot.
+--------------------------------------------------------------------------------
+Myth vs Fact (https://www.reddit.com/r/thegraph/comments/zf4jop)
+citeturn486reddit21 [wordlim: 200] Published: 3.9 years ago; Crawled: 3.8 years ago; ❌ Myth: You must run an Indexer to query subgraphs on The Graph Network. ... You can query any subgraph on the network.
+--------------------------------------------------------------------------------
+Subgraph tooling (https://res.cloudinary.com/dh8fp23nd/image/upload/v1713954627/v3-website/resources/The-GraphQL-Handbook-2024_bmiazq.pdf)
+citeturn486search22 [wordlim: 200] Published: 2.5 years ago; It acts as a contract between frontend and backend developers, ensuring clear communication and understanding of the API's capabilities. ... - Consider the following query → ... This approach autogenerates both the schema and resolvers by introspecting the underlying domain i.e. the data sources (to generate CRUD resolvers) and any existing code (similar to code-first tools, to reuse any business logic), significantly reducing the need for boilerplate code and accelerating subgraph development. ... <td>Postgraphile</td>
+--------------------------------------------------------------------------------
+Make simple query (https://www.reddit.com/r/thegraph/comments/nx4njq)
+citeturn486reddit23 [wordlim: 200] Published: 5.4 years ago; Crawled: 2.4 years ago; \- https://thegraph.com/explorer/subgraph/mstable/mstable-protocol ... \- https://thegraph.com/docs/query-the-graph
+--------------------------------------------------------------------------------
+Subgraph migration problems and solutions (https://www.reddit.com/r/thegraph/comments/szsduf)
+citeturn486reddit24 [wordlim: 200] Published: 4.6 years ago; Crawled: 4.6 years ago; We will probably have to apply a forcing function of some kind (eg: limiting traffic on the hosted service) before large swaths of dApps want to migrate from a pretty decent free service to a paid service with better uptime. ... Also The Graph is probably the first of it's kind as a decentralized protocol. ... I calculated this value based on the expectation of a certain query volume during our tests, and how much we were willing to pay for that volume. ... The "obvious" fix is to let consumers specify their budget in the subgraph studio. ... ⁠•	⁠Uh oh... to share that data we now need an efficient data analytics *pipeline* to answer questions like how much monthly usage there is per API key and how that has changed over time.
+--------------------------------------------------------------------------------
+How do I actually pay for the queries I'm making? (https://www.reddit.com/r/thegraph/comments/nw4rno)
+citeturn486reddit25 [wordlim: 200] Published: 5.4 years ago; Crawled: 5.4 years ago; For now, you can deploy your subgraph to the hosted service and continue on until somebody tells you you can’t do that anymore! ... So I can develop and deploy a subgraph for free?!
+--------------------------------------------------------------------------------
+Data Services Grants (https://storage.thegraph.com/2024-grants-report.pdf)
+citeturn486search26 [wordlim: 200] Published: 1.6 years ago; Body text says Playgrounds’ second grant explores how an experimental pipeline can transform existing Subgraph data into knowledge graph data, making it publicly accessible to applications such as Geo Genesis and any others building on top of the knowledge graph; while still in the R&D phase, this work is vital for understanding how Subgraphs can contribute to and enrich the decentralized knowledge graph. ... Body text says Top Ledger’s grant enhanced The Graph’s integration with the Solana ecosystem by developing Substreams for its most widely used protocols and programs; this initiative boosted query volume on the network, solidifying its role as the leading solution for creating high-quality blockchain datasets and APIs tailored to Solana developers.
+--------------------------------------------------------------------------------
+# Tutorial: Querying the subgraph programatically (https://resources.cryptocompare.com/asset-management/3064/1686753389902.pdf)
+citeturn486search27 [wordlim: 200] Published: 3.3 years ago; https://api.thegraph.com/subgraphs/name/moonwell-fi/moonwell-moonbeam ... It contains a JavaScript Axios example that defines `subgraphURL`, stores the GraphQL query in a template string, posts `{ "query": query }` to the subgraph, logs `result.data`, and then calls `fetchResults().then(() => { console.log("Done!")
+--------------------------------------------------------------------------------
+100x better & 100x MORE AFFORDBLE than Alchemy and Infura. Ethereum , Polygon, Optimism, Arbitrum RPC (https://www.reddit.com/r/SatoshiBets/comments/znhpor)
+citeturn486reddit28 [wordlim: 200] Published: 3.8 years ago; Even on the free plan! ... * High Rate Limits (up to 500 RPS) ... * Anonymity as you can pay with crypto and we do not store your data
+--------------------------------------------------------------------------------
+Collected query fees (https://www.reddit.com/r/thegraph/comments/11e59sq)
+citeturn486reddit29 [wordlim: 200] Published: 3.6 years ago; Crawled: 3.6 years ago; I like to visit thegraph.com website and look at the network overview data and epochs. ... When an indexer closes an allocation on a subgraph which is being used, and is generating query fees, the indexer can decide to collect the query fees.
+--------------------------------------------------------------------------------
+The Graph (https://en.wikipedia.org/wiki/The_Graph)
+citeturn486search30 [wordlim: 200] Crawled: 6 months ago; - Apechain Joins The Graph's Subgraph Studio. ... * 1.95+ billion queries per month processed as of 2024. ... * In March 2025, The Graph released its Token API beta, enabling wallets, explorers, and dapps to query real-time token balances, transaction histories, and pricing data across multiple blockchains.
+--------------------------------------------------------------------------------
+Graph Query Language (https://en.wikipedia.org/wiki/Graph_Query_Language)
+citeturn486search31 [wordlim: 200] Crawled: 6 months ago; This query would return the city of residence of each person in the graph with residential information, and, if an EU national, which country they come from.Queries are therefore able to first project a sub-graph of the graph input into the query, and then extract the data values associated with that subgraph.
+

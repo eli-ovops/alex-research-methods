@@ -1,0 +1,243 @@
+FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading (https://arxiv.org/html/2603.21330v1)
+citeturn997view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://arxiv.org/html/2603.21330v1","lineno":null}); Total lines: 306
+L0: ##### Report GitHub Issue
+L1: 
+L2: [Button: ×]
+L3: 
+L4: Title: [Input: Enter title]
+L5: 
+L6: Content selection saved. Describe the issue below:
+L7: 
+L8: Description:
+L9: 
+L10: [Button: Submit without GitHub] [Button: Submit in GitHub]
+L11: 
+L12: cite0†Back to arXiv L13: 
+L14: cite1†Why HTML?†info.arxiv.org cite2†Report Issue cite3†Back to Abstract cite4†Download PDF L15:   1. cite5†Abstract L16:   2. cite6†1 Introduction L17:   3. cite7†2 Related Work L18:   4. cite8†3 Framework L19:     1. cite9†3.1 Data Layer L20:     2. cite10†3.2 Strategy Layer L21:       1. cite11†Modular Components. L22:     3. cite12†3.3 Backtesting and Execution Layer L23:     4. cite13†3.4 Deployment-Aware Design L24:   5. cite14†4 Evaluation L25:     1. cite15†4.1 Experimental Setup and Metrics L26:     2. cite16†4.2 Baselines L27:     3. cite17†4.3 Portfolio Performance and Ablation Analysis L28:     4. cite18†4.4 Use Case Demonstrations L29:       1. cite19†Use Case 1: Portfolio Allocation Paradigms L30:       2. cite20†Use Case 2: Rolling Stock Selection L31:       3. cite21†Use Case 3: Adaptive Multi-Asset Rotation L32:     5. cite22†4.5 Paper Trading and Deployment Validation L33:       1. cite23†Paper Trading Analysis L34:         1. cite24†Allocation Trajectory Under Unified Execution Interface L35:         2. cite25†Stress Event as Risk-Module Validation L36:   6. cite26†5 Conclusions L37:   7. cite27†References L38: cite28†License: arXiv.org perpetual non-exclusive license†info.arxiv.org L39: 
+L40: arXiv:2603.21330v1 [q-fin.TR] 22 Mar 2026
+L41: # FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading
+L42: 
+L43: Hongyang Yang ^{†}^{†}thanks: Corresponding author: E-mail [REDACTED_EMAIL]    Boyu Zhang    Yang She    Xinyu Liao    Xiaoli Zhang Affiliation: AI4Finance Foundation
+L44: All authors contributed equally.
+L45: ###### Abstract
+L46: We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface. While existing open-source platforms are often backtesting- or model-centric, they rarely provide system-level consistency between research evaluation and live deployment.
+L47: FinRL-X addresses this gap through a composable strategy pipeline that integrates stock selection, portfolio allocation, timing, and portfolio-level risk overlays within a unified protocol. The framework supports both rule-based and AI-driven components, including reinforcement learning allocators and LLM-based sentiment signals, without altering downstream execution semantics. FinRL-X provides an extensible foundation for reproducible, end-to-end quantitative trading research and deployment.
+L48: The official FinRL-X implementation is available at cite29†https://github.com/AI4Finance-Foundation/FinRL-Trading†github.com .
+L49: ###### Keywords:
+L50: 
+L51: Quantitative Trading Systems Deep Reinforcement Learning Financial Portfolio Optimization Systematic Trading.
+L52: ## 1 Introduction
+L53: 
+L54: Quantitative trading research has rapidly progressed in recent years, producing increasingly sophisticated signal models, portfolio construction techniques, and learning-based trading agents [cite30†3 , cite31†23 , cite32†22 , cite33†33 , cite34†10 ]. However, many research prototypes remain difficult to reproduce and deploy. Practical trading systems must address broader engineering challenges, including data reliability, interface consistency, execution realism, and system robustness.
+L55: Existing open-source frameworks typically address isolated stages of the trading pipeline. Recent LLM-based approaches, such as BloombergGPT [cite35†27 ], FinGPT [cite36†29 , cite37†25 , cite38†13 ], and FinRobot [cite39†31 , cite40†34 ], improve financial text understanding and signal generation, but remain focused on modeling rather than end-to-end system integration.
+L56: Research-oriented platforms such as FinRL [cite41†14 , cite42†30 ] and TensorTrade [cite43†24 ] enable rapid experimentation with reinforcement learning agents but primarily focus on training environments rather than deployment-consistent architectures. Engineering-oriented libraries including Backtrader [cite44†4 ], Zipline [cite45†21 ], bt [cite46†17 ], vectorbt [cite47†19 ], Qlib [cite48†32 ], and TradingAgents [cite49†28 ] provide robust backtesting and evaluation utilities, yet are generally used as standalone components.
+L57: In practice, users must still integrate data ingestion, enforce consistent strategy interfaces (e.g., selection–allocation–timing–risk), and implement broker connectivity and monitoring to obtain a reproducible end-to-end system.
+L58: The transition from research backtesting to live deployment introduces system-level distortions that are rarely formalized in academic trading frameworks. We categorize these into two primary deployment gaps.
+L59: (1) Backtesting-to-paper-trading gap. Offline backtesting environments rely on simplified execution assumptions that diverge from broker-mediated trading environments. Common distortions include oversimplified execution logic (instant fills at bar prices), unrealistic transaction cost modeling, absence of market impact simulation, lack of order book dynamics, survivorship bias, and data feed inconsistencies [cite50†5 , cite51†9 ].
+L60: These issues create a mismatch between simulated reality and brokered reality, leading to inflated performance metrics and unstable behavior once connected to a trading API.
+L61: (2) Paper-trading-to-live-trading gap. Even when strategies pass broker-integrated paper trading, additional execution and operational risks emerge in live markets.
+L62: These include realistic fill uncertainty (latency, partial fills, slippage), liquidity and queue position effects, API behavior differences, infrastructure fragility (server crashes, disconnections), state recovery failures, real capital constraints (margin rules, settlement timing), and extreme systemic events such as flash crashes or faulty code deployments [cite52†6 , cite53†1 ]. These factors introduce execution distortion and operational risk that are typically absent in academic simulations.
+L63: These two gaps reveal that reproducible modeling alone is insufficient. What is required is a deployment-aware system architecture that preserves interface consistency across research, backtesting, broker simulation, and live execution, while explicitly accounting for execution realism and operational resilience.
+L64: To address these challenges, we introduce FinRL-X, a modular, deployment-oriented trading system built around a unified weight-centric interface. It structures the workflow into four layers: data, strategy, backtesting, and broker-integrated execution, where the strategy layer composes modular decision components. By preserving consistent weight semantics across layers, FinRL-X reduces discrepancies between offline evaluation and live deployment.
+L65: 
+L66: Our contributions are summarized as follows:
+L67: 
+L68:   * •
+L69: Deployment-aware system architecture. We formalize and address the backtesting-to-deployment gaps through a layered, weight-centric design that unifies research and execution interfaces.
+L70: 
+L71:   * •
+L72: 
+L73: Composable trading abstraction. We structure trading workflows as modular transformations (selection–allocation–timing–risk), enabling seamless integration of rule-based and learning-based strategies without altering downstream components.
+L74: 
+L75:   * •
+L76: Execution-consistent evaluation. We provide standardized backtesting, broker-integrated execution (e.g., Alpaca [cite54†2 ]), and monitoring mechanisms to ensure consistency between simulation and deployment.
+L77: 
+L78:   * •
+L79: 
+L80: Open-source release. We release FinRL-X as an extensible library with reproducible workflows and runnable examples to facilitate both research and deployment experimentation.
+L81: ## 2 Related Work
+L82: Open-source quantitative trading platforms are typically stage-specific: frameworks such as Zipline [cite45†21 ], Backtrader [cite44†4 ], bt [cite46†17 ], and vectorbt [cite47†19 ] focus on backtesting, while AI-oriented systems including Qlib [cite48†32 ], TradingAgents [cite49†28 ], and TensorTrade [cite43†24 ] emphasize offline ML/RL research. QuantConnect Lean [cite55†20 ] offers broker-integrated trading, but is not structured as a modular research-oriented systems architecture.
+L83: In contrast, FinRL-X adopts a deployment-aware, weight-centric design that unifies data, strategy, evaluation, and execution within a single interface (Table cite56†1 ).
+L84: Table 1: Comparison of FinRL-X with representative open-source quantitative trading platforms.
+L85: Feature  | FinRL-X  | Qlib  | TradingAgents  | Zipline/Backtrader  | QuantConnect Lean
+L86: --- | --- | --- | --- | --- | ---
+L87: Primary Orientation  | End-to-End System  | ML Research  | Agent-Based Trading  | Backtesting  | End-to-End Platform
+L88: Broker Integration  | Yes  | No  | No  | No  | Yes
+L89: Deployment-Consistent Interface  | Yes  | No  | No  | No  | Partial
+L90: Reinforcement Learning Support  | Yes  | Limited  | Yes  | No  | Partial
+L91: Modular Strategy Pipeline  | Yes  | No  | No  | No  | Partial
+L92: Portfolio-Level Risk Overlay  | Yes  | No  | No  | No  | Partial
+L93: Open Source License  | Apache 2.0  | MIT  | Apache 2.0  | Apache 2.0  | Apache 2.0
+L94: ## 3 Framework
+L95: 
+L96: cite57†Image: Refer to caption L97: 
+L98: Figure 1: FinRL-X Framework: A layered, end-to-end trading architecture that unifies data processing, strategy construction, backtesting, and broker-integrated execution within a consistent pipeline, illustrating the workflow from data ingestion to live execution.
+L99: FinRL-X is a modular, deployment-oriented trading platform that structures the quantitative trading workflow into four layers—data, strategy, backtesting, and execution—as shown in Figure cite58†1 . Its design goal is to reduce the engineering overhead of building end-to-end systems by enforcing clear module boundaries and stable interfaces, thereby enabling reproducible offline evaluation and seamless transition to paper or live trading.
+L100: ### 3.1 Data Layer
+L101: The data layer provides a unified pipeline for ingesting and normalizing structured (market, fundamental, macro) and unstructured (news) inputs, with primary integration to FMP [cite59†8 ] and extensible provider support. All sources are aligned to a shared trading calendar to enable consistent rebalancing and evaluation, while news text is transformed into structured sentiment signals via LLM-based preprocessing for integration into the weight-centric strategy pipeline.
+L102: Reproducibility is ensured through persistent storage of raw snapshots and processed features, reducing discrepancies between offline experiments and deployment.
+L103: ### 3.2 Strategy Layer
+L104: 
+L105: The strategy layer adopts a weight-centric architectural principle. In FinRL-X, the target portfolio weight vector $w_{t}\in\mathbb{R}^{n}$ is treated as the sole interface contract between strategy logic and downstream evaluation or execution modules. Rather than emitting trading signals, position deltas, or broker-specific orders, every strategy component produces a target allocation vector that specifies the desired capital fraction assigned to each asset at time $t$.
+L106: Formally, let $\mathcal{U}_{t}$ denote the tradable asset universe at time $t$. The strategy layer defines a sequence of contract-preserving transformations that map time-aligned inputs into a feasible portfolio weight vector:
+L107: 
+L108:  | $$w_{t}=\mathcal{R}_{t}\big(\mathcal{T}_{t}(\mathcal{A}_{t}(\mathcal{S}_{t}(\mathcal{X}_{\leq t})))\big),$$  |
+L109: 
+L110: where $\mathcal{S}$ denotes stock selection, $\mathcal{A}$ portfolio allocation, $\mathcal{T}$ timing adjustment, and $\mathcal{R}$ portfolio-level risk overlay.
+L111: This weight-centric abstraction provides three system-level advantages: (i) it decouples strategy construction from broker implementation details; (ii) it enables composable transformations across heterogeneous rule-based and learning-based modules; and (iii) it ensures deployment consistency, as both backtesting and live execution consume the same weight representation.
+L112: 
+L113: Algorithm 1 Weight-Centric Trading Pipeline
+L114: 1: Data streams $\mathcal{D},\mathcal{F},\mathcal{T},\mathcal{R}$; rebalancing times $\{t_{1},\dots,t_{n}\}$
+L115: 
+L116: 2: Initialize portfolio value $P_{0}$
+L117: 
+L118: 3: for each $t$ do
+L119: 
+L120: 4:   $\mathcal{C}_{t}\leftarrow\textsc{Select}(\mathcal{F}_{\leq t},\mathcal{U}_{t})$
+L121: 
+L122: 5:   $w_{t}^{base}\leftarrow\textsc{Allocate}(\mathcal{C}_{t})$
+L123: 
+L124: 6:   $w_{t}^{timing}\leftarrow\textsc{TimeAdjust}(w_{t}^{base},\mathcal{T}_{\leq t})$
+L125: 
+L126: 7:   $w_{t}\leftarrow\textsc{RiskOverlay}(w_{t}^{timing},\mathcal{R}_{\leq t})$
+L127: 8:   Observe realized returns $r_{t}$
+L128: 
+L129: 9:   $P_{t}\leftarrow P_{t-1}(1+w_{t}^{\top}r_{t})$
+L130: 
+L131: 10: end for
+L132: 
+L133: 11: return $P_{n}$
+L134: ##### Modular Components.
+L135: The pipeline consists of four contract-preserving transformations. Stock Selection constructs a candidate set $\mathcal{C}_{t}\subseteq\mathcal{U}_{t}$ using fundamentals or learned scoring models under strict no-lookahead semantics. Portfolio Allocation maps $\mathcal{C}_{t}$ to feasible base weights $w_{t}^{base}$ (e.g., equal-weight, mean–variance, minimum-variance, or DRL-based policies) under consistent normalization and leverage constraints.
+L136: Timing Adjustment transforms $w_{t}^{base}$ into $w_{t}^{timing}$ using trend-based or learning-based signals without altering the weight interface. Risk Overlay applies volatility-aware exposure scaling (e.g., VIX-based) at the portfolio level, adjusting aggregate exposure while preserving relative allocations to produce final executable weights $w_{t}$.
+L137: ### 3.3 Backtesting and Execution Layer
+L138: 
+L139: FinRL-X reuses a unified weight interface for both offline backtesting (via bt [cite46†17 ]) and live broker execution, ensuring consistent portfolio semantics across evaluation and deployment. The executor converts target weights into orders with configurable safeguards and logs realized allocations for post-trade consistency checks.
+L140: ### 3.4 Deployment-Aware Design
+L141: 
+L142: Beyond modeling accuracy, quantitative trading systems face systematic distortions when transitioning from research backtesting to live deployment. Let $\mathcal{S}_{research}$, $\mathcal{S}_{paper}$, and $\mathcal{S}_{live}$ denote system behavior under offline simulation, broker-integrated paper trading, and live execution, respectively. In practice,
+L143: 
+L144:  | $$\mathcal{S}_{research}\neq\mathcal{S}_{paper}\neq\mathcal{S}_{live},$$  |
+L145: due to execution simplifications, infrastructure instability, and operational constraints.
+L146: FinRL-X narrows these deployment gaps architecturally. It reduces the backtesting-to-paper gap by enforcing consistent execution semantics across environments: strategies output broker-agnostic weight vectors, while simulation incorporates transaction costs, slippage modeling, and event-driven order handling aligned with broker APIs.
+L147: Data ingestion follows a unified schema to ensure consistency between historical replay and live feeds, minimizing discrepancies caused by data formatting or synchronization differences.
+L148: To mitigate the paper-to-live gap, FinRL-X introduces deployment-oriented safeguards at the execution layer. These include state persistence for crash recovery, structured logging for post-trade reconciliation, and fault-tolerant broker interaction mechanisms that handle API interruptions and execution anomalies. Importantly, these mechanisms operate independently of strategy logic, preserving modularity while improving operational resilience.
+L149: By maintaining a unified weight interface across research, simulation, and execution layers, and by explicitly engineering for execution realism and robustness, FinRL-X reduces behavioral divergence between offline evaluation and live deployment.
+L150: ## 4 Evaluation
+L151: 
+L152: We evaluate FinRL-X from a system-level perspective, emphasizing reproducibility, modular composability, and deployment consistency in addition to return performance. Experiments compare allocation paradigms, timing mechanisms, and risk overlays under a unified backtesting protocol with standardized metrics.
+L153: ### 4.1 Experimental Setup and Metrics
+L154: Experiments are conducted on liquid U.S. equities and ETFs, with SPY and QQQ as benchmark indices. The historical backtesting horizon spans January 7, 2018 to October 24, 2025 under proportional transaction costs of 10 bps per side. A broker-integrated paper-trading evaluation (e.g., Alpaca [cite54†2 ]) is conducted from October 26, 2025 to March 12, 2026 to assess deployment behavior.
+L155: All decisions at time $t$ rely strictly on information available up to $t$, and learning-based models are evaluated using rolling out-of-sample validation.
+L156: Evaluation metrics. Return (cumulative, annualized), risk (volatility, maximum drawdown), risk-adjusted performance (Sharpe, Sortino, Calmar), and deployability (portfolio turnover).
+L157: ### 4.2 Baselines
+L158: 
+L159: We compare FinRL-X with representative baselines from four categories:
+L160: 
+L161:   * •
+L162: 
+L163: Classical allocation. Equal-weight portfolios serve as a reference baseline. Variance-based portfolio construction methods are also included, namely Mean–Variance optimization [cite60†15 ] and Minimum-Variance allocation [cite61†7 ].
+L164: 
+L165:   * •
+L166: Learning-based allocation. Deep reinforcement learning (DRL) allocators generate continuous portfolio weights through sequential decision-making [cite62†16 , cite63†11 ]. Model selection is performed using rolling out-of-sample validation.
+L167: 
+L168:   * •
+L169: 
+L170: Timing strategies. Trend-following approaches including Time-Series Momentum (TSMOM) [cite64†18 ] and Kaufman Adaptive Moving Average (KAMA) [cite65†12 ] provide rule-based market exposure control.
+L171: 
+L172:   * •
+L173: Risk overlays. A VIX-based volatility scaling mechanism [cite66†26 ] adjusts portfolio exposure as a modular post-allocation risk management overlay.
+L174: 
+L175: Table 2: Performance and risk metrics across benchmarks
+L176: Strategy  | Cum. Return  | Ann. Return  | Ann. Vol  | Sharpe  | Sortino  | Calmar  | Max DD  | DD Duration
+L177: --- | --- | --- | --- | --- | --- | --- | --- | ---
+L178: SPY  | 2.63  | 0.14  | 0.17  | 0.84  | 0.76  | 0.60  | -0.23  | 23
+L179: QQQ  | 3.61  | 0.19  | 0.20  | 0.95  | 0.93  | 0.60  | -0.33  | 23
+L180: KAMA  | 2.40  | 0.12  | 0.21  | 0.57  | 0.60  | 0.43  | -0.29  | 23
+L181: MeanVar (No Timing)  | 2.19  | 0.11  | 0.22  | 0.53  | 0.56  | 0.37  | -0.31  | 41
+L182: MeanVar (With Timing)  | 2.59  | 0.14  | 0.19  | 0.74  | 0.76  | 0.52  | -0.27  | 38
+L183: MinVar (No Timing)  | 2.49  | 0.13  | 0.21  | 0.63  | 0.68  | 0.47  | -0.28  | 25
+L184: MinVar (With Timing)  | 2.97  | 0.16  | 0.18  | 0.90  | 0.94  | 0.60  | -0.27  | 23
+L185: Equal (No Timing)  | 2.11  | 0.11  | 0.20  | 0.54  | 0.53  | 0.40  | -0.27  | 27
+L186: Equal (With Timing)  | 2.64  | 0.14  | 0.16  | 0.87  | 0.85  | 0.62  | -0.23  | 23
+L187: DRL (No Timing)  | 2.33  | 0.12  | 0.22  | 0.55  | 0.54  | 0.40  | -0.31  | 18
+L188: DRL (With Timing)  | 3.03  | 0.17  | 0.18  | 0.89  | 0.87  | 0.61  | -0.27  | 18
+L189: ### 4.3 Portfolio Performance and Ablation Analysis
+L190: 
+L191: FinRL-X is designed to support composable strategy modules under identical execution semantics. We validate this modularity through controlled ablations that isolate timing and overlay effects while keeping the remaining pipeline unchanged.
+L192: Timing ablation (DRL). Figure cite67†2 compares DRL allocation with and without timing against the SPY benchmark. The timing-enhanced variant achieves higher cumulative returns and lower drawdowns, demonstrating that timing can be integrated without modifying backtest or execution interfaces.
+L193: Cross-strategy ablation. Table cite68†2 reports standardized return and risk metrics across representative strategies. Across MeanVar, MinVar, Equal, and DRL configurations, timing-enabled variants consistently improve risk-adjusted performance and moderate drawdown relative to their base counterparts.
+L194: Figure 2: Ablation study of DRL-based allocation with and without timing adjustment. Incorporating the timing module improves cumulative performance and moderates drawdown relative to both the base DRL strategy and the SPY benchmark.
+L195: ### 4.4 Use Case Demonstrations
+L196: 
+L197: To illustrate end-to-end system flexibility, we present representative use cases that isolate the contribution of individual components while keeping the same workflow (data $\rightarrow$ strategy $\rightarrow$ backtest $\rightarrow$ optional execution) unchanged.
+L198: 
+L199: Table 3: Performance comparison of representative use cases and benchmark indices (2018–2025).
+L200: Metric  | Rolling Strategy  | Adaptive Rotation  | QQQ  | SPY
+L201: --- | --- | --- | --- | ---
+L202: Cumulative Return  | 5.98  | 4.80  | 4.02  | 2.80
+L203: Annualized Return (%)  | 25.85  | 22.32  | 19.56  | 14.14
+L204: Annualized Volatility (%)  | 27.85  | 20.30  | 24.20  | 19.61
+L205: Sharpe Ratio  | 0.93  | 1.10  | 0.81  | 0.72
+L206: Maximum Drawdown (%)  | -38.95  | -21.46  | -35.12  | -33.72
+L207: Calmar Ratio  | 0.66  | 1.04  | 0.56  | 0.42
+L208: Win Rate (%)  | 54.36  | 54.77  | 56.25  | 55.28
+L209: ##### Use Case 1: Portfolio Allocation Paradigms
+L210: We evaluate heterogeneous portfolio allocation mechanisms under a unified weight-centric interface, including learning-based DRL allocation, classical optimization-based methods (Mean–Variance, Minimum-Variance), equal-weight baselines, and signal-driven timing strategies such as KAMA operating as standalone weighting pathways. By enforcing identical data and execution semantics, FinRL-X enables fair comparison across fundamentally different allocation paradigms without architectural modification.
+L211: Backtesting results for this use case are consolidated in Figure cite67†2 and Table cite68†2 .
+L212: Figure 3: Backtest performance comparison across representative strategy configurations under the unified weight-centric protocol (January 7, 2018 – October 24, 2025). Results illustrate cumulative portfolio trajectories relative to benchmark references.
+L213: ##### Use Case 2: Rolling Stock Selection
+L214: 
+L215: This use case tests the rolling stock selection module, where the universe is updated upon new quarterly financial reports. We use all component stocks of the NASDAQ 100 index as candidates and select the top 25% to construct a portfolio with DRL-based allocation. Figure cite69†3 (line Rolling Selection) shows cumulative returns. Table cite70†3 (Rolling Strategy) reports performance relative to SPY and QQQ.
+L216: ##### Use Case 3: Adaptive Multi-Asset Rotation
+L217: This use case presents an adaptive multi-asset rotation strategy designed to achieve stable excess returns relative to QQQ across regimes. Assets are grouped into Growth, Real Assets, and Defensive buckets, with at most two active groups selected per weekly rebalance. Group selection is driven by Information Ratio relative to QQQ, while intra-group allocation uses residual momentum with robust exception handling. Regime indicators are used for risk gating rather than alpha generation.
+L218: Figure cite69†3 (line Adaptive Rotation) shows sustained outperformance with improved drawdown control across cycles. Table cite70†3 (Adaptive Rotation) reports risk-adjusted metrics and drawdown improvements relative to SPY and QQQ.
+L219: ### 4.5 Paper Trading and Deployment Validation
+L220: 
+L221: Figure 4: Paper trading performance relative to benchmark indices (October 26, 2025 – March 12, 2026), demonstrating deployment-consistent execution under daily rebalancing.
+L222: Paper trading as deployment-consistency validation. To bridge offline evaluation and live deployment, we execute an ensemble strategy combining Rolling Selection and Adaptive Rotation in an Alpaca paper trading environment from October 2025 to March 2026 under daily rebalancing. While the evaluation horizon is limited, the results demonstrate stable deployment behavior and consistent execution under real broker conditions.
+L223: Specifically, the experiment serves to validate operational robustness and consistency between offline portfolio targets and broker-level execution. Figure cite71†4 and Table cite72†4 present the resulting equity curve and summary performance statistics.
+L224: Table 4: Performance comparison between paper trading and benchmark indices (Oct 26, 2025–Mar 12, 2026, Daily Turnover).
+L225: Metric  | Strategy  | SPY  | QQQ
+L226: --- | --- | --- | ---
+L227: Cumulative Return  | 1.20  | 0.97  | 0.95
+L228: Total Return (%)  | 19.76  | -2.51  | -4.79
+L229: Annualized Return (%)  | 62.16  | -6.60  | -12.32
+L230: Annualized Volatility (%)  | 31.75  | 11.96  | 16.79
+L231: Sharpe Ratio  | 1.96  | -0.55  | -0.73
+L232: Maximum Drawdown (%)  | -12.22  | -5.35  | -7.88
+L233: Calmar Ratio  | 5.09  | -1.23  | -1.56
+L234: Win Rate (%)  | 64.89  | 52.13  | 54.02
+L235: In addition to return metrics, we track deployment-oriented indicators such as order rejection rate, execution guardrail triggers, and portfolio weight tracking error between target and realized allocations. These indicators remain consistently low throughout the paper trading period, suggesting stable execution behavior and high fidelity between target and realized portfolios.
+L236: Figure 5: Portfolio allocation trajectory under the unified weight-based execution framework during paper trading. The figure illustrates time-varying exposure adjustments across asset groups, demonstrating modular allocation outputs that are directly executable without architectural changes.
+L237: #### Paper Trading Analysis
+L238: 
+L239: To evaluate deployment consistency beyond offline backtesting, we conducted a six-month paper trading session from October 26, 2025 to March 12, 2026 using the ensemble configuration under daily rebalancing.
+L240: As shown in Figure cite71†4 , the strategy achieved a total return of +19.76%, outperforming both SPY and QQQ over the same period. Given the limited horizon, these results are not intended to establish statistically significant alpha. Rather, the experiment validates the end-to-end execution pipeline, including portfolio generation, broker connectivity, order routing, execution monitoring, and post-trade reconciliation under live-like conditions.
+L241: ##### Allocation Trajectory Under Unified Execution Interface
+L242: 
+L243: Figure cite73†5 illustrates the time-varying portfolio weight allocations generated by the strategy during the paper trading window. Rather than emphasizing sector-level performance attribution, the figure highlights how the allocation module produces dynamic weight vectors that are transmitted unchanged through the unified weight-based execution interface.
+L244: The observed allocation shifts reflect regime-aware adjustments driven by relative momentum and risk signals. Importantly, no architectural modification was required when transitioning from offline backtesting to broker-level execution, demonstrating structural consistency between research and deployment environments.
+L245: ##### Stress Event as Risk-Module Validation
+L246: 
+L247: The paper-trading window also includes an adverse episode: the portfolio experienced a peak-to-trough drawdown of approximately 12.2% following an extreme move in a leveraged instrument. We treat this as a deployment-relevant stress case rather than a performance headline, highlighting the nonlinear risk of leveraged products and motivating safeguards such as volatility-aware scaling and instrument-specific exposure caps.
+L248: Because execution is driven by a unified weight interface, the same post-trade accounting and attribution pipeline applies without modifying strategy logic, reinforcing the modular and diagnosable design of FinRL-X.
+L249: ## 5 Conclusions
+L250: 
+L251: FinRL-X is a deployment-consistent, modular trading system that unifies data processing, strategy composition, evaluation, and broker execution within a single architecture. By adopting a weight-centric interface, the framework enforces consistent decision semantics across research, backtesting, and live trading, reducing discrepancies between offline evaluation and real-world deployment.
+L252: The modular design supports flexible integration of heterogeneous strategies while preserving reproducibility and composability. Empirical evaluation, including broker-integrated paper trading, demonstrates stable execution behavior under realistic conditions. Future work will extend FinRL-X toward broader asset classes and more advanced execution-aware strategies for scalable real-world deployment.
+L253: ## Acknowledgements
+L254: 
+L255: This work is developed and maintained under the AI4Finance Foundation open-source ecosystem. The AI4Finance Foundation^{1}^{1} 1 cite74†https://ai4finance.org†ai4finance.org was founded in 2017 at Columbia University. Some authors contributed to this work while also enrolled as students at Columbia University. FinRL and the FinRL logo are trademarks of FinRL LLC and are used with permission.
+L256: ## References
+L257:   * [1] Alpaca Markets (2025) Paper trading vs. live trading: a data-backed guide on when to start trading real money. Note: cite75†https://alpaca.markets/learn/paper-trading-vs-live-trading-a-data-backed-guide-on-when-to-start-trading-real-money†alpaca.markets Accessed: 2026-02 Cited by: cite76†§1 .
+L258:   * [2] Alpaca (2025) Alpaca api documentation: paper trading. Note: cite77†https://docs.alpaca.markets/docs/paper-trading†docs.alpaca.markets Cited by: cite78†3rd item , cite79†§4.1 .
+L259:   * [3] A. Ang (2013) Factor investing. Columbia Business School Research Paper (13-42). Cited by: cite80†§1 .
+L260:   * [4] Backtrader (2015) Backtrader: a feature-rich python framework for backtesting and trading. Note: cite81†https://www.backtrader.com/†www.backtrader.com Cited by: cite82†§1 , cite83†§2 .
+L261:   * [5] D. Bailey, J. Borwein, M. Lopez de Prado, and Q. J. Zhu (2017) The probability of backtest overfitting. The Journal of Computational Finance 20 (4), pp. 39–69. Cited by: cite84†§1 .
+L262:   * [6] Á. Cartea, S. Jaimungal, and J. Penalva (2015) Algorithmic and high-frequency trading. Cambridge University Press. Cited by: cite76†§1 .
+L263:   * [7] R. Clarke, H. de Silva, and S. Thorley (2006) Minimum-variance portfolio composition. The Journal of Portfolio Management 33 (2), pp. 10–24. Cited by: cite85†1st item .
+L264:   * [8] Financial Modeling Prep (2026) Financial modeling prep. Note: cite86†https://site.financialmodelingprep.com/†site.financialmodelingprep.com Accessed: 2026-01-04 Cited by: cite87†§3.1 .
+L265:   * [9] Y. Ganar (2026) Why backtesting environments differ from live markets: technical factors explained. Note: cite88†https://algobulls.com/blog/algo-trading/backtesting-technical-factor†algobulls.com Accessed: 2026-02 Cited by: cite84†§1 .
+L266:   * [10] X. Han, N. Wang, S. Che, H. Yang, K. Zhang, and S. X. Xu (2024) Enhancing investment analysis: optimizing ai-agent collaboration in financial research. In ICAIF 2024: Proceedings of the 5th ACM International Conference on AI in Finance, pp. 538–546. Cited by: cite80†§1 .
+

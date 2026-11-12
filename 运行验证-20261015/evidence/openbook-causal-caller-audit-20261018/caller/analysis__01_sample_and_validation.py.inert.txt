@@ -1,0 +1,134 @@
+#!/usr/bin/env python
+"""A1: sample description and validation of the reconstructed book.
+
+t1_sample           per coin: fills, aggressive orders, wallets, notional, TWAP / liquidation / order-type shares,
+                    side-assignment diagnostics, pre-trade mid coverage and age, spreads and markouts
+t1_book_validation  per coin: blocks, block gaps, crossed or locked block closes, quoted spread and depth quantiles,
+                    and where fills print relative to the prior block's touch (at / through / inside / wrong side)
+
+Usage:  python analysis/01_sample_and_validation.py [--coins BTC ETH SOL] [--test]
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+import time
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import polars as pl
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from hlmicro.config import ASSETS, DER  # noqa: E402
+from hlmicro.fills import add_time_cols  # noqa: E402
+from hlmicro.reporting import save_table  # noqa: E402
+
+TIF_ALO, TIF_GTC, TIF_IOC, TIF_FRONTEND = 0, 1, 2, 4
+
+
+def nw_mean(F: pl.DataFrame, col: str) -> float:
+    return float((F[col] * F["notional"]).sum() / F.filter(pl.col(col).is_not_null())["notional"].sum())
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--coins", nargs="*", default=ASSETS)
+    ap.add_argument("--test", action="store_true", help="use the _test fills and the book_test replay")
+    args = ap.parse_args()
+    t0 = time.time()
+    tag = "_test" if args.test else ""
+    bookdir = "book_test" if args.test else "book"
+    rows, brows = [], []
+    for c in args.coins:
+        F = add_time_cols(pl.read_parquet(DER / "fills" / f"{c}{tag}.parquet"))
+        n = F.height
+        ords = F.select(["taker", "taker_oid"]).unique().height
+        with_mid = F.filter(pl.col("mid_pre").is_not_null())
+        multi = (
+            F.group_by(["taker", "taker_oid", "ts"]).agg(pl.n_unique("maker").alias("k")).filter(pl.col("k") > 1).height
+        )
+        rows.append(
+            {
+                "coin": c,
+                "fills": n,
+                "aggressive_orders": ords,
+                "taker_wallets": F["taker"].n_unique(),
+                "maker_wallets": F["maker"].n_unique(),
+                "notional_usd_bn": float(F["notional"].sum() / 1e9),
+                "twap_fill_share": float(F["taker_twap"].mean()),
+                "twap_notional_share": float(F.filter(pl.col("taker_twap"))["notional"].sum() / F["notional"].sum()),
+                "liquidation_fill_share": float(F["taker_liq"].mean()),
+                "liquidation_notional_share": float(
+                    F.filter(pl.col("taker_liq"))["notional"].sum() / F["notional"].sum()
+                ),
+                "taker_ioc_share": float((F["taker_tif"] == TIF_IOC).mean()),
+                "taker_gtc_share": float((F["taker_tif"] == TIF_GTC).mean()),
+                "taker_alo_share": float((F["taker_tif"] == TIF_ALO).mean()),
+                "taker_frontend_market_share": float((F["taker_tif"] == TIF_FRONTEND).mean()),
+                "side_from_status_share": float(F["agg_rule_status"].mean()),
+                "side_conflict_share": float(F["agg_rule_conflict"].mean()),
+                "premid_coverage": float(F["mid_pre"].is_not_null().mean()),
+                "premid_age_ms_p50": float(with_mid["pre_age_ms"].median()),
+                "premid_age_ms_p99": float(with_mid["pre_age_ms"].quantile(0.99)),
+                "mo_10s_coverage": float(F["mo_10s"].is_not_null().mean()),
+                "qspread_bps_p50": float(F["qspread_bps_pre"].median()),
+                "eff_half_spread_bps_nw": float((F["eff_half_spread_bps"] * F["notional"]).sum() / F["notional"].sum()),
+                "markout_10s_bps_nw": nw_mean(F, "mo_10s"),
+                "markout_1s_bps_nw": nw_mean(F, "mo_1s"),
+                "fills_per_aggressive_order_mean": n / ords,
+                "share_orders_multi_maker": float(multi / F.select(["taker", "taker_oid", "ts"]).unique().height),
+            }
+        )
+        # ---- book validation: block closes and where fills print relative to the prior block's touch
+        bb = pl.read_parquet(DER / bookdir / f"bbo_{c}.parquet").sort("ts")
+        spr = (bb["ask"] - bb["bid"]) / ((bb["ask"] + bb["bid"]) / 2) * 1e4
+        gaps = np.diff(bb["ts"].to_numpy()) / 1e6
+        ts = F["ts"].to_numpy()
+        bts = bb["ts"].to_numpy()
+        bid = bb["bid"].to_numpy()
+        ask = bb["ask"].to_numpy()
+        k = np.searchsorted(bts, ts, side="left") - 1
+        ok = (k >= 0) & F["mid_pre"].is_not_null().to_numpy()
+        kk = np.clip(k, 0, None)
+        px = F["px"].to_numpy()
+        buy = F["sign"].to_numpy() == 1
+        tol = 1e-7 * px  # tick-grid floats vs parsed trade prices
+        d_ask, d_bid = px - ask[kk], px - bid[kk]
+        brows.append(
+            {
+                "coin": c,
+                "blocks": bb.height,
+                "block_gap_ms_p50": float(np.median(gaps)),
+                "block_gap_ms_p90": float(np.percentile(gaps, 90)),
+                "crossed_or_locked_block_closes": int((spr <= 0).sum()),
+                "quoted_spread_bps_p10": float(spr.quantile(0.1)),
+                "quoted_spread_bps_p50": float(spr.median()),
+                "quoted_spread_bps_p90": float(spr.quantile(0.9)),
+                "touch_depth_usd_p50": float(((bb["bid_sz"] * bb["bid"] + bb["ask_sz"] * bb["ask"]) / 2).median()),
+                "depth_5bps_usd_p50": float(((bb["dep5_bid"] * bb["bid"] + bb["dep5_ask"] * bb["ask"]) / 2).median()),
+                "live_orders_p50": float(bb["nlive"].median()),
+                "buy_fill_px_eq_prior_ask": float(np.mean(np.abs(d_ask)[ok & buy] <= tol[ok & buy])),
+                "buy_fill_px_below_prior_bid": float(np.mean(d_bid[ok & buy] < -tol[ok & buy])),
+                "buy_fill_px_inside_prior_spread": float(np.mean((d_bid > tol)[ok & buy] & (-d_ask > tol)[ok & buy])),
+                "buy_fill_px_above_prior_ask": float(np.mean(d_ask[ok & buy] > tol[ok & buy])),
+                "sell_fill_px_eq_prior_bid": float(np.mean(np.abs(d_bid)[ok & ~buy] <= tol[ok & ~buy])),
+                "sell_fill_px_above_prior_ask": float(np.mean(d_ask[ok & ~buy] > tol[ok & ~buy])),
+                "sell_fill_px_inside_prior_spread": float(
+                    np.mean((d_bid > tol)[ok & ~buy] & (-d_ask > tol)[ok & ~buy])
+                ),
+                "sell_fill_px_below_prior_bid": float(np.mean(d_bid[ok & ~buy] < -tol[ok & ~buy])),
+                "fills_with_valid_premid": int(ok.sum()),
+            }
+        )
+        print(f"{c} done ({time.time() - t0:.0f}s)", flush=True)
+    save_table(pd.DataFrame(rows), f"t1_sample{tag}")
+    save_table(pd.DataFrame(brows), f"t1_book_validation{tag}")
+    print(pd.DataFrame(rows).T.to_string())
+    print(pd.DataFrame(brows).T.to_string())
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,618 @@
+"""Full-month limit-order-book replay from timestamped diffs (numba).
+
+The book is a pair of tick-indexed arrays (size and order count per price level) plus one slot per resting order
+that remembers what the book looked like when the order was placed (queue ahead, spread, distance from the mid).
+Diffs are applied in file order; every change of block time closes a block and emits one BBO / depth row.
+
+Two data-quality rules live here:
+
+* a block gap longer than ``GAP_NS`` is a collection outage.  Orders cancelled or filled during the gap left no
+  record, so the book is reset and the next ``WARM_NS`` of blocks are flagged ``gated``;
+* a diff whose block time is *before* the current block is re-emitted history (see :mod:`hlmicro.timestamps`) and
+  is skipped.
+
+``close_src`` of an order's lifecycle row: 3 cancel anchor, 2 trade-timed remove, 6 previous-anchor fallback,
+0 untimed, 9 update to zero size, 8 replaced by a duplicate ``new``, -2 removed by a gap reset, -1 still open at the
+end of the month.
+"""
+
+from __future__ import annotations
+
+import numpy as np
+import polars as pl
+import pyarrow as pa
+from numba import njit, types
+from numba.typed import Dict
+
+from hlmicro.config import END_NS
+
+TICK = {"BTC": 1.0, "ETH": 0.1, "SOL": 0.001}  # price grid of the replay (one array cell per tick)
+NTICK = {"BTC": 400_000, "ETH": 600_000, "SOL": 2_000_000}  # highest representable price = NTICK * TICK
+MAXSLOTS = 4_000_000  # resting orders that can be tracked at once
+
+GAP_NS = 5_000_000_000  # a block gap longer than this is a collection outage: reset the book
+WARM_NS = 120_000_000_000  # blocks within this window after a reset (or the month start) are flagged gated
+
+CLOSE_GAP_RESET, CLOSE_OPEN_AT_END, CLOSE_DUPLICATE_NEW, CLOSE_UPDATE_TO_ZERO = -2, -1, 8, 9
+
+BBO_SCHEMA = pa.schema(
+    [
+        ("ts", pa.int64()),
+        ("bid", pa.float64()),
+        ("ask", pa.float64()),
+        ("bid_sz", pa.float64()),
+        ("ask_sz", pa.float64()),
+        ("bid_n", pa.int32()),
+        ("ask_n", pa.int32()),
+        ("nlive", pa.int32()),
+        ("gated", pa.int8()),
+        ("dep5_bid", pa.float64()),
+        ("dep5_ask", pa.float64()),
+        ("dep10_bid", pa.float64()),
+        ("dep10_ask", pa.float64()),
+    ]
+)
+ORD_SCHEMA = pa.schema(
+    [
+        ("oid", pa.int64()),
+        ("uid", pa.int32()),
+        ("isAsk", pa.bool_()),
+        ("px", pa.float64()),
+        ("orig_sz", pa.float64()),
+        ("open_ts", pa.int64()),
+        ("close_ts", pa.int64()),
+        ("close_src", pa.int8()),
+        ("rem_sz", pa.float64()),
+        ("n_upd", pa.int16()),
+        ("ahead_sz_open", pa.float64()),
+        ("ahead_n_open", pa.int32()),
+        ("spread_bps_open", pa.float64()),
+        ("dist_bps_open", pa.float64()),
+    ]
+)
+
+# ptr layout: [free_top, best_bid_tick, best_ask_tick, current_block_ts, n_live, gated_until_ts]
+P_FREE, P_BID, P_ASK, P_TS, P_LIVE, P_GATE = 0, 1, 2, 3, 4, 5
+# stats layout
+S_MISS_REM, S_MISS_UPD, S_DUP, S_OOR, S_CROSSED, S_RESETS, S_SKIPPED = 0, 1, 2, 3, 4, 5, 6
+STAT_NAMES = [
+    "miss_rem",
+    "miss_upd",
+    "dup_new",
+    "out_of_range",
+    "crossed_block_closes",
+    "gap_resets",
+    "skipped_replayed",
+]
+
+
+@njit(cache=True)
+def _emit_block(ts, ptr, lv_bsz, lv_bn, lv_asz, lv_an, ob, obint, obi):
+    """Append the block-close BBO and the depth within 5 and 10 bps of each touch."""
+    bb = ptr[1]
+    ba = ptr[2]
+    if bb < 0 or ba < 0:
+        return obi
+    k = obi
+    obint[k, 0] = ts
+    obint[k, 1] = bb
+    obint[k, 2] = ba
+    obint[k, 3] = lv_bn[bb]
+    obint[k, 4] = lv_an[ba]
+    obint[k, 5] = ptr[4]
+    obint[k, 6] = 1 if ts < ptr[5] else 0
+    ob[k, 3] = lv_bsz[bb]
+    ob[k, 4] = lv_asz[ba]
+    w5b = int(bb * 0.0005) + 1
+    w10b = int(bb * 0.001) + 1
+    s5 = 0.0
+    s10 = 0.0
+    lo = bb - w10b
+    if lo < 0:
+        lo = 0
+    for t in range(bb, lo - 1, -1):
+        v = lv_bsz[t]
+        if v > 0:
+            s10 += v
+            if t >= bb - w5b:
+                s5 += v
+    ob[k, 8] = s5
+    ob[k, 10] = s10
+    w5a = int(ba * 0.0005) + 1
+    w10a = int(ba * 0.001) + 1
+    s5 = 0.0
+    s10 = 0.0
+    hi = ba + w10a
+    n = lv_asz.shape[0]
+    if hi >= n:
+        hi = n - 1
+    for t in range(ba, hi + 1):
+        v = lv_asz[t]
+        if v > 0:
+            s10 += v
+            if t <= ba + w5a:
+                s5 += v
+    ob[k, 9] = s5
+    ob[k, 11] = s10
+    return k + 1
+
+
+@njit(cache=True)
+def _remove_slot(
+    slot,
+    ts,
+    src,
+    ptr,
+    oid_of,
+    s_isask,
+    s_tick,
+    s_sz,
+    s_uid,
+    s_open,
+    s_orig,
+    s_nupd,
+    s_ahead_sz,
+    s_ahead_n,
+    s_spr,
+    s_dist,
+    lv_bsz,
+    lv_bn,
+    lv_asz,
+    lv_an,
+    free,
+    oo,
+    ooint,
+    ooi,
+):
+    """Take an order off the book, repair the touch pointers and append its lifecycle row."""
+    t = s_tick[slot]
+    sz = s_sz[slot]
+    if s_isask[slot] == 1:
+        lv_asz[t] -= sz
+        lv_an[t] -= 1
+        if lv_an[t] <= 0:
+            lv_an[t] = 0
+            lv_asz[t] = 0.0
+            if t == ptr[2]:
+                n = lv_an.shape[0]
+                q = t
+                while q < n and lv_an[q] == 0:
+                    q += 1
+                ptr[2] = q if q < n else -1
+    else:
+        lv_bsz[t] -= sz
+        lv_bn[t] -= 1
+        if lv_bn[t] <= 0:
+            lv_bn[t] = 0
+            lv_bsz[t] = 0.0
+            if t == ptr[1]:
+                q = t
+                while q >= 0 and lv_bn[q] == 0:
+                    q -= 1
+                ptr[1] = q
+    k = ooi
+    ooint[k, 0] = oid_of[slot]
+    ooint[k, 1] = s_uid[slot]
+    ooint[k, 2] = s_isask[slot]
+    ooint[k, 3] = t
+    ooint[k, 4] = s_open[slot]
+    ooint[k, 5] = ts
+    ooint[k, 6] = src
+    ooint[k, 7] = s_nupd[slot]
+    ooint[k, 8] = s_ahead_n[slot]
+    oo[k, 0] = s_orig[slot]
+    oo[k, 1] = sz
+    oo[k, 2] = s_ahead_sz[slot]
+    oo[k, 3] = s_spr[slot]
+    oo[k, 4] = s_dist[slot]
+    free[ptr[0]] = slot
+    ptr[0] += 1
+    ptr[4] -= 1
+    return k + 1
+
+
+@njit(cache=True)
+def replay(
+    ts,
+    oid,
+    typ,
+    isask,
+    px,
+    sz,
+    newsz,
+    uid,
+    src,
+    tick,
+    close_last,
+    oid2slot,
+    oid_of,
+    s_isask,
+    s_tick,
+    s_sz,
+    s_uid,
+    s_open,
+    s_orig,
+    s_nupd,
+    s_ahead_sz,
+    s_ahead_n,
+    s_spr,
+    s_dist,
+    lv_bsz,
+    lv_bn,
+    lv_asz,
+    lv_an,
+    free,
+    ptr,
+    ob,
+    obint,
+    oo,
+    ooint,
+    stats,
+):
+    """Apply one batch of diffs to the book state.  Returns (blocks emitted, order rows emitted)."""
+    n = ts.shape[0]
+    ntick = lv_bsz.shape[0]
+    obi = 0
+    ooi = 0
+    for i in range(n):
+        t_i = ts[i]
+        if t_i < ptr[3]:
+            stats[6] += 1  # re-emitted history: block time before the current block
+            continue
+        if t_i != ptr[3]:
+            if ptr[3] >= 0:
+                if ptr[1] >= 0 and ptr[2] >= 0 and ptr[1] >= ptr[2]:
+                    stats[4] += 1
+                obi = _emit_block(ptr[3], ptr, lv_bsz, lv_bn, lv_asz, lv_an, ob, obint, obi)
+                if t_i - ptr[3] > GAP_NS:
+                    # collection outage: orders cancelled or filled during the gap have no record -> reset the book
+                    for o_live in list(oid2slot.keys()):
+                        sl = oid2slot[o_live]
+                        ooi = _remove_slot(
+                            sl,
+                            t_i,
+                            -2,
+                            ptr,
+                            oid_of,
+                            s_isask,
+                            s_tick,
+                            s_sz,
+                            s_uid,
+                            s_open,
+                            s_orig,
+                            s_nupd,
+                            s_ahead_sz,
+                            s_ahead_n,
+                            s_spr,
+                            s_dist,
+                            lv_bsz,
+                            lv_bn,
+                            lv_asz,
+                            lv_an,
+                            free,
+                            oo,
+                            ooint,
+                            ooi,
+                        )
+                    oid2slot.clear()
+                    ptr[1] = -1
+                    ptr[2] = -1
+                    ptr[4] = 0
+                    ptr[5] = t_i + WARM_NS
+                    stats[5] += 1
+            elif ptr[5] < 0:
+                ptr[5] = t_i + WARM_NS
+            ptr[3] = t_i
+        ty = typ[i]
+        o = oid[i]
+        if ty == 0:  # new order
+            tk = int(px[i] / tick + 0.5)
+            if tk < 0 or tk >= ntick:
+                stats[3] += 1
+                continue
+            if o in oid2slot:  # duplicate new: replace the earlier copy
+                stats[2] += 1
+                slot_d = oid2slot[o]
+                del oid2slot[o]
+                ooi = _remove_slot(
+                    slot_d,
+                    t_i,
+                    8,
+                    ptr,
+                    oid_of,
+                    s_isask,
+                    s_tick,
+                    s_sz,
+                    s_uid,
+                    s_open,
+                    s_orig,
+                    s_nupd,
+                    s_ahead_sz,
+                    s_ahead_n,
+                    s_spr,
+                    s_dist,
+                    lv_bsz,
+                    lv_bn,
+                    lv_asz,
+                    lv_an,
+                    free,
+                    oo,
+                    ooint,
+                    ooi,
+                )
+            bb = ptr[1]
+            ba = ptr[2]
+            if bb >= 0 and ba >= 0:  # book state before placement
+                mid = 0.5 * (bb + ba)
+                spr = (ba - bb) / mid * 1e4
+                dist = (tk - mid) / mid * 1e4
+                if isask[i] == 0:
+                    dist = -dist
+            else:
+                spr = np.nan
+                dist = np.nan
+            ptr[0] -= 1
+            slot = free[ptr[0]]
+            oid2slot[o] = slot
+            oid_of[slot] = o
+            s_isask[slot] = isask[i]
+            s_tick[slot] = tk
+            s_sz[slot] = sz[i]
+            s_uid[slot] = uid[i]
+            s_open[slot] = t_i
+            s_orig[slot] = sz[i]
+            s_nupd[slot] = 0
+            s_spr[slot] = spr
+            s_dist[slot] = dist
+            if isask[i] == 1:
+                s_ahead_sz[slot] = lv_asz[tk]
+                s_ahead_n[slot] = lv_an[tk]
+                lv_asz[tk] += sz[i]
+                lv_an[tk] += 1
+                if ptr[2] < 0 or tk < ptr[2]:
+                    ptr[2] = tk
+            else:
+                s_ahead_sz[slot] = lv_bsz[tk]
+                s_ahead_n[slot] = lv_bn[tk]
+                lv_bsz[tk] += sz[i]
+                lv_bn[tk] += 1
+                if tk > ptr[1]:
+                    ptr[1] = tk
+            ptr[4] += 1
+        elif ty == 1:  # size update (partial fill)
+            if o in oid2slot:
+                slot = oid2slot[o]
+                ns = newsz[i]
+                if ns <= 0.0:
+                    del oid2slot[o]
+                    ooi = _remove_slot(
+                        slot,
+                        t_i,
+                        9,
+                        ptr,
+                        oid_of,
+                        s_isask,
+                        s_tick,
+                        s_sz,
+                        s_uid,
+                        s_open,
+                        s_orig,
+                        s_nupd,
+                        s_ahead_sz,
+                        s_ahead_n,
+                        s_spr,
+                        s_dist,
+                        lv_bsz,
+                        lv_bn,
+                        lv_asz,
+                        lv_an,
+                        free,
+                        oo,
+                        ooint,
+                        ooi,
+                    )
+                else:
+                    tk = s_tick[slot]
+                    d = s_sz[slot] - ns
+                    if s_isask[slot] == 1:
+                        lv_asz[tk] -= d
+                    else:
+                        lv_bsz[tk] -= d
+                    s_sz[slot] = ns
+                    s_nupd[slot] += 1
+            else:
+                stats[1] += 1
+        else:  # remove
+            if o in oid2slot:
+                slot_r = oid2slot[o]
+                del oid2slot[o]
+                ooi = _remove_slot(
+                    slot_r,
+                    t_i,
+                    src[i],
+                    ptr,
+                    oid_of,
+                    s_isask,
+                    s_tick,
+                    s_sz,
+                    s_uid,
+                    s_open,
+                    s_orig,
+                    s_nupd,
+                    s_ahead_sz,
+                    s_ahead_n,
+                    s_spr,
+                    s_dist,
+                    lv_bsz,
+                    lv_bn,
+                    lv_asz,
+                    lv_an,
+                    free,
+                    oo,
+                    ooint,
+                    ooi,
+                )
+            else:
+                stats[0] += 1
+    if close_last and ptr[3] >= 0:
+        obi = _emit_block(ptr[3], ptr, lv_bsz, lv_bn, lv_asz, lv_an, ob, obint, obi)
+        ptr[3] = -1
+    return obi, ooi
+
+
+class BookState:
+    """All arrays of one coin's replay.  Feed diff frames in file order through :meth:`replay`."""
+
+    def __init__(self, coin: str, max_slots: int = MAXSLOTS):
+        self.coin = coin
+        self.tick = TICK[coin]
+        ntick = NTICK[coin]
+        self.oid2slot = Dict.empty(key_type=types.int64, value_type=types.int64)
+        self.oid_of = np.zeros(max_slots, np.int64)
+        self.s_isask = np.zeros(max_slots, np.int8)
+        self.s_tick = np.zeros(max_slots, np.int64)
+        self.s_sz = np.zeros(max_slots)
+        self.s_uid = np.zeros(max_slots, np.int64)
+        self.s_open = np.zeros(max_slots, np.int64)
+        self.s_orig = np.zeros(max_slots)
+        self.s_nupd = np.zeros(max_slots, np.int32)
+        self.s_ahead_sz = np.zeros(max_slots)
+        self.s_ahead_n = np.zeros(max_slots, np.int32)
+        self.s_spr = np.zeros(max_slots)
+        self.s_dist = np.zeros(max_slots)
+        self.lv_bsz = np.zeros(ntick)
+        self.lv_bn = np.zeros(ntick, np.int32)
+        self.lv_asz = np.zeros(ntick)
+        self.lv_an = np.zeros(ntick, np.int32)
+        self.free = np.arange(max_slots - 1, -1, -1, dtype=np.int64)  # stack of free slots, top at max_slots
+        self.ptr = np.array([max_slots, -1, -1, -1, 0, -1], np.int64)
+        self.stats = np.zeros(7, np.int64)
+
+    @property
+    def n_live(self) -> int:
+        return int(self.ptr[P_LIVE])
+
+    def summary(self) -> dict:
+        return dict(zip(STAT_NAMES, (int(x) for x in self.stats)))
+
+    def replay(self, d: pl.DataFrame, close_last: bool = False) -> tuple[pa.Table | None, pa.Table | None]:
+        """Apply one frame of timestamped diffs (columns ts, oid, typ, isAsk, px, sz, newsz, uid, src; ephemeral rows
+        already removed; sorted by seq).  Returns the (bbo, orders) tables produced by this batch."""
+        n = d.height
+        if n == 0:
+            return None, None
+        n_out = n + self.n_live + 1  # blocks <= n + 1; order rows <= live at start + news in this batch
+        ob = np.zeros((n_out, 12))
+        obint = np.zeros((n_out, 7), np.int64)
+        oo = np.zeros((n_out, 5))
+        ooint = np.zeros((n_out, 9), np.int64)
+        obi, ooi = replay(
+            d["ts"].to_numpy().astype(np.int64),
+            d["oid"].to_numpy().astype(np.int64),
+            d["typ"].to_numpy().astype(np.int8),
+            d["isAsk"].to_numpy().astype(np.int8),
+            d["px"].to_numpy().astype(np.float64),
+            d["sz"].fill_null(0.0).to_numpy().astype(np.float64),
+            d["newsz"].fill_null(0.0).to_numpy().astype(np.float64),
+            d["uid"].fill_null(-1).to_numpy().astype(np.int64),
+            d["src"].to_numpy().astype(np.int8),
+            self.tick,
+            close_last,
+            self.oid2slot,
+            self.oid_of,
+            self.s_isask,
+            self.s_tick,
+            self.s_sz,
+            self.s_uid,
+            self.s_open,
+            self.s_orig,
+            self.s_nupd,
+            self.s_ahead_sz,
+            self.s_ahead_n,
+            self.s_spr,
+            self.s_dist,
+            self.lv_bsz,
+            self.lv_bn,
+            self.lv_asz,
+            self.lv_an,
+            self.free,
+            self.ptr,
+            ob,
+            obint,
+            oo,
+            ooint,
+            self.stats,
+        )
+        bbo = orders = None
+        if obi:
+            b, bi = ob[:obi], obint[:obi]
+            bbo = pa.table(
+                {
+                    "ts": bi[:, 0],
+                    "bid": bi[:, 1] * self.tick,
+                    "ask": bi[:, 2] * self.tick,
+                    "bid_sz": b[:, 3],
+                    "ask_sz": b[:, 4],
+                    "bid_n": bi[:, 3].astype(np.int32),
+                    "ask_n": bi[:, 4].astype(np.int32),
+                    "nlive": bi[:, 5].astype(np.int32),
+                    "gated": bi[:, 6].astype(np.int8),
+                    "dep5_bid": b[:, 8],
+                    "dep5_ask": b[:, 9],
+                    "dep10_bid": b[:, 10],
+                    "dep10_ask": b[:, 11],
+                },
+                schema=BBO_SCHEMA,
+            )
+        if ooi:
+            o, oi = oo[:ooi], ooint[:ooi]
+            orders = pa.table(
+                {
+                    "oid": oi[:, 0],
+                    "uid": oi[:, 1].astype(np.int32),
+                    "isAsk": oi[:, 2].astype(bool),
+                    "px": oi[:, 3] * self.tick,
+                    "orig_sz": o[:, 0],
+                    "open_ts": oi[:, 4],
+                    "close_ts": oi[:, 5],
+                    "close_src": oi[:, 6].astype(np.int8),
+                    "rem_sz": o[:, 1],
+                    "n_upd": oi[:, 7].astype(np.int16),
+                    "ahead_sz_open": o[:, 2],
+                    "ahead_n_open": oi[:, 8].astype(np.int32),
+                    "spread_bps_open": o[:, 3],
+                    "dist_bps_open": o[:, 4],
+                },
+                schema=ORD_SCHEMA,
+            )
+        return bbo, orders
+
+    def open_orders(self, close_ts: int = END_NS) -> pa.Table | None:
+        """Lifecycle rows of the orders still resting at the end (``close_src`` = -1)."""
+        rows = []
+        for o, s in self.oid2slot.items():
+            rows.append(
+                (
+                    o,
+                    int(self.s_uid[s]),
+                    bool(self.s_isask[s]),
+                    self.s_tick[s] * self.tick,
+                    self.s_orig[s],
+                    int(self.s_open[s]),
+                    close_ts,
+                    CLOSE_OPEN_AT_END,
+                    self.s_sz[s],
+                    int(self.s_nupd[s]),
+                    self.s_ahead_sz[s],
+                    int(self.s_ahead_n[s]),
+                    self.s_spr[s],
+                    self.s_dist[s],
+                )
+            )
+        if not rows:
+            return None
+        cols = list(zip(*rows))
+        return pa.table(
+            {ORD_SCHEMA.names[i]: pa.array(list(cols[i]), ORD_SCHEMA.field(i).type) for i in range(len(ORD_SCHEMA))},
+            schema=ORD_SCHEMA,
+        )

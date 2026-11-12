@@ -1,0 +1,405 @@
+Read clock before call: 2026-10-19 11:20:12 UTC
+Public actions in this call: 2
+Source: native web tool text, not original PDF bytes. Unrelated authentication-redirect result omitted if present. Coverage is the returned excerpts only.
+
+Volatility&#x02010;Managed Portfolios (https://amoreira2.github.io/alan-moreira.github.io/VolPortfolios_published.pdf)
+citeturn1128search12 [wordlim: 200] Published: 9.5 years ago; ALAN MOREIRA and TYLER MUIR* ... Managed portfolios that take less risk when volatility is high produce large alphas, increase Sharpe ratios, and produce large utility gains for mean-variance investors. ... We then interpret these results from both a portfolio choice and a general equilibrium perspective.
+The Journal of Finance  
+The Journal of the American Finance Association
+
+THE JOURNAL OF FINANCE • VOL. , NO. 0 • XXXX 2017
+
+Volatility-Managed Portfolios
+
+ALAN MOREIRA and TYLER MUIR*
+
+ABSTRACT
+
+Managed portfolios that take less risk when volatility is high produce large alphas, increase Sharpe ratios, and produce large utility gains for mean-variance investors. We document this for the market, value, momentum, profitability, return on equity, investment, and betting-against-beta factors, as well as the currency carry trade. Volatility timing increases Sharpe ratios because changes in volatility are not offset by proportional changes in expected returns. Our strategy is contrary to conventional wisdom because it takes relatively less risk in recessions. This rules out typical risk-based explanations and is a challenge to structural models of time-varying expected returns.
+
+We construct portfolios that scale monthly returns by the inverse of their previous month’s realized variance, decreasing risk exposure when variance was recently high and vice versa. We call these volatility-managed portfolios. We document that this simple trading strategy earns large alphas across a wide range of asset pricing factors, suggesting that investors can benefit from volatility timing. We then interpret these results from both a portfolio choice and a general equilibrium perspective.
+
+We motivate our analysis from the vantage point of a mean-variance investor, who adjusts her allocation according to the attractiveness of the mean-variance trade-off, μt/σt². Because variance is highly forecastable at short horizons, and variance forecasts are only weakly related to future returns at these horizons, our volatility-managed portfolios produce significant risk-adjusted returns for
+
+*Alan Moreira is with the University of Rochester, Tyler Muir is with UCLA and the NBER. We thank the Editor (Ken Singleton), two anonymous referees, Matthew Baron, Jonathan Berk, Olivier Boguth, John Campbell, John Cochrane, Kent Daniel, Peter DeMarzo, Marcelo Fernandes, Wayne Ferson, Stefano Giglio, William Goetzmann, Mark Grinblatt, Ben Hebert, Steve Heston, Jon Ingersoll, Ravi Jagannathan, Bryan Kelly, Ralph Koijen, Serhiy Kosak, Hanno Lustig, Toby Moskowitz, Justin Murfin, Stefan Nagel, David Ng, Lubos Pastor, Lasse Pedersen, Myron Scholes, Ivan Shaliastovich, Tuomo Vuoltenaho, Jonathan Wallen, Lu Zhang, and participants at Yale SOM, UCLA Anderson, Stanford GSB, Michigan Ross, Chicago Booth, Ohio State, Baruch College, Cornell, the NYU Five Star conference, the Colorado Winter Finance Conference, the Jackson Hole Winter Finance Conference, the ASU Sonoran Conference, the UBC winter conference, the NBER, the Paul Woolley Conference, the SFS Cavalcade, and Arrowstreet Capital for comments. We especially thank Nick Barberis for many useful discussions. We also thank Ken French, Lasse Pedersen, Alexi Savov, Adrien Verdelhan, and Lu Zhang for providing data. Both authors disclose that, after our work had already circulated, this research was solicited for compensated presentations at Arrowstreet Capital, Mellon Capital, Panagora Asset Management, and Phase Capital.
+
+DOI: 10.1111/jofi.12513
+
+1--------------------------------------------------------------------------------
+Volatility Managed Portfolios (https://law.yale.edu/sites/default/files/area/workshop/leo/leo17_moreira.pdf)
+citeturn1128search13 [wordlim: 200] Published: 9.7 years ago; ALAN MOREIRA and TYLER MUIR* ... Managed portfolios that take less risk when volatility is high produce large alphas, increase Sharpe ratios, and produce large utility gains for mean-variance investors.
+Volatility Managed Portfolios
+
+ALAN MOREIRA and TYLER MUIR*
+
+October 25, 2016
+
+ABSTRACT
+
+Managed portfolios that take less risk when volatility is high produce large alphas, increase Sharpe ratios, and produce large utility gains for mean-variance investors. We document this for the market, value, momentum, profitability, return on equity, and investment factors, as well as the currency carry trade. Volatility timing increases Sharpe ratios because changes in volatility are not offset by proportional changes in expected returns. Our strategy is contrary to conventional wisdom because it takes relatively less risk in recessions yet still earns high average returns. This rules out typical risk-based explanations and is a challenge to structural models of time-varying expected returns.
+
+*Yale School of Management. We thank the Editor (Ken Singleton), two anonymous referees, Matthew Baron, Jonathan Berk, Olivier Boguth, John Campbell, John Cochrane, Kent Daniel, Peter DeMarzo, Wayne Ferson, Marcelo Fernandes, Stefano Giglio, William Goetzmann, Mark Grinblatt, Ben Hebert, Steve Heston, Jon Ingersoll, Ravi Jagannathan, Bryan Kelly, Ralph Koijen, Serhiy Kosak, Hanno Lustig, Justin Murfin, Stefan Nagel, David Ng, Lubos Pastor, Myron Scholes, Ivan Shaliastovich, Tuomo Vuoltenahoo, Jonathan Wallen, Lu Zhang, and participants at Yale SOM, UCLA Anderson, Stanford GSB, Michigan Ross, Chicago Booth, Ohio State, Baruch College, Cornell, the NYU Five Star conference, the Colorado Winter Finance Conference, the Jackson Hole Winter Finance Conference, the ASU Sonoran Conference, the UBC winter conference, the NBER, the Paul Woolley Conference, the SFS Calvacade, and Arrowstreet Capital for comments. We especially thank Nick Barberis for many useful discussions. We also thank Ken French for making data publicly available and Alexi Savov, Adrien Verdelhan and Lu Zhang for providing data. Both authors disclose that, after our work had already circulated, this research was solicited for compensated presentations at Arrowstreet Capital, Mellon Capital, Panagora Asset Management, and Phase Capital.--------------------------------------------------------------------------------
+Volatility-Managed Portfolios (https://ideas.repec.org/a/bla/jfinan/v72y2017i4p1611-1644.html)
+citeturn1128search0 [wordlim: 200] Published: 9.2 years ago; Crawled: today; ## Author ... * Alan Moreira & Tyler Muir, 2017."Volatility-Managed Portfolios," Journal of Finance, American Finance Association, vol. 72(4), pages 1611-1644, August.
+
+# Volatility-Managed Portfolios
+
+## Author
+
+Listed:
+
+  * ALAN MOREIRA
+  * TYLER MUIR
+
+Registered:
+
+## Abstract
+
+No abstract is available for this item.
+
+## Suggested Citation
+
+* Alan Moreira & Tyler Muir, 2017. "Volatility-Managed Portfolios," Journal of Finance, American Finance Association, vol. 72(4), pages 1611-1644, August.
+Handle: RePEc:bla:jfinan:v:72:y:2017:i:4:p:1611-1644
+
+## Download full text from publisher
+
+[Input][Input]File URL: http://hdl.handle.net/10.1111/jofi.2017.72.issue-4
+Download Restriction: Access to full text is restricted to subscribers.
+--->[Input]<---
+
+As the access to this document is restricted, you may want to
+
+[Input][Button: search]
+
+for a different version of it.
+
+## More about this item
+
+### Statistics
+
+Access and download statistics
+
+## Corrections
+
+All material on this site has been provided by the respective publishers and authors. You can help correct errors and omissions. When requesting a correction, please mention this item's handle: RePEc:bla:jfinan:v:72:y:2017:i:4:p:1611-1644. See general information about how to correct material in RePEc.--------------------------------------------------------------------------------
+Volatility‐Managed Portfolios - MOREIRA - 2017 - The Journal of Finance - Wiley Online Library (https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.12513?scrollTo=references)
+citeturn1128search1 [wordlim: 200] Published: 9.5 years ago; Crawled: 2 months ago; Search for more papers by this author ... Alan Moreira is with the University of Rochester, Tyler Muir is with UCLA and the NBER. ... Managed portfolios that take less risk when volatility is high produce large alphas, increase Sharpe ratios, and produce large utility gains for mean-variance investors.
+
+Volume 72, Issue 4 pp. 1611-1644
+
+ARTICLE
+
+# Volatility-Managed Portfolios
+
+ALAN MOREIRA, 
+
+ALAN MOREIRA
+
+Search for more papers by this author
+
+TYLER MUIR, 
+
+TYLER MUIR
+
+Alan Moreira is with the University of Rochester, Tyler Muir is with UCLA and the NBER. We thank the Editor (Ken Singleton), two anonymous referees, Matthew Baron, Jonathan Berk, Olivier Boguth, John Campbell, John Cochrane, Kent Daniel, Peter DeMarzo, Marcelo Fernandes, Wayne Ferson, Stefano Giglio, William Goetzmann, Mark Grinblatt, Ben Hebert, Steve Heston, Jon Ingersoll, Ravi Jagannathan, Bryan Kelly, Ralph Koijen, Serhiy Kosak, Hanno Lustig, Toby Moskowitz, Justin Murfin, Stefan Nagel, David Ng, Lubos Pastor, Lasse Pedersen, Myron Scholes, Ivan Shaliastovich, Tuomo Vuoltenahoo, Jonathan Wallen, Lu Zhang, and participants at Yale SOM, UCLA Anderson, Stanford GSB, Michigan Ross, Chicago Booth, Ohio State, Baruch College, Cornell, the NYU Five Star conference, the Colorado Winter Finance Conference, the Jackson Hole Winter Finance Conference, the ASU Sonoran Conference, the UBC winter conference, the NBER, the Paul Woolley Conference, the SFS Calvacade, and Arrowstreet Capital for comments. We especially thank Nick Barberis for many useful discussions. We also thank Ken French, Lasse Pedersen, Alexi Savov, Adrien Verdelhan, and Lu Zhang for providing data. Both authors disclose that, after our work had already circulated, this research was solicited for compensated presentations at Arrowstreet Capital, Mellon Capital, Panagora Asset Management, and Phase Capital.
+
+Search for more papers by this author
+
+ALAN MOREIRA, 
+
+ALAN MOREIRA
+
+Search for more papers by this author
+
+TYLER MUIR, 
+
+TYLER MUIR
+
+Alan Moreira is with the University of Rochester, Tyler Muir is with UCLA and the NBER. We thank the Editor (Ken Singleton), two anonymous referees, Matthew Baron, Jonathan Berk, Olivier Boguth, John Campbell, John Cochrane, Kent Daniel, Peter DeMarzo, Marcelo Fernandes, Wayne Ferson, Stefano Giglio, William Goetzmann, Mark Grinblatt, Ben Hebert, Steve Heston, Jon Ingersoll, Ravi Jagannathan, Bryan Kelly, Ralph Koijen, Serhiy Kosak, Hanno Lustig, Toby Moskowitz, Justin Murfin, Stefan Nagel, David Ng, Lubos Pastor, Lasse Pedersen, Myron Scholes, Ivan Shaliastovich, Tuomo Vuoltenahoo, Jonathan Wallen, Lu Zhang, and participants at Yale SOM, UCLA Anderson, Stanford GSB, Michigan Ross, Chicago Booth, Ohio State, Baruch College, Cornell, the NYU Five Star conference, the Colorado Winter Finance Conference, the Jackson Hole Winter Finance Conference, the ASU Sonoran Conference, the UBC winter conference, the NBER, the Paul Woolley Conference, the SFS Calvacade, and Arrowstreet Capital for comments. We especially thank Nick Barberis for many useful discussions. We also thank Ken French, Lasse Pedersen, Alexi Savov, Adrien Verdelhan, and Lu Zhang for providing data. Both authors disclose that, after our work had already circulated, this research was solicited for compensated presentations at Arrowstreet Capital, Mellon Capital, Panagora Asset Management, and Phase Capital.
+
+Search for more papers by this author
+
+First published: 06 April 2017
+
+https://doi.org/10.1111/jofi.12513Digital Object Identifier (DOI)
+
+view metrics
+
+Read the full text
+
+
+### ABSTRACT
+
+Managed portfolios that take less risk when volatility is high produce large alphas, increase Sharpe ratios, and produce large utility gains for mean-variance investors. We document this for the market, value, momentum, profitability, return on equity, investment, and betting-against-beta factors, as well as the currency carry trade. Volatility timing increases Sharpe ratios because changes in volatility are not offset by proportional changes in expected returns. Our strategy is contrary to conventional wisdom because it takes relatively less risk in recessions. This rules out typical risk-based explanations and is a challenge to structural models of time-varying expected returns.
+
+--------------------------------------------------------------------------------
+Volatility Managed Portfolios (https://www.stern.nyu.edu/sites/default/files/assets/documents/Volatility%20Managed%20Portfolios.pdf)
+citeturn1128search14 [wordlim: 200] Published: 11.0 years ago; Alan Moreira and Tyler Muir* ... Managed portfolios that take less risk when volatility is high produce large, positive alphas and increase factor Sharpe ratios by substantial amounts. ... Our portfolio timing strategies are simple to implement in real time and are contrary to conventional wisdom because volatility tends to be high after the onset of recessions and crises when selling is typically viewed as a mistake.
+Volatility Managed Portfolios
+
+Alan Moreira and Tyler Muir*
+
+November 1, 2015
+
+**Abstract**
+
+Managed portfolios that take less risk when volatility is high produce large, positive alphas and increase factor Sharpe ratios by substantial amounts. We document this fact for the market, value, momentum, profitability, return on equity, and investment factors in equities, as well as the currency carry trade. Our portfolio timing strategies are simple to implement in real time and are contrary to conventional wisdom because volatility tends to be high after the onset of recessions and crises when selling is typically viewed as a mistake. Instead, our strategy earns high average returns while taking less risk in recessions. We study the portfolio choice implications of these results. We find volatility timing provides large utility gains to a mean variance investor, with increases in lifetime utility ranging from 50-90%. We then study the problem of a long horizon investor and show that, perhaps surprisingly, long horizon investors can benefit from volatility timing even when time-variation in volatility is completely driven by time-varying discount rate volatility.
+
+*Yale School of Management. We thank Jon Ingersoll, Lu Zhang, and seminar participants at Yale SOM, Ohio State, and Baruch for comments. We especially thank Nick Barberis for many useful discussions. We also thank Ken French for making data publicly available and Adrien Verdelhan and Lu Zhang for providing data.--------------------------------------------------------------------------------
+Volatility Managed Portfolios (https://conference.nber.org/confer/2016/LTAMs16/Moreira_Muir.pdf)
+citeturn1128search15 [wordlim: 200] Published: 10.5 years ago; Alan Moreira and Tyler Muir* ... Managed portfolios that take less risk when volatility is high produce large alphas and substantially increase factor Sharpe ratios.
+Volatility Managed Portfolios
+
+Alan Moreira and Tyler Muir*
+
+April 6, 2016
+
+**Abstract**
+
+Managed portfolios that take less risk when volatility is high produce large alphas and substantially increase factor Sharpe ratios. We document this for the market, value, momentum, profitability, return on equity, and investment factors in equities, as well as the currency carry trade. We find that volatility timing produces large utility gains and benefits both short- and long-horizon investors. Our strategy is contrary to conventional wisdom because it takes less risk in recessions and crises yet still earns high average returns. This rules out typical risk-based explanations and is a challenge to structural models of time-varying expected returns.
+
+*Yale School of Management. We thank Matthew Baron, Jonathan Berk, Olivier Boguth, John Campbell, John Cochrane, Kent Daniel, Peter DeMarzo, Wayne Ferson, Marcelo Fernandes, William Goetzmann, Mark Grinblatt, Ben Hebert, Steve Heston, Jon Ingersoll, Ravi Jagannathan, Bryan Kelly, Serhiy Kosak, Hanno Lustig, Justin Murfin, Stefan Nagel, David Ng, Lubos Pastor, Myron Scholes, Ivan Shaliastovich, Ken Singleton, Tuomo Vuoltenaho, Jonathan Waller, Lu Zhang and participants at Yale SOM, UCLA Anderson, Stanford GSB, Michigan Ross, Chicago Booth, Ohio State, Baruch College, Cornell, the NYU Five Star conference, the Colorado Winter Finance Conference, the Jackson Hole Winter Finance Conference, the ASU Sonoran Conference, the UBC winter conference, and Arrowstreet Capital for comments. We especially thank Nick Barberis for many useful discussions. We also thank Ken French for making data publicly available and Alexi Savov, Adrien Verdelhan and Lu Zhang for providing data.--------------------------------------------------------------------------------
+Volatility Managed Portfolios (https://www.nber.org/system/files/working_papers/w22208/w22208.pdf)
+citeturn1128search16 [wordlim: 200] Published: 10.3 years ago; Alan Moreira and Tyler Muir ... Managed portfolios that take less risk when volatility is high produce large alphas, substantially increase factor Sharpe ratios, and produce large utility gains for mean-variance investors.
+Volatility Managed Portfolios  
+Alan Moreira and Tyler Muir  
+NBER Working Paper No. 22208  
+April 2016, Revised June 2016  
+JEL No. G0,G12
+
+**ABSTRACT**
+
+Managed portfolios that take less risk when volatility is high produce large alphas, substantially increase factor Sharpe ratios, and produce large utility gains for mean-variance investors. We document this for the market, value, momentum, profitability, return on equity, and investment factors in equities, as well as the currency carry trade. Volatility timing increases Sharpe ratios because changes in factor volatilities are not offset by proportional changes in expected returns. Our strategy is contrary to conventional wisdom because it takes relatively less risk in recessions and crises yet still earns high average returns. This rules out typical risk-based explanations and is a challenge to structural models of time-varying expected returns.
+
+Alan Moreira  
+Yale School of Management  
+Yale University  
+165 Whitney, Room 4520  
+New Haven, CT 06520  
+[REDACTED_EMAIL]
+
+Tyler Muir  
+Yale School of Management  
+165 Whitney Avenue, Room 4516  
+New Haven, CT 06511  
+and NBER  
+[REDACTED_EMAIL]--------------------------------------------------------------------------------
+w22208.first.pdf (https://www.nber.org/system/files/working_papers/w22208/revisions/w22208.rev0.pdf)
+citeturn1128search17 [wordlim: 200] Published: 10.5 years ago; Alan Moreira and Tyler Muir ... Managed portfolios that take less risk when volatility is high produce large, positive alphas and increase factor Sharpe ratios by substantial amounts. ... Our portfolio timing strategies are simple to implement in real time and are contrary to conventional wisdom because volatility tends to be high after the onset of recessions and crises when selling is typically viewed as a mistake.
+Volatility Managed Portfolios  
+Alan Moreira and Tyler Muir  
+NBER Working Paper No. 22208  
+April 2016  
+JEL No. G0,G12
+
+**ABSTRACT**
+
+Managed portfolios that take less risk when volatility is high produce large, positive alphas and increase factor Sharpe ratios by substantial amounts. We document this fact for the market, value, momentum, profitability, return on equity, and investment factors in equities, as well as the currency carry trade. Our portfolio timing strategies are simple to implement in real time and are contrary to conventional wisdom because volatility tends to be high after the onset of recessions and crises when selling is typically viewed as a mistake. Instead, our strategy earns high average returns while taking less risk in recessions. We study the portfolio choice implications of these results. We find volatility timing provides large utility gains to a mean variance investor, with increases in lifetime utility ranging from 50-90%. Contrary to conventional wisdom, we show that long horizon investors can benefit from volatility timing even when time-variation in volatility is completely driven by discount rate volatility.
+
+Alan Moreira  
+Yale School of Management  
+Yale University  
+165 Whitney, Room 4520  
+New Haven, CT 06520  
+[REDACTED_EMAIL]
+
+Tyler Muir  
+Yale School of Management  
+165 Whitney Avenue, Room 4516  
+New Haven, CT 06511  
+and NBER  
+[REDACTED_EMAIL]--------------------------------------------------------------------------------
+Improving volatility-managed portfolios in real time | Critical Finance Review | Emerald Publishing (https://www.emerald.com/cfr/article-abstract/15/2/179/1370042/Improving-volatility-managed-portfolios-in-real)
+citeturn1128search2 [wordlim: 200] Published: 4 months ago; Crawled: 2 days ago; # Improving volatility-managed portfolios in real time ... I propose a simple improved strategy based on Moreira and Muir (2017)’s formation of volatility management. ... Keywords: Volatility management, Real-time performance, Portfolio choice, G11, G12
+
+Volume 15, Issue 2
+
+26 June 2026
+
+[Button: Article Navigation]
+
+Research Article| June 03 2026
+
+# Improving volatility-managed portfolios in real time
+
+Xia Xu
+
+Close author information for Xia Xu
+
+Xia Xu
+
+Department of Financial Technology and Engineering,
+
+Nanjing University
+
+, Nanjing,
+
+China
+
+Corresponding author Xia Xu [email protected]
+
+Author & Article Information
+
+Corresponding author Xia Xu [email protected]
+
+Received: March 22 2023
+
+Revision Received: March 30 2024
+
+Accepted: May 09 2025
+
+Online ISSN: 2164-5760
+
+Print ISSN: 2164-5744
+
+© 2026 Emerald Publishing Limited
+
+2026
+
+Emerald Publishing Limited
+
+Licensed re-use rights only
+
+Critical Finance Review (2026) 15 (2): 179–207.
+
+https://doi.org/10.1108/CFR-03-2023-2491
+
+Article history
+
+Received:
+
+March 22 2023
+
+Revision Received:
+
+March 30 2024
+
+Accepted:
+
+May 09 2025
+
+Recent studies find poor out-of-sample performance for volatility-managed portfolios. I propose a simple improved strategy based on Moreira and Muir (2017)’s formation of volatility management. The improved volatility management features effective risk scaling, conditional expected return, and intercept from conditional risk-return tradeoff. Using this strategy for a comprehensive set of 197 risk factors and anomaly portfolios, I document significant real-time performance improvements including 148 Sharpe ratio increases and 165 positive abnormal returns. The performance survives robustness checks of leverage constraints, transaction costs and different design choices.
+
+Keywords: Volatility management, Real-time performance, Portfolio choice, G11, G12--------------------------------------------------------------------------------
+Volatility-Managed Portfolio (Moreira and Muir) | Tactfolio (https://tactfolio.com/strategies/volatility-managed-portfolio)
+citeturn1128search3 [wordlim: 200] Crawled: today; Alan Moreira and Tyler Muir's volatility-managed stock portfolio, in its no-leverage form. ... It comes from Alan Moreira and Tyler Muir’s paper “Volatility-Managed Portfolios”, published in the Journal of Finance in 2017.
+
+# Volatility-Managed Portfolio (Moreira and Muir)
+
+Alan Moreira and Tyler Muir's volatility-managed stock portfolio, in its no-leverage form. Each month it sets the S&P 500 share by the past month's volatility: fully invested while volatility is low, and cutting the share with the square of volatility as it rises (about half at 16% and a fifth at 25%), with the rest in Treasury bills.
+
+Designed by Alan Moreira and Tyler Muir, 2017. Implemented and tracked by Tactfolio.
+
+Written by the Tactfolio research teamUpdated October 16, 2026 Chart and tables use prices through October 16, 2026
+
+[Button: ETF prices since 2007][Button: Simulated history since 1960]
+
+Growth of $1, log scale. Strategy SPY. Hypothetical results on daily ETF prices with trading costs, through Oct 2026.
+May 2007 to Oct 2026  | Strategy  | SPY
+--- | --- | ---
+Annual return (CAGR)  | 7.6%  | 10.7%
+Worst drawdown  | −17.3%  | −55.2%
+Sharpe ratio  | 0.77  | 0.62
+Volatility  | 10.1%  | 19.7%
+Annual return since publication (May 2016)  | 10.2%  | 15.2%
+
+Growth of $1, log scale. Strategy SPY. Hypothetical results on daily ETF prices with trading costs, through Oct 2026. Before each fund launched, its prices are simulated: SPY before Jan 1993 (fund simulation), BIL before May 2007 (Treasury bill rate). Simulated values are estimates, not prices anyone could have traded. How simulated history works.
+Jan 1960 to Oct 2026  | Strategy  | SPY
+--- | --- | ---
+Annual return (CAGR)  | 8.6%  | 10.5%
+Worst drawdown  | −34.0%  | −55.2%
+Sharpe ratio  | 0.88  | 0.70
+Volatility  | 10.0%  | 16.4%
+Annual return since publication (May 2016)  | 10.2%  | 15.2%
+
+A volatility-managed portfolio is a stock strategy that invests less after volatile months and more after calm ones. It comes from Alan Moreira and Tyler Muir’s paper “Volatility-Managed Portfolios”, published in the Journal of Finance in 2017. This page tests the paper’s no-leverage version on the S&P 500, with the rest in Treasury bills.
+
+--------------------------------------------------------------------------------
+Volatility timing on the market, 2017 to 2025: a sixth less volatility, and the risk-adjusted return did not improve. (https://financepapermill.com/research/volatility-managed-portfolios)
+citeturn1128search4 [wordlim: 200] Published: 3 weeks ago; Crawled: last week; We tested "Volatility-Managed Portfolios" by Alan Moreira and Tyler Muir, Journal of Finance, 2017. ... Annualized volatility was 13.67% for the managed portfolio against 16.20% for the benchmark, and the maximum drawdown on monthly observations was 22.11% against 24.84%.
+
+Research brief 030 / September 22, 2026
+
+# Volatility timing on the market, 2017 to 2025: a sixth less volatility, and the risk-adjusted return did not improve.
+
+Moreira and Muir (Journal of Finance, 2017) size exposure by last month's variance. We calibrated one implementation on 1990 to 2016 data and evaluated it over the next 108 months.
+
+The original study
+
+## Volatility-Managed Portfolios
+
+Alan Moreira and Tyler Muir
+
+Journal of Finance, 2017; author-hosted published version
+
+Read the paper ↗
+
+## The idea worth investigating
+
+Volatility timing is the rare academic result that practitioners already believed: take less risk after a volatile month, because volatility persists and expected returns do not rise to match. The question was never whether it lowers risk. It is whether it pays for itself.
+
+We tested "Volatility-Managed Portfolios" by Alan Moreira and Tyler Muir, Journal of Finance, 2017. The authors scale monthly returns by the inverse of the previous month's realized variance and report large alphas and higher Sharpe ratios across the market, value, momentum, profitability, return on equity, investment and betting-against-beta factors, plus the currency carry trade. --------------------------------------------------------------------------------
+A Multifactor Perspective on Volatility‐Managed Portfolios - DeMIGUEL - 2024 - The Journal of Finance - Wiley Online Library (https://doi.org/10.1111/jofi.13395)
+citeturn1128search5 [wordlim: 200] Published: 2.0 years ago; Crawled: last week; Any queries (other than missing content) should be directed to the corresponding author for the article. ...   * Moreira, Alan, and Tyler Muir, 2017, Volatility-managed portfolios, Journal of Finance 72, 1611–1644. ...   * 3 Barroso and Detzel (2021) show that the volatility-managed market portfolio outperforms the market factor during high-sentiment periods, but underperforms the market during low-sentiment periods.
+  * Marquering, Wessel, and Marno Verbeek, 2004, The economic value of predicting stock index returns and volatility, Journal of Financial and Quantitative Analysis 39, 407–429.
+
+Web of Science® Google Scholar
+
+  * Miller, Keith L., Hong Li, Tiffany G. Zhou, and Daniel Giamouridis, 2015, A risk-oriented model for factor timing decisions, Journal of Portfolio Management 41, 46–58.
+
+Google Scholar
+
+  * Moreira, Alan, and Tyler Muir, 2017, Volatility-managed portfolios, Journal of Finance 72, 1611–1644.
+
+Web of Science® Google Scholar
+
+  * Moreira, Alan, and Tyler Muir, 2019, Should long-term investors time volatility? Journal of Financial Economics 131, 507–527.
+
+Web of Science® Google Scholar
+
+  * Nelson, Daniel B., 1991, Conditional heteroskedasticity in asset returns: A new approach, Econometrica 59, 347–370.
+
+Web of Science® Google Scholar
+
+  * Novy-Marx, Robert, and Mihail Velikov, 2016, A taxonomy of anomalies and their trading costs, Review of Financial Studies 29, 104–147.
+--------------------------------------------------------------------------------
+On the performance of volatility-managed portfolios - ScienceDirect (https://www.sciencedirect.com/science/article/abs/pii/S0304405X2030132X)
+citeturn1128search6 [wordlim: 200] Published: 6.1 years ago; Crawled: 2 months ago; Consistent with Moreira and Muir (2017), volatility-managed portfolios tend to exhibit significantly positive alphas in spanning regressions. ... The trading strategies implied by the spanning regressions are not implementable in real time, however, as they require investors to combine the volatility-scaled and unscaled versions of a given portfolio using ex post optimal weights (e.g., Gibbons et al., 1989).
+
+## Journal of Financial Economics
+
+Volume 138, Issue 1, October 2020, Pages 95-117
+
+# On the performance of volatility-managed portfolios☆
+
+https://doi.org/10.1016/j.jfineco.2020.04.015Get rights and content
+
+## Abstract
+
+Using a comprehensive set of 103 equity strategies, we analyze the value of volatility-managed portfolios for real-time investors. Volatility-managed portfolios do not systematically outperform their corresponding unmanaged portfolios in direct comparisons. Consistent with Moreira and Muir (2017), volatility-managed portfolios tend to exhibit significantly positive alphas in spanning regressions. However, the trading strategies implied by these regressions are not implementable in real time, and reasonable out-of-sample versions generally earn lower certainty equivalent returns and Sharpe ratios than do simple investments in the original, unmanaged portfolios. This poor out-of-sample performance for volatility-managed portfolios stems primarily from structural instability in the underlying spanning regressions.
+--------------------------------------------------------------------------------
+VOLATILITY-MANAGED PORTFOLIOS: EVIDENCE FROM THE US EQUITY MARKET (https://nur.nu.edu.kz/items/cde07ded-0481-4157-ba8f-65e69365d0d3)
+citeturn1128search7 [wordlim: 200] Published: 4.8 years ago; Crawled: last month; This study assesses whether the strategy Moreira and Muir (2017) on volatility-managed portfolios generates high returns when applied on the U.S. stock market.In our owrk we replicate the methodology of Moreira and Muir for the long-short decile portfolios excluding microcaps and 1,000 largest stocks for the period between June 1963 and January 2020 while Moreira and Muir (2017 used Farma and French factors.
+--------------------------------------------------------------------------------
+Moreira & Muir (2017) — Volatility-Managed Portfolios – David Maguire (https://davidmaguire.ai/phd/literature/moreira-muir-2017-volatility-managed/index.html)
+citeturn1128search8 [wordlim: 200] Published: 3 months ago; Crawled: last month; # Moreira & Muir (2017) — Volatility-Managed Portfolios ... Scale a factor’s exposure by the inverse of last month’s realised variance and you raise its Sharpe ratio and earn a positive alpha — a claim that says you can improve a portfolio by timing your own volatility, with no view on returns.
+--------------------------------------------------------------------------------
+Empirical Asset Pricing (https://empiricalassetpricing.blogspot.com/2019/11/volatility-managed-portfolios-moreira.html)
+citeturn1128search9 [wordlim: 200] Published: 7.0 years ago; Crawled: 1.9 years ago; Moreira, Alan and Tyler Muir. ... They determine volatility-managed portfolio exposure (LHS of the equation) through weighting by the inverse of the previous month’s realized variance (RHS of the equation).
+--------------------------------------------------------------------------------
+GitHub - coolgan/Volatility-Managed-Portfolios-Sometimes-it-Works: 基于Moreira and Muir（2017, JF）构建A股市场的波动率管理组合（Volatility-Managed Portfolios，VMP），并参考Liu et al.（2019, JPM）对VMP进行样本外测试 · GitHub (https://github.com/coolgan/Volatility-Managed-Portfolios-Sometimes-it-Works)
+citeturn1128search10 [wordlim: 200] Crawled: last month; 量化策略_Volatility Managed Portfolios Sometimes it Works.pdf  | 量化策略_Volatility Managed Portfolios Sometimes it Works.pdf  |    | ... 参考Moreira and Muir（2017, JF）构建波动率管理组合（Volatility-Managed Portfolios，VMP），基于2000年到2021年全A股数据展开实证。
+--------------------------------------------------------------------------------
+On the performance of volatility-managed portfolios - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0304405X2030132X)
+citeturn1128search11 [wordlim: 200] Crawled: last month; Moreira and Muir (2017) find that, with the exception of the size factor, each of their volatility-managed portfolios yields a positive regression intercept, and almost all of the estimates are statistically and economically significant. ... Although a volatility-managed portfolio constructed according to Eq. (1) is straightforward to construct in real time, the investment strategy implied by Eq. (2) is not.
+--------------------------------------------------------------------------------
+Tactical exposure Allocation (https://www.reddit.com/r/quant/comments/1bc5qjl)
+citeturn1128reddit18 [wordlim: 200] Published: 2.6 years ago; Crawled: 2.6 years ago; Volatility Managed Portfolios (Moreira/Muir)
+--------------------------------------------------------------------------------
+Backtested a Volatility Strategy From an Academic Paper, Beat Market by 4x (https://www.reddit.com/r/investing/comments/uobsfs/backtested_a_volatility_strategy_from_an_academic/)
+citeturn1128reddit19 [wordlim: 200] Published: 4.4 years ago; I recently backtested a "volatility managed strategy" from Alan Moreira and Tyler Muir's 2017 paper "Volatility Managed Portfolios". ... In their paper, Moreira & Muir suggest that over the past \~100 years, investors would have been able to achieve positive alpha in their portfolio by regularly adjusting their equity exposure as realized volatility fluctuates.
+--------------------------------------------------------------------------------
+Continuous-Time Risk Contribution of the Terminal Variance and its Related Risk Budgeting Problem (https://arxiv.org/abs/2011.10747)
+citeturn1128academia20 [wordlim: 200] Published: 5.9 years ago; On the application side, volatility-managed portfolios in [Moreira and Muir,2017] can be obtained by risk budgeting optimization; similarly to previous findings, continuous-time mean-variance allocation in [Zhou and Li, 2000] appears to be concentrated in terms of risk contribution.
+

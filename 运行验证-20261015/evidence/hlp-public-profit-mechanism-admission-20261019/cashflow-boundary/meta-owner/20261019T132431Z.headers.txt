@@ -1,0 +1,22 @@
+HTTP/2 200 
+date: Mon, 19 Oct 2026 13:24:31 GMT
+content-type: text/markdown; charset=utf-8
+cf-ray: a4d01a806b9ffc9f-KIX
+cf-cache-status: MISS
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+last-modified: Mon, 19 Oct 2026 13:24:31 GMT
+link: </llms.txt>; rel="llms-txt", </llms-full.txt>; rel="llms-full-txt", </.well-known/api-catalog>; rel="api-catalog", </.well-known/mcp/server-card.json>; rel="mcp-server-card", </.well-known/agent-card.json>; rel="agent-card", </.well-known/agent-skills/index.json>; rel="agent-skills"
+server: cloudflare
+strict-transport-security: max-age=63072000
+vary: rsc, accept-encoding
+content-security-policy: default-src 'none'
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-llms-txt: /llms.txt
+x-matched-path: /_mintlify/_markdown/_sites/[subdomain]/[[...slug]]
+x-robots-tag: noindex
+x-vercel-cache: MISS
+x-vercel-id: iad1::iad1::hj5jf-1792416271560-4b6976fa17b7
+alt-svc: h3=":443"; ma=86400
+

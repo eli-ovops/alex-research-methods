@@ -1,0 +1,57 @@
+Pricing | Dune (https://dune.com/pricing)
+citeturn503view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://dune.com/pricing","lineno":null}); Total lines: 32
+L0: cite0†Skip to content L1: 
+L2:   * cite1†Search L3:   * cite2†Catalog L4: 
+L5: Library
+L6: 
+L7:   * cite3†Queries L8:   * cite4†Dashboards L9:   * cite5†Favorites L10:   * cite6†Folders L11:   * cite7†Data uploads L12:   * cite8†Materialized views L13:   * cite9†Contracts L14: 
+L15: Monitor
+L16: 
+L17:   * cite10†Activity L18:   * cite11†Schedules L19:   * cite12†Alerts L20: 
+L21: Connect
+L22: 
+L23:   * cite13†Dune APIs L24:   * cite14†MCP & CLI L25:   * cite15†API keys L26:   * cite16†Connectors L27: 
+L28:   * cite17†Docs†docs.dune.com L29:   * cite18†Upgrade plan L30: 
+L31:   *   *   *
+--------------------------------------------------------------------------------
+DUNE APPLICATION SERVICE Addendum | Dune (https://dune.com/application-terms)
+citeturn503view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://dune.com/application-terms","lineno":null}); Total lines: 57
+L0: cite0†Skip to content L1: 
+L2:   * cite1†Search L3:   * cite2†Catalog L4: 
+L5: Library
+L6: 
+L7:   * cite3†Queries L8:   * cite4†Dashboards L9:   * cite5†Favorites L10:   * cite6†Folders L11:   * cite7†Data uploads L12:   * cite8†Materialized views L13:   * cite9†Contracts L14: 
+L15: Monitor
+L16: 
+L17:   * cite10†Activity L18:   * cite11†Schedules L19:   * cite12†Alerts L20: 
+L21: Connect
+L22: 
+L23:   * cite13†Dune APIs L24:   * cite14†MCP & CLI L25:   * cite15†API keys L26:   * cite16†Connectors L27: 
+L28:   * cite17†Docs†docs.dune.com L29:   * cite18†Upgrade plan L30: 
+L31:   *   *   * # Dune Application Service Addendum
+L32: 
+L33: Last updated: May 13, 2026
+L34: ## General
+L35: 
+L36: This Addendum applies in addition to the cite19†General Terms and Conditions for use of the Dune Application Service.
+L37: ## The Dune Application Service
+L38: 
+L39: The Application Service allows the User to create SQL queries on blockchain data. The results are visualized as charts and the charts can be assembled into dashboards displayed within the Dune website. You may not access the Service or data in any other way than through the graphical interface via the Site. For programmatic interaction, you need to sign up for the Dune API Service.
+L40: Each Subscription Plan for the Application Service provides different features and Execution limitations as provided in the Subscription Tiers and Pricing Page.
+L41: ## Private Dashboards
+L42: 
+L43: Dashboards can be private under one of our paid Subscription Plans.
+L44: All content created is public by default and must be set to private by the User. Users are responsible for confirming visibility settings before submitting, embedding, or sharing dashboards, queries, visualizations, or outputs. Private queries cannot be viewed by the public or other Dune Users. Visualizations of private queries can be viewed by others if added to a dashboard or embedded on another site. Only the User may add a private query/visualization to a dashboard or generate an embed link.
+L45: Dune personnel may access private dashboards and private queries only as necessary to provide, secure, troubleshoot, support, or improve the Services, comply with law, or enforce the Terms, and subject to Dune’s internal access controls and confidentiality obligations.
+L46: ## Watermarks and link back to Dune
+L47: 
+L48: For certain tiers of paid Subscription Plans, the “Dune” watermark will not be visible when looking at queries on Dune or when embedding charts elsewhere. Shared dashboards will however still feature “Dune” watermarks.
+L49: ## CSV downloads
+L50: If specifically permitted under the applicable Subscription Plan, the User can download CSV reports of its query results from the Dune online interface within the agreed limitations under the relevant Subscription Plan. The User may only use this data internally within their company and in occasional reports, presentations and similar external uses. Crediting Dune and the relevant query creator as source is required.
+L51: These CSV exports cannot be sold directly and/or provided on a running basis as a data product or service by the User.
+L52: ## No white labeling / Limitations of Commercial Use
+L53: 
+L54: In connection with the Dune Application Services, User shall not copy, transmit, transfer, modify or create derivative works from the queries and the public Dashboard nor use them in a white label manner for free or resale.
+L55: 
+L56: You agree not to reproduce, sublicense, transfer, duplicate, copy, sell, resell or in any other way exploit any portion of the Service, use of the Service, or access to the Service without the express written permission by Dune.
+

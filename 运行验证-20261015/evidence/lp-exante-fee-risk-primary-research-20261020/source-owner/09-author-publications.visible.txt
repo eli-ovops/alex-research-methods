@@ -1,0 +1,34 @@
+Fayçal Drissi
+<https://fdr0903.github.io/> Fayçal Drissi
+<https://fdr0903.github.io/selected-publications/> Publications
+<https://fdr0903.github.io/teaching/> Teaching
+<https://fdr0903.github.io/cv/> CV
+<https://fdr0903.github.io/liqsurface/> Liquidity surface
+For a detailed breakdown of my work by field (finance and economics, OR and FE, Statistics), see  <https://fdr0903.github.io/publications/> this page.
+Revise and Resubmit
+Equilibrium Liquidity and Risk Offsetting in Decentralised Markets (with Sebastian Jaimungal, Xuchen Wu).
+Revise and Resubmit at Operations Research (2025).  <https://fdr0903.github.io/files/CEX_DEX.pdf> link
+Publications
+Strategic bonding curves in automated market makers (with Álvaro Cartea, Leandro Sánchez-Betancourt, David Siska, Lukasz Szpruch).
+Mathematics of Operations Research (2026).  <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4459177> link
+Multi-Task Gaussian Process Bandits for Regime-Switching in Optimal Execution (with Álvaro Cartea, Gianluca Palmari).
+SIAM Journal on Financial Mathematics (2026).  <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4484004> link  <https://github.com/FDR0903/gpbandits_for_algotrading> code
+Decentralised finance and automated market making: Execution and speculation (with Álvaro Cartea, Marcello Monga).
+Journal of Economic Dynamics and Control (2025).  <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4144743> link
+Decentralised finance and automated market making: Predictable loss and optimal liquidity provision (with Álvaro Cartea, Marcello Monga).
+SIAM Journal on Financial Mathematics (2024).  <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4273989> link
+Multi-asset Optimal Execution and Statistical Arbitrage Strategies under Ornstein-Uhlenbeck Dynamics (with Philippe Bergault, Olivier Guéant).
+SIAM Journal on Financial Mathematics (2022).  <https://epubs.siam.org/doi/abs/10.1137/21M1407756> link
+Working papers
+The Economics of Regulating Tokenized Securities (with Álvaro Cartea, Fahad Saleh).
+(2026).  <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6942338> link
+Liquid Staking and the Limits of Policy (with Zachary Feinstein, Basil Williams).
+(2026).  <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6173222> link
+The Viability of Blockchain Markets under Discrete Clearing and Paid Priority (with Agostino Capponi, Álvaro Cartea).
+(2025).  <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5290232> link
+Strategic learning and trading in broker-mediated markets (with Alif Aqsha, Leandro Sánchez-Betancourt).
+(2024).  <https://arxiv.org/abs/2412.20847> link
+</sitemap/> Sitemap
+<http://github.com/FDR0903>  GitHub
+<https://fdr0903.github.io/feed.xml>  Feed
+© 2026 Fayçal Drissi.

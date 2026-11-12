@@ -1,0 +1,8 @@
+test_detached_response_socket_retains_per_read_timeout (test_persistent_https.Persistent) ... ok
+test_evidence_failure_also_closes_and_latches (test_persistent_https.Persistent) ... ok
+test_normal_server_close_new_method_new_connection_not_replay (test_persistent_https.Persistent) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.011s
+
+OK

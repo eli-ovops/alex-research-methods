@@ -1,0 +1,9 @@
+# run04 未批准峰值300的离线准备
+
+当前人类尚未批准300，真实主源和批准帽仍100。本目录不是实际执行；PENDING模板不可启动。
+
+core只把可容纳的上限钳制100改为300，默认参数仍100；collector仅经原extra2h完整资源校验、精确run04 release代码/binding校验，以及补充峰值授权校验后，才显式传入300。补充文件固定root/peak300-supplemental-authorization.json，必须由Root在真实人类批准后保存；status APPROVED_PEAK300_ONLY、human_approved true、approved_peak_CU_per_second整数300、prior_usage_reset false、other_caps_unchanged true、deadline_UTC 2026-10-20T08:10:50Z、original_resource_authorization精确引用既有extra2h path/hash9db20a…；文件全hash由新binding绑定。run04 release还必须绑定supplemental_peak_authorization_sha256及authorized_peak_CU_per_second300。任何缺失、PENDING或错绑定均停。测试true只存在隔离临时合成fixture，已清理，不是真实批准。
+
+447CU/19methods/CPUfloor6319与所有新增工作保留，不重置；08:10:50Z/5.5h、25M且actualfree更严、400k方法、7200CPU、2线程、1GiB/2GiB/8h/付款0等不变。Root真实补充auth、quota和CPU来源尚待准确hash绑定；不得以模板PENDING值申请release或启动。新独立run04目录/锁由未来实际启动产生，旧run全部保留。
+
+5项受影响离线检查仅标准库与临时fixture，禁socket.create_connection，无客户端或模型运行；含默认100、需授权才300、错误/缺失auth/release/父授权/截止/其他帽拒绝、已交付仍先记CU再峰值停止，累计及cap保留。0真实网络/密钥。峰值300不证明总额/CPU/盘/时效或完整14日准入，所有原经济和观察规则保持。

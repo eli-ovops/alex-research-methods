@@ -1,0 +1,589 @@
+Alchemy Pricing: Free, Pay as You Go & Enterprise Plans
+<#main-content> Skip to content
+<https://dashboard.alchemy.com/>
+Arc mainnet is live on Alchemy. Start building
+</>
+Platform
+CHAINS
+Reliable access to 100+ chains
+</rpc-api>
+Node RPC API </smart-websockets>
+WebSockets <https://www.alchemy.com/docs/reference/trace-api-quickstart>
+Trace, Debug & Simulation </solana>
+Solana
+Purpose-built low-latency RPC & gRPC </rpc/bitcoin>
+Bitcoin
+Plus Litecoin, Dogecoin & more </rpc> All chains→
+DATA
+Complete, indexed historical and real-time data
+<https://www.alchemy.com/docs/reference/portfolio-apis>
+Portfolio API </token-api>
+Token API </transfers-api>
+Transfers API <https://www.alchemy.com/docs/reference/prices-api-quickstart>
+Prices API </nft-api>
+NFT API </webhooks>
+Webhooks
+WALLETS
+Everything you need to move money onchain
+<https://www.alchemy.com/docs/wallets>
+Wallet APIs
+Programmable wallets for your users <https://www.alchemy.com/docs/wallets/transactions/send-transactions>
+Transaction APIs
+Send, batch & track transactions </gasless-transactions>
+Gas Management APIs
+Remove gas fees for your users
+SCALE
+Specialized products for teams at scale
+</dedicated-clusters>
+Dedicated Clusters </rollups>
+Rollups </alchemy-validators>
+Validators-as-a-Service
+</cortex>
+Cortex
+The intelligent engine that powers the whole platform with world-class reliability and performance.
+Solutions
+FINANCIAL SERVICES
+</fintech>
+FintechNew </payments>
+Payments </neobanks>
+Neobanks </banking>
+Banking
+CRYPTO
+</defi>
+DeFi </nfts>
+NFTs </ai-agents>
+AI agents
+Developers
+RESOURCES
+<https://docs.alchemy.com>
+Documentation
+Read our docs </rpc>
+Chain directory
+Devtools for 100+ networks </rankings>
+Chain rankings
+Explore chain usage and growth </agents>
+Agents
+Skills for Alchemy products
+TOOLS
+</faucets>
+Faucets
+Get testnet tokens <https://sandbox.alchemy.com/>
+Sandbox
+Make an API request </gwei-calculator>
+Gwei calculator
+Calculate Gwei and convert Wei
+SUPPORT
+</support>
+Support hub
+Find support and FAQs <https://status.alchemy.com/>
+Status
+Check our systems' status
+Agents
+TOOLS
+<https://www.alchemy.com/docs/alchemy-agent-skills>
+Agent Skills
+Teach agents Alchemy APIs <https://www.alchemy.com/docs/alchemy-cli>
+CLI
+Run Alchemy from your terminal <https://www.alchemy.com/docs/alchemy-mcp-server>
+MCP server
+Connect agents to 100+ chains
+PRODUCTS
+<https://agentcard.ai>
+AgentCard
+Let your agent spend anywhere <https://agentpay.alchemy.com>
+AgentPay
+Accept payments from agents
+RESOURCES
+</agents#guides>
+Tutorials
+Build onchain in a few prompts
+Resources
+COMPANY
+</company>
+About </case-studies>
+Customer stories </careers>
+CareersWe're hiring </ventures>
+Ventures </startup-program>
+Startup program </newsroom>
+Newsroom </security>
+Security
+LEARNING
+</overviews>
+Guides </blog>
+Blog </newsletter>
+Newsletter </events>
+Events <https://www.alchemy.com/dapps>
+App store <https://www.alchemy.com/university>
+Alchemy University
+</pricing> Pricing
+</contact-sales>
+Contact sales <https://dashboard.alchemy.com/signup?a=pricing>
+Sign in
+<https://dashboard.alchemy.com/signup?a=pricing>
+Sign in
+Built for performance.
+Priced for scale.
+Flexible plans built around your workload, not the other way around.
+Free
+Web3's most powerful free tier.
+15 requests per second
+5 apps & 5 webhooks
+Free 30M CU per month
+Full developer platform
+All mainnets & testnets
+Standard support
+<https://dashboard.alchemy.com/signup/?a=pricing>
+Start for free
+Pay as You Go
+Pay for what you use.
+Starting from 300 requests/second
+30 apps & 100 webhooks
+$0.525/1M CUs
+Included:
+Premium endpoints
+Enterprise-grade latency & uptime
+Throughput add-on to fit your needs
+<https://dashboard.alchemy.com/signup/?a=pricing>
+Start building
+Enterprise
+For critical performance,  </security> security and  </support> support
+Starting from 1000 requests/second
+100 apps & 500 webhooks
+Premium support packages
+Volume discounts
+Priority on product roadmaps
+Included:
+Advanced security
+Signed SLAs
+Increased eth_getLogs() ranges
+</contact-sales>
+Contact sales
+Free
+Web3's most powerful free tier.
+15 requests per second
+5 apps & 5 webhooks
+Free 30M CU per month
+Full developer platform
+All mainnets & testnets
+Standard support
+<https://dashboard.alchemy.com/signup/?a=pricing>
+Start for free
+Pay as You Go
+Pay for what you use.
+Starting from 300 requests/second
+30 apps & 100 webhooks
+$0.525/1M CUs
+Included:
+Premium endpoints
+Enterprise-grade latency & uptime
+Throughput add-on to fit your needs
+<https://dashboard.alchemy.com/signup/?a=pricing>
+Start building
+Enterprise
+For critical performance,  </security> security and  </support> support
+Starting from 1000 requests/second
+100 apps & 500 webhooks
+Premium support packages
+Volume discounts
+Priority on product roadmaps
+Included:
+Advanced security
+Signed SLAs
+Increased eth_getLogs() ranges
+</contact-sales>
+Contact sales
+Get a recommendation on the most suitable plan for you. <#pricing-calculator> Configure
+Scale your business and your rates
+Features
+Free <https://dashboard.alchemy.com/signup/?a=pricing>
+Start building
+Pay as You Go <https://dashboard.alchemy.com/signup/?a=pricing>
+Start building
+Enterprise </contact-sales>
+Contact sales
+CORE APIS
+Node API
+Full developer platform and core blockchain infrastructure.
+Core APIs
+Node API
+Smart websockets
+Debug API
+—
+Trace API
+—
+Data APIs
+Token API
+Prices API
+Transfers API
+Portfolio API
+NFT API
+Webhooks
+Wallets & transactions
+Wallet API
+Gas sponsorship
+Testnet only
+Transaction batching
+ERC-4337 & 7702 transactions
+Private transactions
+—
+Bundler sponsored operations
+—
+Paymaster API
+Bundler API
+Rollups
+Mainnet
+—
+—
+Testnet
+—
+SECURITY
+Security & compliance
+Advanced security, SLAs, and compliance controls.
+Security
+IP/domain allowlisting
+Google sign in (OAuth)
+SAML single sign on (SSO)
+—
+—
+Account activity logs
+—
+—
+Role-based access control (RBAC)
+—
+—
+TOOLS
+Developer tools
+Additional tools and dashboard features.
+Tools
+Multi-chain sandbox
+Request logs
+Request-log history
+1 hour
+7 days
+7 days
+Custom error and usage alerts
+—
+Additional alert destinations
+—
+—
+Mempool visualizer
+App and team analytics
+Usage reporting
+Usage CSV export
+—
+—
+Account spend cap
+—
+Per-app CU limits
+—
+—
+Contact sales
+Scoped access keys
+Admin API requests per month
+500
+No monthly quota
+No monthly quota
+Composer
+Full archive data
+Parity trace and gETH debug
+—
+SUPPORT
+Support
+From community to dedicated account management.
+Support tiers
+Target response time
+48 hours
+24 hours
+Custom
+Email & ticket support
+<#premium-support> Premium Support
+—
+—
+COST
+Detailed pricing
+Explore our competitive pricing plans tailored for robust infrastructure solutions to scale your projects.
+Plan
+Alchemy
+Free up to 30M CU
+$0.525/1M CU
+Custom
+Number of apps
+5
+30
+100
+Webhooks
+5
+100
+500
+Throughput CU/s (requests/s)
+300 CU/s (15)
+10,000 CU/s (300)
+Custom
+Solana
+gRPC
+—
+Starting at $75/TB
+Custom
+Archival data
+30M CU
+$0.525/1M CU
+Custom
+Gas sponsorship
+Admin fee
+—
+8%
+Custom
+Limit
+—
+Pre-load funds
+Custom
+Free
+Pay as You Go
+Enterprise <https://dashboard.alchemy.com/signup/?a=pricing>
+Start building
+CORE APISNode API
+Full developer platform and core blockchain infrastructure.
+Core APIs
+Node API
+Smart websockets
+Debug API
+—
+Trace API
+—
+Data APIs
+Token API
+Prices API
+Transfers API
+Portfolio API
+NFT API
+Webhooks
+Wallets & transactions
+Wallet API
+Gas sponsorship
+Testnet only
+Transaction batching
+ERC-4337 & 7702 transactions
+Private transactions
+—
+Bundler sponsored operations
+—
+Paymaster API
+Bundler API
+Rollups
+Mainnet
+—
+Testnet
+—
+SECURITYSecurity & compliance
+Advanced security, SLAs, and compliance controls.
+Security
+IP/domain allowlisting
+Google sign in (OAuth)
+SAML single sign on (SSO)
+—
+Account activity logs
+—
+Role-based access control (RBAC)
+—
+TOOLSDeveloper tools
+Additional tools and dashboard features.
+Tools
+Multi-chain sandbox
+Request logs
+Request-log history
+1 hour
+Custom error and usage alerts
+—
+Additional alert destinations
+—
+Mempool visualizer
+App and team analytics
+Usage reporting
+Usage CSV export
+—
+Account spend cap
+—
+Per-app CU limits
+—
+Scoped access keys
+Admin API requests per month
+500
+Composer
+Full archive data
+Parity trace and gETH debug
+—
+SUPPORTSupport
+From community to dedicated account management.
+Support tiers
+Target response time
+48 hours
+Email & ticket support
+<#premium-support> Premium Support
+—
+COSTDetailed pricing
+Explore our competitive pricing plans tailored for robust infrastructure solutions to scale your projects.
+Plan
+Alchemy
+Free up to 30M CU
+Number of apps
+5
+Webhooks
+5
+Throughput CU/s (requests/s)
+300 CU/s (15)
+Solana
+gRPC
+—
+Archival data
+30M CU
+Gas sponsorship
+Admin fee
+—
+Limit
+—
+Premium support
+Enterprise-grade support packages designed for mission-critical applications. Choose the tier that fits your needs.
+Support features
+Bronze
+Silver
+Gold
+Target response time
+12 hours
+4 hours
+2 hours
+Dedicated Slack/Telegram
+Named account manager
+Named solution engineer
+—
+—
+Signed SLAs
+—
+—
+Bronze
+Silver
+Gold
+Target response time12 hours
+Dedicated Slack/Telegram
+Named account manager
+Named solution engineer—
+Signed SLAs—
+Estimate your monthly cost
+Enter your monthly usage and peak throughput to see how compute and capacity affect your bill.
+Estimated monthly costPay as You Go
+$141.75/month <https://dashboard.alchemy.com/signup/?a=pricing>
+Start building
+Workload preset
+Starter
+Growth
+Scale
+Monthly usage
+Compute units
+Requests
+million CU / month
+270M CU · 10M requests
+Peak throughput
+RPS
+CU/s
+RPS
+300 RPS · 8,100 CU/s
+300 RPS is included with your PAYG plan.
+Average CUs per request
+Used to convert requests to compute units. The API methods you call determine your actual CU usage.  <https://www.alchemy.com/docs/reference/compute-units> View CU documentation
+10 CUs per requestDefault estimate: 27 CUs per request60 CUs per requestCustom
+CU/request
+Cost breakdown
+Compute usage270M CU · $0.525 / 1M CUs$141.75
+Included on PAYG300 RPS covered · $320 rate waived$0
+Additional capacity0 CU/s overage · $160 / 5,000 CU/s block$0
+Estimated self-serve costCompute only · capacity included$141.75
+How pricing works
+1
+Each request uses compute units
+Different API methods use different numbers of CUs. If you estimate from requests, choose an average that reflects the methods your app calls.
+2
+Flat-rate compute pricing
+Compute usage costs $0.525 per 1 million CUs. Throughput capacity is priced separately.
+3
+Peak capacity is separate
+Pay as You Go includes 300 RPS (10,000 CU/s). Above that, each additional 5,000 CU/s block costs $160 per month.
+4
+Self-serve capacity ends at 30,000 CU/s
+If you need more than 30,000 CU/s, contact sales for a custom capacity quote.
+Estimates use published self-serve Pay as You Go rates. Actual compute usage varies by API method. Throughput is measured over a rolling 10-second window.
+Frequently asked questions
+Have more questions about our plans? Email  </cdn-cgi/l/email-protection> [email protected].
+What is a compute unit (CU)?
+Compute Units (CUs) measure the computational resources your application consumes. Each API request uses a certain number of CUs depending on its complexity—for example, a simple JSON-RPC call might use 10 CUs, while more complex operations may use 100+ CUs. This enables flexible, usage-based pricing. For a simpler way to estimate your traffic in Compute Units, you can assume an average of 27 CUs per request, which reflects the most common traffic patterns we observe on our platform. Check the full breakdown of CUs / method in our  <https://www.alchemy.com/docs/reference/compute-units> docs.
+How do I start?
+Getting started is simple: 1) Sign up for a free account at  <https://dashboard.alchemy.com> dashboard.alchemy.com, 2) Create an application to get your API keys, 3) Integrate our SDK or make direct API calls, 4) Start building! You'll immediately have access to 30M free Compute Units per month on the Free plan.
+What is the Pay As You Go plan?
+Pay As You Go is our flexible pricing plan for teams scaling beyond the free tier. You pay $0.525 per million CUs for all usage. There are no upfront commitments; you only pay for what you use. This plan includes priority support and higher rate limits.
+Which plan is right for me?
+The Free plan is perfect for development and low-traffic applications. If you're production-ready or expecting significant usage growth, the Pay As You Go plan offers scalability and cost-efficiency. For enterprises with predictable, high-volume usage, contact our sales team for custom pricing and SLAs.
+What blockchains and networks does Alchemy support?
+Alchemy supports all major Layer 1 and Layer 2 networks including Ethereum, Solana, BNB Smart Chain, Avalanche, Polygon PoS, Arbitrum, Optimism, Base, Starknet, ZKsync, Blast, and many more. Visit our  <https://docs.alchemy.com> documentation for the complete list of supported chains.
+How does invoicing and billing work?
+For Pay As You Go plans, you'll be billed monthly based on your actual usage. You can view your current usage and estimated costs in the  <https://dashboard.alchemy.com/settings/billing> Alchemy Dashboard at any time. Enterprise customers receive custom invoicing based on their contract terms.
+Can I upgrade or downgrade my plan?
+Yes! You can upgrade from Free to Pay As You Go at any time directly from your dashboard. For Enterprise plans, contact our sales team. Downgrades take effect at the start of your next billing cycle.
+What do key terms like CU, throughput, and SLA mean?
+CU (Compute Units): A measure of computational resource usage. Throughput: The maximum number of requests per second your plan supports. SLA (Service Level Agreement): Guaranteed uptime and response time commitments. Rate Limit: The maximum number of API requests allowed per second.
+The web3 development platform
+<https://x.com/Alchemy>  <https://linkedin.com/company/alchemyinc/>  <https://www.youtube.com/c/alchemyplatform>
+Supercharge your inbox
+Sign up for our developer newsletter. </newsletter>
+Subscribe
+Products
+</cortex> Cortex
+</rpc-api> RPC API
+</rollups> Rollups
+</nft-api> NFT API
+</webhooks> Webhooks
+</smart-websockets> Websockets
+</transfers-api> Transfers API
+</token-api> Token API
+</bundler> Bundler API
+</gasless-transactions> Gas Manager API
+Developers
+<https://dashboard.alchemy.com/signup?a=pricing> Sign up
+<https://status.alchemy.com/> Status
+<https://www.alchemy.com/docs> Docs
+</support> Support
+</faucets> Faucets
+</gwei-calculator> Gwei calculator
+</rpc> Chain directory
+</rankings> Chain rankings
+</benchmarks> Benchmarks
+</snapshots> Snapshots
+Community
+<https://www.alchemy.com/university> Alchemy University
+</blog> Blog
+</case-studies> Customer stories
+</overviews> Overviews
+<https://www.alchemy.com/dapps> App store
+</events> Events
+</newsletter> Newsletter
+</startup-program> Startup program
+<https://cantina.xyz/bounties/d1496b11-e0cb-4905-80e6-b95f892f39ba> Offchain bug bounties
+<https://cantina.xyz/bounties/246de4d3-e138-4340-bdfc-fc4c95951491> Onchain bug bounties
+Company
+</company> About us
+</careers> Careers
+</case-studies> Customers
+</newsroom> Newsroom
+</brand> Press kit
+</security> Security
+<https://legal.alchemy.com/> Legal
+Contact
+</contact-sales> Sales
+</cdn-cgi/l/email-protection#ec818988858dac8d808f84898195c28f8381> Press
+</cdn-cgi/l/email-protection#52212722223d202612333e313a373f2b7c313d3f> Email
+English
+</ja/pricing> 日本語
+</es/pricing> Español
+</ko/pricing> 한국어
+</zh-Hans/pricing> 简体中文
+</zh-Hant/pricing> 繁體中文
+</pt-BR/pricing> Português
+2026 Alchemy Insights, Inc. ·  <https://legal.alchemy.com/> Legal
+Explore Alchemy in AI: <https://chatgpt.com/?q=I'm%20evaluating%20Alchemy%20(alchemy.com)%20as%20the%20blockchain%20infrastructure%20provider%20for%20a%20project%20I'm%20building.%0A%0ACan%20you%20tell%20me%3A%0A%E2%80%A2%20What%20they%20offer%20today%0A%E2%80%A2%20Which%20companies%20build%20on%20Alchemy%20and%20what%20they%20use%20it%20for%0A%E2%80%A2%20How%20they%20compare%20to%20other%20RPC%20and%20node%20providers%20on%20reliability%2C%20performance%2C%20chain%20coverage%2C%20and%20developer%20experience%0A%E2%80%A2%20What%20types%20of%20teams%20and%20projects%20they're%20the%20best%20fit%20for%2C%20and%20how%20to%20get%20started> ChatGPT <https://gemini.google.com/app?q=I'm%20evaluating%20Alchemy%20(alchemy.com)%20as%20the%20blockchain%20infrastructure%20provider%20for%20a%20project%20I'm%20building.%0A%0ACan%20you%20tell%20me%3A%0A%E2%80%A2%20What%20they%20offer%20today%0A%E2%80%A2%20Which%20companies%20build%20on%20Alchemy%20and%20what%20they%20use%20it%20for%0A%E2%80%A2%20How%20they%20compare%20to%20other%20RPC%20and%20node%20providers%20on%20reliability%2C%20performance%2C%20chain%20coverage%2C%20and%20developer%20experience%0A%E2%80%A2%20What%20types%20of%20teams%20and%20projects%20they're%20the%20best%20fit%20for%2C%20and%20how%20to%20get%20started> Google Gemini <https://www.perplexity.ai/search?q=I'm%20evaluating%20Alchemy%20(alchemy.com)%20as%20the%20blockchain%20infrastructure%20provider%20for%20a%20project%20I'm%20building.%0A%0ACan%20you%20tell%20me%3A%0A%E2%80%A2%20What%20they%20offer%20today%0A%E2%80%A2%20Which%20companies%20build%20on%20Alchemy%20and%20what%20they%20use%20it%20for%0A%E2%80%A2%20How%20they%20compare%20to%20other%20RPC%20and%20node%20providers%20on%20reliability%2C%20performance%2C%20chain%20coverage%2C%20and%20developer%20experience%0A%E2%80%A2%20What%20types%20of%20teams%20and%20projects%20they're%20the%20best%20fit%20for%2C%20and%20how%20to%20get%20started> Perplexity <https://copilot.microsoft.com/?q=I'm%20evaluating%20Alchemy%20(alchemy.com)%20as%20the%20blockchain%20infrastructure%20provider%20for%20a%20project%20I'm%20building.%0A%0ACan%20you%20tell%20me%3A%0A%E2%80%A2%20What%20they%20offer%20today%0A%E2%80%A2%20Which%20companies%20build%20on%20Alchemy%20and%20what%20they%20use%20it%20for%0A%E2%80%A2%20How%20they%20compare%20to%20other%20RPC%20and%20node%20providers%20on%20reliability%2C%20performance%2C%20chain%20coverage%2C%20and%20developer%20experience%0A%E2%80%A2%20What%20types%20of%20teams%20and%20projects%20they're%20the%20best%20fit%20for%2C%20and%20how%20to%20get%20started> Microsoft Copilot <https://claude.ai/new?q=I'm%20evaluating%20Alchemy%20(alchemy.com)%20as%20the%20blockchain%20infrastructure%20provider%20for%20a%20project%20I'm%20building.%0A%0ACan%20you%20tell%20me%3A%0A%E2%80%A2%20What%20they%20offer%20today%0A%E2%80%A2%20Which%20companies%20build%20on%20Alchemy%20and%20what%20they%20use%20it%20for%0A%E2%80%A2%20How%20they%20compare%20to%20other%20RPC%20and%20node%20providers%20on%20reliability%2C%20performance%2C%20chain%20coverage%2C%20and%20developer%20experience%0A%E2%80%A2%20What%20types%20of%20teams%20and%20projects%20they're%20the%20best%20fit%20for%2C%20and%20how%20to%20get%20started> Claude <https://grok.com/?q=I'm%20evaluating%20Alchemy%20(alchemy.com)%20as%20the%20blockchain%20infrastructure%20provider%20for%20a%20project%20I'm%20building.%0A%0ACan%20you%20tell%20me%3A%0A%E2%80%A2%20What%20they%20offer%20today%0A%E2%80%A2%20Which%20companies%20build%20on%20Alchemy%20and%20what%20they%20use%20it%20for%0A%E2%80%A2%20How%20they%20compare%20to%20other%20RPC%20and%20node%20providers%20on%20reliability%2C%20performance%2C%20chain%20coverage%2C%20and%20developer%20experience%0A%E2%80%A2%20What%20types%20of%20teams%20and%20projects%20they're%20the%20best%20fit%20for%2C%20and%20how%20to%20get%20started> Grok

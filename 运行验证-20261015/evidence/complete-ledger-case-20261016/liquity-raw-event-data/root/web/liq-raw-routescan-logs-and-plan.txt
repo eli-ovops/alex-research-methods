@@ -1,0 +1,313 @@
+Logs | Etherscan-compatible APIs | Routescan (https://routescan.io/docs/api/etherscan/logs)
+citeturn506search0 [wordlim: 200] Crawled: today; `https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&address=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&fromBlock=18000000&toBlock=18000050&page=1&offset=1000&apikey=YourApiKeyToken` ... 13 logIndex: string;
+
+# Logs
+
+Copy page as Markdown Open with AI tools
+
+Etherscan-compatible endpoints for the Logs module.
+
+## Get Event Logs by Address#
+
+Returns the event logs from an address, with optional filtering by block range.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+address optional[Input: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48]the string representing the address to check for logs fromBlock optional[Input: 18000000]the integer block number to start searching for logs eg. 37000000 toBlock optional[Input: 18000050]the integer block number to stop searching for logs eg. 37200000 page optional[Input: 1]the integer page number, if pagination is enabled offset optional[Input: 1000]the number of transactions displayed per page
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&address=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&fromBlock=18000000&toBlock=18000050&page=1&offset=1000&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&address=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&fromBlock=18000000&toBlock=18000050&page=1&offset=1000' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 status: string;
+
+3 message: string;
+
+4 result: {
+
+5 address: string;
+
+6 topics: string[];
+
+7 data: string;
+
+8 blockNumber: string;
+
+9 blockHash: string;
+
+10 timeStamp: string;
+
+11 gasPrice: string;
+
+12 gasUsed: string;
+
+13 logIndex: string;
+
+14 transactionHash: string;
+
+15 transactionIndex: string;
+
+16 }[];
+
+17}
+
+## Get Event Logs by Topics#
+
+Returns the events log in a block range, filtered by topics.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+fromBlock optional[Input: 18000000]the integer block number to start searching for logs eg. 37000000 toBlock optional[Input: 18000050]the integer block number to stop searching for logs eg. 37200000 topic0 optional[Input: 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef]the topic numbers to search for limited to topic0, topic1, topic2, topic3 topic0_1_opr optional[Input: and]the topic operator when multiple topic combinations are used limited to and or or topic1 optional[Input: 0x0000000000000000000000000000000000000000000000000000000000000000]the topic numbers to search for limited to topic0, topic1, topic2, topic3 page optional[Input: 1]the integer page number, if pagination is enabled offset optional[Input: 1000]the number of transactions displayed per page
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&fromBlock=18000000&toBlock=18000050&topic0=0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&topic0_1_opr=and&topic1=0x0000000000000000000000000000000000000000000000000000000000000000&page=1&offset=1000&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&fromBlock=18000000&toBlock=18000050&topic0=0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&topic0_1_opr=and&topic1=0x0000000000000000000000000000000000000000000000000000000000000000&page=1&offset=1000' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 status: string;
+
+3 message: string;
+
+4 result: {
+
+5 address: string;
+
+6 topics: string[];
+
+7 data: string;
+
+8 blockNumber: string;
+
+9 blockHash: string;
+
+10 timeStamp: string;
+
+11 gasPrice: string;
+
+12 gasUsed: string;
+
+13 logIndex: string;
+
+14 transactionHash: string;
+
+15 transactionIndex: string;
+
+16 }[];
+
+17}
+
+## Get Event Logs by Address filtered by Topics#
+
+Returns the event logs from an address, filtered by topics and block range.
+
+GET
+
+[Button: mainnet][Button: testnet]
+
+ImageEthereum
+
+fromBlock optional[Input: 18000000]the integer block number to start searching for logs eg. 37000000 toBlock optional[Input: 18001000]the integer block number to stop searching for logs eg. 37200000 address optional[Input: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48]the string representing the address to check for logs topic0 optional[Input: 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef]the topic numbers to search for limited to topic0, topic1, topic2, topic3 page optional[Input: 1]the integer page number, if pagination is enabled offset optional[Input: 1000]the number of transactions displayed per page
+
+API key (optional)
+
+[Input: Leave empty for Free (Keyless) tier][Button: Show]
+
+`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&fromBlock=18000000&toBlock=18001000&address=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&topic0=0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&page=1&offset=1000&apikey=YourApiKeyToken`
+
+[Button: Send request]
+
+›_cURL JS JavaScript Py Python Go Go php PHP Rb Ruby
+
+1 curl 'https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&fromBlock=18000000&toBlock=18001000&address=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&topic0=0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&page=1&offset=1000' \
+
+2 -H 'apikey: YourApiKeyToken'
+
+1{
+
+2 status: string;
+
+3 message: string;
+
+4 result: {
+
+5 address: string;
+
+6 topics: string[];
+
+7 data: string;
+
+8 blockNumber: string;
+
+9 blockHash: string;
+
+10 timeStamp: string;
+
+11 gasPrice: string;
+
+12 gasUsed: string;
+
+13 logIndex: string;
+
+14 transactionHash: string;
+
+15 transactionIndex: string;
+
+16 }[];
+
+17}--------------------------------------------------------------------------------
+API keys & pricing | Routescan (https://testnet.routescan.io/docs/plans-and-limits/api-keys-and-pricing)
+citeturn506view0 [wordlim: 200] Crawled: last month; Content type: text/html; Source: open({"ref_id":"https://testnet.routescan.io/docs/plans-and-limits/api-keys-and-pricing","lineno":null}); Total lines: 161
+L0: cite0†Docs L1: 
+L2: Getting Started
+L3: 
+L4:   * cite0†Introduction L5:   * cite1†Get started L6:   * cite2†Supported chains L7:   * cite3†Migrate from Etherscan L8:   * cite4†Use with LLMs L9: 
+L10: Plans & limits
+L11: 
+L12:   * cite5†API keys & pricing L13:   * cite6†Rate limits L14: 
+L15: Build with AI
+L16: 
+L17:   * cite7†MCP server L18: 
+L19: Etherscan-compatible APIs
+L20: 
+L21:   * cite8†Overview L22:   * cite9†Accounts L23:   * cite10†Blocks L24:   * cite11†Contracts L25:   * cite12†Geth-Parity Proxy L26:   * cite13†Gas Tracker L27:   * cite14†Logs L28:   * cite15†Nametags L29:   * cite16†Stats L30:   * cite17†Tokens L31:   * cite18†Transactions L32: 
+L33: High-speed REST APIs
+L34:   * cite19†Overview L35:   * cite20†API conventions L36:   * cite21†Addresses L37:   * cite22†Transactions L38:   * cite23†Tokens L39:   * cite24†Contracts L40:   * cite25†Blocks L41:   * cite26†Stats & aggregations L42:   * cite27†Cross-chain L43:   * cite28†X-Chain L44:   * cite29†P-Chain L45:   * cite30†Network L46: 
+L47: Resources
+L48: 
+L49:   * cite31†Verify Contract L50:   * cite32†Verification Guides†info.routescan.io L51: # API keys & pricing
+L52: 
+L53: Every Routescan API request counts against two caps set by your plan: a rate limit (requests per second) and a daily call limit. There are two free tiers:
+L54: - Free (Keyless) — no account or API key needed. Start calling immediately at 2 req/s and 10,000 calls/day.
+L55: - Free (Registered) — sign up for a free API key to raise the caps to 5 req/s and 100,000 calls/day, 10× the daily volume at no cost.
+L56: ## cite33†Free (Keyless)# L57: 
+L58: You can call the APIs straight away with no key. The free tier is capped per second and per day, see cite6†Rate limits for the current caps.
+L59: ## cite34†Using an API key# L60: 
+L61: Once you have a key, pass it in the request header:
+L62: 
+L63: bash
+L64: 
+L65: 1 curl -H "apikey: YourApiKeyToken" \
+L66: 
+L67: 2 "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=account&action=balance&address=0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae"
+L68: 
+L69:   * Send the key in the `apikey` HTTP header, never embed it in client-side code you ship to users.
+L70:   * The same key works across every chain and both the High-speed and Etherscan-compatible APIs.
+L71: ## cite35†Getting a key# L72: 
+L73:   1. Pick a plan below that matches your throughput needs.
+L74:   2. Complete checkout to generate your API key.
+L75:   3. Send the key in the `apikey` header on every request.
+L76: ## cite36†API plans# L77: 
+L78: One API key works across every chain Routescan indexes and both the High-speed and Etherscan-compatible APIs. A paid plan adds:
+L79: 
+L80:   * Access to every chain Routescan indexes.^{*}
+L81:   * The `all` chain id to query across all supported chains in one request.
+L82:   * Higher rate limits, larger daily call volumes and priority support.
+L83:   * Seamless multichain integration from a single key.
+L84: 
+L85: [Button: Monthly]Quarterly 15% off Yearly 20% off
+L86: 
+L87: Free (Keyless)
+L88: 
+L89: $0 /mo
+L90:   * 2 calls/second
+L91:   * up to 10,000 calls/day
+L92:   * Access to ALL endpoints
+L93:   * No account or API Key needed
+L94: [Button: Get Started Now]
+L95: 
+L96: Free (Registered)
+L97: 
+L98: $0 /mo
+L99: 
+L100:   * 5 calls/second
+L101:   * up to 100,000 calls/day
+L102:   * Access to ALL endpoints
+L103:   * General support
+L104:   * API Key required
+L105: [Button: Start for Free]
+L106: 
+L107: Standard
+L108: 
+L109: $160 /mo
+L110: 
+L111: $2400 billed $1920/yr
+L112: 
+L113:   * 10 calls/second
+L114:   * up to 200.000 calls/day
+L115:   * Priority support
+L116:   * Access to ALL endpoints
+L117: [Button: Get Started Now]
+L118: 
+L119: Advanced
+L120: 
+L121: $240 /mo
+L122: $3600 billed $2880/yr
+L123: 
+L124:   * 20 calls/second
+L125:   * up to 500.000 calls/day
+L126:   * Priority support
+L127:   * Access to ALL endpoints
+L128: [Button: Get Started Now]
+L129: 
+L130: Professional
+L131: 
+L132: $320 /mo
+L133: 
+L134: $4800 billed $3840/yr
+L135: 
+L136:   * 30 calls/second
+L137:   * up to 1.000.000 calls/day
+L138:   * Priority support
+L139:   * Access to ALL endpoints
+L140: [Button: Get Started Now]
+L141: 
+L142: Pro Plus
+L143: 
+L144: $440 /mo
+L145: 
+L146: $6600 billed $5280/yr
+L147: 
+L148:   * 30 calls/second
+L149:   * up to 1.500.000 calls/day
+L150:   * Priority support
+L151:   * Access to ALL endpoints
+L152: [Button: Get Started Now]
+L153: Source attribution via a backlink or a mention that your app is "Powered by Routescan.io APIs" is required for FREE plan except for personal/private usage
+L154: 
+L155: Requests work even without a key. A placeholder is only needed for integrations that require a key field, you can use any value, for example `&apikey=placeholder` or `apiKey: { routescan: "placeholder" }`.
+L156: Manage keys and subscriptions in your Profile Settings, or in the cite37†billing portal†billing.stripe.com (log in with your email and a one-time passcode). Need custom limits? Email [REDACTED_EMAIL].
+L157: 
+L158: * Some chains may not be fully indexed and could return incomplete data. See the cite38†indexing status†docs.routescan.io .
+L159: 
+L160: cite4†PreviousUse with LLMs cite6†Next Rate limits cite39†Questions? Contact us†routescan.io 

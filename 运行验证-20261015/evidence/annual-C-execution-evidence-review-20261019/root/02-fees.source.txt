@@ -1,0 +1,514 @@
+Title: Fee schedule – Bitstamp by Robinhood
+
+URL Source: https://www.bitstamp.net/fee-schedule/
+
+Markdown Content:
+## Trading fees (all pairs)
+
+< $10,000
+
+0.30%
+
+0.40%
+
+0.060%
+
+0.080%
+
+0.030%
+
+0.040%
+
+Maker: 0.30%
+
+Taker: 0.40%
+
+Maker: 0.060%
+
+Taker: 0.080%
+
+Maker: 0.030%
+
+Taker: 0.040%
+
+> $10,000
+
+0.20%
+
+0.30%
+
+0.040%
+
+0.060%
+
+0.020%
+
+0.030%
+
+Maker: 0.20%
+
+Taker: 0.30%
+
+Maker: 0.040%
+
+Taker: 0.060%
+
+Maker: 0.020%
+
+Taker: 0.030%
+
+> $100,000
+
+0.10%
+
+0.20%
+
+0.020%
+
+0.040%
+
+0.010%
+
+0.020%
+
+Maker: 0.10%
+
+Taker: 0.20%
+
+Maker: 0.020%
+
+Taker: 0.040%
+
+Maker: 0.010%
+
+Taker: 0.020%
+
+> $500,000
+
+0.08%
+
+0.18%
+
+0.016%
+
+0.036%
+
+0.008%
+
+0.018%
+
+Maker: 0.08%
+
+Taker: 0.18%
+
+Maker: 0.016%
+
+Taker: 0.036%
+
+Maker: 0.008%
+
+Taker: 0.018%
+
+> $1,500,000
+
+0.06%
+
+0.16%
+
+0.012%
+
+0.032%
+
+0.006%
+
+0.016%
+
+Maker: 0.06%
+
+Taker: 0.16%
+
+Maker: 0.012%
+
+Taker: 0.032%
+
+Maker: 0.006%
+
+Taker: 0.016%
+
+> $5,000,000
+
+0.03%
+
+0.12%
+
+0.006%
+
+0.024%
+
+0.003%
+
+0.012%
+
+Maker: 0.03%
+
+Taker: 0.12%
+
+Maker: 0.006%
+
+Taker: 0.024%
+
+Maker: 0.003%
+
+Taker: 0.012%
+
+> $20,000,000
+
+0.02%
+
+0.10%
+
+0.004%
+
+0.020%
+
+0.002%
+
+0.010%
+
+Maker: 0.02%
+
+Taker: 0.10%
+
+Maker: 0.004%
+
+Taker: 0.020%
+
+Maker: 0.002%
+
+Taker: 0.010%
+
+> $50,000,000
+
+0.01%
+
+0.08%
+
+0.002%
+
+0.016%
+
+0.001%
+
+0.008%
+
+Maker: 0.01%
+
+Taker: 0.08%
+
+Maker: 0.002%
+
+Taker: 0.016%
+
+Maker: 0.001%
+
+Taker: 0.008%
+
+> $100,000,000
+
+0.00%
+
+0.06%
+
+0.000%
+
+0.012%
+
+0.000%
+
+0.006%
+
+Maker: 0.00%
+
+Taker: 0.06%
+
+Maker: 0.000%
+
+Taker: 0.012%
+
+Maker: 0.000%
+
+Taker: 0.006%
+
+> $250,000,000
+
+0.00%
+
+0.05%
+
+0.000%
+
+0.010%
+
+0.000%
+
+0.005%
+
+Maker: 0.00%
+
+Taker: 0.05%
+
+Maker: 0.000%
+
+Taker: 0.010%
+
+Maker: 0.000%
+
+Taker: 0.005%
+
+> $1,000,000,000
+
+0.00%
+
+0.03%
+
+0.000%
+
+0.006%
+
+0.000%
+
+0.003%
+
+Maker: 0.00%
+
+Taker: 0.03%
+
+Maker: 0.000%
+
+Taker: 0.006%
+
+Maker: 0.000%
+
+Taker: 0.003%
+
+We use a maker-taker fee model to determine trading fees. Different fees apply to orders that provide liquidity (maker orders) and to orders that take liquidity (taker orders). We calculate the fees based on the current pricing tier you are in at the time of your order execution. Trading volume is calculated across all trading pairs and is expressed in USD, based on the exchange rate at the time of the trade.
+
+When determining a user’s pricing tier, the user’s 30-day trading volume in _FX/Stablecoin_ pairs (_see the list of applicable pairs below_) receives a reduction of 80%, with an exception for the USDT/USD and USDT/EUR pairs, which receive a reduction of 90%; the calculated adjusted volume constitutes a basis for the application of reduced fees. For example, $100 of volume in a standard FX/Stablecoin pair counts as $20 in the 30-day volume calculation, whereas $100 of volume in USDT/USD or USDT/EUR counts as $10. Volumes in all other pairs have a standard weighting of 100%.
+
+FX / Stablecoin pairs: EUR/USD, GBP/USD, SGD/USD, USDC/EUR, USDC/USDT, USDC/USD, USDT/EUR, USDT/USD, EURC/EUR, EURC/USDC, PYUSD/USD, EURCV/EUR, EURCV/USDT, VCHF/USD, VCHF/EUR, VEUR/USD, VEUR/EUR, ZUSD/USD, GYEN/USD, RLUSD/USD, RLUSD/EUR, RLUSD/USDT, EURCV/USDC, XSGD/USD, XSGD/USDT, DAI/USD
+
+Placing an order that is filled instantly at the market price makes you a taker and a fee between 0.03% and 0.40% applies. Placing an order which is not filled instantly and is instead posted to the order book is a maker order. If your maker order is matched by another customer’s order, a lower fee between 0.00% and 0.30% applies.
+
+For placing an order that is immediately only partially matched, you will pay a taker fee for that portion. What remains of the order is placed on the order book. Once it’s fully matched, it becomes a maker order, and a maker fee applies for this remaining portion of the order.
+
+We recommend checking your fee tiers prior to trading to ensure you are in the updated pricing tier.
+
+For more details and options, contact us at [[REDACTED_EMAIL]](mailto:[REDACTED_EMAIL])
+
+## Basic Trading Spread
+
+When using Basic Trading, the displayed price includes a spread added to the spot market price available on our trading platform. As a result of a guaranteed quote, the total cost of your Basic Trading transaction may be higher than if you were to place an order directly on the order book. The spread applied in Basic Trading consists of two components:
+
+- Basic Spread (fixed):
+
+- Stablecoins: 0.5%
+
+- Other crypto-assets: 1.8%
+
+- Volatility Spread (variable):
+
+An additional spread may apply during periods of increased market volatility.This is dynamically calculated based on real-time market conditions and the specific crypto-asset being traded. The volatility spread is intended to reflect increased market risk, particularly during high volatility or price surges. In low-volatility market, this spread is reduced to zero.
+
+- Stablecoins: 0% to 0.5%
+
+- Other crypto-assets: 0% to 0.5%
+
+## Fees via the Robinhood Platform
+
+_Applicable only to clients who access Bitstamp's services through the Robinhood Platform._
+
+Bitstamp UK Ltd.
+
+Free of charge
+
+Bitstamp Europe S.A.
+
+0.95% on the EUR value of the executed amount* €0.01 minimum fee
+
+* No fees apply to EURC buy and sell transactions.
+
+Bitstamp Europe S.A.
+
+€0.00 Though Bitstamp Europe S.A. doesn't charge fees for transfers, every crypto transfer does require a network fee. Network fees, or gas fees, are paid to miners/validators who process blockchain transactions. Fees vary based on network activity.
+
+Clients of Bitstamp UK Ltd. and Bitstamp Europe S.A. who access Bitstamp's services through the Robinhood Platform are not charged the fees otherwise set out in this Fee Schedule. No fees apply to these clients in connection with their use of Bitstamp's crypto services through the Robinhood Platform.
+
+Any other fees charged by third parties (e.g. card issuers, banks, or cryptocurrency network transaction fees) as well as Robinhood affiliates providing certain services to clients (e.g. fiat services) under their terms and conditions are outside Bitstamp's control and are not covered by this exclusion.
+
+## Staking fees
+
+ETH
+
+15.00%
+
+ADA
+
+25.00%
+
+There are no direct fees for staking and unstaking assets. However, we take a commission from the total reward pool collected by our staking nodes before distributing rewards to individual customers. This commission covers all costs and fees associated with staking and is currently set on per asset basis as displayed in the table above.
+
+If you choose to stop receiving rewards for your staked assets, the rewards will be collected by Bitstamp as a fee for enabling the opt-out functionality.
+
+APYs quoted on our Earn page and elsewhere are quoted on net basis and represent the APY that you get as a customer.
+
+## SEPA
+
+Deposit
+
+Free of charge
+
+Withdrawal
+
+3.00 EUR
+
+## ACH
+
+Deposit
+
+Free of charge
+
+Withdrawal
+
+Free of charge
+
+## Faster Payments (UK)
+
+Deposit
+
+Free of charge
+
+Withdrawal
+
+2.00 GBP
+
+## PayNow
+
+Deposit
+
+Free of charge
+
+Withdrawal
+
+Free of charge
+
+## Instant Purchase
+
+Instant Service
+
+4% (your card issuer may charge additional fees)
+
+_Instant Purchase is supported by the available payment methods: Debit Cards, Credit Cards, GooglePay, ApplePay._
+
+## International wire
+
+Deposit
+
+0.05% (min fee = 7.5 USD/EUR/SGD, 5 GBP, max fee = 300 USD/EUR/SGD, 250 GBP)
+
+Withdrawal
+
+0.1% (min fee = 25 USD/EUR/GBP, 35 SGD. Your bank may charge additional fees.)
+
+## Non-standard processing
+
+_Fees for transfers which are not in EUR, USD, GBP or SGD will be charged in USD and converted to the target currency at the current conversion rate._
+
+## Crypto Deposits
+
+All cryptocurrency deposits are free of charge.
+
+## Crypto Withdrawals
+
+Transactions on cryptocurrency networks are subject to variable network transaction fees. When you withdraw your cryptocurrency, Bitstamp charges you a variable crypto withdrawal fee which consists of Bitstamp's estimate of the network transaction fees within a certain time period and Bitstamp's crypto withdrawal processing fee. The exact crypto withdrawal fee is disclosed before you confirm the cryptocurrency withdrawal.
+
+## IOU on XRP Ledger
+
+0.15% fee for IOUs transferred between accounts.
+
+## Minimum trade amount
+
+The minimum order size is 10 EUR/EURCV/EUROC/GBP/RLUSD/USD/USDC/USDT for EUR/EURCV/EUROC/GBP/RLUSD/USD/USDC/USDT-denominated trading pairs, 0.0002 BTC for BTC-denominated trading pairs, and 0.002 ETH for ETH-denominated trading pairs.
+
+## Fiat Balance Threshold at Account Termination
+
+_Not applicable to clients of Bitstamp USA, Inc._
+
+The minimum fiat currency balance that can be returned to you upon account termination is 25 EUR/USD. Any amount below this value will not be returned.
+
+## Inactive Account Maintenance Fee
+
+_Applicable only to clients of Bitstamp Limited (excluding clients resident in the United States)._
+
+Inactive account maintenance fee
+
+5.00 EUR/USD/GBP per month
+
+Accounts that have been inactive for at least six (6) consecutive months may be subject to an Inactive Account Maintenance Fee. Inactivity is determined based on the absence of trading activity, deposits, withdrawals, or if the client has not logged into their account during the relevant six-month period.
+
+If there is insufficient fiat currency available in the account to pay the fee, Bitstamp may charge the equivalent value of 5.00 EUR/USD/GBP in a supported crypto-asset held in the account, using the applicable exchange rate at the time the fee is assessed.
+
+The fee will only be deducted from the available balance in the client’s account. If the account balance is less than the monthly fee, only the remaining balance will be deducted. The fee will never result in a negative balance.
+
+## Transaction Recovery
+
+10% of the value of lost cryptocurrency, but in no case less than 1,000.00 USD/EUR. This will be charged in the cryptocurrency which is subject to the transaction recovery. The minimum value of transactions that Bitstamp may attempt to recover is 10,000.00 USD/EUR.
+
+## Fee Rounding
+
+We kindly ask our users to take note on Bitstamp's policy regarding fee calculation. Our fees on EUR/EURCV/EUROC/GBP/RLUSD/USD/USDC/USDT-denominated pairs are calculated to 5 decimal places, while fees on BTC-denominated and ETH-denominated pairs are calculated to 8 decimal places. Additional decimal places will be rounded to the nearest value.
+
+## Bank exchange rates
+
+The following exchange rates apply to bank deposits and withdrawals that require currency conversion. For example, if you are depositing CHF to your USD balance.
+
+Available markets
+
+EUR
+
+USD
+
+GBP
+
+AUD
+
+1.6579
+
+1.5634
+
+CHF
+
+0.9580
+
+0.8937
+
+GBP
+
+0.8704
+
+0.8153
+
+NOK
+
+10.9193
+
+10.2502
+
+USD
+
+1.1587
+
+1.0862
+
+_Last updated: Oct. 19, 2026, 07:17_
+
+These exchange rates depend on market conditions. Consequently, the exchange rate applied to your transaction may not be the same as posted here.

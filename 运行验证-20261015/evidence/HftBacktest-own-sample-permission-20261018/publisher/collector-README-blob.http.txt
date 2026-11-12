@@ -1,0 +1,29 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=86400, s-maxage=86400
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Sun, 18 Oct 2026 12:46:24 GMT
+Etag: W/"80d4c5fe02991e2f3d33694ce6fc3df532b50a212e04036eb10fed1a3d2e6361"
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: 
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: DA3A:3F3F62:1C40B43:2D35012:6AD4BFA0
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4998
+X-Ratelimit-Reset: 1792327792
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 2
+X-Xss-Protection: 0
+
+{"sha":"6e337c5c7c8df3dd5ce3c47ff7b161751eea7284","node_id":"B_kwDOHd9uYtoAKDZlMzM3YzVjN2M4ZGYzZGQ1Y2UzYzQ3ZmY3YjE2MTc1MWVlYTcyODQ","size":1380,"url":"https://api.github.com/repos/nkaz001/collect-binancefutures/git/blobs/6e337c5c7c8df3dd5ce3c47ff7b161751eea7284","content":"IyBUaGlzIHByb2plY3QgbW92ZWQgdG8gaHR0cHM6Ly9naXRodWIuY29tL25r\nYXowMDEvaGZ0YmFja3Rlc3QvdHJlZS9tYXN0ZXIvY29sbGVjdG9yCgojIEJp\nbmFuY2UgZmVlZCBjb2xsZWN0b3IKIyMgUmVxdWlyZW1lbnRzClB5dGhvbjM6\nIHJ1biBieSBgcHl0aG9uM2AgY29tbWFuZC4gIAphaW9odHRwOiBgcGlwMyBp\nbnN0YWxsIGFpb2h0dHBgCgojIyBSdW4KYGNvbGxlY3Quc2ggW2V4Y2hhbmdl\nXSBbc3ltYm9scyBzZXBhcmF0ZWQgYnkgY29tbWEuXSBbb3V0cHV0IHBhdGhd\nYCAgCmV4YW1wbGU6IGBjb2xsZWN0LnNoIGJpbmFuY2VmdXR1cmVzIGJ0Y3Vz\nZHQsZXRodXNkdCAvbW50L2RhdGFgCgojIyBFeGNoYW5nZXMgIAoqICoqYmlu\nYW5jZSoqOiBiaW5hbmNlIHNwb3QgIAoqICoqYmluYW5jZWZ1dHVyZXMqKjog\nYmluYW5jZSB1c2QocyktbSBmdXR1cmVzICAgIAoqICoqYmluYW5jZWZ1dHVy\nZXNjb2luKio6IGJpbmFuY2UgY29pbi1tIGZ1dHVyZXMKZXhhbXBsZTogYGNv\nbGxlY3Quc2ggYmluYW5jZWZ1dHVyZXNjb2luIGJ0Y3VzZF9wZXJwIC9tbnQv\nZGF0YWAgICAKIAoKKipBV1MgdG9reW8gcmVnaW9uIGlzIHJlY29tbWVuZGVk\nIHRvIG1pbmltaXplIGxhdGVuY3kuKioKCgojIENvbnZlcnRlcjogZmVlZCBk\nYXRhIHRvIFBhbmRhcyBEYXRhZnJhbWUgcGlja2xlIGZpbGUKIyMgUmVxdWly\nZW1lbnRzClB5dGhvbjM6IHJ1biBieSBgcHl0aG9uM2AgY29tbWFuZC4gIApw\nYW5kYXM6IGBwaXAzIGluc3RhbGwgcGFuZGFzYAoKIyMgUnVuCmBjb252ZXJ0\nLnNoIFstcyBJTklUSUFMX01BUktFVF9ERVBUSF9TTkFQU0hPVF0gWy1mXSBb\nLWNdIHNyY19maWxlIGRzdF9wYXRoCgpvcHRpb246ICAKd2l0aCAtZjogaW5j\nbHVkaW5nIG1hcmsgcHJpY2UsIGZ1bmRpbmcsIGJvb2sgdGlja2VyIHN0cmVh\nbXMgIAp3aXRob3V0IC1mOiBvbmx5IG1hcmtldCBkZXB0aCBhbmQgdHJhZGUg\nc3RyZWFtcyAgCndpdGggLWM6IGNvcnJlY3QgZXhjaGFuZ2UgdGltZXN0YW1w\nIHRvIGJlIG1vbm90b25pY2FsbHkgaW5jcmVhc2VkICAKICAKZXhhbXBsZTog\nIApgY29udmVydC5zaCAvbW50L2RhdGEvYnRjdXNkdF8yMDIyMDgxMS5kYXQg\nL21udC9kYXRhYCAgCm9yIHdpdGggdGhlIGluaXRpYWwgbWFya2V0IGRlcHRo\nIHNuYXBzaG90ICAKYGNvbnZlcnQuc2ggL21udC9kYXRhL2J0Y3VzZHRfMjAy\nMjA4MTEuZGF0IC9tbnQvZGF0YSAtcyAvbW50L2RhdGEvYnRjdXNkdF8yMDIy\nMDgxMC5zbmFwc2hvdC5wa2xgCiAgCmAvbW50L2RhdGEvYnRjdXNkdF8yMDIy\nMDgxMC5zbmFwc2hvdC5wa2xgIGlzIEVuZC1PZi1EYXkgbWFya2V0IGRlcHRo\nIHNuYXBzaG90IG9mIDIwMjIwODEwIHNvIGl0J3MgaW5pdGlhbCBtYXJrZXQg\nZGVwdGggc25hcHNob3Qgb2YgMjAyMjA4MTEuICAK\n","encoding":"base64"}

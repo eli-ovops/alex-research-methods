@@ -1,0 +1,18 @@
+{"status": "RUNNING", "child_pid": 46304, "max_wall_seconds": 0.15}
+{"status": "PROCESS_LIVE", "child_pid": 46304, "wall_seconds": 0.0, "progress": null}
+{"status": "PROCESS_LIVE", "child_pid": 46304, "wall_seconds": 0.1, "progress": null}
+{"status": "PROCESS_LIVE", "child_pid": 46304, "wall_seconds": 0.1, "progress": null}
+{"status": "PROCESS_LIVE", "child_pid": 46304, "wall_seconds": 0.2, "progress": null}
+{"started_at_utc": "2026-10-15T06:15:36.044471+00:00", "parent_pid": 46303, "command": ["/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/.venv/bin/python", "-c", "import time; time.sleep(60)"], "max_wall_seconds": 0.15, "status": "DEADLINE_STOP", "scope": "one owned child process group only", "child_pid": 46304, "finished_at_utc": "2026-10-15T06:15:36.197843+00:00", "child_exit_code": -9, "wall_seconds": 0.15304512498551048, "received_signal": null}
+{"status": "RUNNING", "child_pid": 46305, "max_wall_seconds": 5}
+{"started_at_utc": "2026-10-15T06:15:36.199577+00:00", "parent_pid": 46303, "command": ["/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/.venv/bin/python", "-c", "import time; time.sleep(60)"], "max_wall_seconds": 5, "status": "INTERRUPTED", "scope": "one owned child process group only", "child_pid": 46305, "finished_at_utc": "2026-10-15T06:15:36.202471+00:00", "child_exit_code": -9, "wall_seconds": 0.0026382080104667693, "received_signal": 15}
+{"status": "RUNNING", "child_pid": 46306, "max_wall_seconds": 5}
+{"started_at_utc": "2026-10-15T06:15:36.203246+00:00", "parent_pid": 46303, "command": ["/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/.venv/bin/python", "-c", "print(\"software-only\")"], "max_wall_seconds": 5, "status": "CHILD_EXITED", "scope": "one owned child process group only", "child_pid": 46306, "finished_at_utc": "2026-10-15T06:15:36.224376+00:00", "child_exit_code": 0, "wall_seconds": 0.02088379199267365, "received_signal": null}
+test_deadline_terminates_owned_process (test_launch_transfer50.DeadlineTests.test_deadline_terminates_owned_process) ... ok
+test_interrupt_during_process_creation_stops_new_child (test_launch_transfer50.DeadlineTests.test_interrupt_during_process_creation_stops_new_child) ... ok
+test_terminal_child_and_duplicate_attempt_refused (test_launch_transfer50.DeadlineTests.test_terminal_child_and_duplicate_attempt_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.181s
+
+OK

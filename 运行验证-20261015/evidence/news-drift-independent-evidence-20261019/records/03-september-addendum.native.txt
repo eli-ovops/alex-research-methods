@@ -1,0 +1,108 @@
+Addendum: five more weeks of data (https://tommijohnsen.substack.com/p/addendum-five-more-weeks-of-data)
+citeturn1075view0 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://tommijohnsen.substack.com/p/addendum-five-more-weeks-of-data","lineno":null}); Total lines: 117
+L0: # cite0†Tommi Johnsen, PhD L1: 
+L2: # Addendum: five more weeks of data
+L3: ### An update to “Does AI Still Read the News Better Than the Market?”
+L4: 
+L5: cite1†Tommi Johnsen, PhD†substack.com and cite2†Svetlana Shasharina, PHD†substack.com L6: 
+L7: Sep 19, 2026
+L8: 
+L9: 2
+L10: 
+L11: 6
+L12: 
+L13: Share
+L14: 
+L15: When we published that piece we said a re-test was scheduled and that we would report it whichever way it came out. It has now run, on data through 18 September. Here is what it found, and what it changes.
+L16: The short version. On all the data together the result is stronger and cleaner than what we published. On the five weeks of genuinely new data considered alone, the size of the effect held up but the window was too short for our own test of it to say anything either way. And one part of the claim turns out to have been doing no work at all, so we are dropping it.
+L17: 
+L18: Thanks for reading! Subscribe for free to receive new posts and support my work.
+L19: 
+L20: * * *
+L21: ## The result on more data
+L22: 
+L23: The original piece rested on six weeks. There are now roughly eleven.
+L24: 
+L25: The next-day gap for well-covered companies, measured three ways: the original window alone, all the data together, and the new data alone. Bars show the estimate; whiskers show how far it could reasonably move.
+L26: On all the data together the gap is +0.41%, and the range of values the data supports has narrowed — from roughly [+0.13, +0.78] to [+0.17, +0.66]. It also passes both of our scrambled-data tests more decisively than before. That is what we hoped for: not a bigger number, a better-measured one.
+L27: ## The honest part
+L28: 
+L29: The tougher test was the five weeks of data that did not exist when we made the claim. There the gap measures +0.35% — right in line — but our scrambled-data test does not clear it.
+L30: Before concluding anything from that, we checked whether a five-week window can clear that test at all. It mostly cannot. Taking random five-week stretches out of the original data — where we know the effect is present, because that is where we found it — the test fails more often than it passes. The typical result sits well short of the threshold.
+L31: So the out-of-sample test did not fail. It was unable to speak. That is a real limitation and not a reassuring one, but it is a different thing from evidence against the result, and we would rather say which it is. More weeks of data, not more analysis, is what settles it.
+L32: ## What we are dropping
+L33: 
+L34: Our published claim had two conditions attached: at least three articles that day, and a sentiment score short of the maximum. The second was there because scores of exactly +1 or −1 are almost always thin one-article days in disguise.
+L35: With more data we can see that the second condition contributes essentially nothing. The gap for companies with at least three articles is +0.44%, +0.41%, and +0.35% across the three windows. Adding the second condition moves those to +0.45%, +0.41%, and +0.35%. Within a rounding error, every time.
+L36: 
+L37: We also tested how reliably each half of the story holds up in a short window. The coverage rule is solid — it holds in 95% of the five-week stretches we tested. The second condition is close to a coin flip.
+L38: So the claim is now simply: there is a next-day effect for companies with at least three articles that day, and none below that. One threshold rather than two. It is the same result, stated in the form the evidence actually supports, and it is easier to check.
+L39: ## What replicated, and what didn’t
+L40: 
+L41: The weekend finding replicated everywhere — in all three windows, including the new data alone. News published while the market is open shows a large same-day gap; news published over a weekend shows none. It remains our most robust result, and the strongest hint that much of what we measure on the day itself is journalism describing a move rather than news preceding one.
+L42: 
+L43: The same-day effect persists and, if anything, grows. Still untradeable.
+L44: The second-day reversal holds across all the data and is still concentrated in the largest companies rather than the small illiquid ones, so it is not a mechanical artifact. On the new data alone it is too noisy to judge.
+L45: 
+L46: The stricter of our two scoring prompts reads the same-day market better than the standard one — that result strengthened and is now clear. On the next day, the edge we thought we might be seeing has gone entirely. We are not switching prompts.
+L47: One thing we checked and cleared. Our scoring became noticeably more cautious over the summer, which would be alarming if the model or the instructions had changed underneath us. They had not: re-running the same recurring headlines, the labels are 99.8% identical across the whole period. The shift tracks earnings season, when genuinely material news is unusually dense. It is the news that changed, not the scoring.
+L48: 
+L49: * * *
+L50: ## What comes next
+L51: 
+L52: Unchanged in substance from the original piece, and now in a firmer order.
+L53: 1. Split the day at the opening bell. Still the single most valuable change, and the weekend result is the argument for it. News that arrives while the market is closed and news that arrives while it is open are different situations, and we currently blend them. Separating them turns our weekend observation into a proper test, and it is the only version of this work that could ever be acted on rather than merely described.
+L54: 2. Bring in the insider-trading filings. We have been collecting SEC Form 4 disclosures since the beginning and analysing none of them. The study we are testing against found insider transactions to be the category markets absorb most slowly. It is also the only item on this list that adds genuinely new information rather than re-cutting what we already have.
+L55: 3. Decompose by kind of news. Earnings figures, corporate events, and analyst opinions should behave differently. We already tag every article this way. If the same-day effect lives in commentary rather than in datable events, that settles the question the weekend result raises.
+L56: 4. Build the coverage rule into the score itself. A score that divides by article count discards how much news it was averaging over. A version that carries its own confidence now looks like it recovers the result without any filter applied afterwards — promising, and worth finishing.
+L57: 
+L58: 5. Keep collecting. The most useful thing we can do for the out-of-sample question is wait. We will re-test again with a longer window and report it the same way.
+L59: 
+L60: * * *
+L61: As before: we are not claiming any of this makes money. The gaps we measure are small enough that ordinary trading costs would likely consume them, and we have not built, tested, or traded a strategy.
+L62: 
+L63: Thanks for reading! Subscribe for free to receive new posts and support my work.
+L64: 
+L65: 2
+L66: 
+L67: 6
+L68: 
+L69: Share
+L70: #### Discussion about this post
+L71: 
+L72: [Button: Comments][Button: Restacks]
+L73: 
+L74: cite3†Image: User's avatar†substackcdn.com L75: 
+L76: cite4†Guy Nussbaum L77: 
+L78: cite5†Oct 3†substack.com L79: 
+L80: For the stocks with at least three articles that day, have you compared the next-day gap with one based only on whether they rose or fell on the news day? That could be a useful benchmark given your point about coverage following price moves.
+L81: 
+L82: Reply
+L83: 
+L84: Share
+L85: 
+L86: cite5†2 replies†substack.com L87: 
+L88: cite6†A.J Minai L89: 
+L90: cite7†Sep 29†substack.com L91: Hi Tommi. The phrase that stayed with me was “unable to speak.”
+L92: 
+L93: Institutions are rarely very good at leaving evidence in that state.
+L94: 
+L95: Silence gets analysed, qualified, escalated and committee’d until eventually it sounds rather like conviction.
+L96: 
+L97: Sometimes the more sophisticated decision is simply to leave the blank cell blank.
+L98: 
+L99: Reply
+L100: 
+L101: Share
+L102: 
+L103: cite8†4 more comments... L104: 
+L105: No posts
+L106: ### Ready for more?
+L107: 
+L108: [Input][Input][Input][Input][Input][Input][Input][Input][Input][Input]
+L109: 
+L110: [Input: Type your email...]
+L111: 
+L112: © 2026 Tommi Johnsen · cite9†Privacy†substack.com ∙ cite10†Terms†substack.com ∙ cite11†Collection notice†substack.com L113: 
+L114: cite12†Start your Substack†substack.com cite13†Get the app†substack.com L115: 
+L116: cite14†Substack†substack.com is the home for great culture

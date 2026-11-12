@@ -1,0 +1,246 @@
+//! `getCurrentICR` @ `c8a5a4ee`: entire coll/debt (redistribution + interest)
+//! then `LiquityMath._computeCR`. `hf = ICR / MCR` so `1.0` is the seize
+//! boundary. `HealthState::Liquidatable` iff `ICR < MCR` and the trove is
+//! `active` or `zombie` — hard threshold, never `SoftLiquidating`.
+
+use alloy_primitives::U256;
+use liq_protocol::{
+    AssetMask, Health, HealthState, MarketFlags, MarketRow, MarketSlot, PositionRef, ProtocolError,
+    Result,
+};
+use liq_types::fixed::FixedError;
+use liq_types::{AssetId, PriceVector, Wad};
+
+use crate::layout::{
+    BranchRow, TroveCollExtra, TroveDebtExtra, TroveExtra, BOLD_SLOT, COLL_SLOT, UNMAPPED_ASSET,
+};
+use crate::math::{
+    batch_trove_debt, calc_interest, compute_cr, hf_from_icr, interest_period, price_wad_from_ray,
+    redist_gain, value_wad,
+};
+
+#[derive(Copy, Clone, Debug)]
+pub(crate) struct Terms<'a> {
+    pub branch: &'a BranchRow,
+    pub loan_row: &'a MarketRow,
+    pub coll_row: &'a MarketRow,
+    pub extra: TroveExtra,
+    pub entire_debt: U256,
+    pub entire_coll: U256,
+    pub p_coll: U256,
+    pub p_bold: U256,
+    pub p_weth: U256,
+}
+
+#[inline]
+fn cell(v: &[u128], slot: u16) -> u128 {
+    v.get(usize::from(slot)).copied().unwrap_or(0)
+}
+
+#[inline]
+pub(crate) fn price_ray(px: &PriceVector, asset: AssetId) -> Result<U256> {
+    px.0.get(usize::from(asset.0))
+        .filter(|p| p.asset == asset)
+        .map(|p| p.price.raw())
+        .filter(|r| !r.is_zero())
+        .ok_or(ProtocolError::MissingPrice(asset))
+}
+
+#[inline]
+fn extra_trove(pos: PositionRef<'_>) -> Result<TroveExtra> {
+    Ok(*pos.extra.view::<TroveExtra>()?)
+}
+
+#[inline]
+fn extra_debt(pos: PositionRef<'_>) -> Result<TroveDebtExtra> {
+    pos.slot_extra
+        .get(usize::from(BOLD_SLOT))
+        .ok_or(ProtocolError::SlotOutOfRange(MarketSlot {
+            market: pos.key.market,
+            slot: BOLD_SLOT,
+        }))?
+        .view::<TroveDebtExtra>()
+        .copied()
+}
+
+#[inline]
+fn extra_coll(pos: PositionRef<'_>) -> Result<TroveCollExtra> {
+    pos.slot_extra
+        .get(usize::from(COLL_SLOT))
+        .ok_or(ProtocolError::SlotOutOfRange(MarketSlot {
+            market: pos.key.market,
+            slot: COLL_SLOT,
+        }))?
+        .view::<TroveCollExtra>()
+        .copied()
+}
+
+/// Pin `_getLatestTroveData` L969–976: unbatched interest only, no management fee.
+fn accrued_unbatched(recorded: U256, extra: &TroveExtra, ts: u64, shutdown: u64) -> Result<U256> {
+    let period = interest_period(u64::from(extra.last_debt_update), shutdown, ts)?;
+    let rate = U256::from(extra.annual_interest_rate);
+    let w_rate = recorded.checked_mul(rate).ok_or(FixedError::Overflow)?;
+    calc_interest(w_rate, period)
+}
+
+#[inline]
+fn is_batched(coll_x: &TroveCollExtra) -> bool {
+    // Pin `_getLatestTroveData` L957: `interestBatchManager != address(0)`.
+    // Not `totalDebtShares == 0` — last member out still has leftover denorm
+    // until leave is applied, and on-chain the discriminator is the manager.
+    coll_x.batch_manager != [0u8; 20]
+}
+
+fn accrued_batched(
+    d: &TroveDebtExtra,
+    extra: &TroveExtra,
+    coll_x: &TroveCollExtra,
+    ts: u64,
+    shutdown: u64,
+) -> Result<(U256, U256, U256)> {
+    let period = interest_period(u64::from(extra.last_debt_update), shutdown, ts)?;
+    batch_trove_debt(
+        U256::from(d.batch_recorded_debt),
+        U256::from(d.batch_debt_shares),
+        U256::from(d.batch_total_shares),
+        U256::from(extra.annual_interest_rate),
+        U256::from(coll_x.batch_management_fee),
+        period,
+    )
+}
+
+pub(crate) fn terms(pos: PositionRef<'_>) -> Result<Terms<'_>> {
+    let loan_row = pos
+        .markets
+        .get(usize::from(BOLD_SLOT))
+        .ok_or(ProtocolError::SlotOutOfRange(MarketSlot {
+            market: pos.key.market,
+            slot: BOLD_SLOT,
+        }))?;
+    let coll_row = pos
+        .markets
+        .get(usize::from(COLL_SLOT))
+        .ok_or(ProtocolError::SlotOutOfRange(MarketSlot {
+            market: pos.key.market,
+            slot: COLL_SLOT,
+        }))?;
+    if loan_row.flags.contains(MarketFlags::UNPRICED)
+        || coll_row.flags.contains(MarketFlags::UNPRICED)
+        || loan_row.asset == UNMAPPED_ASSET
+        || coll_row.asset == UNMAPPED_ASSET
+    {
+        return Err(ProtocolError::OracleSourceMismatch);
+    }
+    let branch: &BranchRow = loan_row.body()?;
+    let extra = extra_trove(pos)?;
+    let debt_x = extra_debt(pos)?;
+    let coll_x = extra_coll(pos)?;
+    let stake = U256::from(extra.stake);
+    let redist_d = redist_gain(
+        stake,
+        U256::from(branch.l_bold_debt),
+        U256::from(debt_x.snapshot_bold),
+    )?;
+    let redist_c = redist_gain(
+        stake,
+        U256::from(branch.l_coll),
+        U256::from(coll_x.snapshot_coll),
+    )?;
+    let shutdown = u64::from(branch.shutdown_time);
+    let (recorded, interest, batch_fee) = if !is_batched(&coll_x) {
+        let recorded = U256::from(cell(pos.debt, BOLD_SLOT));
+        let interest = accrued_unbatched(recorded, &extra, pos.timestamp, shutdown)?;
+        (recorded, interest, U256::ZERO)
+    } else {
+        accrued_batched(&debt_x, &extra, &coll_x, pos.timestamp, shutdown)?
+    };
+    let entire_debt = recorded
+        .checked_add(redist_d)
+        .and_then(|v| v.checked_add(interest))
+        .and_then(|v| v.checked_add(batch_fee))
+        .ok_or(FixedError::Overflow)?;
+    let recorded_coll = U256::from(cell(pos.supply, COLL_SLOT));
+    let entire_coll = recorded_coll
+        .checked_add(redist_c)
+        .ok_or(FixedError::Overflow)?;
+    Ok(Terms {
+        branch,
+        loan_row,
+        coll_row,
+        extra,
+        entire_debt,
+        entire_coll,
+        p_coll: U256::ZERO,
+        p_bold: U256::ZERO,
+        p_weth: U256::ZERO,
+    })
+}
+
+pub(crate) fn finish<'a>(t: &Terms<'a>, px: &PriceVector) -> Result<(Terms<'a>, Health)> {
+    let p_coll = price_ray(px, t.coll_row.asset)?;
+    // T13 L3. `_computeCR` (`LiquityMath.sol`, pin `c8a5a4ee`) is
+    // `coll * price / debt` — it never reads a BOLD price at all. Liquity's
+    // own ICR accounting treats 1 BOLD as worth exactly one unit of whatever
+    // numeraire the collateral price feed uses; there is no on-chain BOLD
+    // oracle for it to read instead. Requiring a live feed for it here
+    // (`price_ray(px, loan_row.asset)`) was requiring data the protocol
+    // itself does not have — `registry.meta.json` correctly records BOLD as
+    // unpriced, and this line, not the registry, was the bug: it turned
+    // "BOLD is unpriced" into `Err(MissingPrice)` on every single trove,
+    // which `engine.rs` gates on for every position, not just a cosmetic
+    // field.
+    //
+    // `RAY` (1.0) here reproduces that accounting exactly, not a market
+    // assumption of our own: `debt_value` becomes `entire_debt` in the same
+    // numeraire `collateral_value` is already expressed in, same as the
+    // protocol's own ICR treats it.
+    let p_bold = liq_types::fixed::RAY;
+    let price_wad = price_wad_from_ray(p_coll)?;
+    let icr = compute_cr(t.entire_coll, t.entire_debt, price_wad)?;
+    let mcr = U256::from(t.branch.mcr);
+    let hf = hf_from_icr(icr, mcr)?;
+    let mut sensitivity = AssetMask::EMPTY;
+    if t.entire_coll > U256::ZERO || t.entire_debt > U256::ZERO {
+        sensitivity = sensitivity
+            .with(BOLD_SLOT)
+            .and_then(|s| s.with(COLL_SLOT))
+            .ok_or(ProtocolError::Internal)?;
+    }
+    let debt_value = Wad::from_raw(value_wad(t.entire_debt, p_bold, t.loan_row.decimals)?);
+    let collateral_value = Wad::from_raw(value_wad(t.entire_coll, p_coll, t.coll_row.decimals)?);
+    let open = extra_is_open(&t.extra) && t.entire_debt > U256::ZERO;
+    let state = if !open {
+        HealthState::Healthy
+    } else if t.loan_row.flags.contains(MarketFlags::PAUSED) {
+        HealthState::Blocked {
+            reason: liq_protocol::BlockReason::Paused,
+        }
+    } else if icr < mcr {
+        HealthState::Liquidatable
+    } else {
+        HealthState::Healthy
+    };
+    let mut t = *t;
+    t.p_coll = p_coll;
+    t.p_bold = p_bold;
+    Ok((
+        t,
+        Health {
+            hf,
+            debt_value,
+            collateral_value,
+            price_sensitivity: sensitivity,
+            state,
+        },
+    ))
+}
+
+#[inline]
+fn extra_is_open(e: &TroveExtra) -> bool {
+    e.is_active_or_zombie()
+}
+
+pub(crate) fn health(pos: PositionRef<'_>, px: &PriceVector) -> Result<Health> {
+    let t = terms(pos)?;
+    Ok(finish(&t, px)?.1)
+}

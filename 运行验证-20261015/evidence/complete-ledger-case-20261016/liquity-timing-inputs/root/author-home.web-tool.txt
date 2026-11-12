@@ -1,0 +1,13 @@
+Hi! I'm Gabriel (https://gabrielpoca.com/)
+citeturn490view0 [wordlim: 200] Crawled: 4 days ago; Content type: text/html; Source: open({"ref_id":"https://gabrielpoca.com/","lineno":null}); Total lines: 32
+L0: cite0†Gabriel Poça L1: 
+L2: # Hi!
+L3: My name is Gabriel Poça
+L4: 
+L5: I'm a software developer working in Web3 and Fintech. I' ve built and contributed to many successful products.
+L6: 
+L7: cite1†I released a new EP. Have a listen and let me know what you think. L8: 
+L9: See the cite2†about for more information.
+L10: 
+L11: cite3†Image L12: ## Writing
+L13:   * cite4†Liquity V2 and How Liquidation Bots Work 12/15/2025 L14:   * cite5†Breaking the Boundaries Between Web2 and Web3 10/4/2023 L15:   * cite6†Converting Excel Dates To Javascript 8/9/2023 L16:   * cite7†Hierarchical Deterministic Wallets, Private Keys and AWS 6/6/2023 L17:   * cite8†Ditching Karabiner and keyboard customizations 3/17/2023 L18:   * cite9†Building Utrust And Advice On How To Scale A Product Team 2/25/2022 L19:   * cite10†Adding Netlify CMS to a website built with Still outside of Netlify 10/28/2021 L20:   * cite11†Still building static websites in Elixir 4/27/2021 L21:   * cite12†The Worst Decision Of My Career 9/25/2020 L22:   * cite13†React state management and side-effects with Redux and RxJS 6/9/2020 L23:   * cite14†A bit more lua in your vim 11/13/2019 L24:   * cite15†A little bit of lua in your vim 11/2/2019 L25:   * cite16†Apps on the P2P Web - DatSplit 8/25/2018 L26:   * cite17†Apps on the P2P Web - Beaker Browser 6/4/2018 L27:   * cite18†How to program Vim using Ruby 9/4/2017 L28:   * cite19†How to build offline web applications with CouchDB and PouchDB 4/20/2017 L29:   * cite20†A bridge between Redux and Meteor 4/28/2016 L30:   * cite21†Offline Web Apps with Meteor 11/26/2014 L31:   * cite22†Tutorial: HTML Audio Capture streaming to Node.js (no browser extensions) 6/24/2014 

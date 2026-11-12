@@ -1,0 +1,8 @@
+HTTP/2 200 
+date: Mon, 19 Oct 2026 21:01:52 GMT
+content-type: text/html; charset=utf-8
+age: 260502
+cache-control: public, max-age=300
+server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+vary: accept-encoding

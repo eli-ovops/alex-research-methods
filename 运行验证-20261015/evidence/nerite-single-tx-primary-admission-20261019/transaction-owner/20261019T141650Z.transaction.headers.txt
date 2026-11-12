@@ -1,0 +1,11 @@
+HTTP/2 200 
+date: Mon, 19 Oct 2026 14:17:07 GMT
+content-type: application/json
+vary: Origin
+vary: accept-encoding
+x-envoy-upstream-service-time: 8
+cache-control: no-cache
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: a4d0678ecde69684-KIX
+

@@ -1,0 +1,580 @@
+Free Cryptocurrency Historical Data — OHLCV CSV Downloads Since 2017 | CryptoDataDownload
+Loading...
+USA
+[REDACTED_EMAIL]
+⌕
+Historical Data
+All Historical Data
+US & UK Exchanges
+Bitstamp
+Gemini
+Coinbase
+Kraken
+Bitfinex
+CEX.io
+Poloniex
+Bittrex
+European Exchanges
+DeriBit
+HitBTC
+Exmo
+Bitbay
+Yobit
+Liqui
+Abucoins
+Asia Pacific Exchanges
+Binance
+FTX
+Kucoin
+Bithumb
+OKCoin
+Okex
+Zaif
+Other International
+Bitso
+BTCXIndia
+Unocoin
+Bit2C
+Dashboards
+Volatility & Options
+Volatility Tracker
+Plus+
+Options Strike Heatmap
+Plus+
+Positioning & Leverage
+Funding & Leverage
+Plus+
+CFTC COT Tracker
+Plus+
+Regime & Risk
+Market Regime
+Plus+
+Risk Profile Universe
+Plus+
+Market Health & Breadth
+Market Breadth
+Plus+
+Volume Tracker
+Plus+
+Market Pulse Heatmap
+Free
+Correlation Heatmap
+Free
+Screeners & On-Chain
+Crypto Screener
+Plus+
+On-Chain Pulse
+Plus+
+Build & Test
+No-Code Strategy Builder
+Plus+
+Quant Desk
+Vol Cone & IV-RV
+Quant
+Term Structure & Skew
+Quant
+IV Surface 3D
+Quant
+Greeks & Flow
+Quant
+GEX / Dealer Pos.
+Quant
+Regime & Anomaly
+Quant
+Signals Board
+Quant
+Soon
+Plus
++
+See plans & what's included →
+Plus Analytics Toolkit
+Enhanced Data
+Zero-Gap OHLCV Data
+Backtest Vault
+Plus+ Research & Code
+API
+Articles
+All Articles
+Python Code Examples
+Plus+ Research
+Contact
+Pricing
+Create Account
+Historical Data · Free since 2017
+refreshed daily at 00:00 UTC
+Cryptocurrency historical data,
+free since 2017.
+Download
+daily, hourly, and 1-minute OHLCV CSVs
+for spot, futures, and
+      options across Binance, Bitstamp, Gemini, Bitfinex, and more. Strategy design,
+      backtesting, machine learning, academic research — the same canonical archive a
+      generation of crypto analysts
+learned the tape on
+.
+No login
+No rate limits
+No paywall on file size
+Standardized CSV
+Browse free downloads ↓
+Unlock all enhanced data sets with Plus+ →
+20
++
+data sources
+1,500
++
+instruments
+3
+timeframes · 1d · 1h · 1m
+CSV
+standard format
+9
++
+yrs
+free historical archive
+Historical Data
+Free crypto data,
+three things to know.
+01.
+What's covered
+Free
+historical data
+Data is organized by
+exchange, symbol, and timeframe
+. We carry
+          futures and spot OHLCV, funding data, transaction / trade-print histories, and
+          derivatives (options puts & calls). Pick a specific exchange below, or browse
+          the full asset-data universe that follows.
+Disclaimer Information
+Data is offered for free under the
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+.
+          Please view our
+FULL DISCLAIMER
+and
+Data Integrity statement
+.
+Need a commercial-use license?
+Go Pro →
+02.
+Friction-free
+No
+registration required
+Download CSV files without registering.
+(Some granularities may
+require a free account
+.)
+Many sites charge large sums for the same historical data. We want to empower
+          individuals to do their own research and analysis —
+we will never ask you to pay for raw, historical data
+.
+Standard CSV Format
+All free downloads ship as standardized, easy-to-use CSV. Need a different format?
+          For example, CSV → JSON conversions, we recommend
+ConvertCSV.com
+— or just paste the URL into
+pandas.read_csv()
+in Python.
+03.
+Use the data
+Data &
+coding applications
+We publish
+extensive Plus+ content
+and coding
+          examples in both
+Python and R
+demonstrating data capture, data
+          analysis, and model development. Common patterns from the catalog — every link
+          opens a full walkthrough with code:
+Top Plus+ coding walkthroughs
+Download Binance data in restricted regions
+Binance trade-print data for any date
+Stream realtime trade data from Binance
+Implied BTC price movement via options
+Fetch all historical trade ticks from Gemini API
+Connect to Kraken API via WebSockets
+Coinbase OHLCV data for any timeframe
+Develop a GARCH volatility model for Bitcoin
+Full option-Greeks calculator in Python
+Plus+ upgrade · The Backtest Vault
+Stop cleaning CSVs.
+Start backtesting.
+One-click downloads of pre-formatted, gapless, validation-complete
+        backtesting datasets
+ready to drop directly into the major retail
+        platforms. You came for clean data — this is the cleanest path.
+Your Sunday today
+Without the Vault,
+every project starts the same way.
+Download raw OHLCV CSV from each exchange
+Hunt for missing bars, outages, and maintenance gaps
+Reformat columns to match your
+backtester's expected schema
+Convert timestamps (UTC vs local, ms vs seconds, ISO vs Unix)
+Map ticker conventions to your platform's symbology
+Re-validate every fix; pray it's right
+Then
+backtest the actual strategy
+Hours, sometimes days, before a single hypothesis runs.
+With the Backtest Vault
+The Vault drops it
+directly into your platform.
+Pick the cryptocurrency & platform from the catalog
+Click download — file arrives pre-formatted
+Drop it into your backtester & run the strategy
+Minutes. You're testing hypotheses, not fixing data.
+Pre-formatted for 7 backtesting platforms
+MetaTrader
+MT4 / MT5
+NinjaTrader
+NT8
+TradeStation
+EasyLanguage
+AmiBroker
+AFL
+Zipline
+Python
+QuantConnect
+C# / Python
+Backtrader
+Python
+Get the Backtest Vault with Plus+ →
+See available files
+100+ cryptocurrencies · 9+ years of gapless OHLCV · daily, hourly, 1-minute
+Data Integrity Notice
+Even Binance
+has gaps.
+Major exchanges have regular outages, maintenance windows, and halted contracts —
+        events that leave
+critical gaps in historical OHLCV
+. Those gaps
+        silently
+generate false breakouts, skew volatility calculations, and produce
+        misleading backtest results
+. The free CSVs in our archive carry the raw
+        exchange data as the venue reported it, gaps and all.
+The fix:
+Zero-Gap OHLCV Data
++
+ships verified gapless 1-minute
+        OHLCV for 8 major cryptocurrencies with row-level provenance flags
+        (
+raw
+·
+reconciled
+·
+filled
+).
+View Zero-Gap data sets →
+Plus+ members
+Coverage
+Zero-Gap 1-Minute OHLCV
+Symbols
+BTCUSDT
+ETHUSDT
+LTCUSDT
+XRPUSDT
+SOLUSDT
+DOGEUSDT
+BNBUSDT
+BCHUSDT
++ more
+Time range
+2020 → 2026
+Granularity
+1-minute · continuous
+File size
+22 – 63 MB per asset
+Tier
+Plus+ subscription
+From the Plus+ catalog
+Research, code,
+walkthroughs.
+Premium data analysis and Python / R techniques —
+fully commented codebase
+you can paste into a notebook and run today.
+Updated weekly
+Browse all content →
+Plus+
+Applying Logistic Regression to Make Predictions About the Next Day in Python
+May 17, 2024
+·
+CryptoDataDownload
+Read →
+Plus+
+How to Calculate the Bitcoin Network Hashrate for Any Date in Python
+Apr 7, 2024
+·
+CryptoDataDownload
+Read →
+Plus+
+Working Example for Accessing Bitcoin or Ethereum Public On-Chain Blockchain Data in Python
+Apr 5, 2024
+·
+CryptoDataDownload
+Read →
+Plus+
+Predictive Power of Cryptocurrency Exchange Inflows and Our Comments
+Jan 26, 2024
+·
+CryptoDataDownload
+Read →
+Plus+
+Smash Day Candlestick Trading Setup Signals in Python
+Jan 23, 2024
+·
+CryptoDataDownload
+Read →
+Plus+
+Combining NR4 Inside Days & Historical Volatility to Produce Trading Signals
+Jan 14, 2024
+·
+CryptoDataDownload
+Read →
+Plus+
+Range Contraction NR4 Breakout Trading Strategy: Python
+Jan 7, 2024
+·
+CryptoDataDownload
+Read →
+Plus+
+Modified Whiplash Trading Strategy with Buy & Sell Signals: Python
+Dec 30, 2023
+·
+CryptoDataDownload
+Read →
+Plus+
+Filtered ADX Gapper Trading Strategy Code & Signals: Python
+Dec 27, 2023
+·
+CryptoDataDownload
+Read →
+Plus+
+Short Term "Momentum Pinball" Trading Strategy Code & Results in Python
+Dec 22, 2023
+·
+CryptoDataDownload
+Read →
+Plus+
+Implementing Turtle Soup Plus One Trading Strategy with Bitcoin  and Python
+Dec 17, 2023
+·
+CryptoDataDownload
+Read →
+Plus+
+How to Add Technical Analysis to OHLCV DataFrame in Python
+Dec 10, 2023
+·
+CryptoDataDownload
+Read →
+Plus+
+Implementing Unsupervised Machine Learning to Segment the Ethereum Market
+Dec 4, 2023
+·
+CryptoDataDownload
+Read →
+Plus+
+Key Considerations When Building Price Forecasting Models in Crypto
+Nov 20, 2023
+·
+CryptoDataDownload
+Read →
+Plus+
+Bitcoin Daily Price Change vs Total Volumes Traded Analysis: Findings
+Nov 16, 2023
+·
+CryptoDataDownload
+Read →
+What we do differently
+We compete on
+depth, not breadth.
+Other crypto-data providers race on raw exchange counts and pair totals. We win in
+        the specialized layer above the OHLCV tape —
+the things most APIs leave to the
+        analyst.
+01.
+ML Feature Store
+The
+first
+for crypto
+26+ model-ready signal endpoints
+— regime tags, momentum cohorts,
+          microstructure features, funding-curve shape, on-chain stress. Productized for the
+          first time at this price point. Used by quant funds; ours since 2026.
+02.
+Options Analytics
+Greeks,
+IV surfaces
+Full options chains with
+Δ Γ ν Θ
+, mark IV, bid/ask IV, plus higher-order
+          Greeks (
+charm, vanna
+), term structure, volatility cones, IV-vs-RV
+          spreads, and pin-candidate strikes. Layers most retail APIs omit entirely.
+03.
+Bespoke Aggregations
+Data
+others skip
+CFTC Commitment of Traders
+,
+US Treasury par yields
+,
+          blockchain hashrate & difficulty, cross-venue funding curves, smart-contract
+          creation tracking. The macro and on-chain context that quant models actually need.
+04.
+Quality Cadence
+Validated
+continuously
+Continuous
+gap analysis
+, source
+reconciliation
+at ingest,
+          duplicate detection, outlier flagging, cross-source consistency. Row-level
+          provenance flags so your model knows what's
+raw
+vs
+filled
+.
+Free historical OHLCV remains free.
+Subscriber tiers unlock the specialized layer above —
+Plus+ for the web tools
+or
+CDD API for the programmatic surface
+.
+Why Plus+
+Power users upgrade
+for the depth.
+✓
+Gapless backtesting files
+Backtest Vault
+✓
+Quantitative risk analytics
+VaR · GARCH · drawdown
+✓
+Zero ads · priority support
+From the team that built it
+Upgrade to Plus+ →
+$39/mo · cancel anytime · no setup fees
+Exchange catalog
+Pick an exchange,
+or browse the universe.
+Data is organized by exchange. Featured venues lead with the deepest pools we carry;
+        regional pages cover the rest of the historical archive. Or skip the picker and
+        search the full data-availability table below.
+Featured venues
+· deepest pools, most-active coverage
+Live
+Binance
+Spot · Futures · Options
+Browse Binance data →
+Live
+Deribit
+Derivatives · Options · Funding
+Browse Deribit data →
+Live
+Bitstamp
+Spot · Long historical archive
+Browse Bitstamp data →
+Live
+Gemini
+Spot · US-regulated
+Browse Gemini data →
+US / UK
+Bitfinex
+Coinbase
+ref
+Kraken
+ref
+CEX.IO
+Poloniex
+Bittrex
+itBit
+European
+HitBTC
+EXMO
+YoBit
+Liqui
+BitBay
+Abucoins
+Asia Pacific
+Bithumb
+OKEx
+OKCoin
+Zaif
+Other Global
+Bitso
+BTCXIndia
+Bit2C
+Unocoin
+Need the
+full warehouse?
+Programmatic access to
+1,100+ spot assets, 330+ futures, options chains
+, and the ML feature store — 112 live endpoints, JSON · CSV · XLSX.
+Get CDD API access →
+Universe
+Historical data
+map.
+Search, filter, and sort every symbol we carry by exchange, timeframe, and asset type.
+Symbol
+Exchange
+Timeframe
+Asset Type
+First Date Available
+Last Date Available
+Page Link
+Symbol
+Exchange
+Timeframe
+Asset Type
+First Date Available
+Last Date Available
+Page Link
+Since late 2017
+CryptoData
+Download
+The crypto data platform built before most exchanges existed — free historical
+          OHLCV, premium analytics, an ML feature store, and a 112-endpoint programmatic
+          API.
+One canonical warehouse, three modes of access.
+Trusted by traders, researchers, and institutions for reliable cryptocurrency
+          market intelligence.
+Free data
+Historical CSV
+Binance
+Bitstamp
+Gemini
+Bitfinex
+Correlation heatmap
+Market-pulse heatmap
+Plus+ tools
+Risk profile universe
+No-code backtester
+CFTC COT tracker
+Zero-Gap OHLCV
+Backtest Vault
+Plus+ code library
+API
+API catalog
+Documentation
+Python examples
+R examples
+Research blog
+Company
+About
+Contact
+[REDACTED_EMAIL]
+Legal
+Disclaimer
+Privacy
+Terms
+CryptoDataDownload
+©
+2026
+· All rights reserved ·
+Terms
+·
+Privacy

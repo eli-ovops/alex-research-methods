@@ -1,0 +1,226 @@
+An Open Book: Level 4 Order Book Data from the Hyperliquid Exchange | Zenodo
+Skip to main
+Communities
+My dashboard
+Log in
+Sign up
+Published March 25, 2026
+| Version 1.0
+Dataset
+Open
+An Open Book: Level 4 Order Book Data from the Hyperliquid Exchange
+Authors/Creators
+Albers, Jakob
+          (Researcher)
+1
+Cucuringu, Mihai
+          (Supervisor)
+2
+Howison, Sam
+          (Supervisor)
+1
+Shestopaloff, Alexander Y.
+          (Supervisor)
+3
+Show affiliations
+1.
+University of Oxford
+2.
+University of California, Los Angeles
+3.
+Queen Mary University of London
+Contributors
+Data collector:
+Albers, Jakob
+1
+Show affiliations
+1.
+University of Oxford
+Description
+This dataset accompanies the paper "An Open Book: Level 4 Order Book Data from the Hyperliquid Exchange."
+It contains three data streams from the Hyperliquid decentralized perpetual futures exchange:
+- Order statuses (Dec 2025): Complete order lifecycle events for BTC, ETH, and SOL perpetual contracts, including rejected orders — data typically unavailable from any exchange. Custom binary format, 54 bytes per record. ~880 million records per day.
+- Raw book diffs (Dec 2025): Every change to the visible limit order book for BTC, ETH, and SOL. Gzip-compressed JSON lines.
+- Trades (Oct 2025 – Jan 2026): Trade execution data for all 250+ perpetual contracts. Gzip-compressed JSON lines.
+Includes lookup tables, a Python reader (read_data.py), and full schema documentation (SCHEMA.md). See README.md for quick start instructions.
+Files
+README.md
+Files
+(195.3 GB)
+Name
+Size
+book_diffs_202512.tar
+md5:350656ae19550b14d2e1ebe025b25dc7
+49.6 GB
+Download
+btc_orders_202512.tar.xz
+md5:5b2b2007dbd59196ba010e2b3923f5e0
+19.3 GB
+Download
+btc_rejected_202512.tar.xz
+md5:df9b9220373a6f11403a75796a084c6d
+46.0 GB
+Download
+eth_orders_202512.tar.xz
+md5:3cbb57a28ef63339bb1c60252cbd3024
+12.1 GB
+Download
+eth_rejected_202512.tar.xz
+md5:b2a54cf4796f95b524bbdf108d835522
+24.1 GB
+Download
+mapdir.tar.xz
+md5:83f0ecdcc34a5d55e93048ac844bed3f
+10.2 MB
+Download
+read_data.py
+md5:03ccb90a9042880ef7360a54f49c9a6b
+24.4 kB
+Download
+README.md
+md5:79c1f3018c90cfdce86bc68fccd1a6d8
+5.4 kB
+Preview
+Download
+SCHEMA.md
+md5:44f6eaf275db120e32678c263809610d
+16.1 kB
+Preview
+Download
+sol_orders_202512.tar.xz
+md5:5abed7980b4d8c57651dbb9237c02d88
+6.3 GB
+Download
+sol_rejected_202512.tar.xz
+md5:7bbe3626b137d356ea4c5c3009cb3e56
+8.5 GB
+Download
+trades_2025_10.tar
+md5:582490cf94b58068a6ae59aedb63c952
+10.0 GB
+Download
+trades_2025_11.tar
+md5:6fbab17d761b67e279ac0592e8520af7
+8.8 GB
+Download
+trades_2025_12.tar
+md5:7949be6a52ec7fb3b591ee633bae3329
+6.7 GB
+Download
+trades_2026_01.tar
+md5:434b242b9b897e689576b3eea8450e0c
+3.8 GB
+Download
+Additional details
+Related works
+Is described by
+Preprint:
+https://papers.ssrn.com/abstract=6465720
+(URL)
+Is supplement to
+Preprint:
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6250738
+(URL)
+Preprint:
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6250378
+(URL)
+3K
+Views
+5K
+Downloads
+Show more details
+All versions
+This version
+Views
+Total views
+3,449
+3,449
+Downloads
+Total downloads
+5,300
+5,300
+Data volume
+Total data volume
+2.0 PB
+2.0 PB
+More info on how stats are collected....
+Versions
+External resources
+Indexed in
+OpenAIRE
+Communities
+Keywords and subjects
+Keywords
+market microstructure
+high-frequency trading
+order flow
+limit order book
+rejected orders
+Hyperliquid
+cryptocurrency
+perpetual futures
+Details
+DOI
+DOI Badge
+DOI
+10.5281/zenodo.18184441
+Markdown
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18184441.svg)](https://doi.org/10.5281/zenodo.18184441)
+reStructuredText
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.18184441.svg
+  :target: https://doi.org/10.5281/zenodo.18184441
+HTML
+<a href="https://doi.org/10.5281/zenodo.18184441"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18184441.svg" alt="DOI"></a>
+Image URL
+https://zenodo.org/badge/DOI/10.5281/zenodo.18184441.svg
+Target URL
+https://doi.org/10.5281/zenodo.18184441
+Resource type
+Dataset
+Publisher
+Zenodo
+Rights
+License
+Creative Commons Attribution 4.0 International
+The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited.
+Read more
+Citation
+Export
+Technical metadata
+Created
+March 25, 2026
+Modified
+March 25, 2026
+Jump up
+About
+About
+Policies
+Infrastructure
+Principles
+Projects
+Roadmap
+Contact
+Blog
+Blog
+Support
+Help
+FAQ
+Developers
+REST API
+OAI-PMH
+Contribute
+GitHub
+Donate
+Funded by
+Powered by
+CERN Data Centre
+&
+InvenioRDM
+Status
+Privacy policy
+Cookie policy
+Terms of Use
+This site uses cookies. Find out more on
+how we use cookies
+Accept all cookies
+Accept only essential cookies

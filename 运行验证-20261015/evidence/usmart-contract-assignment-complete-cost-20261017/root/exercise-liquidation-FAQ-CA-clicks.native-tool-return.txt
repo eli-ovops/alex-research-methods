@@ -1,0 +1,420 @@
+FAQ Details | Help Center | uSMART Securities (https://hk.usmartglobal.com/en/help-centre/213/detail/12035)
+citeturn694view0 [wordlim: 200] Crawled: yesterday; Content type: text/html; Source: click({"ref_id":"turn693view0","id":40}); Total lines: 197
+L0: cite0†iframe†www.googletagmanager.com L1: 
+L2: You are browsing the Hong Kong website, Regulated by Hong Kong SFC (CE number: BJA907). Investment is risky and you must be cautious when entering the market.
+L3: 
+L4: Trading
+L5: 
+L6: cite1†US Stock L7: 
+L8: cite2†HK Stock L9: 
+L10: cite3†ETF L11: 
+L12: cite4†US Stock Options L13: 
+L14: cite5†US Stock Pre-Market Option Trading L15: 
+L16: cite6†Funds L17: 
+L18: cite7†US Fractional Shares L19: 
+L20: cite8†Bonds L21: 
+L22: cite9†A Stock L23: 
+L24: cite10†Margin Account L25: 
+L26: cite11†IPO L27: 
+L28: cite12†Futures L29: 
+L30: cite13†Structured Notes†yxzq.udesk.cn L31: 
+L32: Market
+L33: 
+L34: cite14†Stock Quotes L35: 
+L36: cite15†Institutions L37: 
+L38: Fees
+L39: cite16†Service Fees L40: 
+L41: cite17†Quote Services L42: 
+L43: cite18†Promotions L44: 
+L45: cite19†Help Center L46: 
+L47: uSMARTPORT
+L48: 
+L49: cite20†Investment Courses L50: 
+L51: cite21†Market News L52: 
+L53: cite22†Seminar L54: 
+L55: Download
+L56: 
+L57: cite23†Download uSMART APP L58: 
+L59: cite24†Download Futures APP L60: 
+L61: About
+L62: 
+L63: cite25†About us L64: 
+L65: cite26†Important Notice L66: 
+L67: cite27†Join Us L68: 
+L69: Hong Kong
+L70: 
+L71: Hong Kong
+L72: 
+L73: cite28†Singapore†sg.usmartglobal.com cite29†United States†www.usmartcapital.com cite30†Group†www.usmartgroup.com L74: 
+L75: EN
+L76: 
+L77: cite19†繁體中文 cite31†简体中文 cite32†English L78: 
+L79: cite33†Login/Register L80: 
+L81: English
+L82: 
+L83: cite19†繁體中文 cite31†简体中文 cite32†English L84: 
+L85: Hong Kong
+L86: Hong Kong
+L87: 
+L88: cite28†Singapore†sg.usmartglobal.com cite29†United States†www.usmartcapital.com cite30†Group†www.usmartgroup.com L89: 
+L90: Trading
+L91: 
+L92: cite1†US Stock L93: 
+L94: cite2†HK Stock L95: 
+L96: cite3†ETF L97: 
+L98: cite4†US Stock Options L99: 
+L100: cite5†US Stock Pre-Market Option Trading L101: 
+L102: cite6†Funds L103: 
+L104: cite7†US Fractional Shares L105: 
+L106: cite8†Bonds L107: 
+L108: cite9†A Stock L109: 
+L110: cite10†Margin Account L111: 
+L112: cite11†IPO L113: 
+L114: cite12†Futures L115: 
+L116: cite13†Structured Notes†yxzq.udesk.cn L117: 
+L118: Market
+L119: 
+L120: cite14†Stock Quotes L121: 
+L122: cite15†Institutions L123: 
+L124: Fees
+L125: 
+L126: cite16†Service Fees L127: 
+L128: cite17†Quote Services L129: 
+L130: cite18†Promotions L131: 
+L132: cite19†Help Center L133: 
+L134: uSMARTPORT
+L135: cite20†Investment Courses L136: 
+L137: cite21†Market News L138: 
+L139: cite22†Seminar L140: 
+L141: Download
+L142: 
+L143: cite23†Download uSMART APP L144: 
+L145: cite24†Download Futures APP L146: 
+L147: About
+L148: 
+L149: cite25†About us L150: 
+L151: cite26†Important Notice L152: 
+L153: cite27†Join Us L154: uSmart Securities Limited is a corporation licensed by the Hong Kong Securities and Futures Commission (CE No.: BJA907) and is authorised to carry on Type 1 (Dealing in Securities), Type 2 (Dealing in Futures Contracts), Type 4 (Advising on Securities), Type 5 (Advising on Futures Contracts), Type 6 (Advising on Corporate Finance) and Type 9 (Asset Management) regulated activities.
+L155: 
+L156: cite33†Login/Register L157: 
+L158: [Input: Search]
+L159: ### 美股期權行權規則
+L160: 
+L161: 末日期權（到期日）行權規則：
+L162: 
+L163: 客戶於期權到期日擬行使期權時，須確保賬戶內擁有足夠購買力以完成相關交易。盈立證券基於風險管理考慮，保留以下權利：
+L164: 1. 平倉客戶持有的價內期權或接近價內的價外期權；
+L165: 2. 即使期權為價內，亦保留不予行權的決定權。
+L166: 
+L167: 業務類型  | 是否支持行權和被動行權  | 美股期權行權規則説明
+L168: 買入看漲期權  | 是  | 價内期權。且行權保證金足夠
+L169:   買入看跌期權    | 否  | 不支持行權
+L170:   賣出看漲期權    | 未持倉Short Call 否  | 不支持價內期權被動行權
+L171: Covered Call 是  | 在持有正股股票多倉的情況下賣出看漲期權從而形成備兌看漲期權，備兌看漲期權能夠減免看漲期權保證金要求。
+L172: 賣出看跌期權  | 是  | 對於價内期權，需要支持被動行權，按照行權價買入對應數量的股票
+L173: 
+L174: 請注意：儘管我司提供的期權產品均爲美式期權，但目前我司暫時無法提供提前行權服務。與期權到期行權相關的股票交易(如適用)將以到期日後的下一個交易日開始計算T+1。
+L175: cite34†Business Collaboration cite33†Register now L176: ### Services
+L177: 
+L178: cite16†Fees cite19†FAQ cite35†Exclusive Trading Tools L179: 
+L180: ### About Us
+L181: 
+L182: cite25†Overview cite34†Contact Us cite36†Media Center L183: ### Agreement Statement
+L184: 
+L185: cite37†Disclaimer cite38†Privacy Statement L186: 
+L187: CS Hotline: +852 3018 4526
+L188: 
+L189: Trading days: 24 hours | Non-trading days: 9:00-18:00
+L190: 
+L191: Email: [REDACTED_EMAIL]
+L192: 
+L193: WhatsApp: +852 5989 2641
+L194: uSmart Securities Limited is a corporation licensed by the Hong Kong Securities and Futures Commission (CE No.: BJA907) and is authorised to carry on Type 1 (Dealing in Securities), Type 2 (Dealing in Futures Contracts), Type 4 (Advising on Securities), Type 5 (Advising on Futures Contracts), Type 6 (Advising on Corporate Finance) and Type 9 (Asset Management) regulated activities.
+L195: 
+L196: Please login first
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn694view1 [wordlim: 200] Source: click({"ref_id":"turn693view0","id":41}); Total lines: 1
+L0: Failed to fetch https://hk.usmartglobal.com/en/help-centre/213/detail/12038: Cache miss
+--------------------------------------------------------------------------------
+問題解答詳情 | 幫助中心 | uSMART 盈立證券 (https://hk.usmartglobal.com/zh-hk/help-centre/213/detail/11217)
+citeturn694view2 [wordlim: 200] Crawled: 3 days ago; Content type: text/html; Source: click({"ref_id":"turn693view1","id":41}); Total lines: 347
+L0: cite0†iframe†www.googletagmanager.com L1: 
+L2: 您正在瀏覽的是香港網站，香港證監會BJA907號，投資有風險，交易需謹慎
+L3: 
+L4: 交易
+L5: 
+L6: cite1†美股 L7: 
+L8: cite2†港股 L9: 
+L10: cite3†ETF L11: 
+L12: cite4†美股期權 L13: 
+L14: cite5†盤前美股期權交易 L15: 
+L16: cite6†基金 L17: 
+L18: cite7†美股碎股 L19: 
+L20: cite8†美債 L21: 
+L22: cite9†A股 L23: 
+L24: cite10†融資服務 L25: 
+L26: cite11†IPO L27: 
+L28: cite12†期貨 L29: 
+L30: cite13†結構化票據†yxzq.udesk.cn L31: 
+L32: 市場
+L33: 
+L34: cite14†股票行情 L35: 
+L36: cite15†機構 L37: 
+L38: 費用
+L39: 
+L40: cite16†交易佣金 L41: 
+L42: cite17†串流報價 L43: 
+L44: cite18†優惠活動 L45: 
+L46: cite19†幫助中心 L47: 
+L48: 盈廣場
+L49: 
+L50: cite20†投資學堂 L51: 
+L52: cite21†市場資訊 L53: 
+L54: cite22†講座活動 L55: 
+L56: 下載
+L57: 
+L58: cite23†下載 uSMART APP L59: 
+L60: cite24†下載期貨交易終端 L61: 
+L62: 關於
+L63: 
+L64: cite25†關於我們 L65: 
+L66: cite26†重要提示 L67: 
+L68: cite27†加入我們 L69: 
+L70: 香港官網
+L71: 
+L72: 香港官網
+L73: 
+L74: cite28†新加坡官網†sg.usmartglobal.com cite29†美國官網†www.usmartcapital.com cite30†集團官網†www.usmartgroup.com L75: 
+L76: 繁
+L77: cite19†繁體中文 cite31†简体中文 cite32†English L78: 
+L79: cite33†註冊/登錄 L80: 
+L81: 繁體中文
+L82: 
+L83: cite19†繁體中文 cite31†简体中文 cite32†English L84: 
+L85: 香港官網
+L86: 
+L87: 香港官網
+L88: 
+L89: cite28†新加坡官網†sg.usmartglobal.com cite29†美國官網†www.usmartcapital.com cite30†集團官網†www.usmartgroup.com L90: 
+L91: 交易
+L92: 
+L93: cite1†美股 L94: 
+L95: cite2†港股 L96: 
+L97: cite3†ETF L98: 
+L99: cite4†美股期權 L100: 
+L101: cite5†盤前美股期權交易 L102: 
+L103: cite6†基金 L104: 
+L105: cite7†美股碎股 L106: 
+L107: cite8†美債 L108: 
+L109: cite9†A股 L110: 
+L111: cite10†融資服務 L112: 
+L113: cite11†IPO L114: 
+L115: cite12†期貨 L116: 
+L117: cite13†結構化票據†yxzq.udesk.cn L118: 
+L119: 市場
+L120: 
+L121: cite14†股票行情 L122: 
+L123: cite15†機構 L124: 
+L125: 費用
+L126: 
+L127: cite16†交易佣金 L128: 
+L129: cite17†串流報價 L130: 
+L131: cite18†優惠活動 L132: 
+L133: cite19†幫助中心 L134: 
+L135: 盈廣場
+L136: 
+L137: cite20†投資學堂 L138: 
+L139: cite21†市場資訊 L140: 
+L141: cite22†講座活動 L142: 
+L143: 下載
+L144: 
+L145: cite23†下載 uSMART APP L146: 
+L147: cite24†下載期貨交易終端 L148: 
+L149: 關於
+L150: 
+L151: cite25†關於我們 L152: 
+L153: cite26†重要提示 L154: cite27†加入我們 L155: 
+L156: 盈立證券有限公司為香港證監會持牌法團（中央編號：BJA907），持有證券交易（第一類） 、期貨合約交易(第二類) 、就證券提供意見（第四類） 、就期貨合約提供意見(第五類) 、就機構融資提供意見（第六類）及提供資產管理（第九類）牌照。
+L157: 
+L158: cite33†註冊/登錄 L159: 
+L160: [Input: 搜尋]
+L161: 
+L162:   * cite34†關於美股期權 L163:   * cite35†如何開通美股期權賬戶 L164:   * cite36†美股期權收費標準 L165:   * cite37†美股期權常見問題 L166:   * cite38†期權處理規則 L167:   * cite39†期權保證金計算方式 L168:   * cite40†交易 L169: ### 美股期權常見問題
+L170: 
+L171: 美股期權如何進行交易？
+L172: 
+L173: 期權的交易方式與股票交易方式相同，輸入數量、價格後即可下單交易。
+L174: 
+L175: 選擇買入代表買入持有期權，選擇賣出代表賣空期權。如果已經持有期權的多頭或者空頭倉位，同樣可以通過賣出和買入倉位進行平倉。
+L176: 
+L177: 
+L178: 
+L179:  為什麼期權賣出價低於逐筆但沒有成交？
+L180: 在交易美股期權時，有時會看買賣盤中有以更差價格成交的記錄，自己的訂單價格更優卻沒成交。可能是由於以下原因：
+L181: 1. 期權市場流動性正常，但由於美股特殊的報價規則（美股買賣盤 BBO / NBBO 報價規則），在買賣盤上看到的買一賣一是某個交易所的最高買入價 bid 和最低賣出價 offer 的報價，有部分訂單是有可能會被路由到其他交易所進行撮合交易的。
+L182: 另外，當交易不活躍時，不同交易所的報價有可能會存在較大的差異，但未及時同步，可能導致期權訂單不能成交。
+L183: 2. 由於期權存在組合訂單，所以進行期權交易時，如果提交了期權單邊的買/賣訂單，這樣的訂單就不一定能夠成交。
+L184: 例如，有些券商允許客戶通過同時掛出一個 long call 和 short call 的訂單來進行期權組合訂單（Spread）的交易。只有當 long 和 short 的價格都符合買賣價時，該訂單組合中的兩個訂單會同時成交。
+L185: 以一個具體的例子來看，BABA 的某隻期權，當前的買一價為 $3.00，並且這個買單是交易所撮合的某個組合訂單的一部分。這時提交一個 $2.80 的賣單，會導致無法成交。
+L186: 以上所描述的是美股期權市場的正常現象，期權訂單已經提交至上遊，是否能夠成交取決於交易所是否撮合。
+L187: 
+L188: 
+L189: 
+L190: 
+L191: 
+L192: 開通美股期權沽空權限後，風控狀態會有什麼變化？
+L193: 
+L194: 
+L195: 
+L196: 風控狀態取決於：
+L197: 
+L198:   * 期權賬戶是否已開通期權沽空權限（新用戶開通期權賬戶時，通常同時開通做多與做空；舊用戶可能需另行開通沽空）；以及
+L199:   * 美股賬戶是否已打通各市場購買力。
+L200: 
+L201: 規則概要：
+L202: 
+L203:   * 未開通美股期權沽空：統一以 MV 比率作為風控指標。
+L204:   * 已開通美股期權沽空，且打通各市場購買力：賬戶風控狀態按 PVHC 比率計算。
+L205:   * 已開通美股期權沽空，但港股、A 股未打通購買力：美股賬戶按 PVHC；港股、A 股仍按 MV。
+L206: 
+L207: 開通後風控計算標準可能與開通前不同，賬戶風控水平有機會變高，從而出現追保或強制平倉風險，請務必留意並評估自身風險承受能力。
+L208: 
+L209: 
+L210: 
+L211: 
+L212: 
+L213: 美股保證金帳戶和期權帳戶的資金是分開的嗎？
+L214: 
+L215: 
+L216: 
+L217: 不是。兩者資金已合併。賣出期權的資金T+2交收後自動劃入美股帳戶，購買期權時也自動從美股帳戶劃取資金。
+L218: 
+L219: 
+L220: 
+L221: 
+L222: 
+L223: 期權行情如何獲取？是否收費？
+L224: 
+L225: 
+L226: 
+L227: 免費條件：
+L228:   * 入金 ≥ 500美元，次日自動贈送30天LV1行情（買賣盤一檔）。
+L229:   * 有期權持倉，會每日自動續送（即使資產低於500美元）。
+L230: 
+L231:   * 收費情況：若無持倉且資產<500美元，則不再贈送。專業投資者（如金融機構交易員、基金經理等）必須付費購買，且無法享受免費行情。
+L232: 
+L233: 
+L234: 
+L235: 
+L236: 
+L237: uSMART 支援多腳組合下單嗎？
+L238: 
+L239: 
+L240: 
+L241: 我們支援選擇權組合策略及其對應的保證金減免優惠，但目前系統的下單方式暫時不支援「多腳組合」一鍵下單。
+L242: 
+L243: 具體僅支持以單腳委託的形式，分別提交構成該策略的各個選擇權合約的訂單。
+L244: 
+L245: 在您的所有訂單成交後，系統會自動監控您帳戶內的選擇權持股。如果您的持倉滿足了特定組合策略（如covered call等）的條件，系統會自動為您合併識別為組合策略，並據此減免相應的保證金，從而有效降低您的資金佔用。
+L246: 
+L247: 小提醒： 如果您在提交單腿訂單時，系統提示“保證金不足”，請您及時入金以補足保證金，從而確保交易指示能夠被正常執行。
+L248: 
+L249: 
+L250: 
+L251: 
+L252: 
+L253: 賣出期權獲得的權利金何時到賬？
+L254: 
+L255: 
+L256: 
+L257: 賣出選擇權訂單成交後，權利金會立即計入帳戶現金總額，美東時間 T+1結算後顯示在資金流水中。
+L258: 需注意：由於賣方承擔履約義務，會產生保證金，購買力跟可用現金 需要抵扣保證金，所以不一定增加，因此您會觀察到：
+L259: 
+L260: - 現金總額增加（含權利金）；
+L261: 
+L262: - 購買力跟可用現金 不一定增加
+L263: 
+L264: 三種了結方式的資金變動：
+L265: 
+L266: 提前平倉（買入平倉）：
+L267: 
+L268: 選擇權沽空對應保證金釋放，最終盈虧為“賣出權利金 - 買入平倉金額”，盈虧金額將*直接可用（可用現金增加，不再被保證金抵扣或占用），可取仍需等待交收。
+L269: 
+L270: 到期未行使：
+L271: 
+L272: 合約失效，保證金全額釋放，初始收到的權利金**全額轉為利潤及可用資金**。
+L273: 
+L274: 被行權：
+L275: 
+L276: 需履行合約義務（例如按行權價買入標的資產）：合約失效後空頭持倉清零，原保證金釋放為可用資金（不再被佔用）；最初收到的權利金自動計入行權結算款項，用於沖抵行權所需資金。
+L277: 
+L278: 總結：權利金即時到帳但被佔用，合約透過平倉、到期或行使了結後，相關資金（含權利金利潤）將完全釋放為可用資金。
+L279: 
+L280: 
+L281: 
+L282: 
+L283: 
+L284: 期權能否用於抵押融資？
+L285: 
+L286: 
+L287: 
+L288: 不支援。但持有的正股可以抵押融資，融資所得資金可用於購買期權。
+L289: 
+L290: 
+L291: 
+L292: 
+L293: 
+L294: 為什麼我的期權訂單價格更優卻未成交？
+L295: 
+L296: 
+L297: 
+L298: 這通常是以下兩個原因造成的，屬於美股期權市場的正常現象：
+L299:   1. 市場流動性與訂單路由：
+L300:     1. 美股期權在多家交易所同時交易。您在盤口看到的「買一/賣一」價（即NBBO）是全國最佳報價，但這可能只來自某一家交易所。
+L301:     2. 您的訂單可能被路由到另一個流動性較差、報價不同的交易所，即使您的價格在NBBO範圍內，也可能因為該交易所沒有匹配的對手方而無法成交。
+L302:     3. 在交易不活躍的期權上，不同交易所之間的報價可能存在較大差異且未及時同步，加劇了這種情況。
+L303:   2. 組合訂單優先：
+L304:     1. 市場上存在大量的期權組合策略訂單（例如價差交易，同時掛出Long Call和Short Call）。
+L305:     2. 這類組合訂單只有在兩條腿的價格同時得到滿足時才會成交。
+L306:     3. 因此，即使您的單邊訂單價格更優，也可能因為無法與組合訂單的另一條腿匹配，而導致整個組合（包括您看到的盤口價格）無法成交。
+L307: 
+L308: 舉例說明：
+L309: 假設BABA某期權的買一價為$3.00，但這個買單是某個價差組合訂單的一部分。此時您提交一個$2.80的賣單。雖然價格更優，但因為組合訂單中的另一條腿（例如一個$1.00的賣單）沒有成交，導致整個組合訂單無法撮合，您的$2.80賣單也隨之無法成交。
+L310: 
+L311: 
+L312: 
+L313: 
+L314: 
+L315: 能否在到期日當天買入末日期權？
+L316: 
+L317: 
+L318: 
+L319: 可以，但系統會校驗行權保證金。如果買入價內期權後，行權保證金不足，則無法成功開倉。
+L320: 
+L321: 風險提示：期權交易涉及高風險，投資者可能會損失全部投資甚至更多。請在充分了解相關風險後，審慎參與。所有規則與費用請以uSMART盈立證券App內最新公告為準。
+L322: 
+L323: cite41†商務合作 cite33†立即註冊 L324: ### 站點服務
+L325: 
+L326: cite16†交易費用 cite19†常見問題 cite42†獨家交易工具 L327: 
+L328: ### 關於
+L329: 
+L330: cite25†企業概要 cite41†聯絡我們 cite43†媒體中心 L331: 
+L332: ### 協議聲明
+L333: 
+L334: cite44†免責聲明 cite45†私隱聲明 L335: 
+L336: 客服專線︰ +852 3018 4526
+L337: 
+L338: 交易日︰全日24小時 | 非交易日：9:00-18:00
+L339: 
+L340: 郵箱︰[REDACTED_EMAIL]
+L341: 
+L342: WhatsApp︰+852 5989 2641
+L343: 
+L344: 盈立證券有限公司為香港證監會持牌法團（中央編號：BJA907），持有證券交易（第一類） 、期貨合約交易(第二類) 、就證券提供意見（第四類） 、就期貨合約提供意見(第五類) 、就機構融資提供意見（第六類）及提供資產管理（第九類）牌照。
+L345: 
+L346: 註冊/登錄後可進入個人中心
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn694view3 [wordlim: 200] Source: click({"ref_id":"turn693view1","id":42}); Total lines: 1
+L0: Failed to fetch https://hk.usmartglobal.com/zh-hk/help-centre/213/detail/12255: Cache miss

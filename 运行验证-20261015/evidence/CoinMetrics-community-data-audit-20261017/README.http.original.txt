@@ -1,0 +1,29 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=86400, s-maxage=86400
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Sat, 17 Oct 2026 07:40:36 GMT
+Etag: W/"c6975047626269b47075c0f0e3685e34e40d8cb3a068c930facffed4492ba725"
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: 
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 9052:15650A:F5179D:18492B1:6AD32673
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4943
+X-Ratelimit-Reset: 1792223363
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 57
+X-Xss-Protection: 0
+
+{"sha":"ded671f76a6bad15488fa17f1f4383fe99940604","node_id":"MDQ6QmxvYjEzNzQ3MDU0MzpkZWQ2NzFmNzZhNmJhZDE1NDg4ZmExN2YxZjQzODNmZTk5OTQwNjA0","size":1496,"url":"https://api.github.com/repos/coinmetrics/data/git/blobs/ded671f76a6bad15488fa17f1f4383fe99940604","content":"IyBGcmVlIENvaW4gTWV0cmljcyBkYXRhIGFyY2hpdmVzCgpUaGVzZSBkYXRh\nIGFyY2hpdmVzIGFyZSBwcm9kdWNlZCB1c2luZyBmcmVlIENvbW11bml0eSB0\naWVyIG9mIFtDb2luIE1ldHJpY3MgQVBJXShodHRwczovL2RvY3MuY29pbm1l\ndHJpY3MuaW8vYXBpKS4KClNjcmlwdHMgZm9yIGRhdGEgZ2VuZXJhdGlvbiBh\ncmUgaW4gW3NjcmlwdHNdKHNjcmlwdHMpIGRpcmVjdG9yeS4KCiMjIEF2YWls\nYWJsZSBkYXRhCgojIyMgQ1NWIGFyY2hpdmVzCgpUaGlzIGRhdGEgaXMgc2lt\naWxhciB0byBDb2luIE1ldHJpY3MgW0NvbW11bml0eSBEYXRhIERvd25sb2Fk\nc10oaHR0cHM6Ly9jb2lubWV0cmljcy5pby9jb21tdW5pdHktbmV0d29yay1k\nYXRhLykuCgpGaWxlczoKCiogYGNzdi88Y29pbj4uY3N2YCAtIENTViBmaWxl\nIHBlciBjb2luIHdpdGggYWxsIGF2YWlsYWJsZSBmcmVlIG1ldHJpY3MKKiBg\naHR0cHM6Ly9naXRodWIuY29tL2NvaW5tZXRyaWNzL2RhdGEvYXJjaGl2ZS9y\nZWZzL2hlYWRzL21hc3Rlci56aXBgIC0gQWxsIENTViBmaWxlcyBpbiBhIHpp\ncCBhcmNoaXZlCgpUaGUgYXJjaGl2ZXMgYXJlIHVwZGF0ZWQgZGFpbHkuCgoj\nIyBTdGFiaWxpdHkKCldlIHdpbGwgdHJ5IHRvIGtlZXAgdGhlIGxheW91dCBh\nbmQgZmlsZSBmb3JtYXRzIG9mIHRoaXMgcmVwb3NpdG9yeSBzdGFibGUsIGJ1\ndCB0aGVyZSBpcyBubyBndWFyYW50ZWUuIEluIHBhcnRpY3VsYXIsIHNldHMg\nb2YgYXZhaWxhYmxlIGFzc2V0cyBhbmQgbWV0cmljcyBjYW4gYmUgY2hhbmdl\nZCBhdCBhbnkgdGltZS4KCiMjIEVudmlyb25tZW50IHZhcmlhYmxlcwoKLSBg\nT1VUYCAtICoqcmVxdWlyZWQqKiAtIHRoZSBvdXRwdXQgZm9sZGVyCi0gYFRI\nUk9UVExFYCAtIHdoZW4gc2V0LCB0aHJvdHRsZXMgdGhlIHJlcXVlc3RzIHRv\nIGhvbm9yIHRoZSByYXRlIGxpbWl0Ci0gYFZFUkJPU0VgIC0gd2hlbiBzZXQs\nIGVtaXRzIGFkZGl0aW9uYWwgbWVzc2FnZXMgdG8gU1RET1VUCi0gYEFTU0VU\nU2AgLSBnZW5lcmF0ZSBmaWxlcyBmb3IgdGhlIGNvbW1hLXNlcGFyYXRlZCBs\naXN0IG9mIGFzc2V0cyAoZGVmYXVsdDogYWxsIGFzc2V0cykKCkV4YW1wbGUg\nb2YgYSBmdWxsIGxvY2FsIGRlYnVnIGludm9jYXRpb24gdG8gZ2VuZXJhdGUg\nb25seSBCVEMgYW5kIEVUSDoKCmBgYHNoZWxsCnlhcm4gLS1jd2Qgc2NyaXB0\ncwpta2RpciB0ZXN0Ck9VVD0uL3Rlc3QgVEhST1RUTEU9MSBWRVJCT1NFPTEg\nQVNTRVRTPWJ0YyxldGggbm9kZSAuL3NjcmlwdHMvZ2VuZXJhdGUuanMKYGBg\nCgojIyBMaWNlbnNlCgpUaGlzIGRhdGEgaXMgcHVibGlzaGVkIGluIHRoZSBo\nb3BlIGl0IHdpbGwgYmUgdXNlZnVsLCBidXQgd2l0aG91dCBhbnkgd2FycmFu\ndHkuIFlvdSBhcmUgdXNpbmcgaXQgYXQgeW91ciBvd24gcmlzay4KCkRhdGEg\naXMgbWFkZSBhdmFpbGFibGUgdW5kZXIgdGhlIFtDQyBCWS1OQyA0LjBdKGh0\ndHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS1uYy80LjAv\nKSBsaWNlbnNlLgo=\n","encoding":"base64"}

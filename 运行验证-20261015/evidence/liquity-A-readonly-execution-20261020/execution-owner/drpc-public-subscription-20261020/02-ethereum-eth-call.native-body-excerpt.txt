@@ -1,0 +1,171 @@
+L2118: 
+L2119: ## eth_call. Performs a message call instantly without recording it as a transaction on the blockchain
+L2120: 
+L2121: eth_call - ethereum [Value: 20CU]
+L2122: 
+L2123: Performs a message call instantly without recording it as a transaction on the blockchain
+L2124: 
+L2125: cite1671†Image: Use cases L2126: 
+L2127: ## Use cases
+L2128: 
+L2129:   * Simulate contract function execution without blockchain state change
+L2130:   * Retrieve return values from smart contract functions
+L2131:   * Estimate gas usage for contract function calls
+L2132: 
+L2133: cite1672†Image: Constraints L2134: ## Constraints
+L2135:   * Starting from Geth 1.9.13, eth_call checks the sender's balance to ensure sufficient gas for execution if either: The gas_price parameter is populated, the contract function modifies the blockchain state.
+L2136:   * In these cases, the from address must have enough gas as ifexecuting a write transaction, even though eth_call itself doesn't consume gas.
+L2137:   * dRPC has a gas cap of 600 million (600M) for eth_call. If your call requires more gas than this limit, the request will fail. If you need a higher gas limit, please contact our support team.
+L2138: cite1673†Image: Get started L2139: 
+L2140: Unlock Access to 100+ chains
+L2141: 
+L2142: Boost your app's speed and reliability with dRPC - get your access API key
+L2143: 
+L2144: cite0†Get started for free L2145: ## Language
+L2146: 
+L2147: cite1674†Image: Shell L2148: 
+L2149: ### Shell
+L2150: 
+L2151: cite1675†Image: JS L2152: 
+L2153: ### JavaScript
+L2154: 
+L2155: cite1676†Image: Node L2156: 
+L2157: ### Node.js
+L2158: 
+L2159: cite1677†Image: Go L2160: 
+L2161: ### Go
+L2162: 
+L2163: cite1678†Image: Python L2164: 
+L2165: ### Python
+L2166: 
+L2167: cite1679†Image: Rust L2168: ### Rust
+L2169: 
+L2170: Request
+L2171: Examples
+L2172: 
+L2173:     `curl https://eth.drpc.org \
+L2174:     --request POST \
+L2175:     --header "Content-Type: application/json" \
+L2176:     --data '
+L2177:     {
+L2178:       "id": 1,
+L2179:       "jsonrpc": "2.0",
+L2180:       "method": "eth_call",
+L2181:       "params": [
+L2182:         "0x10F558C",
+L2183:         {
+L2184:           "from": "0x4B275BDea1cA622256ebb8B15B51861b52703d16",
+L2185:           "to": "0xa62894D5196bC44e4C3978400Ad07E7b30352372",
+L2186:           "gas": "0x13880",
+L2187:           "gasPrice": "0x4B3ECF6D4",
+L2188:           "data": "0xa9059cbb0000000000000000000000007422172afc6ea4da9c011e87b7cb002d55b754430000000000000000000000000000000000000000000000000c7d713b0e3f3600"
+L2189:         },
+L2190:         {"0x4B275BDea1cA622256ebb8B15B51861b52703d16":{
+L2191:           "balance": "0x277BFC44534B0000"
+L2192:         }}
+L2193:       ]
+L2194:     }
+L2195:     '`
+L2196: cite1680†Image: Copy L2197: 
+L2198: Response
+L2199: 
+L2200: 200
+L2201: 
+L2202:     `{
+L2203:       "jsonrpc": "2.0",
+L2204:       "id": 1,
+L2205:       "result": "0xb1770efb14906e509893b6190359658208ae64d0c56e22f748a1b0869885559e"
+L2206:     }`
+L2207: 
+L2208: cite1680†Image: Copy L2209: ## Request params
+L2210: 
+L2211: id integer
+L2212: 
+L2213: jsonrpc string
+L2214: 
+L2215: method string
+L2216: 
+L2217: Parameters array of objects
+L2218: 
+L2219: array of objects
+L2220: 
+L2221: blockNumber string
+L2222: 
+L2223: (optional) Block number as an integer, or string
+L2224: 
+L2225:   * latest [default] - The most recent block in the blockchain (default).
+L2226: 
+L2227:   * earliest - The first block, also known as the genesis block.
+L2228: 
+L2229:   * pending - Transactions that have been broadcast but not yet included in a block.
+L2230: 
+L2231: transaction object
+L2232: 
+L2233: The transaction call object which contains the following fields.
+L2234: 
+L2235: array of objects
+L2236: from string
+L2237: 
+L2238: (optional) Sender's address.
+L2239: 
+L2240: to string
+L2241: 
+L2242: Recipient's address.
+L2243: 
+L2244: gas integer
+L2245: 
+L2246: (optional) Gas limit for the transaction.
+L2247: 
+L2248: gasPrice integer
+L2249: 
+L2250: (optional) Gas price in wei.
+L2251: 
+L2252: value integer
+L2253: 
+L2254: (optional) Amount of wei to send.
+L2255: 
+L2256: data string
+L2257: 
+L2258: (optional) Encoded method signature and parameters.
+L2259: 
+L2260: State Override object
+L2261: 
+L2262: Tenables temporary modifications to a contract’s state for a specific call without altering the actual contract. Each address maps to an object containing:
+L2263: 
+L2264: array of objects
+L2265: 
+L2266: balance string
+L2267: Specifies a temporary balance for the account before executing the call.
+L2268: 
+L2269: nonce string
+L2270: 
+L2271: Sets a temporary nonce for the account before executing the call.
+L2272: 
+L2273: code string
+L2274: 
+L2275: (Injects temporary EVM bytecode into the account before executing the call.
+L2276: 
+L2277: state object
+L2278: 
+L2279: Replaces all storage slots of the account with specified key-value pairs before executing the call.
+L2280: 
+L2281: stateDiff integer
+L2282: 
+L2283: Modifies specific storage slots in the account while keeping the rest unchanged before executing the call.
+L2284: ## Response
+L2285: 
+L2286: 200
+L2287: 
+L2288: The result of the call.
+L2289: 
+L2290: ## Response params
+L2291: 
+L2292: object
+L2293: 
+L2294: id integer
+L2295: 
+L2296: jsonrpc string
+L2297: 
+L2298: result string
+L2299: 
+L2300: cite116†Executing transactions cite118†eth_sendRawTransaction

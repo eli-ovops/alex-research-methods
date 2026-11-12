@@ -1,0 +1,434 @@
+EDGAR Filing Documents for 0001829126-26-008212 (https://www.sec.gov/Archives/edgar/data/1547576/000182912626008212/0001829126-26-008212-index.htm)
+citeturn1020search0 [wordlim: 200] Published: 2 months ago; Crawled: 2 months ago; 1  | 497K  | kraneshares-kmlm_497k.htm  | 497K  | 93284 ... Class/Contract C000223083  |    | KraneShares Mount Lucas Managed Futures Index Strategy ETF  | KMLM
+
+# Filing Detail
+
+  * SEC Home »
+  * Company Search »
+  * Current Page
+
+Form 497K - Summary Prospectus for certain open-end management investment companies filed pursuant to Securities Act Rule 497(K):
+
+SEC Accession No. 0001829126-26-008212
+
+Filing Date
+
+2026-07-31
+
+Accepted
+
+2026-07-31 13:52:33
+
+Documents
+
+3
+
+Effectiveness Date
+
+2026-07-31
+
+Document Format Files
+
+Seq  | Description  | Document  | Type  | Size
+--- | --- | --- | --- | ---
+1  | 497K  | kraneshares-kmlm_497k.htm  | 497K  | 93284
+2  | GRAPHIC  | logo.jpg  | GRAPHIC  | 39009
+3  | GRAPHIC  | img_001.jpg  | GRAPHIC  | 76546
+   | Complete submission text file  | 0001829126-26-008212.txt  |    | 252021
+
+Series and Classes/Contracts Information:
+
+Existing
+   | Status  | Name  | Ticker Symbol
+CIK 0001547576  |    |    |  
+Series S000070143  |    | KraneShares Mount Lucas Managed Futures Index Strategy ETF
+Class/Contract C000223083  |    | KraneShares Mount Lucas Managed Futures Index Strategy ETF  | KMLM
+
+Mailing Address 280 PARK AVENUE 32ND FLOOR NEW YORK NY 10017
+
+Business Address 280 PARK AVENUE 32ND FLOOR NEW YORK NY 10017 212-933-0393
+
+Krane Shares Trust (Filer) CIK: 0001547576 (see all company filings)
+
+EIN.: 456861457 | State of Incorp.: DE | Fiscal Year End: 0331
+Type: 497K | Act: 33 | File No.: 333-180870 | Film No.: 261227653--------------------------------------------------------------------------------
+ (https://www.sec.gov/Archives/edgar/data/1547576/000182912626006162/kraneshares_ncsr.htm)
+citeturn1020search1 [wordlim: 200] Published: 6 months ago; Crawled: 4 months ago; This annual shareholder report contains important information about the KraneShares Mount Lucas Managed Futures Index Strategy ETF (the "Fund") for the period from April 1, 2025 to March 31, 2026. ... For additional information about the Fund, including its prospectus, financial information, holdings, and proxy voting information, visit https://kraneshares.com/kmlm/.
+# KraneShares Trust
+
+Image: Image
+
+## KraneShares Mount Lucas Managed Futures Index Strategy ETF
+
+## Ticker: KMLM
+
+## Principal Listing Exchange: NYSE Arca
+
+## Annual Shareholder Report: March 31, 2026
+
+This annual shareholder report contains important information about the KraneShares Mount Lucas Managed Futures Index Strategy ETF (the "Fund") for the period from April 1, 2025 to March 31, 2026. You can find additional information about the Fund at https://kraneshares.com/kmlm/. You can also request this information by contacting us at 1-855-857-2638.This annual shareholder report describes changes to the Fund that occurred during the reporting period. 
+
+## What were the Fund costs for the last year?
+
+(based on a hypothetical $10,000 investment) 
+
+Table Summary
+Fund Name  | Costs of a $10,000 investment  | Costs paid as a percentage of a $10,000 investment
+--- | --- | ---
+KraneShares Mount Lucas Managed Futures Index Strategy ETF  | $94  | 0.90%
+
+How did the Fund perform in the last year?
+Past performance is not indicative of future performance.Call 1-855-857-2638 or visit https://kraneshares.com/kmlm/ for current month-end performance.
+
+## Key Fund Statistics as of March 31, 2026
+
+Table Summary
+ | Total Net Assets  | Number of Holdings  | Total Advisory Fees Paid  | Portfolio Turnover Rate
+ | $272,545,215  | 27  | $1,685,059  | 0%
+
+## What did the Fund invest in?
+
+##  Commodity Exposure^{Footnote Reference*}^{Footnote Reference^}^{}
+
+Image: Sector Chart
+
+Table Summary
+Value  | Value
+--- | ---
+Commodities  | 37.0%
+Global Fixed Income  | 36.2%
+Currencies  | 26.8%
+
+Footnote  | Description
+Footnote^{*}  | Percentages are calculated based on total market value of commodity exposure.
+Footnote^{^}  | This chart does not include cash, and therefore, the investments as a percentage to total net assets (which includes cash) will not add up to 100%.
+
+## Top Positions
+
+Table Summary
+Instrument  | Asset Class  | Exposure (%)  | Top Position
+--- | --- | --- | ---
+JPN 10Y BOND(OSE) JUN26  | Bond  | 33%  | Top Short
+In anticipation of the Transaction, the Board approved new advisory and, if applicable, sub-advisory agreements on terms identical to the existing agreements (other than effective and termination dates), subject to shareholder approval of the new advisory agreement. The new sub-advisory agreement will take effect in reliance on a manager-of-managers exemptive order. To ensure continuity of management pending shareholder approval of the new advisory agreement, the Board also approved interim advisory and, if applicable, sub-advisory agreements, effective upon closing of the Transaction, each with terms substantially identical to the current agreements, to remain in effect for up to 150 days while shareholder approval is sought. 
+
+ 
+
+ 
+
+## Changes in and Disagreements with Accountants 
+
+There were no changes in or disagreements with accountants during the reporting period.
+
+## Additional Information
+
+For additional information about the Fund, including its prospectus, financial information, holdings, and proxy voting information, visit https://kraneshares.com/kmlm/.
+
+KraneShares Trust
+
+KraneShares Mount Lucas Managed Futures Index Strategy ETF: KMLM
+
+Principal Listing Exchange: NYSE Arca
+
+Annual Shareholder Report: March 31, 2026
+
+KMLM-AR-2026
+
+--------------------------------------------------------------------------------
+Annual Report (https://kraneshares.com/resources/compliance/2024_03_31_kraneshares_annual.report.pdf)
+citeturn1020search12 [wordlim: 200] Published: 2.2 years ago; We are pleased to provide you with the Annual Report for the following exchange-traded fund seriesof the KraneShares Trust: ... •	 KFA Mount Lucas Managed Futures Index Strategy ETF (KMLM) ... These funds obtain exposure primarily through derivatives; the holdings are largely cash instruments.
+Shareholder Letter (Unaudited) (concluded)
+Dear Shareholder:
+We are pleased to provide you with the Annual Report for the following exchange-traded fund series 
+of the KraneShares Trust:
+•	 KraneShares Value Line® Dynamic Dividend Equity Index ETF (KVLE)
+•	 KFA Mount Lucas Managed Futures Index Strategy ETF (KMLM)
+Together, KVLE and KMLM comprise the Trust’s Uncorrelated Suite (the “Funds”).
+For the 12-month period ended March 31, 2024 (“Period”), unless otherwise indicated, the Funds 
+delivered the following returns:
+Market 
+Underlying 
+Morningstar 
+Peer Group 
+NAV 
+Return 
+Price 
+Return 
+Index 
+Return 
+Fund
+(%)*
+(%)*
+(%)*
+Median 
+Return (%)*
+KraneShares Value Line® Dynamic Dividend Equity Index 
+ETF (KVLE) . .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . .
+12.45
+12.41
+12.14 (a)
+20.22 (1)
+KFA Mount Lucas Managed Futures Index Strategy ETF 
+(KMLM). .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . .
+1.01
+1.39
+1.86 (b)
+12.72 (2)
+* 
+Total return, assuming dividend reinvestment.
+(a)
+Value Line® Dynamic Dividend Equity Index.
+(b)
+KFA MLM Index.
+(1) 
+The Morningstar US ETF Large Value Category portfolios primarily consist of large U.S. companies that 
+are less expensive or growing more slowly than other large-cap stocks. Stocks in the top 70% of the 
+capitalization of the U.S. equity market are defined as large-cap. Value is based on low valuations (low 
+price ratios and high dividend yields) and slow growth (low growth rates for earnings, sales, book value, 
+and cash flow).
+(2)
+The Morningstar US ETF Systematic Trend Category portfolios primarily consist of liquid global futures, 
+options, swaps, and foreign exchange contracts, both listed and over-the-counter. A majority of these 
+funds follow trend-following, price-momentum strategies. Other strategies included in this category are 
+systematic mean reversion, discretionary global macro strategies, commodity index tracking, and other 
+futures strategies. More than 60% of the fund's exposure is invested through derivative securities. 
+These funds obtain exposure primarily through derivatives; the holdings are largely cash instruments.
+We believe that investing in diversifying equity and managed futures strategies is an important 
+way to help manage portfolio risk. We offer the Funds to help investors complete their portfolio 
+allocations to these types of strategies.
+Thank you for investing with us.*
+Jonathan Krane, CEO
+
+
+
+* Since shares of a Fund did not trade in the secondary market until after the Fund's inception date shown 
+below in the “Management Discussion of Fund Performance”, for the period from inception date to the first day 
+of secondary market trading in shares of the Fund, the net asset value of the Fund is used as a proxy for the 
+secondary market trading price to calculate market price returns.
+5--------------------------------------------------------------------------------
+Managed Futures ETF Overview | KMLM : Managed Futures | Kraneshares (https://engage.kraneshares.com/s/77b9d7d7/?ks_product=kmlm&page=15)
+citeturn1020search2 [wordlim: 200] Crawled: last month; For performance data current to the most recent month end, please visit www.kraneshares.com/kmlm. ... Holdings and Exposures of the KraneShares Mount Lucas Managed Futures Index Strategy ETF Commodity Exposures as of 06/30/2026 Identifier Position % NAV SUGAR #11 (WORLD) OCT26 SBV6 Short 7.05% LIVE CATTLE FUTR AUG26 LCQ6 Long 7.03% NATURAL GAS FUTR SEP26 NGU26 Short 6.74% COPPER FUTURE SEP26 HGU6 Long 6.72% GASOLINE RBOB FUT SEP26 XBU6 Long 6.58% NY HARB ULSD FUT SEP26 HOU6 Long 6.46% CORN FUTURE DEC26 C Z6 Short 6.36% WHEAT FUTURE(CBT) DEC26 W Z6 Long 5.94% WTI CRUDE FUTURE SEP26 CLU6 Long 5.77% SOYBEAN FUTURE NOV26 S X6 Short 2.19% GOLD 100 OZ FUTR AUG26 GCQ6 Short 0.27% Currency Exposures as of 06/30/2026 Identifier Position % NAV EURO FX CURR FUT SEP26 ECU6 Short 16.15% JPN YEN CURR FUT SEP26 JYU6 Short 16.12% C$ CURRENCY FUT SEP26 CDU6 Short 16.01% AUDUSD CRNCY FUT SEP26 ADU6 Long 15.91% CHF CURRENCY FUT SEP26 SFU6 Short 15.91% BP CURRENCY FUT SEP26 BPU6 Short 11.6% Fixed Income Exposures as of 06/30/2026 Identifier Position % NAV US 10YR ULTRA FUT SEP26 UXYU6 Short 25.97% JPN 10Y BOND(OSE) SEP26 JBU6 Short 25.32% LONG GILT FUTURE SEP26 G U6 Short 20.77% EURO-BUND FUTURE SEP26 RXU6 Short 15.82% CAN 10YR BOND FUT SEP26 CNU6 Long 6.05% Collateral and Currency Management as of 06/30/2026 Identifier Position Current Exposure($) % NAV Cash USD 111,270,022 111,270,022 37.35% B 07/02/26 US912797TF47 50,000,000 49,995,007 16.78% B 07/21/26 US912797UQ82 50,000,000 49,899,966 16.75% B 08/25/26 US912797UV77 45,000,000 44,748,719 15.02% B 07/30/26 US912797TQ02 40,000,000 39,884,322 13.39% B 08/18/26 US912797UU94 10,000,000 9,951,533 3.34% JAPANESE YEN JPY -27,250,892 -167,600 -0.06% CANADIAN DOLLAR CAD -269,699 -190,163 -0.06% EURO EUR -892,328 -1,019,571 -0.34% BRITISH STERLING POUND GBP -787,065 -1,044,005 -0.35% 303,328,230 102% Holdings, futures, and collateral are subject to change.
+Indexes are unmanaged and one cannot invest directly in an index. 15
+
+Holdings and Exposures of the KraneShares Mount Lucas Managed Futures Index Strategy ETF Commodity Exposures as of 06/30/2026 Identifier Position % NAV SUGAR #11 (WORLD) OCT26 SBV6 Short 7.05% LIVE CATTLE FUTR AUG26 LCQ6 Long 7.03% NATURAL GAS FUTR SEP26 NGU26 Short 6.74% COPPER FUTURE SEP26 HGU6 Long 6.72% GASOLINE RBOB FUT SEP26 XBU6 Long 6.58% NY HARB ULSD FUT SEP26 HOU6 Long 6.46% CORN FUTURE DEC26 C Z6 Short 6.36% WHEAT FUTURE(CBT) DEC26 W Z6 Long 5.94% WTI CRUDE FUTURE SEP26 CLU6 Long 5.77% SOYBEAN FUTURE NOV26 S X6 Short 2.19% GOLD 100 OZ FUTR AUG26 GCQ6 Short 0.27% Currency Exposures as of 06/30/2026 Identifier Position % NAV EURO FX CURR FUT SEP26 ECU6 Short 16.15% JPN YEN CURR FUT SEP26 JYU6 Short 16.12% C$ CURRENCY FUT SEP26 CDU6 Short 16.01% AUDUSD CRNCY FUT SEP26 ADU6 Long 15.91% CHF CURRENCY FUT SEP26 SFU6 Short 15.91% BP CURRENCY FUT SEP26 BPU6 Short 11.6% Fixed Income Exposures as of 06/30/2026 Identifier Position % NAV US 10YR ULTRA FUT SEP26 UXYU6 Short 25.97% JPN 10Y BOND(OSE) SEP26 JBU6 Short 25.32% LONG GILT FUTURE SEP26 G U6 Short 20.77% EURO-BUND FUTURE SEP26 RXU6 Short 15.82% CAN 10YR BOND FUT SEP26 CNU6 Long 6.05% Collateral and Currency Management as of 06/30/2026 Identifier Position Current Exposure($) % NAV Cash USD 111,270,022 111,270,022 37.35% B 07/02/26 US912797TF47 50,000,000 49,995,007 16.78% B 07/21/26 US912797UQ82 50,000,000 49,899,966 16.75% B 08/25/26 US912797UV77 45,000,000 44,748,719 15.02% B 07/30/26 US912797TQ02 40,000,000 39,884,322 13.39% B 08/18/26 US912797UU94 10,000,000 9,951,533 3.34% JAPANESE YEN JPY -27,250,892 -167,600 -0.06% CANADIAN DOLLAR CAD -269,699 -190,163 -0.06% EURO EUR -892,328 -1,019,571 -0.34% BRITISH STERLING POUND GBP -787,065 -1,044,005 -0.35% 303,328,230 102% Holdings, futures, and collateral are subject to change. 16
+
+--------------------------------------------------------------------------------
+ (https://www.sec.gov/Archives/edgar/data/1547576/000182912625004316/kraneshares_ncsr.htm)
+citeturn1020search3 [wordlim: 200] Published: 1.4 years ago; Crawled: 1.4 years ago; This annual shareholder report contains important information about the KraneShares Mount Lucas Managed Futures Index Strategy ETF (the "Fund") for the period from April 1, 2024 to March 31, 2025. ... For additional information about the Fund, including its prospectus, financial information, holdings, and proxy voting information, visit https://kraneshares.com/kmlm/.
+# KraneShares Trust
+
+Image: Image
+
+## KraneShares Mount Lucas Managed Futures Index Strategy ETF 
+
+## Ticker: KMLM
+
+## Principal Listing Exchange: NYSE Arca
+
+## Annual Shareholder Report: March 31, 2025
+
+This annual shareholder report contains important information about the KraneShares Mount Lucas Managed Futures Index Strategy ETF (the "Fund") for the period from April 1, 2024 to March 31, 2025. You can find additional information about the Fund at https://kraneshares.com/kmlm/. You can also request this information by contacting us at 1-855-857-2638. This annual shareholder report describes changes to the Fund that occurred during the reporting period. 
+
+## What were the Fund costs for the last year?
+
+(based on a hypothetical $10,000 investment) 
+
+Fund Name  | Costs of a $10,000 investment  | Costs paid as a percentage of a $10,000 investment
+--- | --- | ---
+KraneShares Mount Lucas Managed Futures Index Strategy ETF  | $86  | 0.90%
+
+How did the Fund perform in the last year?
+
+For the 12-month Period ended March 31, 2025 ("Period"), the Fund delivered the following returns:
+Gold - Futures Contract^{Footnote Reference(1)}  |  |  | 0.8%
+Copper - Futures Contract^{Footnote Reference(1)}  |  |  | 0.7%
+Euro-Bund 10-Year Bond - Futures Contract^{Footnote Reference(1)}  |  |  | 0.5%
+Live Cattle - Futures Contract^{Footnote Reference(1)}  |  |  | 0.4%
+Long Gilt 10-Year Bond - Futures Contract^{Footnote Reference(1)}  |  |  | 0.4%
+Soybean - Futures Contract^{Footnote Reference(1)}  |  |  | 0.2%
+AUD Currency - Futures Contract^{Footnote Reference(1)}  |  |  | 0.2%
+Japanese Yen - Futures Contract^{Footnote Reference(1)}  |  |  | 0.1%
+Swiss Franc - Futures Contract^{Footnote Reference(1)}  |  |  | 0.1%
+
+Footnote  | Description
+Footnote^{(1)}  | At market value.
+Footnote^{(A)}  | Short-Term Investments are not shown in the top ten chart.
+
+## Material Fund Changes
+
+This is a summary of certain changes to the Fund since April 1, 2024. For more complete information, you may review the Fund’s prospectus, which is available at https://kraneshares.com/kmlm/#documents or upon request at 1-855-857-2638.
+
+ 
+
+Effective August 1, 2024, the name of the Fund changed from the “KFA Mount Lucas Managed Futures Index Strategy ETF” to the “KraneShares Mount Lucas Managed Futures Index Strategy ETF”.
+
+ 
+
+## Changes in and Disagreements with Accountants 
+
+There were no changes in or disagreements with accountants during the reporting period.
+
+## Additional Information
+
+For additional information about the Fund, including its prospectus, financial information, holdings, and proxy voting information, visit https://kraneshares.com/kmlm/.
+
+KraneShares Trust
+
+KraneShares Mount Lucas Managed Futures Index Strategy ETF: KMLM
+
+Principal Listing Exchange: NYSE Arca
+
+Annual Shareholder Report: March 31, 2025
+
+KMLM-AR-2025
+
+--------------------------------------------------------------------------------
+Annual Report (https://kraneshares.com/resources/compliance/2024_04_01_klip_annual.report.pdf)
+citeturn1020search13 [wordlim: 200] Published: 2.1 years ago; Notes to Financial Statements (concluded)
+Notes to Financial Statements (concluded)
+9. SUBSEQUENT EVENTS
+The Funds have evaluated the need for additional disclosures and/or adjustments resulting from 
+subsequent events through the date the financial statements were issued.
+Based on this evaluation, no additional disclosures or adjustments were required to the financial 
+statements as of the date the financial statements were issued.
+39--------------------------------------------------------------------------------
+ (https://www.sec.gov/Archives/edgar/data/1547576/000182912626006162/R2.htm)
+citeturn1020search4 [wordlim: 200] Crawled: 4 months ago; For more complete information, you may review the Fund’s prospectus, which is available at https://kraneshares.com/etf/kmlm/#fund-documents or upon request at 1-855-857-2638.Krane Funds Advisors, LLC (“Krane” or the “Adviser”), the investment adviser to the Fund, entered into an agreement whereby its officers and employees, among others, through KFA Two Holdings, LLC, will acquire a majority interest in the Adviser from China International Capital Corporation (USA) Holdings Inc., a wholly-owned, indirect subsidiary of China International Capital Corporation Limited (the “Transaction”). ... Additional Information [Text Block]  | This annual shareholder report contains important information about the KraneShares SSE STAR Market 50 Index ETF (the "Fund") for the period from April 1, 2025 to March 31, 2026.
+The new sub-advisory agreement will take effect in reliance on a manager-of-managers exemptive order. To ensure continuity of management pending shareholder approval of the new advisory agreement, the Board also approved interim advisory and, if applicable, sub-advisory agreements, effective upon closing of the Transaction, each with terms substantially identical to the current agreements, to remain in effect for up to 150 days while shareholder approval is sought.   
+Updated Prospectus Web Address  | https://kraneshares.com/kmlm/
+C000220718  |  
+Shareholder Report [Line Items]  |  
+Fund Name  | KraneShares SSE STAR Market 50 Index ETF
+Class Name  | KraneShares SSE STAR Market 50 Index ETF
+Trading Symbol  | KSTR
+Security Exchange Name  | NYSEArca
+Annual or Semi-Annual Statement [Text Block]  | Annual Shareholder Report
+Shareholder Report Annual or Semi-Annual  | annual shareholder report
+Additional Information [Text Block]  | This annual shareholder report contains important information about the KraneShares SSE STAR Market 50 Index ETF (the "Fund") for the period from April 1, 2025 to March 31, 2026. --------------------------------------------------------------------------------
+ (https://www.sec.gov/Archives/edgar/data/1547576/000182912626006164/kraneshares_ncsr.htm)
+citeturn1020search5 [wordlim: 200] Published: 4 months ago; Crawled: 4 months ago; The Registrant has not retained, for the preparation of the audit report on the financial statements included in the Form N-CSR, a registered public accounting firm that has a branch or office that is located in a foreign jurisdiction and that the Public Company Accounting Oversight Board (the “PCAOB”) has determined that the PCAOB is unable to inspect or investigate completely because of a position taken by an authority in the foreign jurisdiction. ...  |    | Annual Financials and Other Information KraneShares 90% KWEB Defined Outcome January 2027 ETF KraneShares 100% KWEB Defined Outcome January 2027 ETF                                       March 31, 2026  |    |
+
+ 
+
+(j) Not applicable. The Registrant is not a “foreign issuer,” as defined in 17 CFR 240.3b-4.
+
+Item 5. Audit Committee of Listed Registrants.
+
+ 
+
+(a) The Registrant has a separately-designated standing Audit Committee, which is composed of the Registrant’s Independent Trustees, Messrs. Luis Berruga, John Ferguson and Matthew Stroyman.
+
+ 
+
+(b) Not applicable to the Registrant.
+
+ 
+
+Item 6. Investments.
+
+ 
+
+(a) The Schedules of Investments and Consolidated Schedules of Investments are included as part of the Registrant’s Financial Statements and Other Information filed under Item 7 of this form.
+
+ 
+
+(b) Not applicable to the Registrant.
+
+Item 7. Financial Statements and Financial Highlights for Open-End Management Investment Companies.
+
+ 
+
+Financial statements and financial highlights are filed herein.
+
+ 
+
+   | Image
+
+ 
+
+ |    | Annual Financials and Other Information KraneShares 90% KWEB Defined Outcome January 2027 ETF KraneShares 100% KWEB Defined Outcome January 2027 ETF                                       March 31, 2026  |    |  
+
+ 
+
+ 
+
+ 
+
+ 
+
+Table of Contents
+
+ 
+
+Financial Statements (Form N-CSR Item 7)
+Schedules of Investments  |    |  
+KraneShares 90% KWEB Defined Outcome January 2027 ETF  |    | 1
+KraneShares 100% KWEB Defined Outcome January 2027 ETF  |    | 3
+Glossary  |    | 5
+Statements of Assets and Liabilities  |    | 6
+Statements of Operations  |    | 7
+Statements of Changes in Net Assets  |    | 8
+Financial Highlights  |    | 10
+Notes to Financial Statements  |    | 12
+Report of Independent Registered Public Accounting Firm  |    | 28
+Notice To Shareholders (Unaudited)  |    | 30
+Other Information (Form N-CSR Items 8-11) (Unaudited)  |    | 31
+
+--------------------------------------------------------------------------------
+Annual Report (https://kraneshares.com/resources/compliance/2020_03_31_kraneshares_annual.report.pdf)
+citeturn1020search14 [wordlim: 200] Published: 1.9 years ago; KraneShares MSCI All China Index ETF (continued) ... Want Want China Holdings .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . ... The accompanying notes are an integral part of the financial statements.
+22,800
+18,367 
+The accompanying notes are an integral part of the financial statements.
+60--------------------------------------------------------------------------------
+Managed Futures ETF Overview | KMLM : Managed Futures | Kraneshares (https://engage.kraneshares.com/s/77b9d7d7?ks_product=kmlm&page=1)
+citeturn1020search6 [wordlim: 200] Published: 3 months ago; Crawled: last month; Trend Following and Uncorrelated Assets – A Strategy for Uncertain Times KraneShares Mount Lucas Managed Futures Index Strategy ETF (Ticker: KMLM) [REDACTED_EMAIL] KMLM 6/30/2026 1
+Trend Following and Uncorrelated Assets – A Strategy for Uncertain Times KraneShares Mount Lucas Managed Futures Index Strategy ETF (Ticker: KMLM) [REDACTED_EMAIL] KMLM 6/30/2026 1
+
+2 Investment Strategy KMLM is benchmarked to the KFA MLM Index, which consists of a portfolio of twenty-two liquid futures contracts traded on U.S. and foreign exchanges. The Index includes futures contracts on 11 commodities, 6 currencies, and 5 global bond markets. These three baskets are weighted by their relative historical volatility, and within each basket, the constituent markets are equal dollar weighted. KMLM Features • Access to managed futures through a liquid and low-cost ETF structure 1 • Managed futures are considered alternative investments and may provide additional diversification and decrease volatility when included within traditional equity/bond portfolios 2 • A potential hedge on equity, bond, and commodity risk • Sub-advised by Mount Lucas Management, who in 1988 created the MLM Index, the first passive index to measure the returns to risk bearing in futures markets 3 KMLM Partner Mount Lucas, the sub-advisor of KMLM, is a Newtown, PA based asset manager founded in 1986. --------------------------------------------------------------------------------
+Krane Shares Trust (via Public) / Annual Report by Investment Company (Form N-CSR) (https://ebs.publicnow.com/view/A3979B245CEDD7C65459E7F283087C426C3D6837)
+citeturn1020search7 [wordlim: 200] Published: 4 months ago; Crawled: today; Krane Funds Advisors, LLC ("Krane" or the "Adviser"), the investment adviser to the Fund, entered into an agreement whereby its officers and employees, among others, through KFA Two Holdings, LLC, will acquire a majority interest in the Adviser from China International Capital Corporation (USA) Holdings Inc., a wholly-owned, indirect subsidiary of China International Capital Corporation Limited (the "Transaction"). ... For additional information about the Fund, including its prospectus, financial information, holdings, and proxy voting information, visit https://kraneshares.com/kpro/. ... Annual Shareholder Report: March 31, 2026 ... We have audited the accompanying statements of assets and liabilities of the funds listed in the Appendix, two of the funds comprising KraneShares Trust (collectively, the Funds), including the schedules of investments, as of March 31, 2026, the related statements of operations for the year then ended, the statements of changes in net assets for each of the years in the two-year period then ended, and the related notes (collectively, the financial statements) and the financial highlights for each of the years or periods listed in the Appendix.
+
+KraneShares Trust:
+
+Opinion on the Financial Statements
+
+We have audited the accompanying statements of assets and liabilities of the funds listed in the Appendix, two of the funds comprising KraneShares Trust (collectively, the Funds), including the schedules of investments, as of March 31, 2026, the related statements of operations for the year then ended, the statements of changes in net assets for each of the years in the two-year period then ended, and the related notes (collectively, the financial statements) and the financial highlights for each of the years or periods listed in the Appendix. In our opinion, the financial statements and financial highlights present fairly, in all material respects, the financial position of each of the Funds as of March 31, 2026, the results of their operations for the year then ended, the changes in their net assets for each of the years in the two-year period then ended, and the financial highlights for each of the years or periods listed in the Appendix, in conformity with U.S. generally accepted accounting principles.
+Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the financial statements and financial highlights. Such procedures also included confirmation of securities owned as of March 31, 2026, by correspondence with custodian, transfer agent, and brokers or by other appropriate auditing procedures when replies from brokers were not received. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the financial statements and financial highlights. We believe that our audits provide a reasonable basis for our opinion.
+
+We have served as the auditor of one or more KraneShares investment companies since 2017.
+
+Philadelphia, Pennsylvania
+
+May 29, 2026
+
+28
+
+Report of Independent Registered Public Accounting Firm (concluded)
+
+Appendix
+
+Funds with inception during the year ended March 31, 2024:
+
+KraneShares 90% KWEB Defined Outcome January 2027 ETF
+
+KraneShares 100% KWEB Defined Outcome January 2027 ETF
+
+Statement of operations for the year ended March 31, 2026
+
+Statements of changes in net assets for each of the years in the two-year period ended March 31, 2026
+
+--------------------------------------------------------------------------------
+KraneShares Trust (https://kfafunds.com/resources/compliance/2022_08_01_kfafunds_SAI.pdf)
+citeturn1020search15 [wordlim: 200] Published: 11 months ago; ETF - (KMLM) ...  or period are incorporated in this SAI by reference to the Funds’ March 31, 2022 Annual Report to
+--------------------------------------------------------------------------------
+EDGAR Filing Documents for 0001829126-22-014879 (https://www.sec.gov/Archives/edgar/data/1547576/000182912622014879/0001829126-22-014879-index.htm)
+citeturn1020search8 [wordlim: 200] Published: 4.2 years ago; Crawled: 4.2 years ago; 1  | 497K  | kraneshares-kmlm_497k.htm  | 497K  | 139246 ... Krane Shares Trust (Filer) CIK: 0001547576 (see all company filings)
+--------------------------------------------------------------------------------
+KFA Funds ETFs (https://kfafunds.com/etf/)
+citeturn1020search9 [wordlim: 200] Crawled: 3 days ago; KMLM  | KraneShares Mount Lucas Managed Futures Index Strategy ETF  | $31.30  | $586,950,468  | PDF  | PDF
+--------------------------------------------------------------------------------
+Managed Futures ETF Overview | KMLM : Managed Futures | Kraneshares (https://engage.kraneshares.com/s/77b9d7d7?ks_product=kmlm)
+citeturn1020search10 [wordlim: 200] Crawled: 2 weeks ago; Managed Futures ETF Overview | KMLM : Managed Futures | Kraneshares
+--------------------------------------------------------------------------------
+ (https://content-archive.fast-edgar.com/20250606/A7ZVT22CN222B2ZH222R2WZUREQDZ22SZ272/index.html)
+citeturn1020search11 [wordlim: 200] Published: 1.4 years ago; Crawled: 1.4 years ago; For additional information about the Fund, including its prospectus, financial information, holdings, and proxy voting information, visit https://kraneshares.com/kmlm/. ... Annual Shareholder Report: March 31, 2025

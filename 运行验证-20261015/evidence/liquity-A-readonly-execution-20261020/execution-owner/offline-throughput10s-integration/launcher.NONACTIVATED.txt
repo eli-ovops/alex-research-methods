@@ -1,0 +1,3 @@
+#!/bin/zsh
+# NON-ACTIVATED TEMPLATE; user personally starts only after exact Root publication.
+exec '/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/.venv/bin/python' -B -E -S '/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/liquity-A-readonly-execution-20261020/execution-owner/readonly_collector.py' --live '/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/liquity-A-readonly-execution-20261020/execution-owner/bindings-throughput10s-attempt-01.json'

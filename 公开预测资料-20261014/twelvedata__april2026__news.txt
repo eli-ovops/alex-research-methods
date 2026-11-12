@@ -1,0 +1,247 @@
+April 2026 updates
+Now Live: Cboe Europe real-time data for all major European stocks.
+Data add-ons
+XJPX
+opens in 9h 57m
+0700
+423.60
+-0.38
+%
+EUR/USD
+1.11
+-0.73
+%
+AAPL
+345.62
+1.27
+%
+TSLA
+364.93
+-2.74
+%
+NESN
+78.70
+1.81
+%
+7203
+3,008.00
+0.80
+%
+USD/JPY
+158.90
+0.34
+%
+XPT/USD
+1,003.20
+0.33
+%
+ETH/USD
+2,451.10
+-1.88
+%
+2330
+2,505.00
+0.60
+%
+005930
+232,000.00
+0.00
+%
+MC
+390.55
+1.69
+%
+AZN
+12,188.00
+2.45
+%
+ASML
+1,539.60
+1.99
+%
+Market closed
+XJPX is currently closed
+Main market opens in 9 hours 57 minutes
+23:02
+00:00
+09:00
+15:30
+23:59
+Trading Hours (Monday - Friday):
+Main market
+09:00 - 15:30
+Exchange details
+All times are displayed in the Asia/Tokyo timezone (JST, UTC+09:00).
+twelve
+data
+Products
+Market Data
+Stocks
+US & global coverage
+Forex
+Physical currency
+ETFs
+Exchange-traded fund
+Crypto
+Digital currency
+Commodities
+Raw materials
+Mutual funds
+Managed investments
+More
+                                            data
+Fundamentals
+Spreadsheets
+Google Sheets
+Excel
+Tools
+Exchanges
+Markets
+Currency converter
+Developers
+Documentation
+Start integrating Twelve Data’s products
+                                                and tools
+Resources
+WebSocket
+Batch
+                                                requests
+Technical indicators
+Request
+                                                builder
+Guides
+Free
+                                                trial
+Historical
+                                                data
+Extended
+                                                hours data
+FAQs
+Support
+System status
+Artificial Intelligence
+Roadmap
+Company
+About Twelve Data
+We provide financial data, tools, and
+                                                dedicated solutions
+Expertise
+Careers
+Customers
+Trust
+Startups
+Students
+Brand assets
+News
+Pricing
+Book a demo
+Sign in
+Book a demo
+Sign in
+Back to news
+May 12, 2026
+April 2026 updates
+April 2026 updates
+April brought new ways to plug Twelve Data into your stack, a fresh page for forex and crypto conversions, and a smarter look at exchange status right from the rates line.
+A dataset for training world models
+We have released the Twelve Data World Model Dataset, an open source financial dataset shaped for training world models, fine tuning LLMs, and offline reinforcement learning.
+It covers 51 large-cap US equities across three timeframes (1min, 1h, 1day), with three output views per timeframe: OHLCV bars with 19 causal indicators and macro joins, instruction tuning JSONL, and (state, next_state) trajectory windows. Macro context (SPY, VIX, TLT, DXY, sector ETFs) is joined per row, splits are time based, and the full pipeline is open source, not just the data. Causal correctness is enforced with unit tests so there's no leakage from future bars, and corporate actions rebuild adjusted history automatically on the daily refresh.
+Code is MIT licensed; underlying market data follows Twelve Data terms.
+Hugging Face
+GitHub
+Node.js and Go clients are live
+We shipped official client libraries for Node.js and Go this month. The Python client also picked up the endpoints and parameters that were missing from earlier versions, so everything in openapi.json is now reflected there too.
+Library links across the docs were refreshed at the same time, including new entries for the
+Near.ai
+agent and
+Clawhub
+integrations.
+Currency converter page
+There's a new currency converter for forex and crypto pairs. It pulls the selected rate live, shows popular conversions for the base currency, and includes recent rates with a chart and table. Each pair links through to its full forex or crypto page, so you can move from a quick conversion to deeper data without losing context.
+Exchange status at a glance
+The exchange badge on the rates line is now interactive. Click it and you'll see whether the market is open or closed, a countdown to the next session, full trading hours including pre and post market windows, and a direct link to the exchange page.
+Documentation
+A couple of important corrections landed. The /dividends and /dividends_calendar endpoints now correctly state that we return the ex date, not the payment date, so it's worth double checking any logic that mapped that field. A new note also clarifies that the timezone parameter on /time_series and technical indicators only applies to intraday intervals; for 1day, 1week, and 1month, data is always returned in the exchange local time.
+Our public roadmap - https://roadmap.twelvedata.com/ now has a permanent spot in the dashboard, developers menu, and footer.
+Share article
+More news
+Sept 2026 update
+October 12, 2026
+Aug 2026 update
+September 12, 2026
+July 2026 update
+August 12, 2026
+June 2026 update
+July 12, 2026
+No slides, no agenda. Our first meetup in Belgrade
+June 14, 2026
+May 2026 updates
+June 12, 2026
+March 2026 updates
+April 1, 2026
+Home
+News
+April 2026 updates
+twelve
+data
+Copyright ©
+2026
+Twelve Data Pte. Ltd.
+All rights reserved.
+Products
+Stocks
+Forex (FX)
+Crypto
+ETFs
+Mutual funds
+Exchanges
+Search symbols
+Excel
+Google Sheets
+Pricing
+Developers
+API documentation
+WebSocket documentation
+Request builder
+System status
+Roadmap
+Company
+About
+Customers
+Education
+Expertise
+Careers
+Brand assets
+News
+Resources
+Support
+Contact
+Privacy policy
+Terms of use
+Security center
+Cookie policy
+Manage cookies
+Sitemap
+Cookies on this website
+We use cookies for essential site functions, analytics and advertising. See
+our Cookie Policy
+for details.
+Reject all
+Customize
+Accept all
+Cookie Settings
+Click the headings below to learn more about each category of cookies and adjust your preferences. See
+our Cookie Policy
+for details.
+Strictly necessary
+Always on
+These cookies are essential for the operation, security, and integrity of our website and services. They enable core functionality such as authentication, session management, and security protections.
+Functional
+These cookies enable enhanced functionality and personalization, such as remembering user preferences and consent choices.
+Analytics
+These cookies help us understand how visitors use our website, including pages viewed, traffic sources, actions taken and general location. This information is linked to a randomly generated identifier rather than to your name.
+Advertising
+These cookies are used to measure the performance of our advertising and to show you relevant advertising on other websites. Information collected through them is made available to advertising providers including Google and LinkedIn.
+Reject all
+Accept all
+Save preferences

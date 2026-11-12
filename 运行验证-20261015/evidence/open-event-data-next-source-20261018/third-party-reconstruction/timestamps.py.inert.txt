@@ -1,0 +1,197 @@
+"""Recovering a block time for every book-diff message.
+
+The public diff stream carries no timestamps, only file order.  Two other streams do carry block times and share the
+order id: the status stream (``open`` and cancel events) and the trade stream.  The recovery works per coin-hour:
+
+* **anchors** -- a ``new`` diff gets the open-status time of its oid, a ``remove`` diff with a cancel-type status gets
+  that cancel time;
+* an anchor whose time is *behind* the running maximum of the earlier valid anchors is inconsistent with file order.
+  Long runs of behind anchors (``run_min`` or more in a row) are re-emitted history after a collector restart: those
+  rows, and the non-anchor rows that follow them, keep their old time so that the book replay can skip them.
+  Isolated behind anchors are demoted and treated like non-anchor rows;
+* **non-anchor rows** (partial fills, removes by fill, demoted anchors) get the first trade of their oid at or after
+  the previous valid anchor and not after the next valid anchor, else the previous anchor's time;
+* the timeline of all non-replayed rows is finally made monotone with a running maximum.
+
+``src`` records where each time came from: 1 open anchor, 3 cancel anchor, 2 trade within the anchor bounds,
+6 previous-anchor fallback, 0 none (back-filled).  ``ephemeral`` marks orders whose whole life is a single
+``new`` + ``remove`` pair at one block time; the replay ignores them.
+"""
+
+from __future__ import annotations
+
+import warnings
+
+import numpy as np
+import pandas as pd
+import polars as pl
+
+DIFF_NEW, DIFF_UPDATE, DIFF_REMOVE = 0, 1, 2
+SRC_OPEN_ANCHOR, SRC_TRADE, SRC_CANCEL_ANCHOR, SRC_PREV_ANCHOR, SRC_NONE = 1, 2, 3, 6, 0
+
+
+def recover_timestamps(
+    d: pl.DataFrame, opens: pl.DataFrame, cancels: pl.DataFrame, trades: pl.DataFrame, run_min: int = 20
+) -> tuple[pl.DataFrame, dict]:
+    """Attach ``ts``, ``src`` and ``ephemeral`` to one coin-hour of diffs.
+
+    ``d``: columns seq, uid, oid, isAsk, px, typ, sz, newsz (sorted by seq).
+    ``opens``: oid, ts_open (first open-status time per oid); ``cancels``: oid, ts_canc (first cancel-type status);
+    ``trades``: oid, ts (every trade of every oid, sorted by oid then ts).
+    Returns the frame with the original columns plus ts, src, ephemeral, and a dict of diagnostics.
+    """
+    d = d.sort("seq").join(opens, on="oid", how="left").join(cancels, on="oid", how="left")
+    d = d.with_columns(
+        pl.when(pl.col("typ") == DIFF_NEW)
+        .then(pl.col("ts_open"))
+        .when(pl.col("typ") == DIFF_REMOVE)
+        .then(pl.col("ts_canc"))
+        .otherwise(None)
+        .alias("anc")
+    )
+    n = d.height
+    a = d["anc"].to_numpy().astype("float64")
+    isanc = ~np.isnan(a)
+    # anchors behind the running maximum of earlier valid anchors are inconsistent with file order
+    valid = isanc.copy()
+    for _ in range(6):
+        v = np.where(valid, a, -np.inf)
+        cm = np.maximum.accumulate(v)
+        cm_prev = np.concatenate([[-np.inf], cm[:-1]])
+        bad = valid & (a < cm_prev)
+        if not bad.any():
+            break
+        valid = valid & ~bad
+    behind = isanc & ~valid
+    demoted = int(behind.sum())
+    # long runs of behind anchors (along the anchor subsequence) are re-emitted history
+    apos = np.nonzero(isanc)[0]
+    b_seq = behind[apos]
+    replayed_anchor = np.zeros(n, dtype=bool)
+    if b_seq.any():
+        change = np.concatenate([[True], b_seq[1:] != b_seq[:-1]])
+        rid = np.cumsum(change) - 1
+        run_len = np.bincount(rid)
+        long_run = b_seq & (run_len[rid] >= run_min)
+        replayed_anchor[apos[long_run]] = True
+    # non-anchor rows inherit the replayed status of the most recent anchor row
+    last_anchor_replayed = pd.Series(np.where(isanc, replayed_anchor, np.nan)).ffill().fillna(0).to_numpy().astype(bool)
+    replayed_row = last_anchor_replayed & ~isanc
+    old_ts = pd.Series(np.where(replayed_anchor, a, np.nan)).ffill().to_numpy()
+    d = d.with_columns(
+        [
+            pl.Series("anc_ok", valid),
+            pl.Series("replayed_row", replayed_row),
+            pl.Series("replayed_anchor", replayed_anchor),
+            pl.Series("old_ts", old_ts, nan_to_null=True).cast(pl.Int64),
+        ]
+    )
+    d = d.with_columns(pl.when(pl.col("anc_ok")).then(pl.col("anc")).otherwise(None).alias("anc_v"))
+    d = d.with_columns(
+        pl.col("anc_v").fill_null(strategy="forward").alias("prev_anc"),
+        pl.col("anc_v").fill_null(strategy="backward").alias("next_anc"),
+    )
+    n_replayed = int(replayed_anchor.sum() + replayed_row.sum())
+    # non-anchor rows: first trade of the oid at or after the previous valid anchor, not after the next one
+    na = (
+        d.filter(~pl.col("anc_ok"))
+        .select(["seq", "oid", "prev_anc", "next_anc"])
+        .with_columns(pl.col("prev_anc").fill_null(0))
+        .sort("prev_anc")
+    )
+    if na.height:
+        with (
+            warnings.catch_warnings()
+        ):  # polars cannot verify per-group sortedness with `by`; trades are sorted by construction
+            warnings.simplefilter("ignore", UserWarning)
+            na = na.join_asof(
+                trades.rename({"ts": "ts_tr"}).sort("ts_tr"),
+                left_on="prev_anc",
+                right_on="ts_tr",
+                by="oid",
+                strategy="forward",
+            )
+        na = na.with_columns(
+            pl.when(pl.col("ts_tr") <= pl.col("next_anc").fill_null(pl.col("ts_tr")))
+            .then(pl.col("ts_tr"))
+            .otherwise(None)
+            .alias("ts_tr_ok")
+        )
+        d = d.join(na.select(["seq", "ts_tr_ok"]), on="seq", how="left")
+    else:
+        d = d.with_columns(pl.lit(None, dtype=pl.Int64).alias("ts_tr_ok"))
+    d = d.sort("seq")
+    # valid anchors keep their time; replayed anchors and rows keep the OLD time (the replay skips them);
+    # everything else is timed by a trade within the anchor bounds or by the previous valid anchor
+    d = d.with_columns(
+        pl.when(pl.col("anc_ok"))
+        .then(pl.col("anc"))
+        .when(pl.col("replayed_anchor"))
+        .then(pl.col("anc"))
+        .when(pl.col("replayed_row"))
+        .then(pl.col("old_ts"))
+        .otherwise(pl.coalesce([pl.col("ts_tr_ok"), pl.col("prev_anc")]))
+        .alias("ts_raw")
+    )
+    d = d.with_columns(
+        pl.when(pl.col("anc_ok") & (pl.col("typ") == DIFF_NEW))
+        .then(SRC_OPEN_ANCHOR)
+        .when(pl.col("anc_ok") & (pl.col("typ") == DIFF_REMOVE))
+        .then(SRC_CANCEL_ANCHOR)
+        .when(pl.col("ts_tr_ok").is_not_null())
+        .then(SRC_TRADE)
+        .when(pl.col("prev_anc").is_not_null())
+        .then(SRC_PREV_ANCHOR)
+        .otherwise(SRC_NONE)
+        .cast(pl.Int8)
+        .alias("src")
+    )
+    # non-replayed rows form a monotone timeline (running max); replayed rows keep their old time
+    d = d.with_columns(pl.col("ts_raw").fill_null(strategy="backward").alias("ts_f"))
+    d = d.with_columns((pl.col("replayed_anchor") | pl.col("replayed_row")).alias("replayed"))
+    d = d.with_columns(
+        pl.when(~pl.col("replayed"))
+        .then(pl.col("ts_f"))
+        .otherwise(None)
+        .cum_max()
+        .fill_null(strategy="forward")
+        .fill_null(strategy="backward")
+        .alias("ts_mono")
+    )
+    d = d.with_columns(pl.when(pl.col("replayed")).then(pl.col("ts_f")).otherwise(pl.col("ts_mono")).alias("ts"))
+    # ephemeral orders: one new + one remove at the same block time and nothing else
+    g = d.group_by("oid").agg(
+        [
+            pl.len().alias("n"),
+            (pl.col("typ") == DIFF_UPDATE).sum().alias("nupd"),
+            pl.col("ts").min().alias("tmin"),
+            pl.col("ts").max().alias("tmax"),
+            (pl.col("typ") == DIFF_NEW).sum().alias("nnew"),
+            (pl.col("typ") == DIFF_REMOVE).sum().alias("nrem"),
+        ]
+    )
+    eph = (
+        g.filter(
+            (pl.col("n") == 2)
+            & (pl.col("nupd") == 0)
+            & (pl.col("nnew") == 1)
+            & (pl.col("nrem") == 1)
+            & (pl.col("tmin") == pl.col("tmax"))
+        )
+        .select("oid")
+        .with_columns(pl.lit(True).alias("ephemeral"))
+    )
+    d = d.join(eph, on="oid", how="left").with_columns(pl.col("ephemeral").fill_null(False))
+    out = d.select(["seq", "uid", "oid", "isAsk", "px", "typ", "sz", "newsz", "ts", "src", "ephemeral"])
+    srcs = out["src"].to_numpy()
+    stats = {
+        "rows": n,
+        "behind_anchors": demoted,
+        "replayed_rows": n_replayed,
+        "share_src_none": float(np.mean(srcs == SRC_NONE)) if n else 0.0,
+        "share_src_trade": float(np.mean(srcs == SRC_TRADE)) if n else 0.0,
+        "share_src_prev_anchor": float(np.mean(srcs == SRC_PREV_ANCHOR)) if n else 0.0,
+        "share_replayed": float(d["replayed"].mean()) if n else 0.0,
+        "share_ephemeral": float(out["ephemeral"].mean()) if n else 0.0,
+    }
+    return out, stats

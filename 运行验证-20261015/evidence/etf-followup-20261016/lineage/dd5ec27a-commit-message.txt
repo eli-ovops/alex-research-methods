@@ -1,0 +1,27 @@
+Describe how each case study is built, not what it found (#1134)
+
+Every case-study README reported results: a named carrier, validation and
+holdout Sharpe, IC intervals, and twelve pinned 12-hex hashes. All of it was
+written against registry vintages that no longer exist. The hashes resolve
+nowhere in the current registries - the three fx_pairs ones and both
+us_firm_characteristics ones resolve only in the July release backup, the two
+etfs ones only in the CI fixture, and the cme_futures one nowhere at all -
+because the v3.1 rebuild re-keyed every content-addressed row and shares zero
+backtest hashes with v3.0.
+
+That is not a number going stale. A README cannot hold a result that a rebuild
+recomputes, and rules/readme-standards.md already excludes "Key findings/results
+tables" for this reason. These nine had drifted from it.
+
+So each README now describes the design: the market and the trading idea, the
+data and how it is used, the model families and configurations, and how the
+workflow is organized. A new Results section says where a result actually comes
+from - the strategy-analysis notebook and the registry it reads - and points at
+the published artifact bundles, noting that v3.0 and v3.1 are separate
+generations rather than revisions of one another.
+
+Also folded in: sp500_equity_option_analytics and crypto_perps_funding move from
+"Dataset Profile" to "At a Glance" like the other seven, fx_pairs gains a plain
+"Running" heading and loses a "Registry Status" section that counted rows in the
+v3.0 registry, the nasdaq intro catches up with the 115-stock universe its table
+already had, and the History rows settle on one dash.

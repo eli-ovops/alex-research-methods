@@ -1,0 +1,668 @@
+Optiver - Trading at the Close | Kaggle (https://www.kaggle.com/competitions/optiver-trading-at-the-close/discussion/449208)
+citeturn771search0 [wordlim: 200] Crawled: last month; Optiver · Featured Code Competition · 2 years ago ... # Optiver - Trading at the Close ... The target for moment x is calculated based on prices at moment x+60 seconds.
+
+Optiver · Featured Code Competition · 2 years ago
+
+Late Submission
+
+[Button: more_horiz]
+
+# Optiver - Trading at the Close
+
+Predict US stocks closing movements
+
+## Optiver - Trading at the Close
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+GongyuanSitu · 3072nd in this Competition · Posted 3 years ago
+
+### target as feature
+
+is there any way we can get the target values of precious time step in the test api and use it to predict the future target values?
+
+Please sign in to reply to this topic.
+
+## 3 Comments
+
+Hotness
+
+[Input]
+
+Ivan Bazhov
+
+Posted 3 years ago
+
+· 5th in this Competition
+
+arrow_drop_up[Button: 3]
+
+[Button: more_vert]
+
+The target for moment x is calculated based on prices at moment x+60 seconds. It means, that at moment t you can know the targets for moments t-60 and before (and no later). You can calculate the value of the target for t-60 by the original formula for the target involving wap prices and index prices (the weights for the index are is some other discussion).
+
+GongyuanSitu
+
+Topic Author
+
+Posted 3 years ago
+
+· 3072nd in this Competition
+
+arrow_drop_up[Button: 0]
+
+[Button: more_vert]
+
+really helpful, thanks!
+
+彭靖宇
+
+Posted 3 years ago
+
+· 68th in this Competition
+
+arrow_drop_up[Button: 0]
+
+[Button: more_vert]
+
+Only revealed target which is composed of the target value of last day is available when testing--------------------------------------------------------------------------------
+Optiver - Trading at the Close | Kaggle (https://www.kaggle.com/c/optiver-trading-at-the-close/discussion/445025)
+citeturn771search1 [wordlim: 200] Crawled: 3 weeks ago; This competition is titled "Trading at the Close," and it's hosted by Optiver, a market maker. ... To illustrate this, let's imagine you want to sell 10 Kaggle stocks at a price of 9. ... The last thing left for us to understand is our target variable, the one we aim to predict, is the change in the weighted average price (WAP) of the stock over the next 60 seconds, minus the change in the weighted average price of the synthetic index over the same 60 seconds.
+
+Optiver · Featured Code Competition · 2 years ago
+
+Late Submission
+
+[Button: more_horiz]
+
+# Optiver - Trading at the Close
+
+Predict US stocks closing movements
+
+JMAscacibar · Posted 3 years ago
+
+arrow_drop_up[Button: 38]
+
+[Button: more_vert]
+
+### Demystifying the dataset: A Guide to Understanding Optiver - Trading at the Close
+
+Here we are, presented with another chance to delve into machine learning. This competition is titled "Trading at the Close," and it's hosted by Optiver, a market maker. The objective of this competition is to predict the future price movement of stocks in comparison to a synthetic Nasdaq stock index's future price movement. To accomplish this, we'll utilize historical data from the daily ten-minute closing auctions.
+
+Let’s discuss my initial challenges. Understanding the features wasn’t a walk in the park for me, even with Optiver’s fantastic tutorial kernel and resources. Therefore, I’m here to provide an additional explanation that I hope will assist others.
+
+Optiver gives us access to a training dataset containing 17 columns and more than 5.2 million rows. This data represents a fusion of the order book from continuous trading and the auction book. The opening and closing prices are determined through an auction system, just like in nearly all organized markets
+
+Here is the procedure:
+
+> At 4 pm Nasdaq calculates the price that will maximize the number of shares matches based on closed orders (MOC, LOC, IO) and continuous market orders and execute the cross at a single price called the Nasdaq Official Close Price (NOCP).
+
+Ok at this point of the movie I was totally lost, but bear with me. Keep these three point in mind:
+
+  1. The order book and the auction book are not the same.
+  2. The closing price comes from the merging of both books.
+  3. The price will maximize the number of shares matches from both books. This is important.
+
+Now, let's get into some of the features in the training set using an example from the order and auction book.
+
+If you are new to this, the order book is essentially a list of buying and selling orders for stocks at different price levels.
+In this case, the imbalance would be 1 lot, in the sell direction.
+
+Going back to our training set, you can find:
+
+  * Imbalance Size ('imbalance_size') and the Imbalance Buy-Sell Flag: This flag indicates the direction of the imbalance, with 'buy' represented as 1, 'sell' as -1, and 'no imbalance' as 0.
+  * Near Price: This is the near indicative clearing price, calculated to maximize the number of shares matched based on close orders (auction book) and continuous market orders, just 5 minutes before the closing cross.
+  * Far Price: The far price information pertains to the crossing price that maximizes the number of shares matched based on closing interest only, excluding continuous market orders
+  * Reference Price: The reference price is the price within the Nasdaq Best Bid and Offer (BBO) where paired shares are maximized, the imbalance is minimized, and the distance from the midpoint is minimized, in that order.
+  * Weighted Average Price (WAP): This WAP considers both the bid and ask prices, weighted by their respective sizes. This weighted average reflects the average price at which trades are likely to occur based on the available buy and sell orders. Image
+
+The last thing left for us to understand is our target variable, the one we aim to predict, is the change in the weighted average price (WAP) of the stock over the next 60 seconds, minus the change in the weighted average price of the synthetic index over the same 60 seconds. The unit of measurement for this target variable is basis points (bps). To clarify, 1% corresponds to 100 bps, and 1 bps is equivalent to a 0.01% price move. Image
+
+I hope this post can assist you in gaining a better understanding of this competition. There are more posts on the forum covering similar topics, and honestly, the kernel provided by Optiver was quite helpful. So, this post might not introduce anything new. However, it was valuable for me to write it as it helped clarify and comprehend certain aspects of the data. Whether it's redundant or not, I don't mind. If you find yourself in a similar situation, I encourage you to do the same. It does take time and effort, but it pays off.
+
+Here some valuable resources: NASDAQ 1 NASDAQ 2
+
+--------------------------------------------------------------------------------
+14th Place Solution for the Optiver - Trading at the Close Competition | Kaggle (https://www.kaggle.com/competitions/optiver-trading-at-the-close/writeups/clash-royale-14th-place-solution-for-the-optiver-t)
+citeturn771search2 [wordlim: 200] Published: 2.5 years ago; Crawled: last month;   * Day X+60: Refit CAT ... Geremie Yeo, Ravi Ramakrishnan, Marcus Chan, chinnum97, Cody_Null. 14th Place Solution for the Optiver - Trading at the Close Competition. https://www.kaggle.com/competitions/optiver-trading-at-the-close/writeups/clash-royale-14th-place-solution-for-the-optiver-t. ... "But it could lead to drastic changes in the predictions produced by the model, especially if the batch of newly-arrived data is much smaller than the original training data, or if the distribution of the target is very different."
+
+14th Place Solution for the Optiver - Trading at the Close Competition — Optiver - Trading at the Close
+
+# 14th Place Solution for the Optiver - Trading at the Close Competition
+
+Optiver - Trading at the Close
+
+Solution Writeup · 14th place · Apr 3, 2024
+
+This post outlines our approach which got us 14th on the private leaderboard
+
+Context
+=
+Business context: https://www.kaggle.com/competitions/optiver-trading-at-the-close
+Data context: https://www.kaggle.com/competitions/optiver-trading-at-the-close/data
+
+Overview of the approach
+=
+To begin with, we fixed bugs in the public notebook, and made a small change to our local validation such that it does not have data leakage when handling global features
+    
+    `df['mid_price_movement'] = df['mid_price'].diff(periods=5).apply(lambda x: 1 if x > 0 else (-1 if x < 0 else 0))
+    to
+    df['mid_price_movement'] = df.groupby(["stock_id"])['mid_price'].diff(periods=5).apply(lambda x: 1 if x > 0 else (-1 if x < 0 else 0))
+    `
+    
+    [Button: content_copy]
+
+(Btw this fix improved CV but worsened public LB score. Idk why LOL)
+
+Also, we wrote our own functions for RSI, MACD and bollinger bands indicators as the public one gave inaccurate results in inference
+
+What worked (impact on CV)
+
+  * Features based on revealed targets. We used lags 1,2,3 for target grouped by stock_id and seconds_in_bucket as features into our models (-0.005)
+  * Signed representation of imbalance_size (-0.003)
+  * Continuous model training with revealed targets. We refitted our LGB and CatBoost model at fixed intervals (elaborated later) (-0.006)
+  * Performing CV in streaming fashion. To do this, we saved the data each time period in _.csv and delivered them one by one in chronological order when calculating CV. This took much longer but correlated better with the public LB
+  * Zero sum post processing (-0.005) (but we are not sure in private LB so we only chose 1 submission with this)
+  * Global Features (-0.004). We have to re-initialize these values this whenever we want to retrain the model to keep it up to date
+  * Technical indicators RSI, MACD and bollinger bands. We had to rewrite them for good results (-0.002)
+
+What did not work (impact on CV)
+
+  * Group by date_id and stock_id for rolling features instead of stock_id (+0.003). We didn’t do this in the end
+  * Lagged features shift(x) where x is large. Made CV better but worsened LB
+  * Rolling features over a window x where x is large. Made CV better but worsened LB
+  * Sector features (+0.002)
+  * Neural Networks
+  * Triplet Imbalances (+0.001) realised this feature gave very unstable values because of precision issues so we decided to discard this even though they improved the public LB score (worsened from 5.3315 to 5.3327)
+  * Dropping features based on feature importances
+  * Zero mean postprocessing. It makes our ensembles and LB/CV correlation worse for some reason so we didn’t choose this. In fact the ensemble does worse with zero mean (5.333) compared to zero sum (5.3327)
+
+Some additional discussion points of the approach are outlined here
+
+Details of the submission
+=
+Overall, after much consideration, the submissions that we chose were these two. Thank you @cody11null for tuning the parameters and testing it with your huge 91 model script
+
+170 features, no postprocessing. Public 5.3384. Private 5.4457. LGB + CatBoost
+Refitting strategy (assuming day X is the first day where currently_scored is True)
+
+  * Day X: Refit LGB, CAT
+  * Day X+6: Refit LGB
+  * Day X+12: Refit CAT
+  * Day X+18: Refit LGB
+…
+  * Day X+54: Refit LGB
+  * Day X+60: Refit CAT
+
+193 features, zero sum postprocessing. Public 5.3327. Private 5.4458. LGB + CatBoost
+Refitting strategy (assuming day X is the first day where currently_scored is True)
+
+  * Day X: Refit LGB, CAT
+  * Day X+9: Refit LGB
+  * Day X+18: Refit CAT
+  * Day X+27: Refit LGB
+…
+  * Day X+54: Refit CAT
+
+At each time period, we use the latest LGB and latest CAT and submitted the average prediction of the 2 models
+
+We tried to use the stock weights for a while but got submission scoring error when refitting so didn’t proceed 😢
+
+Authors
+
+Geremie Yeo
+
+yeoyunsianggeremie
+
+Ravi Ramakrishnan
+
+ravi20076
+
+Marcus Chan
+
+mcpenguin
+
+Adarsh
+
+madarshbb
+
+Cody_Null
+
+cody11null
+
+## Citation
+
+Geremie Yeo, Ravi Ramakrishnan, Marcus Chan, chinnum97, Cody_Null. 14th Place Solution for the Optiver - Trading at the Close Competition. https://www.kaggle.com/competitions/optiver-trading-at-the-close/writeups/clash-royale-14th-place-solution-for-the-optiver-t. 2023. Kaggle
+
+Updated with the private scores of the submissions we selected
+
+Great work! We also tried to build some sector features. It improved in CV but got a worse LB like what you did. Did you figure out the reason?
+
+reply Reply
+
+emoji_people
+
+Ravi Ramakrishnan
+
+Posted 3 years ago
+
+· 14th in this Competition
+
+arrow_drop_up[Button: 1]
+
+[Button: more_vert]
+
+Some opinions-
+
+  1. If you analyze the mae score across stock id, you may notice that 10-15 stocks cause huge errors leading to a lion's share of the OOF score. Mostly these stocks cause an issue in the predictions
+  2. I tried some sector based features at the beginning of the competition (I loosely mentioned it in my ExtensiveEDA public notebook too), but they did not improve the CV score, so I rejected these features.
+
+All the best for the forecasting phase @wuhongrui
+
+can you describe your approach to CV (beyond filtering through API) in detail, please? it looks it was critical to you for your developments
+
+reply Reply
+
+emoji_people
+
+Geremie Yeo
+
+Topic Author
+
+Posted 3 years ago
+
+· 14th in this Competition
+
+arrow_drop_up[Button: 0]
+
+[Button: more_vert]
+
+We saved each time bucket from dates 436-480 into CSV files with format 436_0.csv, 436_10.csv, 436_20.csv, etc
+Then when doing CV, load them one by one, doing feature generation and postprocessing bucket by bucket. It is very slow though, for us it took about 4 hours to get the CV for each experiment and hence we couldn't perform it too often
+
+the CV was 5.8117 with no postprocessing, 5.8080 with zero-sum and 5.8072 with zero-mean (without taking into account refitting) using simple average. Hold-out last 45 days. we didn't use the purging fold split in the public notebooks
+
+It seems that everyone has trouble with large window size.
+
+reply Reply
+
+emoji_people
+
+Geremie Yeo
+
+Topic Author
+
+Posted 3 years ago
+
+· 14th in this Competition
+
+arrow_drop_up[Button: 0]
+
+[Button: more_vert]
+
+Yeah, we restricted the window size to 450 or 470 dates to prevent this problem.
+
+Thanks for sharing! Did you use the .refit command to refit the model? Will this bring the new risk, e.g., discussed in https://stackoverflow.com/questions/73664093/lightgbm-train-vs-update-vs-refit?
+
+"But it could lead to drastic changes in the predictions produced by the model, especially if the batch of newly-arrived data is much smaller than the original training data, or if the distribution of the target is very different."
+
+reply Reply
+
+emoji_people
+
+Geremie Yeo
+
+Topic Author
+
+Posted 3 years ago
+
+· 14th in this Competition
+
+arrow_drop_up[Button: 0]
+
+[Button: more_vert]
+
+No, just feature generation and re-train, same as what we do with the original train data--------------------------------------------------------------------------------
+Private 50th Place Solution | Kaggle (https://www.kaggle.com/competitions/optiver-trading-at-the-close/discussion/486666)
+citeturn771search3 [wordlim: 200] Crawled: last month; Private 50th Place Solution — Optiver - Trading at the Close ... First of all, I would like to extend my gratitude to Optiver and Kaggle for organizing this competition. ...         if 'target' in df.columns: ...         df["seconds"] = df["seconds_in_bucket"] % 60
+
+Private 50th Place Solution — Optiver - Trading at the Close
+
+# Private 50th Place Solution
+
+Optiver - Trading at the Close
+
+Solution Writeup · 50th place
+
+First of all, I would like to extend my gratitude to Optiver and Kaggle for organizing this competition. I also appreciate the great notebooks and discussions which I learned a lot from.
+I would like to congratulate all the winners.
+I will share my solution hoping it can be helpful for someone. Since this is first time post, please forgive me if it is difficult to read or understand.
+
+## Summary
+
+I used 3 different feature sets. Each set has common basic features such as and I trained both LightGBM and CatBoost on each feature set and ensembled these models. For each feature set and each method (LightGBM or CatBoost), “overall” model and “every 10 seconds” model were built and selected the better one for each 10-seconds i.e., each seconds_in_bucket value.
+
+## Pre-processing and Preparation
+
+I divided stock_id into 7 groups by using KMeans method. The total cluster number 7 was determined by elbow method.
+
+## Feature Engineering
+
+Main features I created are below:
+
+  * Common features: raw features, doublet imbalance features, triplet imbalance features
+  * Set 1: imbalance momentum, price pressure, depth pressure, some statistics of each price features and size features, z-score in the same knn group, shifted value for z-score and size features, differences for price features and revealed target, day of week, seconds, minute
+  * Set2: z-score and difference with median in the same seconds_in_bucket value for [bid_size, ask_size, ask_price, bid_price, wap, revealed target], differences and fractional change for price features and size features
+  * Set 3: moving average for price features and size features and revealed target
+
+Please see appendix at the end of this text for details.
+
+## Validation Strategy
+
+Simple time-based split was used for validation. The first 435 days were used for training and the last 45 days were used for validation. All models were re-trained on all data with the iteration number determined by validation.
+                df[f"{col}_ret_{window}"] = df.groupby('stock_id')[col].pct_change(window)
+    
+        for col in ['ask_price', 'bid_price', 'ask_size', 'bid_size']:
+            for window in [1, 3, 5, 7, 11]:
+                df[f"{col}_diff_{window}"] = df.groupby("stock_id")[col].diff(window)
+    
+        if 'target' in df.columns:
+            df_agg = df[['stock_id', 'date_id', 'seconds_in_bucket', 'target']]
+            df_agg['date_id'] += 1
+            df_agg = df_agg.rename(columns={'target': 'revealed_target'})
+            df = pd.merge(df, df_agg, on=['stock_id', 'date_id', 'seconds_in_bucket'], how='left')
+    
+            for col in ['revealed_target']:
+                for window in [1, 3, 5, 7, 11]:
+                    df[f"{col}_diff_{window}"] = df.groupby("stock_id")[col].diff(window)   
+    
+        return df.replace([np.inf, -np.inf], 0)
+    
+    def other_features(df):
+        df["dow"] = df["date_id"] % 5
+        df["seconds"] = df["seconds_in_bucket"] % 60
+        df["minute"] = df["seconds_in_bucket"] // 60
+        for key, value in global_stock_id_feats.items():
+            df[f"global_{key}"] = df["stock_id"].map(value.to_dict())
+    
+        return df
+    
+    global_stock_id_feats = {
+        "median_bid_size": df_train.groupby("stock_id")["bid_size"].median(),
+        "median_ask_size": df_train.groupby("stock_id")["ask_size"].median(),
+        "median_bid_price": df_train.groupby("stock_id")["bid_price"].median(),
+        "median_ask_price": df_train.groupby("stock_id")["ask_price"].median(),
+    }
+    `
+    
+    [Button: content_copy]
+
+--------------------------------------------------------------------------------
+📈Optiver📉: pipe🧵2/3-> XGBoost🌪️Regression (https://www.kaggle.com/code/jirkaborovec/optiver-pipe-2-3-xgboost-regression/data)
+citeturn771search4 [wordlim: 200] Crawled: last month;   * `target` - The 60 second future move in the wap of the stock, less the 60 second future move of the synthetic index. ...     * The synthetic index is a custom weighted index of Nasdaq-listed stocks constructed by Optiver for this competition. ... Optiver - Trading at the Close
+  * `[bid/ask]_price` - Price of the most competitive buy/sell level in the non-auction book.
+  * `[bid/ask]_size` - The dollar notional amount on the most competitive buy/sell level in the non-auction book.
+  * `wap` - The weighted average price in the non-auction book.
+
+\frac{BidPrice\ast AskSize+AskPrice\ast BidSize}{BidSize+AskSize}
+
+$$\frac{ {BidPrice * AskSize + AskPrice * BidSize}}{BidSize + AskSize} $$
+  * `seconds_in_bucket` - The number of seconds elapsed since the beginning of the day's closing auction, always starting from 0.
+  * `target` - The 60 second future move in the wap of the stock, less the 60 second future move of the synthetic index. Only provided for the train set.
+    * The synthetic index is a custom weighted index of Nasdaq-listed stocks constructed by Optiver for this competition.
+    * The unit of the target is basis points, which is a common unit of measurement in financial markets. A 1 basis point price move is equivalent to a 0.01% price move.
+    * Where t is the time at the current observation, we can define the target:
+
+$$ Target = (\frac{StockWAP_{t+60}}{StockWAP_{t}} - \frac{IndexWAP_{t+60}}{IndexWAP_{t}}) * 10000 $$
+
+All size related columns are in USD terms.
+
+All price related columns are converted to a price move relative to the stock wap (weighted average price) at the beginning of the auction period.
+
+sample_submission A valid sample submission, delivered by the API. See this notebook for a very simple example of how to use the sample submission.
+
+## Input (2.1 GB)
+
+folder
+
+Data Sources
+
+  * arrow_drop_down
+
+Image
+
+Optiver - Trading at the Close
+
+    * arrow_right
+
+folder
+
+example_test_files
+
+    * arrow_right
+
+folder
+
+optiver2023
+
+    * code
+
+public_timeseries_testing_util.py
+
+    * calendar_view_week
+
+train.csv
+
+[Private Dataset]
+
+  * Image
+
+[Private Dataset]
+
+  * arrow_right
+
+Image
+
+XGBoost: python 📦package
+
+## Runtime
+
+play_arrow
+
+4h 21m 52s
+
+## Input
+
+## Language
+
+Python
+
+Image: Profile picture for undefined
+
+Competition Notebook
+--------------------------------------------------------------------------------
+hyd | Kaggle (https://www.kaggle.com/hydantess/writeups)
+citeturn771search5 [wordlim: 200] Crawled: last month; 1st place solution Thanks to Optiver and Kaggle for hosting this great financial competition. ... Mar 28, 2024 · Optiver - Trading at the Close · 1st Place
+Mar 28, 2024 · Optiver - Trading at the Close · 1st Place
+
+  * Solution Writeup
+
+【12†1st place solution Thanks to Enefit and Kaggle for hosting this great competition. And thanks to the great notebooks and discussions, I learned a lot. I am so happy to win my third solo win! 😃😀😀 Overview My final solution consists of 4 XGBoost models (for two targets and two is_consumption) and 2 GRU models (for two targets). These models share same 600 features. model name validation set test set w/o online training test set w/ update one time test set w/ update three times XGBoost 41.5912(2 targets:42.2531/42.6607) 55.6231 54.1343 54.1213 GRU 43.0815(2 targets:43.7182/45.1687) 56.6651 54.9948 54.6960 XGBoost+GRU 40.6790(2 targets:40.9613/41.5294) 53.6627 52.4813 52.3090 Validation Strategy My validation strategy is pretty simple, train on first 500 days and set the rest days as my holdout validation set which has good indication with leaderboard score. And I only checked the final overall score and didn't print single model's score. --------------------------------------------------------------------------------
+The Winton Stock Market Challenge | Kaggle (https://www.kaggle.com/competitions/the-winton-stock-market-challenge/data)
+citeturn771search6 [wordlim: 200] Crawled: last month; During day D, there is intraday return data, which are the returns at different points in the day. ... These are the target variables you need to predict as {id}_{1-60}. ...   * Ret_PlusTwo: this is the return from the close of trading on day D+1 to the close of trading on day D+2 (i.e. 1 day) This is a target variable you need to predict as {id}_62.
+
+## Data fields
+
+  * Feature_1 to Feature_25: different features relevant to prediction
+  * Ret_MinusTwo:  this is the return from the close of trading on day D-2 to the close of trading on day D-1 (i.e. 1 day)
+  * Ret_MinusOne: this is the return from the close of trading on day D-1 to the point at which the intraday returns start on day D (approximately 1/2 day)
+  * Ret_2 to Ret_120: these are returns over approximately one minute on day D. Ret_2 is the return between t=1 and t=2. 
+  * Ret_121 to Ret_180: intraday returns over approximately one minute on day D. These are the target variables you need to predict as {id}_{1-60}. 
+  * Ret_PlusOne: this is the return from the time Ret_180 is measured on day D to the close of trading on day D+1. (approximately 1
+day). This is a target variable you need to predict as {id}_61. 
+  * Ret_PlusTwo: this is the return from the close of trading on day D+1 to the close of trading on day D+2 (i.e. 1 day) This is a target variable you need to predict as {id}_62. 
+  * Weight_Intraday: weight used to evaluate intraday return predictions Ret 121 to 180
+  * Weight_Daily: weight used to evaluate daily return predictions (Ret_PlusOne and Ret_PlusTwo).
+
+## Files
+
+3 files
+
+## Size
+
+213.13 MB
+
+## Type
+
+zip
+
+## License
+
+Subject to Competition Rules
+
+### sample_submission_2.csv.zip(16.86 MB)
+
+get_app
+
+fullscreen
+
+chevron_right
+
+#### Unable to show preview
+
+Image
+
+Unfortunately, we can't show a preview for this file.
+
+## Data Explorer
+
+213.13 MB
+
+  * drive_zip
+
+sample_submission_2.csv.zip
+
+  * drive_zip
+
+test_2.csv.zip
+
+  * drive_zip
+
+train.csv.zip
+
+## Summary
+
+arrow_right
+
+folder
+
+3 files
+
+get_app Download All
+
+text_snippet
+
+## Metadata
+
+### License
+
+Subject to Competition Rules--------------------------------------------------------------------------------
+9th Place Solution | Kaggle (https://www.kaggle.com/competitions/playground-series-s6e9/writeups/9th-place-solution)
+citeturn771search7 [wordlim: 200] Published: 2 weeks ago; Crawled: 2 days ago; The task was to predict `Will_Buy_EV`, evaluated with ROC-AUC. ... Published source ensemble  | 9  | Residual GBDTs, logistic models, XGB variants and RealMLP ... ² One representative V3 submission; its five submitted variants ranged from 0.94594 to 0.94599 public and all scored 0.94500 private at published precision. ... Ismail Ucuran. 9th Place Solution. https://www.kaggle.com/competitions/playground-series-s6e9/writeups/9th-place-solution.
+
+9th Place Solution — Predicting Electric Vehicle Purchases
+
+# 9th Place Solution
+
+Generator-Aware Features, Residual GBDTs and Regularized Stacking
+
+Predicting Electric Vehicle Purchases
+
+Solution Writeup · 9th place · Oct 1, 2026
+
+Thanks to Kaggle and everyone who shared their work during this competition. I finished 9th on the private leaderboard with ROC-AUC 0.94575, after placing 93rd on the public leaderboard with 0.94679.
+
+The solution evolved from a CPU XGBoost baseline into an ensemble built around generator-aware numerical representations, fold-local target statistics, ridge logistic regression and residual boosting. The final combiner used 54 prediction streams and L2-regularized logistic regression.
+
+Public notebooks were an important part of this solution. Below I distinguish the published starting points from the models and experiments I added. The largest late improvement started with a published token/LR/residual ensemble; I then extended its feature basis, trained additional models and rebuilt the stack.
+--------------------------------------------------------------------------------
+Kaggle Notebooks (https://www.kaggle.com/code?tagIds=13305-Ensembling)
+citeturn771search8 [wordlim: 200] Crawled: last week;   * S6E10:EDA-CV-FE-OPTUNA-STACKING XGB/LGBM/CAT ... Predict Pump.fun Launches on Solana ...   * 📈 ML 51 — Gradient Boosting | Intuition & Code ...   * 🚗 EV Purchase Prediction (S6E9) | 0.94638:
+
+# Code
+
+add New Notebook
+
+search[Input: Search public notebooks]
+
+filter_list Filters
+
+Ensembling close
+
+list
+
+## Results (100+)
+
+  * S6E10:EDA-CV-FE-OPTUNA-STACKING XGB/LGBM/CAT
+
+Updated 4h ago Score: 0.9583 · 3 comments · Predicting Airline Satisfaction
+
+arrow_drop_up 26
+
+Image: bronze medal Bronze[Button: more_horiz]
+
+  * S6E10 | LB 0.96134 | What Each Step Was Worth
+
+Updated 15h ago Score: 0.96134 · 0 comments · Predicting Airline Satisfaction +4
+
+arrow_drop_up 5
+
+[Button: more_horiz]
+
+  * Forest Cover Type Classification
+
+Updated 13h ago 1 comment · Forest Cover Type Dataset
+
+arrow_drop_up 0
+
+[Button: more_horiz]
+
+  * Solana AMM Microstructure & Take-Profit Modeling
+
+Updated 2d ago Score: -2.3 · 1 comment · Memecoins: Pump or Dump? Predict Pump.fun Launches on Solana
+
+arrow_drop_up 29
+
+Image: bronze medal Bronze[Button: more_horiz]
+
+  * Decoupled Spatial GBDT-ResNet Affordability Model
+
+Updated 11d ago Score: 10.871 · 0 comments · Predicting Housing Affordability in the U.S.
+--------------------------------------------------------------------------------
+Kaggle Solution Write-Up Documentation | Kaggle (https://www.kaggle.com/solution-write-up-documentation)
+citeturn771search9 [wordlim: 200] Crawled: last month; One final submission was a stack where LGBM was trained on top of the predictions of CAT and XGB and the other final submission was an ensemble with equal weights. ... Once you realize this, you will know that the challenge in this competition is building a model that can predict unseen clients (not unseen time). ...   * https://www.kaggle.com/competitions/ieee-fraud-detection/discussion/111284
+XGB notebook posted here.
+
+One final submission was a stack where LGBM was trained on top of the predictions of CAT and XGB and the other final submission was an ensemble with equal weights. Both submissions were post processed by taking all predictions from a single client (credit card) and replacing them with that client's average prediction. This PP increased LB by 0.001.
+
+### Details of the submission
+
+#### Time is not most important
+
+After Microsoft Malware, I was reluctant to enter another time series competition. To my relief, this competition actually isn't about time. The reason adversarial validation has AUC=1 is not because the nature of fraud changes radically over time but rather because the clients in the dataset change radically over time.
+
+What was special about the submission
+
+An approach that was somehow creative, impactful, or otherwise worth noting. For example, things that were non-obvious, or that very few thought to do.
+
+Once you realize this, you will know that the challenge in this competition is building a model that can predict unseen clients (not unseen time). Below is a plot showing the data in the private dataset (which has 400,000 rows). 68.2% of the data are clients we do not see in train dataset. 16.4% of data are in both the train and test dataset. And 15.4% we were unsure about. Each blue line below is one client. Each client makes many transactions, the left end of the blue line is their first transaction in time and the right end is the last transaction in time.
+
+Image
+
+--------------------------------------------------------------------------------
+Stock Market Signal: Predict Next-Day Returns | Kaggle (https://www.kaggle.com/competitions/stock-market-signal-predict-next-day-returns/overview)
+citeturn771search10 [wordlim: 200] Published: 7 months ago; Crawled: 3 days ago; This dataset contains 27 engineered features derived from real historical US equity data for 100 anonymized stocks. ... The `target` column is binary:  * 1 = the stock's adjusted close price increased the next trading day ... `volatility_60d`  | 60-day annualized volatility
+--------------------------------------------------------------------------------
+How to submit dataset after train model like randomforest and xgboost? detail justify | Kaggle (https://www.kaggle.com/questions-and-answers/466358)
+citeturn771search11 [wordlim: 200] Crawled: 3 weeks ago; https://www.kaggle.com/code/mannacharya/88-6-xgboost-cv-bank-churn-classification ...     predictions_proba = xgb_model.predict_proba(test_df.to_numpy()) ...   * Submit the generated submission file to the platform or competition.
+

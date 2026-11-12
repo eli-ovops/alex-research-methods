@@ -1,0 +1,433 @@
+GitHub - asheshrambachan/LanguageModel_Labels · GitHub (https://github.com/asheshrambachan/LanguageModel_Labels)
+citeturn1071search0 [wordlim: 200] Crawled: 2 months ago; This repository contains the code, data, and outputs associated with the paper "Large Language Models: An Applied Econometric Framework" by Jens Ludwig, Sendhil Mullainathan, and Ashesh Rambachan. ...   * `prediction_headlines/`: Code and data for prediction tasks involving financial news headlines. ... Daily Financial News for 6000+ Stocks. https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests (accessed August 1, 2024). ... Replication code available at: https://osf.io/gjt87/.
+
+asheshrambachan / LanguageModel_Labels Public
+
+  * Notifications You must be signed in to change notification settings
+  * Fork 0
+  * Star
+
+  * Code
+  * Issues 0
+  * Pull requests 0
+  * Actions
+  * Projects
+  * Security and quality 0
+  * Insights
+
+
+# Large Language Models: An Applied Econometric Framework
+
+This repository contains the code, data, and outputs associated with the paper "Large Language Models: An Applied Econometric Framework" by Jens Ludwig, Sendhil Mullainathan, and Ashesh Rambachan.
+
+## Repository Structure
+
+This repository is organized to facilitate the replication of results presented in the paper. The subdirectories are structured based on task type (prediction or estimation) and application (financial news headlines or Congressional legislation):
+
+  * `prediction_headlines/`: Code and data for prediction tasks involving financial news headlines.
+  * `prediction_legislation/`: Code and data for prediction tasks involving Congressional legislation.
+    conda activate llm_env
+
+### Step 3: Download Restricted Data
+
+The tasks based on financial news headlines includes restricted data provided by Wharton Research Data Services (WRDS). To access this data:
+
+  1. Go to Beta Suite by WRDS and log in with your credentials.
+
+  2. Configure the parameters as follows:
+
+  3. Click the `Submit Form` button.
+
+  4. Once the query status shows `Success`, click `Download .csv Output`.
+
+  5. Rename the downloaded file as `CAPM_returns.csv`.
+
+  6. Place it in the directory: `./estimation_headlines/data/raw`
+
+## Replication Options
+
+You can replicate the results presented in the paper using one of the following methods:
+
+  1. Full Replication: Run the `run_all.sh` shell script to execute all steps in sequence:
+    
+    `bash run_all.sh
+    `
+
+  2. Partial Replication: Run individual scripts for specific steps. Each subdirectory contains a detailed `README.md` file with instructions for task-specific replication.
+
+     * Prediction Tasks: Financial News Headlines
+     * Prediction Tasks: Congressional Legislation
+     * Estimation Tasks: Financial News Headlines
+     * Estimation Tasks: Congressional Legislation
+     * Figures
+     * Tables
+
+## Citation
+
+If you use this repository, please cite the paper:
+    
+    `@article{ludwig2024largelanguagemodelsapplied,
+        title={Large Language Models: An Applied Econometric Framework}, 
+        author={Jens Ludwig and Sendhil Mullainathan and Ashesh Rambachan},
+        year={2024},
+        journal={arXiv preprint arXiv:2412.07031},
+        url={https://arxiv.org/abs/2412.07031}, 
+    }
+    `
+
+## Acknowledgement
+
+Wharton Research Data Services (WRDS) was used in preparing this paper. This service and the data available thereon constitute valuable intellectual property and trade secrets of WRDS and/or its third-party suppliers.
+
+## References
+
+  * Adler, E Scott, and John Wilkerson. 2020. Congressional Bills Project, NSF 00880066 and 00880061. http://congressionalbills.org/download.html (accessed July 5, 2024).
+
+  * Aenlle, Miguel. 2020. Daily Financial News for 6000+ Stocks. https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests (accessed August 1, 2024).
+
+  * Beta Suite by WRDS. 2024. Provided by Wharton Research Data Services. https://wrds-www.wharton.upenn.edu/pages/grid-items/beta-suite-wrds (accessed August 1, 2024).
+
+  * Egami, Naoki, Musashi Hinck, Brandon M. Stewart, and Hanying Wei. 2023. "Using imperfect surrogates for downstream inference: design-based supervised learning for social science applications of large language models". Advances in Neural Information Processing Systems, Vol. 36. Replication code available at: https://osf.io/gjt87/.
+
+  * French, Kenneth R. 2024. Fama-French Research Data Factors (Daily). https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_daily_CSV.zip (accessed September 23, 2024).
+
+  * Jones, Bryan D., Frank R. Baumgartner, Sean M. Theriault, Derek A. Epp, Cheyenne Lee, and Miranda E. Sullivan. 2023. Policy Agendas Project: Codebook. https://minio.la.utexas.edu/compagendas/codebookfiles/Codebook_PAP_2019.pdf (accessed July 5, 2024).
+
+  * Wilkerson, John, E. Scott Adler, Bryan D. Jones, Frank R. Baumgartner, Guy Freedman, Sean M. Theriault, Alison Craig, Derek A. Epp, Cheyenne Lee, and Miranda E. Sullivan. 2023. Policy Agendas Project: Congressional Bills. https://minio.la.utexas.edu/compagendas/datasetfiles/US-Legislative-congressional_bills_19.3_3_3.csv (accessed July 5, 2024).
+
+## About
+
+No description, website, or topics provided.
+
+### Resources
+
+Readme
+
+Activity
+
+### Stars
+
+2 stars
+
+### Watchers
+
+2 watching
+
+### Forks
+
+0 forks--------------------------------------------------------------------------------
+(PDF) A Test of Lookahead Bias in LLM Forecasts (https://www.researchgate.net/publication/399275870_A_Test_of_Lookahead_Bias_in_LLM_Forecasts)
+citeturn1071search1 [wordlim: 200] Published: 9 months ago; Crawled: last month; venting future replication using the exact model version. ... a similar ﬁnancial-news and stock-return setting, Chen et al. (2024) show that the con- ... that requires no model retraining or proprietary data access, offering a practical framework ... The ghost in the machine: Generating beliefs with large language models. arXiv ... Panel A: Stock News Prediction
+Model
+
+checkpoints, which are saved snapshots of trained model parameters, can be freely down-
+
+loaded from platforms such as HuggingFace. This allows any researcher to reproduce our
+
+analysis using the identical December 2024 version. In contrast, proprietary API providers
+
+12
+
+may update or deprecate models over time (as OpenAI has done with ChatGPT 3.5), pre-
+
+venting future replication using the exact model version.
+
+For the stock news exercise, we follow the prompt design in Lopez-Lira and Tang (2023).
+
+To ensure robustness in our analysis, we also instruct the LLM to provide a conﬁdence score
+
+alongside its prediction. The prompt explicitly instructs the model to predict whether the
+
+news is “good”, “bad”, or “neutral” for the stock price of the mentioned company,5 accom-
+
+panied by a conﬁdence score and a brief explanation, as shown in Figure I. This structured
+
+format is intended to enhance interpretability, allowing for clear numerical indicators for
+
+subsequent analysis.
+
+For each headline, the model’s response is parsed and mapped to a numerical score,
+later, these differences do not affect the results, since we are able to replicate their main
+
+ﬁndings within our setting.
+
+For simplicity, we use stock market close time 4 p.m. as the cutoff to classify headlines
+
+on day t. Speciﬁcally, if a headline is published before 4 p.m., it is considered news on day
+
+t and will link it to the next-day stock return; otherwise, it is treated as news on day t+1.
+
+We begin with the in-sample analysis, as the LAP measure is designed to detect potential
+
+memorization within the model’s own training period, spanning January 2012 to December
+
+2023. We then repeat the analysis on the out-of-sample data as a placebo test. In contrast,
+
+due to a different research focus, Lopez-Lira and Tang (2023) examine an out-of-sample
+
+period from October 2021 to May 2024, consistent with ChatGPT-4’s reported knowledge
+
+cutoff of September 2021.
+
+Following the discussion in Section 2.2, the baseline regression is speciﬁed as follows:
+
+r i,t+1=α i+β t+γ·LLM i,t+δ·(LLM i,t×LAP i,t) + η·LAP i,t+u i,t+1, (7)
+--------------------------------------------------------------------------------
+(PDF) RETuning: Upgrading Inference-Time Scaling for Stock Movement Prediction with Large Language Models (https://www.researchgate.net/publication/396923905_RETuning_Upgrading_Inference-Time_Scaling_for_Stock_Movement_Prediction_with_Large_Language_Models)
+citeturn1071search2 [wordlim: 200] Published: last year; Crawled: last month; importance of stock-related news in revealing fundamental market insights (Vargas et al., 2018; Li ... working to extract sentiment and keyphrases from news and social media data (Nguyen et al., 2015; ... First, regarding data ethics: Our large-scale dataset (spanning 2024 for 5,123 A-share stocks) ... anonymized source code (training and evaluation scripts), model checkpoints, and processed dataset ... This work investigates the use of large language models (LLMs) for stock movement prediction, a ... coder: an o1 replication for coding, 2024c.
+derive the prediction. This approach maximally aligns the model with its learned
+
+analytical framework, ensuring independent logical reasoning and reducing undue
+
+inﬂuence from context. We also build a large-scale dataset spanning all of 2024 for
+
+5,123 A-share stocks, with long contexts (32K tokens) and over 200K samples. In
+
+addition to price and news, it incorporates analysts’ opinions, quantitative reports,
+
+fundamental data, macroeconomic indicators, and similar stocks. Experiments
+
+on this new dataset show that, as a cold-start method, RETuning successfully
+
+unlocks the model’s reasoning ability in the ﬁnancial domain. During reinforce-
+
+ment learning, response length steadily increases under the designed curriculum
+
+setting. Furthermore, inference-time scaling still works even after 6 months or
+
+on out-of-distribution stocks, since the models gain valuable insights about stock
+
+movement prediction.
+
+*Equal contribution.
+
+†Corresponding Authors.
+
+Preprint. Under review.
+
+arXiv:2510.21604v1 [cs.CL] 24 Oct 2025
+
+First, we introduce Reﬂective Evidence Tuning (RETuning), which instills LLMs to dynamically
+
+construct reasoning frameworks based on diverse information sources, collect and evaluate evidence
+
+for potential price directions (up, down, or hold), and reﬂect on the evidence before making a ﬁnal
+
+prediction. This structured approach is a cold-start training mechanism prior to reinforcement learning
+
+(RL). It enables models to avoid merely summarizing or echoing external viewpoints and instead
+
+follow an internally consistent logic, improving both interpretability and accuracy.
+
+Second, we explore the role of inference-time scalability, a technique that has shown promise in
+
+mathematical and programming tasks (Muennighoff et al., 2025; Li et al., 2025). Speciﬁcally, we
+
+investigate whether majority voting can signiﬁcantly improve predictive accuracy in ﬁnancial domain.
+
+Although widely successful elsewhere, its efﬁcacy in stock movement prediction has not yet been
+
+systematically examined.
+
+To support this research, we construct a large-scale, high-quality dataset that reﬂects the complexity
+
+and information density of real-world ﬁnancial environments. Covering the full year of 2024 across
+
+over 4,000 A-share stocks, this dataset integrates six heterogeneous information sources: news,
+
+fundamentals, analyst opinions, quantitative factor reports, macroeconomic context, and stocks of
+
+similar trends. With over 200,000 samples and an average input length of up to 32K tokens, it
+
+overcomes the limitations of prior datasets that were outdated and lacked information diversity (Xu
+
+& Cohen, 2018; Luo et al., 2023; Zhou et al., 2021). The details of the dataset construction are
+
+discussed in Appendix C.
+
+Empirical results show that RETuning effectively enhances reasoning structure and improves pre-
+
+dictive performance over strong baselines. It also generalizes beyond stock movement prediction,
+
+yielding signiﬁcant improvements in other ﬁnancial tasks, and demonstrates strong performance
+
+under inference-time scaling and out-of-distribution settings.
+
+Our contribution can be summarized as follows: (1) We build a large-scale, long-context ﬁnancial
+
+dataset with diverse evidence sources beyond price and news, which ﬁll the gap that existing datasets
+
+are outdated and lack information diversity. (2) We introduce RETuning, synthesizing cold-start
+
+responses that guide LLMs to construct and reﬂect on an analytical framework for stock movement
+
+prediction. It allows signiﬁcant inference-time scalability of LLMs in the prediction task. (3) We
+
+empirically show that RETuning unlocks prediction ability and generalizes beyond stock movement
+
+prediction. We believe this research lays the groundwork for deploying trustworthy, reasoning-driven
+scaling via algorithms like MCTS or A* (Yao et al., 2023; Xie et al., 2023; Long, 2023; Chari et al.,
+
+2025) guided by value functions (Xu, 2023; Hao et al., 2023; Chen et al., 2024; Zhang et al., 2024a).
+
+Training techniques distill these scaling beneﬁts into more efﬁcient models (Gao et al., 2023; Hou
+
+et al., 2024; Gulcehre et al., 2023; Zhang et al., 2024c). However, these methods have not been
+
+systematically applied to ﬁnancial tasks, particularly stock movement prediction. Our work aims to
+
+ﬁll this gap by exploring how inference-time scaling can be effectively utilized in this domain.
+
+3 Preliminaries
+
+3.1 Strict Controlled Dataset for Stock Movement Prediction
+
+We aim to evaluate the ability of LLMs to predict stock movements based on diverse information
+
+sources. To this end, we construct a strict controlled dataset named Fin-2024, which covers the entire
+
+year of 2024, including 5,123 A-share stocks and 209,063 samples. Each sample is designed with a
+
+long context window of 32K tokens. Figure 1 illustrates the data sample for one stock at trading day
+that encourages models to construct analytical frameworks, weigh adversarial evidence, and reﬁne
+
+predictions through reﬂection. Experiments on our newly constructed large-scale ﬁnancial dataset
+
+demonstrate that RETuning substantially improves predictive performance over strong baselines,
+
+enabling more systematic reasoning in the ﬁnancial domain. Moreover, RETuning generalizes beyond
+
+stock movement prediction, yielding gains across diverse ﬁnancial tasks, and exhibits robustness
+
+under inference-time scaling and out-of-distribution settings. Overall, this study highlights the impor-
+
+tance of evidence-oriented reasoning in ﬁnancial LLMs and establishes RETuning as a promising
+
+direction for enhancing their reliability and applicability in real-world ﬁnancial decision-making.
+
+10
+
+Ethics Statement
+
+To address potential ethical considerations related to our research on large language models (LLMs)
+
+for stock movement prediction, we provide the following statement:
+
+First, regarding data ethics: Our large-scale dataset (spanning 2024 for 5,123 A-share stocks)
+--------------------------------------------------------------------------------
+Detecting Lookahead Bias in LLM Forecasts | Read Paper o... (https://bytez.com/docs/arxiv/2512.23847/paper)
+citeturn1071search3 [wordlim: 200] Published: 4 months ago; Crawled: 4 days ago; In contrast, proprietary API providers may update or deprecate models over time (as OpenAI has done with ChatGPT 3.5), preventing future replication using the exact model version.For the stock news exercise, we follow the prompt design in Lopez-Lira and Tang (2023). ... From the LLM prediction on earnings call data, the variable takes values of Image: −1, −0.5, 0, 0.5, or 1, indicating whether future capital expenditures are expected to significantly decrease, slightly decrease, not change, slightly increase, or significantly increase before they are realized. ... Specifically, if a headline is published before 4 p.m., it is considered news on day t and will link it to the next-day stock return; otherwise, it is treated as news on day t + 1. ... Large language models (LLMs) are increasingly used to generate economic and financial forecasts, often appearing to outperform conventional econometric and machine-learning methods.
+Model checkpoints, which are saved snapshots of trained model parameters, can be freely downloaded from platforms such as HuggingFace. This allows any researcher to reproduce our analysis using the identical December 2024 version. In contrast, proprietary API providers may update or deprecate models over time (as OpenAI has done with ChatGPT 3.5), preventing future replication using the exact model version.
+
+For the stock news exercise, we follow the prompt design in Lopez-Lira and Tang (2023). To ensure robustness in our analysis, we also instruct the LLM to provide a confidence score alongside its prediction. The prompt explicitly instructs the model to predict whether the news is “good”, “bad”, or “neutral” for the stock price of the mentioned company,5 accompanied by a confidence score and a brief explanation, as shown in Figure I. This structured format is intended to enhance interpretability, allowing for clear numerical indicators for subsequent analysis.
+
+For each headline, the model’s response is parsed and mapped to a numerical score, where good is mapped to +1, neutral is mapped to 0, and bad is mapped to Image: −1. Theconfidence score is directly recorded from the LLM’s output, while the explanation is stored for interpretive analysis.
+
+For the earnings call exercise, we adopt the approach of Jha et al. (2024), similarly incorporating confidence scores and limiting the input to the first 500 words of each transcript, as shown in Figure II. The prediction signal generated by the LLM for firm i in quarter q is based on its earnings call transcript. From the LLM prediction on earnings call data, the variable takes values of Image: −1, −0.5, 0, 0.5, or 1, indicating whether future capital expenditures are expected to significantly decrease, slightly decrease, not change, slightly increase, or significantly increase before they are realized.
+
+--------------------------------------------------------------------------------
+The Price of Thought: Does Test-Time Reasoning Pay in LLM Trading? · Pith Review (https://pith.science/paper/2609.30705)
+citeturn1071search4 [wordlim: 200] Published: 3 weeks ago; Crawled: 4 days ago; The paper asks whether paying for more test-time reasoning in a large language model—extra computation spent after training, before a trading decision—improves the portfolio it builds, holding the model, information, prompt, output format, and trading rules fixed.Across three model families (DeepSeek, GPT, Gemini), 241 return dates in 2024, three input conditions (numerical, identifiable news, masked news), and more than 800,000 asset predictions, none of the nine low-versus-baseline comparisons establishes a material improvement in net return after a 10-basis-point trading cost.
+### The paper claims
+
+Adding reasoning effort to LLM trading changes decisions but, across nine controlled tests over a 2024 U.S. equities backtest, fails to reliably improve net portfolio returns after transaction costs.
+
+### The reading
+
+The paper asks whether paying for more test-time reasoning in a large language model—extra computation spent after training, before a trading decision—improves the portfolio it builds, holding the model, information, prompt, output format, and trading rules fixed. Across three model families (DeepSeek, GPT, Gemini), 241 return dates in 2024, three input conditions (numerical, identifiable news, masked news), and more than 800,000 asset predictions, none of the nine low-versus-baseline comparisons establishes a material improvement in net return after a 10-basis-point trading cost. For DeepSeek, the only backbone exposing four reasoning levels, performance relative to none is nonmonotonic, and a replicated audit with masked news shows harm of −9.016 bps/day (95% CI, −16.248 to −1.784). --------------------------------------------------------------------------------
+(PDF) The Price of Thought: Does Test-Time Reasoning Pay in LLM Trading? (https://www.researchgate.net/publication/414867654_The_Price_of_Thought_Does_Test-Time_Reasoning_Pay_in_LLM_Trading)
+citeturn1071search5 [wordlim: 200] Published: 3 weeks ago; Crawled: last week; Under the frozen cleaning rule, when a delisting code from 500 ... All model features end at ... Raw CRSP les from 2020 through 2024 support the required ... experiment, the models receive 24,100 stock and date numerical ... A.3 News Data Provenance and Volume
+
+contains 974,641 security and date rows over 1,005 trading dates
+
+from January 4, 2021, through December 31, 2024. Feature ranks
+
+are computed within this broader panel before values are retained
+
+for the 100 active candidates. Across the 241 formation dates in the
+
+experiment, the models receive 24,100 stock and date numerical
+
+records. Each record contains 16 ranked features and four sum-
+
+maries per feature, for 64 values per stock and 1,542,400 values
+
+in the unique 2024 numerical input panel. The same records are
+
+reused across reasoning levels and model families, so repeated calls
+
+do not create additional market observations.
+
+A.3 News Data Provenance and Volume
+
+The news conditions use the licensed EOD Historical Data (EODHD)
+
+news feed. Articles were linked to the active CRSP security universe
+
+through unambiguous provider ticker mappings. For each forma-
+
+tion date, an article was eligible only if its provider timestamp fell
+
+from 4:00 p.m. Eastern Time on the preceding trading session up
+
+to, but not including, 9:00 a.m. --------------------------------------------------------------------------------
+Mental Models of the Stock Market* | The Quarterly Journal of Economics | Oxford Academic (https://academic.oup.com/qje/article/141/4/2925/8741817?searchresult=1)
+citeturn1071search6 [wordlim: 200] Published: 2 months ago; Crawled: yesterday; The control condition replicates our key findings in a U.K. sample: a large share of forecasts are news-congruent, and households refer almost exclusively to expected earnings in their explanations. ... Previous text data, mostly collected and coded in 2023 and 2024, was coded by trained human coders.With the rapid development of large language models, automated coding has become a viable alternative by 2026, and we adopt it here because of its scalability.
+
+9.
+
+We moved from Prolific U.S. to Prolific U.K. for this 2026 data collection. After the many large previous data collections, we had effectively exhausted the U.S. subject pool and therefore sought a fresh set of participants. The control condition replicates our key findings in a U.K. sample: a large share of forecasts are news-congruent, and households refer almost exclusively to expected earnings in their explanations.
+
+10.
+
+Equivalently, one could describe the price as a single feature that respondents may interpret differently or link to returns in different ways. We adopt the feature-based formulation for parsimony and because it integrates naturally with the rest of our coding scheme. None of our takeaways depend on this choice.
+
+11.
+
+Previous text data, mostly collected and coded in 2023 and 2024, was coded by trained human coders. With the rapid development of large language models, automated coding has become a viable alternative by 2026, and we adopt it here because of its scalability. As is standard practice, we validate the machine-based coding by showing close alignment with human coding for a sample of responses in Online Appendix C.
+--------------------------------------------------------------------------------
+NLP & Large Language Models | The Quant Space · Quant Finance Research Hub (https://thequant.space/methods/nlp-llm/)
+citeturn1071search7 [wordlim: 200] Crawled: yesterday; Text as a signal: sentiment and embeddings from news, filings and social media, LLM agents for trading and research, retrieval over financial documents, and the evaluation problems unique to language models in finance.578 papers 47% with empirical rigor ≥ 7 113 with code Quadrants: Holy Grail 149 · Street Traders 356 · Lab Rats 31 · Philosophers 42 Data: papers.json filtered on `methods` = `nlp-llm` ... The specific hazard of LLM papers is temporal leakage through the model: a model trained on data through 2024 “knows” what happened to a 2023 stock, so a backtest that prompts it about 2023 is contaminated.
+
+# NLP & Large Language Models
+
+Text as a signal: sentiment and embeddings from news, filings and social media, LLM agents for trading and research, retrieval over financial documents, and the evaluation problems unique to language models in finance.
+
+578 papers 47% with empirical rigor ≥ 7 113 with code Quadrants: Holy Grail 149 · Street Traders 356 · Lab Rats 31 · Philosophers 42 Data: papers.json filtered on `methods` = `nlp-llm`
+
+Natural-language methods run from classical sentiment dictionaries through transformer embeddings to full LLM agents that read news and place trades. The signal side is well established (news tone, filing language, earnings-call transcripts); the agent side is new, fast-moving, and under-evaluated. Both sit here, alongside the retrieval and summarization work that supports research itself.
+
+What to check when reading. The specific hazard of LLM papers is temporal leakage through the model: a model trained on data through 2024 “knows” what happened to a 2023 stock, so a backtest that prompts it about 2023 is contaminated. --------------------------------------------------------------------------------
+Arxiv Day: Article (https://arxivday.com/articles?date=2024-07-25)
+citeturn1071search8 [wordlim: 200] Published: 2.2 years ago; Crawled: today; ### Fine-Tuning Large Language Models for Stock Return Prediction Using Newsflow ... The experiments on real news and investment universes reveal that: (1) aggregated representations from LLMs' token-level embeddings generally produce return predictions that enhance the performance of long-only and long-short portfolios; (2) in the relatively large investment universe, the decoder LLMs-based prediction model leads to stronger portfolios, whereas in the small universes, there are no consistent winners. ... Updated: 2024-07-25 15:07:35
+### Fine-Tuning Large Language Models for Stock Return Prediction Using Newsflow
+
+Large language models (LLMs) and their fine-tuning techniques have demonstrated superior performance in various language understanding and generation tasks. This paper explores fine-tuning LLMs for stock return forecasting with financial newsflow. In quantitative investing, return forecasting is fundamental for subsequent tasks like stock picking, portfolio optimization, etc. We formulate the model to include text representation and forecasting modules. We propose to compare the encoder-only and decoder-only LLMs, considering they generate text representations in distinct ways. The impact of these different representations on forecasting performance remains an open question. Meanwhile, we compare two simple methods of integrating LLMs' token-level representations into the forecasting module. The experiments on real news and investment universes reveal that: (1) aggregated representations from LLMs' token-level embeddings generally produce return predictions that enhance the performance of long-only and long-short portfolios; (2) in the relatively large investment universe, the decoder LLMs-based prediction model leads to stronger portfolios, whereas in the small universes, there are no consistent winners. --------------------------------------------------------------------------------
+(PDF) Assessing Consistency and Reproducibility in the Outputs of Large Language Models: Evidence Across Diverse Finance and Accounting Tasks (https://www.researchgate.net/publication/390114073_Assessing_Consistency_and_Reproducibility_in_the_Outputs_of_Large_Language_Models_Evidence_Across_Diverse_Finance_and_Accounting_Tasks)
+citeturn1071search9 [wordlim: 200] Published: 1.6 years ago; Crawled: last month; summarization, text generation, and prediction. ... comprises sentences extracted from a diverse range of news sources, covering both small and large ... neutral impact on the corresponding company's stock price. ... The prompt (Figure A4) instructs the model to role-play as a ... to October 30, 2024 (the latest Compustat date when data processing began).
+--------------------------------------------------------------------------------
+(PDF) Beyond Agent Architecture: Execution Assumptions and Reproducibility in LLM-Based Trading Systems (https://www.researchgate.net/publication/406464673_Beyond_Agent_Architecture_Execution_Assumptions_and_Reproducibility_in_LLM-Based_Trading_Systems)
+citeturn1071search10 [wordlim: 200] Crawled: 2 months ago; Sentiment Trading [17] Sentiment strategy U.S. news/equities Y Y P P P Large news sample; useful ... “Art.” indicates code, prompt, data, model, ... The overlapping window spans 2020-01-02 through 2024- ... Learning to Generate Explainable Stock Predictions using Self-Reflective Large Language Models ... StockGPT: A GenAI Model for Stock Prediction and Trading
+--------------------------------------------------------------------------------
+Quantpedia Premium Update – May 23rd – QuantPedia (https://vvv.quantpedia.com/quantpedia-premium-update-may-23rd/)
+citeturn1071search11 [wordlim: 200] Published: 2.4 years ago; Crawled: 5 days ago; Tan, Lin and Wu, Huihang and Zhang, Xiaoyan: Large Language Models and Return Prediction in China ... We examine whether large language models (LLMs) can extract contextualized representation of Chinese news articles and predict stock returns.
+--------------------------------------------------------------------------------
+Improving Stock Market Prediction with Feature Expansion and Explainable AI (https://ri.ufs.br/bitstream/riufs/22474/2/JOAO_PAULO_EUKO.pdf)
+citeturn1071search12 [wordlim: 200] Published: 2.0 years ago; Crawled: 1.9 years ago; An innovative approach is seen in a study exploring the utility of ChatGPT-4 in managing tasks and predicting outcomes based on news prompts. ... The methodology and prompt details are shared, providing a foundation for replication and further exploration. ... The results indicated that the model achieved "comparative experimental values on the Stocknet dataset with an accuracy of 57.081%" (LENG, 2022b), highlighting the challenges and potential of integrating textual and numerical data for stock prediction. ... In the study (PFEIFER; MAROHL, 2023), the authors fine-tune RoBERTa, a large language model, to analyze and predict the sentiment of FED speeches.
+--------------------------------------------------------------------------------
+Interpretable Machine Learning for Macro Alpha: A News Sentiment Case Study (https://cdn.arenafi.org/papers/arxiv/2505.16136.pdf)
+citeturn1071search13 [wordlim: 200] Published: 5 months ago; • Large Language Models (LLMs) and Financial News: Kirtac & Germano (2024) investigatedLLMs for sentiment trading on U.S. stock news, finding that GPT-3 outperformed FinBERT for equities. ... • GDELT in Macro Forecasting: Tilly et al. (2021) used GDELT news data to improve macroeconomic ... signals and a different toolset (FinBERT for sentiment, XGBoost for prediction), focusing on direct market ... • Prioritized Interpretability: We employ SHAP (Lundberg & Lee, 2017) to explain model predictions, ... open-source models (FinBERT, XGBoost), rendering the research transparent and facilitating replication
+--------------------------------------------------------------------------------
+AAPM: Large Language Model Agent-based Asset Pricing Models (https://openreview.net/pdf/e162720b355ce4f663cba8cd651730bedcd4e753.pdf)
+citeturn1071search14 [wordlim: 200] Published: 11 months ago; English news, which may potentially impact model ... apply news data after September 2021 which re- ... however, we use a large test split where half of the ... mation in the stock market includes not only news, ... 2024. ... Language models are few-shot ... Is there a replication crisis in fi-
+--------------------------------------------------------------------------------
+[34] C. Yañez, W. Kristjanpoller, and M. C. Minutolo, “Stock market index prediction using transformer neural network models and frequency decomposition,” *Neural Computing and Applications*, vol. 36, no. 25, pp. 15777–15797, 2024. (https://www.giovanniapruzzese.com/files/papers/satml26b/satml26b.pdf)
+citeturn1071search15 [wordlim: 200] Published: 9 months ago; Minutolo, “Stock market index prediction using transformer neural network models and frequency decomposition,” *Neural Computing and Applications*, vol. 36, no. 25, pp. ... Mann, “BloombergGPT: A large language model for finance,” *arXiv preprint arXiv:2303.17564*, 2023. ... Wohlin, “Guidelines for snowballing in systematic literature studies and a replication in software engineering,” in *EASE*, 2014. ... [76] London Stock Exchange Group (LSEG), “News service on refinitiv data platform,” https://developers.lseg.com/en/product/news/news_service_rdp, 2025, accessed: 2025-09-24.
+--------------------------------------------------------------------------------
+Wisdom or Whims? Decoding the Language of Retail (https://abfer.org/media/abfer-events-2025/annual-conference/papers-investment/AC25P3081_Wisdom-or-Whims_Decoding-the-Language-of-Retail-Trading-with-Social-Media-and-AI.pdf)
+citeturn1071search16 [wordlim: 200] Published: 1.5 years ago; of Investors’ Opinions Around Earnings News: Evidence from A Social Network, ... of Large Language Models, arXiv preprint arXiv:2306.08543 . ... Social Networks and Stock Market Reactions, The Review of Financial Studies . ... replication crisis in finance?, The Journal of Finance 78, 2465–2518.Jha, Manish, Jialin Qian, Michael Weber, and Baozhong Yang, 2024, ChatGPT and
+--------------------------------------------------------------------------------
+REFERENCES
+
+M. Abdelsamie and H. Wang. Comparative (https://openreview.net/pdf/282a1f957081703095775bb7f7f1aa3d553fe70b.pdf)
+citeturn1071search17 [wordlim: 200] Published: 1.1 years ago; In 2024 7th International Conference on Data Science and Information Technology (DSIT), pp. ... Introducing claude 3.5 sonnet. https://www.anthropic.com/news/claude-3-5-sonnet, 2024. ... Stock price trend prediction using emotion analysis of financial headlines with distilled llm model. ... Empirical asset pricing with large language model agents. arXiv preprint arXiv:2409.17266, 2024. ... a large-scale replication of psychological experiments with LLMs.

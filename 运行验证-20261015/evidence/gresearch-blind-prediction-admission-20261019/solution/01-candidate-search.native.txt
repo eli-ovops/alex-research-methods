@@ -1,0 +1,608 @@
+LightGBM/examples/README.md at main · lightgbm-org/LightGBM · GitHub (https://github.com/lightgbm-org/LightGBM/blob/main/examples/README.md)
+citeturn1040search0 [wordlim: 200] Crawled: 2 weeks ago; Place          | Competition    | Solution  | Date ... 3rd  | Water Supply Forecast Rodeo: Forecast Stage  | link  | 2024.31st  | American Express - Default Prediction  | link  | 2022.8 ... 3rd  | G-Research Crypto Forecasting  | link  | 2022.5
+
+# Examples
+
+You can learn how to use LightGBM by these examples.
+
+Comments in configuration files might be outdated. Actual information about parameters always can be found here.
+
+# Machine Learning Challenge Winning Solutions
+
+LightGBM is used in many winning solutions, but this table is updated very infrequently.
+
+Place          | Competition    | Solution  | Date
+--- | --- | --- | ---
+3rd  | Water Supply Forecast Rodeo: Forecast Stage  | link  | 2024.3
+1st  | American Express - Default Prediction  | link  | 2022.8
+2nd  | American Express - Default Prediction  | link  | 2022.8
+3rd  | American Express - Default Prediction  | link  | 2022.8
+1st  | Ubiquant Market Prediction  | link  | 2022.7
+2nd  | Ubiquant Market Prediction  | link  | 2022.7
+2nd  | G-Research Crypto Forecasting  | link  | 2022.5
+3rd  | G-Research Crypto Forecasting  | link  | 2022.5
+1st  | NASA Airathon: Predict Air Quality (Particulate Track)  | link  | 2022.3
+2nd  | NASA Airathon: Predict Air Quality (Particulate Track)  | link  | 2022.3
+1st  | M5 Forecasting - Uncertainty  | link  | 2020.7
+--------------------------------------------------------------------------------
+G-Research-Crypto-Forecasting/stock_prediction_lstm.py at main · JordiCorbilla/G-Research-Crypto-Forecasting · GitHub (https://github.com/JordiCorbilla/G-Research-Crypto-Forecasting/blob/main/stock_prediction_lstm.py)
+citeturn1040search1 [wordlim: 200] Crawled: 3 weeks ago; # stock_prediction_lstm.py ... # 1st layer with Dropout regularisation
+
+# stock_prediction_lstm.py
+
+# stock_prediction_lstm.py
+
+## File metadata and controls
+
+  * Code
+
+  * Blame
+
+66 lines (61 loc) · 2.97 KB
+
+Raw
+
+Copy raw file
+
+Download raw file
+
+Open symbols panel
+
+Edit and raw actions
+
+# Copyright 2020 Jordi Corbilla. All Rights Reserved.
+
+#
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+
+# you may not use this file except in compliance with the License.
+
+# You may obtain a copy of the License at
+
+#
+
+# http://www.apache.org/licenses/LICENSE-2.0
+
+#
+
+# Unless required by applicable law or agreed to in writing, software
+
+# distributed under the License is distributed on an "AS IS" BASIS,
+
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+# See the License for the specific language governing permissions and
+
+# limitations under the License.
+
+import os
+
+import tensorflow as tf
+
+from tensorflow.python.keras import Sequential
+
+from tensorflow.python.keras.layers import Dropout, Dense, LSTM
+
+class LongShortTermMemory:
+
+def __init__(self, project_folder):
+
+self.project_folder = project_folder
+
+def get_defined_metrics(self):
+
+defined_metrics = [
+
+tf.keras.metrics.MeanSquaredError(name='MSE')
+
+]
+
+return defined_metrics
+
+def get_callback(self):
+
+callback = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=3, mode='min', verbose=1)
+
+return callback
+
+def create_model(self, x_train):
+
+model = Sequential()
+
+# 1st layer with Dropout regularisation
+
+# * units = add 100 neurons is the dimensionality of the output space
+
+# * return_sequences = True to stack LSTM layers so the next LSTM layer has a three-dimensional sequence input
+
+# * input_shape => Shape of the training dataset
+
+model.add(LSTM(units=100, return_sequences=True, input_shape=(x_train.shape[1], 1)))
+
+# 20% of the layers will be dropped
+
+model.add(Dropout(0.2))
+
+# 2nd LSTM layer
+
+# * units = add 50 neurons is the dimensionality of the output space
+
+# * return_sequences = True to stack LSTM layers so the next LSTM layer has a three-dimensional sequence input
+
+model.add(LSTM(units=50, return_sequences=True))
+
+# 20% of the layers will be dropped
+
+model.add(Dropout(0.2))
+
+# 3rd LSTM layer
+
+# * units = add 50 neurons is the dimensionality of the output space
+
+# * return_sequences = True to stack LSTM layers so the next LSTM layer has a three-dimensional sequence input
+
+model.add(LSTM(units=50, return_sequences=True))
+
+# 50% of the layers will be dropped
+
+model.add(Dropout(0.5))
+
+# 4th LSTM layer
+
+# * units = add 50 neurons is the dimensionality of the output space
+
+model.add(LSTM(units=50))
+
+# 50% of the layers will be dropped
+
+model.add(Dropout(0.5))
+
+# Dense layer that specifies an output of one unit
+
+model.add(Dense(units=1))
+
+model.summary()
+
+#tf.keras.utils.plot_model(model, to_file=os.path.join(self.project_folder, 'model_lstm.png'), show_shapes=True,
+
+# show_layer_names=True)
+
+return model--------------------------------------------------------------------------------
+external data for TS from kaggle with solutions · Issue #112 · microprediction/timemachines · GitHub (https://github.com/microprediction/timemachines/issues/112)
+citeturn1040search2 [wordlim: 200] Published: 4.1 years ago; Crawled: 2 months ago; G-Research Crypto Forecasting ... 1st Place Solution — Nearest Neighbors
+
+# external data for TS from kaggle with solutions #112
+
+New issue
+
+Copy link
+
+New issue
+
+Copy link
+
+Open
+
+Open
+
+external data for TS from kaggle with solutions#112
+
+Copy link
+
+
+## Description
+
+microprediction
+
+opened on Sep 22, 2022
+
+
+G-Research Crypto Forecasting
+2nd place solution
+
+  2. Optiver Realized Volatility Prediction
+
+1st Place Solution — Nearest Neighbors
+
+  3. MLB Player Digital Engagement Forecasting
+
+1st place solution
+
+  4. Jane Street Market Prediction
+
+1st Place Solution
+
+  5. COVID19 Global Forecasting (Week 5)
+
+~1st Place Solution LGBM with some adjustments
+
+  6. COVID19 Global Forecasting (Week 4)
+
+Linear Regression Is All you Need (9th solution week 4)
+--------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/c/g-research-crypto-forecasting/discussion/327751)
+citeturn1040search3 [wordlim: 200] Crawled: last month; ### G-Research Crypto Forecasting Solution & Code Summary (🥇Gold Medal) ... Rank  | Team  | Score  | Explain  | Code  | Paper  | Github ... How do we know first place used Jane Street 1st place model?
+
+# G-Research Crypto Forecasting
+
+Use your ML expertise to predict real crypto market data
+
+Image
+
+## G-Research Crypto Forecasting
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+Kritdikoon Woraitthinan · 560th in this Competition · Posted 4 years ago
+
+arrow_drop_up[Button: 2]
+
+[Button: more_vert]
+
+### G-Research Crypto Forecasting Solution & Code Summary (🥇Gold Medal)
+
+Congratulation to all winners! Thanks for sharing your solution.
+
+G-Research Crypto Forecasting Solution & Code Summary (🥇Gold Medal)
+
+Rank  | Team  | Score  | Explain  | Code  | Paper  | Github
+--- | --- | --- | --- | --- | --- | ---
+1  | Meme Lord Capital  | 0.0326  | 📘  | 📕tensorflow
+📕pytorch  | -  | -
+2  | Nathaniel Maddux  | 0.0283  | 📘  | -  | -  | -
+3  | GABA  | 0.0232  | 📘  | 📕Train
+📕Infer  | -  | -
+4  | cmanning  | 0.0229  | -  | -  | -  | -
+--------------------------------------------------------------------------------
+13th Place (Final) 1st Place (6 Weeks In) Final Solution | Kaggle (https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/tom-forbes-13th-place-final-1st-place-6-weeks-in-f)
+citeturn1040search4 [wordlim: 200] Published: 4.5 years ago; Crawled: last month; 13th Place (Final) 1st Place (6 Weeks In) Final Solution — G-Research Crypto Forecasting ... Tom Forbes. 13th Place (Final) 1st Place (6 Weeks In) Final Solution. https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/tom-forbes-13th-place-final-1st-place-6-weeks-in-f.
+
+13th Place (Final) 1st Place (6 Weeks In) Final Solution — G-Research Crypto Forecasting
+
+# 13th Place (Final) 1st Place (6 Weeks In) Final Solution
+
+G-Research Crypto Forecasting
+
+Solution Writeup · 13th place · May 4, 2022
+
+View the final submission notebook here.
+
+Final Update - Congratulations to all the winners! While this comp was a bit of a rollercoaster, I'm very pleased to get my first competition Gold. Disappointing to just miss out on the top 10 after being there so long, but thats always possible with this type of challenge.
+
+Original post below.
+
+## Initial Comments
+
+First of all thankyou to G-Research and Cambridge Spark for hosting this competition and to the Kaggle staff for making everything run relatively smoothly. I found it so interesting and more open ended than other comps I've competed in, in my short Kaggler career.
+
+It goes without saying that while I'm in 1st Place now there is no guarantee it will stay that way in the next 6 weeks, but I'm confident I'll be there or thereabouts. ## Submission
+
+This is almost the exact notebook I submitted for my final predictions. I used lists to store historical data for feature calculations and did most calculations using numpy or lists, avoiding pandas at all costs.
+
+The submission completes in roughly 7 hours.
+
+## What didnt work
+
+  * Layering extra data from different exchanges for the same asset. E.g training on BTC data from Binance + Coinbase + FTX + G-Research version. Didnt harm but didnt improve models significantly either.
+  * Framing as a classification problem - poor results
+  * Hyperparameter tuning LGBM
+  * PCA features
+  * Using all 14 assets features per row / predicting on 14 targets.
+  * Meta modelling GB and NN predictions
+
+## With more time id try
+
+  * Extra Feature engineering
+  * Pytorch implementation of keras NN for ensembling
+  * LSTM
+  * Other model architectures
+
+Author
+
+Tom Forbes
+
+tomforbes
+
+arrow_drop_up[Button: 91]
+
+Share[Button: more_horiz]
+
+## Citation
+
+Tom Forbes. 13th Place (Final) 1st Place (6 Weeks In) Final Solution. https://www.kaggle.com/competitions/g-research-crypto-forecasting/writeups/tom-forbes-13th-place-final-1st-place-6-weeks-in-f. 2022. Kaggle
+--------------------------------------------------------------------------------
+LightGBM/examples/README.md-代码预览-LightGBM:基于树学习算法的梯度提升框架项目 - AtomGit (https://gitcode.com/GitHub_Trending/li/LightGBM/blob/main/examples/README.md)
+citeturn1040search5 [wordlim: 200] Crawled: 3 weeks ago; Place  | Competition  | Solution  | Date ... 3rd  | Water Supply Forecast Rodeo: Forecast Stage  | link  | 2024.31st  | American Express - Default Prediction  | link  | 2022.8 ... 3rd  | G-Research Crypto Forecasting  | link  | 2022.5
+
+# Examples
+
+You can learn how to use LightGBM by these examples.
+
+Comments in configuration files might be outdated. Actual information about parameters always can be found here.
+
+# Machine Learning Challenge Winning Solutions
+
+LightGBM is used in many winning solutions, but this table is updated very infrequently.
+
+Place  | Competition  | Solution  | Date
+--- | --- | --- | ---
+3rd  | Water Supply Forecast Rodeo: Forecast Stage  | link  | 2024.3
+1st  | American Express - Default Prediction  | link  | 2022.8
+2nd  | American Express - Default Prediction  | link  | 2022.8
+3rd  | American Express - Default Prediction  | link  | 2022.8
+1st  | Ubiquant Market Prediction  | link  | 2022.7
+2nd  | Ubiquant Market Prediction  | link  | 2022.7
+2nd  | G-Research Crypto Forecasting  | link  | 2022.5
+3rd  | G-Research Crypto Forecasting  | link  | 2022.5
+1st  | NASA Airathon: Predict Air Quality (Particulate Track)  | link  | 2022.3
+2nd  | NASA Airathon: Predict Air Quality (Particulate Track)  | link  | 2022.3
+1st  | M5 Forecasting - Uncertainty  | link  | 2020.7
+--------------------------------------------------------------------------------
+G-Research Crypto Forecasting | Kaggle (https://www.kaggle.com/competitions/g-research-crypto-forecasting/discussion/286676)
+citeturn1040search6 [wordlim: 200] Crawled: last month; # G-Research Crypto Forecasting ... I just finished converting the 1st place winning solution of Yirun Zhang from Jane Street market prediction competition earlier this year. ... See: https://github.com/MingjieWang0606/Kaggle-Jane-Street-AE-MLP-xgb-TOP1/blob/main/current-1th-jane-street-ae-mlp-xgb.ipynb
+
+G-Research · Featured Code Competition · 4 years ago
+
+Late Submission
+
+# G-Research Crypto Forecasting
+
+Use your ML expertise to predict real crypto market data
+
+## G-Research Crypto Forecasting
+
+OverviewDataCodeModelsDiscussionLeaderboardRules
+
+· Posted 5 years ago
+
+### 1st Place of Jane Street 🏆 ➜ Adapted to Crypto 👌
+
+# 1st Place of Jane Street 🏆 ➜ Adapted to Crypto 👌
+
+> TL;DR: Here it is
+
+Hi Guys,
+
+I just finished converting the 1st place winning solution of Yirun Zhang from Jane Street market prediction competition earlier this year.
+
+The notebook is right here.
+
+It is a simple starter notebook using purged group time series. There are many configuration variables to allow you to experiment. Use either GPU or TPU. You can control which years are loaded, which neural networks are used, and whether to use feature engineering.
+
+You can experiment with different data preprocessing, model architecture, loss, optimizers, and learning rate schedules. --------------------------------------------------------------------------------
+Jane Street 1st place solution -> Crypto PyTorch (https://www.kaggle.com/code/neodory/jane-street-1st-place-solution-crypto-pytorch)
+citeturn1040search7 [wordlim: 200] Crawled: 4 weeks ago; # Jane Street 1st place solution -> Crypto PyTorch ... G-Research Crypto Forecasting
+
+Scipio · 5y ago · 4,990 views
+
+arrow_drop_up[Button: 61]
+
+Copy & Edit
+
+71
+
+file_download Download
+
+Image: bronze medal
+
+[Button: more_vert]
+
+# Jane Street 1st place solution -> Crypto PyTorch
+
+## Jane Street 1st place solution -> Crypto PyTorch
+
+NotebookInputOutputLogsComments (4)
+
+history Version 2 of 2[Button: chevron_right]
+
+## Runtime
+
+play_arrow
+
+8h 50m 17s · GPU P100
+
+## Input
+
+COMPETITIONS
+
+Image
+
+G-Research Crypto Forecasting
+
+## Tags
+
+GPU
+
+## Language
+
+Python
+
+## Table of Contents
+
+PurgedGroupTimeSeriesSplitSeedConfigDataFrameCryptoDatasetDataLoaderArchitecturesMetricsLossTrain functionTraining
+
+Image: Profile picture for undefined
+
+Competition Notebook
+
+G-Research Crypto Forecasting
+
+Main Notebook Content
+
+## License
+
+This Notebook has been released under the Apache 2.0 open source license.
+
+Input
+
+1 file
+
+arrow_right_alt
+
+  * Image
+
+Output
+
+6 files
+
+arrow_right_alt
+
+  * Image
+
+Logs
+
+31816.9 second run - successful
+
+arrow_right_alt
+
+  * Image
+
+Comments
+
+4 comments
+
+arrow_right_alt--------------------------------------------------------------------------------
+Jane Street 1st place solution -> Crypto PyTorch (https://www.kaggle.com/code/neodory/jane-street-1st-place-solution-crypto-pytorch/notebook)
+citeturn1040search8 [wordlim: 200] Crawled: 3 weeks ago; # Jane Street 1st place solution -> Crypto PyTorch ... G-Research Crypto Forecasting
+
+Scipio · 5y ago · 4,998 views
+
+arrow_drop_up[Button: 61]
+
+Copy & Edit
+
+71
+
+file_download Download
+
+Image: bronze medal
+
+[Button: more_vert]
+
+# Jane Street 1st place solution -> Crypto PyTorch
+
+## Jane Street 1st place solution -> Crypto PyTorch
+
+NotebookInputOutputLogsComments (4)
+
+history Version 2 of 2[Button: chevron_right]
+
+## Runtime
+
+play_arrow
+
+8h 50m 17s · GPU P100
+
+## Language
+
+Python
+
+Image: Profile picture for undefined
+
+Competition Notebook
+
+G-Research Crypto Forecasting
+
+Main Notebook Content
+
+## License
+
+This Notebook has been released under the Apache 2.0 open source license.
+
+Input
+
+1 file
+
+arrow_right_alt
+
+  * Image
+
+Output
+
+6 files
+
+arrow_right_alt
+
+  * Image
+
+Logs
+
+31816.9 second run - successful
+
+arrow_right_alt
+
+  * Image
+
+Comments
+
+4 comments--------------------------------------------------------------------------------
+Kaggle Finance Competition Solution Summary · Reading List & Notes (https://zizouhe.github.io/reading-notes/notes/kaggle-fin.html)
+citeturn1040search9 [wordlim: 200] Crawled: last month; G-Research Crypto Forecasting ... ### 7.1. 1st Place Solution
+## 5. G-Research Crypto Forecasting
+
+  * G-Research Crypto Forecasting
+  * G-Research Crypto金牌方案解读
+
+### 5.1. 2nd Place Solution
+
+  * Kaggle discussion
+
+  * Feature engineering
+
+    * Feature engineering was guided by feature importance. Focused further effort on developing features sets that already performed well (had high importance).
+  * Model
+    * LightGBM GBDT regressor with squared loss
+  * Cross validation
+    * Pay attention to CV variance. An easy way to see if your CV scores have too much variance is to look at a plot of CV score vs. a parameter you're tuning. A good plot will usually be smooth, with a knee and a plateau, or maybe a peak or a valley.
+
+### 5.2. 3rd Place Solution
+
+  * Kaggle discussion
+  * Feature engineering
+    * Only 'Close' is used.
+    * For 'Close', two features are prepared for multiple lag periods: the log of the ratio of the current value to the average during the period, and the log of the ratio of the current value to the value a certain period ago. --------------------------------------------------------------------------------
+Data-Science-Case-Studies/Getting-Started/README.md at master · gdsc-bbsbec/Data-Science-Case-Studies · GitHub (https://github.com/gdsc-bbsbec/Data-Science-Case-Studies/blob/master/Getting-Started/README.md)
+citeturn1040search10 [wordlim: 200] Crawled: 2 months ago; 09  | M5 Forecasting - Uncertainty  | 10  | G-Research Crypto Forecasting ... 11  | Optiver Realized Volatility Prediction  | 12  | MLB Player Digital Engagement Forecasting
+### Unsupervised Learning `20 case studies`
+
+01  | Google Cloud & NCAA March Madness Analytics  | 02  | EDSA Movie Recommendation Challenge
+--- | --- | --- | ---
+03  | EDSA Movie Recommendation Challenge  | 04  | Personalize Expedia Hotel Searches - ICDM 2013
+--- | --- | --- | ---
+05  | Expedia Hotel Recommendations  | 06  | LearnPlatform COVID-19 Impact on Digital Learning
+--- | --- | --- | ---
+07  | Google Research Football with Manchester City F.C.  | 08  | Instant Gratification
+--- | --- | --- | ---
+09  | M5 Forecasting - Uncertainty  | 10  | G-Research Crypto Forecasting
+--- | --- | --- | ---
+11  | Optiver Realized Volatility Prediction  | 12  | MLB Player Digital Engagement Forecasting
+--------------------------------------------------------------------------------
+1st Place of Jane Street 🏆 ➜ Adapted to Crypto 👌 (https://www.kaggle.com/code/drabovich/1st-place-of-jane-street-adapted-to-crypto)
+citeturn1040search11 [wordlim: 200] Published: 4.9 years ago; Crawled: last month;           "source": "____\n\n#### <center>All notebooks in the series 👇</center>\n\n| CV + Model | Hyperparam Optimization  | Time Series Models | Feature Engineering |\n| --- | --- | --- | --- |\n| [Neural Network Starter](https://www.kaggle.com/yamqwe/purgedgrouptimeseries-cv-with-extra-data-nn) | [MLP + AE](https://www.kaggle.com/yamqwe/bottleneck-encoder-mlp-keras-tuner)        | [LSTM](https://www.kaggle.com/yamqwe/time-series-modeling-lstm) | [Technical Analysis #1](https://www.kaggle.com/yamqwe/crypto-prediction-technical-analysis-features) |\n| [LightGBM Starter](https://www.kaggle.com/yamqwe/purgedgrouptimeseries-cv-with-extra-data-lgbm)     | [LightGBM](https://www.kaggle.com/yamqwe/purged-time-series-cv-lightgbm-optuna)     | [Wavenet](https://www.kaggle.com/yamqwe/time-series-modeling-wavenet)  | [Technical Analysis #2](https://www.kaggle.com/yamqwe/crypto-prediction-technical-analysis-feats-2) |\n| [Catboost Starter](https://www.kaggle.com/yamqwe/purgedgrouptimeseries-cv-extra-data-catboost)      | [Catboost](https://www.kaggle.com/yamqwe/purged-time-series-cv-catboost-gpu-optuna) | [Multivariate-Transformer [written from scratch]](https://www.kaggle.com/yamqwe/time-series-modeling-multivariate-transformer) | [Time Series Agg](https://www.kaggle.com/yamqwe/features-all-time-series-aggregations-ever) | \n| [XGBoost Starter](https://www.kaggle.com/yamqwe/xgb-extra-data)                                            | [XGboost](https://www.kaggle.com/yamqwe/purged-time-series-cv-xgboost-gpu-optuna) | [N-BEATS](https://www.kaggle.com/yamqwe/crypto-forecasting-n-beats) |  [Neutralization](https://www.kaggle.com/yamqwe/g-research-avoid-overfit-feature-neutralization/) |\n| [Supervised AE [Janestreet 1st]](https://www.kaggle.com/yamqwe/1st-place-of-jane-street-adapted-to-crypto) | [Supervised AE [Janestreet 1st]](https://www.kaggle.com/yamqwe/1st-place-of-jane-street-keras-tuner) | [DeepAR](https://www.kaggle.com/yamqwe/probabilistic-forecasting-deepar/) | [Quant's Volatility Features](https://www.kaggle.com/yamqwe/crypto-prediction-volatility-features) |\n| [Transformer)](https://www.kaggle.com/yamqwe/let-s-test-a-transformer)                                     | [Transformer](https://www.kaggle.com/yamqwe/sh-tcoins-transformer-baseline)  |  | ⏳Target Engineering |\n| [TabNet Starter](https://www.kaggle.com/yamqwe/tabnet-cv-extra-data)                                       |  |  |⏳Fourier Analysis | \n| [Reinforcement Learning (PPO) Starter](https://www.kaggle.com/yamqwe/g-research-reinforcement-learning-starter) | | | ⏳Wavelets | \n\n____",
+Purged Times Series is explained [here][2]. There are many configuration variables below to allow you to experiment. Use either GPU or TPU. You can control which years are loaded, which neural networks are used, and whether to use feature engineering. You can experiment with different data preprocessing, model architecture, loss, optimizers, and learning rate schedules. The extra datasets contain the full history of the assets at the same format of the competition, so you can input that into your model too.\n>\n>**NOTE:** this notebook lets you run a different experiment in each fold if you want to run lots of experiments. (Then it is like running multiple holdout validaiton experiments but in that case note that the overall CV score is meaningless because LB will be much different when the multiple experiments are ensembled to predict test). **If you want a proper CV with a reliable overall CV score you need to choose the same configuration for each fold.**\n>\n>**See Original Links:**\n>- https://www.kaggle.com/gogo827jz/jane-street-supervised-autoencoder-mlp\n>- https://www.kaggle.com/c/jane-street-market-prediction/discussion/224348\n>\n>This notebook follows the ideas presented in my \"Initial Thoughts\" [here][1].\n\n[1]: https://www.kaggle.com/c/g-research-crypto-forecasting/discussion/284903\n[2]: https://www.kaggle.com/yamqwe/let-s-talk-validation-grouptimeseriessplit\n\n<div class=\"alert alert-block alert-warning\">\n<b>References:</b>\n<ul>\n    <li><a href = \"https://www.kaggle.com/c/g-research-crypto-forecasting/discussion/285726\">Dataset Thread</a></li>\n    <li><a href = \"https://www.kaggle.com/c/g-research-crypto-forecasting/discussion/284903\">Initial Thoughts Thread\n</a></li>\n    <li><a href = \"https://www.kaggle.com/yamqwe/let-s-talk-validation-grouptimeseriessplit\">Validation Thread\n</a></li>\n</ul>\n</div>",
+ Their final submission is a simple blend of these two models. Here, We explain Yirun's approach in detail.\n\nThe supervised autoencoder approach was initially proposed in [Bottleneck encoder + MLP + Keras Tuner](https://www.kaggle.com/aimind/bottleneck-encoder-mlp-keras-tuner-8601c5) and was adapted to this competition [here](https://www.kaggle.com/yamqwe/bottleneck-encoder-mlp-keras-tuner), where one supervised autoencoder is trained separately before cross-validation (CV) split. Yirun have realised that this training may cause label leakage because the autoencoder has seen part of the data in the validation set in each CV split and it can generate label-leakage features to overfit. So, his approach was to train the supervised autoencoder along with MLP in one model in each CV split. The training processes and explanations are given in the notebook and the following statements.\n\n**The Model:**\n\n- Use autoencoder to create new features, concatenating with the original features as the input to the downstream MLP model\n- Train autoencoder and MLP together in each CV split to prevent data leakage\n- Add target information to autoencoder (supervised learning) to force it to generate more relevant features, and to create a shortcut for backpropagation of gradient\n- Add Gaussian noise layer before encoder for data augmentation and to prevent overfitting\n- Use swish activation function instead of ReLU to prevent ‘dead neuron’ and smooth the gradient\n- Batch Normalisation and Dropout are used for MLP\n- Use Keras Tuner to find the optimal hyperparameter set\n\n\n\nThis notebook follows the ideas presented in my \"Initial Thoughts\" [here][1]. Some code sections have been reused from Chris' great notebook series on SIIM ISIC melanoma detection competition [here][3]\n\n[1]: https://www.kaggle.com/c/g-research-crypto-forecasting/discussion/284903\n[2]: https://www.kaggle.com/yamqwe/let-s-talk-validation-grouptimeseriessplit\n[3]: https://www.kaggle.com/cdeotte/triple-stratified-kfold-with-tfrecords",
+--------------------------------------------------------------------------------
+[P] - I created an Auto-Updating Kaggle dataset that collects high-frequency crypto market data - Updates daily! | +20 Related Trading Notebooks (https://www.reddit.com/r/MachineLearning/comments/r6h3h8)
+citeturn1040reddit12 [wordlim: 200] Published: 4.9 years ago; Crawled: 1.8 years ago; As some of you know, there is Crypto forecasting competition is running on Kaggle: "G-Research Crypto Forecasting". ... This project was meant to be for the currently running Crypto Forecasting Competition by G-Research. ... Many more Time Series / Finance-related notebooks will be released in the future so this can also serve as a "first stop" when studying Time Series analysis. ...     [Wednesday September 06 2023] [+1 votes]
+--------------------------------------------------------------------------------
+[Dataset Release] - I created an Auto-Updating Kaggle dataset that collects high-frequency market data - Updates daily! | +20 Related Trading Notebooks (https://www.reddit.com/r/learnmachinelearning/comments/qwkqn8)
+citeturn1040reddit13 [wordlim: 200] Published: 4.9 years ago; Crawled: 4.9 years ago; [Thursday November 18 2021] [+16 votes] ... As some of you know, there is Crypto forecasting competition is running on Kaggle: "G-Research Crypto Forecasting". ... This project was meant to be for the currently running Crypto Forecasting Competition by G-Research. ... Many more Time Series / Finance-related notebooks will be released in the future so this can also serve as a "first stop" when studying Time Series analysis.
+--------------------------------------------------------------------------------
+I created an Auto-Updating Kaggle dataset that collects high-frequency market data - Updates daily! | +20 Related Trading Notebooks (https://www.reddit.com/r/datasets/comments/qwkpkx)
+citeturn1040reddit14 [wordlim: 200] Published: 4.9 years ago; Crawled: 4.2 years ago; [Thursday November 18 2021] [+45 votes] ... This project was meant to be for the currently running Crypto Forecasting Competition by G-Research. ... Many more Time Series / Finance-related notebooks will be released in the future so this can also serve as a "first stop" when studying Time Series analysis.
+--------------------------------------------------------------------------------
+[Dataset Release] - I created an Auto-Updating Kaggle dataset that collects high-frequency crypto market data - Updates daily! | +20 Related Trading Notebooks (https://www.reddit.com/r/quant/comments/qwkrn7)
+citeturn1040reddit15 [wordlim: 200] Published: 4.9 years ago; Crawled: 4.7 years ago; [Thursday November 18 2021] [+18 votes] ... As some of you know, there is Crypto forecasting competition is running on Kaggle: "G-Research Crypto Forecasting". ... This project was meant to be for the currently running Crypto Forecasting Competition by G-Research. ... Many more Time Series / Finance-related notebooks will be released in the future so this can also serve as a "first stop" when studying Time Series analysis.
+--------------------------------------------------------------------------------
+[Dataset Release] - I created an Auto-Updating Kaggle dataset that collects high-frequency crypto market data - Updates daily! | +20 Related Trading Notebooks (https://www.reddit.com/r/quantresearch/comments/qwks89)
+citeturn1040reddit16 [wordlim: 200] Published: 4.9 years ago; Crawled: 3.2 years ago; As some of you know, there is Crypto forecasting competition is running on Kaggle: "G-Research Crypto Forecasting". ... This project was meant to be for the currently running Crypto Forecasting Competition by G-Research. ... Many more Time Series / Finance-related notebooks will be released in the future so this can also serve as a "first stop" when studying Time Series analysis. ... | Supervised AE \[Janestreet 1st\]     | Supervised AE \[Janestreet 1st\] | DeepAR                                            | ⏳Target Engineering                      |
+--------------------------------------------------------------------------------
+[Dataset Release] - I created an Auto-Updating Kaggle dataset that collects high-frequency crypto market data - Updates daily! | +20 Related Trading Notebooks (https://www.reddit.com/r/quantfinance/comments/qwkryl)
+citeturn1040reddit17 [wordlim: 200] Published: 4.9 years ago; Crawled: 4.9 years ago; [Thursday November 18 2021] [+8 votes] ... This project was meant to be for the currently running Crypto Forecasting Competition by G-Research. ... Many more Time Series / Finance-related notebooks will be released in the future so this can also serve as a "first stop" when studying Time Series analysis.
+--------------------------------------------------------------------------------
+Lecture Notes in Networks and Systems  531Pablo García Bringas · Hilde Pérez García · (https://www.offis.de/uploads/tx_offisdata/1670930028-978-3-031-18050-7.pdf)
+citeturn1040search18 [wordlim: 200] Published: 6 months ago; prediction tasks.4  Experiments and Results4.1    Datasets UsedThe dataset used in the experiments is taken from a Kaggle competition¹ whose goal ... prises the prices from January 1st to September 21st of 2021, collected with frequency ... Ethereum, Litecoin and Tron.In order to make the time series stationary, the prices returns are considered. ... On this basis, the feature vector is defined as $X \in \mathbb{R}^{12}$, where $X = \{R_{t-12},R_{t-11},\ldots,R_{t-1}\}$.https://www.kaggle.com/competitions/g-research-crypto-forecasting/data
+--------------------------------------------------------------------------------
+Under review as a conference paper at ICLR 2026 (https://openreview.net/pdf/d4403b2a98215a7ca860bec61267de0858c6cddd.pdf)
+citeturn1040search19 [wordlim: 200] Published: 10 months ago; <tr><td>G-Research Crypto Forecasting</td><td>2398</td><td>125,000</td><td>Featured</td></tr> ... <tr><td>COVID19 Global Forecasting (Week 1)</td><td>640</td><td>0</td><td>Research</td></tr> ... <tr><td>NFL 1st and Future - Impact Detection</td><td>573</td><td>75,000</td><td>Featured</td></tr>

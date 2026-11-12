@@ -1,0 +1,1021 @@
+API Docs - DefiLlama (https://api-docs.defillama.com/)
+citeturn495search0 [wordlim: 200] Crawled: today; The free yield endpoints `/pools` and `/chart/{pool}` shut down on November 13, 2026. ... To check that your key works, call `https://pro-api.llama.fi/usage/{YOUR_API_KEY}` (key at the end, for this endpoint only). ... ## fees and revenue (Collapsed) ... Data from our fees and revenue dashboard ...   * get/summary/fees/{protocol}
+
+# DefiLlama API
+
+Download OpenAPI Document Download OpenAPI Document
+
+The free yield endpoints `/pools` and `/chart/{pool}` shut down on November 13, 2026. The same data remains available on the API plan at `/yields/v1/pools` and `/yields/v1/chart/{pool}`.
+
+## Using AI?
+
+DefiLlama offers two ways to use our data with AI:
+
+Resource  | For  | Description
+--- | --- | ---
+llms.txt  | AI assistants (ChatGPT, Claude, Cursor, etc.)  | Paste this link into your AI assistant for LLM-optimized docs
+MCP Server  | AI agents  | Connect your agent directly to DefiLlama data — 23 tools, requires an API plan
+
+Quick start (MCP) — paste this into your AI agent:
+    
+    `Read https://raw.githubusercontent.com/DefiLlama/defillama-skills/refs/heads/master/defillama-setup/SKILL.md and follow the instructions to connect to DefiLlama MCP
+    `
+
+* * *
+
+## Authentication
+
+The free API needs no key. If you have an API plan, use `https://pro-api.llama.fi/{YOUR_API_KEY}/...` with the key between the base URL and the endpoint. Do NOT send the key as a query parameter (`?apikey=`) or header.
+
+A 200 from `/protocols` or `/overview/fees` here does not validate your API key. Those endpoints require no authentication. A 402 here does not prove your subscription expired. It means the endpoint needs an API plan. There are only two tiers: free (no key) and the API plan. One API plan key unlocks every Pro endpoint. There are no add-ons or separate keys for volumes, derivatives, or other data.
+
+To check that your key works, call `https://pro-api.llama.fi/usage/{YOUR_API_KEY}` (key at the end, for this endpoint only). It returns your remaining credits, like `{"creditsLeft": 1000000}`.
+
+Need higher rate limits or priority support? We offer a premium plan for 300$/mo. To get it, go to https://defillama.com/subscription
+
+## SDK
+
+JavaScript — `npm install @defillama/api` — GitHub
+
+Python — `pip install defillama-sdk` — GitHub
+
+Quick start (JavaScript):
+    
+    `import { DefiLlama } from '@defillama/api'
+    
+    const client = new DefiLlama()
+    const protocols = await client.tvl.getProtocols()
+    `
+
+Quick start (Python):
+    
+    `from defillama_sdk import DefiLlama
+    
+    client = DefiLlama()
+    protocols = client.tvl.getProtocols()
+    `
+
+Server
+
+Server:https://api.llama.fi
+
+Client Libraries
+
+Shell
+
+Ruby
+
+Node.js
+
+PHP
+
+Python[Select]
+
+More Select from all clients
+
+Curl Shell
+
+## volumes (Collapsed)
+
+​#Copy link
+
+Data from our volumes dashboards
+
+volumes Operations
+
+  * get/overview/dexs
+  * get/overview/dexs/{chain}
+  * get/summary/dexs/{protocol}
+  * get/overview/options
+  * get/overview/options/{chain}
+  * get/summary/options/{protocol}
+
+## fees and revenue (Collapsed)
+
+​#Copy link
+
+Data from our fees and revenue dashboard
+
+fees and revenue Operations
+
+  * get/overview/fees
+  * get/overview/fees/{chain}
+  * get/summary/fees/{protocol}
+
+## perps (Collapsed)
+
+​#Copy link
+
+perps Operations
+
+  * get/overview/open-interest
+  * get/api/overview/derivatives API Plan
+  * get/api/summary/derivatives/{protocol} API Plan
+
+## Unlocks (Collapsed)
+
+​#Copy link
+
+Unlocks Operations
+
+  * get/api/emissions API Plan
+
+## main page (Collapsed)
+
+​#Copy link
+
+main page Operations
+
+  * get/api/categories API Plan
+  * get/api/forks API Plan
+  * get/api/v2/chart/{metric}/protocol/{protocol}/version-breakdown API Plan Beta
+  * get/api/v2/chart/{metric}/protocol/{protocol}/label-breakdown API Plan Beta
+  * get/api/v2/metrics/{metric}/category/{category} API Plan Beta
+  * get/api/v2/chart/{metric}/category/{category} API Plan Beta
+  * get/api/v2/chart/{metric}/category/{category}/chain-breakdown API Plan Beta
+  * get/api/v2/chart/{metric}/category/{category}/protocol-breakdown API Plan Beta
+  * get/api/v2/metrics/{metric}/category/{category}/chain/{chain} API Plan Beta
+  * get/api/v2/chart/{metric}/category/{category}/chain/{chain} API Plan Beta
+  * get/api/v2/chart/{metric}/category/{category}/chain/{chain}/protocol-breakdown API Plan Beta
+
+
+## Financial Statements (Collapsed)
+
+​#Copy link
+
+Financial Statements Operations
+
+  * get/api/v2/metrics/financial-statement/protocol/{protocol} API Plan Beta
+
+## ETFs (Collapsed)
+
+​#Copy link
+
+ETFs Operations
+
+  * get/etfs/snapshot API Plan
+
+## narratives (Collapsed)
+
+​#Copy link
+
+narratives Operations
+
+  * get/fdv/performance/{period} API Plan
+
+## bridges (Collapsed)
+
+​#Copy link
+
+bridges Operations
+
+  * get/bridges/bridges API Plan
+  * get/bridges/bridge/{id} API Plan
+  * get/bridges/bridgevolume/{chain} API Plan
+  * get/bridges/bridgedaystats/{timestamp}/{chain} API Plan
+  * get/bridges/transactions/{id} API Plan
+
+--------------------------------------------------------------------------------
+API Docs - DefiLlama (https://api-docs.defillama.com//)
+citeturn495search1 [wordlim: 200] Crawled: 6 days ago; When your API key is set, free endpoints will be changed to pro version to bypass rate limits" ...     * Simplified endpoint to get current TVL of a protocol ... Data from our fees and revenue dashboard ...   * get/summary/fees/{protocol}
+### DefiLlama Pro API Key
+
+[Input: Enter your DefiLlama (API plan) API key]
+
+Your key is saved locally in your browser's storage.
+
+Your API key will be injected into requests to `https://pro-api.llama.fi` endpoints.
+When your API key is set, free endpoints will be changed to pro version to bypass rate limits"
+
+  * Using AI?
+
+  * SDK
+
+  * Collapse TVL
+
+TVL
+
+    * List all protocols on defillama along with their tvl
+
+  HTTP Method:  GET
+
+    * Get historical TVL of a protocol and breakdowns by token and chain
+
+  HTTP Method:  GET
+
+    * Get historical TVL (excludes liquid staking and double counted tvl) of DeFi on all chains
+
+  HTTP Method:  GET
+
+    * Get historical TVL (excludes liquid staking and double counted tvl) of a chain
+
+  HTTP Method:  GET
+
+    * Simplified endpoint to get current TVL of a protocol
+
+  HTTP Method:  GET
+
+    * Get current TVL of all chains
+
+  HTTP Method:  GET
+
+    * Lists the amount of a certain token within all protocols. Data for the Token Usage page
+
+  HTTP Method:  GET
+
+    * Lists the amount of inflows and outflows for a protocol at a given date
+
+  HTTP Method:  GET
+
+    * Get assets of all chains
+
+  HTTP Method:  GET
+
+    * Get aggregate TVL metrics for a protocol
+
+  HTTP Method:  GET
+
+Beta
+
+    * Get historical TVL chart for a protocol
+
+  HTTP Method:  GET
+
+Beta
+
+    * Get historical TVL chart for a protocol broken down by chain
+
+  HTTP Method:  GET
+
+Beta
+
+    * Get historical TVL chart for a protocol broken down by token
+
+  HTTP Method:  GET
+
+Beta
+
+  * Expand coins
+
+ 
+
+coins
+
+  * Expand stablecoins
+
+ 
+
+stablecoins
+
+  * Expand yields
+
+ 
+
+yields
+
+  * Expand volumes
+
+ 
+
+volumes
+
+  * Expand fees and revenue
+
+ 
+
+fees and revenue
+
+  * Expand perps
+
+ 
+
+perps
+
+  * Expand Unlocks
+
+ 
+
+Unlocks
+
+  * Expand main page
+
+ 
+
+main page
+
+  * Expand token liquidity
+
+ 
+
+token liquidity
+
+  * Expand Treasury
+
+ 
+
+Treasury
+
+  * Expand Oracles
+
+ 
+
+Oracles
+
+  * Expand Forks
+
+ 
+
+Forks
+
+  * Expand Dimensions
+
+ 
+
+Dimensions
+
+  * Expand Financial Statements
+
+ 
+
+Financial Statements
+
+  * Expand ETFs
+
+ 
+
+ETFs
+
+  * Expand narratives
+
+ 
+
+narratives
+
+  * Expand bridges
+
+ 
+
+bridges
+
+  * Expand meta
+
+ 
+
+meta
+
+  * Expand DAT
+
+ 
+
+DAT
+
+  * Expand Equities
+
+ 
+
+Equities
+
+  * Expand Pre-IPO
+
+ 
+
+Pre-IPO
+
+  * Expand RWA
+
+ 
+
+RWA
+
+Open API Client
+
+Powered by Scalar
+
+v1.0.0-oas3
+
+OAS 3.1.1
+
+          },
+          {
+            "label": "Revenue",
+            "hasRight": true,
+            "details": "AAVE"
+          }
+        ],
+        "governanceData": {
+          "rights": "LIMITED",
+          "details": "Governance includes protocol parameters, treasury management, upgrades & onchain revenue",
+          "feeSwitchStatus": "ON",
+          "feeSwitchDetails": "$50m annual budget for token buybacks"
+        },
+        "holdersRevenueAndValueAccrual": {
+          "buybacks": "ACTIVE",
+          "dividends": "NONE",
+          "burns": "NONE",
+          "primaryValueAccrual": "Buybacks - $50M yearly budget for buybacks"
+        },
+        "tokenAlignment": {
+          "fundraising": "TOKEN",
+          "raiseDetailsLink": {
+            "label": "Strategic Round (Decrypt)",
+            "url": "https://decrypt.co/44653/aave-raises-25-million-to-bring-defi-to-institutions"
+          },
+          "associatedEntities": [
+            "DAO",
+            "Labs",
+            "Parent / Holdings Co"
+          ],
+  * get/yields/v1/poolsBorrow API Plan
+  * get/yields/v1/chartLendBorrow/{pool} API Plan
+  * get/yields/v2/earn API Plan
+  * get/yields/v2/earn/query API Plan
+  * get/yields/v2/earn/{id}/history API Plan
+  * get/yields/v2/earn/verified API Plan
+  * get/yields/v2/earn/verified/{id} API Plan
+  * get/yields/v2/earn/verified/{id}/history API Plan
+  * get/yields/v2/borrow/markets API Plan
+  * get/yields/v2/borrow/markets/{id}/history API Plan
+  * get/yields/v2/borrow/routes API Plan
+  * get/yields/v2/loops API Plan
+  * get/api/perpFundingRates API Plan
+  * get/api/lstRates API Plan
+
+Show More
+
+## volumes (Collapsed)
+
+​#Copy link
+
+Data from our volumes dashboards
+
+volumes Operations
+
+  * get/overview/dexs
+  * get/overview/dexs/{chain}
+  * get/summary/dexs/{protocol}
+  * get/overview/options
+  * get/overview/options/{chain}
+  * get/summary/options/{protocol}
+
+Show More
+
+## fees and revenue (Collapsed)
+
+​#Copy link
+
+Data from our fees and revenue dashboard
+
+fees and revenue Operations
+
+  * get/overview/fees
+  * get/overview/fees/{chain}
+  * get/summary/fees/{protocol}
+
+Show More
+
+--------------------------------------------------------------------------------
+Voting in Liquity V2 (https://www.liquity.org/blog/voting-in-liquity-v2)
+citeturn495search2 [wordlim: 200] Published: 1.7 years ago; Crawled: today; Image: Voting in Liquity V2 ... January 17, 2025
+
+Image: Voting in Liquity V2
+
+Bojan Peček
+
+·
+
+January 17, 2025
+
+Voting in Liquity V2
+
+In Liquity V2, LQTY stakers will take on a new role: directing Protocol Incentivized Liquidity (PIL). This empowers them to decide where 25% of the protocol's revenue is allocated, while continuing to earn staking yield from V1, resulting in a dual reward mechanism.
+
+Voting is a crucial component of Liquity V2's mechanism, enabling LQTY stakers to directly influence its success.
+
+By voting, you:
+
+  * Direct the distribution of 25% of the protocol's revenue
+  * Help drive initiatives that benefit the V2 ecosystem expansion
+  * Ensure the strategic placement of incentives for sustainable growth
+
+#### Why vote?
+
+The motivation to vote is closely tied to the desire for Liquity V2's success. As mentioned earlier, 25% of the protocol's revenue is allocated to PIL, paid out in BOLD. These incentives are organic, sustainable, and directly linked to the protocol's overall performance.
+
+Image
+--------------------------------------------------------------------------------
+sBOLD - The yield-bearing DeFi savings account (https://www.liquity.org/blog/sbold---the-on-chain-defi-savings-account)
+citeturn495search3 [wordlim: 200] Published: 1.8 years ago; Crawled: 2 weeks ago; Liquity V2 ... January 15, 2025 ...   * Oracles: sBOLD will utilize a Pyth oracle upon launch.
+
+Image: sBOLD - The yield-bearing DeFi savings account
+
+Liquity V1
+
+Liquity V2
+
+Sam Lekhak
+
+·
+
+January 15, 2025
+
+sBOLD - The yield-bearing DeFi savings account
+
+BOLD is already a standout stablecoin and one we believe will become DeFi’s Treasury asset. As a fully decentralized, USD-pegged stablecoin issued by Liquity V2, BOLD’s strength comes down to the following:
+
+  * Overcollateralized and backed only by decentralized crypto assets: WETH, wstETH, and rETH —no reliance on real-world assets or centralized custody.
+  * Always directly redeemable to its underlying collateral (ETH and LSTs), ensuring fast and liquid swaps at a $1 value.
+  * Immutable design, eliminating protocol upgrades and reducing attack vectors.
+  * Native incentives through Protocol Incentivized Liquidity (PIL), guaranteeing robust liquidity for transactions.  
+
+This makes BOLD the perfect ‘savings account’ to park treasury assets, and diversify stablecoin holdings.
+sBOLD, built by K3 Capital, takes this a step further by automating and compounding rewards within the Stability Pool. --------------------------------------------------------------------------------
+A BOLD Stance (https://www.liquity.org/blog/a-bold-stance)
+citeturn495search4 [wordlim: 200] Published: 1.8 years ago; Crawled: last month; Liquity V2 ... January 9, 2025
+
+Image: A BOLD Stance
+
+Liquity V1
+
+Liquity V2
+
+Bojan Peček
+
+·
+
+January 9, 2025
+
+A BOLD Stance
+
+The fundamental purpose of a stablecoin is to preserve value.
+
+To achieve this, a stablecoin must withstand both internal and external factors that could erode it, ensuring that its value remains stable.
+
+Surprisingly, despite being called "Decentralized Finance," the industry lacks a diverse range of truly decentralized stablecoins. Apart from a few examples, such as LUSD and RAI, most stablecoins fail to meet this standard. A genuinely decentralized stablecoin is one that is backed by trustless collateral assets only, has no centralized counterparties, and whose core functions cannot be altered by anyone.
+
+This shortage poses a significant issue for the industry as a whole. In response, initiatives have emerged to address this concern. For example, Bluechip is developing a rating system to evaluate the economic safety of stablecoins, while DeFiScan, is establishing a framework to assess the decentralization levels of protocols.
+--------------------------------------------------------------------------------
+Blog | Liquity V2 (https://www.liquity.org/blog)
+citeturn495search5 [wordlim: 200] Crawled: 3 days ago; Liquity V2 Liquity V1 Voting in Liquity V2 January 17, 2025
+
+# Liquity Blog
+
+Announcements, updates, and more from the Liquity team.
+
+Liquity V2Liquity V1All
+
+Liquity V2 Liquity V1 Guide: Liquity V2 February 19, 2026
+
+Liquity V2 Liquity V1 BOLD Receives A- Rating from Bluechip January 26, 2026
+
+Liquity V2 Liquity V1 Enosys Airdrop for Liquity V2 Users January 19, 2026
+
+Liquity V2 Liquity V1 Liquity V2 Safety Mode November 5, 2025
+
+Liquity V2 Liquity V1 Forkonomics Update - August 2025 August 15, 2025
+
+Liquity V2 Liquity V1 Autonomous Interest Rate Manager (ARM) for V2 June 23, 2025
+
+Liquity V2 Liquity V1 Liquity Adopts the Chainlink Standard for Cross-Chain Interoperability for BOLD May 20, 2025
+
+Liquity V2 Liquity V1 Guide to Liquity V2 May 19, 2025
+
+Liquity V2 Liquity V1 Liquity V2 is LIVE May 19, 2025
+
+Liquity V2 Liquity V1 V2 Redeployment Updates February 17, 2025
+
+Liquity V2 Liquity V1 Bribe Markets in Liquity V2: Strategic Value for LQTY Stakers February 5, 2025
+
+Liquity V2 Liquity V1 Voting in Liquity V2 January 17, 2025
+
+Liquity V2 Liquity V1 sBOLD - The yield-bearing DeFi savings account January 15, 2025
+
+Liquity V2 Liquity V1 A BOLD Stance January 9, 2025
+
+Liquity V2 Liquity V1 Auditing Liquity V2 December 20, 2024
+
+Liquity V2 Liquity V1 Forkonomics: Collaboration, not Competition December 12, 2024
+
+Liquity V2 Liquity V1 Liquity V2 Testnet is LIVE on Sepolia!November 26, 2024
+
+Liquity V2 Liquity V1 Using Liquity V2 on Testnet November 25, 2024
+
+Liquity V2 Liquity V1 Bootstrapping Liquity V2’s Expansion November 13, 2024
+
+Liquity V2 Liquity V1 Interest Rate Management in Liquity V2 October 30, 2024
+
+Liquity V2 Liquity V1$BOLD - DeFi's Treasury Asset September 24, 2024
+
+Liquity V2 Liquity V1 Directing Protocol Incentivized Liquidity with LQTY September 9, 2024
+
+Liquity V2 Liquity V1 Liquity V2: Improving DeFi with BOLD Innovation September 4, 2024
+
+Liquity V2 Liquity V1 Licensing Liquity V2: May the Fork Be with You July 3, 2024--------------------------------------------------------------------------------
+Technical Docs & Audits | Liquity Docs (https://docs.liquity.org/v2-documentation/technical-docs-and-audits)
+citeturn495search6 [wordlim: 200] Crawled: 7 months ago; A technical system summary including contract descriptions, function descriptions, and more is available in the V2 developer README. ... Coinspect - Bold Governance Audit, January 2025
+
+# Technical Docs & Audits
+
+A technical system summary including contract descriptions, function descriptions, and more is available in the V2 developer README.
+
+### 
+
+Technical papers
+
+Whitepaper
+
+
+Code base (Github)
+
+Bold Core Governance
+
+
+Audit reports
+
+ChainSecurity - Code Assessment, several audits between Aug 2024 and May 2025
+
+Dedaub - Core Protocol Audit Report I, August 2024
+
+Dedaub - Core Protocol Audit Report II, November 2024
+
+Certora - Formal Verification, December 2024
+
+Coinspect - Bold Core Smart Contract Audit, December 2024
+
+Coinspect - Bold Governance Audit, January 2025
+
+ChainSecurity - Governance Smart Contract Audit, January 2025
+
+Dedaub - Governance Audit 1, August 2024
+
+Dedaub - Governance Audit 2, November 2024
+
+Dedaub - Governance Audit 3, January 2025
+
+Recon - Liquity Security Review, October 2024
+
+Dedaub - Cantina fixes review, May 2025
+
+Cantina Competiton, March-April 2025
+
+
+Economic modelling and simulation
+
+Chaos Labs: Mechanism Design Review, October 2024
+
+
+Contract addresses
+
+#### 
+
+BOLD Token
+
+Contract
+
+Address
+
+BOLD Mainnet
+
+0x6440f144b7e50D6a8439336510312d2F54beB01D
+
+BOLD Base
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Arbitrum
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD HyperEVM
+
+0x84533b1512A3A23F0c9668D88FDf86FEffdbb11A
+
+BOLD Optimism
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Scroll
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Avalanche
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Sonic
+
+0xf05a207442f14E446b0e32b12D2043bfc68Cb1C9
+
+BOLD Berachain
+
+0xf05a207442f14E446b0e32b12D2043bfc68Cb1C9
+
+BOLD Swell
+
+0x1a17b22d762c8cf2ca0f07e2b3c32e7481bb0d8c
+
+--------------------------------------------------------------------------------
+Technical Docs & Audits | Docs V2 🇰🇷 | Liquity Docs (https://docs.liquity.org/kr/documentation/technical-docs-and-audits)
+citeturn495search7 [wordlim: 200] Crawled: 7 months ago; 각 컨트랙트에 대한 설명, 기능 설명 등을 포함한 포괄적인 기술 시스템 요약은 V2 개발자 README에서 제공됩니다. ... Coinspect - Bold Governance Audit, January 2025
+
+  1. Documentation
+
+# Technical Docs & Audits
+
+각 컨트랙트에 대한 설명, 기능 설명 등을 포함한 포괄적인 기술 시스템 요약은 V2 개발자 README에서 제공됩니다.
+
+### 
+
+Technical papers
+
+Whitepaper
+
+### 
+
+Code base
+
+Bold Core Governance
+
+### 
+
+Audit reports
+
+ChainSecurity - Code Assessment, several audits between Aug 2024 and May 2025
+
+Dedaub - Core Protocol Audit Report I, August 2024
+
+Dedaub - Core Protocol Audit Report II, November 2024
+
+Certora - Formal Verification, December 2024
+
+Coinspect - Bold Core Smart Contract Audit, December 2024
+
+Coinspect - Bold Governance Audit, January 2025
+
+ChainSecurity - Governance Smart Contract Audit, January 2025
+
+Dedaub - Governance Audit 1, August 2024
+
+Dedaub - Governance Audit 2, November 2024
+
+Dedaub - Governance Audit 3, January 2025
+
+Recon - Liquity Security Review, October 2024
+
+Dedaub - Cantina fixes review, May 2025
+
+Cantina Competiton, March-April 2025
+
+### 
+
+Economic modelling and simulation
+
+Chaos Labs: Mechanism Design Review, October 2024
+
+### 
+
+Contract addresses
+
+#### 
+
+BOLD Token
+
+Contract
+
+Address
+
+BOLD Mainnet
+
+0x6440f144b7e50D6a8439336510312d2F54beB01D
+
+BOLD Base
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Arbitrum
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Optimism
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Scroll
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Avalanche
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+--------------------------------------------------------------------------------
+Auditing Liquity V2 (https://www.liquity.org/blog/auditing-liquity-v2)
+citeturn495search8 [wordlim: 200] Published: 1.8 years ago; Crawled: 4 days ago; Certora’s formal verification work on the Liquity V2 codebase focused specifically on the logic underpinning batch delegation for interest rate management. ...   * ChainSecurity Voting Module Audit Report (To be published January 2025)
+This commitment has positioned them as a trusted partner in securing decentralized applications.
+
+Certora’s formal verification work on the Liquity V2 codebase focused specifically on the logic underpinning batch delegation for interest rate management. 
+
+  * Final Certora Formal Verification Report
+
+#### About ChainSecurity
+
+ChainSecurity is a leading blockchain security firm specializing in smart contract audits and formal verification. Founded by experts from ETH Zurich, the company has collaborated with over 75 blockchain projects, including major DeFi protocols like MakerDAO and Compound. Their expertise and client-focused approach have established ChainSecurity as a top choice for ensuring the integrity of smart contracts. 
+
+  * ChainSecurity Core Protocol Audit Report
+  * ChainSecurity Voting Module Audit Report (To be published January 2025)
+
+#### About Coinspect
+
+Coinspect, founded in 2014, is a boutique blockchain security consulting firm specializing in smart contract audits, source code reviews, and penetration testing. With over 25 years of combined cybersecurity expertise, the firm has worked with major projects such as Ethereum Foundation, Bitcoin Core, Monero, and Zcash to enhance the security of decentralized applications.
+
+  * Coinspect Core Protocol Audit Report 
+  * Coinspect Voting Module Audit Report (To be published January 2025)
+
+#### About Dedaub
+
+Dedaub is a leading blockchain security firm specializing in smart contract auditing and analysis. Founded in 2021 by Neville Grech and Yannis Smaragdakis, the company combines academic rigor with practical hacking expertise to provide comprehensive security solutions for decentralized applications. Dedaub's services include smart contract audits, decompilation, vulnerability detection, and real-time blockchain monitoring, with a client roster featuring prominent organizations such as the Ethereum Foundation, Chainlink, and Coinbase.
+
+Dedaub conducted two core protocol audits, with the second coming after initial findings from both their and ChainSecurity’s work were addressed. Dedaub further conducted a review of the voting module as well.
+
+  * Dedaub Core Protocol Audit Report I
+  * Dedaub Core Protocol Audit Report II
+  * Dedaub Voting Module Audit Report (To be published January 2025)
+
+#### About Recon
+
+Recon is a blockchain security firm specializing in invariant testing and smart contract auditing. Their platform, Recon Pro, integrates tools like Echidna, Medusa, and Foundry to provide comprehensive invariant testing in the cloud, enabling developers to identify and address vulnerabilities before deployment. Their services include cloud-based fuzzing, live monitoring, and governance fuzzing, aiming to enhance the robustness of smart contracts in the blockchain ecosystem.
+
+  * Recon Core Protocol Audit Report (To be published January 2025)--------------------------------------------------------------------------------
+Technical Docs & Audits | Docs V2 🇷🇺 | Liquity Docs (https://docs.liquity.org/ru/v2-documentation/technical-docs-and-audits)
+citeturn495search9 [wordlim: 200] Crawled: 8 months ago; A technical system summary including contract descriptions, function descriptions, and more is available in the V2 developer README. ... Coinspect - Bold Governance Audit, January 2025
+
+# Technical Docs & Audits
+
+A technical system summary including contract descriptions, function descriptions, and more is available in the V2 developer README.
+
+### 
+
+Technical papers
+
+Whitepaper
+
+### 
+
+Code base (Github)
+
+Bold Core Governance
+
+### 
+
+Audit reports
+
+ChainSecurity - Code Assessment, several audits between Aug 2024 and May 2025
+
+Dedaub - Core Protocol Audit Report I, August 2024
+
+Dedaub - Core Protocol Audit Report II, November 2024
+
+Certora - Formal Verification, December 2024
+
+Coinspect - Bold Core Smart Contract Audit, December 2024
+
+Coinspect - Bold Governance Audit, January 2025
+
+ChainSecurity - Governance Smart Contract Audit, January 2025
+
+Dedaub - Governance Audit 1, August 2024
+
+Dedaub - Governance Audit 2, November 2024
+
+Dedaub - Governance Audit 3, January 2025
+
+Recon - Liquity Security Review, October 2024
+
+Dedaub - Cantina fixes review, May 2025
+
+Cantina Competiton, March-April 2025
+
+Coinspect - Redemption Helper, October 2025
+
+### 
+
+Economic modelling and simulation
+
+Chaos Labs: Mechanism Design Review, October 2024
+
+
+Contract addresses
+
+#### 
+
+BOLD Token
+
+Contract
+
+Address
+
+BOLD Mainnet
+
+0x6440f144b7e50D6a8439336510312d2F54beB01D
+
+BOLD Base
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Arbitrum
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD HyperEVM
+
+0x84533b1512A3A23F0c9668D88FDf86FEffdbb11A
+
+BOLD Optimism
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Scroll
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Avalanche
+
+0x03569CC076654F82679C4BA2124D64774781B01D
+
+BOLD Sonic
+
+0xf05a207442f14E446b0e32b12D2043bfc68Cb1C9
+
+BOLD Berachain
+
+0xf05a207442f14E446b0e32b12D2043bfc68Cb1C9
+
+BOLD Swell
+
+0x1a17b22d762c8cf2ca0f07e2b3c32e7481bb0d8c
+
+--------------------------------------------------------------------------------
+The DeFi Collective - BOLD Liquidity Initiative: Maximize BOLD footprint on L2s - Initiatives - Liquity (https://voting.liquity.org/t/the-defi-collective-bold-liquidity-initiative-maximize-bold-footprint-on-l2s/15)
+citeturn495search10 [wordlim: 200] Published: 2.0 years ago; Crawled: 1.2 years ago; TokenBrice January 30, 2025, 11:51am 2 ... 3451 BOLD from first v2 deployment + 4424 from first PIL epoch (50% of total received) = 7875 BOLD matched with 8473 LUSD from the Collective’s reserves.
+
+TokenBrice January 30, 2025, 11:51am 2
+
+As of this morning, the BOLD rollout on Optimism, Base, and Arbitrum is on!
+
+There is already about $400k TVL in Velodrome BOLD pools:
+
+image1472×321 34.7 KB
+
+And over 650K on Aerodome:
+
+image1519×394 44.8 KB
+
+As well as 50K on Ramses:
+
+image1185×191 17 KB
+
+The veVELO/veAERO/veRAM votes allocated by the Collectives to BOLD-related pools can be monitored here.
+
+Thanks to the BOLD received by the PIL (1459 this week), vote incentives will be deployed starting at the next epoch, allowing an increase in the emissions allocated to the pools.
+
+TokenBrice February 10, 2025, 11:25am 3
+
+### February 07 2025 update
+
+The DeFi Collective has received two rounds of PIL so far, amounting to 5357 BOLD; thanks for your support!
+
+The first deployment has just been realized, with a 50%/50% permaLP/bribe split:
+
+  1. 2,678 BOLD matched with 3,233 USDC and supplied to the Aerodrome sAMM_BOLD/USDC
+  2. 2678,5 posted as vote incentives on BOLD/USDC (1878.5 BOLD) & BOLD/LUSD (800 BOLD) pools
+
+TokenBrice February 13, 2025, 11:43am 4
+
+### February 12 Update
+
+In light of the current situation with the BOLD Stability Pool deposit
+
+x.com
+
+#### 
+
+@
+
+Several actions were taken:
+
+  * Perma LP liquidity has been withdrawn
+  * LP seeding on OP/Base/Arbitrum withdrawn
+  * The deployment of further BOLD received from the PIL (2319.1291 BOLD received this morning) is halted until the situation becomes clearer
+
+Voting+bribing for this week was already done before the announcement, meaning ample incentivization will still flow to BOLD-related pools this week (+the Collective is not here to dilute).
+
+We hope that we will have clarity by next week, which will enable us to adjust the voting strategy.
+
+TokenBrice May 19, 2025, 11:28am 5
+
+--------------------------------------------------------------------------------
+Volumes and Yields for BOLD liquidity pools - Voting - Liquity (https://voting.liquity.org/t/volumes-and-yields-for-bold-liquidity-pools/113)
+citeturn495search11 [wordlim: 200] Published: last year; Crawled: 8 months ago; Permissonless deployment is all that matters for us, as we can now launch BOLD-related pools. ... According to DMH, v2 has been deployed a couple of days ago and will be open for public on early december ... Stengarl December 4, 2025, 4:24pm 10
+--------------------------------------------------------------------------------
+Liquity V2 TVL, Fees & Revenue (https://defillama.com/protocol/liquity-v2)
+citeturn495view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://defillama.com/protocol/liquity-v2","lineno":null}); Total lines: 179
+

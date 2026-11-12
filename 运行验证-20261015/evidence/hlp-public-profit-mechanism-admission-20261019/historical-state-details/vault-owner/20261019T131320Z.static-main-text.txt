@@ -1,0 +1,98 @@
+Raw vault equity snapshots (~hourly)
+cURL
+curl --request GET \
+--url https://api.hypedexer.com/vaults/equitySnapshots \
+--header 'X-API-Key: <api-key>'
+200
+[
+{
+"time": 1789801006084,
+"totalDeposits": 49837463.237452,
+"accountValue": 48617690.985079,
+"totalNotional": 0,
+"totalRawPnl": -1219772.252373,
+"nPositions": 0,
+"followerCount": 93441
+},
+{
+"time": 1789800288577,
+"totalDeposits": 49837463.237452,
+"accountValue": 48617614.694756,
+"totalNotional": 0,
+"totalRawPnl": -1219848.542696,
+"nPositions": 0,
+"followerCount": 93441
+}
+]
+Vaults
+Raw vault equity snapshots (~hourly)
+Copy page
+Raw vault equity snapshots, about one per hour.
+Copy page
+GET
+/
+vaults
+/
+equitySnapshots
+Try it
+Raw vault equity snapshots (~hourly)
+cURL
+curl --request GET \
+--url https://api.hypedexer.com/vaults/equitySnapshots \
+--header 'X-API-Key: <api-key>'
+200
+[
+{
+"time": 1789801006084,
+"totalDeposits": 49837463.237452,
+"accountValue": 48617690.985079,
+"totalNotional": 0,
+"totalRawPnl": -1219772.252373,
+"nPositions": 0,
+"followerCount": 93441
+},
+{
+"time": 1789800288577,
+"totalDeposits": 49837463.237452,
+"accountValue": 48617614.694756,
+"totalNotional": 0,
+"totalRawPnl": -1219848.542696,
+"nPositions": 0,
+"followerCount": 93441
+}
+]
+Authorizations
+​
+X-API-Key
+string
+header
+required
+Your Hypedexer API key. Create one in the console at https://app.hypedexer.com
+. Authorization: Bearer <key>
+and the api_key
+query parameter are accepted as well.
+Query Parameters
+​
+vaultAddress
+string
+required
+Vault address (0x…)
+​
+startTime
+integer | null
+Epoch milliseconds
+​
+endTime
+integer | null
+Epoch milliseconds
+​
+limit
+integer | null
+default:
+500
+Required range: 1 <= x <= 5000
+Response
+200 - application/json
+OK
+Daily vault equity snapshots (TVL, PnL)
+Vault positions for a specific user

@@ -1,0 +1,12 @@
+test_effective_overlay_exact_and_invalid_release_fail (__main__.Flow.test_effective_overlay_exact_and_invalid_release_fail) ... ok
+test_entry_halfwindow_and_remaining20min (__main__.Flow.test_entry_halfwindow_and_remaining20min) ... ok
+test_old_sample_fullforecast_pass_newcaps_and_fail_oldcaps (__main__.Flow.test_old_sample_fullforecast_pass_newcaps_and_fail_oldcaps) ... ok
+test_preparation_identity_expiry_failures (__main__.Flow.test_preparation_identity_expiry_failures) ... ok
+test_prescreen_is_no_network_and_actual_disk_checked (__main__.Flow.test_prescreen_is_no_network_and_actual_disk_checked) ... ok
+test_publicprobe_once_before_key_and_legacy_auth_kept (__main__.Flow.test_publicprobe_once_before_key_and_legacy_auth_kept) ... ok
+test_runtime_caps_OS_limit_and_writecap_consistent (__main__.Flow.test_runtime_caps_OS_limit_and_writecap_consistent) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.049s
+
+OK
